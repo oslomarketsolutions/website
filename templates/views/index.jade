@@ -1,0 +1,179 @@
+extends ../layouts/default
+
+mixin post(post, category)
+  each cats in post.categories
+    if !category || category === cats.key
+      - n++
+      post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+        .col-md-4
+          h4: a(href='/news/post/' + post.slug)= post.title
+          p.lead.text-muted Posted
+            if post.publishedDate
+              | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+            if post.categories && post.categories.length
+              | in 
+              each cat, i in post.categories
+                a(href='/news/' + cat.key)= cat.name
+                if i < post.categories.length - 1
+                  | , 
+                else
+                  |  
+                
+            if post.author
+              | by #{post.author.name.first}
+          if post.image.exists
+            img(src=post._.image.fit(160,160)).img.pull-right
+          p!= post.content.brief
+          if post.content.extended
+            p.read-more: a(href='/news/post/' + post.slug) Read more...
+
+mixin arena(post, category)
+  each cats in post.categories
+    if !category || category === cats.key
+      - n++
+      post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+        .col-xs-12
+          h4: a(href='/news/post/' + post.slug)= post.title
+          p.lead.text-muted Posted
+            if post.publishedDate
+              | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+            if post.categories && post.categories.length
+              | in 
+              each cat, i in post.categories
+                a(href='/news/' + cat.key)= cat.name
+                if i < post.categories.length - 1
+                  | , 
+                else
+                  |  
+                
+            if post.author
+              | by #{post.author.name.first}
+          if post.image.exists
+            img(src=post._.image.fit(160,160)).img.pull-right
+          p!= post.content.brief
+          if post.content.extended
+            p.read-more: a(href='/news/post/' + post.slug) Read more...
+block content
+  section.oms-graph
+    .container
+        h1 Keeping investors informed and empowered
+        #highchart-live(style='min-width: 310px; height: 200px; margin: 0 auto')
+        .container
+          .row
+            .col-lg-12.text-center
+              button.btn.btn-oms-lg Kontakt oss
+              button.btn.btn-oms-main-lg Showcase
+  section.section-services
+      .container
+        .col-xs-12
+          .row
+            .col-xs-12
+              h2.text-center Our services
+              hr
+            .col-md-3.col-xs-6.text-center
+              img(src='images/online.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Online trading
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/arena.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Arena
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/ir.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 IR Web Modules
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/market.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Market Data Portal
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/game.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Stock Game
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/fund.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Fund reporting
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/calc.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Financial calculators
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+            .col-md-3.col-xs-6.text-center
+              img(src='images/feed.svg', alt='Generic placeholder image', width='50', height='50')
+              h3 Financial feeds
+              p
+                a.btn.btn-default(href='#', role='button') View details &raquo;
+  section.odd-section
+      .container
+        .col-xs-12
+          .row
+            .col-xs-12
+              h2.text-center Our latest releases
+              hr
+              if filters.category && !data.category
+                h3.text-muted Invalid Category.
+              else
+                if data.posts.results.length
+                  .blog
+                    - var n = 0
+                    each post in data.posts.results
+                      if n < 3
+                        +arena(post, 'portfolio')
+                  if data.category
+                    h3.text-muted There are no posts in the category #{data.category.name}.
+                else
+                  h3.text-muted There are no posts yet.
+              hr
+            .col-md-3
+              img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', width='140', height='140')
+            .col-md-9
+              h3.featurette-heading Oh yeah, it&apos;s that good. 
+                span.text-muted See for yourself.
+              p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+  section
+      .container
+        .col-xs-12
+          .row
+            .col-xs-12
+              h2.text-center The blog
+              hr
+              if filters.category && !data.category
+                h3.text-muted Invalid Category.
+              else
+                if data.posts.results.length
+                  .blog
+                    - var n = 0
+                    each post in data.posts.results
+                      if n < 3
+                        +post(post, 'blog')
+                  if data.category
+                    h3.text-muted There are no posts in the category #{data.category.name}.
+                else
+                  h3.text-muted There are no posts yet.
+  section.odd-section.technology
+      .container
+        .col-xs-12
+          .row
+            .col-xs-12
+              h2.text-center Technology
+              hr
+            .col-xs-12.text-center
+              img(src='images/react.png', alt='')
+              img(src='images/js.png', alt='')
+              img(src='images/html5.png', alt='')
+              img(src='images/jaws.png', alt='')
+  section
+      .container
+        .col-xs-12
+          .row
+            .col-xs-12
+              h2.text-center Meet the team
+              hr
+
