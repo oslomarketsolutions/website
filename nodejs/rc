@@ -1,0 +1,100 @@
+#!/bin/sh
+. /etc/rc.d/init.d/functions
+
+USER="www"
+DAEMON="/local/nodejs/iojs-v1.7.1-linux-x64/bin/node"
+
+NODE_ENV="production"
+PORT="3000"
+APP_DIR="/local/home/$USER/webapps/client"
+NODE_BASE="/local/home/$USER/nodejs"
+NODE_APP="server"
+LOG_DIR="$NODE_BASE/logs"
+LOG_FILE="$LOG_DIR/nodejs.log"
+LOCK_FILE="$NODE_BASE/work/nodejs.lock"
+NODE_EXEC="/local/nodejs/node-v0.12.3-linux-x64/bin/node"
+
+SERVER="$APP_DIR/$NODE_APP"
+LOG_FILE="$LOG_DIR/nodejs.log"
+
+
+USERID=`expr "\`id\`" : 'uid=\([^(]*\)'`
+if [ "$USERID" -eq 0 ]; then
+  CMD="runuser -l $USER -c"
+else
+  CMD="eval"
+fi
+
+is_running() {
+  PID=$(get_pid)
+  ! [ -z "$(ps aux | awk '{print $2}' | grep "^$PID$")" ]
+}
+
+pid_file_exists() {
+  [ -f "$LOCK_FILE" ]
+}
+
+get_pid() {
+  echo "$(cat "$LOCK_FILE")"
+}
+
+remove_pid_file() {
+  echo "Removing pid file"
+  rm -f "$LOCK_FILE"
+}
+
+
+start_it() {
+  echo -n $"Starting $SERVER: "
+  $CMD "cd $APP_DIR;PORT=$PORT NODE_ENV=$NODE_ENV $DAEMON $SERVER >> $LOG_FILE 2>&1 &" && echo_success || echo_failure
+  RETVAL=$?
+  echo
+  [ $RETVAL -eq 0 ] &&  ps -aefw | grep "$DAEMON $SERVER" | grep -v " grep " | awk '{print $2}' > $LOCK_FILE && chown $USER.$USER $LOCK_FILE
+}
+
+do_start()
+{
+  if pid_file_exists
+  then
+    if is_running
+    then
+      PID=$(get_pid)
+      echo "Node app already running with pid $PID"
+      exit 1
+    else
+      echo "Node app stopped, but pid file exists"
+      echo "Forcing start anyways"
+      remove_pid_file
+      start_it
+    fi
+  else
+    start_it
+  fi
+}
+
+do_stop()
+{
+  echo -n $"Stopping $SERVER: "
+  pid=`ps -aefw | grep "$DAEMON $SERVER" | grep -v " grep " | awk '{print $2}'`
+  kill -9 $pid > /dev/null 2>&1 && echo_success || echo_failure
+  RETVAL=$?
+  echo
+  [ $RETVAL -eq 0 ] && rm -f $LOCK_FILE
+}
+
+case "$1" in
+  start)
+    do_start
+    ;;
+  stop)
+    do_stop
+    ;;
+  restart)
+    do_stop
+    do_start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    RETVAL=1
+esac
+exit $RETVAL
