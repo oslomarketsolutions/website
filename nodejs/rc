@@ -15,7 +15,7 @@ LOCK_FILE="$NODE_BASE/work/nodejs.lock"
 NODE_EXEC="/local/nodejs/node-v0.12.3-linux-x64/bin/node"
 CLOUDINARY_URL=cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo
 MANDRILL_API_KEY=NY8RRKyv1Bure9bdP8-TOQ
-MONGODB_URI=mongodb://localhost/www
+MONGODB_URI=mongodb://localhost/oslo-market-solutions
 SERVER="$APP_DIR/$NODE_APP"
 LOG_FILE="$LOG_DIR/nodejs.log"
 
