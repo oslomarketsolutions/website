@@ -2,7 +2,7 @@
 . /etc/rc.d/init.d/functions
 
 USER="www"
-DAEMON="/local/nodejs/iojs-v1.7.1-linux-x64/bin/node"
+DAEMON="/local/nodejs/node-v0.12.3-linux-x64/bin/node"
 
 NODE_ENV="production"
 PORT="3000"
