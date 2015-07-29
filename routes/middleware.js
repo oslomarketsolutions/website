@@ -20,8 +20,13 @@ var _ = require('underscore');
 */
 
 exports.initLocals = function(req, res, next) {
-	
+
 	var locals = res.locals;
+
+  locals.norwegian = true;
+  if (req.url.indexOf('eng') > -1) {
+    locals.norwegian = false;
+  }
 	
 	locals.navLinks = [
 		{ label: 'Home',		key: 'home',		href: '/' },
@@ -42,7 +47,6 @@ exports.initLocals = function(req, res, next) {
 */
 
 exports.flashMessages = function(req, res, next) {
-	
 	var flashMessages = {
 		info: req.flash('info'),
 		success: req.flash('success'),

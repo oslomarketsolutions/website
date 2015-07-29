@@ -10,11 +10,12 @@ block content
           .col-lg-12.text-center
             button.btn.btn-oms-lg Demo
             button.btn.btn-oms-main-lg Bestill 
-        - }
+        - } 
   .container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2(style="height:100%;")
     script(type='text/javascript').
       function resize_iframe() {
-        var height = window.innerWidth;//Firefox
+        var height = window.innerWidth; //Firefox
+        
         if (document.body.clientHeight) {
           height = document.body.clientHeight;//IE
         }
@@ -32,5 +33,7 @@ block content
           if data.post.author
             | by #{data.post.author.name.first}
           != data.post.content.full
-    iframe(id="IR-demo", width="100%", onload="resize_iframe()", scrolling="no", src="http://ir.asp.manamind.com/irn/portal/main?key=pho_irn&lang=en", style="border: 0px;") 
+    - if (data.post.slug === 'ir-webmoduler') {
+      iframe(id="IR-demo", height="100%", width="100%", onload="resize_iframe()", scrolling="no", src="http://ir.asp.manamind.com/irn/portal/main?key=pho_irn&lang=en", style="border: 0px;") 
+    - }
   

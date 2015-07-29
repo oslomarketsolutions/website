@@ -1,0 +1,69 @@
+extends ../layouts/default
+
+
+block content
+  .presentation(style='background-color: #036; padding-top: 100px;')
+    .container
+
+      if galleries.length
+        each gallery in galleries
+          .row.gallery-images
+            if gallery.heroImage.exists
+              .col-sm-8.col-md-10: .row
+                #carousel-imac.carousel.slide(data-ride='carousel')
+                  img(src='/images/imac.png' width='100%' style="position:absolute; z-index:5;")
+                  .carousel-inner(role='listbox')
+                    - var n = 0;
+                    each image in gallery.images
+                      - n++
+                      if n == 1
+                        .item.active: img(src=image.limit(1000,1000) style="margin-top: 25px;")
+                      else 
+                        .item: img(src=image.limit(1000,1000) style="margin-top: 25px;")
+
+                //- each image in gallery.images
+                //-   .col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+            else
+              each image in gallery.images
+                .col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+
+            if gallery.heroImage.exists
+              .col-sm-4.col-md-2.hero-image(style="z-index:10"): img(src=gallery._.heroImage.limit(520,520)).pull-right
+
+
+  if norwegian
+    .container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+      article
+        if !data.post
+          h2 Invalid Post.
+        else
+          header
+            h2(style="margin-top: 200px;")= data.post.title
+            h4: a(href='/blog') &larr; Tilbake til porteføljen.
+
+            h5= data.post.title 
+              |  gikk live 
+              if data.post.publishedDate
+                | #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
+          .post
+            != data.post.content.full
+  else 
+    .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+      article
+        h4: a(href='/blog') &larr; back to the portfolio
+        hr
+        if !data.post
+          h2 Invalid Post.
+        else
+          header
+            h2(style="margin-top: 200px;")= data.post.title
+            h5= data.post.title 
+              |  went live
+              if data.post.publishedDate
+                |  #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
+              if data.post.categories && data.post.categories.length
+          .post
+            if data.post.image.exists
+              .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+            != data.post.content.full
+        

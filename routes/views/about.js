@@ -2,8 +2,8 @@ var keystone = require('keystone');
 var async = require('async');
 
 exports = module.exports = function(req, res) {
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
+  var view = new keystone.View(req, res);
+  var locals = res.locals;
   // Init locals
   locals.section = 'index';
   locals.filters = {
@@ -60,7 +60,7 @@ exports = module.exports = function(req, res) {
   view.on('init', function(next) {
     var q = keystone.list('Post').paginate({
         page: req.query.page || 1,
-        perPage: 25,
+        perPage: 10,
         maxPages: 1
       })
       .where('state', 'published')
@@ -78,11 +78,11 @@ exports = module.exports = function(req, res) {
     
   });
 
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
-	locals.section = 'home';
-	
-	// Render the view
-	view.render('index');
-	
+  // locals.section is used to set the currently selected
+  // item in the header navigation.
+  locals.section = 'home';
+  
+  // Render the view
+  view.render('about');
+  
 };

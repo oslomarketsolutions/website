@@ -1,11 +1,12 @@
 var keystone = require('keystone');
 var async = require('async');
-
 exports = module.exports = function(req, res) {
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
+  
+  var view = new keystone.View(req, res);
+  var locals = res.locals;
+  
   // Init locals
-  locals.section = 'index';
+  locals.section = 'news';
   locals.filters = {
     category: req.params.category
   };
@@ -19,12 +20,11 @@ exports = module.exports = function(req, res) {
     
     keystone.list('PostCategory').model.find().sort('name').exec(function(err, results) {
       
-
       if (err || !results.length) {
         return next(err);
       }
-      // locals.data.categories = [results];
-      locals.data.categories = [{ _id: '55a3bc70a042fc5e1128bc74', key: 'blog', name: 'Blog', __v: 0 }]
+      
+      locals.data.categories = results;
       
       // Load the counts for each category
       async.each(locals.data.categories, function(category, next) {
@@ -44,32 +44,31 @@ exports = module.exports = function(req, res) {
   
   // Load the current category filter
   view.on('init', function(next) {
-    
-    if (req.params.category) {
-      keystone.list('PostCategory').model.findOne({ key: "blog"}).exec(function(err, result) {
+      keystone.list('PostCategory').model.findOne({ key: locals.filters.category }).exec(function(err, result) {
         locals.data.category = result;
+        console.log('result', result);
         next(err);
       });
-    } else {
-      next();
-    }
+    // } else {
+    //   next();
+    // }
     
   });
   
   // Load the posts
   view.on('init', function(next) {
+    
     var q = keystone.list('Post').paginate({
         page: req.query.page || 1,
-        perPage: 25,
-        maxPages: 1
+        perPage: 50,
+        maxPages: 10,
+        PostCategory: 'Portfolio'
       })
       .where('state', 'published')
       .sort('-publishedDate')
       .populate('author categories');
     
-    if (locals.data.category) {
-      q.where('categories').in([locals.data.category]);
-    }
+      // q.where('categories').in('fund');
     
     q.exec(function(err, results) {
       locals.data.posts = results;
@@ -78,11 +77,9 @@ exports = module.exports = function(req, res) {
     
   });
 
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
-	locals.section = 'home';
-	
-	// Render the view
-	view.render('index');
-	
+
+  
+  // Render the view
+  view.render('portfolios');
+  
 };

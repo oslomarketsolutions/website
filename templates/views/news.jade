@@ -1,53 +1,51 @@
 extends ../layouts/default
 
-mixin post(post)
-  .post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-    h2: a(href='/news/post/' + post.slug)= post.title
-    p.lead.text-muted Posted 
-      if post.publishedDate
-        | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
-      if post.categories && post.categories.length
-        | in 
-        each cat, i in post.categories
-          a(href='/news/' + cat.key)= cat.name
-          if i < post.categories.length - 1
-            | , 
+mixin post(post, category)
+  each cats in post.categories
+    if !category || category === cats.key
+        post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+          - n++
+          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9 
+            .col-md-12
+              .animatedParent
+                h2.text-center.animated.fadeIn= post.title
+              .col-md-7.animatedParent
+                .animated.fadeIn(data-0="left: -100px;", data-2200="left: 0px;", style="position: relative")
+                  p!= post.content.brief
+              .col-md-5.animatedParent
+                if post.image.exists
+                  img(src=post._.image.fit(400,400), data-0="top: 0px;", data-2000="top: -100px;", style="position: relative").img.animated.fadeIn
+              
           else
-            |  
-      if post.author
-        | by #{post.author.name.first}
-    if post.image.exists
-      img(src=post._.image.fit(160,160)).img.pull-right
-    p!= post.content.brief
-    if post.content.extended
-      p.read-more: a(href='/news/post/' + post.slug) Read more...
-
+            .col-md-12
+                .animatedParent
+                  h2.text-center.animated.fadeIn= post.title
+                .col-md-5.animatedParent
+                  if post.image.exists
+                    img(src=post._.image.fit(400,400), data-0="top: 0px;", data-2000="top: -120px;", style="position: relative").img.animated.fadeIn
+                .col-md-7.animatedParent
+                  .animated.fadeIn
+                    p.animated.fadeIn!= post.content.brief
+                      if post.content.extended
 block intro
-  .container
-    h1= data.category ? data.category.name : 'News'
+  .container.portfolio
+    if norwegian
+      h1 Produkter
+    else 
+      h1 Products
 
 block content
   .container: .row
-    .col-sm-8.col-md-9
       if filters.category && !data.category
         h3.text-muted Invalid Category.
       else
         if data.posts.results.length
-          if data.posts.totalPages > 1
-            h4.text-weight-normal Showing 
-              strong #{data.posts.first}
-              |  to 
-              strong #{data.posts.last}
-              |  of 
-              strong #{data.posts.total}
-              |  posts.
-          else
-            h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
-          .news
+
+          .portfolio
+            - var n = 0;
             each post in data.posts.results
-              - console.log('START LE POST', post.post)
-              +post(post)
-          
+              +post(post, 'product')
+
           if data.posts.totalPages > 1
             ul.pagination
               if data.posts.previous
@@ -66,11 +64,3 @@ block content
             h3.text-muted There are no posts in the category #{data.category.name}.
           else
             h3.text-muted There are no posts yet.
-    
-    if data.categories.length
-      .col-sm-4.col-md-3
-        h2 Categories
-        .list-group(style='margin-top: 70px;')
-          a(href='/news', class=!data.category ? 'active' : false).list-group-item All Categories
-          each cat in data.categories
-            a(href='/news/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name

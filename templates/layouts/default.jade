@@ -15,6 +15,8 @@ html
         //- Customise the stylesheet for your site by editing /public/styles/site.less
         //- All .less files will be automatically compiled and minified in production.
         link(href="/styles/site.min.css", rel="stylesheet")
+        link(href="/styles/animations.css", rel="stylesheet")
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300', rel='stylesheet', type='text/css')
 
         //- This file provides the default styling for the KeystoneJS Content Editor
         if user && user.canAccessKeystone
@@ -38,38 +40,35 @@ html
 
         //- HEADER
         #header: .container
-
             //- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
             //- ... or completely change this header to suit your design.
-
-         nav.navbar.navbar-default.navbar-oms(role='navigation')
-              //- Brand and toggle get grouped for better mobile display
-              .container
-                .navbar-header
-                  button.navbar-toggle(data-toggle="collapse-side", data-target=".side-collapse", data-target-2=".side-collapse-container", type="button")
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                  a.navbar-brand(href="/")
-                    img(src='/images/oms-logo.png', alt='')
-                //- Collect the nav links, forms, and other content for toggling
-                .side-collapse.in
+          nav.navbar.navbar-default.navbar-oms(role='navigation')
+            //- Brand and toggle get grouped for better mobile display
+            .container
+              .navbar-header
+                button.navbar-toggle(data-toggle="collapse-side", data-target=".side-collapse", data-target-2=".side-collapse-container", type="button")
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                a.navbar-brand(href="/")
+                  img(src='/images/oms-logo.png', alt='')
+              //- Collect the nav links, forms, and other content for toggling
+              .side-collapse.in
+                if norwegian
                   .navbar-ex1-collapse
                     ul.nav.navbar-nav
                       li
-                        a(href='/news') Nyheter
+                        a(href='/portfolio') Prosjekter
                       li
-                        a(href='/portfolio') Portef&oslash;lje
+                        a(href='/service') Produkter
                       li
-                        a(href='#') IR Webmoduler
-                      li
-                        a(href='#') Investorportal
-                      li
-                        a(href='#') Om oss
+                        a(href='/about') Om oss
                     ul.nav.navbar-nav.navbar-right
                       li
-                        a(href='/eng') English
+                        a(href='/eng') 
+                          i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
+                          | English
                       li
                         a(href='www.facebook.no') 
                           i.fa.fa-facebook
@@ -79,10 +78,29 @@ html
                       li
                         a(href='www.google.no') 
                           i.fa.fa-google-plus
-                      
-                      
-                //- /.navbar-collapse
-        //- BODY
+                else
+                  .navbar-ex1-collapse
+                    ul.nav.navbar-nav
+                      li
+                        a(href='/portfolio') Portfolio
+                      li
+                        a(href='#') Products
+                      li
+                        a(href='/eng/about') About us
+                    ul.nav.navbar-nav.navbar-right
+                      li
+                        a(href='/') 
+                          i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
+                          | Norsk
+                      li
+                        a(href='www.facebook.no') 
+                          i.fa.fa-facebook
+                      li
+                        a(href='www.linkedin.no')
+                          i.fa.fa-linkedin
+                      li
+                        a(href='www.google.no') 
+                          i.fa.fa-google-plus
         #body
 
             //- NOTE:
@@ -156,6 +174,9 @@ html
         script(src='http://code.highcharts.com/highcharts.js')
         script(src='http://code.highcharts.com/modules/exporting.js')
         //- OMS 
+        script(src='/js/skrollr.min.js')
+          
+        script(src='/js/css3-animate-it.js')
         script(src='/js/general.js')
         //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
         //- which generate links to edit content for users who can access Keystone

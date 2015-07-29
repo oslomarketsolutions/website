@@ -1,4 +1,4 @@
-/**
+  /**
  * This file is where you define your application routes and controllers.
  * 
  * Start by including the middleware you want to run for every request;
@@ -33,14 +33,27 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
-	
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/news/:category?', routes.views.news);
-  app.get('/news/post/:post', routes.views.post);
-  app.get('/service/:post', routes.views.service);
+	app.get('/service/:category?', routes.views.news);
+  app.get('/service/post/:post', routes.views.post);
+  app.get('/service/ir/demo', routes.views.irdemo);
+  app.get('/portfolio', routes.views.portfolios);
+  app.get('/portfolio/:post', routes.views.portfolio);
 	app.get('/gallery', routes.views.gallery);
-	app.all('/contact', routes.views.contact);
+	app.all('/about', routes.views.about);
+
+  // Views English
+
+  app.get('/eng/', routes.views.index);
+  app.get('/eng/service/:category?', routes.views.news);
+  app.get('/eng/service/post/:post', routes.views.post);
+  app.get('/eng/service/:post', routes.views.service);
+  app.get('/eng/portfolio', routes.views.portfolios);
+  app.get('/eng/portfolio/:post', routes.views.portfolio);
+  app.get('/eng/gallery', routes.views.gallery);
+  app.all('/eng/about', routes.views.about);
+
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	
