@@ -15,7 +15,7 @@ LOCK_FILE="$NODE_BASE/work/nodejs.lock"
 NODE_EXEC="/local/nodejs/node-v0.12.3-linux-x64/bin/node"
 CLOUDINARY_URL=cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo
 MANDRILL_API_KEY=NY8RRKyv1Bure9bdP8-TOQ
-
+MONGODB_URI=mongodb://localhost/www
 SERVER="$APP_DIR/$NODE_APP"
 LOG_FILE="$LOG_DIR/nodejs.log"
 
@@ -48,7 +48,7 @@ remove_pid_file() {
 
 start_it() {
   echo -n $"Starting $SERVER: "
-  $CMD "cd $APP_DIR;PORT=$PORT NODE_ENV=$NODE_ENV CLOUDINARY_URL=$CLOUDINARY_URL MANDRILL_API_KEY=$MANDRILL_API_KEY $DAEMON $SERVER >> $LOG_FILE 2>&1 &" && echo_success || echo_failure
+  $CMD "cd $APP_DIR;PORT=$PORT NODE_ENV=$NODE_ENV MONGODB_URI=$MONGODB_URI CLOUDINARY_URL=$CLOUDINARY_URL MANDRILL_API_KEY=$MANDRILL_API_KEY $DAEMON $SERVER >> $LOG_FILE 2>&1 &" && echo_success || echo_failure
   RETVAL=$?
   echo
   [ $RETVAL -eq 0 ] &&  ps -aefw | grep "$DAEMON $SERVER" | grep -v " grep " | awk '{print $2}' > $LOCK_FILE && chown $USER.$USER $LOCK_FILE
