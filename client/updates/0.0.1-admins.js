@@ -7,11 +7,11 @@
  * module.exports = function(done) { ... }
  */
 
-exports.create = {
-	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', email: 'orjan@manamind.com', password: 'test', isAdmin: true }
-	]
-};
+//exports.create = {
+	//User: [
+		//{ 'name.first': 'Admin', 'name.last': 'User', email: 'orjan@manamind.com', password: 'test', isAdmin: true }
+	//]
+//};
 
 /*
 
