@@ -35,7 +35,7 @@ var routes = {
 exports = module.exports = function(app) {
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/service/:category?', routes.views.news);
+	app.get('/service/:category?', routes.views.services);
   app.get('/service/post/:post', routes.views.post);
   app.get('/service/ir/demo', routes.views.irdemo);
   app.get('/portfolio', routes.views.portfolios);
@@ -46,7 +46,7 @@ exports = module.exports = function(app) {
   // Views English
 
   app.get('/eng/', routes.views.index);
-  app.get('/eng/service/:category?', routes.views.news);
+  app.get('/eng/service/:category?', routes.views.services);
   app.get('/eng/service/post/:post', routes.views.post);
   app.get('/eng/service/:post', routes.views.service);
   app.get('/eng/portfolio', routes.views.portfolios);

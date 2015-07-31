@@ -17,16 +17,22 @@ exports = module.exports = function(req, res) {
 
   // Load the current post
   view.on('init', function(next) {
-    var q = keystone.list('Post').model.findOne({
-      state: 'published',
-      slug: locals.filters.post
-    }).populate('author categories');
-    
+    console.log('locals.filters.post', locals.filters);
+    if (locals.filters.post) {
+      var q = keystone.list('Post').model.findOne({
+        state: 'published',
+        slug: locals.filters.post
+      }).populate('author categories');
+    }
     q.exec(function(err, result) {
       locals.data.post = result;
-      view.query('galleries', keystone.list('Gallery').model.find({
-        key: result.slug
-      }).sort('sortOrder'));
+
+
+      if (result !== null) {
+        view.query('galleries', keystone.list('Gallery').model.find({
+          key: result.slug
+        }).sort('sortOrder'));
+      }
       next(err);
     });
     

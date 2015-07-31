@@ -5,10 +5,10 @@ block content
   .presentation(style='background-color: #036; padding-top: 100px;')
     .container
 
-      if galleries.length
+      if galleries
         each gallery in galleries
           .row.gallery-images
-            if gallery.heroImage.exists
+            if gallery.images
               .col-sm-8.col-md-10: .row
                 #carousel-imac.carousel.slide(data-ride='carousel')
                   img(src='/images/imac.png' width='100%' style="position:absolute; z-index:5;")
@@ -29,6 +29,7 @@ block content
 
             if gallery.heroImage.exists
               .col-sm-4.col-md-2.hero-image(style="z-index:10"): img(src=gallery._.heroImage.limit(520,520)).pull-right
+      else
 
 
   if norwegian
@@ -39,7 +40,7 @@ block content
         else
           header
             h2(style="margin-top: 200px;")= data.post.title
-            h4: a(href='/blog') &larr; Tilbake til porteføljen.
+            h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
 
             h5= data.post.title 
               |  gikk live 
@@ -50,7 +51,7 @@ block content
   else 
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
-        h4: a(href='/blog') &larr; back to the portfolio
+        h4: a(href='/portfolio') &larr; back to the portfolio
         hr
         if !data.post
           h2 Invalid Post.
@@ -65,5 +66,6 @@ block content
           .post
             if data.post.image.exists
               .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
-            != data.post.content.full
+            if data.post.content.full
+              != data.post.content.full
         

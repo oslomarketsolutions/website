@@ -130,6 +130,28 @@ a h3 {
   //   }
   // }
 }
+.section-latest {
+  a {
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+  a h3 {
+    color: black;
+    font-weight: normal;
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+  .col-sm-4.text-center.animatedParent {
+    padding: 15px 0;
+    border-bottom: 3px solid #eee;
+    &:hover, &:focus, &:active {
+      background-color: white;
+      border-bottom: 3px solid @oms-button-color;
+    }
+  }
+}
 
 .navbar-oms {
 	margin-bottom: 0px;
@@ -376,7 +398,7 @@ footer {
     z-index: 2;
     margin-bottom: 30px;
   }
-  button {
+  button, a {
     position: relative;
     z-index: 2;
   }

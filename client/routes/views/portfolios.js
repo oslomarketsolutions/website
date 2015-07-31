@@ -46,7 +46,6 @@ exports = module.exports = function(req, res) {
   view.on('init', function(next) {
       keystone.list('PostCategory').model.findOne({ key: locals.filters.category }).exec(function(err, result) {
         locals.data.category = result;
-        console.log('result', result);
         next(err);
       });
     // } else {
@@ -57,21 +56,32 @@ exports = module.exports = function(req, res) {
   
   // Load the posts
   view.on('init', function(next) {
-    
     var q = keystone.list('Post').paginate({
         page: req.query.page || 1,
-        perPage: 50,
-        maxPages: 10,
-        PostCategory: 'Portfolio'
+        perPage: 1000,
+        maxPages: 10
       })
       .where('state', 'published')
       .sort('-publishedDate')
       .populate('author categories');
-    
-      // q.where('categories').in('fund');
-    
+      
     q.exec(function(err, results) {
-      locals.data.posts = results;
+
+        var isNorwegian = req.url.substr(0,4) !== '/eng'
+        locals.data.posts = results.results.filter(function(item) {
+          var hasEnglish = false;
+          var hasPortfolio = false;
+          item.categories.forEach(function (category) {
+            
+            if (category.key === 'english') {
+              hasEnglish = true;
+            } 
+            if (category.key === 'portfolio') {
+              hasPortfolio = true;
+            }
+          });
+          return (!isNorwegian && hasPortfolio && hasEnglish) || (isNorwegian && hasPortfolio && !hasEnglish);
+        });
       next(err);
     });
     

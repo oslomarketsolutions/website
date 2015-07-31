@@ -22,9 +22,8 @@ var _ = require('underscore');
 exports.initLocals = function(req, res, next) {
 
 	var locals = res.locals;
-
   locals.norwegian = true;
-  if (req.url.indexOf('eng') > -1) {
+  if (req.url.substr(0, 4) === '/eng') {
     locals.norwegian = false;
   }
 	

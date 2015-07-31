@@ -34,12 +34,11 @@ mixin arena(post, category)
     if !category || category === cats.key
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-        .col-sm-4.text-center.animatedParent
+        a.col-sm-4.text-center.animatedParent(href='/portfolio/' + post.slug)
           .animated.fadeIn
             .imagewrap(style="display:inline-block; width: 100%;")
-              img(src=post._.image.fit(160,160)).img
-            h4: a(href='/news/post/' + post.slug)= post.title
-            p!= post.content.brief
+              img(src=post._.image.fit(200,200)).img
+            h3= post.title
 block content
   .frontPage
     section.oms-graph.skrollr-desktop(id='skrollr-body')
@@ -52,7 +51,7 @@ block content
                 if norwegian
                   button.btn.btn-oms-lg(type='button', data-toggle='modal', data-target='#myModal')
                     | Kontakt oss
-                  button.btn.btn-oms-main-lg Kundeportefølje
+                  a.btn.btn-oms-main-lg(href='/portfolio') Kundeportefølje
                 else
                   button.btn.btn-oms-lg(type='button', data-toggle='modal', data-target='#myModal')
                     | Contact us
@@ -69,56 +68,56 @@ block content
                   h2.text-center Our services
               if norwegian
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/service/online-trading')
+                  a.animated.fadeInLeft(href='/service/post/aksjehandel')
                     div.left
                       img(src='images/online.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Aksjehandel på nett
-                      p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
+                      p Vi skreddersyr en fleksibel, rask og brukervennlig løsning for å handle verdipapirer på nett.
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInRight(href='/service/arena')
+                  a.animated.fadeInRight(href='/service/post/arena')
                     div.left
                       img(src='images/arena.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Arena
-                      p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
+                      p Hold deg oppdatert på norske verdipapirer med bransjeportalen Arena.
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/service/ir-webmoduler')
+                  a.animated.fadeInLeft(href='/service/post/ir-webmoduler')
                     div.left
                       img(src='images/ir.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 IR Webmoduler
-                      p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
+                      p Gi eksisterende og potensielle investorer muligheten til å følge aksjen på hjemmesiden. 
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInRight(href='/service/borsportal')
+                  a.animated.fadeInRight(href='/service/post/borsportal')
                     div.left
                       img(src='images/market.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Børsportal
-                      p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
+                      p Gi leserne en fullstendig dekning av finansmarkedet med en børsportal.
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/service/aksjespill')
+                  a.animated.fadeInLeft(href='/service/post/aksjespill')
                     div.left
                       img(src='images/game.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Aksjespill
-                      p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
+                      p Skap engasjement rundt aksjehandel med aksjespill.
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInRight(href='/service/Fondsrapportering')
+                  a.animated.fadeInRight(href='/service/post/fondsrapportering')
                     div.left
                       img(src='images/fund.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Fondsrapportering
                       p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/service/kalkulatorer')
+                  a.animated.fadeInLeft(href='/service/post/kalkulatorer')
                     div.left
                       img(src='images/calc.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Finansielle kalkulatorer
-                      p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
+                      p Synliggjør behovet for spareavtaler, bytte av boliglån eller annet med en finansiell kalkulator.
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInRight(href='/service/Finansielle-feeds')
+                  a.animated.fadeInRight(href='/service/post/finansielle-feeds')
                     div.left
                       img(src='images/feed.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
@@ -182,7 +181,7 @@ block content
                       h3 Financial feeds
                       p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
                       
-    section.odd-section
+    section.odd-section.section-latest
         .container
           .col-xs-12
             .row
@@ -194,45 +193,42 @@ block content
                 if filters.category && !data.category
                   h3.text-muted Invalid Category.
                 else
-                  if data.posts.results.length
+                  if data.posts.length
                     .blog
                       - var n = 0
-                      each post in data.posts.results
+                      each post in data.posts
                         if n < 3
-                          if norwegian
-                            +arena(post, 'portfolio')
-                          else
-                            +arena(post, 'engPortfolio')
+                          +arena(post, 'portfolio')
                     if data.category
                       h3.text-muted There are no posts in the category #{data.category.name}.
                   else
                     h3.text-muted There are no posts yet.
-    section.blog
-        .container
-          .col-xs-12
-            .row
-              .col-xs-12
-                if norwegian
-                  h2.text-center Utvikler bloggen
-                else
-                  h2.text-center The developer blog
-                if filters.category && !data.category
-                  h3.text-muted Invalid Category.
-                else
-                  if data.posts.results.length
-                    .blog
-                      - var n = 0
-                        each post in data.posts.results
-                          if n < 3
-                            if norwegian
-                              +post(post, 'blog')
-                            else
-                              +post(post, 'engBlog')
-                    if data.category
-                      h3.text-muted There are no posts in the category #{data.category.name}.
-                  else
-                    h3.text-muted There are no posts yet.
-    section.odd-section.technology
+    //- section.blog
+    //-     .container
+    //-       .col-xs-12
+    //-         .row
+    //-           .col-xs-12
+    //-             if norwegian
+    //-               h2.text-center Utvikler bloggen
+    //-             else
+    //-               h2.text-center The developer blog
+    //-             if filters.category && !data.category
+    //-               h3.text-muted Invalid Category.
+    //-             else
+    //-               if data.posts.length
+    //-                 .blog
+    //-                   - var n = 0
+    //-                     each post in data.posts
+    //-                       if n < 3
+    //-                         if norwegian
+    //-                           +post(post, 'blog')
+    //-                         else
+    //-                           +post(post, 'engBlog')
+    //-                 if data.category
+    //-                   h3.text-muted There are no posts in the category #{data.category.name}.
+    //-               else
+    //-                 h3.text-muted There are no posts yet.
+    section.technology
         .container
           .col-xs-12
             .row

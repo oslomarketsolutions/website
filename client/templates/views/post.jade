@@ -12,7 +12,7 @@ mixin post(post, category)
               .animatedParent
                 h2.text-center.animated.fadeIn= post.title
               .col-md-7.animatedParent
-                .animated.fadeIn(data-0="left: -100px;", data-1100="left: 0px;", style="position: relative")
+                .animated.fadeIn
                   p.lead.text-muted Posted
                     if post.publishedDate
                       | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
@@ -29,7 +29,7 @@ mixin post(post, category)
                   a(href='/portfolio/' + post.slug) Les mer.
 
               if post.image.exists
-                img(src=post._.image.fit(400,400), data-0="left: 0px;", data-1100="left: -100px;", style="position: relative").img
+                img(src=post._.image.fit(400,400)).img
               
           if n == 2 || n == 4 || n == 6 || n == 8
             .col-md-12
@@ -38,7 +38,7 @@ mixin post(post, category)
                   h2.text-center.animated.fadeIn= post.title
 
                 .col-md-5.animatedParent
-                  img(src=post._.image.fit(400,400), data-0="top: 0px;", data-1600="top: -120px;", style="position: relative").img.animated.fadeIn
+                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
                 .col-md-7.animatedParent
                   .animated.fadeIn
                     p.animated.fadeIn!= post.content.brief
@@ -90,13 +90,13 @@ block content
             -   }
             - }})
             h2(style="margin-top: 200px;")= data.post.title
-            h4: a(href='/blog') &larr; Tilbake til andre produkter.
+            h4: a(href='/service') &larr; Tilbake til andre produkter.
           .post
             != data.post.content.full
   else 
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
-        h4: a(href='/blog') &larr; back to other products.
+        h4: a(href='/eng/service') &larr; back to other products.
         hr
         if !data.post
           h2 Invalid Post.
@@ -114,8 +114,5 @@ block content
           .portfolio
             - var n = 0;
             each post in data.posts
-              - post.categories.map(function(item, index) {
-              -   console.log(item);
-              - });
               +post(post, serviceCategory[0])
     
