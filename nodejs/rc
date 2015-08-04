@@ -19,7 +19,6 @@ MONGODB_URI=mongodb://localhost/oslo-market-solutions
 SERVER="$APP_DIR/$NODE_APP"
 LOG_FILE="$LOG_DIR/nodejs.log"
 
-
 USERID=`expr "\`id\`" : 'uid=\([^(]*\)'`
 if [ "$USERID" -eq 0 ]; then
   CMD="runuser -l $USER -c"
