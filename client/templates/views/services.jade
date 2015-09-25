@@ -5,19 +5,22 @@ mixin post(post, category)
     if !category || category === cats.key
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           - n++
-          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9 
+          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
             .col-md-12
               .animatedParent
                 h2.text-center.animated.fadeIn= post.title
               .col-md-7.animatedParent
                 .animated.fadeIn
                   p!= post.content.brief
-                  a(href='/service/post/' + post.slug) Les mer.
+                  if norwegian
+                    a(href='/service/post/' + post.slug) Les mer.
+                  else
+                    a(href='/eng/service/post/' + post.slug) Read more.
               .col-md-5.animatedParent
                 if post.image.exists
                   img(src=post._.image.fit(400,400)).img.animated.fadeIn
 
-              
+
           else
             .col-md-12
                 .animatedParent
@@ -28,12 +31,15 @@ mixin post(post, category)
                 .col-md-7.animatedParent
                   .animated.fadeIn
                     p.animated.fadeIn!= post.content.brief
-                    a(href='/service/post/' + post.slug) Les mer.
+                    if norwegian
+                      a(href='/service/post/' + post.slug) Les mer.
+                    else
+                      a(href='/service/post/' + post.slug) Read more.
 block intro
   .container.portfolio
     if norwegian
       h1 Produkter
-    else 
+    else
       h1 Products
 
 block content

@@ -10,16 +10,14 @@ mixin post(post, category)
           p
             b Posted
               if post.publishedDate
-                | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+                | on #{post._.publishedDate.format('MMMM Do, YYYY')}
               if post.categories && post.categories.length
-                | in 
+                | in
                 each cat, i in post.categories
                   a(href='/news/' + cat.key)= cat.name
                   if i < post.categories.length - 1
-                    | , 
-                  else
-                    |  
-                
+                    | ,
+
               if post.author
                 | by #{post.author.name.first}
           if post.image.exists
@@ -55,7 +53,7 @@ block content
                 else
                   button.btn.btn-oms-lg(type='button', data-toggle='modal', data-target='#myModal')
                     | Contact us
-                  button.btn.btn-oms-main-lg Showcase
+                  a.btn.btn-oms-main-lg(href="/eng/portfolio") Portfolio
     div.image.Oslo.skrollr-desktop(id='skrollr-body', data-0="transform: translate3d(0px, 0px, 0px);" data-1100="transform: translate3d(0px, 400px, 0px);" style=" background-color:#036;")
     section.section-services
         .container
@@ -64,7 +62,7 @@ block content
               .col-xs-12
                 if norwegian
                   h2.text-center Våre tjenester
-                else 
+                else
                   h2.text-center Our services
               if norwegian
                 .col-sm-6.col-xs-12.text-left.animatedParent
@@ -87,7 +85,7 @@ block content
                       img(src='images/ir.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 IR Webmoduler
-                      p Gi eksisterende og potensielle investorer muligheten til å følge aksjen på hjemmesiden. 
+                      p Gi eksisterende og potensielle investorer muligheten til å følge aksjen på hjemmesiden.
                 .col-sm-6.col-xs-12.text-left.animatedParent
                   a.animated.fadeInRight(href='/service/post/borsportal')
                     div.left
@@ -123,7 +121,7 @@ block content
                     div.right
                       h3 Finansielle feeds
                       p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
-              else 
+              else
                 .col-sm-6.col-xs-12.text-left.animatedParent
                   a.animated.fadeInLeft(href='/eng/service/online-trading')
                     div.left
@@ -180,7 +178,7 @@ block content
                     div.right
                       h3 Financial feeds
                       p ipusm lorem hello kitty so much about products you would'nt belive it, or would you?
-                      
+
     section.odd-section.section-latest
         .container
           .col-xs-12
@@ -245,13 +243,19 @@ block content
               span(aria-hidden='true') &times;
             h4#myModalLabel.modal-title KONTAKT OSS
           .modal-body
-            p Oslo Market Solutions
-            p Postboks 4
-            p 0051 Oslo
-            p Tlf +47 40 00 23 13
-            p E-post info @ oslomarketsolutions.no
+            label Adresse
+            p(style='margin-top: 0px') Oslo Market Solutions
+              br
+              | Postboks 4
+              br
+              | 0051 Oslo
+            label(style='margin-top: 10px') Phone
+            p(style='margin-top: 0px')
+              a(style='display: inline;', href='tel:+4740002313') +47 40 00 23 13
+            label(style='margin-top: 10px') E-mail
+            p(style='margin-top: 0px')
+              a(style='display: inline;', href='mailto:info@oslomarketsolutions.no') info@oslomarketsolutions.no
           .modal-footer
             button.btn.btn-default(type='button', data-dismiss='modal') Close
-            |         
             button.btn.btn-primary(type='button') Save changes
 

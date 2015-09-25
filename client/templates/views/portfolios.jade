@@ -14,19 +14,20 @@ mixin post(post, category)
                 .col-md-7
                   p.lead.text-muted Posted
                     if post.publishedDate
-                      | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+                      | on #{post._.publishedDate.format('MMMM Do, YYYY')}
                     if post.categories && post.categories.length
-                      | in 
+                      | in
                       each cat, i in post.categories
                         if i < post.categories.length - 1
-                          | , 
-                        else
-                          |  
+                          | ,
                   p!= post.content.brief
-                  a(href='/portfolio/' + post.slug) Les mer.
+                  if norwegian
+                    a(href='/portfolio/' + post.slug) Les mer.
+                  else
+                    a(href='/eng/portfolio/' + post.slug) Read more.
                 .col-md-5
                   img(src=post._.image.fit(400,400)).img
-              
+
           if n == 2
             .col-md-12.animatedParent
               if post.image.exists
@@ -38,8 +39,11 @@ mixin post(post, category)
                     .animated.fadeIn
                       p.animated.fadeIn!= post.content.brief
                         if post.content.extended
-                      a(href='/portfolio/' + post.slug) Les mer.
-      else 
+                      if norwegian
+                        a(href='/portfolio/' + post.slug) Les mer.
+                      else
+                        a(href='/eng/portfolio/' + post.slug) Read more.
+      else
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 4
             .col-md-12
@@ -50,28 +54,32 @@ mixin post(post, category)
                   h2.text-center.animated.fadeIn Earlier projects
           .col-md-4.animatedParent
             .animated.fadeIn
-              h4.text-center: a(href='/portfolio/' + post.slug)= post.title
+              if norwegian
+                h4.text-center: a(href='/portfolio/' + post.slug)= post.title
+              else
+                h4.text-center: a(href='/eng/portfolio/' + post.slug)= post.title
               p.lead.text-muted Posted
                 if post.publishedDate
-                  | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+                  | on #{post._.publishedDate.format('MMMM Do, YYYY')}
                 if post.categories && post.categories.length
-                  | in 
+                  | in
                   each cat, i in post.categories
                     a(href='/portfolio/' + cat.key)= cat.name
                     if i < post.categories.length - 1
-                      | , 
-                    else
-                      |  
+                      | ,
               if post.image.exists
                 img(src=post._.image.fit(300,300)).img
               p!= post.content.brief
               if post.content.extended
-                p.read-more: a(href='/portfolio/' + post.slug) Les mer.
+                if norwegian
+                  p.read-more: a(href='/portfolio/' + post.slug) Les mer.
+                else
+                  p.read-more: a(href='/eng/portfolio/' + post.slug) Les mer.
 block intro
   .container.portfolio
     if norwegian
       h1 Løsninger
-    else 
+    else
       h1 Solutions
 
 block content
@@ -84,7 +92,7 @@ block content
           .portfolio
             - var n = 0;
             each post in data.posts
-              +post(post, 'portfolio')
+              +post(post, 'projects')
 
           if data.posts.totalPages > 1
             ul.pagination

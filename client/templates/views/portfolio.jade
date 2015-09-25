@@ -2,12 +2,12 @@ extends ../layouts/default
 
 
 block content
-  .presentation(style='background-color: #036; padding-top: 100px;')
+  .presentation(style='background-color: #036;')
     .container
 
       if galleries
         each gallery in galleries
-          .row.gallery-images
+          .row.gallery-images(style='padding-top: 100px;')
             if gallery.images
               .col-sm-8.col-md-10: .row
                 #carousel-imac.carousel.slide(data-ride='carousel')
@@ -18,7 +18,7 @@ block content
                       - n++
                       if n == 1
                         .item.active: img(src=image.limit(1000,1000) style="margin-top: 25px;")
-                      else 
+                      else
                         .item: img(src=image.limit(1000,1000) style="margin-top: 25px;")
 
                 //- each image in gallery.images
@@ -33,39 +33,42 @@ block content
 
 
   if norwegian
-    .container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+    .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
         if !data.post
+          hr
           h2 Invalid Post.
+          h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
         else
           header
             h2(style="margin-top: 200px;")= data.post.title
             h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
 
-            h5= data.post.title 
-              |  gikk live 
+            h5= data.post.title
+              |  gikk live
               if data.post.publishedDate
-                | #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
+                | #{data.post._.publishedDate.format('MMMM Do, YYYY')}
           .post
             != data.post.content.full
-  else 
+  else
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
-        h4: a(href='/portfolio') &larr; back to the portfolio
-        hr
+
         if !data.post
+          hr
           h2 Invalid Post.
+          h4: a(href='/eng/portfolio') &larr; back to the portfolio
         else
           header
             h2(style="margin-top: 200px;")= data.post.title
-            h5= data.post.title 
+            h5= data.post.title
               |  went live
               if data.post.publishedDate
-                |  #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
+                |  #{data.post._.publishedDate.format('MMMM Do, YYYY')}
               if data.post.categories && data.post.categories.length
           .post
             if data.post.image.exists
               .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
             if data.post.content.full
               != data.post.content.full
-        
+

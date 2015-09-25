@@ -15,22 +15,23 @@ mixin post(post, category)
                 .animated.fadeIn
                   p.lead.text-muted Posted
                     if post.publishedDate
-                      | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+                      | on #{post._.publishedDate.format('MMMM Do, YYYY')}
                     if post.categories && post.categories.length
-                      | in 
+                      | in
                       each cat, i in post.categories
                         if i < post.categories.length - 1
-                          | , 
-                        else
-                          |  
+                          | ,
                   p!= post.content.brief
                     if post.author
                       | by #{post.author.name.first}
-                  a(href='/portfolio/' + post.slug) Les mer.
+                  if norwegian
+                    a(href='/portfolio/' + post.slug) Les mer.
+                  else
+                    a(href='/eng/portfolio/' + post.slug) Read more.
 
               if post.image.exists
                 img(src=post._.image.fit(400,400)).img
-              
+
           if n == 2 || n == 4 || n == 6 || n == 8
             .col-md-12
               if post.image.exists
@@ -43,39 +44,50 @@ mixin post(post, category)
                   .animated.fadeIn
                     p.animated.fadeIn!= post.content.brief
                       if post.content.extended
-                    a(href='/portfolio/' + post.slug) Les mer.
+                    if norwegian
+                      a(href='/portfolio/' + post.slug) Les mer.
+                    else
+                      a(href='/eng/portfolio/' + post.slug) Read more.
+
 
 block content
-  .presentation(style='background-color: #036; padding-top: 100px;')
+  .presentation(style='background-color: #036;')
     .container
-      if galleries.length
-        each gallery in galleries
-          .row.gallery-images
-            if gallery.heroImage.exists
-              .col-sm-8.col-md-10: .row
-                #carousel-imac.carousel.slide(data-ride='carousel')
-                  img(src='/images/imac.png' width='100%' style="position:absolute; z-index:5;")
-                  .carousel-inner(role='listbox')
-                    - var n = 0;
-                    each image in gallery.images
-                      - n++
-                      if n == 1
-                        .item.active: img(src=image.limit(1000,1000) style="margin-top: 25px;")
-                      else 
-                        .item: img(src=image.limit(1000,1000) style="margin-top: 25px;")
-                //- each image in gallery.images
-                //-   .col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-            else
-              each image in gallery.images
-                .col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+      if galleries
+        if galleries.length
+          each gallery in galleries
+            .row.gallery-images(style='padding-top: 100px;')
+              if gallery.heroImage.exists
+                .col-sm-8.col-md-10: .row
+                  #carousel-imac.carousel.slide(data-ride='carousel')
+                    img(src='/images/imac.png' width='100%' style="position:absolute; z-index:5;")
+                    .carousel-inner(role='listbox')
+                      - var n = 0;
+                      each image in gallery.images
+                        - n++
+                        if n == 1
+                          .item.active: img(src=image.limit(1000,1000) style="margin-top: 25px;")
+                        else
+                          .item: img(src=image.limit(1000,1000) style="margin-top: 25px;")
+                  //- each image in gallery.images
+                  //-   .col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+              else
+                each image in gallery.images
+                  .col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
 
-            if gallery.heroImage.exists
-              .col-sm-4.col-md-2.hero-image(style="z-index:10"): img(src=gallery._.heroImage.limit(520,520)).pull-right
+              if gallery.heroImage.exists
+                .col-sm-4.col-md-2.hero-image(style="z-index:10"): img(src=gallery._.heroImage.limit(520,520)).pull-right
   if norwegian
     .container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
         if !data.post
+          hr(style="margin-top: 120px;")
           h2 Invalid Post.
+          if norwegian
+            h4: a(href='/') &larr; Tilbake til forsiden.
+          else
+            h4: a(href='/eng/') &larr; back to other front page.
+          - var serviceCategory = false;
         else
           header
             - var serviceCategory = data.post.categories.map(function(item) {
@@ -93,7 +105,7 @@ block content
             h4: a(href='/service') &larr; Tilbake til andre produkter.
           .post
             != data.post.content.full
-  else 
+  else
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
         h4: a(href='/eng/service') &larr; back to other products.
@@ -102,17 +114,32 @@ block content
           h2 Invalid Post.
         else
           header
+            - var serviceCategory = data.post.categories.map(function(item) {
+            - if (item.key === 'product') {
+            -   return
+            - } else {
+            -   if (item.key.indexOf(',') > -1) {
+            -     return item.key.replace(',', '')
+            -   }
+            -   else {
+            -     return item.key
+            -   }
+            - }})
             h2(style="margin-top: 200px;")= data.post.title
           .post
             != data.post.content.full
   .projects
     .container: .row
       if filters.category && !data.category
+        hr
         h3.text-muted Invalid Category.
+        h4: a(href='/eng/') &larr; back to other front page.
+
       else
         if data.posts.length
           .portfolio
             - var n = 0;
             each post in data.posts
-              +post(post, serviceCategory[0])
-    
+              if serviceCategory[0]
+                +post(post, serviceCategory[0])
+            if !serviceCategory[0]

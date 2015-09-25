@@ -6,7 +6,7 @@ mixin post(post, category)
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
         .col-md-12
-          
+
           h4: a(href='/news/post/' + post.slug)= post.title
           p.lead.text-muted
           if post.image.exists
@@ -47,7 +47,7 @@ block content
             .col-xs-12.employees
               if norwegian
                 h2.text-center Ansatte
-              else 
+              else
                 h2.text-center Employees
               hr
               if filters.category && !data.category
@@ -93,5 +93,4 @@ block content
               img(src='images/react.png', alt='')
               img(src='images/js.png', alt='')
               img(src='images/html5.png', alt='')
-              img(src='images/jaws2.svg', alt='')
 

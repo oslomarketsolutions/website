@@ -15,7 +15,8 @@ html
         //- Customise the stylesheet for your site by editing /public/styles/site.less
         //- All .less files will be automatically compiled and minified in production.
         link(href="/styles/site.min.css", rel="stylesheet")
-        link(href="/styles/animations.css", rel="stylesheet")
+        link(href="/styles/animations.css", media="screen and (min-width: 768px)", rel="stylesheet")
+
         link(href='/fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300', rel='stylesheet', type='text/css')
 
         //- This file provides the default styling for the KeystoneJS Content Editor
@@ -54,7 +55,7 @@ html
                 if norwegian
                   a.navbar-brand(href="/")
                     img(src='/images/oms-logo.png', alt='')
-                else 
+                else
                   a.navbar-brand(href="/eng")
                     img(src='/images/oms-logo.png', alt='')
 
@@ -66,22 +67,22 @@ html
                       li
                         a(href='/portfolio') Prosjekter
                       li
-                        a(href='/service') Produkter
+                        a(href='/service') Produkter og tjenester
                       li
                         a(href='/about') Om oss
                     ul.nav.navbar-nav.navbar-right
                       li
-                        a(href='/eng') 
+                        a(href='/eng')
                           i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
                           | English
                       li
-                        a(href='www.facebook.no') 
+                        a(href='www.facebook.no')
                           i.fa.fa-facebook
                       li
                         a(href='www.linkedin.no')
                           i.fa.fa-linkedin
                       li
-                        a(href='www.google.no') 
+                        a(href='www.google.no')
                           i.fa.fa-google-plus
                 else
                   .navbar-ex1-collapse
@@ -94,17 +95,17 @@ html
                         a(href='/eng/about') About us
                     ul.nav.navbar-nav.navbar-right
                       li
-                        a(href='/') 
+                        a(href='/')
                           i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
                           | Norsk
                       li
-                        a(href='www.facebook.no') 
+                        a(href='www.facebook.no')
                           i.fa.fa-facebook
                       li
                         a(href='www.linkedin.no')
                           i.fa.fa-linkedin
                       li
-                        a(href='www.google.no') 
+                        a(href='www.google.no')
                           i.fa.fa-google-plus
         #body
 
@@ -144,25 +145,15 @@ html
                           a(href='http://www.evolution.se', target='_blank') Evolution
                         li
                           a(href='http://www.newsweb.no', target='_blank') Newsweb
-                    .col-sm-4
-                      h3 Om oss
-                      ul
-                        li
-                          a(href='') Organisasjon
-                        li
-                          a(href='') Nyheter fra Oslo B&oslash;rs
-                        li
-                          a(href='') Pressebilder
-                        li
-                          a(href='') Ledige stillinger
-                    .col-sm-4
+
+                    .col-sm-8
                       h3 Kontakt oss
                       ul
                         li Oslo Market Solutions
                         li Postboks 4
-                        li Tlf: 
+                        li Tlf:
                           a(style='display: inline;', href='tel:+4740002313') +47 40 00 23 13
-                        li E-post 
+                        li E-post
                           a(style='display: inline;', href='mailto:info@oslomarketsolutions.no') info@oslomarketsolutions.no
 
 
@@ -178,9 +169,9 @@ html
         script(src='/js/bootstrap/bootstrap-3.3.4.min.js')
         script(src='/code.highcharts.com/highcharts.js')
         script(src='/code.highcharts.com/modules/exporting.js')
-        //- OMS 
+        //- OMS
         script(src='/js/skrollr.min.js')
-          
+
         script(src='/js/css3-animate-it.js')
         script(src='/js/general.js')
         //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
