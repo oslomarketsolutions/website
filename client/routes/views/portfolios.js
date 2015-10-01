@@ -72,7 +72,6 @@ exports = module.exports = function(req, res) {
           var hasEnglish = false;
           var hasPortfolio = false;
           item.categories.forEach(function (category) {
-
             if (category.key === 'english') {
               hasEnglish = true;
             }
