@@ -26,23 +26,24 @@ mixin post(post, category)
                   else
                     a(href='/eng/portfolio/' + post.slug) Read more.
                 .col-md-5
-                  img(src=post._.image.fit(400,400)).img
+                  if post.image.exists
+                    img(src=post._.image.fit(400,400)).img
 
-          if n == 2
+          else
             .col-md-12.animatedParent
-              if post.image.exists
-                .animated.fadeIn
-                  h2.text-center= post.title
-                  .col-md-5.animatedParent
+              .animated.fadeIn
+                h2.text-center= post.title
+                .col-md-5.animatedParent
+                  if post.image.exists
                     img(src=post._.image.fit(400,400)).img.animated.fadeIn
-                  .col-md-7.animatedParent
-                    .animated.fadeIn
-                      p.animated.fadeIn!= post.content.brief
-                        if post.content.extended
-                      if norwegian
-                        a(href='/portfolio/' + post.slug) Les mer.
-                      else
-                        a(href='/eng/portfolio/' + post.slug) Read more.
+                .col-md-7.animatedParent
+                  .animated.fadeIn
+                    p.animated.fadeIn!= post.content.brief
+                      if post.content.extended
+                    if norwegian
+                      a(href='/portfolio/' + post.slug) Les mer.
+                    else
+                      a(href='/eng/portfolio/' + post.slug) Read more.
       else
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 4
