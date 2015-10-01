@@ -75,6 +75,7 @@ exports = module.exports = function(req, res) {
             if (category.key === 'english') {
               hasEnglish = true;
             }
+
             if (category.key === 'projects') {
               hasPortfolio = true;
             }
