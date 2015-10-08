@@ -41,6 +41,8 @@ block content
           h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
         else
           header
+            if galleries.length == 0
+              .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
             h2(style="margin-top: 200px;")= data.post.title
             h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
 
@@ -53,13 +55,16 @@ block content
   else
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
-
+        - console.log('galleries', galleries.length)
         if !data.post
           hr
           h2 Invalid Post.
           h4: a(href='/eng/portfolio') &larr; back to the portfolio
         else
           header
+            if galleries.length == 0
+              .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+
             h2(style="margin-top: 200px;")= data.post.title
             h5= data.post.title
               |  went live
@@ -67,8 +72,6 @@ block content
                 |  #{data.post._.publishedDate.format('MMMM Do, YYYY')}
               if data.post.categories && data.post.categories.length
           .post
-            if data.post.image.exists
-              .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
             if data.post.content.full
               != data.post.content.full
 

@@ -64,28 +64,8 @@ block content
                     h3.text-muted There are no posts in the category #{data.category.name}.
                 else
                   h3.text-muted There are no posts yet.
-  section
-      .container
-        .col-xs-12
-          .row
-            .col-xs-12
-              h2.text-center The blog
-              hr
-              if filters.category && !data.category
-                h3.text-muted Invalid Category.
-              else
-                if data.posts.results.length
-                  .blog
-                      //- each post in data.posts.results
-                      //-   if norwegian
-                      //-     +workers(post, 'workers')
-                      //-   else
-                      //-     +workers(post, 'eng-workers')
-                  if data.category
-                    h3.text-muted There are no posts in the category #{data.category.name}.
-                else
-                  h3.text-muted There are no posts yet.
-  section.odd-section.technology
+
+  section.technology
       .container
         .col-xs-12
           .row

@@ -19,7 +19,11 @@ $(function () {
   var windowWidth = $(window).width();
   if(windowWidth > 767){
     skrollr.init();
-  } 
+  }
+
+  $('.carousel').carousel({
+    pause: "false"
+  });
 
 
   var sideslider = $('[data-toggle=collapse-side]');
