@@ -7,7 +7,8 @@ mixin post(post, category)
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
         .col-md-12
 
-          h4: a(href='/news/post/' + post.slug)= post.title
+          h2.text-center= post.title
+          hr
           p.lead.text-muted
           if post.image.exists
           p!= post.content.extended
@@ -31,13 +32,9 @@ block content
           .row
             .col-xs-12
               if norwegian
-                h2.text-center Konsernet
-                hr
                 each post in data.posts.results
                   +post(post, 'about-company')
               else
-                h2.text-center Oslo Børs VPS group
-                hr
                 each post in data.posts.results
                   +post(post, 'eng-about-company')
   section.odd-section
