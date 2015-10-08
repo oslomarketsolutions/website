@@ -35,6 +35,23 @@ $(function () {
       $(sel2).toggleClass('out');
   });
 
+  function initMap() {
+    var myLatLng = {lat: 59.908881, lng: 10.747056};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 16,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Fred Olsens gate 1'
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initMap);
+
 
 });
 

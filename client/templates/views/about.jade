@@ -23,7 +23,7 @@ mixin workers(post, category)
           .profile.text-center
             if post.image.exists
               img(src=post._.image.fit(160,160)).img.img-circle
-            h4: a(href='/news/post/' + post.slug)= post.title
+            h4(style='color:#1778c1')= post.title
             p!= post.content.brief
 block content
   section.section-about-company
@@ -37,6 +37,8 @@ block content
               else
                 each post in data.posts.results
                   +post(post, 'eng-about-company')
+
+  #map
   section.odd-section
       .container
         .col-xs-12
@@ -67,4 +69,3 @@ block content
               img(src='/images/react.png', alt='')
               img(src='/images/js.png', alt='')
               img(src='/images/html5.png', alt='')
-
