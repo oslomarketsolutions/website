@@ -53,10 +53,7 @@ block content
                 if data.posts.results.length
                   .blog
                     each post in data.posts.results
-                      if norwegian
-                        +workers(post, 'workers')
-                      else
-                        +workers(post, 'eng-workers')
+                      +workers(post, 'workers')
                   if data.category
                     h3.text-muted There are no posts in the category #{data.category.name}.
                 else
@@ -67,7 +64,7 @@ block content
         .col-xs-12
           .row
             .col-xs-12.text-center
-              img(src='images/react.png', alt='')
-              img(src='images/js.png', alt='')
-              img(src='images/html5.png', alt='')
+              img(src='/images/react.png', alt='')
+              img(src='/images/js.png', alt='')
+              img(src='/images/html5.png', alt='')
 

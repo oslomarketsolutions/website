@@ -7,10 +7,11 @@ mixin post(post, category)
           - n++
           if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
             .col-md-12
-              .animatedParent
-                h2.text-center.animated.fadeIn= post.title
+
               .col-md-7.animatedParent
                 .animated.fadeIn
+                  .animatedParent
+                     h2.animated.fadeIn= post.title
                   p!= post.content.brief
                   if norwegian
                     a(href='/service/post/' + post.slug) Les mer.
@@ -23,13 +24,14 @@ mixin post(post, category)
 
           else
             .col-md-12
-                .animatedParent
-                  h2.text-center.animated.fadeIn= post.title
+
                 .col-md-5.animatedParent
                   if post.image.exists
                     img(src=post._.image.fit(400,400)).img.animated.fadeIn
                 .col-md-7.animatedParent
                   .animated.fadeIn
+                    .animatedParent
+                      h2.animated.fadeIn= post.title
                     p.animated.fadeIn!= post.content.brief
                     if norwegian
                       a(href='/service/post/' + post.slug) Les mer.

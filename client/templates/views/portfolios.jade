@@ -9,9 +9,10 @@ mixin post(post, category)
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 1 || n == 3
             .col-md-12.animatedParent
-              .animated.fadeIn
-                h2.text-center= post.title
+
                 .col-md-7
+                  .animated.fadeIn
+                    h2.text-center= post.title
                   p.lead.text-muted Posted
                     if post.publishedDate
                       | on #{post._.publishedDate.format('MMMM Do, YYYY')}
@@ -31,13 +32,14 @@ mixin post(post, category)
 
           else
             .col-md-12.animatedParent
-              .animated.fadeIn
-                h2.text-center= post.title
+
                 .col-md-5.animatedParent
                   if post.image.exists
                     img(src=post._.image.fit(400,400)).img.animated.fadeIn
                 .col-md-7.animatedParent
                   .animated.fadeIn
+                    h2.text-center= post.title
+                      .animated.fadeIn
                     p.animated.fadeIn!= post.content.brief
                       if post.content.extended
                     if norwegian
