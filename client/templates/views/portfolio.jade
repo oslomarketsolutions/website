@@ -1,6 +1,8 @@
 extends ../layouts/default
 
 
+
+
 block content
   .presentation(style='background-color: #036;')
     .container
@@ -30,8 +32,6 @@ block content
             if gallery.heroImage.exists
               .col-sm-4.col-md-2.hero-image(style="z-index:10"): img(src=gallery._.heroImage.limit(520,520)).pull-right
       else
-
-
   if norwegian
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article

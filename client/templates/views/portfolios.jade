@@ -48,36 +48,27 @@ mixin post(post, category)
                       a(href='/eng/portfolio/' + post.slug) Read more.
       else
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-          if n == 4
+          if n == 6
             .col-md-12
               .animatedParent
                 if norwegian
-                  h2.text-center.animated.fadeIn Tidligere løsninger fra oss
+                  h2.text-center.animated.fadeIn Eldre
                 else
                   h2.text-center.animated.fadeIn Earlier projects
-          .col-md-4.animatedParent
-            .animated.fadeIn
+          .col-md-4.text-center.animatedParent
+            .animated.fadeIn.{data.category.name}
               if norwegian
-                h4.text-center: a(href='/portfolio/' + post.slug)= post.title
-              else
-                h4.text-center: a(href='/eng/portfolio/' + post.slug)= post.title
-              p.lead.text-muted Posted
+                h3: a(href='/portfolio/' + post.slug)= post.title
                 if post.publishedDate
-                  | on #{post._.publishedDate.format('MMMM Do, YYYY')}
-                if post.categories && post.categories.length
-                  | in
-                  each cat, i in post.categories
-                    a(href='/portfolio/' + cat.key)= cat.name
-                    if i < post.categories.length - 1
-                      | ,
-              if post.image.exists
-                img(src=post._.image.fit(300,300)).img
-              p!= post.content.brief
-              if post.content.extended
-                if norwegian
-                  p.read-more: a(href='/portfolio/' + post.slug) Les mer.
-                else
-                  p.read-more: a(href='/eng/portfolio/' + post.slug) Les mer.
+                  p.text-muted Prosjektet gikk live #{post._.publishedDate.format('DD.MM.YYYY')}
+                if post.image.exists
+                  img(src=post._.image.fit(300,300)).img
+              else
+                  h3: a(href='/eng/portfolio/' + post.slug)= post.title
+                  if post.publishedDate
+                    p.text-muted Project released on #{post._.publishedDate.format('MMMM Do, YYYY')}
+                  if post.image.exists
+                    img(src=post._.image.fit(300,300)).img
 block intro
   .container.portfolio
     if norwegian
