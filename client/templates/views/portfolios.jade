@@ -56,7 +56,7 @@ mixin post(post, category)
                 else
                   h2.text-center.animated.fadeIn Earlier projects
           .col-md-4.text-center.animatedParent
-            .animated.fadeIn.{data.category.name}
+            .animated.fadeIn
               if norwegian
                 h3: a(href='/portfolio/' + post.slug)= post.title
                 if post.publishedDate
