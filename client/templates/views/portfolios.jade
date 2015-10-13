@@ -5,9 +5,9 @@ mixin post(post, category)
     if !category || category === cats.key
       - n++
 
-      if n < 4
+      if n < 6
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-          if n == 1 || n == 3
+          if n == 1 || n == 3 || n == 5
             .col-md-12.animatedParent
 
                 .col-md-7
