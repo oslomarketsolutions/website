@@ -133,7 +133,7 @@
     </build>
     <distributionManagement>
       <repository>
-        <id>deployment</id>
+        <id>oms-nexus-release</id>
         <name>Internal Releases</name>
         <url>http://nexus.osl.manamind.com/content/repositories/releases/</url>
       </repository>
