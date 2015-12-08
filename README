@@ -14,3 +14,5 @@ node keystone.js
 
 NB! If you get problem with clodinary first time setting up WWW. 
 scp www@demo16.manamind.com:webapps/client/.env .  
+
+* Deployment
