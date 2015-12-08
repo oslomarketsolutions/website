@@ -55,12 +55,12 @@
                                     <argument>deploy:deploy-file</argument>
                                     <argument>-Dfile=${project.build.directory}/${project.build.finalName}.${format}</argument>
                                     <argument>-Dpackaging=${format}</argument>
-                                    <argument>-DrepositoryId=oms-nexus-release</argument>
-                                    <argument>-Durl=http://nexus.osl.manamind.com/content/repositories/releases/</argument>
+                                    <argument>-DrepositoryId=${upload.repository.id}</argument>
+                                    <argument>-Durl=http://nexus.osl.manamind.com/content/repositories/${upload.repository}/</argument>
                                     <argument>-Dversion=${git.buildnumber}</argument>
                                     <argument>-DartifactId=${project.artifactId}</argument>
                                     <argument>-DgroupId=${project.groupId}</argument>
-                                    <argument>-DgeneratePom=false</argument>
+                                    <argument>-DgeneratePom=true</argument>
                                 </arguments>
                             </configuration>
                         </execution>
@@ -88,7 +88,8 @@
                             <configuration>
                                 <runOnlyAtExecutionRoot>false</runOnlyAtExecutionRoot>
                                 <javaScriptBuildnumberCallback>
-                                            branch.replace("/", "_") + "-" + commitsCount + "-" + shortRevision
+                                    branch.replace(/^origin\//, '').replace(/\//g, '_') + "-" + commitsCount + "-" + shortRevision
+                                    + ((branch.replace(/^origin\//, '') === "master" || branch.replace(/^origin\//, '').startsWith("release/") ? "" : "-SNAPSHOT"));
                                 </javaScriptBuildnumberCallback>
                             </configuration>
                         </execution>
@@ -127,6 +128,34 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>cobertura-maven-plugin</artifactId>
                     <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>groovy-maven-plugin</artifactId>
+                    <version>1.5</version>
+                    <executions>
+                        <execution>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>execute</goal>
+                            </goals>
+                            <configuration>
+                                    <source>
+                                        String gb = pom.properties['git.buildnumber']
+                                        if (gb.endsWith('-SNAPSHOT')) {
+                                            pom.properties['upload.repository'] = 'snapshots';
+                                            pom.properties['upload.repository.id'] = 'oms-nexus-snapshots';
+                                        } else if (gb.startsWith('release-')) {
+                                            pom.properties['upload.repository'] = 'candidates';
+                                            pom.properties['upload.repository.id'] = 'oms-nexus-candidates';
+                                        } else if (gb.startsWith('master-')) {
+                                            pom.properties['upload.repository'] = 'staging';
+                                            pom.properties['upload.repository.id'] = 'oms-nexus-staging';
+                                        }
+                                    </source>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
