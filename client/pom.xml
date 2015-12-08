@@ -165,6 +165,11 @@
                 <artifactId>maven-jgit-buildnumber-plugin</artifactId>
             </plugin>
             <plugin>
+                <!-- Must be before exec-maven-plugin, to run before it in deploy phase! -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>groovy-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
             </plugin>
