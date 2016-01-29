@@ -23,9 +23,9 @@ mixin post(post, category)
                           | ,
                   p!= post.content.brief
                   if norwegian
-                    a(href='/portfolio/' + post.slug) Les mer.
+                    a(href='/no/portfolio/' + post.slug) Les mer.
                   else
-                    a(href='/eng/portfolio/' + post.slug) Read more.
+                    a(href='/portfolio/' + post.slug) Read more.
                 .col-md-5
                   if post.image.exists
                     img(src=post._.image.fit(400,400)).img
@@ -43,9 +43,9 @@ mixin post(post, category)
                     p.animated.fadeIn!= post.content.brief
                       if post.content.extended
                     if norwegian
-                      a(href='/portfolio/' + post.slug) Les mer.
+                      a(href='/no/portfolio/' + post.slug) Les mer.
                     else
-                      a(href='/eng/portfolio/' + post.slug) Read more.
+                      a(href='/portfolio/' + post.slug) Read more.
       else
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 6
@@ -58,13 +58,13 @@ mixin post(post, category)
           .col-md-4.text-center.animatedParent
             .animated.fadeIn
               if norwegian
-                h3: a(href='/portfolio/' + post.slug)= post.title
+                h3: a(href='/no/portfolio/' + post.slug)= post.title
                 if post.publishedDate
                   p.text-muted Prosjektet gikk live #{post._.publishedDate.format('DD.MM.YYYY')}
                 if post.image.exists
                   img(src=post._.image.fit(300,300)).img
               else
-                  h3: a(href='/eng/portfolio/' + post.slug)= post.title
+                  h3: a(href='/portfolio/' + post.slug)= post.title
                   if post.publishedDate
                     p.text-muted Project released on #{post._.publishedDate.format('MMMM Do, YYYY')}
                   if post.image.exists

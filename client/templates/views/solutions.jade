@@ -1,0 +1,76 @@
+extends ../layouts/default
+
+mixin post(post, category)
+  each cats in post.categories
+    if !category || category === cats.key
+        post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+          - n++
+          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
+            .col-md-12
+
+              .col-md-7.animatedParent
+                .animated.fadeIn
+                  .animatedParent
+                     h2.animated.fadeIn= post.title
+                  p!= post.content.brief
+                  if norwegian
+                    a(href='/no/service/post/' + post.slug) Les mer.
+                  else
+                    a(href='/service/post/' + post.slug) Read more.
+              .col-md-5.animatedParent
+                if post.image.exists
+                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+
+
+          else
+            .col-md-12
+
+                .col-md-5.animatedParent
+                  if post.image.exists
+                    img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                .col-md-7.animatedParent
+                  .animated.fadeIn
+                    .animatedParent
+                      h2.animated.fadeIn= post.title
+                    p.animated.fadeIn!= post.content.brief
+                    if norwegian
+                      a(href='/no/service/post/' + post.slug) Les mer.
+                    else
+                      a(href='/service/post/' + post.slug) Read more.
+block intro
+  .container.portfolio
+    if norwegian
+      h1 Løsninger
+    else
+      h1 Solutions
+
+block content
+  .container: .row
+      if filters.category && !data.category
+        h3.text-muted Invalid Category.
+      else
+        if data.posts.length
+
+          .portfolio
+            - var n = 0;
+            each post in data.posts
+              +post(post, 'solution')
+
+          if data.posts.totalPages > 1
+            ul.pagination
+              if data.posts.previous
+                li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
+              else
+                li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+              each p, i in data.posts.pages
+                li(class=data.posts.currentPage == p ? 'active' : null)
+                  a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+              if data.posts.next
+                li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
+              else
+                li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
+        else
+          if data.category
+            h3.text-muted There are no posts in the category #{data.category.name}.
+          else
+            h3.text-muted There are no posts yet.

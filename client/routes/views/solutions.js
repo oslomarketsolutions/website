@@ -44,52 +44,58 @@ exports = module.exports = function(req, res) {
 
   // Load the current category filter
   view.on('init', function(next) {
+
+    if (req.params.category) {
       keystone.list('PostCategory').model.findOne({ key: locals.filters.category }).exec(function(err, result) {
         locals.data.category = result;
         next(err);
       });
-    // } else {
-    //   next();
-    // }
+    } else {
+      next();
+    }
 
   });
 
   // Load the posts
   view.on('init', function(next) {
+
     var q = keystone.list('Post').paginate({
         page: req.query.page || 1,
         perPage: 1000,
-        maxPages: 10
+        maxPages: 1
       })
       .where('state', 'published')
       .sort('-publishedDate')
       .populate('author categories');
 
+    if (locals.data.category) {
+      q.where('categories').in([locals.data.category]);
+    }
+
     q.exec(function(err, results) {
 
         var isNorwegian = req.url.substr(0,4) === '/no' || req.url.substr(0,4) === '/no/'
+
         locals.data.posts = results.results.filter(function(item) {
           var hasEnglish = false;
-          var hasPortfolio = false;
+          var hasProduct = false;
           item.categories.forEach(function (category) {
+
             if (category.key === 'english') {
               hasEnglish = true;
             }
-
-            if (category.key === 'projects') {
-              hasPortfolio = true;
+            if (category.key === 'solution') {
+              hasProduct = true;
             }
           });
-          return (!isNorwegian && hasPortfolio && hasEnglish) || (isNorwegian && hasPortfolio && !hasEnglish);
+          return (!isNorwegian && hasProduct && hasEnglish) || (isNorwegian && hasProduct && !hasEnglish);
         });
       next(err);
     });
 
   });
 
-
-
   // Render the view
-  view.render('portfolios');
+  view.render('solutions');
 
 };

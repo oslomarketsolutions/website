@@ -53,10 +53,10 @@ html
                   span.icon-bar
                   span.icon-bar
                 if norwegian
-                  a.navbar-brand(href="/")
+                  a.navbar-brand(href="/no")
                     img(src='/images/oms-logo.png', alt='')
                 else
-                  a.navbar-brand(href="/eng")
+                  a.navbar-brand(href="/")
                     img(src='/images/oms-logo.png', alt='')
 
               //- Collect the nav links, forms, and other content for toggling
@@ -65,14 +65,16 @@ html
                   .navbar-ex1-collapse
                     ul.nav.navbar-nav
                       li
-                        a(href='/portfolio') Prosjekter
+                        a(href='/no/portfolio') Prosjekter
                       li
-                        a(href='/service') Produkter og tjenester
+                        a(href='/no/solution') Løsninger
                       li
-                        a(href='/about') Om oss
+                        a(href='/no/product') Produkter
+                      li
+                        a(href='/no/about') Om oss
                     ul.nav.navbar-nav.navbar-right
                       li
-                        a(href='/eng')
+                        a(href='/')
                           i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
                           | English
                       li
@@ -88,14 +90,16 @@ html
                   .navbar-ex1-collapse
                     ul.nav.navbar-nav
                       li
-                        a(href='/eng/portfolio') Portfolio
+                        a(href='/portfolio') Portfolio
                       li
-                        a(href='/eng/service') Products
+                        a(href='/solution') Solutions
                       li
-                        a(href='/eng/about') About us
+                        a(href='/product') Products
+                      li
+                        a(href='/about') About us
                     ul.nav.navbar-nav.navbar-right
                       li
-                        a(href='/')
+                        a(href='/no')
                           i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
                           | Norsk
                       li

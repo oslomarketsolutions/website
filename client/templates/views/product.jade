@@ -15,22 +15,22 @@ mixin post(post, category)
                 .animated.fadeIn
                   p.lead.text-muted Posted
                     if post.publishedDate
-                      | on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+                      | on #{post._.publishedDate.format('MMMM Do, YYYY')}
                     if post.categories && post.categories.length
-                      | in 
+                      | in
                       each cat, i in post.categories
                         if i < post.categories.length - 1
-                          | , 
+                          | ,
                         else
-                          |  
+                          |
                   p!= post.content.brief
                     if post.author
                       | by #{post.author.name.first}
-                  a(href='/portfolio/' + post.slug) Les mer.
+                  a(href='/no/portfolio/' + post.slug) Les mer.
 
               if post.image.exists
                 img(src=post._.image.fit(400,400)).img
-              
+
           if n == 2 || n == 4 || n == 6 || n == 8
             .col-md-12
               if post.image.exists
@@ -43,7 +43,7 @@ mixin post(post, category)
                   .animated.fadeIn
                     p.animated.fadeIn!= post.content.brief
                       if post.content.extended
-                    a(href='/portfolio/' + post.slug) Les mer.
+                    a(href='/no/portfolio/' + post.slug) Les mer.
 
 block content
   .presentation(style='background-color: #036; padding-top: 100px;')
@@ -61,7 +61,7 @@ block content
                       - n++
                       if n == 1
                         .item.active: img(src=image.limit(1000,1000) style="margin-top: 25px;")
-                      else 
+                      else
                         .item: img(src=image.limit(1000,1000) style="margin-top: 25px;")
                 //- each image in gallery.images
                 //-   .col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
@@ -90,13 +90,13 @@ block content
             -   }
             - }})
             h2(style="margin-top: 200px;")= data.post.title
-            h4: a(href='/service') &larr; Tilbake til andre produkter.
+            h4: a(href='/no/service') &larr; Tilbake til andre produkter.
           .post
             != data.post.content.full
-  else 
+  else
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
-        h4: a(href='/eng/service') &larr; back to other products.
+        h4: a(href='/service') &larr; back to other products.
         hr
         if !data.post
           h2 Invalid Post.
@@ -115,4 +115,3 @@ block content
             - var n = 0;
             each post in data.posts
               +post(post, serviceCategory[0])
-    

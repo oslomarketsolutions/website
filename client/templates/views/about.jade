@@ -14,7 +14,6 @@ mixin post(post, category)
           p!= post.content.extended
           .text-center
             img(src=post._.image.fit(400,400)).img.text-center
-
 mixin workers(post, category)
   each cats in post.categories
     if !category || category === cats.key
@@ -37,7 +36,6 @@ block content
               else
                 each post in data.posts.results
                   +post(post, 'eng-about-company')
-
   #map
   section.odd-section
       .container
@@ -60,7 +58,6 @@ block content
                     h3.text-muted There are no posts in the category #{data.category.name}.
                 else
                   h3.text-muted There are no posts yet.
-
   section.technology
       .container
         .col-xs-12

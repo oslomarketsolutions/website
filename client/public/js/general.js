@@ -44,14 +44,16 @@ $(function () {
     });
 
     var marker = new google.maps.Marker({
-      scrollwheel: false,
-      navigationControl: false,
-      mapTypeControl: false,
-      scaleControl: false,
-      draggable: false,
       position: myLatLng,
       map: map,
       title: 'Fred Olsens gate 1'
+    });
+
+    map.setOptions({
+      draggable: false,
+      zoomControl: false,
+      scrollwheel: false,
+      disableDoubleClickZoom: true
     });
   }
 
