@@ -14,9 +14,9 @@ mixin post(post, category)
                      h2.animated.fadeIn= post.title
                   p!= post.content.brief
                   if norwegian
-                    a(href='/no/service/post/' + post.slug) Les mer.
+                    a(href='/no/solution/post/' + post.slug) Les mer.
                   else
-                    a(href='/service/post/' + post.slug) Read more.
+                    a(href='/solution/post/' + post.slug) Read more.
               .col-md-5.animatedParent
                 if post.image.exists
                   img(src=post._.image.fit(400,400)).img.animated.fadeIn
@@ -34,9 +34,9 @@ mixin post(post, category)
                       h2.animated.fadeIn= post.title
                     p.animated.fadeIn!= post.content.brief
                     if norwegian
-                      a(href='/no/service/post/' + post.slug) Les mer.
+                      a(href='/no/solution/post/' + post.slug) Les mer.
                     else
-                      a(href='/service/post/' + post.slug) Read more.
+                      a(href='/solution/post/' + post.slug) Read more.
 block intro
   .container.portfolio
     if norwegian
