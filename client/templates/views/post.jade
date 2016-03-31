@@ -13,17 +13,14 @@ mixin post(post, category)
                 h2.text-center.animated.fadeIn= post.title
               .col-md-7.animatedParent
                 .animated.fadeIn
-                  p.lead.text-muted Posted
+                  p.lead.text-muted
                     if post.publishedDate
-                      | on #{post._.publishedDate.format('MMMM Do, YYYY')}
-                    if post.categories && post.categories.length
-                      | in
-                      each cat, i in post.categories
-                        if i < post.categories.length - 1
-                          | ,
-                  p!= post.content.brief
-                    if post.author
-                      | by #{post.author.name.first}
+
+                      if norwegian
+                        | Prosjektet gikk live
+                      else
+                        | Project went live
+                      | &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
                   if norwegian
                     a(href='/portfolio/' + post.slug) Les mer.
                   else

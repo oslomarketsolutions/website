@@ -47,9 +47,13 @@ block content
             h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
 
             h5= data.post.title
-              |  gikk live
-              if data.post.publishedDate
-                | #{data.post._.publishedDate.format('MMMM Do, YYYY')}
+              if post.publishedDate
+
+                if norwegian
+                  | Prosjektet gikk live
+                else
+                  | Project went live
+                | &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
           .post
             != data.post.content.full
   else

@@ -79,7 +79,7 @@ exports = module.exports = function(req, res) {
           var hasProduct = false;
           item.categories.forEach(function (category) {
 
-            if (category.key === 'english') {
+            if (category.key === 'english' || category.key === 'English' ) {
               hasEnglish = true;
             }
             if (category.key === 'product') {

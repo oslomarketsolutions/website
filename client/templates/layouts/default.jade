@@ -90,7 +90,7 @@ html
                   .navbar-ex1-collapse
                     ul.nav.navbar-nav
                       li
-                        a(href='/portfolio') Portfolio
+                        a(href='/portfolio') Projects
                       li
                         a(href='/solution') Solutions
                       li
@@ -156,9 +156,12 @@ html
                         li Oslo Market Solutions
                         li Postboks 4
                         li Tlf:
-                          a(style='display: inline;', href='tel:+4740002313') +47 40 00 23 13
-                        li E-post
-                          a(style='display: inline;', href='mailto:info@oslomarketsolutions.no') info@oslomarketsolutions.no
+                          a(style='display: inline;', href='tel:+4740002313') &nbsp;+47 40 00 23 13
+                        li Mail:
+                          if norwegian
+                            a(style='display: inline;', href='mailto:info@oslomarketsolutions.no') &nbsp;Klikk her
+                          else
+                            a(style='display: inline;', href='mailto:info@oslomarketsolutions.no') &nbsp;Click here
 
 
 
