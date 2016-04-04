@@ -353,12 +353,14 @@ section {
     }
   }
 }
+
 footer {
+  margin-top: 50px;
+  padding: 50px 0;
 	background-color: @oms-main-color;
-  padding: 25px 0;
 	h3 {
 		color: white;
-		opacity: 0.6;
+    font-weight: normal;
 	}
 	p {
 		color: white;
@@ -543,6 +545,14 @@ body {
 post {
   .col-md-4 {
     height: 320px;
+  }
+  > .col-lg-12 {
+    margin-top: 100px;
+  }
+  img.img {
+    @media only screen and (max-width: 479px)  {
+      width: 280px;
+    }
   }
 }
 

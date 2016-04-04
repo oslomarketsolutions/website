@@ -36,33 +36,32 @@ exports = module.exports = function(app) {
 	// Views
 
   // Views in norwegian
-
 	app.get('/no/', routes.views.index);
 	app.get('/no/product/:category?', routes.views.products);
   app.get('/no/product/post/:post', routes.views.post);
-  app.get('/no/solution/:category?', routes.views.solutions);
   app.get('/no/solution/post/:post', routes.views.post);
-  app.get('/no/portfolio', routes.views.portfolios);
-  app.get('/no/portfolio/:post', routes.views.portfolio);
+  app.get('/no/solution/:category?', routes.views.solutions);
+  app.get('/no/projects', routes.views.portfolios);
+  app.get('/no/project/:post', routes.views.portfolio);
 	app.get('/no/gallery', routes.views.gallery);
 	app.all('/no/about', routes.views.about);
 
   // Views English
-
   app.get('/', routes.views.index);
   app.get('/product/:category?', routes.views.products);
   app.get('/product/post/:post', routes.views.post);
-  app.get('/solution/:category?', routes.views.solutions);
   app.get('/solution/post/:post', routes.views.post);
-  app.get('/product/ir/demo', routes.views.irdemo);
-  app.get('/portfolio', routes.views.portfolios);
-  app.get('/portfolio/:post', routes.views.portfolio);
+  app.get('/solution/:category?', routes.views.solutions);
+  app.get('/projects', routes.views.portfolios);
+  app.get('/project/:post', routes.views.portfolio);
   app.get('/gallery', routes.views.gallery);
   app.all('/about', routes.views.about);
 
 
-  // others
 
+
+  // others
+  app.get('/product/ir/demo', routes.views.irdemo);
   app.get('/no/product/ir/demo', routes.views.irdemo);
 
 

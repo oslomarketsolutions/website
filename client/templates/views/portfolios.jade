@@ -8,9 +8,9 @@ mixin post(post, category)
       if n < 6
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 1 || n == 3 || n == 5
-            .col-md-12.animatedParent
+            .col-lg-12.animatedParent
 
-                .col-md-7
+                .col-lg-7
                   .animated.fadeIn
                     h2= post.title
                   p.lead.text-muted
@@ -20,23 +20,24 @@ mixin post(post, category)
                         | Prosjektet gikk live
                       else
                         | Project went live
-                      | &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
+
+                      &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
                   p!= post.content.brief
                   if norwegian
                     a(href='/no/portfolio/' + post.slug) Les mer.
                   else
                     a(href='/portfolio/' + post.slug) Read more.
-                .col-md-5
+                .col-lg-5
                   if post.image.exists
                     img(src=post._.image.fit(400,400)).img
 
           else
-            .col-md-12.animatedParent
+            .col-lg-12.animatedParent
 
-                .col-md-5.animatedParent
+                .col-lg-5.animatedParent
                   if post.image.exists
                     img(src=post._.image.fit(400,400)).img.animated.fadeIn
-                .col-md-7.animatedParent
+                .col-lg-7.animatedParent
                   .animated.fadeIn
                     h2= post.title
                       .animated.fadeIn
@@ -51,28 +52,28 @@ mixin post(post, category)
                     p.animated.fadeIn!= post.content.brief
                       if post.content.extended
                     if norwegian
-                      a(href='/no/portfolio/' + post.slug) Les mer.
+                      a(href='/no/project/' + post.slug) Les mer.
                     else
-                      a(href='/portfolio/' + post.slug) Read more.
+                      a(href='/project/' + post.slug) Read more.
       else
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 6
-            .col-md-12
+            .col-lg-12
               .animatedParent
                 if norwegian
                   h2.text-center.animated.fadeIn Eldre
                 else
                   h2.text-center.animated.fadeIn Earlier projects
-          .col-md-4.text-center.animatedParent
+          .col-lg-4.text-center.animatedParent
             .animated.fadeIn
               if norwegian
-                h3: a(href='/no/portfolio/' + post.slug)= post.title
+                h3: a(href='/no/project/' + post.slug)= post.title
                 if post.publishedDate
                   p.text-muted Prosjektet gikk live #{post._.publishedDate.format('DD.MM.YYYY')}
                 if post.image.exists
                   img(src=post._.image.fit(300,300)).img
               else
-                  h3: a(href='/portfolio/' + post.slug)= post.title
+                  h3: a(href='/project/' + post.slug)= post.title
                   if post.publishedDate
                     p.text-muted Project released on #{post._.publishedDate.format('MMMM Do, YYYY')}
                   if post.image.exists

@@ -49,11 +49,11 @@ block content
                 if norwegian
                   button.btn.btn-oms-lg(type='button', data-toggle='modal', data-target='#myModal')
                     | Kontakt oss
-                  a.btn.btn-oms-main-lg(href='/no/portfolio') Kundeportefølje
+                  a.btn.btn-oms-main-lg(href='/no/projects') Kundeportefølje
                 else
                   button.btn.btn-oms-lg(type='button', data-toggle='modal', data-target='#myModal')
                     | Contact us
-                  a.btn.btn-oms-main-lg(href="/portfolio") Portfolio
+                  a.btn.btn-oms-main-lg(href="/projects") Portfolio
 
     div.image.Oslo.skrollr-desktop(id='skrollr-body', data-0="transform: translate3d(0px, 0px, 0px);" data-1100="transform: translate3d(0px, 400px, 0px);" style=" background-color:#036;")
       div.gradient
@@ -75,7 +75,7 @@ block content
                       h3 Online porteføljerapportering
                       p La investorkunder holde seg oppdatert til enhver tid med en brukervennlig og moderne porteføljeløsning
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/no/no/solution/post/aksjehandel')
+                  a.animated.fadeInLeft(href='/no/solution/post/aksjehandel')
                     div.left
                       img(src='images/online.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
@@ -121,7 +121,7 @@ block content
                       h3 Market Data Portal
                       p Complete coverage of the financial markets with live streaming data.
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/solution/post/stock-game')
+                  a.animated.fadeInLeft(href='/solution/post/trading-games')
                     div.left
                       img(src='images/game.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
@@ -162,14 +162,14 @@ block content
                   .row
                     .col-xs-12
                       .col-sm-6.col-xs-12.text-left.animatedParent
-                        a.animated.fadeInLeft(href='/product/online-trading')
+                        a.animated.fadeInLeft(href='/product/post/online-trading')
                           div.left
                             img(src='images/ir.svg', alt='Generic placeholder image', width='40', height='40')
                           div.right
                             h3 IR Web Modules
                             p With IR Web Modules on your company page, potential and existing investors are able to obtain a complete picture of the share in one place
                       .col-sm-6.col-xs-12.text-left.animatedParent
-                        a.animated.fadeInRight(href='/product/arnea')
+                        a.animated.fadeInRight(href='/product/post/arena')
                           div.left
                             img(src='images/arena.svg', alt='Generic placeholder image', width='40', height='40')
                           div.right
@@ -208,7 +208,10 @@ block content
           .modal-header
             button.close(type='button', data-dismiss='modal', aria-label='Close')
               span(aria-hidden='true') &times;
-            h4#myModalLabel.modal-title KONTAKT OSS
+            if norwegian
+              h4#myModalLabel.modal-title KONTAKT OSS
+            else
+              h4#myModalLabel.modal-title CONTACT US
           .modal-body
             label Adresse
             p(style='margin-top: 0px') Oslo Market Solutions
@@ -223,6 +226,9 @@ block content
             p(style='margin-top: 0px')
               a(style='display: inline;', href='mailto:info@oslomarketsolutions.no') info@oslomarketsolutions.no
           .modal-footer
-            button.btn.btn-default(type='button', data-dismiss='modal') Close
-            button.btn.btn-primary(type='button') Save changes
+            button.btn.btn-default(type='button', data-dismiss='modal')
+              if norwegian
+                | Lukk
+              else
+                | Close
 

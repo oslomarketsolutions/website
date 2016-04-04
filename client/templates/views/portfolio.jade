@@ -1,61 +1,30 @@
 extends ../layouts/default
 
-
-
-
 block content
-  .presentation(style='background-color: #036;')
-    .container
-
-      if galleries
-        each gallery in galleries
-          .row.gallery-images(style='padding-top: 100px;')
-            if gallery.images
-              .col-sm-8.col-md-10: .row
-                #carousel-imac.carousel.slide(data-ride='carousel')
-                  img(src='/images/imac.png' width='100%' style="position:absolute; z-index:5;")
-                  .carousel-inner(role='listbox')
-                    - var n = 0;
-                    each image in gallery.images
-                      - n++
-                      if n == 1
-                        .item.active: img(src=image.limit(1000,1000) style="margin-top: 25px;")
-                      else
-                        .item: img(src=image.limit(1000,1000) style="margin-top: 25px;")
-
-                //- each image in gallery.images
-                //-   .col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-            else
-              each image in gallery.images
-                .col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-
-            if gallery.heroImage.exists
-              .col-sm-4.col-md-2.hero-image(style="z-index:10"): img(src=gallery._.heroImage.limit(520,520)).pull-right
-      else
   if norwegian
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
         if !data.post
           hr
           h2 Invalid Post.
-          h4: a(href='/no/portfolio') &larr; Tilbake til porteføljen.
+          h4: a(href='/no/projects') Tilbake til andre prosjekter.
         else
           header
-            if galleries.length == 0
+            if data.post.image
               .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
-            h2(style="margin-top: 200px;")= data.post.title
-            h4: a(href='/portfolio') &larr; Tilbake til porteføljen.
+            h2(style="margin-top: 60px;")= data.post.title
 
             h5= data.post.title
-              if post.publishedDate
-
+              if data.post.publishedDate
                 if norwegian
                   | Prosjektet gikk live
-                else
-                  | Project went live
-                | &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
+                  | #{data.post._.publishedDate.format('DD.MM.YYYY')}
           .post
-            != data.post.content.full
+            if data.post.content.full
+              != data.post.content.full
+            h4: a(href='/no/projects') Tilbake til andre prosjekter.
+
+
   else
     .container(style="margin-top: 100px"): .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
       article
@@ -63,19 +32,22 @@ block content
         if !data.post
           hr
           h2 Invalid Post.
-          h4: a(href='/portfolio') &larr; back to the portfolio
+          h4: a(href='/projects') back to other projects.
         else
           header
-            if galleries.length == 0
+            if data.post.image
               .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 
-            h2(style="margin-top: 200px;")= data.post.title
+            h2(style="margin-top: 60px;")= data.post.title
             h5= data.post.title
               |  went live
               if data.post.publishedDate
-                |  #{data.post._.publishedDate.format('MMMM Do, YYYY')}
+                |  #{data.post._.publishedDate.format('DD.MM.YYYY')}
               if data.post.categories && data.post.categories.length
           .post
             if data.post.content.full
               != data.post.content.full
+
+            h4: a(href='/projects') back to other projects.
+
 

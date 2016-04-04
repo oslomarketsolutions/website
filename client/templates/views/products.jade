@@ -6,37 +6,35 @@ mixin post(post, category)
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           - n++
           if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
-            .col-md-12
-
-              .col-md-7.animatedParent
+            .col-lg-12
+              .col-lg-5.animatedParent
+                if post.image.exists
+                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+              .col-lg-7.animatedParent
                 .animated.fadeIn
                   .animatedParent
-                     h2.animated.fadeIn= post.title
-                  p!= post.content.brief
+                    h2.animated.fadeIn= post.title
+                  p.animated.fadeIn!= post.content.brief
                   if norwegian
                     a(href='/no/product/post/' + post.slug) Les mer.
                   else
                     a(href='/product/post/' + post.slug) Read more.
-              .col-md-5.animatedParent
-                if post.image.exists
-                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
 
 
           else
-            .col-md-12
-
-                .col-md-5.animatedParent
-                  if post.image.exists
-                    img(src=post._.image.fit(400,400)).img.animated.fadeIn
-                .col-md-7.animatedParent
-                  .animated.fadeIn
-                    .animatedParent
-                      h2.animated.fadeIn= post.title
-                    p.animated.fadeIn!= post.content.brief
-                    if norwegian
-                      a(href='/no/product/post/' + post.slug) Les mer.
-                    else
-                      a(href='/product/post/' + post.slug) Read more.
+            .col-lg-12
+              .col-lg-5.col-lg-push-7.animatedParent
+                if post.image.exists
+                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+              .col-lg-7.col-lg-pull-5.animatedParent
+                .animated.fadeIn
+                  .animatedParent
+                    h2.animated.fadeIn= post.title
+                  p.animated.fadeIn!= post.content.brief
+                  if norwegian
+                    a(href='/no/product/post/' + post.slug) Les mer.
+                  else
+                    a(href='/product/post/' + post.slug) Read more.
 block intro
   .container.portfolio
     if norwegian

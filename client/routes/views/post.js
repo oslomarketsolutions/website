@@ -75,7 +75,7 @@ exports = module.exports = function(req, res) {
             if (category.key === 'english') {
               hasEnglish = true;
             }
-            if (category.key === 'solution') {
+            if (category.key === 'projects') {
               hasProduct = true;
             }
           });
