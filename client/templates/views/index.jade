@@ -32,7 +32,7 @@ mixin arena(post, category)
     if !category || category === cats.key
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-        a.col-sm-4.text-center.animatedParent(href='/portfolio/' + post.slug)
+        a.col-sm-4.text-center.animatedParent(href='/project/' + post.slug)
           .animated.fadeIn
             .imagewrap(style="display:inline-block; width: 100%;")
               img(src=post._.image.fit(200,200)).img

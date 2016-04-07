@@ -135,7 +135,10 @@ html
                 .col-xs-12
                   .row
                     .col-sm-4
-                      h3 Konsernets nettsteder
+                      if norwegian
+                        h3 Konsernets nettsteder
+                      else
+                        h3 Group web sites
                       ul
                         li
                           a(href='http://www.osloborsvps.no', target='_blank') Oslo B&oslash;rs VPS
@@ -151,7 +154,10 @@ html
                           a(href='http://www.newsweb.no', target='_blank') Newsweb
 
                     .col-sm-8
-                      h3 Kontakt oss
+                      if norwegian
+                        h3 Kontakt oss
+                      else
+                        h3 Contact us
                       ul
                         li Oslo Market Solutions
                         li Postboks 4
