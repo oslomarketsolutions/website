@@ -9,7 +9,9 @@ mixin post(post, category)
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 1 || n == 3 || n == 5
             .col-lg-12.animatedParent
-
+                .col-lg-5
+                  if post.image.exists
+                    img(src=post._.image.fit(400,400)).img
                 .col-lg-7
                   .animated.fadeIn
                     h2= post.title
@@ -19,25 +21,23 @@ mixin post(post, category)
                       if norwegian
                         | Prosjektet gikk live
                       else
-                        | Project went live
+                        | Was launched
 
                       &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
                   p!= post.content.brief
                   if norwegian
-                    a(href='/no/portfolio/' + post.slug) Les mer.
+                    a(href='/no/project/' + post.slug) Les mer.
                   else
-                    a(href='/portfolio/' + post.slug) Read more.
-                .col-lg-5
-                  if post.image.exists
-                    img(src=post._.image.fit(400,400)).img
+                    a(href='/project/' + post.slug) Read more.
+
 
           else
             .col-lg-12.animatedParent
 
-                .col-lg-5.animatedParent
+                .col-lg-5.col-lg-push-7.animatedParent
                   if post.image.exists
                     img(src=post._.image.fit(400,400)).img.animated.fadeIn
-                .col-lg-7.animatedParent
+                .col-lg-7.col-lg-pull-5.animatedParent
                   .animated.fadeIn
                     h2= post.title
                       .animated.fadeIn
@@ -47,7 +47,7 @@ mixin post(post, category)
                         if norwegian
                           | Prosjektet gikk live
                         else
-                          | Go-live date
+                          | Was launched
                         | &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
                     p.animated.fadeIn!= post.content.brief
                       if post.content.extended

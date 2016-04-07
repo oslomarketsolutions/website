@@ -2,9 +2,10 @@ extends ../layouts/default
 
 mixin post(post, category)
   each cats in post.categories
+
+
     if !category || category === cats.key
       - n++
-
       if n < 8
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           if n == 1 || n == 3 || n == 5 || n == 7
@@ -106,6 +107,13 @@ block content
         if data.posts.length
           .portfolio
             - var n = 0;
+            - var chosenCategory;
+            - for (var i = 0; i < serviceCategory.length; i++) {
+            -   if (serviceCategory[i] === 'solution' || serviceCategory[i] === 'project' || serviceCategory[i] === 'english') {
+            -   } else {
+            -     chosenCategory = serviceCategory[i];
+            -   }
+            - }
             each post in data.posts
               if serviceCategory[0]
                 +post(post, serviceCategory[0])
