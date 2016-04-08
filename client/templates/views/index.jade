@@ -1,42 +1,22 @@
 extends ../layouts/default
 
-mixin post(post, category)
-  each cats in post.categories
-    if !category || category === cats.key
-      - n++
-      post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-        .col-md-4
-          h4: a(href='/news/post/' + post.slug)= post.title
-          p
-            b Posted
-              if post.publishedDate
-                | on #{post._.publishedDate.format('MMMM Do, YYYY')}
-              if post.categories && post.categories.length
-                | in
-                each cat, i in post.categories
-                  a(href='/news/' + cat.key)= cat.name
-                  if i < post.categories.length - 1
-                    | ,
-
-              if post.author
-                | by #{post.author.name.first}
-          if post.image.exists
-            img(src=post._.image.fit(160,160)).img.pull-right
-          p!= post.content.brief
-          if post.content.extended
-            p.read-more: a(href='/news/post/' + post.slug) Read more...
-
-
 mixin arena(post, category)
   each cats in post.categories
     if !category || category === cats.key
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-        a.col-sm-4.text-center.animatedParent(href='/project/' + post.slug)
-          .animated.fadeIn
-            .imagewrap(style="display:inline-block; width: 100%;")
-              img(src=post._.image.fit(200,200)).img
-            h3= post.title
+        if norwegian
+          a.col-sm-4.text-center.animatedParent(href='/no/project/' + post.slug)
+            .animated.fadeIn
+              .imagewrap(style="display:inline-block; width: 100%;")
+                img(src=post._.image.fit(200,200)).img
+              h3= post.title
+        else
+          a.col-sm-4.text-center.animatedParent(href='/project/' + post.slug)
+            .animated.fadeIn
+              .imagewrap(style="display:inline-block; width: 100%;")
+                img(src=post._.image.fit(200,200)).img
+              h3= post.title
 block content
   .frontPage
     section.oms-graph.skrollr-desktop(id='skrollr-body')
