@@ -88,6 +88,7 @@ block content
             -     return item.key
             -   }
             - }})
+            - console.log('serviceCat', serviceCategory)
             if data.post.image
               .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 
@@ -108,13 +109,18 @@ block content
           .portfolio
             - var n = 0;
             - var chosenCategory;
+            - var showPost = true;
             - for (var i = 0; i < serviceCategory.length; i++) {
-            -   if (serviceCategory[i] === 'solution' || serviceCategory[i] === 'project' || serviceCategory[i] === 'english') {
+            -   if (serviceCategory[i] === 'product' || serviceCategory[i] === 'solution' || serviceCategory[i] === 'project' || serviceCategory[i] === 'english') {
             -   } else {
             -     chosenCategory = serviceCategory[i];
             -   }
+            -   if (serviceCategory[i] === 'product') {
+            -     showPost = false;
+            -   }
             - }
-            each post in data.posts
-              if serviceCategory[0]
-                +post(post, serviceCategory[0])
-            if !serviceCategory[0]
+            if showPost
+              each post in data.posts
+                if serviceCategory[0]
+                  +post(post, chosenCategory)
+              if !serviceCategory[0]

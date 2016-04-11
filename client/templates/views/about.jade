@@ -13,7 +13,8 @@ mixin post(post, category)
           if post.image.exists
           p!= post.content.extended
           .text-center
-            img(src=post._.image.fit(400,400)).img.text-center
+            if post.image.exists
+              img(src=post._.image.fit(400,400)).img.text-center
 mixin workers(post, category)
   each cats in post.categories
     if !category || category === cats.key
@@ -37,27 +38,6 @@ block content
                 each post in data.posts.results
                   +post(post, 'eng-about-company')
   #map
-  //- section.odd-section
-  //-     .container
-  //-       .col-xs-12
-  //-         .row
-  //-           .col-xs-12.employees
-  //-             if norwegian
-  //-               h2.text-center Ansatte
-  //-             else
-  //-               h2.text-center Employees
-  //-             hr
-  //-             if filters.category && !data.category
-  //-               h3.text-muted Invalid Category.
-  //-             else
-  //-               if data.posts.results.length
-  //-                 .blog
-  //-                   each post in data.posts.results
-  //-                     +workers(post, 'workers')
-  //-                 if data.category
-  //-                   h3.text-muted There are no posts in the category #{data.category.name}.
-  //-               else
-  //-                 h3.text-muted There are no posts yet.
   section.technology
       .container
         .col-xs-12
