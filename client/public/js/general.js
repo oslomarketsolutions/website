@@ -15,7 +15,6 @@ $(function () {
   // if (window.location.pathname.indexOf('eng')) {
   //     norwegian = false;
   // }
-
   var windowWidth = $(window).width();
   if(windowWidth > 767){
     skrollr.init();
@@ -34,6 +33,7 @@ $(function () {
       $(sel).toggleClass('in');
       $(sel2).toggleClass('out');
   });
+
 
   function initMap() {
     var myLatLng = {lat: 59.908881, lng: 10.747056};
@@ -56,10 +56,9 @@ $(function () {
       disableDoubleClickZoom: true
     });
   }
-
-  google.maps.event.addDomListener(window, 'load', initMap);
-
-
+  if (window.location.pathname.indexOf('/about') > -1) {
+    google.maps.event.addDomListener(window, 'load', initMap);
+  }
 });
 
 
