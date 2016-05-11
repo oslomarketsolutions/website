@@ -34,29 +34,28 @@ $(function () {
       $(sel2).toggleClass('out');
   });
 
-
-  function initMap() {
-    var myLatLng = {lat: 59.908881, lng: 10.747056};
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 16,
-      center: myLatLng
-    });
-
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Fred Olsens gate 1'
-    });
-
-    map.setOptions({
-      draggable: false,
-      zoomControl: false,
-      scrollwheel: false,
-      disableDoubleClickZoom: true
-    });
-  }
   if (window.location.pathname.indexOf('/about') > -1) {
+    function initMap() {
+      var myLatLng = {lat: 59.908881, lng: 10.747056};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Fred Olsens gate 1'
+      });
+
+      map.setOptions({
+        draggable: false,
+        zoomControl: false,
+        scrollwheel: false,
+        disableDoubleClickZoom: true
+      });
+    }
     google.maps.event.addDomListener(window, 'load', initMap);
   }
 });
