@@ -11,7 +11,9 @@ block content
         else
           header
             if data.post.image
-              .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+              - var imger = data.post._.image.fit(750,750);
+              - var newImgUrl = imger.replace("http://","//");
+              .image-wrap: img(src=newImgUrl).img-responsive
             h2(style="margin-top: 60px;")= data.post.title
 
             h5= data.post.title
@@ -36,7 +38,9 @@ block content
         else
           header
             if data.post.image
-              .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+              - var imger = data.post._.image.fit(750,750);
+              - var newImgUrl = imger.replace("http://","//");
+              .image-wrap: img(src=newImgUrl).img-responsive
 
             h2(style="margin-top: 60px;")= data.post.title
             h5= data.post.title

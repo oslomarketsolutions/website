@@ -5,6 +5,8 @@ mixin post(post, category)
     if !category || category === cats.key
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+        - var imger = post._.image.fit(400,400);
+        - var newImgUrl = imger.replace("http://","//");
         .col-md-12
 
           h2.text-center= post.title
@@ -14,7 +16,7 @@ mixin post(post, category)
           p!= post.content.extended
           .text-center
             if post.image.exists
-              img(src=post._.image.fit(400,400)).img.text-center
+              img(src=newImgUrl).img.text-center
 mixin workers(post, category)
   each cats in post.categories
     if !category || category === cats.key

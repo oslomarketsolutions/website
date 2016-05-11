@@ -4,6 +4,8 @@ mixin post(post, category)
   each cats in post.categories
     if !category || category === cats.key
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+          - var imger = post._.image.fit(400,400);
+          - var newImgUrl = imger.replace("http://","//");
           - n++
           if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
             .col-lg-12
@@ -19,7 +21,7 @@ mixin post(post, category)
                     a(href='/solution/post/' + post.slug) Read more.
               .col-lg-5.animatedParent
                 if post.image.exists
-                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                  img(src=newImgUrl).img.animated.fadeIn
 
 
           else
@@ -27,7 +29,7 @@ mixin post(post, category)
 
                 .col-lg-5.animatedParent
                   if post.image.exists
-                    img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                    img(src=newImgUrl).img.animated.fadeIn
                 .col-lg-7.animatedParent
                   .animated.fadeIn
                     .animatedParent

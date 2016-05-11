@@ -5,7 +5,9 @@ mixin post(post, category)
     if !category || category === cats.key
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           - n++
-          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9 
+          - var imger = post._.image.fit(400,400);
+          - var newImgUrl = imger.replace("http://","//");
+          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
             .col-md-12
               .animatedParent
                 h2.text-center.animated.fadeIn= post.title
@@ -14,15 +16,15 @@ mixin post(post, category)
                   p!= post.content.brief
               .col-md-5.animatedParent
                 if post.image.exists
-                  img(src=post._.image.fit(400,400), data-0="top: 0px;", data-2000="top: -100px;", style="position: relative").img.animated.fadeIn
-              
+                  img(src=newImgUrl, data-0="top: 0px;", data-2000="top: -100px;", style="position: relative").img.animated.fadeIn
+
           else
             .col-md-12
                 .animatedParent
                   h2.text-center.animated.fadeIn= post.title
                 .col-md-5.animatedParent
                   if post.image.exists
-                    img(src=post._.image.fit(400,400), data-0="top: 0px;", data-2000="top: -120px;", style="position: relative").img.animated.fadeIn
+                    img(src=newImgUrl, data-0="top: 0px;", data-2000="top: -120px;", style="position: relative").img.animated.fadeIn
                 .col-md-7.animatedParent
                   .animated.fadeIn
                     p.animated.fadeIn!= post.content.brief
@@ -31,7 +33,7 @@ block intro
   .container.portfolio
     if norwegian
       h1 Produkter
-    else 
+    else
       h1 Products
 
 block content

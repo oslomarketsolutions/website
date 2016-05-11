@@ -3,13 +3,16 @@ extends ../layouts/default
 mixin post(post, category)
   each cats in post.categories
     if !category || category === cats.key
+
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
           - n++
+          - var imger = post._.image.fit(400,400);
+          - var newImgUrl = imger.replace("http://","//");
           if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
             .col-lg-12
               .col-lg-5.animatedParent
                 if post.image.exists
-                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                  img(src=newImgUrl).img.animated.fadeIn
               .col-lg-7.animatedParent
                 .animated.fadeIn
                   .animatedParent
@@ -25,7 +28,7 @@ mixin post(post, category)
             .col-lg-12
               .col-lg-5.col-lg-push-7.animatedParent
                 if post.image.exists
-                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                  img(src=newImgUrl).img.animated.fadeIn
               .col-lg-7.col-lg-pull-5.animatedParent
                 .animated.fadeIn
                   .animatedParent

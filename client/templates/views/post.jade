@@ -3,7 +3,8 @@ extends ../layouts/default
 mixin post(post, category)
   each cats in post.categories
 
-
+    - var imger = post._.image.fit(400,400);
+    - var newImgUrl = imger.replace("http://","//");
     if !category || category === cats.key
       - n++
       if n < 8
@@ -12,7 +13,7 @@ mixin post(post, category)
             .col-lg-12(style="margin-top: 50px")
               if post.image.exists
                 .col-lg-5.animatedParent
-                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                  img(src=newImgUrl).img.animated.fadeIn
                 .col-lg-7.animatedParent
                   h2.animated.fadeIn= post.title
                   .animated.fadeIn
@@ -27,7 +28,7 @@ mixin post(post, category)
             .col-lg-12(style="margin-top: 50px")
               if post.image.exists
                 .col-lg-5.col-lg-push-7.animatedParent
-                  img(src=post._.image.fit(400,400)).img.animated.fadeIn
+                  img(src=newImgUrl).img.animated.fadeIn
                 .col-lg-7.col-lg-pull-5.animatedParent
                   h2.animated.fadeIn= post.title
                   .animated.fadeIn
