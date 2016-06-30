@@ -5,26 +5,17 @@ mixin post(post, category)
     if !category || category === cats.key
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-        - var imger = post._.image.fit(400,400);
-        - var newImgUrl = imger.replace("http://","//");
         .col-md-12
-
           h2.text-center= post.title
           hr
           p.lead.text-muted
-          if post.image.exists
           p!= post.content.extended
-          .text-center
-            if post.image.exists
-              img(src=newImgUrl).img.text-center
 mixin workers(post, category)
   each cats in post.categories
     if !category || category === cats.key
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
         .col-sm-3
           .profile.text-center
-            if post.image.exists
-              img(src=post._.image.fit(160,160)).img.img-circle
             h4(style='color:#1778c1')= post.title
             p!= post.content.brief
 block content
@@ -39,6 +30,21 @@ block content
               else
                 each post in data.posts.results
                   +post(post, 'eng-about-company')
+        .col-xs-12
+          .row
+            if norwegian
+              h2(style="text-align: center; margin-top: 75px;") Ledige stillinger
+              .col-xs-12
+                .col-xs-12
+                  p Vi gjør våre rekrutteringsprosesser gjennom et elektronisk rekrutteringssystem. Klikk på den stillingen du ønsker å søke for nærmere informasjon om stillingen og hvordan du søker. Har du allerede lagt inn en søknad kan du oppdatere den ved å logge inn på løsningen med tidligere registrert bruker. Velkommen som søker!
+            else
+              h2(style="text-align: center; margin-top: 75px;") Job vacancies
+              .col-xs-12
+                .col-xs-12
+                  p We use an electronic recruiting system to fill our job vacancies. Click on the vacancy you are interested in for more information about the position and how to make an application. If you have already made an application, you can check on progress by logging in with the user details you have already registered. Welcome to our application process!
+            .col-xs-12
+              div(style="margin: 15px auto; width: 520px")
+                iframe(style="margin: 0 auto;" src="http://delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no" width="100%" height="300" frameborder="0" marginwidth="0" scrolling="no" align="left")
   #map
   section.technology
       .container
