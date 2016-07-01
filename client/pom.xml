@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>parent</artifactId>
+        <artifactId>www</artifactId>
         <groupId>com.manamind.www</groupId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath>../parent/pom.xml</relativePath>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,8 +14,6 @@
         <format>tar.gz</format>
     </properties>
     <build>
-        <finalName>client-${git.buildnumber}</finalName>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -43,45 +39,45 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <configuration>
-                            <target>
+                            <target unless="maven.compile.skip">
                                 <exec executable="npm" failonerror="true">
                                     <arg value="install" />
                                 </exec>
                                 <exec executable="npm" failonerror="true">
                                     <arg value="prune" />
                                 </exec>
-                                <mkdir dir="target/client/models"/>
+                                <mkdir dir="target/client/models" />
                                 <copy todir="target/client/models">
-                                    <fileset dir="models"/>
+                                    <fileset dir="models" />
                                 </copy>
-                                <mkdir dir="target/client/public"/>
+                                <mkdir dir="target/client/public" />
                                 <copy todir="target/client/public">
-                                    <fileset dir="public"/>
+                                    <fileset dir="public" />
                                 </copy>
-                                <mkdir dir="target/client/routes"/>
+                                <mkdir dir="target/client/routes" />
                                 <copy todir="target/client/routes">
-                                    <fileset dir="routes"/>
+                                    <fileset dir="routes" />
                                 </copy>
-                                <mkdir dir="target/client/templates"/>
+                                <mkdir dir="target/client/templates" />
                                 <copy todir="target/client/templates">
-                                    <fileset dir="templates"/>
+                                    <fileset dir="templates" />
                                 </copy>
-                                <mkdir dir="target/client/updates"/>
+                                <mkdir dir="target/client/updates" />
                                 <copy todir="target/client/updates">
-                                    <fileset dir="updates"/>
+                                    <fileset dir="updates" />
                                 </copy>
-                                <mkdir dir="target/client/node_modules"/>
+                                <mkdir dir="target/client/node_modules" />
                                 <copy todir="target/client">
-                                    <fileset file="package.json"/>
-                                </copy>
-                                <copy todir="target/client">
-                                    <fileset file="gulpfile.js"/>
+                                    <fileset file="package.json" />
                                 </copy>
                                 <copy todir="target/client">
-                                    <fileset file="keystone.js"/>
+                                    <fileset file="gulpfile.js" />
                                 </copy>
                                 <copy todir="target/client">
-                                    <fileset file="Procfile"/>
+                                    <fileset file="keystone.js" />
+                                </copy>
+                                <copy todir="target/client">
+                                    <fileset file="Procfile" />
                                 </copy>
                                 <exec executable="npm" failonerror="true">
                                     <arg value="install" />
@@ -89,9 +85,9 @@
                                     <arg value="--prefix" />
                                     <arg value="./target/client" />
                                 </exec>
-                                <!--<mkdir dir="target/client/server"/>-->
+                                <!--<mkdir dir="target/client/server" />-->
                                 <!--<copy todir="target/client/server">-->
-                                    <!--<fileset dir="server"/>-->
+                                    <!--<fileset dir="server" />-->
                                 <!--</copy>-->
                             </target>
                         </configuration>
@@ -144,34 +140,9 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <tarLongFileMode>gnu</tarLongFileMode>
-                    <descriptors>
-                        <descriptor>assembly.xml</descriptor>
-                    </descriptors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>assemble</id>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
-                <groupId>ru.concerteza.buildnumber</groupId>
-                <artifactId>maven-jgit-buildnumber-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <!-- Must be before exec-maven-plugin, to run before it in deploy phase! -->
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
+                <artifactId>maven-install-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
