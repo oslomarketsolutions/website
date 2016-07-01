@@ -3,10 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>parent</artifactId>
+        <artifactId>www</artifactId>
         <groupId>com.manamind.www</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../parent/pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,8 +16,6 @@
         <format>tar.gz</format>
     </properties>
     <build>
-        <finalName>client-${git.buildnumber}</finalName>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -43,7 +41,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <configuration>
-                            <target>
+                            <target unless="maven.compile.skip">
                                 <exec executable="npm" failonerror="true">
                                     <arg value="install" />
                                 </exec>
@@ -144,34 +142,9 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <tarLongFileMode>gnu</tarLongFileMode>
-                    <descriptors>
-                        <descriptor>assembly.xml</descriptor>
-                    </descriptors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>assemble</id>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
-                <groupId>ru.concerteza.buildnumber</groupId>
-                <artifactId>maven-jgit-buildnumber-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <!-- Must be before exec-maven-plugin, to run before it in deploy phase! -->
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
+                <artifactId>maven-install-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
