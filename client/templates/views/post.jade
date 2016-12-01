@@ -2,14 +2,12 @@ extends ../layouts/default
 
 mixin post(post, category)
   each cats in post.categories
-
     - var imger = post._.image.fit(400,400);
     - var newImgUrl = imger.replace("http://","//");
     if !category || category === cats.key
       - n++
-      if n < 8
         post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-          if n == 1 || n == 3 || n == 5 || n == 7
+          if n % 2 === 1
             .col-lg-12(style="margin-top: 50px")
               if post.image.exists
                 .col-lg-5.animatedParent
@@ -24,7 +22,7 @@ mixin post(post, category)
                     else
                       a(href='/project/' + post.slug) Read more.
 
-          if n == 2 || n == 4 || n == 6 || n == 8
+          else
             .col-lg-12(style="margin-top: 50px")
               if post.image.exists
                 .col-lg-5.col-lg-push-7.animatedParent
@@ -38,8 +36,6 @@ mixin post(post, category)
                       a(href='/project/' + post.slug) Les mer.
                     else
                       a(href='/project/' + post.slug) Read more.
-
-
 
 
 block content
@@ -99,28 +95,23 @@ block content
 
   .projects
     .container: .row
-      if filters.category && !data.category
-        hr
-        h3.text-muted Invalid Category.
-        h4: a(href='/') &larr; back to other front page.
-
-      else
-        if data.posts.length
-          .portfolio
-            - var n = 0;
-            - var chosenCategory;
-            - var showPost = true;
-            - for (var i = 0; i < serviceCategory.length; i++) {
-            -   if (serviceCategory[i] === 'product' || serviceCategory[i] === 'solution' || serviceCategory[i] === 'project' || serviceCategory[i] === 'english') {
-            -   } else {
-            -     chosenCategory = serviceCategory[i];
-            -   }
-            -   if (serviceCategory[i] === 'product') {
-            -     showPost = false;
-            -   }
-            - }
-            if showPost
-              each post in data.posts
-                if serviceCategory[0]
-                  +post(post, chosenCategory)
-              if !serviceCategory[0]
+      if data.posts.length
+        .portfolio
+          - var n = 0;
+          - var chosenCategory;
+          - var showPost = true;
+          - for (var i = 0; i < serviceCategory.length; i++) {
+          -   if (serviceCategory[i] === 'product' || serviceCategory[i] === 'solution' || serviceCategory[i] === 'project') {
+          -   } else {
+          -     chosenCategory = serviceCategory[i];
+          -   }
+          -   if (serviceCategory[i] === 'product') {
+          -     showPost = false;
+          -   }
+          - }
+          - console.log('chosen', chosenCategory)
+          if showPost
+            each post in data.posts
+              if serviceCategory[0]
+                +post(post, chosenCategory)
+            if !serviceCategory[0]

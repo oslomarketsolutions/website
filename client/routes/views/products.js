@@ -73,20 +73,14 @@ exports = module.exports = function(req, res) {
 		}
 
     q.exec(function(err, results) {
-        var isNorwegian = req.url.substr(0,4) === '/no' || req.url.substr(0,4) === '/no/'
         locals.data.posts = results.results.filter(function(item) {
-          var hasEnglish = false;
           var hasProduct = false;
           item.categories.forEach(function (category) {
-
-            if (category.key === 'english' || category.key === 'English' ) {
-              hasEnglish = true;
-            }
             if (category.key === 'product') {
               hasProduct = true;
             }
           });
-          return (!isNorwegian && hasProduct && hasEnglish) || (isNorwegian && hasProduct && !hasEnglish);
+          return hasProduct;
         });
       next(err);
     });

@@ -6,10 +6,17 @@ mixin post(post, category)
       - n++
       post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
         .col-md-12
-          h2.text-center= post.title
-          hr
-          p.lead.text-muted
-          p!= post.content.extended
+          if norwegian
+            h2.text-center= post.titleNorwegian
+            hr
+            p.lead.text-muted
+            p!= post.contentNorwegian.extended
+          else
+            h2.text-center= post.title
+            hr
+            p.lead.text-muted
+            p!= post.content.extended
+
 mixin workers(post, category)
   each cats in post.categories
     if !category || category === cats.key
@@ -18,18 +25,15 @@ mixin workers(post, category)
           .profile.text-center
             h4(style='color:#1778c1')= post.title
             p!= post.content.brief
+
 block content
   section.section-about-company
       .container
         .col-xs-12
           .row
             .col-xs-12
-              if norwegian
-                each post in data.posts.results
-                  +post(post, 'about-company')
-              else
-                each post in data.posts.results
-                  +post(post, 'eng-about-company')
+              each post in data.posts.results
+                +post(post, 'about-company')
         .col-xs-12
           .row
             if norwegian
@@ -45,12 +49,3 @@ block content
             .col-xs-12
               div(style="margin: 15px auto; width: 520px")
                 iframe(style="margin: 0 auto;" src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no" width="100%" height="300" frameborder="0" marginwidth="0" scrolling="no" align="left")
-  #map
-  section.technology
-      .container
-        .col-xs-12
-          .row
-            .col-xs-12.text-center
-              img(src='/images/react.png', alt='')
-              img(src='/images/js.png', alt='')
-              img(src='/images/html5.png', alt='')

@@ -12,13 +12,14 @@ mixin arena(post, category)
             .animated.fadeIn
               .imagewrap(style="display:inline-block; width: 100%;")
                 img(src=newImgUrl).img
-              h3= post.title
+              h3= post.titleNorwegian
         else
           a.col-sm-4.text-center.animatedParent(href='/project/' + post.slug)
             .animated.fadeIn
               .imagewrap(style="display:inline-block; width: 100%;")
                 img(src=newImgUrl).img
               h3= post.title
+
 block content
   .frontPage
     section.oms-graph.skrollr-desktop(id='skrollr-body')
@@ -50,21 +51,21 @@ block content
                   h2.text-center Solutions
               if norwegian
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInRight(href='/no/solution/post/online-portefolje')
+                  a.animated.fadeInRight(href='/no/solution/post/online-portfolio')
                     div.left
                       img(src='images/fund.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Online porteføljerapportering
                       p La investorkunder holde seg oppdatert til enhver tid med en brukervennlig og moderne porteføljeløsning
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/no/solution/post/aksjehandel')
+                  a.animated.fadeInLeft(href='/no/solution/post/online-trading')
                     div.left
                       img(src='images/online.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
                       h3 Aksjehandel på nett
                       p Få terminal-følelsen med en webtrader eller skreddersy en portal for dine kunder
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInRight(href='/no/solution/post/borsportal')
+                  a.animated.fadeInRight(href='/no/solution/post/market-data-portal')
                     div.left
                       img(src='images/market.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
@@ -72,7 +73,7 @@ block content
                       p Gi leserne en fullstendig dekning av finansmarkedet med en børsportal
 
                 .col-sm-6.col-xs-12.text-left.animatedParent
-                  a.animated.fadeInLeft(href='/no/solution/post/aksjespill')
+                  a.animated.fadeInLeft(href='/no/solution/post/trading-games')
                     div.left
                       img(src='images/game.svg', alt='Generic placeholder image', width='40', height='40')
                     div.right
@@ -123,7 +124,7 @@ block content
                   .row
                     .col-xs-12
                       .col-sm-6.col-xs-12.text-left.animatedParent
-                        a.animated.fadeInLeft(href='/no/product/post/ir-webmoduler')
+                        a.animated.fadeInLeft(href='/no/product/post/ir-web-modules')
                           div.left
                             img(src='images/ir.svg', alt='Generic placeholder image', width='40', height='40')
                           div.right
@@ -131,7 +132,7 @@ block content
                             p Ved å inkludere IR webmoduler på deres hjemmesider får potensielle og eksisterende investorer får full oversikt over aksjen på et sted
 
                       .col-sm-6.col-xs-12.text-left.animatedParent
-                        a.animated.fadeInRight(href='/no/product/post/arena-1')
+                        a.animated.fadeInRight(href='/no/product/post/arena')
                           div.left
                             img(src='images/arena.svg', alt='Generic placeholder image', width='40', height='40')
                           div.right
@@ -179,10 +180,6 @@ block content
                       each post in data.posts
                         if n < 3
                           +arena(post, 'projects')
-                    if data.category
-                      h3.text-muted There are no posts in the category #{data.category.name}.
-                  else
-                    h3.text-muted There are no posts yet.
 
     #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
       .modal-dialog(role='document')
