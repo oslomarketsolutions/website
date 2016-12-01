@@ -6,79 +6,39 @@ mixin post(post, category)
       - n++
       - var imger = post._.image.fit(400,400);
       - var newImgUrl = imger.replace("http://","//");
-      if n < 6
-        post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-          if n == 1 || n == 3 || n == 5
-            .col-lg-12.animatedParent
-                .col-lg-5
-                  if post.image.exists
-                    img(src=newImgUrl).img
-                .col-lg-7
+      post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+          .col-lg-12.animatedParent
+            if n % 2 === 1
+              .col-lg-5
+                if post.image.exists
+                  img(src=newImgUrl).img
+            .col-lg-7
+              if norwegian
                   .animated.fadeIn
-                    h2= post.title
+                    h2= post.titleNorwegian
                   p.lead.text-muted
                     if post.publishedDate
-
-                      if norwegian
-                        | Prosjektet gikk live
-                      else
-                        | Was launched
-
+                      | Prosjektet gikk live
                       &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
-                  p!= post.content.brief
-                  if norwegian
+                  p!= post.contentNorwegian.brief
                     a(href='/no/project/' + post.slug) Les mer.
-                  else
-                    a(href='/project/' + post.slug) Read more.
 
-
-          else
-            .col-lg-12.animatedParent
-
-                .col-lg-5.col-lg-push-7.animatedParent
-                  if post.image.exists
-                    img(src=newImgUrl).img.animated.fadeIn
-                .col-lg-7.col-lg-pull-5.animatedParent
-                  .animated.fadeIn
-                    h2= post.title
-                      .animated.fadeIn
-                    p.lead.text-muted
-                      if post.publishedDate
-
-                        if norwegian
-                          | Prosjektet gikk live
-                        else
-                          | Was launched
-                        | &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
-                    p.animated.fadeIn!= post.content.brief
-                      if post.content.extended
-                    if norwegian
-                      a(href='/no/project/' + post.slug) Les mer.
-                    else
-                      a(href='/project/' + post.slug) Read more.
-      else
-        post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-          if n == 6
-            .col-lg-12
-              .animatedParent
-                if norwegian
-                  h2.text-center.animated.fadeIn Eldre
-                else
-                  h2.text-center.animated.fadeIn Earlier projects
-          .col-lg-4.text-center.animatedParent
-            .animated.fadeIn
-              if norwegian
-                h3: a(href='/no/project/' + post.slug)= post.title
-                if post.publishedDate
-                  p.text-muted Prosjektet gikk live #{post._.publishedDate.format('DD.MM.YYYY')}
-                if post.image.exists
-                  img(src=post._.image.fit(300,300)).img
               else
-                  h3: a(href='/project/' + post.slug)= post.title
+
+                .animated.fadeIn
+                  h2= post.title
+                p.lead.text-muted
                   if post.publishedDate
-                    p.text-muted Project released on #{post._.publishedDate.format('MMMM Do, YYYY')}
-                  if post.image.exists
-                    img(src=post._.image.fit(300,300)).img
+                    | Was launched
+                    &nbsp;#{post._.publishedDate.format('DD.MM.YYYY')}
+                p!= post.content.brief
+                  a(href='/project/' + post.slug) Read more.
+
+            if n % 2 === 0
+              .col-lg-5
+                if post.image.exists
+                  img(src=newImgUrl).img
+
 block intro
   .container.portfolio
     if norwegian
@@ -92,27 +52,7 @@ block content
         h3.text-muted Invalid Category.
       else
         if data.posts.length
-
           .portfolio
             - var n = 0;
             each post in data.posts
               +post(post, 'projects')
-
-          if data.posts.totalPages > 1
-            ul.pagination
-              if data.posts.previous
-                li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
-              else
-                li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-              each p, i in data.posts.pages
-                li(class=data.posts.currentPage == p ? 'active' : null)
-                  a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-              if data.posts.next
-                li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
-              else
-                li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
-        else
-          if data.category
-            h3.text-muted There are no posts in the category #{data.category.name}.
-          else
-            h3.text-muted There are no posts yet.

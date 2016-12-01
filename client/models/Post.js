@@ -12,7 +12,8 @@ var Post = new keystone.List('Post', {
 });
 
 Post.add({
-	title: { type: String, required: true },
+  title: { type: String, required: true },
+	titleNorwegian: { type: String, required: true, default: 'draft' },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
@@ -21,6 +22,10 @@ Post.add({
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }
 	},
+  contentNorwegian: {
+    brief: { type: Types.Html, wysiwyg: true, height: 150, default: 'draft'},
+    extended: { type: Types.Html, wysiwyg: true, height: 400, default: 'draft'}
+  },
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true }
 });
 

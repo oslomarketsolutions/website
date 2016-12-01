@@ -7,38 +7,27 @@ mixin post(post, category)
           - var imger = post._.image.fit(400,400);
           - var newImgUrl = imger.replace("http://","//");
           - n++
-          if n == 1 || n == 3 || n == 5 || n == 7 || n == 9
             .col-lg-12
-
-              .col-lg-7.animatedParent
-                .animated.fadeIn
-                  .animatedParent
-                     h2.animated.fadeIn= post.title
-                  p!= post.content.brief
-                  if norwegian
-                    a(href='/no/solution/post/' + post.slug) Les mer.
-                  else
-                    a(href='/solution/post/' + post.slug) Read more.
-              .col-lg-5.animatedParent
-                if post.image.exists
-                  img(src=newImgUrl).img.animated.fadeIn
-
-
-          else
-            .col-lg-12
-
+              if n % 2 === 1
                 .col-lg-5.animatedParent
                   if post.image.exists
                     img(src=newImgUrl).img.animated.fadeIn
-                .col-lg-7.animatedParent
-                  .animated.fadeIn
-                    .animatedParent
-                      h2.animated.fadeIn= post.title
-                    p.animated.fadeIn!= post.content.brief
+              .col-lg-7.animatedParent
+                .animated.fadeIn
+                  .animatedParent
                     if norwegian
+                      h2.animated.fadeIn= post.titleNorwegian
+                      p!= post.contentNorwegian.brief
                       a(href='/no/solution/post/' + post.slug) Les mer.
                     else
+                      h2.animated.fadeIn= post.title
+                      p!= post.content.brief
                       a(href='/solution/post/' + post.slug) Read more.
+              if n % 2 === 0
+                .col-lg-5.animatedParent
+                  if post.image.exists
+                    img(src=newImgUrl).img.animated.fadeIn
+
 block intro
   .container.portfolio
     if norwegian
@@ -48,31 +37,8 @@ block intro
 
 block content
   .container: .row
-      if filters.category && !data.category
-        h3.text-muted Invalid Category.
-      else
-        if data.posts.length
-
-          .portfolio
-            - var n = 0;
-            each post in data.posts
-              +post(post, 'solution')
-
-          if data.posts.totalPages > 1
-            ul.pagination
-              if data.posts.previous
-                li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
-              else
-                li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-              each p, i in data.posts.pages
-                li(class=data.posts.currentPage == p ? 'active' : null)
-                  a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-              if data.posts.next
-                li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
-              else
-                li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
-        else
-          if data.category
-            h3.text-muted There are no posts in the category #{data.category.name}.
-          else
-            h3.text-muted There are no posts yet.
+    if data.posts.length
+      .portfolio
+        - var n = 0;
+        each post in data.posts
+          +post(post, 'solution')
