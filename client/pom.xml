@@ -3,13 +3,11 @@
     <parent>
         <artifactId>www</artifactId>
         <groupId>com.manamind.www</groupId>
-        <version>1.1.0</version>
+        <version>1.1.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>client</artifactId>
-
     <properties>
         <format>tar.gz</format>
     </properties>
@@ -25,9 +23,9 @@
                         <configuration>
                             <target>
                                 <exec executable="rm" failonerror="false">
-                                    <arg value="-rf" />
-                                    <arg value="dist" />
-                                    <arg value="target" />
+                                    <arg value="-rf"/>
+                                    <arg value="dist"/>
+                                    <arg value="target"/>
                                 </exec>
                             </target>
                         </configuration>
@@ -41,53 +39,53 @@
                         <configuration>
                             <target unless="maven.compile.skip">
                                 <exec executable="npm" failonerror="true">
-                                    <arg value="install" />
+                                    <arg value="install"/>
                                 </exec>
                                 <exec executable="npm" failonerror="true">
-                                    <arg value="prune" />
+                                    <arg value="prune"/>
                                 </exec>
-                                <mkdir dir="target/client/models" />
+                                <mkdir dir="target/client/models"/>
                                 <copy todir="target/client/models">
-                                    <fileset dir="models" />
+                                    <fileset dir="models"/>
                                 </copy>
-                                <mkdir dir="target/client/public" />
+                                <mkdir dir="target/client/public"/>
                                 <copy todir="target/client/public">
-                                    <fileset dir="public" />
+                                    <fileset dir="public"/>
                                 </copy>
-                                <mkdir dir="target/client/routes" />
+                                <mkdir dir="target/client/routes"/>
                                 <copy todir="target/client/routes">
-                                    <fileset dir="routes" />
+                                    <fileset dir="routes"/>
                                 </copy>
-                                <mkdir dir="target/client/templates" />
+                                <mkdir dir="target/client/templates"/>
                                 <copy todir="target/client/templates">
-                                    <fileset dir="templates" />
+                                    <fileset dir="templates"/>
                                 </copy>
-                                <mkdir dir="target/client/updates" />
+                                <mkdir dir="target/client/updates"/>
                                 <copy todir="target/client/updates">
-                                    <fileset dir="updates" />
+                                    <fileset dir="updates"/>
                                 </copy>
-                                <mkdir dir="target/client/node_modules" />
+                                <mkdir dir="target/client/node_modules"/>
                                 <copy todir="target/client">
-                                    <fileset file="package.json" />
-                                </copy>
-                                <copy todir="target/client">
-                                    <fileset file="gulpfile.js" />
+                                    <fileset file="package.json"/>
                                 </copy>
                                 <copy todir="target/client">
-                                    <fileset file="keystone.js" />
+                                    <fileset file="gulpfile.js"/>
                                 </copy>
                                 <copy todir="target/client">
-                                    <fileset file="Procfile" />
+                                    <fileset file="keystone.js"/>
+                                </copy>
+                                <copy todir="target/client">
+                                    <fileset file="Procfile"/>
                                 </copy>
                                 <exec executable="npm" failonerror="true">
-                                    <arg value="install" />
-                                    <arg value="--production" />
-                                    <arg value="--prefix" />
-                                    <arg value="./target/client" />
+                                    <arg value="install"/>
+                                    <arg value="--production"/>
+                                    <arg value="--prefix"/>
+                                    <arg value="./target/client"/>
                                 </exec>
                                 <!--<mkdir dir="target/client/server" />-->
                                 <!--<copy todir="target/client/server">-->
-                                    <!--<fileset dir="server" />-->
+                                <!--<fileset dir="server" />-->
                                 <!--</copy>-->
                             </target>
                         </configuration>
