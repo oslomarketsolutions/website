@@ -8,9 +8,7 @@ html
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
-
         title= title || 'Oslo Market Solutions'
-        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
         //- Customise the stylesheet for your site by editing /public/styles/site.less
         //- All .less files will be automatically compiled and minified in production.
@@ -63,7 +61,7 @@ html
               .side-collapse.in
                 if norwegian
                   .navbar-ex1-collapse
-                    ul.nav.navbar-nav
+                    ul.nav.navbar-nav.navbar-right
                       li
                         a(href='/no/projects') Prosjekter
                       li
@@ -72,23 +70,22 @@ html
                         a(href='/no/product') Produkter
                       li
                         a(href='/no/about') Om oss
-                    ul.nav.navbar-nav.navbar-right
                       li
                         a(href='/')
                           i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
                           | English
-                      li
-                        a(href='https://www.facebook.com/oslomarketsolutions?fref=ts')
-                          i.fa.fa-facebook
-                      li
-                        a(href='https://www.linkedin.com/company/2601490?trk=cws-btn-overview-0-0')
-                          i.fa.fa-linkedin
+                    //  li
+                    //    a(href='https://www.facebook.com/oslomarketsolutions?fref=ts')
+                    //      i.fa.fa-facebook
+                    //  li
+                    //    a(href='https://www.linkedin.com/company/2601490?trk=cws-btn-overview-0-0')
+                    //      i.fa.fa-linkedin
                       //- li
                       //-   a(href='www.google.no')
                       //-     i.fa.fa-google-plus
                 else
                   .navbar-ex1-collapse
-                    ul.nav.navbar-nav
+                    ul.nav.navbar-nav.navbar-right
                       li
                         a(href='/projects') Projects
                       li
@@ -97,15 +94,14 @@ html
                         a(href='/product') Products
                       li
                         a(href='/about') About us
-                    ul.nav.navbar-nav.navbar-right
                       li
                         a(href='/no')
                           i.fa.fa-globe(style="margin-right: 10px; font-size: 14px")
                           | Norsk
-                      li
+                      //li
                         a(href='https://www.facebook.com/oslomarketsolutions?fref=ts')
                           i.fa.fa-facebook
-                      li
+                      //li
                         a(href='https://www.linkedin.com/company/2601490?trk=cws-btn-overview-0-0')
                           i.fa.fa-linkedin
                       //- li

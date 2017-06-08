@@ -197,6 +197,9 @@ a h3 {
 	background-color: @oms-main-color;
 	border: none;
 	border-radius: 0;
+	@media (min-width: 992px) {
+		padding-top: 15px;
+	}
 
   @media (min-width: 992px) {
     .navbar-header {
@@ -211,7 +214,7 @@ a h3 {
 
 		img{
 			width: 120px;
-			margin-top: 20px;
+			margin-top: 12px;
 		}
     @media (max-width: 767px) {
 
@@ -233,16 +236,19 @@ a h3 {
 			font-size: 16px;
 			.transition(0.15s);
 			&:hover, &:focus {
-				background-color: @oms-navigation-color;
+				// background-color: @oms-navigation-color;
+				border-bottom: solid 1px white;
 				color: white;
 			}
 		}
 		> li.active > a {
-			background-color: @oms-navigation-color;
+			// background-color: @oms-navigation-color;
+			border-bottom: solid 1px white;
 			color: white;
 			.transition(0.15s);
 			&:hover, &:focus {
-				background-color: @oms-navigation-color;
+				// background-color: @oms-navigation-color;
+				border-bottom: solid 1px white;
 				color: white;
 			}
 		}
