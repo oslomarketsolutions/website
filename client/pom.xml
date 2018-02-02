@@ -13,6 +13,45 @@
     </properties>
     <build>
         <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+                <execution>
+                    <id>install node and yarn for compile</id>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>install-node-and-yarn</goal>
+                    </goals>
+                    <configuration>
+                        <nodeVersion>v8.9.3</nodeVersion>
+                        <yarnVersion>v1.3.2</yarnVersion>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>yarn install</id>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>yarn</goal>
+                    </goals>
+                    <configuration>
+                        <arguments>--frozen-lockfile</arguments>
+                    </configuration>
+                </execution>
+                <execution>
+                  <id>yarn install production assets</id>
+                  <phase>prepare-package</phase>
+                  <goals>
+                    <goal>yarn</goal>
+                  </goals>
+                  <configuration>
+                    <arguments>--frozen-lockfile --production --cwd target/client</arguments>
+                  </configuration>
+                </execution>
+            </executions>
+        </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
@@ -38,12 +77,6 @@
                         <phase>compile</phase>
                         <configuration>
                             <target unless="maven.compile.skip">
-                                <exec executable="npm" failonerror="true">
-                                    <arg value="install" />
-                                </exec>
-                                <exec executable="npm" failonerror="true">
-                                    <arg value="prune" />
-                                </exec>
                                 <mkdir dir="target/client/models" />
                                 <copy todir="target/client/models">
                                     <fileset dir="models" />
@@ -77,12 +110,6 @@
                                 <copy todir="target/client">
                                     <fileset file="Procfile" />
                                 </copy>
-                                <exec executable="npm" failonerror="true">
-                                    <arg value="install" />
-                                    <arg value="--production" />
-                                    <arg value="--prefix" />
-                                    <arg value="./target/client" />
-                                </exec>
                                 <!--<mkdir dir="target/client/server" />-->
                                 <!--<copy todir="target/client/server">-->
                                 <!--<fileset dir="server" />-->
