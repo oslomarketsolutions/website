@@ -1,5 +1,0 @@
-@Library ("jenkinsfiles") _
-
-standardPipeline {
-}
-
