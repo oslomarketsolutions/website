@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.2",
-  "author": "Austin Green",
+  "name": "www",
+  "description": "OMS' website",
+  "version": "1.0.0",
+  "author": "Oslo Market Solitions",
+  "private": true,
   "dependencies": {
     "bulma": "^0.6.0",
     "gatsby": "^1.9.213",
@@ -16,28 +17,32 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
-    "netlify-cms": "^1.7.0",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
+    "netlify-cms": "^1.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
     "uuid": "^3.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1"
+  },
+  "keywords": ["gatsby"],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
   },
-  "devDependencies": {
-    "prettier": "^1.7.4"
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }
