@@ -14,7 +14,7 @@
     "prettier":
       "prettier --trailing-comma es5 --no-semi --single-quote \"{gatsby-*.js,src/**/*.js}\"",
     "format": "npm run prettier -- --write",
-    "lint:prettier": "npm run prettier -- --list-different",
+    "lint:prettier": "./scripts/lint-prettier.sh",
     "lint:js": "eslint src",
     "eslint-check":
       "eslint --print-config .eslintrc.yml | eslint-config-prettier-check"
