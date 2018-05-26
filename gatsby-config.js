@@ -3,7 +3,16 @@ module.exports = {
     title: 'Gatsby + Netlify CMS Starter',
   },
   plugins: [
+    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        options: {
+          emitWarning: true,
+        },
+      },
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
@@ -35,4 +44,4 @@ module.exports = {
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
-}
+};

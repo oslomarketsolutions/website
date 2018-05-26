@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Features from '../components/Features';
+import Testimonials from '../components/Testimonials';
+import Pricing from '../components/Pricing';
 
 export const ProductPageTemplate = ({
   image,
@@ -103,7 +103,7 @@ export const ProductPageTemplate = ({
       </div>
     </div>
   </section>
-)
+);
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.string,
@@ -120,17 +120,22 @@ ProductPageTemplate.propTypes = {
     image2: PropTypes.object,
     image3: PropTypes.object,
   }),
-  testimonials: PropTypes.array,
+  testimonials: PropTypes.arrayOf(
+    PropTypes.shape({
+      quote: PropTypes.string,
+      author: PropTypes.string,
+    }),
+  ),
   fullImage: PropTypes.string,
   pricing: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
     plans: PropTypes.array,
   }),
-}
+};
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <ProductPageTemplate
@@ -144,8 +149,8 @@ const ProductPage = ({ data }) => {
       fullImage={frontmatter.full_image}
       pricing={frontmatter.pricing}
     />
-  )
-}
+  );
+};
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -153,9 +158,9 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default ProductPage
+export default ProductPage;
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
@@ -207,4 +212,4 @@ export const productPageQuery = graphql`
       }
     }
   }
-`
+`;
