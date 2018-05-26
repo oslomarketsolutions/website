@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 const TagRoute = props => {
   const posts = props.data.allMarkdownRemark.edges;
@@ -16,7 +16,7 @@ const TagRoute = props => {
   const { title } = props.data.site.siteMetadata;
   const { totalCount } = props.data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
+    totalCount === 1 ? '' : 's'
   } tagged with “${tag}”`;
 
   return (
@@ -26,7 +26,7 @@ const TagRoute = props => {
         <div className="columns">
           <div
             className="column is-10 is-offset-1"
-            style={{ marginBottom: "6rem" }}
+            style={{ marginBottom: '6rem' }}
           >
             <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
             <ul className="taglist">{postLinks}</ul>
@@ -43,15 +43,15 @@ const TagRoute = props => {
 TagRoute.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.shape({})
+      edges: PropTypes.shape({}),
     }),
     site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({})
-    })
+      siteMetadata: PropTypes.shape({}),
+    }),
   }).isRequired,
   pathContext: PropTypes.shape({
-    tag: PropTypes.string
-  }).isRequired
+    tag: PropTypes.string,
+  }).isRequired,
 };
 
 export default TagRoute;

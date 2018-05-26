@@ -57,6 +57,9 @@
   "keywords": ["gatsby"],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --trailing-comma all --single-quote --write",
+      "git add"
+    ]
   }
 }

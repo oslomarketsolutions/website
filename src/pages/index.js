@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "gatsby-link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
@@ -12,11 +12,11 @@ export default function IndexPage({ data }) {
           <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
         </div>
         {posts
-          .filter(post => post.node.frontmatter.templateKey === "blog-post")
+          .filter(post => post.node.frontmatter.templateKey === 'blog-post')
           .map(({ node: post }) => (
             <div
               className="content"
-              style={{ border: "1px solid #eaecee", padding: "2em 4em" }}
+              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
               key={post.id}
             >
               <p>
@@ -44,9 +44,9 @@ export default function IndexPage({ data }) {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export const pageQuery = graphql`
