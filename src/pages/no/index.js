@@ -9,10 +9,11 @@ export default function IndexPage({ data }) {
     <section className="section">
       <div className="container">
         <div className="content">
-          <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+          <h1 className="has-text-weight-bold is-size-2">Siste historier</h1>
         </div>
         {posts
           .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+          .filter(post => post.node.frontmatter.language === 'no')
           .map(({ node: post }) => (
             <div
               className="content"
@@ -50,7 +51,7 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query NorIndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            language
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }
