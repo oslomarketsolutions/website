@@ -3,7 +3,9 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+  const { createPage, createRedirect } = boundActionCreators;
+  console.log('boundActionCreators', boundActionCreators);
+  createRedirect({ fromPath: '/', toPath: '/no' });
 
   return graphql(`
     {

@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
 
-const Navbar = ({ location }) => {
-  const [_, lang] = /^\/(\w\w)/.exec(location.pathname);
+const Navbar = ({ lang }) => {
   const base = `/${lang}`;
 
   return (
@@ -29,7 +29,7 @@ const Navbar = ({ location }) => {
         <div className="navbar-end">
           <a
             className="navbar-item"
-            href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+            href="https://github.com/oslomarketsolutions/website"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,6 +41,14 @@ const Navbar = ({ location }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  lang: PropTypes.string,
+};
+
+Navbar.defaultProps = {
+  lang: 'no',
 };
 
 export default Navbar;
