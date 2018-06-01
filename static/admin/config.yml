@@ -19,6 +19,48 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "norwegian_products"
+    label: "Norwegian Product"
+    folder: "src/pages/no/products"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Language", name: "language", widget: "hidden", default: "no"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - label: "Referenced English post"
+        name: "english_post"
+        widget: "relation"
+        collection: "english_products"
+        searchFields: ["title"]
+        valueField: "slug"
+        displayFields: ["title"]
+
+  - name: "english_products"
+    label: "English Product"
+    folder: "src/pages/en/products"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Language", name: "language", widget: "hidden", default: "en"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - label: "Referenced Norwegian post"
+        name: "norwegian_post"
+        widget: "relation"
+        collection: "norwegian_products"
+        searchFields: ["title"]
+        valueField: "slug"
+        displayFields: ["title"]
+
   - name: "pages"
     label: "Pages"
     files:

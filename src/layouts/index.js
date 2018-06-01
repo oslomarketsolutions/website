@@ -5,16 +5,24 @@ import Helmet from 'react-helmet';
 import Navbar from '../components/Navbar';
 import './all.sass';
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
-    <Navbar />
-    <div>{children()}</div>
-  </div>
-);
+const TemplateWrapper = ({ children, location }) => {
+  const parsedPath = /^\/(\w\w)/.exec(location.pathname);
+  const lang = parsedPath && parsedPath[1];
+
+  return (
+    <React.Fragment>
+      <Helmet title="Oslo Market Solutions">
+        <html lang={lang} />
+      </Helmet>
+      <Navbar lang={lang} />
+      {children()}
+    </React.Fragment>
+  );
+};
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
+  location: PropTypes.shape({}),
 };
 
 export default TemplateWrapper;
