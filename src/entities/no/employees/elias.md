@@ -1,8 +1,8 @@
 ---
 title: Elias
-postion: Sommervikar
+jobTitle: Sommervikar
 description: Lang
 image: /img/chemex.jpg
-postitionType: frontEnd
+jobType: frontEnd
 ---
 
