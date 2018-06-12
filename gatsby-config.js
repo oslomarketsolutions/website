@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
+    'gatsby-plugin-postcss-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
