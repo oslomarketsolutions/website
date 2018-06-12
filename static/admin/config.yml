@@ -7,43 +7,43 @@ public_folder: /img
 
 collections:
   - name: "norwegian_employees"
-    label: "Ansatte"
+    label: "no/Employee"
     folder: "src/entities/no/employees"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Navn", name: "title", widget: "string"}
-      - {label: "Stillingsbeskrivelse", name: "postion", widget: "string"}
-      - {label: "Beskrivelse", name: "description", widget: "text"}
-      - {label: "Bilde", name: "image", widget: "image"}
-      - label: "Stillingstype"
-        name: "postitionType"
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Job title", name: "jobTitle", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - label: "Job type"
+        name: "jobType"
         widget: "select"
         options: 
-        - {label:"Front-end", value: "frontEnd"}
-        - {label:"Back-end", value: "backEnd"}
-        - {label:"Managment", value: "mangment"}
+        - {label: "Front-end", value: "frontEnd"}
+        - {label: "Back-end", value: "backEnd"}
+        - {label: "Management", value: "management"}
 
   - name: "english_employees"
-    label: "Ansatte"
+    label: "en/Employee"
     folder: "src/entities/en/employees"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Navn", name: "title", widget: "string"}
-      - {label: "Stillingsbeskrivelse", name: "postion", widget: "string"}
-      - {label: "Beskrivelse", name: "description", widget: "text"}
-      - {label: "Bilde", name: "image", widget: "image"}
-      - label: "Stillingstype"
-        name: "postitionType"
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Job title", name: "jobTitle", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - label: "Job type"
+        name: "jobType"
         widget: "select"
         options: 
-        - {label:"Front-end", value: "frontEnd"}
-        - {label:"Back-end", value: "backEnd"}
-        - {label:"Managment", value: "mangment"}
+        - {label: "Front-end", value: "frontEnd"}
+        - {label: "Back-end", value: "backEnd"}
+        - {label: "Management", value: "management"}
 
   - name: "norwegian_products"
-    label: "Norwegian Product"
+    label: "no/Product"
     folder: "src/pages/no/products"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -64,7 +64,7 @@ collections:
         displayFields: ["title"]
 
   - name: "english_products"
-    label: "English Product"
+    label: "en/Product"
     folder: "src/pages/en/products"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
