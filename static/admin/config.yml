@@ -1,23 +1,46 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-32/Entitetsbeskrivelse
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "norwegian_employees"
+    label: "Ansatte"
+    folder: "src/entities/no/employees"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Navn", name: "title", widget: "string"}
+      - {label: "Stillingsbeskrivelse", name: "postion", widget: "string"}
+      - {label: "Beskrivelse", name: "description", widget: "text"}
+      - {label: "Bilde", name: "image", widget: "image"}
+      - label: "Stillingstype"
+        name: "postitionType"
+        widget: "select"
+        options: 
+        - {label:"Front-end", value: "frontEnd"}
+        - {label:"Back-end", value: "backEnd"}
+        - {label:"Managment", value: "mangment"}
+
+  - name: "english_employees"
+    label: "Ansatte"
+    folder: "src/entities/en/employees"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Navn", name: "title", widget: "string"}
+      - {label: "Stillingsbeskrivelse", name: "postion", widget: "string"}
+      - {label: "Beskrivelse", name: "description", widget: "text"}
+      - {label: "Bilde", name: "image", widget: "image"}
+      - label: "Stillingstype"
+        name: "postitionType"
+        widget: "select"
+        options: 
+        - {label:"Front-end", value: "frontEnd"}
+        - {label:"Back-end", value: "backEnd"}
+        - {label:"Managment", value: "mangment"}
 
   - name: "norwegian_products"
     label: "Norwegian Product"
