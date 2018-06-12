@@ -16,6 +16,7 @@ collections:
       - {label: "Job title", name: "jobTitle", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Language", name: "language", widget: "hidden", default: "no"}
       - label: "Job type"
         name: "jobType"
         widget: "select"
@@ -34,6 +35,7 @@ collections:
       - {label: "Job title", name: "jobTitle", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - label: "Job type"
         name: "jobType"
         widget: "select"
