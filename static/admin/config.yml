@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-34/OmOss
 
 media_folder: static/img
 public_folder: /img
@@ -94,6 +94,8 @@ collections:
         label: "no/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Submenu item 1", name: "submenuItem1", widget: "hidden"}
+          - {label: "Submenu item 2", name: "submenuItem2", widget: "hidden"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
@@ -102,6 +104,8 @@ collections:
         label: "en/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Submenu item 1", name: "submenuItem1", widget: "hidden"}
+          - {label: "Submenu item 2", name: "submenuItem2", widget: "hidden"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
