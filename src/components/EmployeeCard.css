@@ -51,10 +51,11 @@
 
 .employeeHeader #employeeIcon {
   float: right;
-  background-color: white;
+  color: white;
   height: 50px;
   width: 50px;
   margin: 0;
+  padding: 20px;
 }
 
 .employeeFooter #employeeDescription {
