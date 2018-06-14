@@ -94,9 +94,9 @@ collections:
         label: "no/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Submenu item 1", name: "submenuItem1", widget: "hidden"}
-          - {label: "Submenu item 2", name: "submenuItem2", widget: "hidden"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "Header 2", name: "header2", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/en/about/index.md"
@@ -104,9 +104,9 @@ collections:
         label: "en/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Submenu item 1", name: "submenuItem1", widget: "hidden"}
-          - {label: "Submenu item 2", name: "submenuItem2", widget: "hidden"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "Header 2", name: "header2", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/no/products/index.md"

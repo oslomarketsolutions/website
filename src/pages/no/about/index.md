@@ -1,9 +1,9 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: Oslo Market Solutions
-submenuItem1: Om oss
-submenuItem2: Ansatte
+title: Om oss
+header1: Oslo Market Solutions
+header2: Ansatte
 image: /img/chemex.jpg
 ---
 

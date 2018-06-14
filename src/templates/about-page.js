@@ -4,8 +4,8 @@ import Content, { HTMLContent } from '../components/Content';
 
 export const AboutPageTemplate = ({
   title,
-  submenuItem1,
-  submenuItem2,
+  header1,
+  header2,
   image,
   content,
   contentComponent,
@@ -19,19 +19,19 @@ export const AboutPageTemplate = ({
           <div className="column is-10 is-offset-1">
             <div className="section">
               <h2 className="header-title title is-size-3 has-text-weight-bold is-bold-light">
-                {submenuItem1}
+                {title}
               </h2>
               <p className="submeny-placeholder">submeny | placeholder</p>
               <div className="about-oms">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
+                  {header1}
                 </h2>
                 <PageContent className="content" content={content} />
                 <img src={image} alt="" />
               </div>
               <div className="about-employees">
                 <h2 className="header-title title is-size-3 has-text-weight-bold is-bold-light">
-                  {submenuItem2}
+                  {header2}
                 </h2>
               </div>
             </div>
@@ -44,8 +44,8 @@ export const AboutPageTemplate = ({
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  submenuItem1: PropTypes.string,
-  submenuItem2: PropTypes.string,
+  header1: PropTypes.string,
+  header2: PropTypes.string,
   image: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -58,8 +58,8 @@ const AboutPage = ({ data }) => {
     <AboutPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
-      submenuItem1={post.frontmatter.submenuItem1}
-      submenuItem2={post.frontmatter.submenuItem2}
+      header1={post.frontmatter.header1}
+      header2={post.frontmatter.header2}
       image={post.frontmatter.image}
       content={post.html}
     />
@@ -78,8 +78,8 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
-        submenuItem1
-        submenuItem2
+        header1
+        header2
         image
       }
     }
