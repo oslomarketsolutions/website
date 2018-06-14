@@ -1,3 +1,41 @@
+/*About Page*/
+.header-title {
+  text-align: center;
+}
+
+.submeny-placeholder {
+  text-align: center;
+}
+
+.about-oms {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.about-oms h2 {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+.about-oms img {
+  width: 45%;
+  height: 22em;
+}
+
+.about-oms div.content {
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+
+.about-employees {
+  margin-top: 5em;
+}
+/*End About Page*/
+
 /*  This is just copied from all.sass.
     Most, if not all of this is probably going to be changed
 */
