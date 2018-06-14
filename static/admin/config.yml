@@ -109,6 +109,30 @@ collections:
           - {label: "Header 2", name: "header2", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/no/career/index.md"
+        name: "norwegian_career_page"
+        label: "no/Career page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "career-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text 1", name: "text1", widget: "text"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "Text 2", name: "text2", widget: "text"}
+          - {label: "Sub header 1", name: "subHeader1", widget: "string"}
+          - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+      - file: "src/pages/en/career/index.md"
+        name: "english_career_page"
+        label: "en/Career page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "career-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text 1", name: "text1", widget: "text"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "Text 2", name: "text2", widget: "text"}
+          - {label: "Sub header 1", name: "subHeader1", widget: "string"}
+          - {label: "Sub header 2", name: "subHeader2", widget: "string"}
       - file: "src/pages/no/products/index.md"
         name: "norwegian_products_page"
         label: "no/Products page"
