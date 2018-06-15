@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import Navbar from '../components/Navbar';
-import './style.css';
+import './style.scss';
 
 const TemplateWrapper = ({ children, location }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);

@@ -25,6 +25,9 @@ const Navbar = ({ lang }) => {
           <Link className="navbar-item" to={`${base}/products`}>
             Products
           </Link>
+          <Link className="navbar-item" to={`${base}/career`}>
+            Career
+          </Link>
         </div>
         <div className="navbar-end">
           <a

@@ -13,7 +13,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-plugin-postcss-sass', // see https://www.gatsbyjs.org/packages/gatsby-plugin-postcss-sass to add plugins/change precision
     {
       resolve: 'gatsby-source-filesystem',
