@@ -27,7 +27,7 @@ const TemplateWrapper = ({ location }) => {
         name="Janne Johnsen"
         position="Front-end Developer"
         description="Eitan twee activated charcoal pug, XOXO crucifix portland. Lomo brunch cliche art party keffiyeh"
-        image={'https://picsum.photos/200/300'}
+        image="https://picsum.photos/200/300"
       />
     </React.Fragment>
   );
