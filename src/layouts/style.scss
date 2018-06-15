@@ -1,0 +1,108 @@
+/* About page */
+.header-title {
+  text-align: center;
+}
+.submeny-placeholder {
+  text-align: center;
+}
+
+.about-oms {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 3em;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+  
+  img {
+    width: 45%;
+    height: 22em;
+  }
+  
+  div.content {
+    width: 45%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-employees {
+  margin-top: 5em;
+}
+/* end About page */
+
+
+/* Career page */
+.header-title {
+
+  text-align: center;
+}
+
+.career-oms {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 3em;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+  img {
+    width: 45%;
+    height: 22em;
+  }
+  
+  div.content {
+    width: 45%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.career-body {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.career-perks {
+  margin-bottom: 3.3em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .perk {
+    margin-bottom: 1.7em;
+    width: 240px;
+    height: 145px;
+    border: 1px solid black;
+  }
+}
+
+.career-job-vacancies {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+
+  h2 {
+    width: 100%;
+  }
+
+  .job-vacancies-iframe {
+    border: 1px solid black;
+    width: 600px;
+    height: 250px;
+  }
+}
+/* end Career page */

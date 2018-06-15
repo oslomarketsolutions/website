@@ -6,24 +6,21 @@ export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
-    <section className="section">
-      <div className="container">
-        <div className="content">
-          <h1 className="has-text-weight-bold is-size-2">Siste historier</h1>
+    <section>
+      <div>
+        <div>
+          <h1>Siste historier</h1>
         </div>
         {posts
           .filter(post => post.node.frontmatter.templateKey === 'blog-post')
           .filter(post => post.node.frontmatter.language === 'no')
           .map(({ node: post }) => (
             <div
-              className="content"
               style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
               key={post.id}
             >
               <p>
-                <Link className="has-text-primary" to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </Link>
+                <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
                 <span> &bull; </span>
                 <small>{post.frontmatter.date}</small>
               </p>
@@ -31,9 +28,7 @@ export default function IndexPage({ data }) {
                 {post.excerpt}
                 <br />
                 <br />
-                <Link className="button is-small" to={post.fields.slug}>
-                  Keep Reading →
-                </Link>
+                <Link to={post.fields.slug}>Keep Reading →</Link>
               </p>
             </div>
           ))}

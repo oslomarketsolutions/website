@@ -5,8 +5,9 @@ import 'font-awesome/css/font-awesome.min.css';
 
 import './style.css';
 import EmployeeCard from '../components/employeesCard';
+import Navbar from '../components/Navbar';
 
-const TemplateWrapper = ({ location }) => {
+const TemplateWrapper = ({ children, location }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
   const lang = parsedPath && parsedPath[1];
 
@@ -23,6 +24,8 @@ const TemplateWrapper = ({ location }) => {
           crossOrigin="anonymous"
         />
       </Helmet>
+      <Navbar lang={lang} />
+      {children()}
       <EmployeeCard
         name="Janne Johnsen"
         position="Front-end Developer"
@@ -35,6 +38,7 @@ const TemplateWrapper = ({ location }) => {
 
 TemplateWrapper.propTypes = {
   location: PropTypes.shape({}),
+  children: PropTypes.func,
 };
 
 export default TemplateWrapper;
