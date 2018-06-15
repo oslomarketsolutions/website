@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import EmployeeCard from '../components/EmployeeCard';
-import Navbar from '../components/Navbar';
-import './style.css';
+import 'font-awesome/css/font-awesome.min.css';
 
-const TemplateWrapper = ({ children, location }) => {
+import './style.css';
+import EmployeeCard from '../components/employeesCard';
+
+const TemplateWrapper = ({ location }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
   const lang = parsedPath && parsedPath[1];
 
@@ -25,14 +26,14 @@ const TemplateWrapper = ({ children, location }) => {
       <EmployeeCard
         name="Janne Johnsen"
         position="Front-end Developer"
-        description="Liker et eller annet"
+        description="Eitan twee activated charcoal pug, XOXO crucifix portland. Lomo brunch cliche art party keffiyeh"
+        image={'https://picsum.photos/200/300'}
       />
     </React.Fragment>
   );
 };
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
   location: PropTypes.shape({}),
 };
 
