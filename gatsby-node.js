@@ -32,6 +32,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(edge => {
+      if (edge.node.frontmatter.templateKey === null) {
+        return;
+      }
+
       const id = edge.node.id;
       createPage({
         path: edge.node.fields.slug,

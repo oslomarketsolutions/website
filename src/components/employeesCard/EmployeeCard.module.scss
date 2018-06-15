@@ -4,7 +4,7 @@
     "image header"
     "image  description";
   grid-template-columns: 140px auto;
-  grid-template-rows: 100px;
+  grid-template-rows: 100px 100px;
   width: 565px;
   transition: 0.3s;
   color: white; 
@@ -29,7 +29,7 @@
     grid-template-areas: "name icon"
                           "title icon";
     grid-template-columns: 70% 30%;
-    grid-template-row: 50% 50%;
+    grid-template-row: 100px 100px;
   }
 
   .description

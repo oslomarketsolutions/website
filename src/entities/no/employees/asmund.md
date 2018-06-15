@@ -1,6 +1,6 @@
 ---
-title: Elias
-jobTitle: Frontend Utvikler
+title: Åsmund
+jobTitle: Sommervikar
 description: Lang
 image: /img/chemex.jpg
 jobType: summerIntern
