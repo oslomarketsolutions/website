@@ -106,3 +106,42 @@
   }
 }
 /* end Career page */
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-top: 4em;
+
+  .navbar-brand {
+    img {
+      width: 150px;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 28px;
+
+    .navbar-item {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    .last {
+      padding-right: 0;
+    }
+
+    .icon {
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
