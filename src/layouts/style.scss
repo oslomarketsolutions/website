@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: repeat(4, 300px);
 
   section {
     margin-top: 2em;
@@ -35,16 +35,16 @@
   justify-content: space-between;
   margin-top: 3em;
   
-  img {
-    width: 45%;
-    height: 22em;
-  }
-  
-  div.content {
+  .oms-text {
     grid-column: 1 / 5;
     width: 45%;
     display: flex;
     align-items: center;
+  }
+
+  .oms-image {
+    width: 45%;
+    height: 22em;
   }
 }
 
@@ -63,15 +63,15 @@
   justify-content: space-between;
   margin-top: 3em;
 
-  img {
-    width: 45%;
-    height: 22em;
-  }
-  
-  div.content {
+  .oms-text {
     width: 45%;
     display: flex;
     align-items: center;
+  }
+  
+  .oms-image {
+    width: 45%;
+    height: 22em;
   }
 }
 

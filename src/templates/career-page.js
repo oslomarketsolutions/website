@@ -16,15 +16,15 @@ export const CareerPageTemplate = ({
   return (
     <div className="container">
       <section className="career-oms">
-        <h2 className="title">{title}</h2>
-        <div className="content">{text}</div>
-        <img src={image} alt="" />
+        <h2>{title}</h2>
+        <div className="oms-text">{text}</div>
+        <img className="oms-image" src={image} alt="" />
       </section>
       <section className="career-body">
-        <PageContent className="content" content={content} />
+        <PageContent content={content} />
       </section>
       <section className="career-perks">
-        <h3 className="title">{subHeader1}</h3>
+        <h3>{subHeader1}</h3>
         {/* Her skal alle perks listes ut fra CMSet */}
         <div className="perk" />
         <div className="perk" />
@@ -37,7 +37,7 @@ export const CareerPageTemplate = ({
       </section>
       <section className="career-job-vacancies">
         {/* Her skal iFramen med ledige stillinger være */}
-        <h2 className="header-title title">{subHeader2}</h2>
+        <h2>{subHeader2}</h2>
         <div className="job-vacancies-iframe" />
       </section>
     </div>

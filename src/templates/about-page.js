@@ -9,8 +9,8 @@ export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
     </section>
     <section className="about-oms">
       <h2>{header1}</h2>
-      <div className="content">{text}</div>
-      <img src={image} alt="" />
+      <div className="oms-text">{text}</div>
+      <img className="oms-image" src={image} alt="" />
     </section>
     <section className="about-employees">
       <h2>{header2}</h2>
