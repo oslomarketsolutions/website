@@ -13,7 +13,7 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-postcss-sass', // see https://www.gatsbyjs.org/packages/gatsby-plugin-postcss-sass to add plugins/change precision
+    'gatsby-plugin-postcss-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,6 +26,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/img`,
         name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/entities`,
+        name: 'entities',
       },
     },
     'gatsby-plugin-sharp',

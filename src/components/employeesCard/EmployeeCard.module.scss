@@ -1,0 +1,65 @@
+.EmployeeCard {
+  display: grid;
+  grid-template-areas:
+    'image header'
+    'image  description';
+  grid-template-columns: 140px auto;
+  grid-template-rows: 100px 100px;
+  width: 565px;
+  transition: 0.3s;
+  color: white;
+  box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.15);
+
+  img {
+    width: 100%;
+    grid-area: image;
+  }
+
+  .header {
+    background-image: url(../../../static/img/ansattkortHeader.png);
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+      'name icon'
+      'title icon';
+    grid-template-columns: 70% 30%;
+  }
+
+  .description {
+    grid-area: description;
+    justify-self: start;
+    align-self: center;
+  }
+
+  figure {
+    margin: 0;
+    grid-area: icon;
+    font-size: 55px;
+    color: white;
+    justify-self: center;
+    align-self: center;
+  }
+
+  h2 {
+    font-size: 24px;
+    grid-area: name;
+    align-self: end;
+  }
+
+  h3 {
+    font-size: 18px;
+    grid-area: title;
+  }
+
+  h2,
+  h3 {
+    margin: 0 20px;
+  }
+
+  p {
+    color: black;
+    margin: 0 20px;
+    line-height: 1.5em;
+    color: #5c5050;
+  }
+}
