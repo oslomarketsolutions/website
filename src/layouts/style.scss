@@ -20,12 +20,12 @@
 /* end General */
 
 /* About page */
-.submenu-placeholder {
-  text-align: center;
-}
-
 .about-submenu {
   grid-column: 1 / 5;
+  
+  .submenu-placeholder {
+    text-align: center;
+  }
 }
 
 .about-oms {
