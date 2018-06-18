@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import 'font-awesome/css/font-awesome.min.css';
 
 import './style.scss';
 import Navbar from '../components/Navbar';

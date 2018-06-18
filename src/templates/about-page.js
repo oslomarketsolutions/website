@@ -87,7 +87,7 @@ AboutPage.propTypes = {
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!, $langRegex: String) {
+  query AboutPage($id: String!, $employeeRegex: String!) {
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -99,7 +99,7 @@ export const aboutPageQuery = graphql`
     }
 
     employees: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: $langRegex } }
+      filter: { fileAbsolutePath: { regex: $employeeRegex } }
     ) {
       edges {
         node {

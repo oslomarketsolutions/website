@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../other/icon';
+
+// Font Awesome
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faGraduationCap from '@fortawesome/fontawesome-free-solid/faGraduationCap';
+import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
+import faFlask from '@fortawesome/fontawesome-free-solid/faFlask';
+import faUserSecret from '@fortawesome/fontawesome-free-solid/faUserSecret';
 
 import styles from './EmployeeCard.module.scss';
 
-// ESLinter didn't like break statements in switch since they "can't" be reached
 const iconMatcher = jobType => {
   switch (jobType) {
     case 'backEnd':
-      return 'fa-gears';
+      return faCoffee;
 
     case 'frontEnd':
-      return 'fa-flask';
+      return faFlask;
 
     case 'summerIntern':
-      return 'fa-graduation-cap';
+      return faGraduationCap;
 
     default:
-      return 'fa-user-secret';
+      return faUserSecret;
   }
 };
 
@@ -29,7 +34,9 @@ const EmployeeCard = props => {
       <section className={styles.header}>
         <h2>{name}</h2>
         <h3>{jobTitle}</h3>
-        <Icon type={iconMatcher(jobType)} />
+        <figure>
+          <FontAwesomeIcon icon={iconMatcher(jobType)} size="md" />
+        </figure>
       </section>
       <section className={styles.description}>
         <p>{description}</p>
