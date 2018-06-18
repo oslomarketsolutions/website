@@ -4,7 +4,6 @@ import Icon from '../other/icon';
 
 import styles from './EmployeeCard.module.scss';
 
-// TODO: Return a random icon from a few selected for each role
 // ESLinter didn't like break statements in switch since they "can't" be reached
 const iconMatcher = jobType => {
   switch (jobType) {
@@ -26,7 +25,7 @@ const EmployeeCard = props => {
   const { name, jobTitle, description, image, jobType } = props;
   return (
     <article className={styles.EmployeeCard}>
-      <img src={image} alt="Stockphoto of a girl smiling" />
+      <img src={image} alt={name} />
       <section className={styles.header}>
         <h2>{name}</h2>
         <h3>{jobTitle}</h3>

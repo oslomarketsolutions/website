@@ -32,19 +32,19 @@ export const AboutPageTemplate = ({
               </h2>
               {employeeList.map(employee => {
                 const {
-                  title,
-                  description,
-                  jobTitle,
-                  image,
-                  jobType,
+                  title: employeeName,
+                  description: employeeDescription,
+                  jobTitle: employeeJobTitle,
+                  image: employeeImage,
+                  jobType: employeeJobType,
                 } = employee.node.frontmatter;
                 return (
                   <EmployeeCard
-                    name={title}
-                    description={description}
-                    jobTitle={jobTitle}
-                    image={image}
-                    jobType={jobType}
+                    name={employeeName}
+                    description={employeeDescription}
+                    jobTitle={employeeJobTitle}
+                    image={employeeImage}
+                    jobType={employeeJobType}
                   />
                 );
               })}

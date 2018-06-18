@@ -26,10 +26,10 @@
     background-image: url(../../../static/img/ansattkortHeader.png);
     grid-area: header;
     display: grid;
-    grid-template-areas: "name icon"
-                          "title icon";
+    grid-template-areas: 
+      "name icon"
+      "title icon";
     grid-template-columns: 70% 30%;
-    grid-template-row: 100px 100px;
   }
 
   .description
