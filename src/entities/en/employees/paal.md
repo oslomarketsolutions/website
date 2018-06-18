@@ -1,6 +1,6 @@
 ---
 title: Paal
-jobTitle: Backend Utvikler
+jobTitle: Backend Developer
 description: Lang
 image: /img/chemex.jpg
 jobType: backEnd

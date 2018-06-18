@@ -1,7 +1,7 @@
 ---
 title: Elias
-jobTitle: Frontend Utvikler
-description: Lang
+jobTitle: Sommervikar
+description: Long
 image: /img/chemex.jpg
-jobType: summerIntern
+jobType: frontEnd
 ---

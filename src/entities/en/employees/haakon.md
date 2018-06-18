@@ -1,6 +1,6 @@
 ---
 title: Haakon
-jobTitle: Frontendutvikler
+jobTitle: Frontend developer
 description: Lang
 image: /img/chemex.jpg
 jobType: frontEnd
