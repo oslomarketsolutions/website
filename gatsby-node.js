@@ -37,6 +37,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
 
       const id = edge.node.id;
+      const langRegex = edge.node.fields.slug
+        .substring(0, 4)
+        .concat('employees/');
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -46,6 +49,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          langRegex,
         },
       });
     });

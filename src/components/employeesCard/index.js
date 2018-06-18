@@ -4,6 +4,24 @@ import Icon from '../other/icon';
 
 import styles from './EmployeeCard.module.scss';
 
+// TODO: Return a random icon from a few selected for each role
+// ESLinter didn't like break statements in switch since they "can't" be reached
+const iconMatcher = jobType => {
+  switch (jobType) {
+    case 'backEnd':
+      return 'fa-gears';
+
+    case 'frontEnd':
+      return 'fa-flask';
+
+    case 'summerIntern':
+      return 'fa-graduation-cap';
+
+    default:
+      return 'fa-user-secret';
+  }
+};
+
 const EmployeeCard = props => {
   const { name, jobTitle, description, image, jobType } = props;
   return (
@@ -12,7 +30,7 @@ const EmployeeCard = props => {
       <section className={styles.header}>
         <h2>{name}</h2>
         <h3>{jobTitle}</h3>
-        <Icon type={iconFinder(jobType)} />
+        <Icon type={iconMatcher(jobType)} />
       </section>
       <section className={styles.description}>
         <p>{description}</p>
@@ -21,30 +39,10 @@ const EmployeeCard = props => {
   );
 };
 
-// TODO: Return a random icon from a few selected for each role
-const iconFinder = jobType => {
-  switch (jobType) {
-    case 'backEnd':
-      return 'fa-gears';
-      break;
-
-    case 'frontEnd':
-      return 'fa-flask';
-      break;
-
-    case 'summerIntern':
-      return 'fa-graduation-cap';
-      break;
-
-    default:
-      return 'fa-user-secret';
-      break;
-  }
-};
-
 EmployeeCard.propTypes = {
   name: PropTypes.string,
   jobTitle: PropTypes.string,
+  jobType: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
 };
