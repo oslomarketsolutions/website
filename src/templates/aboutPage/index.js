@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import global from '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
 
 export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
-  <div className={styles.aboutPage}>
-    <section className={styles.aboutSubmenu}>
+  <main className={styles.aboutPage}>
+    <section>
       <h2>{title}</h2>
       <p>submeny | placeholder</p>
     </section>
@@ -13,10 +14,10 @@ export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
       <div>{text}</div>
       <img src={image} alt="" />
     </section>
-    <section className={styles.aboutEmployees}>
+    <section>
       <h2>{header2}</h2>
     </section>
-  </div>
+  </main>
 );
 
 AboutPageTemplate.propTypes = {

@@ -1,5 +1,5 @@
 ---
-templateKey: 'career-page'
+templateKey: 'careerPage'
 path: /career
 title: Vil du bli en av oss?
 text: 

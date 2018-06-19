@@ -1,23 +1,18 @@
 .aboutPage {
-
-
-  .aboutSubmenu {
+  section {
     grid-column: 1 / 5;
-    
-    p {
-      text-align: center;
-    }
+  }
+
+  p {
+    text-align: center;
   }
   
   .aboutOms {
-    grid-column: 1 / 5;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-top: 3em;
     
     div {
-      grid-column: 1 / 5;
       width: 45%;
       display: flex;
       align-items: center;
@@ -27,10 +22,5 @@
       width: 45%;
       height: 22em;
     }
-  }
-  
-  .aboutEmployees {
-    grid-column: 1 / 5;
-    margin-top: 5em;
   }
 }

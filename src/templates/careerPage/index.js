@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../../components/Content';
+import global from '../../layouts/style.scss';
+import styles from './careerPage.module.scss';
 
 export const CareerPageTemplate = ({
   contentComponent,
@@ -14,33 +16,33 @@ export const CareerPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div className="container">
-      <section className="career-oms">
+    <main className={styles.careerPage}>
+      <section className={styles.careerOms}>
         <h2>{title}</h2>
-        <div className="oms-text">{text}</div>
-        <img className="oms-image" src={image} alt="" />
+        <div>{text}</div>
+        <img src={image} alt="" />
       </section>
-      <section className="career-body">
+      <section>
         <PageContent content={content} />
       </section>
-      <section className="career-perks">
+      <section className={styles.careerPerks}>
         <h3>{subHeader1}</h3>
         {/* Her skal alle perks listes ut fra CMSet */}
-        <div className="perk" />
-        <div className="perk" />
-        <div className="perk" />
-        <div className="perk" />
-        <div className="perk" />
-        <div className="perk" />
-        <div className="perk" />
-        <div className="perk" />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
       </section>
-      <section className="career-job-vacancies">
+      <section className={styles.careerJobVacancies}>
         {/* Her skal iFramen med ledige stillinger være */}
         <h2>{subHeader2}</h2>
-        <div className="job-vacancies-iframe" />
+        <div />
       </section>
-    </div>
+    </main>
   );
 };
 

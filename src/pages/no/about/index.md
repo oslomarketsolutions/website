@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: 'aboutPage'
 path: /about
 title: About
 header1: Oslo Market Solutions

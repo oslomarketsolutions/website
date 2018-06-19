@@ -1,5 +1,5 @@
 ---
-templateKey: 'career-page'
+templateKey: 'careerPage'
 path: /career
 title: Want to become one of us?
 text: 
