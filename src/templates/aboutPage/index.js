@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EmployeeCard from '../../components/employeesCard';
 import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
 
-export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
+export const AboutPageTemplate = ({
+  title,
+  header1,
+  image,
+  text,
+  header2,
+  employeeList,
+}) => (
   <main className={styles.aboutPage}>
     <article>
       <h2>{title}</h2>
@@ -16,6 +24,24 @@ export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
     </article>
     <article>
       <h2>{header2}</h2>
+      {employeeList.map(employee => {
+        const {
+          title: employeeName,
+          description: employeeDescription,
+          jobTitle: employeeJobTitle,
+          image: employeeImage,
+          jobType: employeeJobType,
+        } = employee.node.frontmatter;
+        return (
+          <EmployeeCard
+            name={employeeName}
+            description={employeeDescription}
+            jobTitle={employeeJobTitle}
+            image={employeeImage}
+            jobType={employeeJobType}
+          />
+        );
+      })}
     </article>
   </main>
 );
@@ -26,11 +52,12 @@ AboutPageTemplate.propTypes = {
   image: PropTypes.string,
   text: PropTypes.string,
   header2: PropTypes.string,
+  employeeList: PropTypes.arrayOf(PropTypes.string),
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
-
+  const post = data.page;
+  const employeeList = data.employees.edges;
   return (
     <AboutPageTemplate
       title={post.frontmatter.title}
@@ -38,6 +65,7 @@ const AboutPage = ({ data }) => {
       image={post.frontmatter.image}
       text={post.frontmatter.text}
       header2={post.frontmatter.header2}
+      employeeList={employeeList}
     />
   );
 };
@@ -49,14 +77,30 @@ AboutPage.propTypes = {
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query AboutPage($id: String!, $employeeRegex: String!) {
+    page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         header1
         image
         text
         header2
+      }
+    }
+
+    employees: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: $employeeRegex } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            jobTitle
+            description
+            image
+            jobType
+          }
+        }
       }
     }
   }
