@@ -1,5 +1,5 @@
 .careerPage {
-  section {
+  article {
     grid-column: 1 / 5;
   }
 
@@ -8,7 +8,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
 
-    div {
+    section {
       width: 45%;
       display: flex;
       align-items: center;

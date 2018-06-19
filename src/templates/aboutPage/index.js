@@ -5,18 +5,18 @@ import styles from './aboutPage.module.scss';
 
 export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
   <main className={styles.aboutPage}>
-    <section>
+    <article>
       <h2>{title}</h2>
       <p>submeny | placeholder</p>
-    </section>
-    <section className={styles.aboutOms}>
+    </article>
+    <article className={styles.aboutOms}>
       <h2>{header1}</h2>
-      <div>{text}</div>
+      <section>{text}</section>
       <img src={image} alt="" />
-    </section>
-    <section>
+    </article>
+    <article>
       <h2>{header2}</h2>
-    </section>
+    </article>
   </main>
 );
 
