@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './aboutPage.module.scss';
 
 export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
-  <div className="container">
-    <section className="about-submenu">
+  <div className={styles.aboutPage}>
+    <section className={styles.aboutSubmenu}>
       <h2>{title}</h2>
-      <p className="submenu-placeholder">submeny | placeholder</p>
+      <p>submeny | placeholder</p>
     </section>
-    <section className="about-oms">
+    <section className={styles.aboutOms}>
       <h2>{header1}</h2>
-      <div className="oms-text">{text}</div>
-      <img className="oms-image" src={image} alt="" />
+      <div>{text}</div>
+      <img src={image} alt="" />
     </section>
-    <section className="about-employees">
+    <section className={styles.aboutEmployees}>
       <h2>{header2}</h2>
     </section>
   </div>
