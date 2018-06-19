@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../../components/Content';
-import global from '../../layouts/style.scss';
+import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 
 export const CareerPageTemplate = ({

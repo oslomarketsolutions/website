@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import global from '../../layouts/style.scss';
+import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
 
 export const AboutPageTemplate = ({ title, header1, image, text, header2 }) => (
