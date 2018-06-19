@@ -1,124 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from '../components/Features';
-import Testimonials from '../components/Testimonials';
-import Pricing from '../components/Pricing';
+import styles from './ProductPage.module.scss';
+import FeatureCard from '../components/featureCard';
 
-export const ProductPageTemplate = ({
-  image,
-  title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
-}) => (
-  <section>
-    <div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div style={{ backgroundImage: `url(${image})` }}>
-                <h2
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
-                >
-                  {title}
-                </h2>
-              </div>
-              <div>
-                <div>
-                  <h3>{heading}</h3>
-                  <p>{description}</p>
-                </div>
-              </div>
-              <Features gridItems={intro.blurbs} />
-              <div>
-                <div>
-                  <h3>{main.heading}</h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <article>
-                        <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image1.image}
-                          alt={main.image1.alt}
-                        />
-                      </article>
-                    </div>
-                    <div>
-                      <article>
-                        <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image2.image}
-                          alt={main.image2.alt}
-                        />
-                      </article>
-                    </div>
-                  </div>
-                  <div>
-                    <article>
-                      <img
-                        style={{ borderRadius: '5px' }}
-                        src={main.image3.image}
-                        alt={main.image3.alt}
-                      />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div style={{ backgroundImage: `url(${fullImage})` }} />
-              <h2>{pricing.heading}</h2>
-              <p>{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+export const ProductPageTemplate = ({ title, description }) => (
+  <article className={styles.container}>
+    <section className={styles.intro}>
+      <h2>{title}</h2>
+    </section>
+
+    <section className={styles.description}>
+      <p>{description}</p>
+    </section>
+
+    <section className={styles.featureCards}>
+      <FeatureCard title="HelloWorld" image="/img/coffee.png" />
+      <FeatureCard title="HelloWorld" />
+      <FeatureCard title="HelloWorld" />
+      <FeatureCard title="HelloWorld" />
+      <FeatureCard title="HelloWorld" />
+    </section>
+  </article>
 );
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.string,
   title: PropTypes.string,
-  heading: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-  }),
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      quote: PropTypes.string,
-      author: PropTypes.string,
-    }),
-  ),
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
 };
 
 const ProductPage = ({ data }) => {
@@ -126,15 +33,8 @@ const ProductPage = ({ data }) => {
 
   return (
     <ProductPageTemplate
-      image={frontmatter.image}
       title={frontmatter.title}
-      heading={frontmatter.heading}
       description={frontmatter.description}
-      intro={frontmatter.intro}
-      main={frontmatter.main}
-      testimonials={frontmatter.testimonials}
-      fullImage={frontmatter.full_image}
-      pricing={frontmatter.pricing}
     />
   );
 };

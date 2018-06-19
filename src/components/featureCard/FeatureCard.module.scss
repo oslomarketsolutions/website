@@ -1,0 +1,36 @@
+.FeatureCard {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: blue;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+
+  .image {
+    overflow: hidden;
+
+    img {
+      height: 150px;
+      width: auto;
+    }
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .description {
+    height: 80px;
+  }
+
+  a {
+    width: 260px;
+    height: 40px;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #6b88b0;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+}
