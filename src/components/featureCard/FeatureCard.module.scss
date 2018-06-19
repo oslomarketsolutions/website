@@ -1,36 +1,36 @@
 .FeatureCard {
   display: flex;
   flex-flow: column wrap;
-  background-color: blue;
-  width: 300px;
-  height: 400px;
+  background-color: lightgrey;
+  width: 620px;
+  height: 520px;
   margin: 20px;
 
   .image {
+    display: flex;
     overflow: hidden;
-
+    height: 180px;
+    justify-content: center;
+    align-items: center;
     img {
-      height: 150px;
-      width: auto;
+      margin-top: -20%;
+      height: auto;
+      width: 100%;
     }
   }
 
   .header {
-    height: 100px;
+    height: 50px;
+    background-image: url('/img/ansattkortHeader.png');
   }
 
   .description {
-    height: 80px;
+    height: 145px;
+    background-color: white;
   }
 
-  a {
-    width: 260px;
-    height: 40px;
-    padding: 15px 20px;
-    color: #fff;
-    font-size: 16px;
-    background-color: #6b88b0;
-    margin-bottom: 0px;
-    text-align: center;
+  .footer {
+    height: 145px;
+    background-color: lightblue;
   }
 }

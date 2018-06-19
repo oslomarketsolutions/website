@@ -14,7 +14,12 @@ export const ProductPageTemplate = ({ title, description }) => (
     </section>
 
     <section className={styles.featureCards}>
-      <FeatureCard title="HelloWorld" image="/img/coffee.png" />
+      <FeatureCard
+        title="Marked data feeds"
+        image="/img/products-full-width.jpg"
+        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
+        features={['Real time', 'Historic data', 'Top shareholders']}
+      />
       <FeatureCard title="HelloWorld" />
       <FeatureCard title="HelloWorld" />
       <FeatureCard title="HelloWorld" />
