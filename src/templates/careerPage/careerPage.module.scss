@@ -1,6 +1,8 @@
 .careerPage {
   article {
     grid-column: 1 / 5;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   .careerOms {
@@ -13,7 +15,7 @@
       display: flex;
       align-items: center;
     }
-    
+
     img {
       width: 45%;
       height: 22em;
@@ -24,13 +26,13 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    
+    /*
     div {
       margin-bottom: 3.5em;
       width: 240px;
       height: 145px;
       border: 1px solid black;
-    }
+    }*/
   }
 
   .careerJobVacancies {
@@ -38,11 +40,5 @@
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
-
-    div {
-      border: 1px solid black;
-      width: 600px;
-      height: 250px;
-    }
   }
 }

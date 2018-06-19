@@ -1,6 +1,8 @@
 .aboutPage {
   article {
     grid-column: 1 / 5;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   p {
@@ -28,5 +30,10 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+
+  article {
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 }

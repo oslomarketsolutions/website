@@ -9,6 +9,8 @@
   transition: 0.3s;
   color: white;
   box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 2em;
+  margin-top: 2em;
 
   img {
     width: 100%;
@@ -41,19 +43,20 @@
     align-self: center;
   }
 
-  .name {
+  h2 {
     font-size: 24px;
     grid-area: name;
     align-self: end;
   }
 
-  .jobTitle {
+  h3 {
     font-size: 18px;
     grid-area: title;
   }
 
-  .name,
-  .jobTitle {
+  h2,
+  h3 {
+    text-align: left;
     margin: 0 20px;
   }
 

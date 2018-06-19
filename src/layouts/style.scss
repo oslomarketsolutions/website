@@ -5,11 +5,6 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 300px);
 
-  article {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
-
   h2,
   h3 {
     width: 100%;

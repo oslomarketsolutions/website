@@ -28,19 +28,10 @@ export const CareerPageTemplate = ({
       <article className={styles.careerPerks}>
         <h3>{subHeader1}</h3>
         {/* Her skal alle perks listes ut fra CMSet */}
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
       </article>
       <article className={styles.careerJobVacancies}>
         {/* Her skal iFramen med ledige stillinger være */}
         <h2>{subHeader2}</h2>
-        <div />
       </article>
     </main>
   );
