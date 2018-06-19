@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({
       <section>{text}</section>
       <img src={image} alt="" />
     </article>
-    <article>
+    <article className={styles.aboutEmployees}>
       <h2>{header2}</h2>
       {employeeList.map(employee => {
         const {

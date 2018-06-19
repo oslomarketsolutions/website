@@ -6,21 +6,27 @@
   p {
     text-align: center;
   }
-  
+
   .aboutOms {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    
+
     section {
       width: 45%;
       display: flex;
       align-items: center;
     }
-  
+
     img {
       width: 45%;
       height: 22em;
     }
+  }
+
+  .aboutEmployees {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
