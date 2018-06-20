@@ -12,7 +12,7 @@ export default function IndexPage({ data }) {
           <h1>Siste historier</h1>
         </div>
         {posts
-          .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+          .filter(post => post.node.frontmatter.templateKey === 'blogPost')
           .filter(post => post.node.frontmatter.language === 'no')
           .map(({ node: post }) => (
             <div

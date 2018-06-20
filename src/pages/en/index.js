@@ -12,7 +12,7 @@ export default function IndexPage({ data }) {
           <h1>Latest Stories</h1>
         </div>
         {posts
-          .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+          .filter(post => post.node.frontmatter.templateKey === 'blogPost')
           .filter(post => post.node.frontmatter.language === 'en')
           .map(({ node: post }) => (
             <div

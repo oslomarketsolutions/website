@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProductPage.module.scss';
-import FeatureCard from '../components/featureCard';
+import styles from '../ProductPage.module.scss';
+import FeatureCard from '../../components/featureCard';
 
 export const ProductPageTemplate = ({ title, description, featureCards }) => (
   <article className={styles.container}>
