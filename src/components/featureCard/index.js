@@ -1,13 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Link from 'gatsby-link';
+import { navigateTo } from 'gatsby-link';
 import styles from './FeatureCard.module.scss';
 
 const FeatureCard = props => {
+  const handleKeyDown = event => {
+    console.log(event);
+    console.log('Target', event.target);
+    event.key === 'Enter' ? console.log('Enter') : console.log('Not Enter');
+  };
+
   // link should be the slug for whatever the featurecard is linking to
-  const { title, description, image, features } = props;
+  const { title, description, image, features, link } = props;
   return (
-    <article className={styles.FeatureCard}>
+    <article
+      tabIndex="0"
+      className={styles.FeatureCard}
+      onClick={() => navigateTo('/')}
+      onKeyDown={e => {
+        handleKeyDown(e);
+      }}
+    >
       <section className={styles.image}>
         <img src={image} alt={title} />
       </section>
