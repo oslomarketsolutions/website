@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import favicon from '../img/favicon_oms.jpg';
 
 import './style.scss';
 import Navbar from '../components/Navbar';
@@ -13,6 +14,7 @@ const TemplateWrapper = ({ children, location }) => {
     <React.Fragment>
       <Helmet title="Oslo Market Solutions">
         <html lang={lang} />
+        <link rel="shortcut icon" type="image/jpg" href={favicon} />
       </Helmet>
       <Navbar lang={lang} />
       {children()}
