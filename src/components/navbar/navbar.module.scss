@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-top: 4em;
+
+  a {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  a:first-of-type {
+    padding-left: 0;
+  }
+
+  a:last-of-type {
+    padding-right: 0;
+  }
+
+  .navbarBrand {
+    img {
+      width: 150px;
+    }
+  }
+
+  .navbarLinks {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 24px;
+
+    span {
+      img {
+        height: 20px;
+      }
+    }
+  }
+}

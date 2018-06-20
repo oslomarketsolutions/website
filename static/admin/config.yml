@@ -50,7 +50,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blogPost"}
       - {label: "Language", name: "language", widget: "hidden", default: "no"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -71,7 +71,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blogPost"}
       - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -93,7 +93,7 @@ collections:
         name: "norwegian_about_page"
         label: "no/About page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header 1", name: "header1", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
@@ -103,7 +103,7 @@ collections:
         name: "english_about_page"
         label: "en/About page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header 1", name: "header1", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
@@ -113,7 +113,7 @@ collections:
         name: "norwegian_career_page"
         label: "no/Career page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "career-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Image", name: "image", widget: "image"}
@@ -125,7 +125,7 @@ collections:
         name: "english_career_page"
         label: "en/Career page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "career-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Image", name: "image", widget: "image"}
@@ -137,7 +137,7 @@ collections:
         name: "norwegian_products_page"
         label: "no/Products page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productPage"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
@@ -151,7 +151,7 @@ collections:
         name: "english_products_page"
         label: "en/Products page" 
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productPage"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}

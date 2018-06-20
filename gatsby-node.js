@@ -32,16 +32,23 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(edge => {
+      if (edge.node.frontmatter.templateKey === null) {
+        return;
+      }
+
       const id = edge.node.id;
+      const lang = edge.node.fields.slug.substring(1, 3);
+      const employeeRegex = `/${lang}/employees/`;
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
+          `src/templates/${String(edge.node.frontmatter.templateKey)}/index.js`,
         ),
         // additional data can be passed via context
         context: {
           id,
+          employeeRegex,
         },
       });
     });

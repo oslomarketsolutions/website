@@ -1,7 +1,7 @@
 ---
-title: Elias
+title: Åsmund
 jobTitle: Summer Intern
-description: Long
+description: Lang
 image: /img/chemex.jpg
-jobType: frontEnd
+jobType: summerIntern
 ---

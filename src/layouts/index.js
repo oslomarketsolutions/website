@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Navbar from '../components/Navbar';
 import './style.scss';
+import Navbar from '../components/navbar/index';
 
 const TemplateWrapper = ({ children, location }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
@@ -21,8 +21,8 @@ const TemplateWrapper = ({ children, location }) => {
 };
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
   location: PropTypes.shape({}),
+  children: PropTypes.func,
 };
 
 export default TemplateWrapper;

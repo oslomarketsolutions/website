@@ -1,7 +1,7 @@
 ---
-title: Elias
+title: Åsmund
 jobTitle: Sommervikar
-description: Long
+description: Lang
 image: /img/chemex.jpg
 jobType: summerIntern
 ---
