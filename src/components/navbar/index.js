@@ -9,9 +9,9 @@ function changeLinkLang(lang) {
   const links = { about: 'About', work: 'Work', products: 'Products' };
 
   if (lang === 'no') {
-    links.about = 'OM OSS';
-    links.work = 'JOBB';
-    links.products = 'PRODUKTER';
+    links.about = 'Om oss';
+    links.work = 'Jobb';
+    links.products = 'Produkter';
   }
 
   return links;
