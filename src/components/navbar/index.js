@@ -37,7 +37,7 @@ const Navbar = ({ lang }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="icon">
+          <span>
             <img src={github} alt="Github" />
           </span>
         </a>
