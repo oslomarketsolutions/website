@@ -29,7 +29,7 @@ const iconMatcher = jobType => {
 const EmployeeCard = props => {
   const { name, jobTitle, description, image, jobType } = props;
   return (
-    <article className={styles.EmployeeCard}>
+    <section className={styles.EmployeeCard}>
       <img src={image} alt={name} />
       <section className={styles.header}>
         <h2>{name}</h2>
@@ -41,7 +41,7 @@ const EmployeeCard = props => {
       <section className={styles.description}>
         <p>{description}</p>
       </section>
-    </article>
+    </section>
   );
 };
 

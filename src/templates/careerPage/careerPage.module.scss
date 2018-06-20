@@ -1,0 +1,44 @@
+.careerPage {
+  article {
+    grid-column: 1 / 5;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .careerOms {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    section {
+      width: 45%;
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 45%;
+      height: 22em;
+    }
+  }
+
+  .careerPerks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /*
+    div {
+      margin-bottom: 3.5em;
+      width: 240px;
+      height: 145px;
+      border: 1px solid black;
+    }*/
+  }
+
+  .careerJobVacancies {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+  }
+}
