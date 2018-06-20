@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 /* About page */
 .header-title {
   text-align: center;
@@ -18,12 +20,12 @@
     padding: 1em;
     color: blue;
   }
-  
+
   img {
     width: 45%;
     height: 22em;
   }
-  
+
   div.content {
     width: 45%;
     display: flex;
@@ -36,10 +38,8 @@
 }
 /* end About page */
 
-
 /* Career page */
 .header-title {
-
   text-align: center;
 }
 
@@ -58,7 +58,7 @@
     width: 45%;
     height: 22em;
   }
-  
+
   div.content {
     width: 45%;
     display: flex;
@@ -81,7 +81,7 @@
     width: 100%;
     text-align: center;
   }
-  
+
   .perk {
     margin-bottom: 1.7em;
     width: 240px;

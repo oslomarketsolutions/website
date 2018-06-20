@@ -18,12 +18,67 @@ export const ProductPageTemplate = ({ title, description }) => (
         title="Marked data feeds"
         image="/img/products-full-width.jpg"
         description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
-        features={['Real time', 'Historic data', 'Top shareholders']}
+        features={[
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+        ]}
       />
-      <FeatureCard title="HelloWorld" />
-      <FeatureCard title="HelloWorld" />
-      <FeatureCard title="HelloWorld" />
-      <FeatureCard title="HelloWorld" />
+      <FeatureCard
+        title="Marked data feeds"
+        image="/img/products-full-width.jpg"
+        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
+        features={[
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+        ]}
+      />
+      <FeatureCard
+        title="Marked data feeds"
+        image="/img/products-full-width.jpg"
+        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
+        features={[
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+        ]}
+      />
+      <FeatureCard
+        title="Marked data feeds"
+        image="/img/products-full-width.jpg"
+        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
+        features={[
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+        ]}
+      />
+      <FeatureCard
+        title="Marked data feeds"
+        image="/img/products-full-width.jpg"
+        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
+        features={[
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+          'Real time',
+          'Historic data',
+          'Top shareholders',
+        ]}
+      />
     </section>
   </article>
 );

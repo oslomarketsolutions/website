@@ -1,10 +1,14 @@
 .FeatureCard {
+  font-family: 'Roboto', sans-serif;
+
   display: flex;
   flex-flow: column wrap;
-  background-color: lightgrey;
+  background-color: white;
+  color: #1c315b;
   width: 620px;
   height: 520px;
   margin: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 
   .image {
     display: flex;
@@ -21,16 +25,40 @@
 
   .header {
     height: 50px;
-    background-image: url('/img/ansattkortHeader.png');
+    background-color: #b2cfae;
+
+    h3 {
+      margin: 0;
+      font-size: 24px;
+      padding: 10px 30px;
+    }
   }
 
   .description {
-    height: 145px;
+    height: 170px;
     background-color: white;
+
+    p {
+      margin: 30px 30px;
+      font-size: 21px;
+      line-height: 1.75em;
+    }
   }
 
   .footer {
-    height: 145px;
-    background-color: lightblue;
+    height: 120px;
+    background-color: rgba(238, 238, 238, 0.5);
+
+    ul {
+      justify-content: center;
+      margin: 10px 30px;
+      padding: 0;
+      height: 100%;
+      column-count: 2;
+      list-style-image: url('../../img/greenBullet.svg');
+      list-style-position: inside;
+      font-size: 18px;
+      line-height: 2em;
+    }
   }
 }
