@@ -1,5 +1,5 @@
 .container {
-  width: 1200px;
+  width: 90%;
   margin: auto;
   display: grid;
   grid-template-areas:
@@ -22,5 +22,6 @@
     display: flex;
     background-color: lightcoral;
     flex-flow: row wrap;
+    justify-content: center;
   }
 }

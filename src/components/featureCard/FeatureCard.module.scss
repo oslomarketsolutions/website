@@ -17,25 +17,25 @@
     justify-content: center;
     align-items: center;
     img {
-      margin-top: -20%;
       height: auto;
       width: 100%;
     }
   }
 
   .header {
-    height: 50px;
+    display: flex;
+    height: 60px;
     background-color: #b2cfae;
-
+    font-weight: bold;
     h3 {
-      margin: 0;
-      font-size: 24px;
-      padding: 10px 30px;
+      align-self: center;
+      margin-left: 30px;
+      font-size: 21px;
     }
   }
 
   .description {
-    height: 170px;
+    height: 160px;
     background-color: white;
 
     p {

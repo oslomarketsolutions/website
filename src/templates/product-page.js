@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 import FeatureCard from '../components/featureCard';
 
-export const ProductPageTemplate = ({ title, description }) => (
+export const ProductPageTemplate = ({ title, description, featureCards }) => (
   <article className={styles.container}>
     <section className={styles.intro}>
       <h2>{title}</h2>
@@ -14,71 +14,22 @@ export const ProductPageTemplate = ({ title, description }) => (
     </section>
 
     <section className={styles.featureCards}>
-      <FeatureCard
-        title="Marked data feeds"
-        image="/img/products-full-width.jpg"
-        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
-        features={[
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-        ]}
-      />
-      <FeatureCard
-        title="Marked data feeds"
-        image="/img/products-full-width.jpg"
-        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
-        features={[
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-        ]}
-      />
-      <FeatureCard
-        title="Marked data feeds"
-        image="/img/products-full-width.jpg"
-        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
-        features={[
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-        ]}
-      />
-      <FeatureCard
-        title="Marked data feeds"
-        image="/img/products-full-width.jpg"
-        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
-        features={[
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-        ]}
-      />
-      <FeatureCard
-        title="Marked data feeds"
-        image="/img/products-full-width.jpg"
-        description="Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery."
-        features={[
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-          'Real time',
-          'Historic data',
-          'Top shareholders',
-        ]}
-      />
+      {featureCards.map(featureCard => {
+        const {
+          title: featureCardTitle,
+          image: featureCardImage,
+          description: featureCardDescription,
+          features: featureCardFeatures,
+        } = featureCard.node.frontmatter;
+        return (
+          <FeatureCard
+            title={featureCardTitle}
+            image={featureCardImage}
+            description={featureCardDescription}
+            features={featureCardFeatures}
+          />
+        );
+      })}
     </section>
   </article>
 );
@@ -86,15 +37,18 @@ export const ProductPageTemplate = ({ title, description }) => (
 ProductPageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  featureCards: PropTypes.arrayOf(PropTypes.object),
 };
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const page = data.page.frontmatter;
+  const { edges: featureCards } = data.featureCards;
 
   return (
     <ProductPageTemplate
-      title={frontmatter.title}
-      description={frontmatter.description}
+      title={page.title}
+      description={page.description}
+      featureCards={featureCards}
     />
   );
 };
@@ -110,50 +64,24 @@ ProductPage.propTypes = {
 export default ProductPage;
 
 export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ProductPage($id: String!, $featureRegex: String!) {
+    page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
-        heading
         description
-        intro {
-          blurbs {
+      }
+    }
+
+    featureCards: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: $featureRegex } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
             image
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image
-          }
-          image2 {
-            alt
-            image
-          }
-          image3 {
-            alt
-            image
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image
-        pricing {
-          heading
-          description
-          plans {
             description
-            items
-            plan
-            price
+            features
           }
         }
       }
