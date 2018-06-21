@@ -7,14 +7,14 @@ import Navbar from '../components/navbar/index';
 
 const TemplateWrapper = ({ children, location }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
-  const lang = parsedPath && parsedPath[1];
+  const language = parsedPath && parsedPath[1];
 
   return (
     <React.Fragment>
       <Helmet title="Oslo Market Solutions">
-        <html lang={lang} />
+        <html lang={language} />
       </Helmet>
-      <Navbar lang={lang} />
+      <Navbar language={language} />
       {children()}
     </React.Fragment>
   );
