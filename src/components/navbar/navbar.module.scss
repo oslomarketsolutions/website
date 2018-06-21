@@ -1,41 +1,33 @@
 .navbar {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
   padding-left: 4em;
   padding-right: 4em;
   padding-top: 4em;
 
-  a {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  a:first-of-type {
-    padding-left: 0;
-  }
-
-  a:last-of-type {
-    padding-right: 0;
-  }
-
-  .navbarBrand {
-    img {
-      width: 150px;
-    }
-  }
-
-  .navbarLinks {
+  ul {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-end;
     align-items: center;
+    margin: 0;
+    padding: 0;
     font-size: 24px;
 
-    span {
+    li {
+      padding-left: 1em;
+      padding-right: 1em;
+      list-style-type: none;
+    }
+
+    li:first-of-type {
+      padding-left: 0;
+      margin-right: auto;
       img {
-        height: 20px;
+        width: 150px;
       }
+    }
+
+    li:last-of-type {
+      padding-right: 0;
     }
   }
 }
