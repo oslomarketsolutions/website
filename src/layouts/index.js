@@ -4,19 +4,19 @@ import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.jpg';
 
 import './style.scss';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar/index';
 
 const TemplateWrapper = ({ children, location }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
-  const lang = parsedPath && parsedPath[1];
+  const language = parsedPath && parsedPath[1];
 
   return (
     <React.Fragment>
       <Helmet title="Oslo Market Solutions">
-        <html lang={lang} />
-        <link rel="shortcut icon" type="image/jpg" href={favicon} />
+        <link rel="icon" type="image/jpg" href={favicon} />
+        <html lang={language} />
       </Helmet>
-      <Navbar lang={lang} />
+      <Navbar language={language} />
       {children()}
     </React.Fragment>
   );
