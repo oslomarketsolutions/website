@@ -1,5 +1,6 @@
 .FeatureCard {
   font-family: 'Roboto', sans-serif;
+  text-decoration: unset;
   transition: transform 0.2s;
   display: flex;
   flex-flow: column wrap;
@@ -44,7 +45,8 @@
     background-color: white;
 
     p {
-      margin: 30px 30px;
+      margin: 0;
+      padding: 30px 30px;
       font-size: 21px;
       line-height: 1.75em;
     }
