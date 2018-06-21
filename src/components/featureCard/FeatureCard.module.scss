@@ -6,7 +6,7 @@
   background-color: white;
   color: #1c315b;
   width: 620px;
-  height: 520px;
+  height: 550px;
   margin: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 
@@ -18,7 +18,7 @@
   .image {
     display: flex;
     overflow: hidden;
-    height: 180px;
+    height: 190px;
     justify-content: center;
     align-items: center;
     img {
@@ -40,7 +40,7 @@
   }
 
   .description {
-    height: 160px;
+    height: 170px;
     background-color: white;
 
     p {
@@ -52,8 +52,8 @@
 
   .footer {
     display: flex;
-    height: 120px;
-    background-color: rgba(238, 238, 238, 0.5);
+    height: 130px;
+    background-color: #f7f7f7;
 
     ul {
       align-self: center;

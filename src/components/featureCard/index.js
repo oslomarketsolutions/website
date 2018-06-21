@@ -7,7 +7,7 @@ const FeatureCard = props => {
   // link should be the slug for whatever the featurecard is linking to
   const { title, description, image, features, link } = props;
   return (
-    <button
+    <article
       tabIndex="0"
       className={styles.FeatureCard}
       onClick={() => navigateTo(link)}
@@ -28,11 +28,11 @@ const FeatureCard = props => {
         <ul>
           {features &&
             features.map(feature => {
-              return <li>{feature}</li>;
+              return <li key={feature}>{feature}</li>;
             })}
         </ul>
       </section>
-    </button>
+    </article>
   );
 };
 

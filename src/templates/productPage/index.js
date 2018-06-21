@@ -20,6 +20,7 @@ export const ProductPageTemplate = ({ title, description, featureCards }) => (
           image: featureCardImage,
           description: featureCardDescription,
           features: featureCardFeatures,
+          link: featureCardLink,
         } = featureCard.node.frontmatter;
         return (
           <FeatureCard
@@ -27,7 +28,8 @@ export const ProductPageTemplate = ({ title, description, featureCards }) => (
             image={featureCardImage}
             description={featureCardDescription}
             features={featureCardFeatures}
-            link="test"
+            link={featureCardLink}
+            key={featureCardTitle}
           />
         );
       })}
