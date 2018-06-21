@@ -1,13 +1,13 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: Vis-ansattkort-i-CMS
 
 media_folder: static/img
 public_folder: /img
 
 collections:
   - name: "norwegian_employees"
-    label: "no/Employee"
+    label: "no/EmployeeTESTSTST"
     folder: "src/entities/no/employees"
     create: true
     slug: "{{slug}}"
