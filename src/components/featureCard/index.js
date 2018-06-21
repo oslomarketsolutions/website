@@ -8,6 +8,7 @@ const FeatureCard = props => {
   const { title, description, image, features, link } = props;
   return (
     <article
+      role="link"
       tabIndex="0"
       className={styles.FeatureCard}
       onClick={() => navigateTo(link)}
