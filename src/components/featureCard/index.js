@@ -21,9 +21,7 @@ const FeatureCard = props => {
         <section className={styles.footer}>
           <ul>
             {features &&
-              features.map(feature => {
-                return <li key={feature}>{feature}</li>;
-              })}
+              features.map(feature => <li key={feature}>{feature}</li>)}
           </ul>
         </section>
       </article>
