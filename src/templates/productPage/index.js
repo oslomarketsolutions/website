@@ -27,6 +27,7 @@ export const ProductPageTemplate = ({ title, description, featureCards }) => (
             image={featureCardImage}
             description={featureCardDescription}
             features={featureCardFeatures}
+            link="test"
           />
         );
       })}

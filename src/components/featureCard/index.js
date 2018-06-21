@@ -4,21 +4,15 @@ import { navigateTo } from 'gatsby-link';
 import styles from './FeatureCard.module.scss';
 
 const FeatureCard = props => {
-  const handleKeyDown = event => {
-    console.log(event);
-    console.log('Target', event.target);
-    event.key === 'Enter' ? console.log('Enter') : console.log('Not Enter');
-  };
-
   // link should be the slug for whatever the featurecard is linking to
   const { title, description, image, features, link } = props;
   return (
-    <article
+    <button
       tabIndex="0"
       className={styles.FeatureCard}
-      onClick={() => navigateTo('/')}
-      onKeyDown={e => {
-        handleKeyDown(e);
+      onClick={() => navigateTo(link)}
+      onKeyDown={event => {
+        if (event.key === 'Enter') navigateTo(link);
       }}
     >
       <section className={styles.image}>
@@ -38,7 +32,7 @@ const FeatureCard = props => {
             })}
         </ul>
       </section>
-    </article>
+    </button>
   );
 };
 
@@ -47,6 +41,7 @@ FeatureCard.propTypes = {
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
   image: PropTypes.string,
+  link: PropTypes.string,
 };
 
 export default FeatureCard;
