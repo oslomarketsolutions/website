@@ -5,7 +5,7 @@ import logo from '../../img/logo_oms_hoved.png';
 import styles from './navbar.module.scss';
 
 const changeLinkLanguage = language => {
-  const links = { about: 'About', work: 'Work', products: 'Products' };
+  const links = { about: 'About us', work: 'Work', products: 'Products' };
 
   if (language === 'no') {
     links.about = 'Om oss';
