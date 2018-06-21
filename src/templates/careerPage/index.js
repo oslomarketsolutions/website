@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../../components/Content';
+import PerkCard from '../../components/perkCard';
 import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 
@@ -12,6 +13,7 @@ export const CareerPageTemplate = ({
   image,
   subHeader1,
   subHeader2,
+  perkList,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -28,6 +30,12 @@ export const CareerPageTemplate = ({
       <article className={styles.careerPerks}>
         <h3>{subHeader1}</h3>
         {/* Her skal alle perks listes ut fra CMSet */}
+        {perkList.map(perk => {
+          const { title: perkTitle } = perk.node.frontmatter;
+          const perkContent = perk.node.html;
+
+          return <PerkCard content={perkContent} title={perkTitle} />;
+        })}
       </article>
       <article className={styles.careerJobVacancies}>
         {/* Her skal iFramen med ledige stillinger være */}
@@ -45,10 +53,12 @@ CareerPageTemplate.propTypes = {
   image: PropTypes.string,
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
+  perkList: PropTypes.arrayOf(PropTypes.string),
 };
 
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  const perkList = data.perks.edges;
 
   return (
     <CareerPageTemplate
@@ -59,6 +69,7 @@ const CareerPage = ({ data }) => {
       image={post.frontmatter.image}
       subHeader1={post.frontmatter.subHeader1}
       subHeader2={post.frontmatter.subHeader2}
+      perkList={perkList}
     />
   );
 };
@@ -70,7 +81,7 @@ CareerPage.propTypes = {
 export default CareerPage;
 
 export const careerPageQuery = graphql`
-  query CareerPage($id: String!) {
+  query CareerPage($id: String!, $perkRegex: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -79,6 +90,19 @@ export const careerPageQuery = graphql`
         image
         subHeader1
         subHeader2
+      }
+    }
+
+    perks: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: $perkRegex } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+          }
+        }
       }
     }
   }

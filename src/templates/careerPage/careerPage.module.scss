@@ -26,13 +26,12 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    /*
-    div {
-      margin-bottom: 3.5em;
-      width: 240px;
-      height: 145px;
-      border: 1px solid black;
-    }*/
+
+    section:nth-of-type(1) {
+    }
+
+    section:nth-of-type(2) {
+    }
   }
 
   .careerJobVacancies {
