@@ -1,6 +1,6 @@
 ---
-title: Perk4
+title: 'Perk4: Kantine'
 ---
 
-###Perk4
-Dette er en perk!
+###Kantine
+Serverer både lunsj og frokost

@@ -1,6 +1,7 @@
 .perkCard {
-  width: 280px;
-  height: 280px;
+  padding: 30px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   border: 3px solid;
   display: flex;
@@ -12,7 +13,11 @@
     text-align: center;
 
     h3 {
+      font-size: 22px;
       margin: 0;
+    }
+    p {
+      font-size: 18px;
     }
   }
 }

@@ -1,6 +1,6 @@
 ---
-title: Perk2
+title: 'Perk2: Flextid'
 ---
 
-###Perk2
-Dette er en perk!
+###Flextid
+Jobb når det passer deg

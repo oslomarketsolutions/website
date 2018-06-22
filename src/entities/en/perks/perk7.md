@@ -1,6 +1,6 @@
 ---
-title: Perk7
+title: 'Perk7: Social events'
 ---
 
-###Perk7
-This is a perk!
+###Social events
+Annual social events with the entire group

@@ -1,6 +1,6 @@
 ---
-title: Perk5
+title: 'Perk5: Firmahytter'
 ---
 
-###Perk5
-Dette er en perk!
+###Firmahytter
+I Trysil og Nesbyen

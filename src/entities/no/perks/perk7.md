@@ -1,6 +1,6 @@
 ---
-title: Perk7
+title: 'Perk7: Sosiale arrangementer'
 ---
 
-###Perk7
-Dette er en perk!
+###Sosiale arrangementer
+Årlige sosiale arrangementer med hele konsernet

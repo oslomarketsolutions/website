@@ -1,6 +1,6 @@
 ---
-title: Perk4
+title: 'Perk4: Cafeteria'
 ---
 
-###Perk4
-This is a perk!
+###Cafeteria
+Serves both lunch and breakfast

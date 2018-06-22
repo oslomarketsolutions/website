@@ -1,6 +1,6 @@
 ---
-title: Perk5
+title: 'Perk5: Company cabins'
 ---
 
-###Perk5
-This is a perk!
+###Company cabins
+Located in Trysil and Nesbyen

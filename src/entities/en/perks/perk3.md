@@ -1,6 +1,6 @@
 ---
-title: Perk3
+title: 'Perk3: Paid phone'
 ---
 
-###Perk3
-This is a perk!
+###Paid phone
+As an employee we pay your phone bill

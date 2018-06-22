@@ -1,6 +1,6 @@
 ---
-title: Perk2
+title: 'Perk2: Flexible work hours'
 ---
 
-###Perk2
-This is a perk!
+###Flextid
+Work when it suits you

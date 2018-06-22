@@ -1,6 +1,6 @@
 ---
-title: Perk1
+title: 'Perk1: Employee insurance'
 ---
 
-###Perk1
-This is a perk!
+###Employee insurance
+With us everyone is insured
