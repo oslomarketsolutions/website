@@ -58,6 +58,30 @@ collections:
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
 
+  - name: "norwegian_featureCard"
+      label: "no/FeatureCard"
+      folder: "src/pages/no/featureCards"
+      create: true
+      slug: "{{slug}}"
+      fields:
+        - {label: "Språk", name: "language", widget: "hidden", default: "no"}
+        - {label: "Bilde", name: "image", widget: "image"}
+        - {label: "Tittel", name: "title", widget: "string"}
+        - {label: "Beskrivelse", name: "description", widget: "text"}
+        - {label: "Features", name: "features", widget: "list"}
+
+  - name: "english_featureCard"
+      label: "en/FeatureCard"
+      folder: "src/pages/en/featureCards"
+      create: true
+      slug: "{{slug}}"
+      fields:
+        - {label: "Language", name: "language", widget: "hidden", default: "no"}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Description", name: "description", widget: "text"}
+        - {label: "Features", name: "features", widget: "list"}
+
   - name: "norwegian_products"
     label: "no/Product"
     folder: "src/pages/no/products"

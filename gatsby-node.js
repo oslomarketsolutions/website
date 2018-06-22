@@ -40,6 +40,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       const lang = edge.node.fields.slug.substring(1, 3);
       const employeeRegex = `/${lang}/employees/`;
       const perkRegex = `/${lang}/perks/`;
+      const featureRegex = `/${lang}/featureCards/`;
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -49,8 +50,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          // We need to figure out a better way to pull data in correct language
           employeeRegex,
           perkRegex,
+          featureRegex,
         },
       });
     });
