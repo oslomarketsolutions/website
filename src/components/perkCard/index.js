@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../../components/Content';
 import styles from './perkCard.module.scss';
 
-const PerkCard = ({ content, title }) => {
+const PerkCard = ({ content }) => {
   const PageContent = HTMLContent || Content;
 
   return (
@@ -15,7 +15,6 @@ const PerkCard = ({ content, title }) => {
 
 PerkCard.propTypes = {
   content: PropTypes.string,
-  title: PropTypes.string,
 };
 
 export default PerkCard;

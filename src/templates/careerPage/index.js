@@ -32,10 +32,9 @@ export const CareerPageTemplate = ({
         {/* Her skal alle perks listes ut fra CMSet */}
         <div className={styles.circleGrid}>
           {perkList.map(perk => {
-            const { title: perkTitle } = perk.node.frontmatter;
             const perkContent = perk.node.html;
 
-            return <PerkCard content={perkContent} title={perkTitle} />;
+            return <PerkCard content={perkContent} />;
           })}
         </div>
       </article>
@@ -101,9 +100,6 @@ export const careerPageQuery = graphql`
       edges {
         node {
           html
-          frontmatter {
-            title
-          }
         }
       }
     }

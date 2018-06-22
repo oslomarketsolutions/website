@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-64/Perk-cards
 
 media_folder: static/img
 public_folder: /img
