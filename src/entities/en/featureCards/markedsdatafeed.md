@@ -1,6 +1,6 @@
 ---
 language: "en"
-image: /img/phone-in-hand.jpg
+imageTest: phone-in-hand.jpg
 title: Market data feed
 description: Oslo Market Solutions offer cost-efficient access to global market data with high quality through our feed delivery.
 features: 

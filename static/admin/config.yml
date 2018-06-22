@@ -51,7 +51,7 @@ collections:
       slug: "{{slug}}"
       fields:
         - {label: "Språk", name: "language", widget: "hidden", default: "no"}
-        - {label: "Bilde", name: "image", widget: "image"}
+        - {label: "Bilde", name: "imageTest", widget: "image"}
         - {label: "Tittel", name: "title", widget: "string"}
         - {label: "Beskrivelse", name: "description", widget: "text"}
         - {label: "Features", name: "features", widget: "list"}
@@ -63,7 +63,7 @@ collections:
       slug: "{{slug}}"
       fields:
         - {label: "Language", name: "language", widget: "hidden", default: "no"}
-        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Image", name: "imageTest", widget: "image"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Description", name: "description", widget: "text"}
         - {label: "Features", name: "features", widget: "list"}

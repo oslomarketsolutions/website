@@ -17,7 +17,7 @@ export const ProductPageTemplate = ({ title, description, featureCards }) => (
       {featureCards.map(featureCard => {
         const {
           title: featureCardTitle,
-          image: featureCardImage,
+          imageTest: featureCardImage,
           description: featureCardDescription,
           features: featureCardFeatures,
           link: featureCardLink,
@@ -44,6 +44,7 @@ ProductPageTemplate.propTypes = {
 };
 
 const ProductPage = ({ data }) => {
+  console.log(data);
   const page = data.page.frontmatter;
   const { edges: featureCards } = data.featureCards;
 
@@ -82,7 +83,13 @@ export const productPageQuery = graphql`
         node {
           frontmatter {
             title
-            image
+            imageTest {
+              childImageSharp {
+                resolutions(width: 620) {
+                  ...GatsbyImageSharpResolutions
+                }
+              }
+            }
             description
             features
           }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import styles from './FeatureCard.module.scss';
 
 const FeatureCard = props => {
@@ -9,7 +10,7 @@ const FeatureCard = props => {
   return (
     <Link to={link} className={styles.FeatureCard}>
       <section className={styles.image}>
-        <img src={image} alt={title} />
+        <Img resolutions={image.childImageSharp.resolutions} />
       </section>
       <section className={styles.header}>
         <h3>{title}</h3>
@@ -31,7 +32,6 @@ FeatureCard.propTypes = {
   title: PropTypes.string,
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
-  image: PropTypes.string,
   link: PropTypes.string,
 };
 
