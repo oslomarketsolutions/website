@@ -7,7 +7,7 @@ public_folder: /img
 
 collections:
   - name: "norwegian_employees"
-    label: "no/EmployeeTESTSTST"
+    label: "no/Employee"
     folder: "src/entities/no/employees"
     create: true
     slug: "{{slug}}"
