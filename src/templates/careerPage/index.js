@@ -30,12 +30,14 @@ export const CareerPageTemplate = ({
       <article className={styles.careerPerks}>
         <h3>{subHeader1}</h3>
         {/* Her skal alle perks listes ut fra CMSet */}
-        {perkList.map(perk => {
-          const { title: perkTitle } = perk.node.frontmatter;
-          const perkContent = perk.node.html;
+        <div className={styles.circleGrid}>
+          {perkList.map(perk => {
+            const { title: perkTitle } = perk.node.frontmatter;
+            const perkContent = perk.node.html;
 
-          return <PerkCard content={perkContent} title={perkTitle} />;
-        })}
+            return <PerkCard content={perkContent} title={perkTitle} />;
+          })}
+        </div>
       </article>
       <article className={styles.careerJobVacancies}>
         {/* Her skal iFramen med ledige stillinger være */}

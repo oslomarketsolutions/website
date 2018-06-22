@@ -1,6 +1,6 @@
 ---
-title: Perk1
+title: Perk6
 ---
 
-###Perk1
+###Perk6
 Dette er en perk!
