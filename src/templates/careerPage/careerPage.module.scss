@@ -5,7 +5,7 @@ $colorLightBlue: #91e0ff;
 
 .careerPage {
   article {
-    grid-column: 1 / 5;
+    grid-column: 1 / 7;
     margin-top: 2em;
     margin-bottom: 2em;
   }
@@ -32,7 +32,7 @@ $colorLightBlue: #91e0ff;
       display: grid;
       justify-items: center;
       align-items: center;
-      grid-template-columns: 75px 350px 350px 350px 75px;
+      grid-template-columns: auto 350px 350px 350px auto;
       grid-template-rows: repeat(5, 195px);
       margin-top: 7em;
       margin-bottom: 5em;
