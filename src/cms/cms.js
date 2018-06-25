@@ -6,7 +6,7 @@ import ProductPagePreview from './preview-templates/ProductPagePreview';
 import EmployeePreview from './preview-templates/EmployeePreview';
 import styles from '../components/employeesCard/EmployeeCard.module.scss';
 
-CMS.registerPreviewStyle(styles.toString(), { raw: true });
+CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('norwegian_employees', EmployeePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
