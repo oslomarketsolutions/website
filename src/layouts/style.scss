@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 main {
-  width: 1200px;
+  max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(6, auto);
 
   h2,
   h3 {

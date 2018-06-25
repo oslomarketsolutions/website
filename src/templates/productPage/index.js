@@ -1,140 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from '../../components/Features';
-import Testimonials from '../../components/Testimonials';
-import Pricing from '../../components/Pricing';
+import styles from './productPage.module.scss';
+import FeatureCard from '../../components/featureCard';
 
-export const ProductPageTemplate = ({
-  image,
-  title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
-}) => (
-  <section>
-    <div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div style={{ backgroundImage: `url(${image})` }}>
-                <h2
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
-                >
-                  {title}
-                </h2>
-              </div>
-              <div>
-                <div>
-                  <h3>{heading}</h3>
-                  <p>{description}</p>
-                </div>
-              </div>
-              <Features gridItems={intro.blurbs} />
-              <div>
-                <div>
-                  <h3>{main.heading}</h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <article>
-                        <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image1.image}
-                          alt={main.image1.alt}
-                        />
-                      </article>
-                    </div>
-                    <div>
-                      <article>
-                        <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image2.image}
-                          alt={main.image2.alt}
-                        />
-                      </article>
-                    </div>
-                  </div>
-                  <div>
-                    <article>
-                      <img
-                        style={{ borderRadius: '5px' }}
-                        src={main.image3.image}
-                        alt={main.image3.alt}
-                      />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div style={{ backgroundImage: `url(${fullImage})` }} />
-              <h2>{pricing.heading}</h2>
-              <p>{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+export const ProductPageTemplate = ({ title, description, featureCards }) => (
+  <article className={styles.container}>
+    <section className={styles.intro}>
+      <h2>{title}</h2>
+    </section>
+
+    <section className={styles.description}>
+      <p>{description}</p>
+    </section>
+
+    <section className={styles.featureCards}>
+      {featureCards.map(featureCard => {
+        const {
+          title: featureCardTitle,
+          image: featureCardImage,
+          description: featureCardDescription,
+          features: featureCardFeatures,
+          link: featureCardLink,
+        } = featureCard.node.frontmatter;
+        return (
+          <FeatureCard
+            title={featureCardTitle}
+            image={featureCardImage}
+            description={featureCardDescription}
+            features={featureCardFeatures}
+            link={featureCardLink}
+            key={featureCardTitle}
+          />
+        );
+      })}
+    </section>
+  </article>
 );
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.string,
   title: PropTypes.string,
-  heading: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-  }),
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      quote: PropTypes.string,
-      author: PropTypes.string,
-    }),
-  ),
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+  featureCards: PropTypes.arrayOf(PropTypes.object),
 };
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const page = data.page.frontmatter;
+  const { edges: featureCards } = data.featureCards;
 
   return (
     <ProductPageTemplate
-      image={frontmatter.image}
-      title={frontmatter.title}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
-      intro={frontmatter.intro}
-      main={frontmatter.main}
-      testimonials={frontmatter.testimonials}
-      fullImage={frontmatter.full_image}
-      pricing={frontmatter.pricing}
+      title={page.title}
+      description={page.description}
+      featureCards={featureCards}
     />
   );
 };
@@ -150,50 +67,24 @@ ProductPage.propTypes = {
 export default ProductPage;
 
 export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ProductPage($id: String!, $featureRegex: String!) {
+    page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
-        heading
         description
-        intro {
-          blurbs {
+      }
+    }
+
+    featureCards: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: $featureRegex } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
             image
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image
-          }
-          image2 {
-            alt
-            image
-          }
-          image3 {
-            alt
-            image
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image
-        pricing {
-          heading
-          description
-          plans {
             description
-            items
-            plan
-            price
+            features
           }
         }
       }
