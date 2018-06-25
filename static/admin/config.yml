@@ -9,6 +9,7 @@ collections:
   - name: "englishPerks"
     label: "en/Perk"
     folder: "src/entities/en/perks"
+    create: true
     slug: "{{slug}}"
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
@@ -16,6 +17,7 @@ collections:
   - name: "norwegianPerks"
     label: "no/Perk"
     folder: "src/entities/no/perks"
+    create: true
     slug: "{{slug}}"
     fields:
       - {label: "Perk name", name: "title", widget: "string"}

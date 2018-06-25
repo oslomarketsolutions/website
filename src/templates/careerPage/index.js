@@ -5,6 +5,29 @@ import PerkCard from '../../components/perkCard';
 import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 
+let colorCounter = 0;
+
+const color = () => {
+  const colors = [
+    '#fff6ae',
+    '#c6b5e3',
+    '#fd9e72',
+    '#91e0ff',
+    '#fd9e72',
+    '#91e0ff',
+    '#fff6ae',
+    '#c6b5e3',
+  ];
+  const returnColor = colorCounter;
+
+  if (colorCounter >= 7) {
+    colorCounter = 0;
+  }
+  colorCounter += 1;
+
+  return colors[returnColor];
+};
+
 export const CareerPageTemplate = ({
   contentComponent,
   content,
@@ -30,11 +53,11 @@ export const CareerPageTemplate = ({
       <article className={styles.careerPerks}>
         <h3>{subHeader1}</h3>
         {/* Her skal alle perks listes ut fra CMSet */}
-        <div className={styles.circleGrid}>
+        <div className={styles.perkCardContainer}>
           {perkList.map(perk => {
             const perkContent = perk.node.html;
 
-            return <PerkCard content={perkContent} />;
+            return <PerkCard content={perkContent} color={color()} />;
           })}
         </div>
       </article>

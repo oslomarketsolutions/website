@@ -1,13 +1,7 @@
-$colorOrange: #fd9e72;
-$colorYellow: #fff6ae;
-$colorPurple: #c6b5e3;
-$colorLightBlue: #91e0ff;
-
 .careerPage {
   article {
     grid-column: 1 / 7;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em 0;
   }
 
   .careerOms {
@@ -28,63 +22,20 @@ $colorLightBlue: #91e0ff;
   }
 
   .careerPerks {
-    div.circleGrid {
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      grid-template-columns: auto 350px 350px 350px auto;
-      grid-template-rows: repeat(5, 195px);
-      margin-top: 7em;
-      margin-bottom: 5em;
-
-      section:nth-of-type(1) {
-        border-color: $colorOrange;
-        grid-column-start: 3;
-        grid-row-start: 1;
-      }
-
-      section:nth-of-type(2) {
-        border-color: $colorPurple;
-        grid-column-start: 2;
-        grid-row-start: 2;
-      }
-
-      section:nth-of-type(3) {
-        border-color: $colorYellow;
-        grid-column-start: 4;
-        grid-row-start: 2;
-      }
-
-      section:nth-of-type(4) {
-        border-color: $colorLightBlue;
-        grid-column-start: 3;
-        grid-row-start: 3;
-      }
-
-      section:nth-of-type(5) {
-        border-color: $colorYellow;
-        grid-column-start: 2;
-        grid-row-start: 4;
-      }
-
-      section:nth-of-type(6) {
-        border-color: $colorPurple;
-        grid-column-start: 4;
-        grid-row-start: 4;
-      }
-
-      section:nth-of-type(7) {
-        border-color: $colorOrange;
-        grid-column-start: 3;
-        grid-row-start: 5;
-      }
+    div.perkCardContainer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      width: 85%;
+      margin: 4em auto 0 auto;
     }
   }
 
   .careerJobVacancies {
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
+    align-items: center;
     justify-content: center;
   }
 }
