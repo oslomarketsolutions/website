@@ -1,0 +1,23 @@
+.perkCard {
+  padding: 30px;
+  width: 220px;
+  height: 120px;
+  margin: 0 2.5em 4em;
+  border: 2px solid;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    text-align: center;
+
+    h3 {
+      font-size: 22px;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}

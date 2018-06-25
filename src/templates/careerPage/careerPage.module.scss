@@ -1,8 +1,7 @@
 .careerPage {
   article {
-    grid-column: 1 / 5;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    grid-column: 1 / 7;
+    margin: 2em 0;
   }
 
   .careerOms {
@@ -23,22 +22,20 @@
   }
 
   .careerPerks {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    /*
-    div {
-      margin-bottom: 3.5em;
-      width: 240px;
-      height: 145px;
-      border: 1px solid black;
-    }*/
+    div.perkCardContainer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      width: 85%;
+      margin: 4em auto 0 auto;
+    }
   }
 
   .careerJobVacancies {
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
+    align-items: center;
     justify-content: center;
   }
 }
