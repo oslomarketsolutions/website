@@ -3,6 +3,19 @@ import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
 import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
+const _ = require('lodash');
+
+// // Bad performance
+// // Maybe lodash has some functions that can help
+// const findSizes = (imagesWithSizes, imageNames) => {
+//   let result = []
+
+//   imagesWithSizes.forEach(image => {
+//     if (imageNames.includes(image.node.relativePath)) result.push({imageName: image.node.relativePath, imageSizes: image.node.childImageSharp.sizes})
+//   })
+
+//   return result
+// }
 
 export const AboutPageTemplate = ({
   title,
@@ -29,15 +42,16 @@ export const AboutPageTemplate = ({
           title: employeeName,
           description: employeeDescription,
           jobTitle: employeeJobTitle,
-          image: employeeImage,
+          sizes: employeeSizes,
           jobType: employeeJobType,
         } = employee.node.frontmatter;
         return (
           <EmployeeCard
+            key={employeeName}
             name={employeeName}
             description={employeeDescription}
             jobTitle={employeeJobTitle}
-            image={employeeImage}
+            sizes={employeeSizes}
             jobType={employeeJobType}
           />
         );
@@ -52,12 +66,21 @@ AboutPageTemplate.propTypes = {
   image: PropTypes.string,
   text: PropTypes.string,
   header2: PropTypes.string,
-  employeeList: PropTypes.arrayOf(PropTypes.string),
+  employeeList: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };
 
 const AboutPage = ({ data }) => {
   const post = data.page;
   const employeeList = data.employees.edges;
+  const imageSizes = data.imageSizes.edges;
+  const image = _.last(employeeList[0].node.frontmatter.image.split('/'));
+
+  imageSizes.map(imageSize => {
+    return imageSize.node;
+  });
+
+  console.log(imageSizes);
+
   return (
     <AboutPageTemplate
       title={post.frontmatter.title}
@@ -99,6 +122,19 @@ export const aboutPageQuery = graphql`
             description
             image
             jobType
+          }
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 1800) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }

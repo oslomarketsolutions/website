@@ -6,11 +6,11 @@ import styles from './FeatureCard.module.scss';
 
 const FeatureCard = props => {
   // link should be the slug for whatever the featurecard is linking to
-  const { title, description, image, features, link = '' } = props;
+  const { title, description, resolutions, features, link = '' } = props;
   return (
     <Link to={link} className={styles.FeatureCard}>
       <section className={styles.image}>
-        <Img resolutions={image.childImageSharp.resolutions} />
+        <Img resolutions={resolutions} />
       </section>
       <section className={styles.header}>
         <h3>{title}</h3>
@@ -33,6 +33,9 @@ FeatureCard.propTypes = {
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
   link: PropTypes.string,
+  resolutions: PropTypes.objectOf(
+    PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  ),
 };
 
 export default FeatureCard;

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 
 // Font Awesome
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
@@ -27,15 +28,15 @@ const iconMatcher = jobType => {
 };
 
 const EmployeeCard = props => {
-  const { name, jobTitle, description, image, jobType } = props;
+  const { name, jobTitle, description, sizes, jobType } = props;
   return (
     <section className={styles.EmployeeCard}>
-      <img src={image} alt={name} />
+      <Img sizes={sizes} />
       <section className={styles.header}>
         <h2>{name}</h2>
         <h3>{jobTitle}</h3>
         <figure>
-          <FontAwesomeIcon icon={iconMatcher(jobType)} size="md" />
+          <FontAwesomeIcon icon={iconMatcher(jobType)} size="1x" />
         </figure>
       </section>
       <section className={styles.description}>
@@ -50,7 +51,7 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
+  resolutions: PropTypes.objectOf(PropTypes.string),
 };
 
 export default EmployeeCard;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './productPage.module.scss';
 import FeatureCard from '../../components/featureCard';
+const _ = require('lodash');
 
 export const ProductPageTemplate = ({ title, description, featureCards }) => (
   <article className={styles.container}>
@@ -17,7 +18,7 @@ export const ProductPageTemplate = ({ title, description, featureCards }) => (
       {featureCards.map(featureCard => {
         const {
           title: featureCardTitle,
-          imageTest: featureCardImage,
+          resolutions: featureCardResolutions,
           description: featureCardDescription,
           features: featureCardFeatures,
           link: featureCardLink,
@@ -25,7 +26,7 @@ export const ProductPageTemplate = ({ title, description, featureCards }) => (
         return (
           <FeatureCard
             title={featureCardTitle}
-            image={featureCardImage}
+            resolutions={featureCardResolutions}
             description={featureCardDescription}
             features={featureCardFeatures}
             link={featureCardLink}
@@ -44,9 +45,23 @@ ProductPageTemplate.propTypes = {
 };
 
 const ProductPage = ({ data }) => {
-  console.log(data);
   const page = data.page.frontmatter;
   const { edges: featureCards } = data.featureCards;
+  const imageResolutions = data.imageResolutions.edges;
+
+  // Bad performance
+  // Maybe lodash has some functions that can help
+  featureCards.forEach(featureCard => {
+    // This removes the /img/-prefix frontmatter.image has
+    const image = _.last(featureCard.node.frontmatter.image.split('/'));
+
+    imageResolutions.forEach(imageResolution => {
+      if (image === imageResolution.node.relativePath) {
+        featureCard.node.frontmatter.resolutions =
+          imageResolution.node.childImageSharp.resolutions;
+      }
+    });
+  });
 
   return (
     <ProductPageTemplate
@@ -83,15 +98,24 @@ export const productPageQuery = graphql`
         node {
           frontmatter {
             title
-            imageTest {
-              childImageSharp {
-                resolutions(width: 620) {
-                  ...GatsbyImageSharpResolutions
-                }
-              }
-            }
+            image
             description
             features
+          }
+        }
+      }
+    }
+
+    imageResolutions: allFile(
+      filter: { absolutePath: { regex: "/static/img" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            resolutions(width: 620) {
+              ...GatsbyImageSharpResolutions
+            }
           }
         }
       }
