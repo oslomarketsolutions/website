@@ -1,23 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import styles from '../indexPage.module.scss';
-import image from '../../../static/img/jumbotron.jpg';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 
-export default function IndexPage({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+const IndexPage = ({ data }) => {
+  const {
+    topImage,
+    configurationLogos,
+    header1,
+    image,
+    text,
+    header2,
+  } = data.markdownRemark.frontmatter;
+
+  const onScrollButtonClick = () => {
+    console.log('Scroll');
+  };
 
   return (
     <div className={styles.homePage}>
       <section className={styles.animation}>
-        <img src={image} alt="" />
+        <a className={styles.scrollButton} onClick={onScrollButtonClick}>
+          <FontAwesomeIcon icon={caretDown} size="2x" />
+        </a>
+        <img src={topImage} alt="" />
       </section>
       <section className={styles.configurationLogos}>
-        <img src={image} alt="" />
+        {configurationLogos.map(logo => {
+          return <img src={logo} alt={logo} />;
+        })}
       </section>
       <section className={styles.featuredCase}>
         <div>
-          <h2>Featuredcase</h2>
+          <h2>{header1}</h2>
         </div>
       </section>
       <section className={styles.customizationCards} />
@@ -25,7 +41,7 @@ export default function IndexPage({ data }) {
       <section className={styles.customerLogos} />
     </div>
   );
-}
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -35,23 +51,18 @@ IndexPage.propTypes = {
   }),
 };
 
+export default IndexPage;
+
 export const pageQuery = graphql`
   query EnIndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            language
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
+    markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
+      frontmatter {
+        topImage
+        configurationLogos
+        header1
+        image
+        text
+        header2
       }
     }
   }

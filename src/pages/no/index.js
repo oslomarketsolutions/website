@@ -1,41 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import styles from '../indexPage.module.scss';
 
-export default function IndexPage({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+const IndexPage = ({ data }) => {
+  const { frontmatter: page } = data.markdownRemark;
 
   return (
-    <section>
-      <div>
+    <div className={styles.homePage}>
+      <section className={styles.animation}>
+        <img src={page.topImage} alt="" />
+      </section>
+      <section className={styles.configurationLogos}>
+        <img src={page.image} alt="" />
+      </section>
+      <section className={styles.featuredCase}>
         <div>
-          <h1>Siste historier</h1>
+          <h2>Featuredcase</h2>
         </div>
-        {posts
-          .filter(post => post.node.frontmatter.templateKey === 'blogPost')
-          .filter(post => post.node.frontmatter.language === 'no')
-          .map(({ node: post }) => (
-            <div
-              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-              key={post.id}
-            >
-              <p>
-                <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-              </p>
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link to={post.fields.slug}>Keep Reading →</Link>
-              </p>
-            </div>
-          ))}
-      </div>
-    </section>
+      </section>
+      <section className={styles.customizationCards} />
+      <section className={styles.solutions} />
+      <section className={styles.customerLogos} />
+    </div>
   );
-}
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -45,23 +34,18 @@ IndexPage.propTypes = {
   }),
 };
 
+export default IndexPage;
+
 export const pageQuery = graphql`
   query NorIndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            language
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
+    markdownRemark(id: { regex: "/src/pages/no/index.md/" }) {
+      frontmatter {
+        topImage
+        configurationLogos
+        header1
+        image
+        text
+        header2
       }
     }
   }
