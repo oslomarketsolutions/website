@@ -1,0 +1,61 @@
+/* Very temporary css */
+
+.homePage {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(67, 106, 214);
+
+  .animation {
+    width: 2560px;
+    height: 900px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .configurationLogos {
+    display: flex;
+    flex-flow: row wrap;
+    height: 200px;
+    width: 1800px;
+    margin: auto;
+    border: solid yellow;
+  }
+
+  .featuredCase {
+    height: 1000px;
+    width: 1800px;
+    margin: auto;
+    border: solid black;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .customizationCards {
+    height: 1000px;
+    width: 1800px;
+    margin: auto;
+    border: solid blue;
+  }
+
+  .solutions {
+    height: 1000px;
+    width: 1800px;
+    margin: auto;
+    border: solid blue;
+  }
+
+  .customerLogos {
+    height: 1000px;
+    width: 1800px;
+    margin: auto;
+    border: solid blue;
+  }
+}

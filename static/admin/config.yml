@@ -14,6 +14,7 @@ collections:
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "norwegianPerks"
     label: "no/Perk"
     folder: "src/entities/no/perks"
@@ -22,6 +23,7 @@ collections:
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "norwegian_employees"
     label: "no/Employee"
     folder: "src/entities/no/employees"
@@ -129,6 +131,50 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/no/index.md"
+        name: "norwegian_index_page"
+        label: "no/Homepage"
+        fields:
+          - {label: "Welcome Image", name: "topImage", widget: "image"}
+          - label: "Configuration logos"
+            name: "configurationLogos"
+            widget: "list"
+            fields: [
+              {label: "Logo", name: "logo", widget: "image"}
+            ]
+          - {label: "Featured Case Header", name: "header1", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Text", name: "text", widget: "text"}
+          - {label: "Header 2", name: "header2", widget: "string"}
+          - label: "Customer logos"
+            name: "customerLogos"
+            widget: "list"
+            fields: [
+              {label: "Logo", name: "logo", widget: "image"}
+            ]
+
+      - file: "src/pages/en/index.md"
+        name: "english_index_page"
+        label: "no/Homepage"
+        fields:
+          - {label: "Welcome Image", name: "topImage", widget: "image"}
+          - label: "Configuration logos"
+            name: "configurationLogos"
+            widget: "list"
+            fields: [
+              {label: "Logo", name: "logo", widget: "image"}
+            ]
+          - {label: "Featured Case Header", name: "header1", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Text", name: "text", widget: "text"}
+          - {label: "Header 2", name: "header2", widget: "string"}
+          - label: "Customer logos"
+            name: "customerLogos"
+            widget: "list"
+            fields: [
+              {label: "Logo", name: "logo", widget: "image"}
+            ]
+
       - file: "src/pages/no/about/index.md"
         name: "norwegian_about_page"
         label: "no/About page"
@@ -139,6 +185,7 @@ collections:
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Header 2", name: "header2", widget: "string"}
+
       - file: "src/pages/en/about/index.md"
         name: "english_about_page"
         label: "en/About page"
@@ -149,6 +196,7 @@ collections:
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Header 2", name: "header2", widget: "string"}
+
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"
         label: "no/Career page"
@@ -161,6 +209,7 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Sub header 1", name: "subHeader1", widget: "string"}
           - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
         label: "en/Career page"
@@ -173,6 +222,7 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Sub header 1", name: "subHeader1", widget: "string"}
           - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+
       - file: "src/pages/no/products/index.md"
         name: "norwegian_products_page"
         label: "no/Products page"
@@ -187,6 +237,7 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+
       - file: "src/pages/en/products/index.md"
         name: "english_products_page"
         label: "en/Products page" 
