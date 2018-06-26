@@ -34,12 +34,9 @@
   }
 
   figure {
-    margin: 0;
+    display: grid;
     grid-area: icon;
-    font-size: 55px;
-    color: white;
-    justify-self: center;
-    align-self: center;
+    align-items: center;
   }
 
   h2 {
