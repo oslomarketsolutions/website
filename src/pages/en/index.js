@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../indexPage.module.scss';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
+import styles from '../indexPage.module.scss';
 
 const IndexPage = ({ data }) => {
   const {
@@ -21,15 +21,13 @@ const IndexPage = ({ data }) => {
   return (
     <div className={styles.homePage}>
       <section className={styles.animation}>
-        <a className={styles.scrollButton} onClick={onScrollButtonClick}>
+        <button className={styles.scrollButton} onClick={onScrollButtonClick}>
           <FontAwesomeIcon icon={caretDown} size="2x" />
-        </a>
+        </button>
         <img src={topImage} alt="" />
       </section>
       <section className={styles.configurationLogos}>
-        {configurationLogos.map(logo => {
-          return <img src={logo} alt={logo} />;
-        })}
+        {configurationLogos.map(logo => <img src={logo} alt={logo} />)}
       </section>
       <section className={styles.featuredCase}>
         <div>
