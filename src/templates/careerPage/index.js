@@ -83,6 +83,7 @@ CareerPageTemplate.propTypes = {
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const perkList = data.perks.edges;
+  colorCounter = 0;
 
   return (
     <CareerPageTemplate
