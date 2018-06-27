@@ -45,11 +45,11 @@
   .configurationLogos {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     height: 200px;
     width: 1800px;
     margin: auto;
     border: solid yellow;
-    justify-content: space-around;
   }
 
   .featuredCase {
@@ -78,7 +78,10 @@
   }
 
   .customerLogos {
-    height: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 200px;
     width: 1800px;
     margin: auto;
     border: solid blue;

@@ -8,10 +8,12 @@ const IndexPage = ({ data }) => {
   const {
     topImage,
     configurationLogos,
-    header1,
+    featuredContent,
     image,
     text,
     header2,
+    solutionsContent,
+    customerLogos,
   } = data.markdownRemark.frontmatter;
 
   const onScrollButtonClick = () => {
@@ -31,12 +33,31 @@ const IndexPage = ({ data }) => {
       </section>
       <section className={styles.featuredCase}>
         <div>
-          <h2>{header1}</h2>
+          <img src={featuredContent.image} />
+          <h2>{featuredContent.header}</h2>
+          <p>{featuredContent.text}</p>
         </div>
       </section>
-      <section className={styles.customizationCards} />
-      <section className={styles.solutions} />
-      <section className={styles.customerLogos} />
+      <section className={styles.customizationCards}>
+        <article>Kort 1</article>
+        <article>Kort 2</article>
+        <article>Kort 3</article>
+      </section>
+      <section className={styles.solutions}>
+        <article>
+          <img src={solutionsContent.firstCard.image} />
+          <h2> {solutionsContent.firstCard.header} </h2>
+          <p> {solutionsContent.firstCard.text} </p>
+        </article>
+        <article>
+          <img src={solutionsContent.secondCard.image} />
+          <h2> {solutionsContent.secondCard.header} </h2>
+          <p> {solutionsContent.secondCard.text} </p>
+        </article>
+      </section>
+      <section className={styles.customerLogos}>
+        {customerLogos.map(logo => <img src={logo} alt={logo} />)}
+      </section>
     </div>
   );
 };
@@ -56,11 +77,25 @@ export const pageQuery = graphql`
     markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
       frontmatter {
         topImage
+        featuredContent {
+          header
+          image
+          text
+        }
         configurationLogos
-        header1
-        image
-        text
-        header2
+        solutionsContent {
+          firstCard {
+            image
+            header
+            text
+          }
+          secondCard {
+            image
+            header
+            text
+          }
+        }
+        customerLogos
       }
     }
   }

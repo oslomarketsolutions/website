@@ -136,43 +136,83 @@ collections:
         label: "no/Homepage"
         fields:
           - {label: "Welcome Image", name: "topImage", widget: "image"}
+          - label: "Featured Content"
+            name: "featuredContent"
+            widget: "object"
+            fields: [
+              - {label: "Featured Case Header", name: "header", widget: "string"}
+              - {label: "Featured Image", name: "image", widget: "image"}
+              - {label: "Featured Text", name: "text", widget: "text"}
+            ]
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
             fields: [
-              {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Logo", name: "logo", widget: "image"}
+            ]          
+          - label: "Solutions Content"
+            name: "solutionsContent"
+            widget: "object"
+            fields: [
+              - {label: "First Card", name: "firstCard", widget: "object", fields: [
+                - {label: "Image", name: "image", widget: "image"}
+                - {label: "Header", name: "header", widget: "string"}
+                - {label: "Text", name: "text", widget: "text"}
+                
+              ]}
+              - {label: "Second Card", name: "secondCard", widget: "object", fields: [
+                - {label: "Image", name: "image", widget: "image"}
+                - {label: "Header", name: "header", widget: "string"}
+                - {label: "Text", name: "text", widget: "text"}
+              ]}
             ]
-          - {label: "Featured Case Header", name: "header1", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Header 2", name: "header2", widget: "string"}
           - label: "Customer logos"
             name: "customerLogos"
             widget: "list"
             fields: [
-              {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Logo", name: "logo", widget: "image"}
             ]
 
       - file: "src/pages/en/index.md"
         name: "english_index_page"
-        label: "no/Homepage"
+        label: "en/Homepage"
         fields:
           - {label: "Welcome Image", name: "topImage", widget: "image"}
+          - label: "Featured Content"
+            name: "featuredContent"
+            widget: "object"
+            fields: [
+              - {label: "Featured Case Header", name: "header", widget: "string"}
+              - {label: "Featured Image", name: "image", widget: "image"}
+              - {label: "Featured Text", name: "text", widget: "text"}
+            ]
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
             fields: [
-              {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Logo", name: "logo", widget: "image"}
+            ]          
+          - label: "Solutions Content"
+            name: "solutionsContent"
+            widget: "object"
+            fields: [
+              - {label: "First Card", name: "firstCard", widget: "object", fields: [
+                - {label: "Image", name: "image", widget: "image"}
+                - {label: "Header", name: "header", widget: "string"}
+                - {label: "Text", name: "text", widget: "text"}
+                
+              ]}
+              - {label: "Second Card", name: "secondCard", widget: "object", fields: [
+                - {label: "Image", name: "image", widget: "image"}
+                - {label: "Header", name: "header", widget: "string"}
+                - {label: "Text", name: "text", widget: "text"}
+              ]}
             ]
-          - {label: "Featured Case Header", name: "header1", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Header 2", name: "header2", widget: "string"}
           - label: "Customer logos"
             name: "customerLogos"
             widget: "list"
             fields: [
-              {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Logo", name: "logo", widget: "image"}
             ]
 
       - file: "src/pages/no/about/index.md"
