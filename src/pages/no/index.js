@@ -9,17 +9,12 @@ const IndexPage = ({ data }) => {
     topImage,
     configurationLogos,
     featuredContent,
-    featuredHeader,
-    featuredText,
-    image,
-    text,
-    header2,
     solutionsContent,
     customerLogos,
   } = data.markdownRemark.frontmatter;
 
   const onScrollButtonClick = () => {
-    console.log('Scroll');
+    // TODO: scroll
   };
 
   return (
@@ -35,7 +30,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className={styles.featuredCase}>
         <div>
-          <img src={featuredContent.image} />
+          <img src={featuredContent.image} alt={featuredContent.image} />
           <h2>{featuredContent.header}</h2>
           <p>{featuredContent.text}</p>
         </div>
@@ -47,12 +42,18 @@ const IndexPage = ({ data }) => {
       </section>
       <section className={styles.solutions}>
         <article>
-          <img src={solutionsContent.firstCard.image} />
+          <img
+            src={solutionsContent.firstCard.image}
+            alt={solutionsContent.firstCard.image}
+          />
           <h2> {solutionsContent.firstCard.header} </h2>
           <p> {solutionsContent.firstCard.text} </p>
         </article>
         <article>
-          <img src={solutionsContent.secondCard.image} />
+          <img
+            src={solutionsContent.secondCard.image}
+            alt={solutionsContent.secondCard.image}
+          />
           <h2> {solutionsContent.secondCard.header} </h2>
           <p> {solutionsContent.secondCard.text} </p>
         </article>
@@ -80,8 +81,8 @@ export const pageQuery = graphql`
       frontmatter {
         topImage
         featuredContent {
-          header
           image
+          header
           text
         }
         configurationLogos
