@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-52-Home-HTML
 
 media_folder: static/img
 public_folder: /img
@@ -139,39 +139,36 @@ collections:
           - label: "Featured Content"
             name: "featuredContent"
             widget: "object"
-            fields: [
+            fields: 
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
-            ]
+
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
-            fields: [
-              - {label: "Logo", name: "logo", widget: "image"}
-            ]          
+            fields:
+              - {label: "Logo", name: "logo", widget: "image"}     
+
           - label: "Solutions Content"
             name: "solutionsContent"
             widget: "object"
-            fields: [
+            fields:
               - {label: "First Card", name: "firstCard", widget: "object", fields: [
-                - {label: "Image", name: "image", widget: "image"}
-                - {label: "Header", name: "header", widget: "string"}
-                - {label: "Text", name: "text", widget: "text"}
-                
-              ]}
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},          
+                ]}
               - {label: "Second Card", name: "secondCard", widget: "object", fields: [
-                - {label: "Image", name: "image", widget: "image"}
-                - {label: "Header", name: "header", widget: "string"}
-                - {label: "Text", name: "text", widget: "text"}
-              ]}
-            ]
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]}
           - label: "Customer logos"
             name: "customerLogos"
             widget: "list"
-            fields: [
+            fields:
               - {label: "Logo", name: "logo", widget: "image"}
-            ]
 
       - file: "src/pages/en/index.md"
         name: "english_index_page"
@@ -181,39 +178,36 @@ collections:
           - label: "Featured Content"
             name: "featuredContent"
             widget: "object"
-            fields: [
+            fields: 
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
-            ]
+
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
-            fields: [
-              - {label: "Logo", name: "logo", widget: "image"}
-            ]          
+            fields:
+              - {label: "Logo", name: "logo", widget: "image"}     
+
           - label: "Solutions Content"
             name: "solutionsContent"
             widget: "object"
-            fields: [
+            fields:
               - {label: "First Card", name: "firstCard", widget: "object", fields: [
-                - {label: "Image", name: "image", widget: "image"}
-                - {label: "Header", name: "header", widget: "string"}
-                - {label: "Text", name: "text", widget: "text"}
-                
-              ]}
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},          
+                ]}
               - {label: "Second Card", name: "secondCard", widget: "object", fields: [
-                - {label: "Image", name: "image", widget: "image"}
-                - {label: "Header", name: "header", widget: "string"}
-                - {label: "Text", name: "text", widget: "text"}
-              ]}
-            ]
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]}
           - label: "Customer logos"
             name: "customerLogos"
             widget: "list"
-            fields: [
+            fields:
               - {label: "Logo", name: "logo", widget: "image"}
-            ]
 
       - file: "src/pages/no/about/index.md"
         name: "norwegian_about_page"
