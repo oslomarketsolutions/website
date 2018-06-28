@@ -143,13 +143,11 @@ collections:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
-
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
             fields:
               - {label: "Logo", name: "logo", widget: "image"}     
-
           - label: "Solutions Content"
             name: "solutionsContent"
             widget: "object"
@@ -169,7 +167,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Logo", name: "logo", widget: "image"}
-
+              
       - file: "src/pages/en/index.md"
         name: "english_index_page"
         label: "en/Homepage"
@@ -182,13 +180,11 @@ collections:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
-
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
             fields:
               - {label: "Logo", name: "logo", widget: "image"}     
-
           - label: "Solutions Content"
             name: "solutionsContent"
             widget: "object"
