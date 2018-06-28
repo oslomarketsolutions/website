@@ -8,8 +8,8 @@ import ProductPagePreview from './preview-templates/ProductPagePreview';
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('about', AboutPagePreview);
-// CMS.registerPreviewTemplate('norwegian_index_page', IndexPagePreview);
-// CMS.registerPreviewTemplate('english_index_page', IndexPagePreview);
+CMS.registerPreviewTemplate('norwegian_index_page', IndexPagePreview);
+CMS.registerPreviewTemplate('english_index_page', IndexPagePreview);
 CMS.registerPreviewTemplate('norwegian_employees', EmployeePreview);
 CMS.registerPreviewTemplate('english_employees', EmployeePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
