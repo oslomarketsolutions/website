@@ -8,12 +8,12 @@ import logo from '../../img/logo_oms_hoved.png';
 import styles from './navbar.module.scss';
 
 const changeLinkLanguage = language => {
-  const links = { about: 'ABOUT US', work: 'WORK', products: 'PRODUCTS' };
+  const links = { about: 'About us', work: 'Work', products: 'Products' };
 
   if (language === 'no') {
-    links.about = 'OM OSS';
-    links.work = 'JOBB';
-    links.products = 'PRODUKTER';
+    links.about = 'Om oss';
+    links.work = 'Jobb';
+    links.products = 'Produkter';
   }
 
   return links;
@@ -40,7 +40,7 @@ const Navbar = ({ language, location }) => {
     <nav className={styles.navbar}>
       <ul>
         <li>
-          <Link to={base}>
+          <Link className={styles.noHover} to={base}>
             <img src={logo} alt="Oms logo" />
           </Link>
         </li>
@@ -64,7 +64,7 @@ const Navbar = ({ language, location }) => {
             href="https://www.linkedin.com/company/oslo-market-solutions-as/"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.noHover}
+            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'linkedin']} />
           </a>
@@ -74,7 +74,7 @@ const Navbar = ({ language, location }) => {
             href="https://www.facebook.com/oslomarketsolutions/"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.noHover}
+            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'facebook']} />
           </a>
@@ -84,7 +84,7 @@ const Navbar = ({ language, location }) => {
             href="https://medium.com/shark-bytes"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.noHover}
+            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'medium']} />
           </a>
@@ -94,7 +94,7 @@ const Navbar = ({ language, location }) => {
             href="https://github.com/oslomarketsolutions/website"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.noHover}
+            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'github-square']} />
           </a>

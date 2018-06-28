@@ -1,9 +1,10 @@
 $textColorDark: #1c315b;
+$duration: 0.2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .navbar {
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-top: 4em;
+  padding: 1em 2em 0 2em;
 
   a,
   a:link,
@@ -15,17 +16,75 @@ $textColorDark: #1c315b;
     text-decoration: none;
   }
 
-  a:hover,
   .active {
-    border-bottom: 2px solid $textColorDark;
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &:before {
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:after {
+      transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
   }
 
   a {
-    padding-bottom: 10px;
+    padding-bottom: 0;
+    padding: 0 0.5em 0 0.5em;
+    font-size: 20px;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $textColorDark;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
   }
 
   a.noHover:hover {
-    border: none;
+    &:before,
+    &:after {
+      opacity: 0;
+      transform: none;
+    }
+    &:before {
+      transition: none;
+    }
+    &:after {
+      transition: none;
+    }
   }
 
   ul {
@@ -38,8 +97,8 @@ $textColorDark: #1c315b;
     font-size: 20px;
 
     li {
-      padding-left: 1em;
-      padding-right: 1em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
       list-style-type: none;
 
       svg {
@@ -52,7 +111,7 @@ $textColorDark: #1c315b;
     }
 
     li.doublePadding {
-      padding-right: 2em;
+      padding-right: 1.5em;
     }
 
     li.borderLeft {
