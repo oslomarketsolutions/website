@@ -26,7 +26,9 @@ const IndexPage = ({ data }) => {
         <img src={topImage} alt="" />
       </section>
       <section className={styles.configurationLogos}>
-        {configurationLogos.map(logo => <img src={logo} alt={logo} />)}
+        {configurationLogos.map(configurationLogo => (
+          <img src={configurationLogo.logo} alt={configurationLogo.logo} />
+        ))}
       </section>
       <section className={styles.featuredCase}>
         <div>
@@ -59,7 +61,9 @@ const IndexPage = ({ data }) => {
         </article>
       </section>
       <section className={styles.customerLogos}>
-        {customerLogos.map(logo => <img src={logo} alt={logo} />)}
+        {customerLogos.map(customerLogo => (
+          <img src={customerLogo.logo} alt={customerLogo.logo} />
+        ))}
       </section>
     </div>
   );
@@ -85,7 +89,9 @@ export const pageQuery = graphql`
           image
           text
         }
-        configurationLogos
+        configurationLogos {
+          logo
+        }
         solutionsContent {
           firstCard {
             image
@@ -98,7 +104,9 @@ export const pageQuery = graphql`
             text
           }
         }
-        customerLogos
+        customerLogos {
+          logo
+        }
       }
     }
   }

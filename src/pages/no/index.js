@@ -85,7 +85,9 @@ export const pageQuery = graphql`
           header
           text
         }
-        configurationLogos
+        configurationLogos {
+          logo
+        }
         solutionsContent {
           firstCard {
             image
@@ -98,7 +100,9 @@ export const pageQuery = graphql`
             text
           }
         }
-        customerLogos
+        customerLogos {
+          logo
+        }
       }
     }
   }
