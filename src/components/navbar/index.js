@@ -64,7 +64,6 @@ const Navbar = ({ language, location }) => {
             href="https://www.linkedin.com/company/oslo-market-solutions-as/"
             target="_blank"
             rel="noopener noreferrer"
-            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'linkedin']} />
           </a>
@@ -74,7 +73,6 @@ const Navbar = ({ language, location }) => {
             href="https://www.facebook.com/oslomarketsolutions/"
             target="_blank"
             rel="noopener noreferrer"
-            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'facebook']} />
           </a>
@@ -84,7 +82,6 @@ const Navbar = ({ language, location }) => {
             href="https://medium.com/shark-bytes"
             target="_blank"
             rel="noopener noreferrer"
-            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'medium']} />
           </a>
@@ -94,16 +91,14 @@ const Navbar = ({ language, location }) => {
             href="https://github.com/oslomarketsolutions/website"
             target="_blank"
             rel="noopener noreferrer"
-            /* className={styles.noHover} */
           >
             <FontAwesomeIcon icon={['fab', 'github-square']} />
           </a>
         </li>
         <li className={styles.noPaddingRight}>
           <Link to={changePageLanguage(location.pathname, language)}>
-            {/* <img src={language === 'no' ? no : en} alt="flag" /> */}
             <FontAwesomeIcon icon="globe" />
-            {language === 'no' ? 'ENGLISH' : 'NORSK'}
+            {language === 'no' ? 'English' : 'Norsk'}
           </Link>
         </li>
       </ul>
