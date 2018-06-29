@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndexPage from '../../pages/no/index';
 
+// This preview template is a little special because
+// IndexPage doesn't have a template in its index.js-file.
+// That means it takes in one prop (data) unlike the other pages (which has templates)
+// that take in multiple props.
 const IndexPagePreview = ({ entry, widgetsFor }) => {
   const customerLogos = [];
   const configurationLogos = [];
