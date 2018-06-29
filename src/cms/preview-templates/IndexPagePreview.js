@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import IndexPage from '../../pages/no/index';
 
 const IndexPagePreview = ({ entry, widgetsFor }) => {
-  let customerLogos = [];
-  let configurationLogos = [];
+  const customerLogos = [];
+  const configurationLogos = [];
 
-  widgetsFor('customerLogos').map(logo => {
+  widgetsFor('customerLogos').forEach(logo => {
     customerLogos.push({
       logo: logo.getIn(['data', 'logo']),
     });
   });
 
-  widgetsFor('configurationLogos').map(logo => {
+  widgetsFor('configurationLogos').forEach(logo => {
     configurationLogos.push({
       logo: logo.getIn(['data', 'logo']),
     });
@@ -27,7 +27,7 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
           header: entry.getIn(['data', 'featuredContent', 'header']),
           text: entry.getIn(['data', 'featuredContent', 'text']),
         },
-        configurationLogos: configurationLogos,
+        configurationLogos,
         solutionsContent: {
           firstCard: {
             image: entry.getIn([
@@ -70,12 +70,10 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
             ]),
           },
         },
-        customerLogos: customerLogos,
+        customerLogos,
       },
     },
   };
-
-  console.log(data);
 
   return (
     <div>
@@ -88,6 +86,7 @@ IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  widgetsFor: PropTypes.func,
 };
 
 export default IndexPagePreview;
