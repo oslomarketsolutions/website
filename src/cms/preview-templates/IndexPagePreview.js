@@ -7,7 +7,9 @@ const IndexPagePreview = ({ entry }) => (
     <IndexPage
       topImage={entry.getIn(['data', 'topImage'])}
       featuredContent={{
+        image: entry.getIn(['data', 'featuredContent', 'image']),
         header: entry.getIn(['data', 'featuredContent', 'header']),
+        text: entry.getIn(['data', 'featuredContent', 'text']),
       }}
     />
   </div>

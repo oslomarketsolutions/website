@@ -23,10 +23,12 @@ const IndexPage = ({ data }) => {
         <button className={styles.scrollButton} onClick={onScrollButtonClick}>
           <FontAwesomeIcon icon={caretDown} size="2x" />
         </button>
-        <img src={topImage} alt="" />
+        <img src={topImage} alt={topImage} />
       </section>
       <section className={styles.configurationLogos}>
-        {configurationLogos.map(logo => <img src={logo} alt={logo} />)}
+        {configurationLogos.map(configurationLogo => (
+          <img src={configurationLogo.logo} alt={configurationLogo.logo} />
+        ))}
       </section>
       <section className={styles.featuredCase}>
         <div>
@@ -59,7 +61,9 @@ const IndexPage = ({ data }) => {
         </article>
       </section>
       <section className={styles.customerLogos}>
-        {customerLogos.map(logo => <img src={logo} alt={logo} />)}
+        {customerLogos.map(customerLogo => (
+          <img src={customerLogo.logo} alt={customerLogo.logo} />
+        ))}
       </section>
     </div>
   );
@@ -77,12 +81,12 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query NorIndexQuery {
-    markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
+    markdownRemark(id: { regex: "/src/pages/no/index.md/" }) {
       frontmatter {
         topImage
         featuredContent {
-          image
           header
+          image
           text
         }
         configurationLogos {

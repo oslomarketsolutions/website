@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
         <button className={styles.scrollButton} onClick={onScrollButtonClick}>
           <FontAwesomeIcon icon={caretDown} size="2x" />
         </button>
-        <img src={topImage} alt="" />
+        <img src={topImage} alt={topImage} />
       </section>
       <section className={styles.configurationLogos}>
         {configurationLogos.map(configurationLogo => (
