@@ -26,9 +26,10 @@ const IndexPage = ({ data }) => {
         <img src={topImage} alt={topImage} />
       </section>
       <section className={styles.configurationLogos}>
-        {configurationLogos.map(configurationLogo => (
-          <img src={configurationLogo.logo} alt={configurationLogo.logo} />
-        ))}
+        {configurationLogos &&
+          configurationLogos.map(configurationLogo => (
+            <img src={configurationLogo.logo} alt={configurationLogo.logo} />
+          ))}
       </section>
       <section className={styles.featuredCase}>
         <div>
@@ -61,9 +62,10 @@ const IndexPage = ({ data }) => {
         </article>
       </section>
       <section className={styles.customerLogos}>
-        {customerLogos.map(customerLogo => (
-          <img src={customerLogo.logo} alt={customerLogo.logo} />
-        ))}
+        {customerLogos &&
+          customerLogos.map(customerLogo => (
+            <img src={customerLogo.logo} alt={customerLogo.logo} />
+          ))}
       </section>
     </div>
   );
