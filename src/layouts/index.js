@@ -6,7 +6,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import Helmet from 'react-helmet';
-import favicon from '../img/favicon_oms.jpg';
+import favicon from '../img/favicon_oms.png';
 
 import './style.scss';
 import Navbar from '../components/navbar/index';
@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children, location }) => {
   return (
     <React.Fragment>
       <Helmet title="Oslo Market Solutions">
-        <link rel="icon" type="image/jpg" href={favicon} />
+        <link rel="icon" type="image/png" href={favicon} />
         <html lang={language} />
       </Helmet>
       <Navbar language={language} location={location} />

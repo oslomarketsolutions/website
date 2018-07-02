@@ -35,7 +35,7 @@ const EmployeeCard = props => {
         <h2>{name}</h2>
         <h3>{jobTitle}</h3>
         <figure>
-          <FontAwesomeIcon icon={iconMatcher(jobType)} size="md" />
+          <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>
       </section>
       <section className={styles.description}>
