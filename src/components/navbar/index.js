@@ -49,7 +49,9 @@ export default class Navbar extends Component {
       logoIsBlue: !prevState.logoIsBlue,
     }));
 
-    document.body.classList.toggle(`${styles.noScroll}`);
+    if (document != null) {
+      document.body.classList.toggle(`${styles.noScroll}`);
+    }
   };
 
   closeNav = () => {
@@ -58,7 +60,9 @@ export default class Navbar extends Component {
       logoIsBlue: true,
     });
 
-    document.body.classList.remove(`${styles.noScroll}`);
+    if (document != null) {
+      document.body.classList.remove(`${styles.noScroll}`);
+    }
   };
 
   render() {
