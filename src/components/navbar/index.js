@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import logo from '../../img/logo_oms_hoved.png';
 import menuGraph from '../../img/menu_graph.png';
@@ -45,25 +46,20 @@ export default class Navbar extends Component {
     this.setState(prevState => ({
       navOpen: !prevState.navOpen,
     }));
-
-    if (document != null) {
-      document.body.classList.toggle(`${styles.noScroll}`);
-    }
   };
 
   closeNav = () => {
     this.setState({
       navOpen: false,
     });
-
-    if (document != null) {
-      document.body.classList.remove(`${styles.noScroll}`);
-    }
   };
 
   render() {
     return (
       <header className={styles.navbar}>
+        <Helmet>
+          <body className={this.state.navOpen ? styles.noScroll : null} />
+        </Helmet>
         <Link
           className={`${styles.noHover} ${styles.logo}`}
           to={`/${this.props.language}`}
