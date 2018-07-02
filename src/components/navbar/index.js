@@ -6,13 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
 import logo from '../../img/logo_oms_hoved.png';
 import menuGraph from '../../img/menu_graph.png';
-import logoHvit from '../../img/logo_oms_hvit.png';
 import styles from './navbar.module.scss';
 
 export default class Navbar extends Component {
   static propTypes = {
     language: PropTypes.string,
-    location: PropTypes.object,
+    location: PropTypes.shape({ pathname: {} }),
   };
 
   static defaultProps = {
@@ -20,7 +19,6 @@ export default class Navbar extends Component {
   };
 
   state = {
-    logoIsBlue: true,
     navOpen: false,
   };
 
@@ -46,7 +44,6 @@ export default class Navbar extends Component {
   toggleNav = () => {
     this.setState(prevState => ({
       navOpen: !prevState.navOpen,
-      logoIsBlue: !prevState.logoIsBlue,
     }));
 
     if (document != null) {
@@ -57,7 +54,6 @@ export default class Navbar extends Component {
   closeNav = () => {
     this.setState({
       navOpen: false,
-      logoIsBlue: true,
     });
 
     if (document != null) {
@@ -74,7 +70,6 @@ export default class Navbar extends Component {
           onClick={this.closeNav}
         >
           <img src={logo} alt="Oms logo" />{' '}
-          {/* this.state.logoIsBlue ? logo : logoHvit */}
         </Link>
         <div
           className={styles.navToggle}
@@ -173,7 +168,7 @@ export default class Navbar extends Component {
             </li>
           </ul>
           <div className={styles.menuGraph}>
-            <img src={menuGraph} alt="background-image of a graph" />
+            <img src={menuGraph} alt="Graph in the background" />
           </div>
         </nav>
       </header>

@@ -26,6 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
     "@fortawesome/react-fontawesome": "^0.1.0-11",
+    "babel-eslint": "^8.2.5",
     "gatsby": "^1.9.261",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-netlify": "^1.0.19",
