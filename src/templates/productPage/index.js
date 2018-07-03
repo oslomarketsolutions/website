@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './productPage.module.scss';
-import FeatureCard from '../../components/featureCard';
 
-export const ProductPageTemplate = ({
-  intro,
-  investorPortal,
-  products,
-  featureCards,
-}) => (
+export const ProductPageTemplate = ({ intro, investorPortal, products }) => (
   <article className={styles.container}>
     <section className={styles.intro}>
       <h2>{intro.title}</h2>
       <div className={styles.links}>
-        <a>{investorPortal.title}</a>
-        {products.map(product => <a>{product.title}</a>)}
+        <a href={`#${investorPortal.title}`}>{investorPortal.title}</a>
+        {products.map(product => (
+          <a href={`#${product.title}`}>{product.title}</a>
+        ))}
       </div>
     </section>
 
@@ -77,14 +73,11 @@ ProductPageTemplate.propTypes = {
       title: PropTypes.string,
     }),
   ),
-  featureCards: PropTypes.arrayOf(PropTypes.object),
 };
 
 const ProductPage = ({ data }) => {
   const page = data.page.frontmatter;
   const { edges: featureCards } = data.featureCards;
-  console.log(data);
-
   return (
     <ProductPageTemplate
       intro={page.intro}
@@ -129,21 +122,6 @@ export const productPageQuery = graphql`
         products {
           title
           description
-        }
-      }
-    }
-
-    featureCards: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: $featureRegex } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            image
-            description
-            features
-          }
         }
       }
     }
