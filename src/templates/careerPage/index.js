@@ -41,30 +41,31 @@ export const CareerPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <main className={styles.careerPage}>
-      <article className={styles.careerOms}>
-        <h2>{title}</h2>
-        <section>{text}</section>
-        <img src={image} alt="" />
-      </article>
-      <article>
-        <PageContent content={content} />
-      </article>
-      <article className={styles.careerPerks}>
-        <h3>{subHeader1}</h3>
-        {/* Her skal alle perks listes ut fra CMSet */}
-        <div className={styles.perkCardContainer}>
-          {perkList.map(perk => {
-            const perkContent = perk.node.html;
+    <main>
+      <div className={styles.careerPage}>
+        <article className={styles.careerOms}>
+          <h2>{title}</h2>
+          <section>{text}</section>
+          <img src={image} alt="" />
+        </article>
+        <article>
+          <PageContent content={content} />
+        </article>
+        <article className={styles.careerPerks}>
+          <h3>{subHeader1}</h3>
+          <div className={styles.perkCardContainer}>
+            {perkList.map(perk => {
+              const perkContent = perk.node.html;
 
-            return <PerkCard content={perkContent} color={color()} />;
-          })}
-        </div>
-      </article>
-      <article className={styles.careerJobVacancies}>
-        {/* Her skal iFramen med ledige stillinger være */}
-        <h2>{subHeader2}</h2>
-      </article>
+              return <PerkCard content={perkContent} color={color()} />;
+            })}
+          </div>
+        </article>
+        <article className={styles.careerJobVacancies}>
+          {/* Her skal iFramen med ledige stillinger være */}
+          <h2>{subHeader2}</h2>
+        </article>
+      </div>
     </main>
   );
 };
