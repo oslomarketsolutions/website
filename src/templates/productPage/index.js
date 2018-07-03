@@ -13,53 +13,39 @@ export const ProductPageTemplate = ({
     <section className={styles.intro}>
       <h2>{intro.title}</h2>
       <div className={styles.links}>
-        {intro.links &&
-          intro.links.map(link => <a href={link.title}>{link.title}</a>)}
+        <a>{investorPortal.title}</a>
+        {products.map(product => <a>{product.title}</a>)}
       </div>
     </section>
 
     <section className={styles.investorPortal}>
-      <h3>{investorPortal.title}</h3>
-      <p>{investorPortal.description}</p>
+      <div className={styles.investor}>
+        <h3>{investorPortal.title}</h3>
+        <p>{investorPortal.description}</p>
+        <img src={investorPortal.image} alt={investorPortal.title} />
+      </div>
       {investorPortal.features &&
         investorPortal.features.map(feature => (
-          <div>
-            <h3>{feature.title}</h3>
+          <div className={styles.features}>
+            <h4>{feature.title}</h4>
             <p>{feature.description}</p>
           </div>
         ))}
+      <div className={styles.investorContact}>
+        <h3>Contact us today to get more info about our traders!</h3>
+        <button>Contact</button>
+      </div>
     </section>
 
     <section className={styles.products}>
       {products &&
         products.map(product => (
           <article>
-            <h3>{product.title}</h3>
+            <h4>{product.title}</h4>
+            <p>{product.description}</p>
+            <img src={product.image} alt={product.title} />
           </article>
         ))}
-    </section>
-
-    <section className={styles.featureCards}>
-      {featureCards &&
-        featureCards.map(featureCard => {
-          const {
-            title: featureCardTitle,
-            image: featureCardImage,
-            description: featureCardDescription,
-            features: featureCardFeatures,
-            link: featureCardLink,
-          } = featureCard.node.frontmatter;
-          return (
-            <FeatureCard
-              title={featureCardTitle}
-              image={featureCardImage}
-              description={featureCardDescription}
-              features={featureCardFeatures}
-              link={featureCardLink}
-              key={featureCardTitle}
-            />
-          );
-        })}
     </section>
   </article>
 );
@@ -133,6 +119,7 @@ export const productPageQuery = graphql`
         investorPortal {
           title
           description
+          image
           features {
             title
             image

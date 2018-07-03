@@ -1,42 +1,89 @@
 .container {
-  width: 90%;
+  font-family: Roboto;
   margin: auto;
-  display: grid;
-  grid-template-areas:
-    'intro'
-    'investorPortal'
-    'products'
-    'featureCards';
-  grid-template-rows: 750px 750px 750px auto;
+  background-color: rgb(34, 68, 102);
 
   .intro {
-    grid-area: intro;
-    background-color: rgb(90, 90, 255);
+    background-color: white;
+    h2 {
+      color: #1c315b;
+      font-size: 72px;
+    }
 
     .links {
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
-      align-content: space-between;
+      justify-content: center;
+      align-content: space-around;
+      max-width: 1540px;
+      margin: auto;
+
       a {
         background-color: grey;
+        text-align: center;
         width: 467px;
         height: 151px;
+        margin: 20px;
       }
     }
   }
-
   .investorPortal {
-    grid-area: investorPortal;
-    background-color: rgb(17, 72, 136);
+    justify-content: center;
+    padding: 10%;
+
+    p {
+      color: white;
+      font-size: 24px;
+      min-width: 600px;
+      width: 40%;
+      line-height: 1.5em;
+    }
+
+    .investor {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      img {
+        display: block;
+        width: 40%;
+        min-width: 600px;
+        height: auto;
+        align-self: center;
+      }
+
+      h3 {
+        color: white;
+        width: 100%;
+        font-size: 72px;
+        border-bottom: 2px solid #49b869;
+      }
+    }
+
+    .features {
+      width: 100%;
+      h4 {
+        color: white;
+        font-size: 46px;
+        border-bottom: 2px solid #49b869;
+      }
+    }
+
+    .investorContact {
+      width: 100%;
+      background-color: lightgrey;
+      text-align: center;
+      justify-self: end;
+      align-self: end;
+    }
   }
 
   .products {
-    grid-area: products;
+    width: 100%;
   }
 
   .featureCards {
-    grid-area: featureCards;
     display: flex;
     background-color: lightcoral;
     flex-flow: row wrap;
