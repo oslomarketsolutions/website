@@ -4,18 +4,35 @@
   display: grid;
   grid-template-areas:
     'intro'
-    'description'
+    'investorPortal'
+    'products'
     'featureCards';
-  grid-template-rows: 750px 250px auto;
+  grid-template-rows: 750px 750px 750px auto;
 
   .intro {
     grid-area: intro;
     background-color: rgb(90, 90, 255);
+
+    .links {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content: space-between;
+      a {
+        background-color: grey;
+        width: 467px;
+        height: 151px;
+      }
+    }
   }
 
-  .description {
-    grid-area: description;
-    background-color: grey;
+  .investorPortal {
+    grid-area: investorPortal;
+    background-color: rgb(17, 72, 136);
+  }
+
+  .products {
+    grid-area: products;
   }
 
   .featureCards {
