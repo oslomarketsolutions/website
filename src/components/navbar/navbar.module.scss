@@ -12,69 +12,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   align-items: center;
   padding: 1em 2em 0 2em;
 
-  .logo {
-    padding: 0;
-    margin-right: auto;
-    z-index: 3;
-
-    img {
-      width: 100px;
-    }
-  }
-
-  .navToggle {
-    z-index: 3;
-    position: relative;
-    display: block;
-    height: 60px;
-    width: 1.5em;
-
-    .srOnly {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-
-    .hamburger {
-      position: absolute;
-      width: 1.5em;
-      height: 1.5em;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 3;
-
-      .bar {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        max-width: 30px;
-        height: 2px;
-        background-color: $textColorDark;
-        transform-origin: center;
-        transition: all 0.3s ease;
-      }
-
-      .bar:first-child {
-        transform: translate(0, -7px);
-      }
-      .bar:last-child {
-        transform: translate(0, 7px);
-      }
-    }
-  }
-
-  ul {
-    li {
-      list-style-type: none;
-    }
-  }
-
   nav {
     position: fixed;
     top: 0;
@@ -85,6 +22,12 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 0s, opacity 0.2s ease;
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+    }
   }
 
   a {
@@ -102,28 +45,69 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-transform: uppercase;
   }
 
-  @media (min-width: 1024px) {
-    .navToggle {
-      display: none;
+  button {
+    z-index: 3;
+    position: relative;
+    display: block;
+    height: 60px;
+    width: 2em;
+    border: 0;
+    padding: 0;
+    text-align: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .logo {
+    padding: 0;
+    margin-right: auto;
+    z-index: 3;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+    width: 2em;
+    height: 1.5em;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    .bar {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      max-width: 30px;
+      height: 2px;
+      background-color: $textColorDark;
+      transform-origin: center;
+      transition: all 0.3s ease;
     }
 
+    .bar:first-child {
+      transform: translate(0, -7px);
+    }
+    .bar:last-child {
+      transform: translate(0, 7px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    button,
     .menuGraph {
       display: none;
     }
 
-    .logo {
-      img {
-        width: 150px;
-      }
+    .logo > img {
+      width: 150px;
     }
 
     nav {
       position: inherit;
-      top: inherit;
-      right: inherit;
-      bottom: inherit;
-      left: inherit;
-      overflow: inherit;
       visibility: inherit;
       opacity: inherit;
 
@@ -144,11 +128,9 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       a {
         padding-bottom: 0;
         padding: 0 0.5em 0 0.5em;
-        // font-size: 20px;
         position: relative;
-        text-transform: uppercase;
-        text-decoration: none;
 
+        //Animation for underlining menu
         &:before,
         &:after {
           content: '';
@@ -261,14 +243,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
     }
 
-    .navToggle {
-      cursor: pointer;
-      z-index: 3;
-    }
-    .navToggle:focus {
-      outline: none;
-    }
-
     .barOpen {
       position: absolute;
       top: 50%;
@@ -300,45 +274,43 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       background: $textColorDark;
     }
 
-    nav {
-      ul {
-        padding: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 75%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+    ul {
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      transform: translate(-50%, -50%);
+      text-align: center;
 
-        li {
-          padding: 1em 0;
+      li {
+        padding: 1em 0;
 
+        svg {
+          font-size: 32px;
+        }
+      }
+
+      li:last-of-type {
+        padding-top: 2em;
+        a {
           svg {
-            font-size: 32px;
+            margin-right: 10px;
+            margin: 0 10px 1px 0;
+            font-size: 18px;
           }
         }
+      }
 
-        li.doublePadding {
-          padding-bottom: 2em;
-        }
+      .doublePadding {
+        padding-bottom: 2em;
+      }
 
-        li.socialMedia {
-          display: inline-block;
-          padding: 2em 1em;
-          border-top: 1px solid;
-          border-bottom: 1px solid;
-        }
-
-        li:last-of-type {
-          padding-top: 2em;
-          a {
-            svg {
-              margin-right: 10px;
-              margin: 0 10px 1px 0;
-              font-size: 18px;
-            }
-          }
-        }
+      .socialMedia {
+        display: inline-block;
+        padding: 2em 1em;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
       }
     }
   }

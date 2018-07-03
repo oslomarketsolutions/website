@@ -67,14 +67,12 @@ export default class Navbar extends Component {
         >
           <img src={logo} alt="Oms logo" />{' '}
         </Link>
-        <div
-          className={styles.navToggle}
-          role="button"
-          tabIndex={0}
+        <button
           onClick={this.toggleNav}
-          onKeyUp={this.toggleNav}
+          aria-label={
+            this.props.language === 'en' ? 'Toggle menu' : 'Åpne/lukke meny'
+          }
         >
-          <span className={styles.srOnly}>Toggle nav-menu</span>
           <div className={styles.hamburger}>
             <span
               className={this.state.navOpen ? styles.barOpen : styles.bar}
@@ -86,7 +84,7 @@ export default class Navbar extends Component {
               className={this.state.navOpen ? styles.barOpen : styles.bar}
             />
           </div>
-        </div>
+        </button>
         <nav className={this.state.navOpen ? styles.open : null}>
           <ul>
             <li>
