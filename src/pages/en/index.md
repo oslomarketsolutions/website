@@ -20,4 +20,3 @@ solutionsContent:
 customerLogos:
   - logo: /img/coffee.png
 ---
-

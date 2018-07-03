@@ -15,5 +15,6 @@ rules:
         - Link
       specialLink:
         - to
+parser: 'babel-eslint'
 globals:
   graphql: false

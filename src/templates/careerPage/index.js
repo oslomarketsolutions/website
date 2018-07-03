@@ -77,12 +77,13 @@ CareerPageTemplate.propTypes = {
   image: PropTypes.string,
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
-  perkList: PropTypes.arrayOf(PropTypes.string),
+  perkList: PropTypes.arrayOf(PropTypes.object),
 };
 
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const perkList = data.perks.edges;
+  colorCounter = 0;
 
   return (
     <CareerPageTemplate

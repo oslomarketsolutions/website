@@ -1,21 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+$textColorDark: #1c315b;
 
 body {
+  font-family: 'Noto Sans', sans-serif;
+  color: $textColorDark;
   margin: 0;
-}
 
-main {
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  display: grid;
-  grid-template-columns: repeat(6, auto);
+  main {
+    max-width: 90%;
+    margin: 10em auto 0 auto;
+    overflow: hidden;
 
-  h2,
-  h3 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2em;
+    h2,
+    h3 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main {
+      max-width: 1800px;
+      margin: 10em auto 0 auto;
+    }
   }
 }
