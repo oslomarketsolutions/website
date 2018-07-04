@@ -156,7 +156,7 @@ export default class Navbar extends Component {
             </li>
             <li className={styles.noPaddingRight}>
               <Link to={this.changePageLanguage()}>
-                <FontAwesomeIcon icon={['fas', 'globe']} />
+                <FontAwesomeIcon icon="globe" />
                 {this.props.language === 'no' ? 'English' : 'Norsk'}
               </Link>
             </li>
