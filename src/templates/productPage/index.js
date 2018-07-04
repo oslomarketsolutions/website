@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import styles from './productPage.module.scss';
+import LinkCard from '../../components/linkCard';
 
 export class ProductPageTemplate extends Component {
   propTypes = {
@@ -77,17 +78,17 @@ export class ProductPageTemplate extends Component {
             }}
             className={linksStyle}
           >
-            <button onClick={() => this.scrollToRef(investorPortal.title)}>
-              <img src={investorPortal.image} alt={investorPortal.title} />
-              <h4>{investorPortal.title}</h4>
-              <p>{investorPortal.description.slice(0, 140)}</p>
-            </button>
+            <LinkCard
+              product={investorPortal}
+              onClickFunction={this.scrollToRef}
+              sticky={this.state.stickyLinks}
+            />
             {products.map(product => (
-              <button onClick={() => this.scrollToRef(product.title)}>
-                <img src={product.image} alt={product.title} />
-                <h4>{product.title}</h4>
-                <p>{product.description.slice(0, 140)}</p>
-              </button>
+              <LinkCard
+                product={product}
+                onClickFunction={this.scrollToRef}
+                sticky={this.state.stickyLinks}
+              />
             ))}
           </div>
         </section>
