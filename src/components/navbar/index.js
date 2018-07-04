@@ -124,10 +124,7 @@ export default class Navbar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon
-                  icon={['fab', 'linkedin']}
-                  // style={{ fontSize: '32px' }}
-                />
+                <FontAwesomeIcon icon={['fab', 'linkedin']} />
               </a>
             </li>
             <li className={`${styles.noPaddingRight} ${styles.socialMedia}`}>
@@ -136,10 +133,7 @@ export default class Navbar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon
-                  icon={['fab', 'facebook']}
-                  // style={{ fontSize: '32px' }}
-                />
+                <FontAwesomeIcon icon={['fab', 'facebook']} />
               </a>
             </li>
             <li className={`${styles.noPaddingRight} ${styles.socialMedia}`}>
@@ -148,10 +142,7 @@ export default class Navbar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon
-                  icon={['fab', 'medium']}
-                  // style={{ fontSize: '32px' }}
-                />
+                <FontAwesomeIcon icon={['fab', 'medium']} />
               </a>
             </li>
             <li className={`${styles.borderRight} ${styles.socialMedia}`}>
@@ -160,18 +151,12 @@ export default class Navbar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon
-                  icon={['fab', 'github-square']}
-                  // style={{ width: '32px', height: '32px', fontSize: '32px' }}
-                />
+                <FontAwesomeIcon icon={['fab', 'github-square']} />
               </a>
             </li>
             <li className={styles.noPaddingRight}>
               <Link to={this.changePageLanguage()}>
-                <FontAwesomeIcon
-                  icon={['fas', 'globe']}
-                  // style={{ width: '18px', height: '18px', fontSize: '18px' }}
-                />
+                <FontAwesomeIcon icon={['fas', 'globe']} />
                 {this.props.language === 'no' ? 'English' : 'Norsk'}
               </Link>
             </li>
