@@ -4,6 +4,35 @@ import scrollIntoView from 'scroll-into-view-if-needed';
 import styles from './productPage.module.scss';
 
 export class ProductPageTemplate extends Component {
+  propTypes = {
+    intro: PropTypes.shape({
+      title: PropTypes.string,
+      links: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          title: PropTypes.string,
+        }),
+      ),
+    }),
+    investorPortal: PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      features: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          title: PropTypes.string,
+          image: PropTypes.string,
+        }),
+      ),
+    }),
+    products: PropTypes.arrayOf(
+      PropTypes.shape({
+        description: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    ),
+  };
+
   state = {
     stickyLinks: false,
   };
@@ -110,35 +139,6 @@ export class ProductPageTemplate extends Component {
     );
   }
 }
-
-// ProductPageTemplate.propTypes = {
-//   intro: PropTypes.shape({
-//     title: PropTypes.string,
-//     links: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         text: PropTypes.string,
-//         title: PropTypes.string,
-//       }),
-//     ),
-//   }),
-//   investorPortal: PropTypes.shape({
-//     title: PropTypes.string,
-//     description: PropTypes.string,
-//     features: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         text: PropTypes.string,
-//         title: PropTypes.string,
-//         image: PropTypes.string,
-//       }),
-//     ),
-//   }),
-//   products: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       description: PropTypes.string,
-//       title: PropTypes.string,
-//     }),
-//   ),
-// };
 
 const ProductPage = ({ data }) => {
   const page = data.markdownRemark.frontmatter;
