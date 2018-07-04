@@ -28,6 +28,12 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     li {
       list-style-type: none;
     }
+
+    li:last-of-type {
+      svg {
+        margin: 0 10px 1px 0;
+      }
+    }
   }
 
   a {
@@ -191,11 +197,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         li {
           padding-left: 0.5em;
           padding-right: 0.5em;
-          list-style-type: none;
-
-          svg {
-            font-size: 32px;
-          }
         }
 
         li.noPaddingRight {
@@ -212,16 +213,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         li.borderRight {
           border-right: 2px solid $textColorDark;
-        }
-
-        li:last-of-type {
-          a {
-            svg {
-              margin-right: 10px;
-              margin: 0 10px 1px 0;
-              font-size: 18px;
-            }
-          }
         }
       }
     }
@@ -285,21 +276,10 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
       li {
         padding: 1em 0;
-
-        svg {
-          font-size: 32px;
-        }
       }
 
       li:last-of-type {
         padding-top: 2em;
-        a {
-          svg {
-            margin-right: 10px;
-            margin: 0 10px 1px 0;
-            font-size: 18px;
-          }
-        }
       }
 
       .doublePadding {

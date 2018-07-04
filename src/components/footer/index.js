@@ -118,7 +118,10 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={['fab', 'linkedin']} />
+              <FontAwesomeIcon
+                icon={['fab', 'linkedin']}
+                style={{ fontSize: '45px' }}
+              />
             </a>
           </li>
           <li>
@@ -127,7 +130,10 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={['fab', 'facebook']} />
+              <FontAwesomeIcon
+                icon={['fab', 'facebook']}
+                style={{ fontSize: '45px' }}
+              />
             </a>
           </li>
           <li>
@@ -136,7 +142,10 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={['fab', 'medium']} />
+              <FontAwesomeIcon
+                icon={['fab', 'medium']}
+                style={{ fontSize: '45px' }}
+              />
             </a>
           </li>
           <li>
@@ -145,13 +154,19 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={['fab', 'github-square']} />
+              <FontAwesomeIcon
+                icon={['fab', 'github-square']}
+                style={{ fontSize: '45px' }}
+              />
             </a>
           </li>
         </ul>
       </div>
       <div className={styles.copyright}>
-        <FontAwesomeIcon icon={['far', 'copyright']} />
+        <FontAwesomeIcon
+          icon={['far', 'copyright']}
+          style={{ fontSize: '12px' }}
+        />
         <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
       </div>
     </div>
