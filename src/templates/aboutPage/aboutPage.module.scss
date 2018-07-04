@@ -1,4 +1,7 @@
 .aboutPage {
+  max-width: 90%;
+  margin: 5em auto 0 auto;
+
   article {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -34,5 +37,13 @@
   article {
     margin-top: 2em;
     margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutPage {
+    max-width: 1800px;
+    padding: 0 2em;
+    margin: 5em auto 0 auto;
   }
 }

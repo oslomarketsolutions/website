@@ -12,37 +12,39 @@ export const AboutPageTemplate = ({
   header2,
   employeeList,
 }) => (
-  <main className={styles.aboutPage}>
-    <article>
-      <h2>{title}</h2>
-      <p>submeny | placeholder</p>
-    </article>
-    <article className={styles.aboutOms}>
-      <h2>{header1}</h2>
-      <section>{text}</section>
-      <img src={image} alt="" />
-    </article>
-    <article className={styles.aboutEmployees}>
-      <h2>{header2}</h2>
-      {employeeList.map(employee => {
-        const {
-          title: employeeName,
-          description: employeeDescription,
-          jobTitle: employeeJobTitle,
-          image: employeeImage,
-          jobType: employeeJobType,
-        } = employee.node.frontmatter;
-        return (
-          <EmployeeCard
-            name={employeeName}
-            description={employeeDescription}
-            jobTitle={employeeJobTitle}
-            image={employeeImage}
-            jobType={employeeJobType}
-          />
-        );
-      })}
-    </article>
+  <main>
+    <div className={styles.aboutPage}>
+      <article>
+        <h2>{title}</h2>
+        <p>submeny | placeholder</p>
+      </article>
+      <article className={styles.aboutOms}>
+        <h2>{header1}</h2>
+        <section>{text}</section>
+        <img src={image} alt="" />
+      </article>
+      <article className={styles.aboutEmployees}>
+        <h2>{header2}</h2>
+        {employeeList.map(employee => {
+          const {
+            title: employeeName,
+            description: employeeDescription,
+            jobTitle: employeeJobTitle,
+            image: employeeImage,
+            jobType: employeeJobType,
+          } = employee.node.frontmatter;
+          return (
+            <EmployeeCard
+              name={employeeName}
+              description={employeeDescription}
+              jobTitle={employeeJobTitle}
+              image={employeeImage}
+              jobType={employeeJobType}
+            />
+          );
+        })}
+      </article>
+    </div>
   </main>
 );
 
