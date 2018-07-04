@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLinkedin,
+  faFacebook,
+  faMedium,
+  faGithubSquare,
+} from '@fortawesome/free-brands-svg-icons';
+import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 import Link from 'gatsby-link';
 import ScrollButton from '../scrollButton/index';
@@ -118,10 +125,7 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon
-                icon={['fab', 'linkedin']}
-                style={{ fontSize: '45px' }}
-              />
+              <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '45px' }} />
             </a>
           </li>
           <li>
@@ -130,10 +134,7 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon
-                icon={['fab', 'facebook']}
-                style={{ fontSize: '45px' }}
-              />
+              <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '45px' }} />
             </a>
           </li>
           <li>
@@ -142,10 +143,7 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon
-                icon={['fab', 'medium']}
-                style={{ fontSize: '45px' }}
-              />
+              <FontAwesomeIcon icon={faMedium} style={{ fontSize: '45px' }} />
             </a>
           </li>
           <li>
@@ -155,7 +153,7 @@ const Footer = ({ language }) => (
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon
-                icon={['fab', 'github-square']}
+                icon={faGithubSquare}
                 style={{ fontSize: '45px' }}
               />
             </a>
@@ -163,10 +161,7 @@ const Footer = ({ language }) => (
         </ul>
       </div>
       <div className={styles.copyright}>
-        <FontAwesomeIcon
-          icon={['far', 'copyright']}
-          style={{ fontSize: '12px' }}
-        />
+        <FontAwesomeIcon icon={faCopyright} style={{ fontSize: '12px' }} />
         <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
       </div>
     </div>

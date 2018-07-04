@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './scrollButton.module.scss';
 
@@ -42,7 +43,7 @@ export default class ScrollButton extends Component {
         }}
         aria-label="Back to top"
       >
-        <FontAwesomeIcon icon={['fas', 'arrow-up']} />
+        <FontAwesomeIcon icon={faArrowUp} />
       </button>
     );
   }
