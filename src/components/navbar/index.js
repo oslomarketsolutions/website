@@ -127,6 +127,7 @@ export default class Navbar extends Component {
                 <FontAwesomeIcon
                   icon={['fab', 'linkedin']}
                   style={{ fontSize: '32px' }}
+                  size="2x"
                 />
               </a>
             </li>
@@ -139,6 +140,7 @@ export default class Navbar extends Component {
                 <FontAwesomeIcon
                   icon={['fab', 'facebook']}
                   style={{ fontSize: '32px' }}
+                  size="2x"
                 />
               </a>
             </li>
@@ -151,6 +153,7 @@ export default class Navbar extends Component {
                 <FontAwesomeIcon
                   icon={['fab', 'medium']}
                   style={{ fontSize: '32px' }}
+                  size="2x"
                 />
               </a>
             </li>
@@ -163,6 +166,7 @@ export default class Navbar extends Component {
                 <FontAwesomeIcon
                   icon={['fab', 'github-square']}
                   style={{ fontSize: '32px' }}
+                  size="2x"
                 />
               </a>
             </li>
@@ -171,6 +175,7 @@ export default class Navbar extends Component {
                 <FontAwesomeIcon
                   icon={['fas', 'globe']}
                   style={{ fontSize: '18px' }}
+                  size="sm"
                 />
                 {this.props.language === 'no' ? 'English' : 'Norsk'}
               </Link>
