@@ -32,4 +32,11 @@ investorPortal:
 products:
   - description: '123123'
     title: Market data feed
+    image: /img/chemex.jpg
+  - description: '444444'
+    title: Noe annet
+    image: /img/chemex.jpg
+  - description: '555555'
+    title: Noe annet igjen
+    image: /img/chemex.jpg
 ---
