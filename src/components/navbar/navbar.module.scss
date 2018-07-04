@@ -27,11 +27,16 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   ul {
     li {
       list-style-type: none;
+
+      svg {
+        font-size: 32px;
+      }
     }
 
     li:last-of-type {
       svg {
         margin: 0 10px 1px 0;
+        font-size: 18px;
       }
     }
   }

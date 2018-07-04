@@ -2,13 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLinkedin,
-  faFacebook,
-  faMedium,
-  faGithubSquare,
-} from '@fortawesome/free-brands-svg-icons';
-import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 import Link from 'gatsby-link';
 import ScrollButton from '../scrollButton/index';
@@ -125,7 +118,7 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '45px' }} />
+              <FontAwesomeIcon icon={['fab', 'linkedin']} />
             </a>
           </li>
           <li>
@@ -134,7 +127,7 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '45px' }} />
+              <FontAwesomeIcon icon={['fab', 'facebook']} />
             </a>
           </li>
           <li>
@@ -143,7 +136,7 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faMedium} style={{ fontSize: '45px' }} />
+              <FontAwesomeIcon icon={['fab', 'medium']} />
             </a>
           </li>
           <li>
@@ -152,16 +145,13 @@ const Footer = ({ language }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon
-                icon={faGithubSquare}
-                style={{ fontSize: '45px' }}
-              />
+              <FontAwesomeIcon icon={['fab', 'github-square']} />
             </a>
           </li>
         </ul>
       </div>
       <div className={styles.copyright}>
-        <FontAwesomeIcon icon={faCopyright} style={{ fontSize: '12px' }} />
+        <FontAwesomeIcon icon={['far', 'copyright']} />
         <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
       </div>
     </div>

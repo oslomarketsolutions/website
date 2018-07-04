@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLinkedin,
-  faFacebook,
-  faMedium,
-  faGithubSquare,
-} from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
@@ -132,8 +125,8 @@ export default class Navbar extends Component {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faLinkedin}
-                  style={{ fontSize: '32px' }}
+                  icon={['fab', 'linkedin']}
+                  // style={{ fontSize: '32px' }}
                 />
               </a>
             </li>
@@ -144,8 +137,8 @@ export default class Navbar extends Component {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faFacebook}
-                  style={{ fontSize: '32px' }}
+                  icon={['fab', 'facebook']}
+                  // style={{ fontSize: '32px' }}
                 />
               </a>
             </li>
@@ -155,7 +148,10 @@ export default class Navbar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faMedium} style={{ fontSize: '32px' }} />
+                <FontAwesomeIcon
+                  icon={['fab', 'medium']}
+                  // style={{ fontSize: '32px' }}
+                />
               </a>
             </li>
             <li className={`${styles.borderRight} ${styles.socialMedia}`}>
@@ -165,14 +161,17 @@ export default class Navbar extends Component {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faGithubSquare}
-                  style={{ fontSize: '32px' }}
+                  icon={['fab', 'github-square']}
+                  // style={{ width: '32px', height: '32px', fontSize: '32px' }}
                 />
               </a>
             </li>
             <li className={styles.noPaddingRight}>
               <Link to={this.changePageLanguage()}>
-                <FontAwesomeIcon icon={faGlobe} style={{ fontSize: '18px' }} />
+                <FontAwesomeIcon
+                  icon={['fas', 'globe']}
+                  // style={{ width: '18px', height: '18px', fontSize: '18px' }}
+                />
                 {this.props.language === 'no' ? 'English' : 'Norsk'}
               </Link>
             </li>
