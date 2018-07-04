@@ -4,7 +4,25 @@ import scrollIntoView from 'scroll-into-view-if-needed';
 import styles from './productPage.module.scss';
 
 export class ProductPageTemplate extends Component {
-  state = {};
+  state = {
+    stickyLinks: false,
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', () => {
+      this.handleScroll();
+    });
+    const linksElement = this.links;
+    this.offsetPosition = linksElement.offsetTop;
+  }
+
+  handleScroll = () => {
+    if (window.pageYOffset >= this.offsetPosition) {
+      this.setState({ stickyLinks: true });
+    } else {
+      this.setState({ stickyLinks: false });
+    }
+  };
 
   scrollToRef = ref => {
     scrollIntoView(this[ref], {
@@ -17,18 +35,29 @@ export class ProductPageTemplate extends Component {
 
   render() {
     const { intro, investorPortal, products } = this.props;
-
+    const linksStyle = this.state.stickyLinks
+      ? styles.sticky
+      : styles.notSticky;
     return (
       <div className={styles.container}>
         <section className={styles.intro}>
           <h2>{intro.title}</h2>
-          <div className={styles.links}>
+          <div
+            ref={div => {
+              this.links = div;
+            }}
+            className={linksStyle}
+          >
             <button onClick={() => this.scrollToRef(investorPortal.title)}>
-              {investorPortal.title}
+              <img src={investorPortal.image} alt={investorPortal.title} />
+              <h4>{investorPortal.title}</h4>
+              <p>{investorPortal.description.slice(0, 140)}</p>
             </button>
             {products.map(product => (
               <button onClick={() => this.scrollToRef(product.title)}>
-                {product.title}
+                <img src={product.image} alt={product.title} />
+                <h4>{product.title}</h4>
+                <p>{product.description.slice(0, 140)}</p>
               </button>
             ))}
           </div>
