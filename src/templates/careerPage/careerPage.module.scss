@@ -1,6 +1,8 @@
 .careerPage {
+  max-width: 90%;
+  margin: 5em auto 0 auto;
+
   article {
-    grid-column: 1 / 7;
     margin: 2em 0;
   }
 
@@ -22,7 +24,7 @@
   }
 
   .careerPerks {
-    div.perkCardContainer {
+    .perkCardContainer {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -37,5 +39,13 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .careerPage {
+    max-width: 1800px;
+    padding: 0 2em;
+    margin: 5em auto 0 auto;
   }
 }

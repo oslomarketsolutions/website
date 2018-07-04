@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Font Awesome
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import faGraduationCap from '@fortawesome/fontawesome-free-solid/faGraduationCap';
 import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
 import faFlask from '@fortawesome/fontawesome-free-solid/faFlask';
