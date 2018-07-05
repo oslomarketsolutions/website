@@ -2,20 +2,24 @@
 
 $textColorDark: #1c315b;
 
-body {
-  font-family: 'Noto Sans', sans-serif;
-  line-height: 1.6;
-  color: $textColorDark;
-  margin: 0;
+html {
+  font-size: 10px;
 
-  main {
-    overflow: hidden;
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+    color: $textColorDark;
+    margin: 0;
 
-    h2,
-    h3 {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 2em;
+    main {
+      overflow: hidden;
+
+      h2,
+      h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2em;
+      }
     }
   }
 }
