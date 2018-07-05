@@ -1,10 +1,10 @@
 .aboutPage {
   max-width: 90%;
-  margin: 5em auto 0 auto;
+  margin: 80px auto 0 auto;
 
   article {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   p {
@@ -24,7 +24,7 @@
 
     img {
       width: 45%;
-      height: 22em;
+      height: 100%;
     }
   }
 
@@ -35,15 +35,15 @@
   }
 
   article {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 }
 
 @media (min-width: 1024px) {
   .aboutPage {
     max-width: 1800px;
-    padding: 0 2em;
-    margin: 5em auto 0 auto;
+    padding: 0 32px;
+    margin: 80px auto 0 auto;
   }
 }

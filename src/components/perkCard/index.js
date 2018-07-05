@@ -7,9 +7,9 @@ const PerkCard = ({ content, color }) => {
   const PageContent = HTMLContent || Content;
 
   return (
-    <section className={styles.perkCard} style={{ borderColor: color }}>
+    <div className={styles.perkCard} style={{ borderColor: color }}>
       <PageContent content={content} />
-    </section>
+    </div>
   );
 };
 

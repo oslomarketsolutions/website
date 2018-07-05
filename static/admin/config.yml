@@ -232,26 +232,28 @@ collections:
         label: "no/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Header 1", name: "header1", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Sub header 1", name: "subHeader1", widget: "string"}
-          - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
+          - {label: "First image", name: "image1", widget: "image"}
+          - {label: "First text", name: "text1", widget: "text"}
+          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Second image", name: "image2", widget: "image"}
+          - {label: "Second text", name: "text2", widget: "text"}
+          - {label: "First sub-header", name: "subHeader1", widget: "string"}
+          - {label: "Second sub-header", name: "subHeader2", widget: "string"}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
         label: "en/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Header 1", name: "header1", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Sub header 1", name: "subHeader1", widget: "string"}
-          - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
+          - {label: "First image", name: "image1", widget: "image"}
+          - {label: "First text", name: "text1", widget: "text"}
+          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Second image", name: "image2", widget: "image"}
+          - {label: "Second text", name: "text2", widget: "text"}
+          - {label: "First sub-header", name: "subHeader1", widget: "string"}
+          - {label: "Second sub-header", name: "subHeader2", widget: "string"}
 
       - file: "src/pages/no/products/index.md"
         name: "norwegian_products_page"

@@ -14,7 +14,7 @@ $textColorDark: #1c315b;
   }
 
   ul {
-    font-size: 14px;
+    font-size: 1.4rem;
     margin: 0;
     padding: 0;
 
@@ -24,11 +24,11 @@ $textColorDark: #1c315b;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   .footerContainer {
-    padding: 0 1em;
+    padding: 0 16px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -38,15 +38,15 @@ $textColorDark: #1c315b;
   .navigate,
   .contact {
     width: 46%;
-    padding-top: 2em;
+    padding-top: 32px;
 
     h3 {
-      padding-bottom: 0.5em;
+      padding-bottom: 8px;
       border-bottom: 1px solid $textColorDark;
     }
 
     li {
-      padding-bottom: 0.5em;
+      padding-bottom: 8px;
     }
 
     li:last-of-type {
@@ -56,12 +56,12 @@ $textColorDark: #1c315b;
 
   .contact {
     width: 100%;
-    padding-bottom: 2em;
+    padding-bottom: 32px;
   }
 
   .socialMedia {
     width: 100%;
-    padding: 2em 0;
+    padding: 32px 0;
     border-top: 1px solid $textColorDark;
 
     ul {
@@ -76,7 +76,7 @@ $textColorDark: #1c315b;
         margin: 0 auto;
 
         svg {
-          font-size: 45px;
+          font-size: 4.5rem;
         }
       }
     }
@@ -87,8 +87,8 @@ $textColorDark: #1c315b;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 0 1em 0;
-    font-size: 12px;
+    padding: 0 0 16px 0;
+    font-size: 1.2rem;
     color: #808080;
 
     p {
@@ -98,7 +98,7 @@ $textColorDark: #1c315b;
 
   @media (min-width: 760px) {
     .footerContainer {
-      padding: 0 2em;
+      padding: 0 32px;
     }
 
     .socialMedia {
@@ -115,8 +115,8 @@ $textColorDark: #1c315b;
     .navigate,
     .contact {
       width: 28%;
-      max-width: 14.5em;
-      padding: 2em 0;
+      max-width: 232px;
+      padding: 32px 0;
     }
 
     .navigate {
@@ -130,11 +130,11 @@ $textColorDark: #1c315b;
 
   @media (min-width: 1024px) {
     h3 {
-      font-size: 24px;
+      font-size: 2.4rem;
     }
 
     ul {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     .footerContainer {
@@ -146,8 +146,8 @@ $textColorDark: #1c315b;
     .navigate,
     .contact {
       width: 28%;
-      max-width: 18.5em;
-      padding: 2em 0;
+      max-width: 296px;
+      padding: 32px 0;
     }
   }
 }

@@ -7,10 +7,14 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
 }
 
+header {
+  width: 90%;
+  margin: 16px auto 0;
+}
+
 .navbar {
   display: flex;
   align-items: center;
-  padding: 1em 2em 0 2em;
 
   nav {
     position: fixed;
@@ -29,20 +33,20 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       list-style-type: none;
 
       svg {
-        font-size: 32px;
+        font-size: 3.2rem;
       }
     }
 
     li:last-of-type {
       svg {
         margin: 0 10px 1px 0;
-        font-size: 18px;
+        font-size: 1.8rem;
       }
     }
   }
 
   a {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   a,
@@ -61,7 +65,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     display: block;
     height: 60px;
-    width: 2em;
+    width: 24px;
     border: 0;
     padding: 0;
     text-align: inherit;
@@ -81,8 +85,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   .hamburger {
     position: absolute;
-    width: 2em;
-    height: 1.5em;
+    width: 24px;
+    height: 24px;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -106,8 +110,17 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       transform: translate(0, 7px);
     }
   }
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  header {
+    width: inherit;
+    margin: 0;
+  }
+
+  .navbar {
+    padding: 16px 32px 0 32px;
+
     button,
     .menuGraph {
       display: none;
@@ -138,7 +151,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
       a {
         padding-bottom: 0;
-        padding: 0 0.5em 0 0.5em;
+        padding: 0 8px 0 8px;
         position: relative;
         height: 36px;
         display: flex;
@@ -200,11 +213,11 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         align-items: center;
         margin: 0;
         padding: 0;
-        font-size: 20px;
+        font-size: 2rem;
 
         li {
-          padding-left: 0.5em;
-          padding-right: 0.5em;
+          padding-left: 12px;
+          padding-right: 12px;
         }
 
         li.noPaddingRight {
@@ -212,7 +225,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         li.doublePadding {
-          padding-right: 1.5em;
+          padding-right: 24px;
         }
 
         li.borderLeft {
@@ -225,8 +238,10 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
     }
   }
+}
 
-  @media (max-width: 1023px) {
+@media (max-width: 1023px) {
+  .navbar {
     .menuGraph {
       position: absolute;
       top: 0;
@@ -283,29 +298,23 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       text-align: center;
 
       li {
-        padding: 1em 0;
+        padding: 16px 0;
       }
 
       li:last-of-type {
-        padding-top: 2em;
+        padding-top: 32px;
       }
 
       .doublePadding {
-        padding-bottom: 2em;
+        padding-bottom: 32px;
       }
 
       .socialMedia {
         display: inline-block;
-        padding: 2em 1em;
+        padding: 32px 16px;
         border-top: 1px solid;
         border-bottom: 1px solid;
       }
     }
-  }
-}
-
-@media (max-width: 760px) {
-  .navbar {
-    padding: 1em 1em 0 1em;
   }
 }
