@@ -8,8 +8,10 @@ const LinkCard = ({ product, onClickFunction, sticky }) => {
   return (
     <button onClick={() => onClickFunction(product.title)} className={style}>
       <img src={product.image} alt={product.title} />
-      <h4>{product.title}</h4>
-      <p>{product.description.slice(0, 140)}</p>
+      <div>
+        <h4>{product.title}</h4>
+        <p>{product.description.slice(0, 140)}</p>
+      </div>
     </button>
   );
 };

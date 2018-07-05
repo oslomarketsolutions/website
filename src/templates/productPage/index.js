@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
+import oneYearGraph from '../../components/oneYearGraph';
 
 export class ProductPageTemplate extends Component {
   propTypes = {
@@ -44,6 +45,7 @@ export class ProductPageTemplate extends Component {
     });
     const linksElement = this.links;
     this.offsetPosition = linksElement.offsetTop;
+    console.log(oneYearGraph);
   }
 
   handleScroll = () => {
@@ -57,9 +59,9 @@ export class ProductPageTemplate extends Component {
   scrollToRef = ref => {
     scrollIntoView(this[ref], {
       behavior: 'smooth',
-      scrollMode: 'if-needed',
-      block: 'nearest',
-      inline: 'nearest',
+      scrollMode: 'always',
+      block: 'start',
+      inline: 'start',
     });
   };
 
@@ -92,6 +94,8 @@ export class ProductPageTemplate extends Component {
             ))}
           </div>
         </section>
+
+        {oneYearGraph()}
 
         <section
           ref={section => {
