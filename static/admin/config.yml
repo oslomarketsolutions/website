@@ -38,7 +38,7 @@ collections:
       - label: "Job type"
         name: "jobType"
         widget: "select"
-        options: 
+        options:
         - {label: "Front-end", value: "frontEnd"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
@@ -57,7 +57,7 @@ collections:
       - label: "Job type"
         name: "jobType"
         widget: "select"
-        options: 
+        options:
         - {label: "Front-end", value: "frontEnd"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
@@ -139,7 +139,7 @@ collections:
           - label: "Featured Content"
             name: "featuredContent"
             widget: "object"
-            fields: 
+            fields:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
@@ -147,15 +147,16 @@ collections:
             name: "configurationLogos"
             widget: "list"
             fields:
-              - {label: "Logo", name: "logo", widget: "image"}     
+              - {label: "Logo", name: "logo", widget: "image"}
           - label: "Solutions Content"
             name: "solutionsContent"
             widget: "object"
             fields:
+              - {label: "Header", name: "header", widget: "string"}
               - {label: "First Card", name: "firstCard", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},          
+                  {label: "Text", name: "text", widget: "text"},
                 ]}
               - {label: "Second Card", name: "secondCard", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
@@ -167,7 +168,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Logo", name: "logo", widget: "image"}
-              
+
       - file: "src/pages/en/index.md"
         name: "english_index_page"
         label: "en/Homepage"
@@ -176,7 +177,7 @@ collections:
           - label: "Featured Content"
             name: "featuredContent"
             widget: "object"
-            fields: 
+            fields:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
@@ -184,15 +185,16 @@ collections:
             name: "configurationLogos"
             widget: "list"
             fields:
-              - {label: "Logo", name: "logo", widget: "image"}     
+              - {label: "Logo", name: "logo", widget: "image"}
           - label: "Solutions Content"
             name: "solutionsContent"
             widget: "object"
             fields:
+              - {label: "Header", name: "header", widget: "string"}
               - {label: "First Card", name: "firstCard", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},          
+                  {label: "Text", name: "text", widget: "text"},
                 ]}
               - {label: "Second Card", name: "secondCard", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
@@ -270,7 +272,7 @@ collections:
 
       - file: "src/pages/en/products/index.md"
         name: "english_products_page"
-        label: "en/Products page" 
+        label: "en/Products page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productPage"}
           - {label: Title, name: title, widget: string}

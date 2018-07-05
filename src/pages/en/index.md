@@ -9,6 +9,7 @@ configurationLogos:
   - logo: /img/jumbotron.jpg
   - logo: /img/tutorials.png
 solutionsContent:
+  header: Choose your level of customization
   firstCard:
     header: First Card Header
     image: /img/phone-in-hand.jpg

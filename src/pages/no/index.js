@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from '../indexPage.module.scss';
+import FeatureCard from '../../components/featureCard';
 
 const IndexPage = ({ data }) => {
   const {
@@ -33,16 +34,20 @@ const IndexPage = ({ data }) => {
       </section>
       <section className={styles.featuredCase}>
         <div>
-          <img src={featuredContent.image} alt={featuredContent.image} />
-          <h2>{featuredContent.header}</h2>
+          <h3>{featuredContent.header}</h3>
           <p>{featuredContent.text}</p>
+          <img src={featuredContent.image} alt={featuredContent.image} />
         </div>
       </section>
-      <section className={styles.customizationCards}>
-        <article>Kort 1</article>
-        <article>Kort 2</article>
-        <article>Kort 3</article>
+      <section className={styles.customization}>
+        <h3>{solutionsContent.header}</h3>
+        <section className={styles.customizationCards}>
+          <FeatureCard />
+          <FeatureCard />
+          <FeatureCard />
+        </section>
       </section>
+
       <section className={styles.solutions}>
         <article>
           <img
@@ -95,6 +100,7 @@ export const pageQuery = graphql`
           logo
         }
         solutionsContent {
+          header
           firstCard {
             image
             header
