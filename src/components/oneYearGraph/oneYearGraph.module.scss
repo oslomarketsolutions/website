@@ -7,4 +7,17 @@
   margin-bottom: -75px;
   height: 100%;
   width: 100%;
+
+  stroke-dasharray: 5000;
+  animation: dash 5s linear;
+  animation-fill-mode: forwards;
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 5000;
+    }
+    to {
+      stroke-dashoffset: 10000;
+    }
+  }
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
+import ProductCard from '../../components/productCard';
 import oneYearGraph from '../../components/oneYearGraph';
 
 export class ProductPageTemplate extends Component {
@@ -45,7 +46,6 @@ export class ProductPageTemplate extends Component {
     });
     const linksElement = this.links;
     this.offsetPosition = linksElement.offsetTop;
-    console.log(oneYearGraph);
   }
 
   handleScroll = () => {
@@ -74,24 +74,26 @@ export class ProductPageTemplate extends Component {
       <div className={styles.container}>
         <section className={styles.intro}>
           <h2>{intro.title}</h2>
-          <div
-            ref={div => {
-              this.links = div;
-            }}
-            className={linksStyle}
-          >
-            <LinkCard
-              product={investorPortal}
-              onClickFunction={this.scrollToRef}
-              sticky={this.state.stickyLinks}
-            />
-            {products.map(product => (
+          <div style={{ height: '600px' }}>
+            <div
+              ref={div => {
+                this.links = div;
+              }}
+              className={linksStyle}
+            >
               <LinkCard
-                product={product}
+                product={investorPortal}
                 onClickFunction={this.scrollToRef}
                 sticky={this.state.stickyLinks}
               />
-            ))}
+              {products.map(product => (
+                <LinkCard
+                  product={product}
+                  onClickFunction={this.scrollToRef}
+                  sticky={this.state.stickyLinks}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -125,18 +127,11 @@ export class ProductPageTemplate extends Component {
           {products &&
             products.map(product => (
               <div
-                ref={div => {
-                  this[product.title] = div;
+                ref={card => {
+                  this[product.title] = card;
                 }}
-                className={styles.product}
               >
-                <div className={styles.textContainer}>
-                  <h4>{product.title}</h4>
-                  <p>{product.description}</p>
-                </div>
-                <div className={styles.imageContainer}>
-                  <img src={product.image} alt={product.title} />
-                </div>
+                <ProductCard product={product} />
               </div>
             ))}
         </section>
