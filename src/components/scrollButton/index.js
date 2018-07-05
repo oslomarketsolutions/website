@@ -42,7 +42,7 @@ export default class ScrollButton extends Component {
         }}
         aria-label="Back to top"
       >
-        <FontAwesomeIcon icon={['fas', 'arrow-up']} />
+        <FontAwesomeIcon icon="arrow-up" />
       </button>
     );
   }
