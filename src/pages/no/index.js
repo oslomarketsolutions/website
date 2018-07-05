@@ -10,6 +10,7 @@ const IndexPage = ({ data }) => {
     topImage,
     configurationLogos,
     featuredContent,
+    customizationCards,
     solutionsContent,
     customerLogos,
   } = data.markdownRemark.frontmatter;
@@ -42,9 +43,14 @@ const IndexPage = ({ data }) => {
       <section className={styles.customization}>
         <h3>{solutionsContent.header}</h3>
         <section className={styles.customizationCards}>
-          <FeatureCard />
-          <FeatureCard />
-          <FeatureCard />
+          {customizationCards.map(customizationCard => (
+            <FeatureCard
+              title={customizationCard.header}
+              description={customizationCard.description}
+              features={customizationCard.features}
+              image={customizationCard.image}
+            />
+          ))}
         </section>
       </section>
 
@@ -96,6 +102,13 @@ export const pageQuery = graphql`
           image
           text
         }
+        customizationCards {
+          header
+          description
+          image
+          features
+        }
+
         configurationLogos {
           logo
         }

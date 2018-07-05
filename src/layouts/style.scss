@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
-$textColorDark: #1c315b;
+@import '../layouts/variables';
 
 html {
   font-size: 10px;
@@ -8,7 +7,7 @@ html {
   body {
     font-family: 'Noto Sans', sans-serif;
     line-height: 1.6;
-    color: $textColorDark;
+    color: $darkBlue;
     margin: 0;
 
     main {
