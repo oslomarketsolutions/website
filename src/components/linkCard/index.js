@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './linkCard.module.scss';
 
 const LinkCard = ({ product, onClickFunction, sticky }) => {
-  const style = sticky ? styles.sticky : styles.notSticky;
+  const style = sticky ? styles.stickyCard : styles.notStickyCard;
 
   return (
     <button onClick={() => onClickFunction(product.title)} className={style}>

@@ -54,16 +54,16 @@ export class ProductPageTemplate extends Component {
   render() {
     const { intro, investorPortal, products } = this.props;
 
-    const linkCards = (sticky, inView) => {
-      let className = styles.notSticky;
+    const linkCards = (stickyMenu, inView) => {
+      let className = styles.notStickyMenu;
       let style = {};
-      if (sticky) {
+      if (stickyMenu) {
         // If intro-section is in view
         if (inView) {
           style = { display: 'none' };
           className = '';
         } else {
-          className = styles.sticky;
+          className = styles.stickyMenu;
         }
       }
 
@@ -72,13 +72,13 @@ export class ProductPageTemplate extends Component {
           <LinkCard
             product={investorPortal}
             onClickFunction={this.scrollToRef}
-            sticky={sticky}
+            sticky={stickyMenu}
           />
           {products.map(product => (
             <LinkCard
               product={product}
               onClickFunction={this.scrollToRef}
-              sticky={sticky}
+              sticky={stickyMenu}
             />
           ))}
         </div>
@@ -92,9 +92,9 @@ export class ProductPageTemplate extends Component {
             <section className={styles.intro} ref={ref}>
               <h2>{intro.title}</h2>
               <div>
-                {// Sticky
+                {// Sticky link bar
                 linkCards(true, inView)}
-                {// Not sticky
+                {// Intro cards
                 linkCards(false, inView)}
               </div>
             </section>
