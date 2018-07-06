@@ -34,7 +34,6 @@ collections:
       - {label: "Job title", name: "jobTitle", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Language", name: "language", widget: "hidden", default: "no"}
       - label: "Job type"
         name: "jobType"
         widget: "select"
@@ -42,6 +41,8 @@ collections:
         - {label: "Front-end", value: "frontEnd"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
+        - {label: "Operations", value: "operations"}
+        - {label: "Summer intern", value: "summerIntern"}
 
   - name: "english_employees"
     label: "en/Employee"
@@ -53,7 +54,6 @@ collections:
       - {label: "Job title", name: "jobTitle", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - label: "Job type"
         name: "jobType"
         widget: "select"
@@ -61,6 +61,8 @@ collections:
         - {label: "Front-end", value: "frontEnd"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
+        - {label: "Operations", value: "operations"}
+        - {label: "Summer intern", value: "summerIntern"}
 
   - name: "norwegian_featureCard"
     label: "no/FeatureCard"
@@ -210,22 +212,20 @@ collections:
         label: "no/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Text", name: "text", widget: "text"}
-          - {label: "Header 2", name: "header2", widget: "string"}
+          - {label: "Second header", name: "header", widget: "string"}
 
       - file: "src/pages/en/about/index.md"
         name: "english_about_page"
         label: "en/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Text", name: "text", widget: "text"}
-          - {label: "Header 2", name: "header2", widget: "string"}
+          - {label: "Second header", name: "header", widget: "string"}
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"

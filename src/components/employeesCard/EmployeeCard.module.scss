@@ -63,3 +63,28 @@
     color: #5c5050;
   }
 }
+
+@media (max-width: 515px) {
+  .EmployeeCard {
+    grid-template-columns: auto;
+    grid-template-rows: 469px 135px 150px;
+    grid-template-areas:
+      'image'
+      'header'
+      'description';
+
+    img {
+      height: 470px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .EmployeeCard {
+    grid-template-rows: 369px 135px 150px;
+
+    img {
+      height: 370px;
+    }
+  }
+}

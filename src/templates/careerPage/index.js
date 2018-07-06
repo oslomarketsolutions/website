@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
-import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 
 let colorCounter = 0;
