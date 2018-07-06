@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from '../indexPage.module.scss';
+import FeatureCard from '../../components/featureCard';
 
 const IndexPage = ({ data }) => {
   const {
     topImage,
     configurationLogos,
     featuredContent,
+    customizationCards,
     solutionsContent,
     customerLogos,
   } = data.markdownRemark.frontmatter;
@@ -33,16 +35,25 @@ const IndexPage = ({ data }) => {
       </section>
       <section className={styles.featuredCase}>
         <div>
-          <img src={featuredContent.image} alt={featuredContent.image} />
-          <h2>{featuredContent.header}</h2>
+          <h3>{featuredContent.header}</h3>
           <p>{featuredContent.text}</p>
+          <img src={featuredContent.image} alt={featuredContent.image} />
         </div>
       </section>
-      <section className={styles.customizationCards}>
-        <article>Kort 1</article>
-        <article>Kort 2</article>
-        <article>Kort 3</article>
+      <section className={styles.customization}>
+        <h3>{solutionsContent.header}</h3>
+        <section className={styles.customizationCards}>
+          {customizationCards.map(customizationCard => (
+            <FeatureCard
+              title={customizationCard.header}
+              description={customizationCard.description}
+              features={customizationCard.features}
+              image={customizationCard.image}
+            />
+          ))}
+        </section>
       </section>
+
       <section className={styles.solutions}>
         <article>
           <img
@@ -91,10 +102,18 @@ export const pageQuery = graphql`
           image
           text
         }
+        customizationCards {
+          header
+          description
+          image
+          features
+        }
+
         configurationLogos {
           logo
         }
         solutionsContent {
+          header
           firstCard {
             image
             header
