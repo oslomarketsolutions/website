@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
-import 'intersection-observer';
 import Observer from 'react-intersection-observer';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
 import oneYearGraph from '../../components/oneYearGraph';
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('intersection-observer');
+}
 
 export class ProductPageTemplate extends Component {
   propTypes = {
@@ -37,26 +41,6 @@ export class ProductPageTemplate extends Component {
       }),
     ),
   };
-
-  // state = {
-  //   stickyLinks: false,
-  // };
-  //
-  // componentDidMount() {
-  //   window.addEventListener('scroll', () => {
-  //     this.handleScroll();
-  //   });
-  //   const linksElement = this.links;
-  //   this.offsetPosition = linksElement.offsetTop;
-  // }
-  //
-  // handleScroll = () => {
-  //   if (window.pageYOffset >= this.offsetPosition) {
-  //     this.setState({ stickyLinks: true });
-  //   } else {
-  //     this.setState({ stickyLinks: false });
-  //   }
-  // };
 
   scrollToRef = ref => {
     scrollIntoView(this[ref], {
