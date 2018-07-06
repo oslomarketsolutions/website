@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
+import 'intersection-observer';
 import Observer from 'react-intersection-observer';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
