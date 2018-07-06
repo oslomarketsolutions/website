@@ -74,7 +74,7 @@ export class ProductPageTemplate extends Component {
       <div className={styles.container}>
         <section className={styles.intro}>
           <h2>{intro.title}</h2>
-          <div style={{ height: '600px' }}>
+          <div>
             <div
               ref={div => {
                 this.links = div;
