@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
+import Observer from 'react-intersection-observer';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
 import oneYearGraph from '../../components/oneYearGraph';
+
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('intersection-observer');
+}
 
 export class ProductPageTemplate extends Component {
   propTypes = {
@@ -36,26 +42,6 @@ export class ProductPageTemplate extends Component {
     ),
   };
 
-  state = {
-    stickyLinks: false,
-  };
-
-  componentDidMount() {
-    window.addEventListener('scroll', () => {
-      this.handleScroll();
-    });
-    const linksElement = this.links;
-    this.offsetPosition = linksElement.offsetTop;
-  }
-
-  handleScroll = () => {
-    if (window.pageYOffset >= this.offsetPosition) {
-      this.setState({ stickyLinks: true });
-    } else {
-      this.setState({ stickyLinks: false });
-    }
-  };
-
   scrollToRef = ref => {
     scrollIntoView(this[ref], {
       behavior: 'smooth',
@@ -67,35 +53,53 @@ export class ProductPageTemplate extends Component {
 
   render() {
     const { intro, investorPortal, products } = this.props;
-    const linksStyle = this.state.stickyLinks
-      ? styles.sticky
-      : styles.notSticky;
+
+    const linkCards = (sticky, inView) => {
+      let className = styles.notSticky;
+      let style = {};
+      if (sticky) {
+        // If intro-section is in view
+        if (inView) {
+          style = { display: 'none' };
+          className = '';
+        } else {
+          className = styles.sticky;
+        }
+      }
+
+      return (
+        <div className={className} style={style}>
+          <LinkCard
+            product={investorPortal}
+            onClickFunction={this.scrollToRef}
+            sticky={sticky}
+          />
+          {products.map(product => (
+            <LinkCard
+              product={product}
+              onClickFunction={this.scrollToRef}
+              sticky={sticky}
+            />
+          ))}
+        </div>
+      );
+    };
+
     return (
       <div className={styles.container}>
-        <section className={styles.intro}>
-          <h2>{intro.title}</h2>
-          <div>
-            <div
-              ref={div => {
-                this.links = div;
-              }}
-              className={linksStyle}
-            >
-              <LinkCard
-                product={investorPortal}
-                onClickFunction={this.scrollToRef}
-                sticky={this.state.stickyLinks}
-              />
-              {products.map(product => (
-                <LinkCard
-                  product={product}
-                  onClickFunction={this.scrollToRef}
-                  sticky={this.state.stickyLinks}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <Observer>
+          {({ inView, ref }) => (
+            <section className={styles.intro} ref={ref}>
+              <h2>{intro.title}</h2>
+              <div>
+                {// Sticky
+                linkCards(true, inView)}
+                {// Not sticky
+                linkCards(false, inView)}
+              </div>
+            </section>
+          )}
+        </Observer>
 
         {oneYearGraph()}
 
@@ -127,6 +131,7 @@ export class ProductPageTemplate extends Component {
           {products &&
             products.map(product => (
               <div
+                className={styles.product}
                 ref={card => {
                   this[product.title] = card;
                 }}
