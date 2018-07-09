@@ -30,7 +30,7 @@ customizationCards:
     header: OMS Web Components
     image: /img/products-grid2.jpg
   - description: >-
-      Keep investor clients informed and up to date anywhere and at any time.
+      Keep investor clients informed and up to date anywhere and at any time. 
       Visualize exposure to different sectors and regions, risk allocation and
       performance.
     features:
