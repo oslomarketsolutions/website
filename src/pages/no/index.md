@@ -1,9 +1,9 @@
 ---
 topImage: /img/products-full-width.jpg
 featuredContent:
-  header: Featured Case Header
+  header: Investor portals
   image: /img/chemex.jpg
-  text: Featured Text
+  text: Whether you want a fully hosted and managed web trader, fund savings platform, portfolio reporting or market data information, OMS can help you get there. 
 customizationCards:
   - description: >-
       We provide market data from the whole world and a connection to the broker

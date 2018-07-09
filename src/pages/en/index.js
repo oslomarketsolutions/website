@@ -34,11 +34,9 @@ const IndexPage = ({ data }) => {
           ))}
       </section>
       <section className={styles.featuredCase}>
-        <div>
-          <h3>{featuredContent.header}</h3>
-          <p>{featuredContent.text}</p>
-          <img src={featuredContent.image} alt={featuredContent.image} />
-        </div>
+        <h3>{featuredContent.header}</h3>
+        <p>{featuredContent.text}</p>
+        <img src={featuredContent.image} alt={featuredContent.image} />
       </section>
       <section className={styles.customization}>
         <h3>{solutionsContent.header}</h3>
@@ -55,20 +53,20 @@ const IndexPage = ({ data }) => {
       </section>
 
       <section className={styles.solutions}>
-        <article>
+        <article className={styles.solution}>
           <img
             src={solutionsContent.firstCard.image}
             alt={solutionsContent.firstCard.image}
           />
-          <h2> {solutionsContent.firstCard.header} </h2>
+          <h4> {solutionsContent.firstCard.header} </h4>
           <p> {solutionsContent.firstCard.text} </p>
         </article>
-        <article>
+        <article className={styles.solution}>
           <img
             src={solutionsContent.secondCard.image}
             alt={solutionsContent.secondCard.image}
           />
-          <h2> {solutionsContent.secondCard.header} </h2>
+          <h4> {solutionsContent.secondCard.header} </h4>
           <p> {solutionsContent.secondCard.text} </p>
         </article>
       </section>
@@ -93,7 +91,7 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query EnIndexQuery {
+  query EngIndexQuery {
     markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
       frontmatter {
         topImage
