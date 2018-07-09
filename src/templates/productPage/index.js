@@ -86,17 +86,15 @@ export class ProductPageTemplate extends Component {
     };
 
     return (
-      <div className={styles.container}>
+      <main className={styles.container}>
         <Observer>
           {({ inView, ref }) => (
             <section className={styles.intro} ref={ref}>
               <h2>{intro.title}</h2>
-              <div>
-                {// Sticky link bar
-                linkCards(true, inView)}
-                {// Intro cards
-                linkCards(false, inView)}
-              </div>
+              {// Sticky link bar
+              linkCards(true, inView)}
+              {// Intro cards
+              linkCards(false, inView)}
             </section>
           )}
         </Observer>
@@ -140,7 +138,7 @@ export class ProductPageTemplate extends Component {
               </div>
             ))}
         </section>
-      </div>
+      </main>
     );
   }
 }
