@@ -13,6 +13,8 @@
 
     /* Sticky Link menu when scrolling down past it */
     .sticky {
+      // Ensuring the sticky menu is on top
+      z-index: 1000;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -47,6 +49,7 @@
       line-height: 1.5em;
     }
 
+
     .investor {
       // This fixes scrollIntoViewIfNeeded scrolling too far
       padding-top: 100px;
@@ -57,13 +60,10 @@
       flex-flow: row wrap;
       justify-content: space-between;
 
-      img {
-        display: block;
+      .imageContainer {
         width: 40%;
-        min-width: 600px;
-        height: auto;
-        align-self: center;
       }
+
 
       h3 {
         font-size: 64px;

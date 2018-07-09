@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+import { findImageSize } from '../../components/helperFunctions';
 import styles from './ProductCard.module.scss';
 
-const ProductCard = ({ product }) => (
+const ProductCard = ({ product, imageSizes }) => (
   <div className={styles.ProductCard}>
     <section className={styles.header}>
       <h3>{product.title}</h3>
@@ -11,7 +13,10 @@ const ProductCard = ({ product }) => (
       <p>{product.description}</p>
     </section>
     <section className={styles.image}>
-      <img src={product.image} alt={product.title} />
+      {
+        product.image &&
+        <Img sizes={findImageSize(product.image, imageSizes)}/>
+      }
     </section>
     <section className={styles.footer}>
       <ul>

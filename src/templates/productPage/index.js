@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
-import { findImageResolution } from '../../components/helperFunctions';
+import Img from 'gatsby-image';
+import { findImageSize } from '../../components/helperFunctions';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -41,6 +42,7 @@ export class ProductPageTemplate extends Component {
         title: PropTypes.string,
       }),
     ),
+    imageSizes: PropTypes.arrayOf(PropTypes.object)
   };
 
   scrollToRef = ref => {
@@ -53,7 +55,7 @@ export class ProductPageTemplate extends Component {
   };
 
   render() {
-    const { intro, investorPortal, products } = this.props;
+    const { intro, investorPortal, products, imageSizes } = this.props;
 
     const linkCards = (sticky, inView) => {
       let className = styles.notSticky;
@@ -74,12 +76,14 @@ export class ProductPageTemplate extends Component {
             product={investorPortal}
             onClickFunction={this.scrollToRef}
             sticky={sticky}
+            imageSizes={imageSizes}
           />
           {products.map(product => (
             <LinkCard
               product={product}
               onClickFunction={this.scrollToRef}
               sticky={sticky}
+              imageSizes={imageSizes}
             />
           ))}
         </div>
@@ -113,7 +117,12 @@ export class ProductPageTemplate extends Component {
           <div className={styles.investor}>
             <h3>{investorPortal.title}</h3>
             <p>{investorPortal.description}</p>
-            <img src={investorPortal.image} alt={investorPortal.title} />
+            <div className={styles.imageContainer}>
+              {
+                investorPortal.image &&
+                <Img sizes={findImageSize(investorPortal.image, imageSizes)}/>
+              }
+            </div>
           </div>
           {investorPortal.features &&
             investorPortal.features.map(feature => (
@@ -137,7 +146,7 @@ export class ProductPageTemplate extends Component {
                   this[product.title] = card;
                 }}
               >
-                <ProductCard product={product} />
+                <ProductCard product={product} imageSizes={imageSizes} />
               </div>
             ))}
         </section>
@@ -147,12 +156,15 @@ export class ProductPageTemplate extends Component {
 }
 
 const ProductPage = ({ data }) => {
-  const page = data.markdownRemark.frontmatter;
+  console.log(data)
+  const page = data.page.frontmatter;
+  const imageSizes = data.imageSizes.edges;
   return (
     <ProductPageTemplate
       intro={page.intro}
       investorPortal={page.investorPortal}
       products={page.products}
+      imageSizes={imageSizes}
     />
   );
 };
@@ -169,7 +181,7 @@ ProductPage.propTypes = {
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         intro {
           title
@@ -196,15 +208,15 @@ export const productPageQuery = graphql`
       }
     }
 
-    imageResolutions: allFile(
-      filter: { absolutePath: { regex: "/static/img" } }
+    imageSizes: allFile(
+      filter: { absolutePath: { regex: "/static/img/" } }
     ) {
       edges {
         node {
           relativePath
           childImageSharp {
-            resolutions(width: 620) {
-              ...GatsbyImageSharpResolutions
+            sizes(maxWidth: 1440) {
+              ...GatsbyImageSharpSizes
             }
           }
         }
