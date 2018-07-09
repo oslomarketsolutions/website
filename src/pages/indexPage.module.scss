@@ -1,0 +1,94 @@
+/* Very temporary css */
+
+.homePage {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(121, 145, 211);
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+
+  .animation {
+    width: 2560px;
+    height: 88vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .scrollButton {
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom: 20px;
+
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50px;
+      box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transition: transform 0.2s;
+      svg {
+        color: #b2cfae;
+        margin-top: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(0.99);
+        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  .configurationLogos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 200px;
+    width: 1800px;
+    margin: auto;
+    border: solid yellow;
+  }
+
+  .featuredCase {
+    height: 500px;
+    width: 1800px;
+    margin: auto;
+    border: solid black;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .customizationCards {
+    height: 500px;
+    width: 1800px;
+    margin: auto;
+    border: solid blue;
+  }
+
+  .solutions {
+    height: 500px;
+    width: 1800px;
+    margin: auto;
+    border: solid blue;
+  }
+
+  .customerLogos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 200px;
+    width: 1800px;
+    margin: auto;
+    border: solid blue;
+  }
+}

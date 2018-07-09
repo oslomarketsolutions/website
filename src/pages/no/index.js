@@ -1,41 +1,75 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
+import styles from '../indexPage.module.scss';
 
-export default function IndexPage({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+const IndexPage = ({ data }) => {
+  const {
+    topImage,
+    configurationLogos,
+    featuredContent,
+    solutionsContent,
+    customerLogos,
+  } = data.markdownRemark.frontmatter;
+
+  const onScrollButtonClick = () => {
+    // TODO: scroll
+  };
 
   return (
-    <section>
-      <div>
-        <div>
-          <h1>Siste historier</h1>
-        </div>
-        {posts
-          .filter(post => post.node.frontmatter.templateKey === 'blogPost')
-          .filter(post => post.node.frontmatter.language === 'no')
-          .map(({ node: post }) => (
-            <div
-              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-              key={post.id}
-            >
-              <p>
-                <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-              </p>
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link to={post.fields.slug}>Keep Reading →</Link>
-              </p>
-            </div>
+    <div className={styles.homePage}>
+      <section className={styles.animation}>
+        <button className={styles.scrollButton} onClick={onScrollButtonClick}>
+          <FontAwesomeIcon icon={caretDown} size="2x" />
+        </button>
+        <img src={topImage} alt={topImage} />
+      </section>
+      <section className={styles.configurationLogos}>
+        {configurationLogos &&
+          configurationLogos.map(configurationLogo => (
+            <img src={configurationLogo.logo} alt={configurationLogo.logo} />
           ))}
-      </div>
-    </section>
+      </section>
+      <section className={styles.featuredCase}>
+        <div>
+          <img src={featuredContent.image} alt={featuredContent.image} />
+          <h2>{featuredContent.header}</h2>
+          <p>{featuredContent.text}</p>
+        </div>
+      </section>
+      <section className={styles.customizationCards}>
+        <article>Kort 1</article>
+        <article>Kort 2</article>
+        <article>Kort 3</article>
+      </section>
+      <section className={styles.solutions}>
+        <article>
+          <img
+            src={solutionsContent.firstCard.image}
+            alt={solutionsContent.firstCard.image}
+          />
+          <h2> {solutionsContent.firstCard.header} </h2>
+          <p> {solutionsContent.firstCard.text} </p>
+        </article>
+        <article>
+          <img
+            src={solutionsContent.secondCard.image}
+            alt={solutionsContent.secondCard.image}
+          />
+          <h2> {solutionsContent.secondCard.header} </h2>
+          <p> {solutionsContent.secondCard.text} </p>
+        </article>
+      </section>
+      <section className={styles.customerLogos}>
+        {customerLogos &&
+          customerLogos.map(customerLogo => (
+            <img src={customerLogo.logo} alt={customerLogo.logo} />
+          ))}
+      </section>
+    </div>
   );
-}
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -45,22 +79,35 @@ IndexPage.propTypes = {
   }),
 };
 
+export default IndexPage;
+
 export const pageQuery = graphql`
   query NorIndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
+    markdownRemark(id: { regex: "/src/pages/no/index.md/" }) {
+      frontmatter {
+        topImage
+        featuredContent {
+          header
+          image
+          text
+        }
+        configurationLogos {
+          logo
+        }
+        solutionsContent {
+          firstCard {
+            image
+            header
+            text
           }
-          frontmatter {
-            title
-            language
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
+          secondCard {
+            image
+            header
+            text
           }
+        }
+        customerLogos {
+          logo
         }
       }
     }
