@@ -12,28 +12,46 @@
     }
 
     /* Sticky Link menu when scrolling down past it */
-    .sticky {
+    .stickyMenu {
       // Ensuring the sticky menu is on top
       z-index: 1000;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      align-content: space-between;
-      transition: all 1s;
       position: fixed;
-      top: 0;
+      top: -200px;
       width: 100%;
       background-color: white;
       box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+
+      animation: slideDown 0.5s forwards;
+
+      @keyframes slideDown {
+        from {
+          top: -200px;
+        }
+        to {
+          top: 0px;
+        }
+      }
+
+      button {
+        border: none;
+        margin: 0px 20px;
+
+        &:hover {
+          background-color: #f1f3f5;
+        }
+      }
     }
 
-    .notSticky {
+    .notStickyMenu {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
       align-content: space-around;
       transition: all 1s;
-      max-width: 1540px;
+      max-width: 70%;
       margin: auto;
     }
   }

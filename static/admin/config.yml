@@ -143,6 +143,14 @@ collections:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
+          - label: "Customization Cards"
+            name: "customizationCards"
+            widget: "list"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Features", name: "features", widget: "list"}
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
@@ -152,6 +160,7 @@ collections:
             name: "solutionsContent"
             widget: "object"
             fields:
+              - {label: "Header", name: "header", widget: "string"}
               - {label: "First Card", name: "firstCard", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
@@ -180,6 +189,14 @@ collections:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
+          - label: "Customization Cards"
+            name: "customizationCards"
+            widget: "list"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Features", name: "features", widget: "list"}
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
@@ -189,6 +206,7 @@ collections:
             name: "solutionsContent"
             widget: "object"
             fields:
+              - {label: "Header", name: "header", widget: "string"}
               - {label: "First Card", name: "firstCard", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
