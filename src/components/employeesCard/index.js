@@ -51,7 +51,6 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  resolutions: PropTypes.objectOf(PropTypes.string),
 };
 
 export default EmployeeCard;

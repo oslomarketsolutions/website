@@ -1,21 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import EmployeeCard from '../../components/employeesCard';
 import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
+import { findImageSize } from '../../components/helperFunctions';
+
 const _ = require('lodash');
-
-// // Bad performance
-// // Maybe lodash has some functions that can help
-// const findSizes = (imagesWithSizes, imageNames) => {
-//   let result = []
-
-//   imagesWithSizes.forEach(image => {
-//     if (imageNames.includes(image.node.relativePath)) result.push({imageName: image.node.relativePath, imageSizes: image.node.childImageSharp.sizes})
-//   })
-
-//   return result
-// }
 
 export const AboutPageTemplate = ({
   title,
@@ -24,6 +15,7 @@ export const AboutPageTemplate = ({
   text,
   header2,
   employeeList,
+  imageSizes,
 }) => (
   <main>
     <div className={styles.aboutPage}>
@@ -34,7 +26,9 @@ export const AboutPageTemplate = ({
       <article className={styles.aboutOms}>
         <h2>{header1}</h2>
         <section>{text}</section>
-        <img src={image} alt="" />
+        <div className={styles.imageContainer}>
+          <Img sizes={findImageSize(image, imageSizes)} />
+        </div>
       </article>
       <article className={styles.aboutEmployees}>
         <h2>{header2}</h2>
@@ -51,7 +45,7 @@ export const AboutPageTemplate = ({
               name={employeeName}
               description={employeeDescription}
               jobTitle={employeeJobTitle}
-              image={employeeImage}
+              sizes={findImageSize(employeeImage, imageSizes)}
               jobType={employeeJobType}
             />
           );
@@ -74,13 +68,6 @@ const AboutPage = ({ data }) => {
   const post = data.page;
   const employeeList = data.employees.edges;
   const imageSizes = data.imageSizes.edges;
-  const image = _.last(employeeList[0].node.frontmatter.image.split('/'));
-
-  imageSizes.map(imageSize => {
-    return imageSize.node;
-  });
-
-  console.log(imageSizes);
 
   return (
     <AboutPageTemplate
@@ -90,6 +77,7 @@ const AboutPage = ({ data }) => {
       text={post.frontmatter.text}
       header2={post.frontmatter.header2}
       employeeList={employeeList}
+      imageSizes={imageSizes}
     />
   );
 };
