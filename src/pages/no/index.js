@@ -41,14 +41,15 @@ const IndexPage = ({ data }) => {
       <section className={styles.customization}>
         <h3>{solutionsContent.header}</h3>
         <section className={styles.customizationCards}>
-          {customizationCards.map(customizationCard => (
-            <FeatureCard
-              title={customizationCard.header}
-              description={customizationCard.description}
-              features={customizationCard.features}
-              image={customizationCard.image}
-            />
-          ))}
+          {customizationCards &&
+            customizationCards.map(customizationCard => (
+              <FeatureCard
+                title={customizationCard.header}
+                description={customizationCard.description}
+                features={customizationCard.features}
+                image={customizationCard.image}
+              />
+            ))}
         </section>
       </section>
 
@@ -111,7 +112,6 @@ export const pageQuery = graphql`
           logo
         }
         solutionsContent {
-          header
           firstCard {
             image
             header
