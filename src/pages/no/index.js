@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
   };
 
   return (
-    <div className={styles.homePage}>
+    <main className={styles.homePage}>
       <section className={styles.animation}>
         <button className={styles.scrollButton} onClick={onScrollButtonClick}>
           <FontAwesomeIcon icon={caretDown} size="2x" />
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
             <img src={customerLogo.logo} alt={customerLogo.logo} />
           ))}
       </section>
-    </div>
+    </main>
   );
 };
 

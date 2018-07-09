@@ -40,12 +40,15 @@
     "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-remark": "^1.7.41",
     "gatsby-transformer-sharp": "^1.6.24",
+    "intersection-observer": "^0.5.0",
     "lodash": "^4.17.10",
     "lodash-webpack-plugin": "^0.11.5",
     "netlify-cms": "1.7.x",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-helmet": "^5.2.0",
+    "react-intersection-observer": "^6.1.0",
+    "scroll-into-view-if-needed": "^2.2.10",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -60,6 +63,7 @@
     "gatsby-plugin-react-next": "^1.0.11",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.2",
+    "null-loader": "^0.1.1",
     "prettier": "^1.12.1"
   },
   "keywords": ["gatsby"],
