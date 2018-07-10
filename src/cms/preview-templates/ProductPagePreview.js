@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import { ProductPageTemplate } from '../../templates/productPage/index';
 
 const ProductPagePreview = ({ entry }) => {
-
   const entryFeatures = entry.getIn(['data', 'investorPortal', 'features']);
   const features = entryFeatures ? entryFeatures.toJS() : [];
 
   const entryProducts = entry.getIn(['data', 'products']);
   const products = entryProducts ? entryProducts.toJS() : [];
-  
+
   return (
     <ProductPageTemplate
       intro={{
-        title: entry.getIn(['data', 'intro', 'title'])
+        title: entry.getIn(['data', 'intro', 'title']),
       }}
       investorPortal={{
         title: entry.getIn(['data', 'investorPortal', 'title']),
@@ -22,7 +21,7 @@ const ProductPagePreview = ({ entry }) => {
       }}
       products={products}
     />
-  )
+  );
 };
 
 ProductPagePreview.propTypes = {
