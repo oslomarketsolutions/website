@@ -96,7 +96,6 @@ IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
-  widgetsFor: PropTypes.func,
 };
 
 export default IndexPagePreview;
