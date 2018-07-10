@@ -15,5 +15,6 @@ CMS.registerPreviewTemplate('norwegian_employees', EmployeePreview);
 CMS.registerPreviewTemplate('english_employees', EmployeePreview);
 CMS.registerPreviewTemplate('english_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_featureCard', FeaturePreview);
-CMS.registerPreviewTemplate('products', ProductPagePreview);
+CMS.registerPreviewTemplate('norwegian_products_page', ProductPagePreview);
+CMS.registerPreviewTemplate('english_products_page', ProductPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
