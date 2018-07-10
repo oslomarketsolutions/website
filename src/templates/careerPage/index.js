@@ -29,7 +29,6 @@ const color = () => {
 };
 
 export const CareerPageTemplate = ({
-  contentComponent,
   content,
   title,
   text,
@@ -38,7 +37,7 @@ export const CareerPageTemplate = ({
   subHeader2,
   perkList,
 }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = HTMLContent || Content;
 
   return (
     <main>
@@ -54,11 +53,14 @@ export const CareerPageTemplate = ({
         <article className={styles.careerPerks}>
           <h3>{subHeader1}</h3>
           <div className={styles.perkCardContainer}>
-            {perkList.map(perk => {
-              const perkContent = perk.node.html;
+            {
+              perkList &&
+              perkList.map(perk => {
+                const perkContent = perk.node.html;
 
-              return <PerkCard content={perkContent} color={color()} />;
-            })}
+                return <PerkCard content={perkContent} color={color()} />;
+              })
+            }
           </div>
         </article>
         <article className={styles.careerJobVacancies}>
@@ -71,7 +73,6 @@ export const CareerPageTemplate = ({
 };
 
 CareerPageTemplate.propTypes = {
-  contentComponent: PropTypes.func,
   content: PropTypes.string,
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
@@ -88,7 +89,6 @@ const CareerPage = ({ data }) => {
 
   return (
     <CareerPageTemplate
-      contentComponent={HTMLContent}
       content={post.html}
       title={post.frontmatter.title}
       text={post.frontmatter.text}
