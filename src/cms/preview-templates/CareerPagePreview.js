@@ -5,9 +5,9 @@ import { CareerPageTemplate } from '../../templates/careerPage/index';
 const CareerPagePreview = ({ entry }) => {
   // I don't think we have access to the perklist from careerPage,
   // it's fetched by a query in CareerPageTemplate
-  const perkList = []
+  const perkList = [];
 
-  return(
+  return (
     <CareerPageTemplate
       content={entry.getIn(['data', 'body'])}
       title={entry.getIn(['data', 'title'])}
@@ -17,7 +17,7 @@ const CareerPagePreview = ({ entry }) => {
       subHeader2={entry.getIn(['data', 'subHeader2'])}
       perkList={perkList}
     />
-  )
+  );
 };
 
 CareerPagePreview.propTypes = {
