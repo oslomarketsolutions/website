@@ -6,7 +6,6 @@ import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 
 let colorCounter = 0;
-
 const color = () => {
   const colors = [
     '#fff6ae',
@@ -53,14 +52,12 @@ export const CareerPageTemplate = ({
         <article className={styles.careerPerks}>
           <h3>{subHeader1}</h3>
           <div className={styles.perkCardContainer}>
-            {
-              perkList &&
+            {perkList &&
               perkList.map(perk => {
                 const perkContent = perk.node.html;
 
                 return <PerkCard content={perkContent} color={color()} />;
-              })
-            }
+              })}
           </div>
         </article>
         <article className={styles.careerJobVacancies}>
