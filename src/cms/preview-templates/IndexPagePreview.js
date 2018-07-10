@@ -9,37 +9,23 @@ import IndexPage from '../../pages/no/index';
 // IndexPage doesn't have a template in its index.js-file.
 // That means it takes in one prop (data) unlike the other pages (which has templates)
 // that take in multiple props.
-const IndexPagePreview = ({ entry, widgetsFor }) => {
-  const customerLogos = [];
-  const customizationCards = [];
-  const configurationLogos = [];
+const IndexPagePreview = ({ entry }) => {
+  const entryCustomerLogos = entry.getIn(['data', 'customerLogos']);
+  const customerLogos = entryCustomerLogos ? entryCustomerLogos.toJS() : [];
 
-  // For each object/items in list customerLogos
-  widgetsFor('customerLogos').forEach(logo => {
-    if (logo === undefined) return;
-    customerLogos.push({
-      logo: logo.getIn(['data', 'logo']),
-    });
-  });
+  const entryCustomizationCards = entry.getIn([
+    'data',
+    'customization',
+    'cards',
+  ]);
+  const customizationCards = entryCustomizationCards
+    ? entryCustomizationCards.toJS()
+    : [];
 
-  // For each object/item in list configurationLogos
-  widgetsFor('configurationLogos').forEach(logo => {
-    if (logo === undefined) return;
-    configurationLogos.push({
-      logo: logo.getIn(['data', 'logo']),
-    });
-  });
-
-  // For each object/items in list customizationCards
-  widgetsFor('customizationCards').forEach(card => {
-    if (card === undefined) return;
-    customizationCards.push({
-      header: card.getIn(['data', 'header']),
-      description: card.getIn(['data', 'description']),
-      image: card.getIn(['data', 'image']),
-      features: card.getIn(['data', 'features']),
-    });
-  });
+  const entryConfigurationLogos = entry.getIn(['data', 'configurationLogos']);
+  const configurationLogos = entryConfigurationLogos
+    ? entryConfigurationLogos.toJS()
+    : [];
 
   // Create the data object IndexPage expects
   const data = {
@@ -52,7 +38,10 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
           header: entry.getIn(['data', 'featuredContent', 'header']),
           text: entry.getIn(['data', 'featuredContent', 'text']),
         },
-        customizationCards,
+        customization: {
+          header: entry.getIn(['data', 'customization', 'header']),
+          cards: customizationCards,
+        },
         solutionsContent: {
           firstCard: {
             image: entry.getIn([
