@@ -10,7 +10,7 @@ const LinkCard = ({ product, onClickFunction, sticky }) => {
       <img src={product.image} alt={product.title} />
       <div>
         <h4>{product.title}</h4>
-        <p>{product.description.slice(0, 140)}</p>
+        <p>{product.description && product.description.slice(0, 140)}</p>
       </div>
     </button>
   );

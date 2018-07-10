@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ProductPageTemplate } from '../../templates/productPage/index';
 
-const ProductPagePreview = ({ entry, widgetsFor }) => {
-  const features = [];
-  const products = [];
+const ProductPagePreview = ({ entry }) => {
 
-  const entryFeatures = entry.getIn(['data', 'investorPortal', 'features'])
-  console.log(entryFeatures.toJS())
+  const entryFeatures = entry.getIn(['data', 'investorPortal', 'features']);
+  const features = entryFeatures ? entryFeatures.toJS() : [];
 
-
+  const entryProducts = entry.getIn(['data', 'products']);
+  const products = entryProducts ? entryProducts.toJS() : [];
+  
   return (
     <ProductPageTemplate
       intro={{
@@ -20,9 +20,7 @@ const ProductPagePreview = ({ entry, widgetsFor }) => {
         description: entry.getIn(['data', 'investorPortal', 'description']),
         features,
       }}
-      products={{
-        products
-      }}
+      products={products}
     />
   )
 };
