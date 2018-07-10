@@ -13,7 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Text", name: "text", widget: "string"}
 
   - name: "norwegianPerks"
     label: "no/Perk"
@@ -22,7 +22,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Text", name: "text", widget: "string"}
 
   - name: "norwegian_employees"
     label: "no/Employee"

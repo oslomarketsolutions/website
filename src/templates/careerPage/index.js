@@ -54,11 +54,16 @@ export const CareerPageTemplate = ({
         <article className={styles.careerPerks}>
           <h3>{subHeader1}</h3>
           <div className={styles.perkCardContainer}>
-            {perkList.map(perk => {
-              const perkContent = perk.node.html;
-
-              return <PerkCard content={perkContent} color={color()} />;
-            })}
+            {perkList &&
+              perkList.map(perk => {
+                const {
+                  title: perkTitle,
+                  text: perkText,
+                } = perk.node.frontmatter;
+                return (
+                  <PerkCard title={perkTitle} text={perkText} color={color()} />
+                );
+              })}
           </div>
         </article>
         <article className={styles.careerJobVacancies}>
@@ -124,7 +129,10 @@ export const careerPageQuery = graphql`
     ) {
       edges {
         node {
-          html
+          frontmatter {
+            title
+            text
+          }
         }
       }
     }

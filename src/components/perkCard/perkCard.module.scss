@@ -8,16 +8,14 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
-  div {
-    text-align: center;
-
-    h3 {
-      font-size: 22px;
-      margin: 0;
-    }
-    p {
-      font-size: 18px;
-    }
+  h3 {
+    width: 100%;
+    font-size: 22px;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
   }
 }
