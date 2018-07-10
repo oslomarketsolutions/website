@@ -14,6 +14,7 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
   const customizationCards = [];
   const configurationLogos = [];
 
+  // For each object/items in list customerLogos
   widgetsFor('customerLogos').forEach(logo => {
     if (logo === undefined) return;
     customerLogos.push({
@@ -21,6 +22,7 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
     });
   });
 
+  // For each object/item in list configurationLogos
   widgetsFor('configurationLogos').forEach(logo => {
     if (logo === undefined) return;
     configurationLogos.push({
@@ -28,6 +30,7 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
     });
   });
 
+  // For each object/items in list customizationCards
   widgetsFor('customizationCards').forEach(card => {
     if (card === undefined) return;
     customizationCards.push({
@@ -38,6 +41,7 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
     });
   });
 
+  // Create the data object IndexPage expects
   const data = {
     markdownRemark: {
       frontmatter: {
@@ -96,13 +100,7 @@ const IndexPagePreview = ({ entry, widgetsFor }) => {
     },
   };
 
-  console.log(data);
-
-  return (
-    <div>
-      <IndexPage data={data} />
-    </div>
-  );
+  return <IndexPage data={data} />;
 };
 
 IndexPagePreview.propTypes = {
