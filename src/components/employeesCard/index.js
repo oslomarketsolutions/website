@@ -30,8 +30,8 @@ const EmployeeCard = props => {
     <section className={styles.EmployeeCard}>
       <img src={image} alt={name} />
       <section className={styles.header}>
-        <h2>{name}</h2>
-        <h3>{jobTitle}</h3>
+        <h3>{name}</h3>
+        <h4>{jobTitle}</h4>
         <figure>
           <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>

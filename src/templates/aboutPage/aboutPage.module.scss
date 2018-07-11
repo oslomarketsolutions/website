@@ -33,20 +33,18 @@
 }
 
 .aboutPage > section > h2 {
-  font-size: 2.6rem;
   text-align: left;
   margin: 0 0 16px;
 }
 
 @media (min-width: 1024px) {
   .aboutPage {
-    max-width: 1800px;
+    max-width: 1864px;
     padding: 0 32px;
     margin: 80px auto 0 auto;
 
     .aboutOms {
       article {
-        font-size: 2.2rem;
         width: 45%;
       }
 
@@ -57,11 +55,7 @@
   }
 
   .aboutPage > section {
-    margin: 260px 0;
-  }
-
-  .aboutPage > section > h2 {
-    font-size: 3.6rem;
+    margin: 275px 0;
   }
 }
 

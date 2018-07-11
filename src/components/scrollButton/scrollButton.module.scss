@@ -3,7 +3,7 @@ $textColorDark: #1c315b;
 .button {
   background: transparent;
   border: 2px solid $textColorDark;
-  padding: 10px;
+  padding: 7px;
   color: $textColorDark;
   border-radius: 50%;
   height: 40px;
@@ -11,18 +11,17 @@ $textColorDark: #1c315b;
   cursor: pointer;
 
   svg {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .button {
-    padding: 10px;
     height: 46px;
     width: 46px;
 
     svg {
-      font-size: 2rem;
+      font-size: 1.25rem;
     }
   }
 }

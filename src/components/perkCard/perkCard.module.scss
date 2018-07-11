@@ -1,7 +1,7 @@
 .perkCard {
   padding: 30px;
-  width: 220px;
-  height: 120px;
+  width: 286px;
+  height: 186px;
   margin: 0 0 32px;
   border: 2px solid;
   display: flex;
@@ -12,17 +12,18 @@
   div {
     text-align: center;
 
-    h3 {
-      font-size: 2.2rem;
+    h4 {
+      font-size: 1.375rem;
       margin: 0;
     }
     p {
-      font-size: 1.8rem;
+      font-size: 1.125rem;
+      margin: 22px 0;
     }
   }
 }
 
-@media (min-width: 632px) {
+@media (min-width: 636px) {
   .perkCard {
     margin: 0 auto 64px;
   }

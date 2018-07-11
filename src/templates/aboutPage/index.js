@@ -29,6 +29,7 @@ export const AboutPageTemplate = ({
           } = employee.node.frontmatter;
           return (
             <EmployeeCard
+              key={employeeName}
               name={employeeName}
               description={employeeDescription}
               jobTitle={employeeJobTitle}
@@ -47,7 +48,7 @@ AboutPageTemplate.propTypes = {
   image: PropTypes.string,
   text: PropTypes.string,
   header: PropTypes.string,
-  employeeList: PropTypes.arrayOf(PropTypes.string),
+  employeeList: PropTypes.arrayOf(PropTypes.object),
 };
 
 const AboutPage = ({ data }) => {

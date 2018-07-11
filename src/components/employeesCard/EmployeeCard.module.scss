@@ -1,3 +1,5 @@
+$textColorDark: #1c315b;
+
 .EmployeeCard {
   display: grid;
   grid-template-areas:
@@ -15,6 +17,7 @@
     width: 100%;
     height: 100%;
     grid-area: image;
+    object-fit: cover;
   }
 
   .header {
@@ -40,51 +43,43 @@
     justify-content: center;
   }
 
-  h2 {
-    font-size: 2.4rem;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     grid-area: name;
     align-self: end;
   }
 
-  h3 {
-    font-size: 1.8rem;
+  h4 {
+    font-size: 1.125rem;
     grid-area: title;
   }
 
-  h2,
-  h3 {
+  h3,
+  h4 {
     text-align: left;
-    margin: 0 20px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   p {
-    color: black;
+    color: $textColorDark;
     margin: 0 20px;
-    color: #5c5050;
   }
 }
 
 @media (max-width: 515px) {
   .EmployeeCard {
     grid-template-columns: auto;
-    grid-template-rows: 469px 135px 150px;
+    grid-template-rows: 400px 135px 150px;
     grid-template-areas:
       'image'
       'header'
       'description';
 
     img {
-      height: 470px;
-    }
-  }
-}
-
-@media (max-width: 375px) {
-  .EmployeeCard {
-    grid-template-rows: 369px 135px 150px;
-
-    img {
-      height: 370px;
+      height: 400px;
     }
   }
 }

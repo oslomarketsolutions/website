@@ -33,20 +33,20 @@ header {
       list-style-type: none;
 
       svg {
-        font-size: 3.2rem;
+        font-size: 2rem;
       }
     }
 
     li:last-of-type {
       svg {
         margin: 0 10px 1px 0;
-        font-size: 1.8rem;
+        font-size: 1.125rem;
       }
     }
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   a,
@@ -213,7 +213,7 @@ header {
         align-items: center;
         margin: 0;
         padding: 0;
-        font-size: 2rem;
+        // font-size: 2rem;
 
         li {
           padding-left: 12px;
@@ -289,6 +289,7 @@ header {
     }
 
     ul {
+      // margin: 0;
       padding: 0;
       position: absolute;
       top: 50%;
