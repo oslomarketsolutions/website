@@ -1,0 +1,59 @@
+$textColorDark: #1c315b;
+
+.sticky {
+  display: flex;
+  flex-flow: row wrap;
+  background: none;
+  border: 2px solid $textColorDark;
+  padding: 0;
+  color: $textColorDark;
+  height: 100px;
+  width: 300px;
+  cursor: pointer;
+
+  img {
+    margin: 0px 10px;
+    justify-content: flex-start;
+    width: 100px;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin: auto;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+.notSticky {
+  display: flex;
+  flex-flow: row wrap;
+  background: none;
+  padding: 0;
+  margin: 20px;
+  color: $textColorDark;
+  height: 200px;
+  width: 600px;
+  cursor: pointer;
+  text-align: left;
+
+  div {
+    width: 50%;
+  }
+
+  img {
+    justify-content: flex-start;
+    margin-right: 10px;
+    width: 180px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+}
