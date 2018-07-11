@@ -18,54 +18,56 @@ const IndexPage = ({ data }) => {
   };
 
   return (
-    <div className={styles.homePage}>
-      <section className={styles.animation}>
-        <button className={styles.scrollButton} onClick={onScrollButtonClick}>
-          <FontAwesomeIcon icon={caretDown} size="2x" />
-        </button>
-        <img src={topImage} alt={topImage} />
-      </section>
-      <section className={styles.configurationLogos}>
-        {configurationLogos.map(configurationLogo => (
-          <img src={configurationLogo.logo} alt={configurationLogo.logo} />
-        ))}
-      </section>
-      <section className={styles.featuredCase}>
-        <div>
-          <img src={featuredContent.image} alt={featuredContent.image} />
-          <h2>{featuredContent.header}</h2>
-          <p>{featuredContent.text}</p>
-        </div>
-      </section>
-      <section className={styles.customizationCards}>
-        <article>Kort 1</article>
-        <article>Kort 2</article>
-        <article>Kort 3</article>
-      </section>
-      <section className={styles.solutions}>
-        <article>
-          <img
-            src={solutionsContent.firstCard.image}
-            alt={solutionsContent.firstCard.image}
-          />
-          <h2> {solutionsContent.firstCard.header} </h2>
-          <p> {solutionsContent.firstCard.text} </p>
-        </article>
-        <article>
-          <img
-            src={solutionsContent.secondCard.image}
-            alt={solutionsContent.secondCard.image}
-          />
-          <h2> {solutionsContent.secondCard.header} </h2>
-          <p> {solutionsContent.secondCard.text} </p>
-        </article>
-      </section>
-      <section className={styles.customerLogos}>
-        {customerLogos.map(customerLogo => (
-          <img src={customerLogo.logo} alt={customerLogo.logo} />
-        ))}
-      </section>
-    </div>
+    <main>
+      <div className={styles.homePage}>
+        <section className={styles.animation}>
+          <button className={styles.scrollButton} onClick={onScrollButtonClick}>
+            <FontAwesomeIcon icon={caretDown} size="2x" />
+          </button>
+          <img src={topImage} alt={topImage} />
+        </section>
+        <section className={styles.configurationLogos}>
+          {configurationLogos.map(configurationLogo => (
+            <img src={configurationLogo.logo} alt={configurationLogo.logo} />
+          ))}
+        </section>
+        <section className={styles.featuredCase}>
+          <div>
+            <img src={featuredContent.image} alt={featuredContent.image} />
+            <h2>{featuredContent.header}</h2>
+            <p>{featuredContent.text}</p>
+          </div>
+        </section>
+        <section className={styles.customizationCards}>
+          <article>Kort 1</article>
+          <article>Kort 2</article>
+          <article>Kort 3</article>
+        </section>
+        <section className={styles.solutions}>
+          <article>
+            <img
+              src={solutionsContent.firstCard.image}
+              alt={solutionsContent.firstCard.image}
+            />
+            <h2> {solutionsContent.firstCard.header} </h2>
+            <p> {solutionsContent.firstCard.text} </p>
+          </article>
+          <article>
+            <img
+              src={solutionsContent.secondCard.image}
+              alt={solutionsContent.secondCard.image}
+            />
+            <h2> {solutionsContent.secondCard.header} </h2>
+            <p> {solutionsContent.secondCard.text} </p>
+          </article>
+        </section>
+        <section className={styles.customerLogos}>
+          {customerLogos.map(customerLogo => (
+            <img src={customerLogo.logo} alt={customerLogo.logo} />
+          ))}
+        </section>
+      </div>
+    </main>
   );
 };
 
