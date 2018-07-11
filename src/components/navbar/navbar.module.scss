@@ -1,4 +1,5 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
+
 $duration: 0.2s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -98,7 +99,7 @@ header {
       width: 100%;
       max-width: 30px;
       height: 2px;
-      background-color: $textColorDark;
+      background-color: $darkBlue;
       transform-origin: center;
       transition: all 0.3s ease;
     }
@@ -166,7 +167,7 @@ header {
           left: 0;
           right: 0;
           height: 2px;
-          background-color: $textColorDark;
+          background-color: $darkBlue;
         }
         &:before {
           opacity: 0;
@@ -229,11 +230,11 @@ header {
         }
 
         li.borderLeft {
-          border-left: 2px solid $textColorDark;
+          border-left: 2px solid $darkBlue;
         }
 
         li.borderRight {
-          border-right: 2px solid $textColorDark;
+          border-right: 2px solid $darkBlue;
         }
       }
     }
@@ -263,7 +264,7 @@ header {
       width: 100%;
       max-width: 30px;
       height: 2px;
-      background-color: $textColorDark;
+      background-color: $darkBlue;
       transform-origin: center;
       transition: all 0.3s ease;
     }
@@ -285,7 +286,7 @@ header {
       visibility: visible;
       opacity: 1;
       transition: visibility 0s linear 0s, opacity 0.2s ease;
-      background: $textColorDark;
+      background: $darkBlue;
     }
 
     ul {

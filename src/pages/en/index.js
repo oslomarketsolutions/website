@@ -35,12 +35,12 @@ const IndexPage = ({ data }) => {
             ))}
         </section>
         <section className={styles.featuredCase}>
-          <h3>{featuredContent.header}</h3>
+          <h2>{featuredContent.header}</h2>
           <p>{featuredContent.text}</p>
           <img src={featuredContent.image} alt={featuredContent.image} />
         </section>
         <section className={styles.customization}>
-          <h3>{solutionsContent.header}</h3>
+          <h2>{solutionsContent.header}</h2>
           <section className={styles.customizationCards}>
             {customizationCards.map(customizationCard => (
               <FeatureCard

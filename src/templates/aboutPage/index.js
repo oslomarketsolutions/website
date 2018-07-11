@@ -14,7 +14,7 @@ export const AboutPageTemplate = ({
     <div className={styles.aboutPage}>
       <section className={styles.aboutOms}>
         <h2>{title}</h2>
-        <article>{text}</article>
+        <p>{text}</p>
         <img src={image} alt="" />
       </section>
       <section className={styles.aboutEmployees}>

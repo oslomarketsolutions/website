@@ -7,7 +7,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
 
-    article {
+    p {
       display: flex;
       align-items: center;
       width: 100%;
@@ -43,7 +43,7 @@
     margin: 80px auto 0 auto;
 
     .aboutOms {
-      article {
+      p {
         width: 45%;
       }
 

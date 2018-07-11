@@ -1,7 +1,7 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
 
 .footer {
-  background-color: #f1f3f5;
+  background-color: $footerBackgroundColor;
 
   a,
   a:link,
@@ -27,7 +27,7 @@ $textColorDark: #1c315b;
     font-size: 1.125rem;
     margin: 18px 0;
     padding-bottom: 8px;
-    border-bottom: 1px solid $textColorDark;
+    border-bottom: 1px solid $darkBlue;
   }
 
   .footerContainer {
@@ -60,7 +60,7 @@ $textColorDark: #1c315b;
   .socialMedia {
     width: 100%;
     padding: 32px 0;
-    border-top: 1px solid $textColorDark;
+    border-top: 1px solid $darkBlue;
 
     ul {
       display: flex;
@@ -87,7 +87,7 @@ $textColorDark: #1c315b;
     width: 100%;
     padding: 0 0 16px 0;
     font-size: 0.75rem;
-    color: #808080;
+    color: $copyrightColor;
 
     p {
       margin: 0;

@@ -42,12 +42,12 @@ export const CareerPageTemplate = ({
       <section className={styles.careerOms}>
         <h2>{title}</h2>
         <img src={image1} alt="" />
-        <article>{text1}</article>
+        <p>{text1}</p>
       </section>
       <section className={styles.whyOms}>
         <h2>{header}</h2>
         <img src={image2} alt="" />
-        <article>{text2}</article>
+        <p>{text2}</p>
       </section>
       <section className={styles.careerPerks}>
         <h3>{subHeader1}</h3>

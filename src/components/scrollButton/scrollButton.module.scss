@@ -1,10 +1,10 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
 
 .button {
   background: transparent;
-  border: 2px solid $textColorDark;
+  border: 2px solid $darkBlue;
   padding: 7px;
-  color: $textColorDark;
+  color: $darkBlue;
   border-radius: 50%;
   height: 40px;
   width: 40px;
