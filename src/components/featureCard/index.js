@@ -12,7 +12,7 @@ const FeatureCard = props => {
         <img src={image} alt={title} />
       </section>
       <section className={styles.header}>
-        <h3>{title}</h3>
+        <h4>{title}</h4>
       </section>
       <section className={styles.description}>
         <p>{description}</p>

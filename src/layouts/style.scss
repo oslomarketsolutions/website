@@ -1,11 +1,10 @@
-$textColorDark: #1c315b;
+@import '../layouts/variables';
 
 html {
   overflow-y: initial;
 
   body {
-    font-family: 'Noto Sans', sans-serif;
-    color: $textColorDark;
+    color: $darkBlue;
     margin: 0;
 
     main {
