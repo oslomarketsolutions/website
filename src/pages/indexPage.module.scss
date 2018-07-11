@@ -72,7 +72,7 @@
       font-size: 2.2rem;
     }
 
-    img {
+    .imageContainer {
       width: 50%;
     }
   }
@@ -110,10 +110,8 @@
       width: 800px;
       margin: 20px;
 
-      img {
+      .imageContainer {
         height: 50%;
-        width: 100%;
-        object-fit: cover;
       }
 
       h4 {

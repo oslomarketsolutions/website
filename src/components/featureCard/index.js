@@ -12,7 +12,11 @@ const FeatureCard = props => {
   return (
     <Link to={link} className={styles.FeatureCard}>
       <section className={styles.image}>
-        <Img sizes={findImageSize(image, imageSizes)} />
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          style={{ height: '100%', width: '100%' }}
+          sizes={findImageSize(image, imageSizes)}
+        />
       </section>
       <section className={styles.header}>
         <h4>{title}</h4>

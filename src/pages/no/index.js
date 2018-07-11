@@ -48,7 +48,10 @@ const IndexPage = ({ data }) => {
       <section className={styles.featuredCase}>
         <h3>{featuredContent.header}</h3>
         <p>{featuredContent.text}</p>
-        <img src={featuredContent.image} alt={featuredContent.image} />
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          sizes={findImageSize(featuredContent.image, imageSizes)}
+        />
       </section>
       <section className={styles.customization}>
         <h3>{solutionsContent.header}</h3>
@@ -67,17 +70,19 @@ const IndexPage = ({ data }) => {
 
       <section className={styles.solutions}>
         <article className={styles.solution}>
-          <img
-            src={solutionsContent.firstCard.image}
-            alt={solutionsContent.firstCard.image}
+          <Img
+            outerWrapperClassName={styles.imageContainer}
+            style={{ height: '100%', width: '100%' }}
+            sizes={findImageSize(solutionsContent.firstCard.image, imageSizes)}
           />
           <h4> {solutionsContent.firstCard.header} </h4>
           <p> {solutionsContent.firstCard.text} </p>
         </article>
         <article className={styles.solution}>
-          <img
-            src={solutionsContent.secondCard.image}
-            alt={solutionsContent.secondCard.image}
+          <Img
+            outerWrapperClassName={styles.imageContainer}
+            style={{ height: '100%', width: '100%' }}
+            sizes={findImageSize(solutionsContent.secondCard.image, imageSizes)}
           />
           <h4> {solutionsContent.secondCard.header} </h4>
           <p> {solutionsContent.secondCard.text} </p>
