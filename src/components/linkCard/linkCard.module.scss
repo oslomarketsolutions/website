@@ -1,29 +1,23 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
 
 .sticky {
   display: flex;
   flex-flow: row wrap;
   background: none;
-  border: 2px solid $textColorDark;
+  border: 2px solid $darkBlue;
   padding: 0;
-  color: $textColorDark;
+  color: $darkBlue;
   height: 100px;
   width: 300px;
+  justify-content: center;
   cursor: pointer;
-
-  img {
-    margin: 0px 10px;
-    justify-content: flex-start;
-    width: 100px;
-    height: 100%;
-    object-fit: contain;
-  }
 
   h4 {
     font-size: 18px;
     margin: auto;
   }
 
+  .imageContainer,
   p {
     display: none;
   }
@@ -33,27 +27,29 @@ $textColorDark: #1c315b;
   display: flex;
   flex-flow: row wrap;
   background: none;
+  border: none;
+  outline: solid 2px $darkBlue;
   padding: 0;
   margin: 20px;
-  color: $textColorDark;
-  height: 200px;
-  width: 600px;
+  color: $darkBlue;
+  height: 100px;
+  width: 400px;
   cursor: pointer;
   text-align: left;
-
-  div {
-    width: 50%;
+  &:hover {
+    background-color: $darkBlue;
+    color: white;
   }
 
-  img {
-    justify-content: flex-start;
-    margin-right: 10px;
-    width: 180px;
-    height: 100%;
-    object-fit: cover;
+  .imageContainer {
+    width: 150px;
+    height: 100px;
   }
 
-  h4 {
-    font-size: 24px;
+  .textContainer {
+    h4 {
+      padding-left: 20px;
+      font-size: 24px;
+    }
   }
 }
