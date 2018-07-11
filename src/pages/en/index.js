@@ -55,20 +55,20 @@ const IndexPage = ({ data }) => {
       </section>
 
       <section className={styles.solutions}>
-        <article>
+        <article className={styles.solution}>
           <img
             src={solutionsContent.firstCard.image}
             alt={solutionsContent.firstCard.image}
           />
-          <h2> {solutionsContent.firstCard.header} </h2>
+          <h4> {solutionsContent.firstCard.header} </h4>
           <p> {solutionsContent.firstCard.text} </p>
         </article>
-        <article>
+        <article className={styles.solution}>
           <img
             src={solutionsContent.secondCard.image}
             alt={solutionsContent.secondCard.image}
           />
-          <h2> {solutionsContent.secondCard.header} </h2>
+          <h4> {solutionsContent.secondCard.header} </h4>
           <p> {solutionsContent.secondCard.text} </p>
         </article>
       </section>
@@ -93,7 +93,7 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query EnIndexQuery {
+  query EngIndexQuery {
     markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
       frontmatter {
         topImage
