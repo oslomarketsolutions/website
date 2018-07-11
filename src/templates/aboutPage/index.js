@@ -25,24 +25,25 @@ export const AboutPageTemplate = ({
       </article>
       <article className={styles.aboutEmployees}>
         <h2>{header2}</h2>
-        {employeeList.map(employee => {
-          const {
-            title: employeeName,
-            description: employeeDescription,
-            jobTitle: employeeJobTitle,
-            image: employeeImage,
-            jobType: employeeJobType,
-          } = employee.node.frontmatter;
-          return (
-            <EmployeeCard
-              name={employeeName}
-              description={employeeDescription}
-              jobTitle={employeeJobTitle}
-              image={employeeImage}
-              jobType={employeeJobType}
-            />
-          );
-        })}
+        {employeeList &&
+          employeeList.map(employee => {
+            const {
+              title: employeeName,
+              description: employeeDescription,
+              jobTitle: employeeJobTitle,
+              image: employeeImage,
+              jobType: employeeJobType,
+            } = employee.node.frontmatter;
+            return (
+              <EmployeeCard
+                name={employeeName}
+                description={employeeDescription}
+                jobTitle={employeeJobTitle}
+                image={employeeImage}
+                jobType={employeeJobType}
+              />
+            );
+          })}
       </article>
     </div>
   </main>
