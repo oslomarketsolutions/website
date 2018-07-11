@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Content, { HTMLContent } from '../../components/Content';
 import styles from './perkCard.module.scss';
 
-const PerkCard = ({ content, color }) => {
-  const PageContent = HTMLContent || Content;
-
-  return (
-    <section className={styles.perkCard} style={{ borderColor: color }}>
-      <PageContent content={content} />
-    </section>
-  );
-};
+const PerkCard = ({ title, text, color }) => (
+  <section className={styles.perkCard} style={{ borderColor: color }}>
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </section>
+);
 
 PerkCard.propTypes = {
-  content: PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.string,
   color: PropTypes.string,
 };
 
