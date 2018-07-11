@@ -1,39 +1,33 @@
 /* Very temporary css */
+@import '../layouts/variables';
 
 .homePage {
-  width: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(121, 145, 211);
-
-  img {
-    width: 300px;
-    height: auto;
-  }
+  background-color: $darkBlue;
+  color: white;
 
   .animation {
-    width: 2560px;
-    height: 88vh;
+    width: 100%;
+    height: calc(100vh - 104px); // Take up full height minus navbar
     margin: 0;
     padding: 0;
     overflow: hidden;
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
     .scrollButton {
       position: absolute;
-      left: 50%;
-      right: 50%;
-      bottom: 20px;
-
       width: 50px;
       height: 50px;
+      bottom: 20px;
+      left: 50%;
+      margin: 0px -25px;
       background-color: white;
       border-radius: 50px;
-      box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
       text-align: center;
-      transition: transform 0.2s;
       svg {
         color: #b2cfae;
         margin-top: 10px;
@@ -52,34 +46,92 @@
     flex-flow: row wrap;
     justify-content: space-around;
     height: 200px;
-    width: 1800px;
-    margin: auto;
-    border: solid yellow;
-  }
+    width: 100%;
+    background-color: white;
 
-  .featuredCase {
-    height: 500px;
-    width: 1800px;
-    margin: auto;
-    border: solid black;
-
-    h2 {
-      margin: 0;
+    img {
+      height: 100%;
     }
   }
 
-  .customizationCards {
-    height: 500px;
-    width: 1800px;
+  .featuredCase {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    max-width: 1800px;
     margin: auto;
-    border: solid blue;
+    padding: 100px 0;
+
+    h3 {
+      margin-top: 0;
+      font-size: 6.4rem;
+    }
+
+    p {
+      width: 50%;
+      font-size: 2.2rem;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .customization {
+    background-color: white;
+    padding: 100px 0;
+
+    h3 {
+      margin-bottom: 20px;
+      color: $darkBlue;
+      font-size: 6.4rem;
+      text-align: center;
+    }
+    .customizationCards {
+      padding: 50px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+    }
   }
 
   .solutions {
-    height: 500px;
-    width: 1800px;
-    margin: auto;
-    border: solid blue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 100px 0;
+
+    .solution {
+      background-color: lightgrey;
+      height: 600px;
+      width: 800px;
+      margin: 20px;
+
+      img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      h4 {
+        background-color: #224466;
+        margin-top: -10px; // Some weird margin/padding between the img and h4
+        margin-bottom: 20px;
+        font-size: 4.4rem;
+        padding-left: 20px;
+        border-bottom: solid green;
+      }
+
+      p {
+        margin: 0;
+        padding: 20px;
+        font-size: 2.2rem;
+        color: $darkBlue;
+      }
+    }
   }
 
   .customerLogos {
@@ -87,8 +139,12 @@
     flex-flow: row wrap;
     justify-content: space-around;
     height: 200px;
-    width: 1800px;
+    width: 100%;
     margin: auto;
-    border: solid blue;
+    background-color: white;
+
+    img {
+      height: 100%;
+    }
   }
 }

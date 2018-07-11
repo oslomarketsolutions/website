@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import '../layouts/variables';
 
-$textColorDark: #1c315b;
+html {
+  font-size: 10px;
 
-body {
-  font-family: 'Noto Sans', sans-serif;
-  line-height: 1.6;
-  color: $textColorDark;
-  margin: 0;
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+    color: $darkBlue;
+    margin: 0;
 
-  main {
-    overflow: hidden;
+    main {
+      overflow: hidden;
 
-    h2,
-    h3 {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 2em;
+      h2,
+      h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2em;
+      }
     }
   }
 }
