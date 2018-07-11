@@ -1,6 +1,4 @@
 ---
-title: 'Perk2: Flextid'
+title: 'Flextid'
+text: 'Jobb når det passer deg'
 ---
-
-####Flextid
-Jobb når det passer deg

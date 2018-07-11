@@ -1,6 +1,4 @@
 ---
-title: 'Perk3: Betalt telefon'
+title: 'Betalt telefon'
+text: 'Vi betaler telefonregningen din'
 ---
-
-####Betalt telefon
-Vi betaler telefonregningen din

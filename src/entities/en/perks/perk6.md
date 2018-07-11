@@ -1,6 +1,4 @@
 ---
-title: 'Perk6: Apartments'
+title: 'Apartments'
+text: 'Located in Villefranche and Albir'
 ---
-
-####Apartments
-Located in Villefranche and Albir

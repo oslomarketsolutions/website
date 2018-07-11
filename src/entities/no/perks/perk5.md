@@ -1,6 +1,4 @@
 ---
-title: 'Perk5: Firmahytter'
+title: 'Firmahytter'
+text: 'I Trysil og Nesbyen'
 ---
-
-####Firmahytter
-I Trysil og Nesbyen

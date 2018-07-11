@@ -1,6 +1,4 @@
 ---
-title: 'Perk6: Leiligheter'
+title: 'Leiligheter'
+text: 'I Villefranche og Albir'
 ---
-
-####Leiligheter
-I Villefranche og Albir

@@ -1,6 +1,4 @@
 ---
-title: 'Perk4: Kantine'
+title: 'Kantine'
+text: 'Serverer både lunsj og frokost'
 ---
-
-####Kantine
-Serverer både lunsj og frokost

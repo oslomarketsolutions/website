@@ -1,6 +1,4 @@
 ---
-title: 'Perk1: Personalforsikring'
+title: 'Personalforsikring'
+text: 'Hos oss er alle forsikret'
 ---
-
-####Personalforsikring
-Hos oss er alle forsikret
