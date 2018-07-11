@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     topImage,
     configurationLogos,
     featuredContent,
-    customizationCards,
+    customization,
     solutionsContent,
     customerLogos,
   } = data.markdownRemark.frontmatter;
@@ -35,24 +35,24 @@ const IndexPage = ({ data }) => {
             ))}
         </section>
         <section className={styles.featuredCase}>
-          <h3>{featuredContent.header}</h3>
+          <h2>{featuredContent.header}</h2>
           <p>{featuredContent.text}</p>
           <img src={featuredContent.image} alt={featuredContent.image} />
         </section>
         <section className={styles.customization}>
-          <h3>{solutionsContent.header}</h3>
+          <h2>{customization.header}</h2>
           <section className={styles.customizationCards}>
-            {customizationCards.map(customizationCard => (
-              <FeatureCard
-                title={customizationCard.header}
-                description={customizationCard.description}
-                features={customizationCard.features}
-                image={customizationCard.image}
-              />
-            ))}
+            {customization.cards &&
+              customization.cards.map(customizationCard => (
+                <FeatureCard
+                  title={customizationCard.header}
+                  description={customizationCard.description}
+                  features={customizationCard.features}
+                  image={customizationCard.image}
+                />
+              ))}
           </section>
         </section>
-
         <section className={styles.solutions}>
           <article className={styles.solution}>
             <img
@@ -102,18 +102,20 @@ export const pageQuery = graphql`
           image
           text
         }
-        customizationCards {
+        customization {
           header
-          description
-          image
-          features
+          cards {
+            header
+            description
+            image
+            features
+          }
         }
 
         configurationLogos {
           logo
         }
         solutionsContent {
-          header
           firstCard {
             image
             header
