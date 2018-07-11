@@ -18,7 +18,7 @@ export const AboutPageTemplate = ({
         <img src={image} alt="" />
       </section>
       <section className={styles.aboutEmployees}>
-        <h2>{header2}</h2>
+        <h2>{header}</h2>
         {employeeList &&
           employeeList.map(employee => {
             const {
