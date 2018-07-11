@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     topImage,
     configurationLogos,
     featuredContent,
-    customizationCards,
+    customization,
     solutionsContent,
     customerLogos,
   } = data.markdownRemark.frontmatter;
@@ -27,28 +27,32 @@ const IndexPage = ({ data }) => {
         </button>
         <img src={topImage} alt={topImage} />
       </section>
+
       <section className={styles.configurationLogos}>
         {configurationLogos &&
           configurationLogos.map(configurationLogo => (
             <img src={configurationLogo.logo} alt={configurationLogo.logo} />
           ))}
       </section>
+
       <section className={styles.featuredCase}>
         <h3>{featuredContent.header}</h3>
         <p>{featuredContent.text}</p>
         <img src={featuredContent.image} alt={featuredContent.image} />
       </section>
+
       <section className={styles.customization}>
-        <h3>{solutionsContent.header}</h3>
+        <h3>{customization.header}</h3>
         <section className={styles.customizationCards}>
-          {customizationCards.map(customizationCard => (
-            <FeatureCard
-              title={customizationCard.header}
-              description={customizationCard.description}
-              features={customizationCard.features}
-              image={customizationCard.image}
-            />
-          ))}
+          {customization.cards &&
+            customization.cards.map(customizationCard => (
+              <FeatureCard
+                title={customizationCard.header}
+                description={customizationCard.description}
+                features={customizationCard.features}
+                image={customizationCard.image}
+              />
+            ))}
         </section>
       </section>
 
@@ -70,6 +74,7 @@ const IndexPage = ({ data }) => {
           <p> {solutionsContent.secondCard.text} </p>
         </article>
       </section>
+
       <section className={styles.customerLogos}>
         {customerLogos &&
           customerLogos.map(customerLogo => (
@@ -100,18 +105,20 @@ export const pageQuery = graphql`
           image
           text
         }
-        customizationCards {
+        customization {
           header
-          description
-          image
-          features
+          cards {
+            header
+            description
+            image
+            features
+          }
         }
 
         configurationLogos {
           logo
         }
         solutionsContent {
-          header
           firstCard {
             image
             header
