@@ -7,7 +7,7 @@
     background-color: white;
     h2 {
       color: #1c315b;
-      font-size: 72px;
+      font-size: 7.2rem;
       padding-left: 10%;
     }
 
@@ -16,7 +16,7 @@
       // Ensuring the sticky menu is on top
       z-index: 1000;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: center;
       position: fixed;
       top: -200px;
@@ -67,7 +67,6 @@
       line-height: 1.5em;
     }
 
-
     .investor {
       // This fixes scrollIntoViewIfNeeded scrolling too far
       padding-top: 100px;
@@ -81,7 +80,6 @@
       .imageContainer {
         width: 40%;
       }
-
 
       h3 {
         font-size: 64px;

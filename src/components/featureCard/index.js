@@ -4,13 +4,15 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styles from './FeatureCard.module.scss';
 
+import { findImageSize } from '../helperFunctions';
+
 const FeatureCard = props => {
   // link should be the slug for whatever the featurecard is linking to
-  const { title, description, resolutions, features, link = '' } = props;
+  const { title, description, image, imageSizes, features, link = '' } = props;
   return (
     <Link to={link} className={styles.FeatureCard}>
       <section className={styles.image}>
-        <Img resolutions={resolutions} />
+        <Img sizes={findImageSize(image, imageSizes)} />
       </section>
       <section className={styles.header}>
         <h4>{title}</h4>
@@ -33,7 +35,8 @@ FeatureCard.propTypes = {
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
   link: PropTypes.string,
-  resolutions: PropTypes.objectOf(
+  image: PropTypes.string,
+  imageSizes: PropTypes.objectOf(
     PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   ),
 };

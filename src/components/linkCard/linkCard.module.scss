@@ -1,23 +1,21 @@
-@import '../../layouts/variables';
+$textColorDark: #1c315b;
 
-.stickyCard {
+.sticky {
   display: flex;
-  flex-flow: column-reverse wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row wrap;
   background: none;
-  border: 2px solid $darkBlue;
+  border: 2px solid $textColorDark;
   padding: 0;
-  color: $darkBlue;
+  color: $textColorDark;
   height: 100px;
   width: 300px;
   cursor: pointer;
 
   img {
     margin: 0px 10px;
+    justify-content: flex-start;
     width: 100px;
-    height: 70%;
+    height: 100%;
     object-fit: contain;
   }
 
@@ -31,13 +29,13 @@
   }
 }
 
-.notStickyCard {
+.notSticky {
   display: flex;
   flex-flow: row wrap;
   background: none;
   padding: 0;
   margin: 20px;
-  color: $darkBlue;
+  color: $textColorDark;
   height: 200px;
   width: 600px;
   cursor: pointer;

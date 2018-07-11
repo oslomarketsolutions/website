@@ -6,8 +6,6 @@ import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
 import { findImageSize } from '../../components/helperFunctions';
 
-const _ = require('lodash');
-
 export const AboutPageTemplate = ({
   title,
   header1,
@@ -62,6 +60,7 @@ AboutPageTemplate.propTypes = {
   text: PropTypes.string,
   header2: PropTypes.string,
   employeeList: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const AboutPage = ({ data }) => {

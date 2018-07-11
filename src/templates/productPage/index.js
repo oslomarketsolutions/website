@@ -42,7 +42,8 @@ export class ProductPageTemplate extends Component {
         title: PropTypes.string,
       }),
     ),
-    imageSizes: PropTypes.arrayOf(PropTypes.object)
+    imageSizes: PropTypes.arrayOf(PropTypes.object),
+    imageResolutions: PropTypes.arrayOf(PropTypes.object),
   };
 
   scrollToRef = ref => {
@@ -55,7 +56,13 @@ export class ProductPageTemplate extends Component {
   };
 
   render() {
-    const { intro, investorPortal, products, imageSizes } = this.props;
+    const {
+      intro,
+      investorPortal,
+      products,
+      imageSizes,
+      imageResolutions,
+    } = this.props;
 
     const linkCards = (stickyMenu, inView) => {
       let className = styles.notStickyMenu;
@@ -76,14 +83,14 @@ export class ProductPageTemplate extends Component {
             product={investorPortal}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
-            imageSizes={imageSizes}
+            imageResolutions={imageResolutions}
           />
           {products.map(product => (
             <LinkCard
               product={product}
               onClickFunction={this.scrollToRef}
               sticky={stickyMenu}
-              imageSizes={imageSizes}
+              imageResolutions={imageResolutions}
             />
           ))}
         </div>
@@ -117,12 +124,13 @@ export class ProductPageTemplate extends Component {
           <div className={styles.investor}>
             <h3>{investorPortal.title}</h3>
             <p>{investorPortal.description}</p>
-            <div className={styles.imageContainer}>
-              {
-                investorPortal.image &&
-                <Img sizes={findImageSize(investorPortal.image, imageSizes)}/>
-              }
-            </div>
+            {investorPortal.image && (
+              <Img
+                outerWrapperClassName={styles.imageContainer}
+                style={{ height: '100%', width: '100%' }}
+                sizes={findImageSize(investorPortal.image, imageSizes)}
+              />
+            )}
           </div>
           {investorPortal.features &&
             investorPortal.features.map(feature => (
@@ -156,15 +164,16 @@ export class ProductPageTemplate extends Component {
 }
 
 const ProductPage = ({ data }) => {
-  console.log(data)
   const page = data.page.frontmatter;
   const imageSizes = data.imageSizes.edges;
+  const imageResolutions = data.imageResolutions.edges;
   return (
     <ProductPageTemplate
       intro={page.intro}
       investorPortal={page.investorPortal}
       products={page.products}
       imageSizes={imageSizes}
+      imageResolutions={imageResolutions}
     />
   );
 };
@@ -208,15 +217,28 @@ export const productPageQuery = graphql`
       }
     }
 
-    imageSizes: allFile(
-      filter: { absolutePath: { regex: "/static/img/" } }
-    ) {
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
       edges {
         node {
           relativePath
           childImageSharp {
             sizes(maxWidth: 1440) {
               ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+
+    imageResolutions: allFile(
+      filter: { absolutePath: { regex: "/static/img/" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            resolutions(width: 150, height: 100) {
+              ...GatsbyImageSharpResolutions
             }
           }
         }
