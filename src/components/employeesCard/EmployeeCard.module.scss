@@ -1,3 +1,5 @@
+$textColorDark: #1c315b;
+
 .EmployeeCard {
   display: grid;
   grid-template-areas:
@@ -8,13 +10,14 @@
   width: 565px;
   transition: 0.3s;
   color: white;
-  box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 4em;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
+  margin-bottom: 64px;
 
   img {
     width: 100%;
     height: 100%;
     grid-area: image;
+    object-fit: cover;
   }
 
   .header {
@@ -40,27 +43,44 @@
     justify-content: center;
   }
 
-  h2 {
-    font-size: 24px;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     grid-area: name;
     align-self: end;
   }
 
-  h3 {
-    font-size: 18px;
+  h4 {
+    font-size: 1.125rem;
     grid-area: title;
   }
 
-  h2,
-  h3 {
+  h3,
+  h4 {
     text-align: left;
-    margin: 0 20px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   p {
-    color: black;
+    color: $textColorDark;
     margin: 0 20px;
-    line-height: 1.5em;
-    color: #5c5050;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .EmployeeCard {
+    grid-template-columns: auto;
+    grid-template-rows: 400px 135px 150px;
+    grid-template-areas:
+      'image'
+      'header'
+      'description';
+
+    img {
+      height: 400px;
+    }
   }
 }

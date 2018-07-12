@@ -1,6 +1,4 @@
 ---
-title: 'Perk7: Social events'
+title: 'Social events'
+text: 'Annual social events with the entire group'
 ---
-
-###Social events
-Annual social events with the entire group

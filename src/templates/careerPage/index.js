@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Content, { HTMLContent } from '../../components/Content';
 import PerkCard from '../../components/perkCard';
-import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 
 let colorCounter = 0;
@@ -28,52 +26,60 @@ const color = () => {
 };
 
 export const CareerPageTemplate = ({
-  content,
   title,
-  text,
-  image,
+  image1,
+  text1,
+  header,
+  image2,
+  text2,
   subHeader1,
   subHeader2,
   perkList,
-}) => {
-  const PageContent = HTMLContent || Content;
-
-  return (
-    <main>
-      <div className={styles.careerPage}>
-        <article className={styles.careerOms}>
-          <h2>{title}</h2>
-          <section>{text}</section>
-          <img src={image} alt="" />
-        </article>
-        <article>
-          <PageContent content={content} />
-        </article>
-        <article className={styles.careerPerks}>
-          <h3>{subHeader1}</h3>
-          <div className={styles.perkCardContainer}>
-            {perkList &&
-              perkList.map(perk => {
-                const perkContent = perk.node.html;
-
-                return <PerkCard content={perkContent} color={color()} />;
-              })}
-          </div>
-        </article>
-        <article className={styles.careerJobVacancies}>
-          {/* Her skal iFramen med ledige stillinger være */}
-          <h2>{subHeader2}</h2>
-        </article>
-      </div>
-    </main>
-  );
-};
+}) => (
+  <main>
+    <div className={styles.careerPage}>
+      <section className={styles.careerOms}>
+        <h2>{title}</h2>
+        <img src={image1} alt="" />
+        <p>{text1}</p>
+      </section>
+      <section className={styles.whyOms}>
+        <h2>{header}</h2>
+        <img src={image2} alt="" />
+        <p>{text2}</p>
+      </section>
+      <section className={styles.careerPerks}>
+        <h3>{subHeader1}</h3>
+        <div className={styles.perkCardContainer}>
+          {perkList.map(perk => {
+            const { title: perkTitle, text: perkText } = perk.node.frontmatter;
+            return (
+              <PerkCard
+                key={perkTitle}
+                title={perkTitle}
+                text={perkText}
+                color={color()}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section className={styles.careerJobVacancies}>
+        {/* Her skal iFramen med ledige stillinger være */}
+        <h2>{subHeader2}</h2>
+        <div className={styles.jobVacanciesContainer} />
+      </section>
+    </div>
+  </main>
+);
 
 CareerPageTemplate.propTypes = {
-  content: PropTypes.string,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string,
-  image: PropTypes.string,
+  image1: PropTypes.string,
+  text1: PropTypes.string,
+  header: PropTypes.string,
+  image2: PropTypes.string,
+  text2: PropTypes.string,
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
   perkList: PropTypes.arrayOf(PropTypes.object),
@@ -86,10 +92,12 @@ const CareerPage = ({ data }) => {
 
   return (
     <CareerPageTemplate
-      content={post.html}
       title={post.frontmatter.title}
-      text={post.frontmatter.text}
-      image={post.frontmatter.image}
+      image1={post.frontmatter.image1}
+      text1={post.frontmatter.text1}
+      header={post.frontmatter.header}
+      image2={post.frontmatter.image2}
+      text2={post.frontmatter.text2}
       subHeader1={post.frontmatter.subHeader1}
       subHeader2={post.frontmatter.subHeader2}
       perkList={perkList}
@@ -106,11 +114,13 @@ export default CareerPage;
 export const careerPageQuery = graphql`
   query CareerPage($id: String!, $perkRegex: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
-        text
-        image
+        image1
+        text1
+        header
+        image2
+        text2
         subHeader1
         subHeader2
       }
@@ -121,7 +131,10 @@ export const careerPageQuery = graphql`
     ) {
       edges {
         node {
-          html
+          frontmatter {
+            title
+            text
+          }
         }
       }
     }

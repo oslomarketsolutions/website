@@ -1,6 +1,4 @@
 ---
-title: 'Perk5: Company cabins'
+title: 'Company cabins'
+text: 'With us everyone is insured'
 ---
-
-###Company cabins
-Located in Trysil and Nesbyen

@@ -8,158 +8,167 @@ import ScrollButton from '../scrollButton/index';
 import '../../layouts/style.scss';
 import styles from './footer.module.scss';
 
-const Footer = ({ language }) => (
-  <footer className={styles.footer}>
-    <div className={styles.footerContainer}>
-      <div className={styles.groupWebsites}>
-        <h3>
-          {language === 'en' ? 'Group websites' : 'Konsernets nettsteder'}
-        </h3>
-        <ul>
-          <li>
-            <a
-              href="http://www.osloborsvps.no/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Oslo Børs VPS
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.vps.no/pub/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              VPS
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.oslobors.no/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Oslo Børs
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://fishpool.eu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Fish Pool
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://centevo.se/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Centevo
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://newsweb.oslobors.no/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Newsweb
-            </a>
-          </li>
-        </ul>
+const Footer = ({ language, data }) => {
+  const { groupWebsites, contactInfo } = data.markdownRemark.frontmatter;
+
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.footerContainer}>
+        <div className={styles.groupWebsites}>
+          <h3>
+            {language === 'en' ? 'Group websites' : 'Konsernets nettsteder'}
+          </h3>
+          <ul>
+            <li>
+              <a
+                href={groupWebsites.website1.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {groupWebsites.website1.title}
+              </a>
+            </li>
+            <li>
+              <a
+                href={groupWebsites.website2.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {groupWebsites.website2.title}
+              </a>
+            </li>
+            <li>
+              <a
+                href={groupWebsites.website3.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {groupWebsites.website3.title}
+              </a>
+            </li>
+            <li>
+              <a
+                href={groupWebsites.website4.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {groupWebsites.website4.title}
+              </a>
+            </li>
+            <li>
+              <a
+                href={groupWebsites.website5.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {groupWebsites.website5.title}
+              </a>
+            </li>
+            <li>
+              <a
+                href={groupWebsites.website6.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {groupWebsites.website6.title}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.navigate}>
+          <h3>{language === 'en' ? 'Navigate' : 'Navigasjon'}</h3>
+          <ul>
+            <li>
+              <Link to={`/${language}`}>
+                {language === 'en' ? 'Home' : 'Hjem'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/products`}>
+                {language === 'en' ? 'Products' : 'Produkter'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/career`}>
+                {language === 'en' ? 'Work' : 'Jobb'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/about`}>
+                {language === 'en' ? 'About us' : 'Om oss'}
+              </Link>
+            </li>
+            <li>
+              <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
+            </li>
+          </ul>
+        </div>
+        <div className={styles.contact}>
+          <h3>{language === 'en' ? 'Contact' : 'Kontakt'}</h3>
+          <ul>
+            <li>{contactInfo.title}</li>
+            <li>{contactInfo.visitingAddress}</li>
+            <li>{contactInfo.phoneNumber}</li>
+            <li>{contactInfo.email}</li>
+            <li>{contactInfo.mailAddress}</li>
+          </ul>
+        </div>
+        <div className={styles.socialMedia}>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/oslo-market-solutions-as/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={['fab', 'linkedin']} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/oslomarketsolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={['fab', 'facebook']} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/shark-bytes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={['fab', 'medium']} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/oslomarketsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={['fab', 'github-square']} />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.copyright}>
+          <FontAwesomeIcon icon={['far', 'copyright']} />
+          <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
+        </div>
       </div>
-      <div className={styles.navigate}>
-        <h3>{language === 'en' ? 'Navigate' : 'Navigasjon'}</h3>
-        <ul>
-          <li>
-            <Link to={`/${language}`}>
-              {language === 'en' ? 'Home' : 'Hjem'}
-            </Link>
-          </li>
-          <li>
-            <Link to={`/${language}/products`}>
-              {language === 'en' ? 'Products' : 'Produkter'}
-            </Link>
-          </li>
-          <li>
-            <Link to={`/${language}/career`}>
-              {language === 'en' ? 'Work' : 'Jobb'}
-            </Link>
-          </li>
-          <li>
-            <Link to={`/${language}/about`}>
-              {language === 'en' ? 'About us' : 'Om oss'}
-            </Link>
-          </li>
-          <li>
-            <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
-          </li>
-        </ul>
-      </div>
-      <div className={styles.contact}>
-        <h3>{language === 'en' ? 'Contact' : 'Kontakt'}</h3>
-        <ul>
-          <li>Oslo Market Solutions AS</li>
-          <li>Fred Olsens gate 1, 0152 Oslo</li>
-          <li>+47 40 00 23 13</li>
-          <li>info@oms.no</li>
-          <li>Postboks 1174 Sentrum, 0107 Oslo</li>
-        </ul>
-      </div>
-      <div className={styles.socialMedia}>
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/company/oslo-market-solutions-as/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={['fab', 'linkedin']} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/oslomarketsolutions/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={['fab', 'facebook']} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/shark-bytes"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={['fab', 'medium']} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/oslomarketsolutions"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={['fab', 'github-square']} />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className={styles.copyright}>
-        <FontAwesomeIcon icon={['far', 'copyright']} />
-        <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 Footer.propTypes = {
-  language: PropTypes.shape({ pathname: {} }),
+  language: PropTypes.string,
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export default Footer;
