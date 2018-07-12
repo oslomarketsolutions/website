@@ -159,7 +159,7 @@ const Footer = ({ language }) => (
 );
 
 Footer.propTypes = {
-  language: PropTypes.shape({ pathname: {} }),
+  language: PropTypes.string,
 };
 
 export default Footer;

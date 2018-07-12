@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     topImage,
     configurationLogos,
     featuredContent,
-    customizationCards,
+    customization,
     solutionsContent,
     customerLogos,
   } = data.page.frontmatter;
@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
           ))}
       </section>
       <section className={styles.featuredCase}>
-        <h3>{featuredContent.header}</h3>
+        <h2>{featuredContent.header}</h2>
         <p>{featuredContent.text}</p>
         <Img
           outerWrapperClassName={styles.imageContainer}
@@ -54,17 +54,18 @@ const IndexPage = ({ data }) => {
         />
       </section>
       <section className={styles.customization}>
-        <h3>{solutionsContent.header}</h3>
+        <h2>{solutionsContent.header}</h2>
         <section className={styles.customizationCards}>
-          {customizationCards.map(customizationCard => (
-            <FeatureCard
-              title={customizationCard.header}
-              description={customizationCard.description}
-              features={customizationCard.features}
-              image={customizationCard.image}
-              imageSizes={imageSizes}
-            />
-          ))}
+          {customization.cards &&
+            customization.cards.map(customizationCard => (
+              <FeatureCard
+                title={customizationCard.header}
+                description={customizationCard.description}
+                features={customizationCard.features}
+                image={customizationCard.image}
+                imageSizes={imageSizes}
+              />
+            ))}
         </section>
       </section>
 
@@ -122,18 +123,20 @@ export const pageQuery = graphql`
           image
           text
         }
-        customizationCards {
+        customization {
           header
-          description
-          image
-          features
+          cards {
+            header
+            description
+            image
+            features
+          }
         }
 
         configurationLogos {
           logo
         }
         solutionsContent {
-          header
           firstCard {
             image
             header

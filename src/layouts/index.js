@@ -8,7 +8,15 @@ import {
   faMedium,
   faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGlobe,
+  faArrowUp,
+  faServer,
+  faGraduationCap,
+  faCoffee,
+  faFlask,
+  faUserSecret,
+} from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 import Helmet from 'react-helmet';
@@ -26,6 +34,11 @@ library.add(
   faGlobe,
   faCopyright,
   faArrowUp,
+  faServer,
+  faGraduationCap,
+  faCoffee,
+  faFlask,
+  faUserSecret,
 );
 
 const fontAwesomeCSS = dom.css();

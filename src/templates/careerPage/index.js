@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import Content, { HTMLContent } from '../../components/Content';
 import PerkCard from '../../components/perkCard';
-import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
 import { findImageSize } from '../../components/helperFunctions';
 
@@ -31,58 +29,69 @@ const color = () => {
 };
 
 export const CareerPageTemplate = ({
-  contentComponent,
-  content,
   title,
-  text,
-  image,
+  image1,
+  text1,
+  header,
+  image2,
+  text2,
   subHeader1,
   subHeader2,
   perkList,
   imageSizes,
-}) => {
-  const PageContent = contentComponent || Content;
-
-  return (
-    <main>
-      <div className={styles.careerPage}>
-        <article className={styles.careerOms}>
-          <h2>{title}</h2>
-          <section>{text}</section>
-          <Img
-            outerWrapperClassName={styles.imageContainer}
-            style={{ height: '100%', width: '100%' }}
-            sizes={findImageSize(image, imageSizes)}
-          />
-        </article>
-        <article>
-          <PageContent content={content} />
-        </article>
-        <article className={styles.careerPerks}>
-          <h3>{subHeader1}</h3>
-          <div className={styles.perkCardContainer}>
-            {perkList.map(perk => {
-              const perkContent = perk.node.html;
-
-              return <PerkCard content={perkContent} color={color()} />;
-            })}
-          </div>
-        </article>
-        <article className={styles.careerJobVacancies}>
-          {/* Her skal iFramen med ledige stillinger være */}
-          <h2>{subHeader2}</h2>
-        </article>
-      </div>
-    </main>
-  );
-};
+}) => (
+  <main>
+    <div className={styles.careerPage}>
+      <section className={styles.careerOms}>
+        <h2>{title}</h2>
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          style={{ height: '100%', width: '100%' }}
+          sizes={findImageSize(image1, imageSizes)}
+        />
+        <p>{text1}</p>
+      </section>
+      <section className={styles.whyOms}>
+        <h2>{header}</h2>
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          style={{ height: '100%', width: '100%' }}
+          sizes={findImageSize(image2, imageSizes)}
+        />
+        <p>{text2}</p>
+      </section>
+      <section className={styles.careerPerks}>
+        <h3>{subHeader1}</h3>
+        <div className={styles.perkCardContainer}>
+          {perkList.map(perk => {
+            const { title: perkTitle, text: perkText } = perk.node.frontmatter;
+            return (
+              <PerkCard
+                key={perkTitle}
+                title={perkTitle}
+                text={perkText}
+                color={color()}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section className={styles.careerJobVacancies}>
+        {/* Her skal iFramen med ledige stillinger være */}
+        <h2>{subHeader2}</h2>
+        <div className={styles.jobVacanciesContainer} />
+      </section>
+    </div>
+  </main>
+);
 
 CareerPageTemplate.propTypes = {
-  contentComponent: PropTypes.func,
-  content: PropTypes.string,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string,
-  image: PropTypes.string,
+  image1: PropTypes.string,
+  text1: PropTypes.string,
+  header: PropTypes.string,
+  image2: PropTypes.string,
+  text2: PropTypes.string,
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
   perkList: PropTypes.arrayOf(PropTypes.object),
@@ -97,11 +106,12 @@ const CareerPage = ({ data }) => {
 
   return (
     <CareerPageTemplate
-      contentComponent={HTMLContent}
-      content={post.html}
       title={post.frontmatter.title}
-      text={post.frontmatter.text}
-      image={post.frontmatter.image}
+      image1={post.frontmatter.image1}
+      text1={post.frontmatter.text1}
+      header={post.frontmatter.header}
+      image2={post.frontmatter.image2}
+      text2={post.frontmatter.text2}
       subHeader1={post.frontmatter.subHeader1}
       subHeader2={post.frontmatter.subHeader2}
       perkList={perkList}
@@ -119,11 +129,13 @@ export default CareerPage;
 export const careerPageQuery = graphql`
   query CareerPage($id: String!, $perkRegex: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
-        text
-        image
+        image1
+        text1
+        header
+        image2
+        text2
         subHeader1
         subHeader2
       }
@@ -134,7 +146,10 @@ export const careerPageQuery = graphql`
     ) {
       edges {
         node {
-          html
+          frontmatter {
+            title
+            text
+          }
         }
       }
     }

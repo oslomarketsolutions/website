@@ -13,7 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Text", name: "text", widget: "string"}
 
   - name: "norwegianPerks"
     label: "no/Perk"
@@ -22,7 +22,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Perk name", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Text", name: "text", widget: "string"}
 
   - name: "norwegian_employees"
     label: "no/Employee"
@@ -34,7 +34,6 @@ collections:
       - {label: "Job title", name: "jobTitle", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Language", name: "language", widget: "hidden", default: "no"}
       - label: "Job type"
         name: "jobType"
         widget: "select"
@@ -42,6 +41,8 @@ collections:
         - {label: "Front-end", value: "frontEnd"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
+        - {label: "Operations", value: "operations"}
+        - {label: "Summer intern", value: "summerIntern"}
 
   - name: "english_employees"
     label: "en/Employee"
@@ -53,7 +54,6 @@ collections:
       - {label: "Job title", name: "jobTitle", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - label: "Job type"
         name: "jobType"
         widget: "select"
@@ -61,6 +61,8 @@ collections:
         - {label: "Front-end", value: "frontEnd"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
+        - {label: "Operations", value: "operations"}
+        - {label: "Summer intern", value: "summerIntern"}
 
   - name: "norwegian_featureCard"
     label: "no/FeatureCard"
@@ -143,14 +145,17 @@ collections:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
-          - label: "Customization Cards"
-            name: "customizationCards"
-            widget: "list"
+          - label: "Customization"
+            name: "customization"
+            widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Features", name: "features", widget: "list"}
+              - {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Description", name: "description", widget: "text"},
+                  {label: "Features", name: "features", widget: "list"},
+                ]}
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
@@ -189,14 +194,17 @@ collections:
               - {label: "Featured Case Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
               - {label: "Featured Text", name: "text", widget: "text"}
-          - label: "Customization Cards"
-            name: "customizationCards"
-            widget: "list"
+          - label: "Customization"
+            name: "customization"
+            widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Features", name: "features", widget: "list"}
+              - {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Description", name: "description", widget: "text"},
+                  {label: "Features", name: "features", widget: "list"},
+                ]}
           - label: "Configuration logos"
             name: "configurationLogos"
             widget: "list"
@@ -228,48 +236,48 @@ collections:
         label: "no/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Text", name: "text", widget: "text"}
-          - {label: "Header 2", name: "header2", widget: "string"}
+          - {label: "Second header", name: "header", widget: "string"}
 
       - file: "src/pages/en/about/index.md"
         name: "english_about_page"
         label: "en/About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Header 1", name: "header1", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Text", name: "text", widget: "text"}
-          - {label: "Header 2", name: "header2", widget: "string"}
+          - {label: "Second header", name: "header", widget: "string"}
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"
         label: "no/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Header 1", name: "header1", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Sub header 1", name: "subHeader1", widget: "string"}
-          - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
+          - {label: "First image", name: "image1", widget: "image"}
+          - {label: "First text", name: "text1", widget: "text"}
+          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Second image", name: "image2", widget: "image"}
+          - {label: "Second text", name: "text2", widget: "text"}
+          - {label: "First sub-header", name: "subHeader1", widget: "string"}
+          - {label: "Second sub-header", name: "subHeader2", widget: "string"}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
         label: "en/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Header 1", name: "header1", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Sub header 1", name: "subHeader1", widget: "string"}
-          - {label: "Sub header 2", name: "subHeader2", widget: "string"}
+          - {label: "First header", name: "title", widget: "string"}
+          - {label: "First image", name: "image1", widget: "image"}
+          - {label: "First text", name: "text1", widget: "text"}
+          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Second image", name: "image2", widget: "image"}
+          - {label: "Second text", name: "text2", widget: "text"}
+          - {label: "First sub-header", name: "subHeader1", widget: "string"}
+          - {label: "Second sub-header", name: "subHeader2", widget: "string"}
 
       - file: "src/pages/no/products/index.md"
         name: "norwegian_products_page"

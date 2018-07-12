@@ -98,70 +98,70 @@ export class ProductPageTemplate extends Component {
     };
 
     return (
-      <div className={styles.container}>
-        <Observer>
-          {({ inView, ref }) => (
-            <section className={styles.intro} ref={ref}>
-              <h2>{intro.title}</h2>
-              <div>
-                {// Sticky link bar
-                linkCards(true, inView)}
-                {// Intro cards
-                linkCards(false, inView)}
-              </div>
-            </section>
-          )}
-        </Observer>
+      <main>
+        <div className={styles.container}>
+          <Observer>
+            {({ inView, ref }) => (
+              <section className={styles.intro} ref={ref}>
+                <h2>{intro.title}</h2>
+                <div>
+                  {// Sticky
+                  linkCards(true, inView)}
+                  {// Not sticky
+                  linkCards(false, inView)}
+                </div>
+              </section>
+            )}
+          </Observer>
 
-        {oneYearGraph()}
+          {oneYearGraph()}
 
-        <section
-          ref={section => {
-            this[investorPortal.title] = section;
-          }}
-          className={styles.investorPortal}
-        >
-          <div className={styles.investor}>
-            <h3>{investorPortal.title}</h3>
-            <p>{investorPortal.description}</p>
-            {investorPortal.image && (
+          <section
+            ref={section => {
+              this[investorPortal.title] = section;
+            }}
+            className={styles.investorPortal}
+          >
+            <div className={styles.investor}>
+              <h3>{investorPortal.title}</h3>
+              <p>{investorPortal.description}</p>
               <Img
                 outerWrapperClassName={styles.imageContainer}
                 style={{ height: '100%', width: '100%' }}
                 sizes={findImageSize(investorPortal.image, imageSizes)}
               />
-            )}
-          </div>
-          {investorPortal.features &&
-            investorPortal.features.map(feature => (
-              <div className={styles.features}>
-                <h4>{feature.title}</h4>
-                <p>{feature.description}</p>
-              </div>
-            ))}
-        </section>
-        <section className={styles.investorContact}>
-          <h4>Contact us today to get more info about our traders!</h4>
-          <button>Contact</button>
-        </section>
+            </div>
+            {investorPortal.features &&
+              investorPortal.features.map(feature => (
+                <div className={styles.features}>
+                  <h4>{feature.title}</h4>
+                  <p>{feature.description}</p>
+                </div>
+              ))}
+          </section>
+          <section className={styles.investorContact}>
+            <h4>Contact us today to get more info about our traders!</h4>
+            <button>Contact</button>
+          </section>
 
-        <section className={styles.productsContainer}>
-          {products &&
-            products.map(product => (
-              <div
-                className={styles.product}
-                ref={card => {
-                  this[product.title] = card;
-                }}
-              >
-                <ProductCard
-                  product={product}
-                  sizes={findImageSize(product.image, imageSizes)}
-                />
-              </div>
-            ))}
-        </section>
-      </div>
+          <section className={styles.productsContainer}>
+            {products &&
+              products.map(product => (
+                <div
+                  className={styles.product}
+                  ref={card => {
+                    this[product.title] = card;
+                  }}
+                >
+                  <ProductCard
+                    product={product}
+                    sizes={findImageSize(product.image, imageSizes)}
+                  />
+                </div>
+              ))}
+          </section>
+        </div>
+      </main>
     );
   }
 }

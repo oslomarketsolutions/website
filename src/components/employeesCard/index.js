@@ -2,28 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-// Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import faGraduationCap from '@fortawesome/fontawesome-free-solid/faGraduationCap';
-import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
-import faFlask from '@fortawesome/fontawesome-free-solid/faFlask';
-import faUserSecret from '@fortawesome/fontawesome-free-solid/faUserSecret';
 
 import styles from './EmployeeCard.module.scss';
 
 const iconMatcher = jobType => {
   switch (jobType) {
+    case 'operations':
+      return ['fas', 'server'];
+
     case 'backEnd':
-      return faCoffee;
+      return ['fas', 'coffee'];
 
     case 'frontEnd':
-      return faFlask;
+      return ['fas', 'flask'];
 
     case 'summerIntern':
-      return faGraduationCap;
+      return ['fas', 'graduation-cap'];
 
     default:
-      return faUserSecret;
+      return ['fas', 'user-secret'];
   }
 };
 
@@ -44,8 +42,8 @@ const EmployeeCard = props => {
         sizes={portraitSize}
       />
       <section className={styles.header}>
-        <h2>{name}</h2>
-        <h3>{jobTitle}</h3>
+        <h3>{name}</h3>
+        <h4>{jobTitle}</h4>
         <figure>
           <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>
