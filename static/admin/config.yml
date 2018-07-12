@@ -13,7 +13,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Language", name: "language", widget: "select", options: ["en", "no"]}
+      - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - {label: "Perk name", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "string"}
 
@@ -24,7 +24,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Language", name: "language", widget: "select", options: ["en", "no"]}
+      - {label: "Language", name: "language", widget: "hidden", default: "no"}
       - {label: "Perk name", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "string"}
 
