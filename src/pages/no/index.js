@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
         />
       </section>
       <section className={styles.customization}>
-        <h2>{solutionsContent.header}</h2>
+        <h2>{customization.header}</h2>
         <section className={styles.customizationCards}>
           {customization.cards &&
             customization.cards.map(customizationCard => (
