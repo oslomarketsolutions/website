@@ -16,9 +16,10 @@ import FooterPreview from './preview-templates/FooterPreview';
 
 const fontAwesomeCSS = dom.css();
 
+typography.injectStyles();
+
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewStyle(fontAwesomeCSS);
-CMS.registerPreviewStyle(typography.toString());
 CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
 CMS.registerPreviewTemplate('english_about_page', AboutPagePreview);
 CMS.registerPreviewTemplate('norwegian_index_page', IndexPagePreview);
