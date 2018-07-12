@@ -18,7 +18,7 @@ const fontAwesomeCSS = dom.css();
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewStyle(fontAwesomeCSS);
-CMS.registerPreviewStyle(typography);
+CMS.registerPreviewStyle(typography.toString());
 CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
 CMS.registerPreviewTemplate('english_about_page', AboutPagePreview);
 CMS.registerPreviewTemplate('norwegian_index_page', IndexPagePreview);
