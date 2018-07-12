@@ -31,7 +31,11 @@ const EmployeeCard = props => {
   const { name, jobTitle, description, sizes, jobType } = props;
   return (
     <section className={styles.EmployeeCard}>
-      <Img sizes={sizes} />
+      <Img
+        outerWrapperClassName={styles.imageContainer}
+        style={{ height: '100%', width: '100%' }}
+        sizes={sizes}
+      />
       <section className={styles.header}>
         <h2>{name}</h2>
         <h3>{jobTitle}</h3>

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import Content, { HTMLContent } from '../../components/Content';
 import PerkCard from '../../components/perkCard';
 import '../../layouts/style.scss';
 import styles from './careerPage.module.scss';
+import { findImageSize } from '../../components/helperFunctions';
 
 let colorCounter = 0;
 
@@ -37,6 +39,7 @@ export const CareerPageTemplate = ({
   subHeader1,
   subHeader2,
   perkList,
+  imageSizes,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -46,7 +49,11 @@ export const CareerPageTemplate = ({
         <article className={styles.careerOms}>
           <h2>{title}</h2>
           <section>{text}</section>
-          <img src={image} alt="" />
+          <Img
+            outerWrapperClassName={styles.imageContainer}
+            style={{ height: '100%', width: '100%' }}
+            sizes={findImageSize(image, imageSizes)}
+          />
         </article>
         <article>
           <PageContent content={content} />
@@ -79,11 +86,13 @@ CareerPageTemplate.propTypes = {
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
   perkList: PropTypes.arrayOf(PropTypes.object),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const perkList = data.perks.edges;
+  const imageSizes = data.imageSizes.edges;
   colorCounter = 0;
 
   return (
@@ -96,6 +105,7 @@ const CareerPage = ({ data }) => {
       subHeader1={post.frontmatter.subHeader1}
       subHeader2={post.frontmatter.subHeader2}
       perkList={perkList}
+      imageSizes={imageSizes}
     />
   );
 };
@@ -125,6 +135,19 @@ export const careerPageQuery = graphql`
       edges {
         node {
           html
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 1440) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
       }
     }
