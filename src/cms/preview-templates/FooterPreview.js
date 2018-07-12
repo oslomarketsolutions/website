@@ -8,27 +8,27 @@ const FooterPreview = ({ entry }) => {
       frontmatter: {
         groupWebsites: {
           website1: {
-            title: entry.getIn(['data', 'website1', 'title']),
+            title: entry.getIn(['data', 'groupWebsites', 'website1', 'title']),
             url: entry.getIn(['data', 'website1', 'url']),
           },
           website2: {
-            title: entry.getIn(['data', 'website2', 'title']),
+            title: entry.getIn(['data', 'groupWebsites', 'website2', 'title']),
             url: entry.getIn(['data', 'website2', 'url']),
           },
           website3: {
-            title: entry.getIn(['data', 'website3', 'title']),
+            title: entry.getIn(['data', 'groupWebsites', 'website3', 'title']),
             url: entry.getIn(['data', 'website3', 'url']),
           },
           website4: {
-            title: entry.getIn(['data', 'website4', 'title']),
+            title: entry.getIn(['data', 'groupWebsites', 'website4', 'title']),
             url: entry.getIn(['data', 'website4', 'url']),
           },
           website5: {
-            title: entry.getIn(['data', 'website5', 'title']),
+            title: entry.getIn(['data', 'groupWebsites', 'website5', 'title']),
             url: entry.getIn(['data', 'website5', 'url']),
           },
           website6: {
-            title: entry.getIn(['data', 'website6', 'title']),
+            title: entry.getIn(['data', 'groupWebsites', 'website6', 'title']),
             url: entry.getIn(['data', 'website6', 'url']),
           },
         },
