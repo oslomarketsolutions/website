@@ -129,7 +129,7 @@ collections:
         searchFields: ["title"]
         valueField: "slug"
         displayFields: ["title"]
-
+  
   - name: "pages"
     label: "Pages"
     files:
@@ -334,4 +334,42 @@ collections:
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image"},
               {label: "Description", name: "description", widget: "text"},
+            ]}
+
+      - file: "src/pages/footer/index.md"
+        name: "footer"
+        label: "Footer"
+        fields: 
+          - {label: "Group websites", name: "groupWebsites", widget: "object", fields: [
+              {label: "Website", name: "website1", widget: "object", fields: [
+                {label: "Website name", name: "title", widget: "string"},
+                {label: "Url", name: "url", widget: "string"},
+              ]},
+              {label: "Website", name: "website2", widget: "object", fields: [
+                {label: "Website name", name: "title", widget: "string"},
+                {label: "Url", name: "url", widget: "string"},
+              ]},
+              {label: "Website", name: "website3", widget: "object", fields: [
+                {label: "Website name", name: "title", widget: "string"},
+                {label: "Url", name: "url", widget: "string"},
+              ]},
+              {label: "Website", name: "website4", widget: "object", fields: [
+                {label: "Website name", name: "title", widget: "string"},
+                {label: "Url", name: "url", widget: "string"},
+              ]},
+              {label: "Website", name: "website5", widget: "object", fields: [
+                {label: "Website name", name: "title", widget: "string"},
+                {label: "Url", name: "url", widget: "string"},
+              ]},
+              {label: "Website", name: "website6", widget: "object", fields: [
+                {label: "Website name", name: "title", widget: "string"},
+                {label: "Url", name: "url", widget: "string"},
+              ]},
+            ]}
+          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
+              {label: "Name", name: "title", widget: "string"},
+              {label: "Visiting address", name: "visitingAddress", widget: "string"},
+              {label: "Phone number", name: "phoneNumber", widget: "string"},
+              {label: "Email", name: "email", widget: "string"},
+              {label: "Mail address", name: "mailAddress", widget: "string"},
             ]}
