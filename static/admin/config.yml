@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: TestingFilterOption
 
 media_folder: static/img
 public_folder: /img
@@ -9,18 +9,22 @@ collections:
   - name: "englishPerks"
     label: "en/Perk"
     folder: "src/entities/en/perks"
+    filter: {field: "language", value: "en"}
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Language", name: "language", widget: "select", options: ["en", "no"]}
       - {label: "Perk name", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "string"}
 
   - name: "norwegianPerks"
     label: "no/Perk"
     folder: "src/entities/no/perks"
+    filter: {field: "language", value: "no"}
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Language", name: "language", widget: "select", options: ["en", "no"]}
       - {label: "Perk name", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "string"}
 
