@@ -1,42 +1,59 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 
-// Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import faGraduationCap from '@fortawesome/fontawesome-free-solid/faGraduationCap';
-import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
-import faFlask from '@fortawesome/fontawesome-free-solid/faFlask';
-import faUserSecret from '@fortawesome/fontawesome-free-solid/faUserSecret';
 
 import styles from './EmployeeCard.module.scss';
 
 const iconMatcher = jobType => {
   switch (jobType) {
+    case 'operations':
+      return ['fas', 'server'];
+
     case 'backEnd':
-      return faCoffee;
+      return ['fas', 'coffee'];
 
     case 'frontEnd':
-      return faFlask;
+      return ['fas', 'flask'];
 
     case 'summerIntern':
-      return faGraduationCap;
+      return ['fas', 'graduation-cap'];
 
     default:
-      return faUserSecret;
+      return ['fas', 'user-secret'];
   }
 };
 
 const EmployeeCard = props => {
-  const { name, jobTitle, description, image, jobType } = props;
+  const {
+    name,
+    jobTitle,
+    description,
+    portraitSize,
+    headerBackgroundSize,
+    jobType,
+  } = props;
   return (
     <section className={styles.EmployeeCard}>
-      <img src={image} alt={name} />
+      <Img
+        outerWrapperClassName={styles.imageContainer}
+        style={{ height: '100%', width: '100%' }}
+        sizes={portraitSize}
+      />
       <section className={styles.header}>
-        <h2>{name}</h2>
-        <h3>{jobTitle}</h3>
+        <h3>{name}</h3>
+        <h4>{jobTitle}</h4>
         <figure>
           <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>
+        {/* Background-image for header */}
+        <Img
+          outerWrapperClassName={styles.headerBackground}
+          style={{ height: '100%', width: '100%' }}
+          imgStyle={{ height: '200%', width: '200%' }}
+          sizes={headerBackgroundSize}
+        />
       </section>
       <section className={styles.description}>
         <p>{description}</p>
@@ -50,7 +67,8 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
+  portraitSize: PropTypes.arrayOf(PropTypes.object),
+  headerBackgroundSize: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default EmployeeCard;

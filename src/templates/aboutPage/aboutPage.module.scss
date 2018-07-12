@@ -1,49 +1,74 @@
 .aboutPage {
   max-width: 90%;
-  margin: 5em auto 0 auto;
-
-  article {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
-
-  p {
-    text-align: center;
-  }
+  margin: 80px auto 0 auto;
 
   .aboutOms {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 
-    section {
-      width: 45%;
+    p {
       display: flex;
       align-items: center;
+      width: 100%;
+      margin-bottom: 16px;
     }
 
-    img {
+    .imageContainer {
       width: 45%;
-      height: 22em;
+      height: 100%;
     }
   }
 
   .aboutEmployees {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
+}
 
-  article {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+.aboutPage > section {
+  margin: 64px 0;
+}
+
+.aboutPage > section > h2 {
+  margin: 0 0 16px;
 }
 
 @media (min-width: 1024px) {
   .aboutPage {
-    max-width: 1800px;
-    padding: 0 2em;
-    margin: 5em auto 0 auto;
+    max-width: 1864px;
+    padding: 0 32px;
+    margin: 80px auto 0 auto;
+
+    .aboutOms {
+      p {
+        width: 45%;
+      }
+
+      img {
+        width: 45%;
+      }
+    }
+  }
+
+  .aboutPage > section {
+    margin: 275px 0;
+  }
+}
+
+@media (min-width: 1194px) {
+  .aboutPage {
+    .aboutEmployees {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (min-width: 1759px) {
+  .aboutPage {
+    .aboutEmployees {
+      justify-content: space-between;
+    }
   }
 }

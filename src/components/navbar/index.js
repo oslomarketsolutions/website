@@ -12,11 +12,11 @@ import styles from './navbar.module.scss';
 export default class Navbar extends Component {
   static propTypes = {
     language: PropTypes.string,
-    location: PropTypes.shape({ pathname: {} }),
+    location: PropTypes.shape({ pathname: PropTypes.string }),
   };
 
   static defaultProps = {
-    language: 'no',
+    language: 'en',
   };
 
   state = {

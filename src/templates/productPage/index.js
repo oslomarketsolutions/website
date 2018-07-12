@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
+import Img from 'gatsby-image';
+import { findImageSize } from '../../components/helperFunctions';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -40,6 +42,8 @@ export class ProductPageTemplate extends Component {
         title: PropTypes.string,
       }),
     ),
+    imageSizes: PropTypes.arrayOf(PropTypes.object),
+    imageResolutions: PropTypes.arrayOf(PropTypes.object),
   };
 
   scrollToRef = ref => {
@@ -52,7 +56,13 @@ export class ProductPageTemplate extends Component {
   };
 
   render() {
-    const { intro, investorPortal, products } = this.props;
+    const {
+      intro,
+      investorPortal,
+      products,
+      imageSizes,
+      imageResolutions,
+    } = this.props;
 
     const linkCards = (stickyMenu, inView) => {
       let className = styles.notStickyMenu;
@@ -73,12 +83,14 @@ export class ProductPageTemplate extends Component {
             product={investorPortal}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
+            imageResolutions={imageResolutions}
           />
           {products.map(product => (
             <LinkCard
               product={product}
               onClickFunction={this.scrollToRef}
               sticky={stickyMenu}
+              imageResolutions={imageResolutions}
             />
           ))}
         </div>
@@ -86,70 +98,85 @@ export class ProductPageTemplate extends Component {
     };
 
     return (
-      <main className={styles.container}>
-        <Observer>
-          {({ inView, ref }) => (
-            <section className={styles.intro} ref={ref}>
-              <h2>{intro.title}</h2>
-              {// Sticky link bar
-              linkCards(true, inView)}
-              {// Intro cards
-              linkCards(false, inView)}
-            </section>
-          )}
-        </Observer>
+      <main>
+        <div className={styles.container}>
+          <Observer>
+            {({ inView, ref }) => (
+              <section className={styles.intro} ref={ref}>
+                <h2>{intro.title}</h2>
+                <div>
+                  {// Sticky
+                  linkCards(true, inView)}
+                  {// Not sticky
+                  linkCards(false, inView)}
+                </div>
+              </section>
+            )}
+          </Observer>
 
-        {oneYearGraph()}
+          {oneYearGraph()}
 
-        <section
-          ref={section => {
-            this[investorPortal.title] = section;
-          }}
-          className={styles.investorPortal}
-        >
-          <div className={styles.investor}>
-            <h3>{investorPortal.title}</h3>
-            <p>{investorPortal.description}</p>
-            <img src={investorPortal.image} alt={investorPortal.title} />
-          </div>
-          {investorPortal.features &&
-            investorPortal.features.map(feature => (
-              <div className={styles.features}>
-                <h4>{feature.title}</h4>
-                <p>{feature.description}</p>
-              </div>
-            ))}
-        </section>
-        <section className={styles.investorContact}>
-          <h4>Contact us today to get more info about our traders!</h4>
-          <button>Contact</button>
-        </section>
+          <section
+            ref={section => {
+              this[investorPortal.title] = section;
+            }}
+            className={styles.investorPortal}
+          >
+            <div className={styles.investor}>
+              <h3>{investorPortal.title}</h3>
+              <p>{investorPortal.description}</p>
+              <Img
+                outerWrapperClassName={styles.imageContainer}
+                style={{ height: '100%', width: '100%' }}
+                sizes={findImageSize(investorPortal.image, imageSizes)}
+              />
+            </div>
+            {investorPortal.features &&
+              investorPortal.features.map(feature => (
+                <div className={styles.features}>
+                  <h4>{feature.title}</h4>
+                  <p>{feature.description}</p>
+                </div>
+              ))}
+          </section>
+          <section className={styles.investorContact}>
+            <h4>Contact us today to get more info about our traders!</h4>
+            <button>Contact</button>
+          </section>
 
-        <section className={styles.productsContainer}>
-          {products &&
-            products.map(product => (
-              <div
-                className={styles.product}
-                ref={card => {
-                  this[product.title] = card;
-                }}
-              >
-                <ProductCard product={product} />
-              </div>
-            ))}
-        </section>
+          <section className={styles.productsContainer}>
+            {products &&
+              products.map(product => (
+                <div
+                  className={styles.product}
+                  ref={card => {
+                    this[product.title] = card;
+                  }}
+                >
+                  <ProductCard
+                    product={product}
+                    sizes={findImageSize(product.image, imageSizes)}
+                  />
+                </div>
+              ))}
+          </section>
+        </div>
       </main>
     );
   }
 }
 
 const ProductPage = ({ data }) => {
-  const page = data.markdownRemark.frontmatter;
+  const page = data.page.frontmatter;
+  const imageSizes = data.imageSizes.edges;
+  const imageResolutions = data.imageResolutions.edges;
   return (
     <ProductPageTemplate
       intro={page.intro}
       investorPortal={page.investorPortal}
       products={page.products}
+      imageSizes={imageSizes}
+      imageResolutions={imageResolutions}
     />
   );
 };
@@ -166,7 +193,7 @@ ProductPage.propTypes = {
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         intro {
           title
@@ -189,6 +216,34 @@ export const productPageQuery = graphql`
           title
           description
           image
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 1440) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+
+    imageResolutions: allFile(
+      filter: { absolutePath: { regex: "/static/img/" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            resolutions(width: 150, height: 100) {
+              ...GatsbyImageSharpResolutions
+            }
+          }
         }
       }
     }

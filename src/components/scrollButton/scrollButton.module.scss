@@ -1,28 +1,27 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
 
 .button {
   background: transparent;
-  border: 2px solid $textColorDark;
-  padding: 10px;
-  color: $textColorDark;
+  border: 2px solid $darkBlue;
+  padding: 7px;
+  color: $darkBlue;
   border-radius: 50%;
   height: 40px;
   width: 40px;
   cursor: pointer;
 
   svg {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .button {
-    padding: 10px;
     height: 46px;
     width: 46px;
 
     svg {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 }

@@ -9,13 +9,16 @@
       margin: 0;
       padding: 75px 0;
       color: #1c315b;
-      font-size: 7.2rem;
+      font-size: 4.5rem;
+      padding-left: 10%;
     }
 
-    // Sticky Link menu when scrolling down past it
+    /* Sticky Link menu when scrolling down past it */
     .stickyMenu {
+      // Ensuring the sticky menu is on top
+      z-index: 1000;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: center;
       position: fixed;
       width: 100%;
@@ -59,7 +62,6 @@
 
     p {
       margin-top: 60px;
-      font-size: 2.4rem;
       min-width: 600px;
       width: 40%;
       line-height: 1.5em;
@@ -76,12 +78,8 @@
       flex-flow: row wrap;
       justify-content: space-between;
 
-      img {
-        display: block;
+      .imageContainer {
         width: 40%;
-        min-width: 600px;
-        height: auto;
-        align-self: center;
       }
 
       h3 {
@@ -102,8 +100,7 @@
       }
 
       h4 {
-        min-width: 350px;
-        font-size: 4.6rem;
+        font-size: 2.8rem;
         border-bottom: 2px solid #49b869;
         margin: 100px 80% 0px 0px;
       }
@@ -126,7 +123,7 @@
       margin: 0;
       padding-bottom: 40px;
       color: #1c315b;
-      font-size: 4.6rem;
+      font-size: 2.8rem;
     }
 
     button {
@@ -139,7 +136,7 @@
       text-align: center;
       text-decoration: underline;
       display: inline-block;
-      font-size: 2.6rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -147,10 +144,9 @@
     width: 100%;
     margin-top: 50px;
     h4 {
-      font-size: 4.6rem;
+      font-size: 2.8rem;
     }
     p {
-      font-size: 2.4rem;
       min-width: 600px;
       width: 40%;
       line-height: 1.5em;

@@ -1,30 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import EmployeeCard from '../../components/employeesCard';
-import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
+import { findImageSize } from '../../components/helperFunctions';
 
 export const AboutPageTemplate = ({
-  title,
-  header1,
   image,
   text,
-  header2,
+  title,
+  header,
   employeeList,
+  imageSizes,
 }) => (
   <main>
     <div className={styles.aboutPage}>
-      <article>
+      <section className={styles.aboutOms}>
         <h2>{title}</h2>
-        <p>submeny | placeholder</p>
-      </article>
-      <article className={styles.aboutOms}>
-        <h2>{header1}</h2>
-        <section>{text}</section>
-        <img src={image} alt="" />
-      </article>
+        <p>{text}</p>
+        <div className={styles.imageContainer}>
+          <Img sizes={findImageSize(image, imageSizes)} />
+        </div>
+      </section>
       <article className={styles.aboutEmployees}>
-        <h2>{header2}</h2>
+        <h2>{header}</h2>
         {employeeList.map(employee => {
           const {
             title: employeeName,
@@ -38,7 +37,11 @@ export const AboutPageTemplate = ({
               name={employeeName}
               description={employeeDescription}
               jobTitle={employeeJobTitle}
-              image={employeeImage}
+              portraitSize={findImageSize(employeeImage, imageSizes)}
+              headerBackgroundSize={findImageSize(
+                'ansattkortHeader.png',
+                imageSizes,
+              )}
               jobType={employeeJobType}
             />
           );
@@ -50,24 +53,26 @@ export const AboutPageTemplate = ({
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  header1: PropTypes.string,
   image: PropTypes.string,
   text: PropTypes.string,
-  header2: PropTypes.string,
-  employeeList: PropTypes.arrayOf(PropTypes.string),
+  header: PropTypes.string,
+  employeeList: PropTypes.arrayOf(PropTypes.object),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const AboutPage = ({ data }) => {
   const post = data.page;
   const employeeList = data.employees.edges;
+  const imageSizes = data.imageSizes.edges;
+
   return (
     <AboutPageTemplate
-      title={post.frontmatter.title}
-      header1={post.frontmatter.header1}
       image={post.frontmatter.image}
+      title={post.frontmatter.title}
       text={post.frontmatter.text}
-      header2={post.frontmatter.header2}
+      header={post.frontmatter.header}
       employeeList={employeeList}
+      imageSizes={imageSizes}
     />
   );
 };
@@ -83,10 +88,9 @@ export const aboutPageQuery = graphql`
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        header1
         image
         text
-        header2
+        header
       }
     }
 
@@ -101,6 +105,19 @@ export const aboutPageQuery = graphql`
             description
             image
             jobType
+          }
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 1800) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }

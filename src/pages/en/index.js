@@ -1,100 +1,121 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from '../indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
+import { findImageSize } from '../../components/helperFunctions';
 
 const IndexPage = ({ data }) => {
   const {
     topImage,
     configurationLogos,
     featuredContent,
-    customizationCards,
+    customization,
     solutionsContent,
     customerLogos,
-  } = data.markdownRemark.frontmatter;
+  } = data.page.frontmatter;
+
+  const imageSizes = data.imageSizes.edges;
 
   const onScrollButtonClick = () => {
     // TODO: scroll
   };
 
   return (
-    <div className={styles.homePage}>
+    <main className={styles.homePage}>
       <section className={styles.animation}>
         <button className={styles.scrollButton} onClick={onScrollButtonClick}>
           <FontAwesomeIcon icon={caretDown} size="2x" />
         </button>
-        <img src={topImage} alt={topImage} />
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          style={{ height: '100%', width: '100%' }}
+          sizes={findImageSize(topImage, imageSizes)}
+        />
       </section>
       <section className={styles.configurationLogos}>
         {configurationLogos &&
           configurationLogos.map(configurationLogo => (
-            <img src={configurationLogo.logo} alt={configurationLogo.logo} />
+            <Img
+              outerWrapperClassName={styles.imageContainer}
+              sizes={findImageSize(configurationLogo.logo, imageSizes)}
+            />
           ))}
       </section>
       <section className={styles.featuredCase}>
-        <div>
-          <h3>{featuredContent.header}</h3>
-          <p>{featuredContent.text}</p>
-          <img src={featuredContent.image} alt={featuredContent.image} />
-        </div>
+        <h2>{featuredContent.header}</h2>
+        <p>{featuredContent.text}</p>
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          sizes={findImageSize(featuredContent.image, imageSizes)}
+        />
       </section>
       <section className={styles.customization}>
-        <h3>{solutionsContent.header}</h3>
+        <h2>{customization.header}</h2>
         <section className={styles.customizationCards}>
-          {customizationCards.map(customizationCard => (
-            <FeatureCard
-              title={customizationCard.header}
-              description={customizationCard.description}
-              features={customizationCard.features}
-              image={customizationCard.image}
-            />
-          ))}
+          {customization.cards &&
+            customization.cards.map(customizationCard => (
+              <FeatureCard
+                title={customizationCard.header}
+                description={customizationCard.description}
+                features={customizationCard.features}
+                image={customizationCard.image}
+                imageSizes={imageSizes}
+              />
+            ))}
         </section>
       </section>
 
       <section className={styles.solutions}>
-        <article>
-          <img
-            src={solutionsContent.firstCard.image}
-            alt={solutionsContent.firstCard.image}
+        <article className={styles.solution}>
+          <Img
+            outerWrapperClassName={styles.imageContainer}
+            style={{ height: '100%', width: '100%' }}
+            sizes={findImageSize(solutionsContent.firstCard.image, imageSizes)}
           />
-          <h2> {solutionsContent.firstCard.header} </h2>
+          <h4> {solutionsContent.firstCard.header} </h4>
           <p> {solutionsContent.firstCard.text} </p>
         </article>
-        <article>
-          <img
-            src={solutionsContent.secondCard.image}
-            alt={solutionsContent.secondCard.image}
+        <article className={styles.solution}>
+          <Img
+            outerWrapperClassName={styles.imageContainer}
+            style={{ height: '100%', width: '100%' }}
+            sizes={findImageSize(solutionsContent.secondCard.image, imageSizes)}
           />
-          <h2> {solutionsContent.secondCard.header} </h2>
+          <h4> {solutionsContent.secondCard.header} </h4>
           <p> {solutionsContent.secondCard.text} </p>
         </article>
       </section>
       <section className={styles.customerLogos}>
         {customerLogos &&
           customerLogos.map(customerLogo => (
-            <img src={customerLogo.logo} alt={customerLogo.logo} />
+            <Img
+              outerWrapperClassName={styles.imageContainer}
+              sizes={findImageSize(customerLogo.logo, imageSizes)}
+            />
           ))}
       </section>
-    </div>
+    </main>
   );
 };
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
+    page: PropTypes.shape({
+      frontmatter: PropTypes.object,
     }),
+    imageSizes: PropTypes.arrayOf(PropTypes.object),
   }),
 };
 
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query EnIndexQuery {
-    markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
+  query EngIndexQuery {
+    page: markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
       frontmatter {
         topImage
         featuredContent {
@@ -102,18 +123,20 @@ export const pageQuery = graphql`
           image
           text
         }
-        customizationCards {
+        customization {
           header
-          description
-          image
-          features
+          cards {
+            header
+            description
+            image
+            features
+          }
         }
 
         configurationLogos {
           logo
         }
         solutionsContent {
-          header
           firstCard {
             image
             header
@@ -127,6 +150,19 @@ export const pageQuery = graphql`
         }
         customerLogos {
           logo
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 2560) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
       }
     }
