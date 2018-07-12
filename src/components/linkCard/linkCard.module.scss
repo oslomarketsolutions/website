@@ -3,17 +3,21 @@
 .sticky {
   display: flex;
   flex-flow: row wrap;
+  border: none;
   background: none;
-  border: 2px solid $darkBlue;
   padding: 0;
   color: $darkBlue;
   height: 100px;
   width: 300px;
   justify-content: center;
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    background: $darkBlue;
+    color: white;
+  }
 
   h4 {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin: auto;
   }
 
@@ -47,6 +51,7 @@
   }
 
   .textContainer {
+    align-self: center;
     h4 {
       padding-left: 20px;
       font-size: 24px;
