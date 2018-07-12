@@ -337,7 +337,7 @@ collections:
             ]}
   - name: "footer"
     label: "Footer"
-    files: "src/components/footer/index.md"
+    file: "src/components/footer/index.md"
     fields: 
       - {label: "Group websites", name: "groupWebsites", widget: "object", fields: [
           {label: "Oslo Børs VPS", name: "osloBorsVPS", widget: "list", fields: [
