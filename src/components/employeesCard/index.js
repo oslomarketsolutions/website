@@ -28,13 +28,20 @@ const iconMatcher = jobType => {
 };
 
 const EmployeeCard = props => {
-  const { name, jobTitle, description, sizes, jobType } = props;
+  const {
+    name,
+    jobTitle,
+    description,
+    portraitSize,
+    headerBackgroundSize,
+    jobType,
+  } = props;
   return (
     <section className={styles.EmployeeCard}>
       <Img
         outerWrapperClassName={styles.imageContainer}
         style={{ height: '100%', width: '100%' }}
-        sizes={sizes}
+        sizes={portraitSize}
       />
       <section className={styles.header}>
         <h2>{name}</h2>
@@ -42,6 +49,13 @@ const EmployeeCard = props => {
         <figure>
           <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>
+        {/* Background-image for header */}
+        <Img
+          outerWrapperClassName={styles.headerBackground}
+          style={{ height: '100%', width: '100%' }}
+          imgStyle={{ height: '200%', width: '200%' }}
+          sizes={headerBackgroundSize}
+        />
       </section>
       <section className={styles.description}>
         <p>{description}</p>
@@ -55,7 +69,8 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  sizes: PropTypes.arrayOf(PropTypes.object),
+  portraitSize: PropTypes.arrayOf(PropTypes.object),
+  headerBackgroundSize: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default EmployeeCard;

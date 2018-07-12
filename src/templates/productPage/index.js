@@ -154,7 +154,10 @@ export class ProductPageTemplate extends Component {
                   this[product.title] = card;
                 }}
               >
-                <ProductCard product={product} imageSizes={imageSizes} />
+                <ProductCard
+                  product={product}
+                  sizes={findImageSize(product.image, imageSizes)}
+                />
               </div>
             ))}
         </section>
