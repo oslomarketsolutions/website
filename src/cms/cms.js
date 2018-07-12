@@ -15,7 +15,6 @@ import PerkPreview from './preview-templates/PerkPreview';
 import FooterPreview from './preview-templates/FooterPreview';
 
 const fontAwesomeCSS = dom.css();
-faLibrary.add();
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewStyle(fontAwesomeCSS);
