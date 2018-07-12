@@ -341,8 +341,19 @@ collections:
         label: "Footer"
         fields: 
           - {label: "Group websites", name: "groupWebsites", widget: "object", fields: [
-              {label: "Oslo Børs VPS", name: "osloBorsVPS", widget: "list", fields: [
+              {label: "Oslo Børs VPS", name: "osloBorsVPS", widget: "object", fields: [
                 {label: "Title", name: "title", widget: "string"},
                 {label: "URL", name: "url", widget: "string"},
               ]},
+              {label: "VPS", name: "vps", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "URL", name: "url", widget: "string"},
+              ]},
+            ]}
+          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
+              {label: "Name", name: "title", widget: "string"},
+              {label: "Visiting address", name: "visitingAdress", widget: "string"},
+              {label: "Phone number", name: "phoneNumber", widget: "string"},
+              {label: "Email", name: "email", widget: "string"},
+              {label: "Mail address", name: "mailAdress", widget: "string"},
             ]}
