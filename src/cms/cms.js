@@ -1,22 +1,7 @@
 import CMS from 'netlify-cms';
 
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import {
-  faLinkedin,
-  faFacebook,
-  faMedium,
-  faGithubSquare,
-} from '@fortawesome/free-brands-svg-icons';
-import {
-  faGlobe,
-  faArrowUp,
-  faServer,
-  faGraduationCap,
-  faCoffee,
-  faFlask,
-  faUserSecret,
-} from '@fortawesome/free-solid-svg-icons';
-import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { dom } from '@fortawesome/fontawesome-svg-core';
+import { faLibrary } from '../layouts/index';
 
 import typography from '../utils/typography';
 
@@ -29,22 +14,8 @@ import ProductPagePreview from './preview-templates/ProductPagePreview';
 import PerkPreview from './preview-templates/PerkPreview';
 import FooterPreview from './preview-templates/FooterPreview';
 
-library.add(
-  faLinkedin,
-  faFacebook,
-  faMedium,
-  faGithubSquare,
-  faGlobe,
-  faCopyright,
-  faArrowUp,
-  faServer,
-  faGraduationCap,
-  faCoffee,
-  faFlask,
-  faUserSecret,
-);
-
 const fontAwesomeCSS = dom.css();
+faLibrary.add();
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewStyle(fontAwesomeCSS);
