@@ -335,13 +335,14 @@ collections:
               {label: "Image", name: "image", widget: "image"},
               {label: "Description", name: "description", widget: "text"},
             ]}
-  - name: "footer"
-    label: "Footer"
-    file: "src/components/footer/index.md"
-    fields: 
-      - {label: "Group websites", name: "groupWebsites", widget: "object", fields: [
-          {label: "Oslo Børs VPS", name: "osloBorsVPS", widget: "list", fields: [
-            {label: "Title", name: "title", widget: "string"},
-            {label: "URL", name: "url", widget: "string"},
-          ]},
-        ]}
+
+        - file: "src/pages/footer/index.md"
+          name: "footer"
+          label: "Footer"
+          fields: 
+            - {label: "Group websites", name: "groupWebsites", widget: "object", fields: [
+                {label: "Oslo Børs VPS", name: "osloBorsVPS", widget: "list", fields: [
+                  {label: "Title", name: "title", widget: "string"},
+                  {label: "URL", name: "url", widget: "string"},
+                ]},
+              ]}

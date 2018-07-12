@@ -1,6 +1,6 @@
 ---
 groupWebsites:
   osloBorsVPS:
-  - title: 'ting'
-  - url: 'ting'
+    - title: 'Title'
+    - url: 'url'
 ---
