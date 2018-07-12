@@ -1,11 +1,23 @@
 ---
 groupWebsites:
-  osloBorsVPS:
+  website1:
     title: 'Oslo Børs VPS'
-    url: 'url'
-  vps:
+    url: 'http://www.osloborsvps.no/'
+  website2:
     title: 'VPS'
-    url: 'url'
+    url: 'https://www.vps.no/pub/'
+  website3:
+    title: 'Oslo Børs'
+    url: 'https://www.oslobors.no/'
+  website4:
+    title: 'Fish Pool'
+    url: 'http://fishpool.eu/'
+  website5:
+    title: 'Centevo'
+    url: 'https://centevo.se/'
+  website6:
+    title: 'Newsweb'
+    url: 'https://newsweb.oslobors.no/'
 contactInfo:
   title: 'Oslo Market Solutions AS'
   visitingAddress: 'Fred Olsens gate 1, 0152 Oslo'
