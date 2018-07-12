@@ -1,7 +1,7 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
 
 .footer {
-  background-color: #f1f3f5;
+  background-color: $footerBackgroundColor;
 
   a,
   a:link,
@@ -14,7 +14,7 @@ $textColorDark: #1c315b;
   }
 
   ul {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0;
     padding: 0;
 
@@ -24,11 +24,14 @@ $textColorDark: #1c315b;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
+    margin: 18px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $darkBlue;
   }
 
   .footerContainer {
-    padding: 0 1em;
+    padding: 0 16px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -38,15 +41,10 @@ $textColorDark: #1c315b;
   .navigate,
   .contact {
     width: 46%;
-    padding-top: 2em;
-
-    h3 {
-      padding-bottom: 0.5em;
-      border-bottom: 1px solid $textColorDark;
-    }
+    padding-top: 32px;
 
     li {
-      padding-bottom: 0.5em;
+      padding-bottom: 8px;
     }
 
     li:last-of-type {
@@ -56,13 +54,13 @@ $textColorDark: #1c315b;
 
   .contact {
     width: 100%;
-    padding-bottom: 2em;
+    padding-bottom: 32px;
   }
 
   .socialMedia {
     width: 100%;
-    padding: 2em 0;
-    border-top: 1px solid $textColorDark;
+    padding: 32px 0;
+    border-top: 1px solid $darkBlue;
 
     ul {
       display: flex;
@@ -76,7 +74,7 @@ $textColorDark: #1c315b;
         margin: 0 auto;
 
         svg {
-          font-size: 45px;
+          font-size: 2.8125rem;
         }
       }
     }
@@ -87,9 +85,9 @@ $textColorDark: #1c315b;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 0 1em 0;
-    font-size: 12px;
-    color: #808080;
+    padding: 0 0 16px 0;
+    font-size: 0.75rem;
+    color: $copyrightColor;
 
     p {
       margin: 0;
@@ -98,7 +96,7 @@ $textColorDark: #1c315b;
 
   @media (min-width: 760px) {
     .footerContainer {
-      padding: 0 2em;
+      padding: 0 32px;
     }
 
     .socialMedia {
@@ -115,8 +113,8 @@ $textColorDark: #1c315b;
     .navigate,
     .contact {
       width: 28%;
-      max-width: 14.5em;
-      padding: 2em 0;
+      max-width: 232px;
+      padding: 32px 0;
     }
 
     .navigate {
@@ -130,11 +128,11 @@ $textColorDark: #1c315b;
 
   @media (min-width: 1024px) {
     h3 {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
 
     ul {
-      font-size: 18px;
+      font-size: 1.125rem;
     }
 
     .footerContainer {
@@ -146,8 +144,8 @@ $textColorDark: #1c315b;
     .navigate,
     .contact {
       width: 28%;
-      max-width: 18.5em;
-      padding: 2em 0;
+      max-width: 296px;
+      padding: 32px 0;
     }
   }
 }

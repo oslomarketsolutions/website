@@ -1,36 +1,46 @@
 .careerPage {
   max-width: 90%;
-  margin: 5em auto 0 auto;
+  margin: 16px auto 0 auto;
 
-  article {
-    margin: 2em 0;
+  h2 {
+    margin: 0 0 16px;
   }
 
-  .careerOms {
+  section {
+    margin: 64px 0;
+  }
+
+  .careerOms,
+  .whyOms {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 
-    section {
-      width: 45%;
+    p {
       display: flex;
       align-items: center;
+      width: 100%;
+      margin-bottom: 16px;
     }
 
     img {
-      width: 45%;
-      height: 22em;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 16px;
     }
   }
 
   .careerPerks {
+    h3 {
+      text-align: center;
+    }
     .perkCardContainer {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
       align-content: center;
-      width: 85%;
-      margin: 4em auto 0 auto;
+      width: 100%;
+      margin: 48px auto 0 auto;
     }
   }
 
@@ -39,13 +49,77 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+
+    .jobVacanciesContainer {
+      width: 100%;
+      height: 300px;
+      box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
+    }
+  }
+}
+
+@media (min-width: 945px) {
+  .careerPage {
+    .careerPerks {
+      .perkCardContainer {
+        width: 850px;
+      }
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .careerPage {
-    max-width: 1800px;
-    padding: 0 2em;
-    margin: 5em auto 0 auto;
+    max-width: 1864px;
+    padding: 0 32px;
+    margin: 80px auto 0 auto;
+
+    section {
+      margin: 275px 0;
+    }
+
+    .careerOms {
+      flex-flow: row-reverse wrap;
+
+      p {
+        width: 45%;
+      }
+
+      img {
+        width: 45%;
+      }
+    }
+
+    .whyOms {
+      img {
+        margin-bottom: 32px;
+      }
+    }
+
+    .careerPerks {
+      .perkCardContainer {
+        margin-top: 64px;
+      }
+    }
+
+    .careerJobVacancies {
+      h2 {
+        text-align: center;
+      }
+      .jobVacanciesContainer {
+        width: 800px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1477px) {
+  .careerPage {
+    .careerPerks {
+      .perkCardContainer {
+        width: 1410px;
+      }
+    }
   }
 }

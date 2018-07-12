@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class RedirectPage extends React.Component {
   componentDidMount() {
-    this.props.history.push('/no');
+    this.props.history.push('/en');
   }
 
   render() {

@@ -1,6 +1,4 @@
 ---
-title: 'Perk7: Sosiale arrangementer'
+title: 'Sosiale arrangementer'
+text: 'Hos oss er alle forsikret'
 ---
-
-###Sosiale arrangementer
-Årlige sosiale arrangementer med hele konsernet

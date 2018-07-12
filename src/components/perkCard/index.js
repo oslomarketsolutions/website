@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './perkCard.module.scss';
 
 const PerkCard = ({ title, text, color }) => (
-  <section className={styles.perkCard} style={{ borderColor: color }}>
-    <h3>{title}</h3>
+  <div className={styles.perkCard} style={{ borderColor: color }}>
+    <h4>{title}</h4>
     <p>{text}</p>
-  </section>
+  </div>
 );
 
 PerkCard.propTypes = {
