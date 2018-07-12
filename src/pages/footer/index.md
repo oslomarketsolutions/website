@@ -1,7 +1,10 @@
 ---
 groupWebsites:
   osloBorsVPS:
-    title: 'Title'
+    title: 'Oslo Børs VPS'
+    url: 'url'
+  vps:
+    title: 'VPS'
     url: 'url'
 contactInfo:
   title: 'Oslo Market Solutions AS'
@@ -10,13 +13,3 @@ contactInfo:
   email: 'info@oms.no'
   mailAddress: 'Postboks 1174 Sentrum, 0107 Oslo'
 ---
-
-{label: "Name", name: "title", widget: "string"},
-{label: "Visiting address", name: "visitingAdress", widget: "string"},
-{label: "Phone number", name: "phoneNumber", widget: "string"},
-{label: "Email", name: "email", widget: "string"},
-{label: "Mail address", name: "mailAdress", widget: "string"},
-
-              +47 40 00 23 13
-
-              info@oms.no
