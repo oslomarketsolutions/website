@@ -43,7 +43,7 @@ library.add(
 
 const fontAwesomeCSS = dom.css();
 
-const TemplateWrapper = ({ children, location }) => {
+const TemplateWrapper = ({ children, location, data }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
   const language = parsedPath && parsedPath[1];
 
@@ -56,7 +56,7 @@ const TemplateWrapper = ({ children, location }) => {
       </Helmet>
       <Navbar language={language} location={location} />
       {children()}
-      <Footer language={language} />
+      <Footer language={language} data={data} />
     </React.Fragment>
   );
 };
@@ -64,6 +64,53 @@ const TemplateWrapper = ({ children, location }) => {
 TemplateWrapper.propTypes = {
   location: PropTypes.shape({}),
   children: PropTypes.func,
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export default TemplateWrapper;
+
+export const footerQuery = graphql`
+  query Footer {
+    markdownRemark(id: { regex: "/src/pages/footer/index.md/" }) {
+      frontmatter {
+        groupWebsites {
+          website1 {
+            title
+            url
+          }
+          website2 {
+            title
+            url
+          }
+          website3 {
+            title
+            url
+          }
+          website4 {
+            title
+            url
+          }
+          website5 {
+            title
+            url
+          }
+          website6 {
+            title
+            url
+          }
+        }
+        contactInfo {
+          title
+          visitingAddress
+          phoneNumber
+          email
+          mailAddress
+        }
+      }
+    }
+  }
+`;
