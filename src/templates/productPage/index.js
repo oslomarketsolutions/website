@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
 import Img from 'gatsby-image';
-import { findImageSize } from '../../components/helperFunctions';
+import {
+  findImageSize,
+  findImageResolution,
+} from '../../components/helperFunctions';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -83,14 +86,20 @@ export class ProductPageTemplate extends Component {
             product={investorPortal}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
-            imageResolutions={imageResolutions}
+            imageResolution={findImageResolution(
+              investorPortal.image,
+              imageResolutions,
+            )}
           />
           {products.map(product => (
             <LinkCard
               product={product}
               onClickFunction={this.scrollToRef}
               sticky={stickyMenu}
-              imageResolutions={imageResolutions}
+              imageResolution={findImageResolution(
+                product.image,
+                imageResolutions,
+              )}
             />
           ))}
         </div>

@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import styles from './linkCard.module.scss';
-import { findImageResolution } from '../helperFunctions';
 
-const LinkCard = ({ product, onClickFunction, sticky, imageResolutions }) => {
+const LinkCard = ({ product, onClickFunction, sticky, imageResolution }) => {
   const style = sticky ? styles.sticky : styles.notSticky;
 
   return (
@@ -12,7 +11,7 @@ const LinkCard = ({ product, onClickFunction, sticky, imageResolutions }) => {
       <Img
         outerWrapperClassName={styles.imageContainer}
         style={{ height: '100%', width: '100%' }}
-        sizes={findImageResolution(product.image, imageResolutions)}
+        resolutions={imageResolution}
       />
       <div className={styles.textContainer}>
         <h4>{product.title}</h4>
@@ -27,5 +26,5 @@ LinkCard.propTypes = {
   product: PropTypes.arrayOf(PropTypes.object),
   onClickFunction: PropTypes.func,
   sticky: PropTypes.bool,
-  imageResolutions: PropTypes.arrayOf(PropTypes.object),
+  imageResolution: PropTypes.arrayOf(PropTypes.object),
 };

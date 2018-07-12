@@ -62,8 +62,7 @@ const IndexPage = ({ data }) => {
                 title={customizationCard.header}
                 description={customizationCard.description}
                 features={customizationCard.features}
-                image={customizationCard.image}
-                imageSizes={imageSizes}
+                sizes={findImageSize(customizationCard.image, imageSizes)}
               />
             ))}
         </section>
