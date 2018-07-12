@@ -1,6 +1,7 @@
 import CMS from 'netlify-cms';
 
 import { dom } from '@fortawesome/fontawesome-svg-core';
+import typography from '../utils/typography';
 
 import AboutPagePreview from './preview-templates/AboutPagePreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
@@ -15,6 +16,7 @@ const fontAwesomeCSS = dom.css();
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewStyle(fontAwesomeCSS);
+CMS.registerPreviewStyle(typography);
 CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
 CMS.registerPreviewTemplate('english_about_page', AboutPagePreview);
 CMS.registerPreviewTemplate('norwegian_index_page', IndexPagePreview);
