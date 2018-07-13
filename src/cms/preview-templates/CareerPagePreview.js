@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { CareerPageTemplate } from '../../templates/careerPage/index';
 
 const CareerPagePreview = ({ entry }) => {
-  // I don't think we have access to the perklist from careerPage,
-  // it's fetched by a query in CareerPageTemplate
+  // I don't think we have access to the perklist through the CMS preview,
+  // it's fetched by a query in careerPage/index.js
   const perkList = [
     {
       node: {
