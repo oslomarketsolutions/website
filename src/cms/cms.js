@@ -1,7 +1,7 @@
 import CMS from 'netlify-cms';
 
 // import { dom } from '@fortawesome/fontawesome-svg-core';
-import { faLibrary } from '../layouts/index';
+// import { faLibrary } from '../layouts/index';
 
 import '../utils/typography';
 
