@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Footer from '../../components/footer';
-import '../../utils/typography';
+import typography from '../../utils/typography';
 
 const FooterPreview = ({ entry }) => {
+  typography.injectStyles();
+
   const data = {
     markdownRemark: {
       frontmatter: {
