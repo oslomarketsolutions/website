@@ -66,7 +66,6 @@ export const CareerPageTemplate = ({
         </div>
       </section>
       <section className={styles.careerJobVacancies}>
-        {/* Her skal iFramen med ledige stillinger være */}
         <h2>{subHeader2}</h2>
         <iframe
           title="Job Vacancies"
