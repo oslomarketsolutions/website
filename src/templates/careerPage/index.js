@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
 import { findImageSize } from '../../components/helperFunctions';
+import ImageWrapper from '../../components/imageWrapper';
 
 let colorCounter = 0;
 
@@ -44,7 +44,8 @@ export const CareerPageTemplate = ({
     <div className={styles.careerPage}>
       <section className={styles.careerOms}>
         <h2>{title}</h2>
-        <Img
+        <ImageWrapper
+          src={image1}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
           sizes={findImageSize(image1, imageSizes)}
@@ -53,7 +54,8 @@ export const CareerPageTemplate = ({
       </section>
       <section className={styles.whyOms}>
         <h2>{header}</h2>
-        <Img
+        <ImageWrapper
+          src={image2}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
           sizes={findImageSize(image2, imageSizes)}

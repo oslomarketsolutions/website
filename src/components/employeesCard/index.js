@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import ImageWrapper from '../imageWrapper';
 import styles from './EmployeeCard.module.scss';
 
 const iconMatcher = jobType => {
@@ -33,13 +31,15 @@ const EmployeeCard = props => {
     portraitSize,
     headerBackgroundSize,
     jobType,
+    image,
   } = props;
   return (
     <section className={styles.EmployeeCard}>
-      <Img
+      <ImageWrapper
         outerWrapperClassName={styles.imageContainer}
-        style={{ height: '100%', width: '100%' }}
+        style={{ height: '100%', width: '100%', gridArea: 'image' }}
         sizes={portraitSize}
+        src={image}
       />
       <section className={styles.header}>
         <h3>{name}</h3>
@@ -48,11 +48,12 @@ const EmployeeCard = props => {
           <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>
         {/* Background-image for header */}
-        <Img
+        <ImageWrapper
           outerWrapperClassName={styles.headerBackground}
           style={{ height: '100%', width: '100%' }}
-          imgStyle={{ height: '200%', width: '200%' }}
+          imgStyle={{ height: '250%', width: '250%' }}
           sizes={headerBackgroundSize}
+          src=""
         />
       </section>
       <section className={styles.description}>
@@ -69,6 +70,7 @@ EmployeeCard.propTypes = {
   description: PropTypes.string,
   portraitSize: PropTypes.arrayOf(PropTypes.object),
   headerBackgroundSize: PropTypes.arrayOf(PropTypes.object),
+  image: PropTypes.string,
 };
 
 export default EmployeeCard;

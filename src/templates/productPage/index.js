@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
-import Img from 'gatsby-image';
+import ImageWrapper from '../../components/imageWrapper';
 import {
   findImageSize,
   findImageResolution,
@@ -134,7 +134,8 @@ export class ProductPageTemplate extends Component {
             <div className={styles.investor}>
               <h3>{investorPortal.title}</h3>
               <p>{investorPortal.description}</p>
-              <Img
+              <ImageWrapper
+                src={investorPortal.image}
                 outerWrapperClassName={styles.imageContainer}
                 style={{ height: '100%', width: '100%' }}
                 sizes={findImageSize(investorPortal.image, imageSizes)}

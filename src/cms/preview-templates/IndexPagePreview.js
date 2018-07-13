@@ -29,7 +29,8 @@ const IndexPagePreview = ({ entry }) => {
 
   // Create the data object IndexPage expects
   const data = {
-    markdownRemark: {
+    imageSizes: { edges: [] },
+    page: {
       frontmatter: {
         topImage: entry.getIn(['data', 'topImage']),
         configurationLogos,

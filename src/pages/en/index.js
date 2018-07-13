@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from '../indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
 import { findImageSize } from '../../components/helperFunctions';
+import ImageWrapper from '../../components/imageWrapper';
 
 const IndexPage = ({ data }) => {
   const {
@@ -30,25 +29,31 @@ const IndexPage = ({ data }) => {
         <button className={styles.scrollButton} onClick={onScrollButtonClick}>
           <FontAwesomeIcon icon={caretDown} size="2x" />
         </button>
-        <Img
+        <ImageWrapper
+          src={topImage}
+          alt="Picture of a mug with steaming hot coffe"
+          sizes={findImageSize(topImage, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
-          sizes={findImageSize(topImage, imageSizes)}
         />
       </section>
       <section className={styles.configurationLogos}>
         {configurationLogos &&
           configurationLogos.map(configurationLogo => (
-            <Img
-              outerWrapperClassName={styles.imageContainer}
+            <ImageWrapper
+              src={configurationLogo.logo}
+              alt={configurationLogo.logo}
               sizes={findImageSize(configurationLogo.logo, imageSizes)}
+              outerWrapperClassName={styles.imageContainer}
+              style={{ height: '100%', width: '100%' }}
             />
           ))}
       </section>
       <section className={styles.featuredCase}>
         <h2>{featuredContent.header}</h2>
         <p>{featuredContent.text}</p>
-        <Img
+        <ImageWrapper
+          src={featuredContent.image}
           outerWrapperClassName={styles.imageContainer}
           sizes={findImageSize(featuredContent.image, imageSizes)}
         />
@@ -63,6 +68,7 @@ const IndexPage = ({ data }) => {
                 description={customizationCard.description}
                 features={customizationCard.features}
                 sizes={findImageSize(customizationCard.image, imageSizes)}
+                image={customizationCard.image}
               />
             ))}
         </section>
@@ -70,7 +76,8 @@ const IndexPage = ({ data }) => {
 
       <section className={styles.solutions}>
         <article className={styles.solution}>
-          <Img
+          <ImageWrapper
+            src={solutionsContent.firstCard.image}
             outerWrapperClassName={styles.imageContainer}
             style={{ height: '100%', width: '100%' }}
             sizes={findImageSize(solutionsContent.firstCard.image, imageSizes)}
@@ -79,7 +86,8 @@ const IndexPage = ({ data }) => {
           <p> {solutionsContent.firstCard.text} </p>
         </article>
         <article className={styles.solution}>
-          <Img
+          <ImageWrapper
+            src={solutionsContent.secondCard.image}
             outerWrapperClassName={styles.imageContainer}
             style={{ height: '100%', width: '100%' }}
             sizes={findImageSize(solutionsContent.secondCard.image, imageSizes)}
@@ -91,9 +99,11 @@ const IndexPage = ({ data }) => {
       <section className={styles.customerLogos}>
         {customerLogos &&
           customerLogos.map(customerLogo => (
-            <Img
+            <ImageWrapper
+              src={customerLogo.logo}
               outerWrapperClassName={styles.imageContainer}
               sizes={findImageSize(customerLogo.logo, imageSizes)}
+              style={{ height: '100%', width: '100%' }}
             />
           ))}
       </section>

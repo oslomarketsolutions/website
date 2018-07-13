@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import styles from './linkCard.module.scss';
+import ImageWrapper from '../imageWrapper';
 
 const LinkCard = ({ product, onClickFunction, sticky, imageResolution }) => {
   const style = sticky ? styles.sticky : styles.notSticky;
 
   return (
     <button onClick={() => onClickFunction(product.title)} className={style}>
-      <Img
+      <ImageWrapper
+        src={product.image}
         outerWrapperClassName={styles.imageContainer}
         style={{ height: '100%', width: '100%' }}
         resolutions={imageResolution}

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
 import { findImageSize } from '../../components/helperFunctions';
+import ImageWrapper from '../../components/imageWrapper';
 
 export const AboutPageTemplate = ({
   image,
@@ -18,9 +18,11 @@ export const AboutPageTemplate = ({
       <section className={styles.aboutOms}>
         <h2>{title}</h2>
         <p>{text}</p>
-        <div className={styles.imageContainer}>
-          <Img sizes={findImageSize(image, imageSizes)} />
-        </div>
+        <ImageWrapper
+          src={image}
+          sizes={findImageSize(image, imageSizes)}
+          outerWrapperClassName={styles.imageContainer}
+        />
       </section>
       <article className={styles.aboutEmployees}>
         <h2>{header}</h2>
@@ -43,6 +45,7 @@ export const AboutPageTemplate = ({
                 imageSizes,
               )}
               jobType={employeeJobType}
+              image={employeeImage}
             />
           );
         })}

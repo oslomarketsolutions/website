@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 
 import styles from './ProductCard.module.scss';
+import ImageWrapper from '../imageWrapper';
 
 const ProductCard = ({ product, sizes }) => (
   <div className={styles.ProductCard}>
@@ -12,7 +12,8 @@ const ProductCard = ({ product, sizes }) => (
     <section className={styles.description}>
       <p>{product.description}</p>
     </section>
-    <Img
+    <ImageWrapper
+      src={product.image}
       outerWrapperClassName={styles.imageContainer}
       style={{ height: '100%', width: '100%' }}
       sizes={sizes}
