@@ -1,7 +1,6 @@
 import CMS from 'netlify-cms';
 
 import '../layouts/index';
-import '../utils/typography';
 
 import AboutPagePreview from './preview-templates/AboutPagePreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
