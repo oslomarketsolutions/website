@@ -68,7 +68,10 @@ export const CareerPageTemplate = ({
       <section className={styles.careerJobVacancies}>
         {/* Her skal iFramen med ledige stillinger være */}
         <h2>{subHeader2}</h2>
-        <div className={styles.jobVacanciesContainer} />
+        <iframe
+          title="Job Vacancies"
+          src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
+        />
       </section>
     </div>
   </main>
