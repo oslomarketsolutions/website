@@ -6,12 +6,12 @@ import '../../layouts/index';
 const PreviewWrapper = ({ children }) => (
   <div>
     <style>{typography.toString()}</style>
-    {children()}
+    {children}
   </div>
 );
 
 export default PreviewWrapper;
 
 PreviewWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node,
 };
