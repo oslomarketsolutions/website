@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Footer from '../../components/footer';
+import PreviewWrapper from '../../components/previewWrapper';
 
 const FooterPreview = ({ entry }) => {
   const data = {
@@ -47,7 +48,11 @@ const FooterPreview = ({ entry }) => {
     },
   };
 
-  return <Footer data={data} language="en" />;
+  return (
+    <PreviewWrapper>
+      <Footer data={data} language="en" />
+    </PreviewWrapper>
+  );
 };
 
 FooterPreview.propTypes = {
