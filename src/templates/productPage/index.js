@@ -54,16 +54,16 @@ export class ProductPageTemplate extends Component {
   render() {
     const { intro, investorPortal, products } = this.props;
 
-    const linkCards = (sticky, inView) => {
-      let className = styles.notSticky;
+    const linkCards = (stickyMenu, inView) => {
+      let className = styles.notStickyMenu;
       let style = {};
-      if (sticky) {
+      if (stickyMenu) {
         // If intro-section is in view
         if (inView) {
           style = { display: 'none' };
           className = '';
         } else {
-          className = styles.sticky;
+          className = styles.stickyMenu;
         }
       }
 
@@ -72,13 +72,13 @@ export class ProductPageTemplate extends Component {
           <LinkCard
             product={investorPortal}
             onClickFunction={this.scrollToRef}
-            sticky={sticky}
+            sticky={stickyMenu}
           />
           {products.map(product => (
             <LinkCard
               product={product}
               onClickFunction={this.scrollToRef}
-              sticky={sticky}
+              sticky={stickyMenu}
             />
           ))}
         </div>
@@ -86,62 +86,58 @@ export class ProductPageTemplate extends Component {
     };
 
     return (
-      <main>
-        <div className={styles.container}>
-          <Observer>
-            {({ inView, ref }) => (
-              <section className={styles.intro} ref={ref}>
-                <h2>{intro.title}</h2>
-                <div>
-                  {// Sticky
-                  linkCards(true, inView)}
-                  {// Not sticky
-                  linkCards(false, inView)}
-                </div>
-              </section>
-            )}
-          </Observer>
+      <main className={styles.container}>
+        <Observer>
+          {({ inView, ref }) => (
+            <section className={styles.intro} ref={ref}>
+              <h2>{intro.title}</h2>
+              {// Sticky link bar
+              linkCards(true, inView)}
+              {// Intro cards
+              linkCards(false, inView)}
+            </section>
+          )}
+        </Observer>
 
-          {oneYearGraph()}
+        {oneYearGraph()}
 
-          <section
-            ref={section => {
-              this[investorPortal.title] = section;
-            }}
-            className={styles.investorPortal}
-          >
-            <div className={styles.investor}>
-              <h3>{investorPortal.title}</h3>
-              <p>{investorPortal.description}</p>
-              <img src={investorPortal.image} alt={investorPortal.title} />
-            </div>
-            {investorPortal.features &&
-              investorPortal.features.map(feature => (
-                <div className={styles.features}>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.description}</p>
-                </div>
-              ))}
-          </section>
-          <section className={styles.investorContact}>
-            <h4>Contact us today to get more info about our traders!</h4>
-            <button>Contact</button>
-          </section>
+        <section
+          ref={section => {
+            this[investorPortal.title] = section;
+          }}
+          className={styles.investorPortal}
+        >
+          <div className={styles.investor}>
+            <h3>{investorPortal.title}</h3>
+            <p>{investorPortal.description}</p>
+            <img src={investorPortal.image} alt={investorPortal.title} />
+          </div>
+          {investorPortal.features &&
+            investorPortal.features.map(feature => (
+              <div className={styles.features}>
+                <h4>{feature.title}</h4>
+                <p>{feature.description}</p>
+              </div>
+            ))}
+        </section>
+        <section className={styles.investorContact}>
+          <h4>Contact us today to get more info about our traders!</h4>
+          <button>Contact</button>
+        </section>
 
-          <section className={styles.productsContainer}>
-            {products &&
-              products.map(product => (
-                <div
-                  className={styles.product}
-                  ref={card => {
-                    this[product.title] = card;
-                  }}
-                >
-                  <ProductCard product={product} />
-                </div>
-              ))}
-          </section>
-        </div>
+        <section className={styles.productsContainer}>
+          {products &&
+            products.map(product => (
+              <div
+                className={styles.product}
+                ref={card => {
+                  this[product.title] = card;
+                }}
+              >
+                <ProductCard product={product} />
+              </div>
+            ))}
+        </section>
       </main>
     );
   }

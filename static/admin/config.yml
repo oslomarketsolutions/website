@@ -129,7 +129,7 @@ collections:
         searchFields: ["title"]
         valueField: "slug"
         displayFields: ["title"]
-  
+
   - name: "pages"
     label: "Pages"
     files:
@@ -286,15 +286,11 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
           - {label: "Intro", name: "intro", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
-              {label: "Links", name: "links", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Text", name: "text", widget: "string"},
-                {label: "Image", name: "image", widget: "image"},
-              ]},
             ]}
           - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
               {label: "Features", name: "features", widget: "list", fields: [
                 {label: "Title", name: "title", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
@@ -315,15 +311,11 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
           - {label: "Intro", name: "intro", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
-              {label: "Links", name: "links", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Text", name: "text", widget: "string"},
-                {label: "Image", name: "image", widget: "image"},
-              ]},
             ]}
           - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
               {label: "Features", name: "features", widget: "list", fields: [
                 {label: "Title", name: "title", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
@@ -339,7 +331,7 @@ collections:
       - file: "src/pages/footer/index.md"
         name: "footer"
         label: "Footer"
-        fields: 
+        fields:
           - {label: "Group websites", name: "groupWebsites", widget: "object", fields: [
               {label: "Website", name: "website1", widget: "object", fields: [
                 {label: "Website name", name: "title", widget: "string"},
