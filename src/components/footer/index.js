@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from 'gatsby-link';
@@ -20,58 +20,58 @@ const Footer = ({ language, data }) => {
           </h3>
           <ul>
             <li>
-              <a
+              <OutboundLink
                 href={groupWebsites.website1.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {groupWebsites.website1.title}
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href={groupWebsites.website2.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {groupWebsites.website2.title}
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href={groupWebsites.website3.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {groupWebsites.website3.title}
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href={groupWebsites.website4.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {groupWebsites.website4.title}
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href={groupWebsites.website5.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {groupWebsites.website5.title}
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href={groupWebsites.website6.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {groupWebsites.website6.title}
-              </a>
+              </OutboundLink>
             </li>
           </ul>
         </div>
@@ -116,40 +116,40 @@ const Footer = ({ language, data }) => {
         <div className={styles.socialMedia}>
           <ul>
             <li>
-              <a
+              <OutboundLink
                 href="https://www.linkedin.com/company/oslo-market-solutions-as/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'linkedin']} />
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href="https://www.facebook.com/oslomarketsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'facebook']} />
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href="https://medium.com/shark-bytes"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'medium']} />
-              </a>
+              </OutboundLink>
             </li>
             <li>
-              <a
+              <OutboundLink
                 href="https://github.com/oslomarketsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'github-square']} />
-              </a>
+              </OutboundLink>
             </li>
           </ul>
         </div>
