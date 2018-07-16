@@ -11,7 +11,6 @@ const FeatureCard = props => {
     <Link to={link} className={styles.FeatureCard}>
       <ImageWrapper
         outerWrapperClassName={styles.imageContainer}
-        style={{ height: '100%', width: '100%' }}
         sizes={sizes}
         src={image}
         alt={title}

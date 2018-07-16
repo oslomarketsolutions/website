@@ -15,7 +15,6 @@ const ProductCard = ({ product, sizes }) => (
     <ImageWrapper
       src={product.image}
       outerWrapperClassName={styles.imageContainer}
-      style={{ height: '100%', width: '100%' }}
       sizes={sizes}
       alt={product.title}
     />

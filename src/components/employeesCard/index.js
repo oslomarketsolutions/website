@@ -38,7 +38,7 @@ const EmployeeCard = props => {
     <section className={styles.EmployeeCard}>
       <ImageWrapper
         outerWrapperClassName={styles.imageContainer}
-        style={{ height: '100%', width: '100%', gridArea: 'image' }}
+        style={{ gridArea: 'image' }}
         sizes={portraitSize}
         src={image}
         alt={name}
@@ -52,7 +52,6 @@ const EmployeeCard = props => {
         {/* Background-image for header */}
         <ImageWrapper
           outerWrapperClassName={styles.headerBackground}
-          style={{ height: '100%', width: '100%' }}
           imgStyle={{ height: '250%', width: '250%' }}
           sizes={headerBackgroundSize}
           src={headerBackground}

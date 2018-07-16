@@ -124,7 +124,6 @@ export class ProductPageTemplate extends Component {
               alt={investorPortal.title}
               src={investorPortal.image}
               outerWrapperClassName={styles.imageContainer}
-              style={{ height: '100%', width: '100%' }}
               sizes={findImageSizes(investorPortal.image, imageSizes)}
             />
           </div>

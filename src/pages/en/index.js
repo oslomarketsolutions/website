@@ -34,7 +34,6 @@ const IndexPage = ({ data }) => {
           alt={topImage.alt}
           sizes={findImageSizes(topImage.image, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
-          style={{ height: '100%', width: '100%' }}
         />
       </section>
       <section className={styles.configurationLogos}>
@@ -45,7 +44,6 @@ const IndexPage = ({ data }) => {
               alt={configurationLogo.name}
               sizes={findImageSizes(configurationLogo.logo, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
-              style={{ height: '100%', width: '100%' }}
             />
           ))}
       </section>
@@ -81,7 +79,6 @@ const IndexPage = ({ data }) => {
             alt={solutionsContent.firstCard.header}
             src={solutionsContent.firstCard.image}
             outerWrapperClassName={styles.imageContainer}
-            style={{ height: '100%', width: '100%' }}
             sizes={findImageSizes(solutionsContent.firstCard.image, imageSizes)}
           />
           <h4> {solutionsContent.firstCard.header} </h4>
@@ -92,7 +89,6 @@ const IndexPage = ({ data }) => {
             alt={solutionsContent.secondCard.header}
             src={solutionsContent.secondCard.image}
             outerWrapperClassName={styles.imageContainer}
-            style={{ height: '100%', width: '100%' }}
             sizes={findImageSizes(
               solutionsContent.secondCard.image,
               imageSizes,
@@ -110,7 +106,6 @@ const IndexPage = ({ data }) => {
               src={customerLogo.logo}
               outerWrapperClassName={styles.imageContainer}
               sizes={findImageSizes(customerLogo.logo, imageSizes)}
-              style={{ height: '100%', width: '100%' }}
             />
           ))}
       </section>

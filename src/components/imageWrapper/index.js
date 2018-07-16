@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import styles from './ImageWrapper.module.scss';
 
 const ImageWrapper = props => {
   const {
@@ -18,6 +19,7 @@ const ImageWrapper = props => {
       <Img
         outerWrapperClassName={outerWrapperClassName}
         style={style}
+        className={styles.innerImageWrapper}
         imgStyle={imgStyle}
         resolutions={resolutions}
         sizes={sizes}
@@ -28,7 +30,7 @@ const ImageWrapper = props => {
 
   return (
     <div className={outerWrapperClassName}>
-      <div style={style}>
+      <div className={styles.innerImageWrapper} style={style}>
         <img
           src={src}
           alt={alt}

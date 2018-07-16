@@ -50,7 +50,6 @@ export const CareerPageTemplate = ({
           alt={image1Alt}
           src={image1}
           outerWrapperClassName={styles.imageContainer}
-          style={{ height: '100%', width: '100%' }}
           sizes={findImageSizes(image1, imageSizes)}
         />
         <p>{text1}</p>
@@ -61,7 +60,6 @@ export const CareerPageTemplate = ({
           alt={image2Alt}
           src={image2}
           outerWrapperClassName={styles.imageContainer}
-          style={{ height: '100%', width: '100%' }}
           sizes={findImageSizes(image2, imageSizes)}
         />
         <p>{text2}</p>
