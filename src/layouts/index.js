@@ -26,7 +26,7 @@ import './style.scss';
 import Navbar from '../components/navbar/index';
 import Footer from '../components/footer/index';
 
-library.add(
+export const faLibrary = library.add(
   faLinkedin,
   faFacebook,
   faMedium,

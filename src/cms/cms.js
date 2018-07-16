@@ -7,6 +7,7 @@ import FeaturePreview from './preview-templates/FeaturePreview';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
 import ProductPagePreview from './preview-templates/ProductPagePreview';
 import PerkPreview from './preview-templates/PerkPreview';
+import FooterPreview from './preview-templates/FooterPreview';
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
@@ -21,4 +22,6 @@ CMS.registerPreviewTemplate('english_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_products_page', ProductPagePreview);
 CMS.registerPreviewTemplate('english_products_page', ProductPagePreview);
+CMS.registerPreviewTemplate('footer', FooterPreview);
+CMS.registerPreviewTemplate('products', ProductPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);

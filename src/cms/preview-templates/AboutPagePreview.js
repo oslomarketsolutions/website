@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AboutPageTemplate } from '../../templates/aboutPage/index';
+import PreviewWrapper from '../../components/previewWrapper';
 
 const AboutPagePreview = ({ entry, getAsset }) => (
-  <AboutPageTemplate
-    title={entry.getIn(['data', 'title'])}
-    header1={entry.getIn(['data', 'header1'])}
-    image={getAsset(entry.getIn(['data', 'image']))}
-    text={entry.getIn(['data', 'text'])}
-    header2={entry.getIn(['data', 'header2'])}
-  />
+  <PreviewWrapper>
+    <AboutPageTemplate
+      title={entry.getIn(['data', 'title'])}
+      header1={entry.getIn(['data', 'header1'])}
+      image={getAsset(entry.getIn(['data', 'image']))}
+      text={entry.getIn(['data', 'text'])}
+      header2={entry.getIn(['data', 'header2'])}
+    />
+  </PreviewWrapper>
 );
 
 AboutPagePreview.propTypes = {
