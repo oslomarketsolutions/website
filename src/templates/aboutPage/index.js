@@ -34,6 +34,7 @@ export const AboutPageTemplate = ({
           } = employee.node.frontmatter;
           return (
             <EmployeeCard
+              key={employeeName}
               name={employeeName}
               description={employeeDescription}
               jobTitle={employeeJobTitle}
