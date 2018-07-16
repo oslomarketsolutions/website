@@ -23,7 +23,7 @@ const ProductPagePreview = ({ entry }) => {
         }}
         products={products}
       />
-    </PreviewWrapper>     
+    </PreviewWrapper>
   );
 };
 
