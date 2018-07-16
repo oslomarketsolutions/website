@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+        trackingId: 'UA-101364630-3',
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -23,8 +23,6 @@ module.exports = {
         // DNT = Do Not Track, Google Analytics doesn't technically go under
         // tracking.
         respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        // exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
     {
