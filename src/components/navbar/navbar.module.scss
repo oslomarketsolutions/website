@@ -9,15 +9,18 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 header {
-  width: 90%;
-  margin: 16px auto 0;
+  position: absolute;
+  width: 100%;
 }
 
 .navbar {
   display: flex;
   align-items: center;
+  width: 90%;
+  margin: 16px auto 0;
 
   nav {
+    z-index: 1;
     position: fixed;
     top: 0;
     right: 0;
@@ -114,13 +117,10 @@ header {
 }
 
 @media (min-width: 1024px) {
-  header {
-    width: inherit;
-    margin: 0;
-  }
-
   .navbar {
     padding: 16px 32px 0 32px;
+    width: inherit;
+    margin: 0;
 
     button,
     .menuGraph {
@@ -239,6 +239,28 @@ header {
       }
     }
   }
+  header.navColorWhite {
+    color: #fff;
+    .navbar {
+      nav {
+        a {
+          &:before,
+          &:after {
+            background-color: #fff;
+          }
+        }
+        ul {
+          li.borderLeft {
+            border-color: #fff;
+          }
+
+          li.borderRight {
+            border-color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1023px) {
@@ -316,6 +338,15 @@ header {
         padding: 32px 16px;
         border-top: 1px solid;
         border-bottom: 1px solid;
+      }
+    }
+  }
+  header.navColorWhite {
+    .navbar {
+      .hamburger {
+        .bar {
+          background-color: #fff;
+        }
       }
     }
   }

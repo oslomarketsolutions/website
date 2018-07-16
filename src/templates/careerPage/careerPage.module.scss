@@ -1,13 +1,13 @@
 .careerPage {
   max-width: 90%;
-  margin: 16px auto 0 auto;
+  margin: 112px auto 0 auto;
 
   h2 {
     margin: 0 0 16px;
   }
 
   section {
-    margin: 64px 0;
+    padding: 32px 0;
   }
 
   .careerOms,
@@ -51,6 +51,7 @@
     justify-content: center;
 
     iframe {
+      height: 164px;
       width: 496px;
       border: none;
       box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
@@ -72,10 +73,17 @@
   .careerPage {
     max-width: 1864px;
     padding: 0 32px;
-    margin: 80px auto 0 auto;
 
     section {
-      margin: 275px 0;
+      padding: 138px 0 138px;
+    }
+
+    section:first-of-type {
+      padding-top: 275px;
+    }
+
+    section:last-of-type {
+      padding-bottom: 275px;
     }
 
     .careerOms {

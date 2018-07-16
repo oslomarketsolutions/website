@@ -1,6 +1,6 @@
 .aboutPage {
   max-width: 90%;
-  margin: 80px auto 0 auto;
+  margin: 112px auto 0 auto;
 
   .aboutOms {
     display: flex;
@@ -29,7 +29,7 @@
 }
 
 .aboutPage > section {
-  margin: 64px 0;
+  padding: 32px 0;
 }
 
 .aboutPage > section > h2 {
@@ -40,7 +40,6 @@
   .aboutPage {
     max-width: 1864px;
     padding: 0 32px;
-    margin: 80px auto 0 auto;
 
     .aboutOms {
       p {
@@ -54,7 +53,15 @@
   }
 
   .aboutPage > section {
-    margin: 275px 0;
+    padding: 138px 0 138px;
+  }
+
+  .aboutPage > section:first-of-type {
+    padding-top: 275px;
+  }
+
+  .aboutPage > section:last-of-type {
+    padding-bottom: 275px;
   }
 }
 
