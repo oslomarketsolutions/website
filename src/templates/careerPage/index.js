@@ -4,7 +4,6 @@ import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
 
 let colorCounter = 0;
-
 const color = () => {
   const colors = [
     '#fff6ae',
