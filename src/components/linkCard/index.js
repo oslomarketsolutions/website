@@ -13,6 +13,7 @@ const LinkCard = ({ product, onClickFunction, sticky, imageResolution }) => {
         outerWrapperClassName={styles.imageContainer}
         style={{ height: '100%', width: '100%' }}
         resolutions={imageResolution}
+        alt={product.title}
       />
       <div className={styles.textContainer}>
         <h4>{product.title}</h4>

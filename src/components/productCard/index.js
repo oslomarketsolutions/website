@@ -17,6 +17,7 @@ const ProductCard = ({ product, sizes }) => (
       outerWrapperClassName={styles.imageContainer}
       style={{ height: '100%', width: '100%' }}
       sizes={sizes}
+      alt={product.title}
     />
     <section className={styles.footer}>
       <ul>

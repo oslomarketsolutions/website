@@ -1,5 +1,7 @@
 ---
-topImage: /img/products-full-width.jpg
+topImage:
+  alt: "Steam coming up from a red cup"
+  image: /img/products-full-width.jpg
 featuredContent:
   header: Investor portals
   image: /img/chemex.jpg
@@ -49,7 +51,9 @@ customization:
   header: Chose your level of customization
 configurationLogos:
   - logo: /img/euronex_logo.png
+    name: Euronex
   - logo: /img/nasdaq_logo.png
+    name: Nasdaq
 solutionsContent:
   firstCard:
     header: Investor Relations
@@ -67,5 +71,7 @@ solutionsContent:
       market, with Top Shareholders and the Corporate Actions Calendar
 customerLogos:
   - logo: /img/er-logo-dagligbank-sparebank1.png
+    name: Sparebank1
   - logo: /img/afm_logo_blue.png
+    name: Arctic Fund Management
 ---

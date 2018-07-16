@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
+import classNames from 'classnames';
 import ImageWrapper from '../../components/imageWrapper';
 import {
   findImageSize,
   findImageResolution,
 } from '../../components/helperFunctions';
-import classNames from 'classnames';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -121,6 +121,7 @@ export class ProductPageTemplate extends Component {
             <h3>{investorPortal.title}</h3>
             <p>{investorPortal.description}</p>
             <ImageWrapper
+              alt={investorPortal.title}
               src={investorPortal.image}
               outerWrapperClassName={styles.imageContainer}
               style={{ height: '100%', width: '100%' }}

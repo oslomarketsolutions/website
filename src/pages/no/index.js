@@ -30,8 +30,8 @@ const IndexPage = ({ data }) => {
           <FontAwesomeIcon icon={caretDown} size="2x" />
         </button>
         <ImageWrapper
-          src={topImage}
-          alt="Picture of a mug with steaming hot coffe"
+          src={topImage.image}
+          alt={topImage.alt}
           sizes={findImageSize(topImage, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
           configurationLogos.map(configurationLogo => (
             <ImageWrapper
               src={configurationLogo.logo}
-              alt={configurationLogo.logo}
+              alt={configurationLogo.name}
               sizes={findImageSize(configurationLogo.logo, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
               style={{ height: '100%', width: '100%' }}
@@ -53,6 +53,7 @@ const IndexPage = ({ data }) => {
         <h2>{featuredContent.header}</h2>
         <p>{featuredContent.text}</p>
         <ImageWrapper
+          alt={featuredContent.header}
           src={featuredContent.image}
           outerWrapperClassName={styles.imageContainer}
           sizes={findImageSize(featuredContent.image, imageSizes)}
@@ -77,6 +78,7 @@ const IndexPage = ({ data }) => {
       <section className={styles.solutions}>
         <article className={styles.solution}>
           <ImageWrapper
+            alt={solutionsContent.firstCard.header}
             src={solutionsContent.firstCard.image}
             outerWrapperClassName={styles.imageContainer}
             style={{ height: '100%', width: '100%' }}
@@ -87,6 +89,7 @@ const IndexPage = ({ data }) => {
         </article>
         <article className={styles.solution}>
           <ImageWrapper
+            alt={solutionsContent.secondCard.header}
             src={solutionsContent.secondCard.image}
             outerWrapperClassName={styles.imageContainer}
             style={{ height: '100%', width: '100%' }}
@@ -100,6 +103,7 @@ const IndexPage = ({ data }) => {
         {customerLogos &&
           customerLogos.map(customerLogo => (
             <ImageWrapper
+              alt={customerLogo.name}
               src={customerLogo.logo}
               outerWrapperClassName={styles.imageContainer}
               sizes={findImageSize(customerLogo.logo, imageSizes)}
@@ -126,7 +130,10 @@ export const pageQuery = graphql`
   query NorIndexQuery {
     page: markdownRemark(id: { regex: "/src/pages/no/index.md/" }) {
       frontmatter {
-        topImage
+        topImage {
+          alt
+          image
+        }
         featuredContent {
           header
           image
@@ -143,6 +150,7 @@ export const pageQuery = graphql`
         }
 
         configurationLogos {
+          name
           logo
         }
         solutionsContent {
@@ -158,6 +166,7 @@ export const pageQuery = graphql`
           }
         }
         customerLogos {
+          name
           logo
         }
       }

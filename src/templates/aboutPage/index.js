@@ -7,6 +7,7 @@ import ImageWrapper from '../../components/imageWrapper';
 
 export const AboutPageTemplate = ({
   image,
+  imageAlt,
   text,
   title,
   header,
@@ -19,6 +20,7 @@ export const AboutPageTemplate = ({
         <h2>{title}</h2>
         <p>{text}</p>
         <ImageWrapper
+          alt={imageAlt}
           src={image}
           sizes={findImageSize(image, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
@@ -58,6 +60,7 @@ export const AboutPageTemplate = ({
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
+  imageAlt: PropTypes.string,
   text: PropTypes.string,
   header: PropTypes.string,
   employeeList: PropTypes.arrayOf(PropTypes.object),
@@ -93,6 +96,7 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         image
+        imageAlt
         text
         header
       }

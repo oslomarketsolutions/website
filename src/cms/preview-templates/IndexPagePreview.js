@@ -33,7 +33,10 @@ const IndexPagePreview = ({ entry }) => {
     imageSizes: { edges: [] },
     page: {
       frontmatter: {
-        topImage: entry.getIn(['data', 'topImage']),
+        topImage: {
+          image: entry.getIn(['data', 'topImage', 'image']),
+          alt: entry.getIn(['data', 'topImage', 'alt']),
+        },
         configurationLogos,
         featuredContent: {
           image: entry.getIn(['data', 'featuredContent', 'image']),

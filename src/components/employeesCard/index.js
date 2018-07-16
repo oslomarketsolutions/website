@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ImageWrapper from '../imageWrapper';
 import styles from './EmployeeCard.module.scss';
+import headerBackground from '../../../static/img/ansattkortHeader.png';
 
 const iconMatcher = jobType => {
   switch (jobType) {
@@ -40,6 +41,7 @@ const EmployeeCard = props => {
         style={{ height: '100%', width: '100%', gridArea: 'image' }}
         sizes={portraitSize}
         src={image}
+        alt={name}
       />
       <section className={styles.header}>
         <h3>{name}</h3>
@@ -53,7 +55,7 @@ const EmployeeCard = props => {
           style={{ height: '100%', width: '100%' }}
           imgStyle={{ height: '250%', width: '250%' }}
           sizes={headerBackgroundSize}
-          src=""
+          src={headerBackground}
         />
       </section>
       <section className={styles.description}>

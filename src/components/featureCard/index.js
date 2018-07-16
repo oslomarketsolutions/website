@@ -14,6 +14,7 @@ const FeatureCard = props => {
         style={{ height: '100%', width: '100%' }}
         sizes={sizes}
         src={image}
+        alt={title}
       />
       <section className={styles.header}>
         <h4>{title}</h4>

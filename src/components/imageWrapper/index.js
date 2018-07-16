@@ -21,6 +21,7 @@ const ImageWrapper = props => {
         imgStyle={imgStyle}
         resolutions={resolutions}
         sizes={sizes}
+        alt={alt}
       />
     );
   }
