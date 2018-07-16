@@ -22,11 +22,19 @@
       width: 100%;
       margin-bottom: 16px;
     }
+  }
 
-    img {
+  .careerOms {
+    .imageContainer {
+      width: 45%;
+      height: 100%;
+    }
+  }
+
+  .whyOms {
+    .imageContainer {
       width: 100%;
       height: 100%;
-      margin-bottom: 16px;
     }
   }
 
@@ -85,13 +93,13 @@
         width: 45%;
       }
 
-      img {
+      .imageContainer {
         width: 45%;
       }
     }
 
     .whyOms {
-      img {
+      .imageContainer {
         margin-bottom: 32px;
       }
     }

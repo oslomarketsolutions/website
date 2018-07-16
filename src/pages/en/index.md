@@ -69,4 +69,3 @@ customerLogos:
   - logo: /img/er-logo-dagligbank-sparebank1.png
   - logo: /img/afm_logo_blue.png
 ---
-

@@ -13,12 +13,12 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    img {
+    .imageContainer {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
     .scrollButton {
+      z-index: 2;
       position: absolute;
       width: 50px;
       height: 50px;
@@ -45,12 +45,12 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    height: 200px;
+    align-items: center;
     width: 100%;
     background-color: white;
 
-    img {
-      height: 100%;
+    .imageContainer {
+      width: 10%;
     }
   }
 
@@ -63,15 +63,16 @@
     padding: 100px 0;
 
     h2 {
+      width: 50%;
       margin-top: 0;
-      text-align: center;
+      text-align: left;
     }
 
     p {
       width: 50%;
     }
 
-    img {
+    .imageContainer {
       width: 50%;
     }
   }
@@ -103,22 +104,19 @@
     padding: 100px 0;
 
     .solution {
-      background-color: lightgrey;
+      background-color: #f1f3f5;
       height: 600px;
       width: 800px;
       margin: 20px;
 
-      img {
+      .imageContainer {
         height: 50%;
-        width: 100%;
-        object-fit: cover;
       }
 
       h4 {
         background-color: #224466;
-        margin-top: -10px; // Some weird margin/padding between the img and h4
         margin-bottom: 20px;
-        font-size: 2.75rem;
+        font-size: 2.8rem;
         padding-left: 20px;
         border-bottom: solid green;
       }
@@ -126,7 +124,6 @@
       p {
         margin: 0;
         padding: 20px;
-        font-size: 1.375rem;
         color: $darkBlue;
       }
     }
@@ -136,13 +133,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    height: 200px;
+    align-items: center;
     width: 100%;
     margin: auto;
+    padding: 10px;
     background-color: white;
 
-    img {
-      height: 100%;
+    .imageContainer {
+      width: 10%;
     }
   }
 }

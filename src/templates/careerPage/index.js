@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
+import { findImageSize } from '../../components/helperFunctions';
 
 let colorCounter = 0;
 
@@ -36,17 +38,26 @@ export const CareerPageTemplate = ({
   subHeader1,
   subHeader2,
   perkList,
+  imageSizes,
 }) => (
   <main>
     <div className={styles.careerPage}>
       <section className={styles.careerOms}>
         <h2>{title}</h2>
-        <img src={image1} alt="" />
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          style={{ height: '100%', width: '100%' }}
+          sizes={findImageSize(image1, imageSizes)}
+        />
         <p>{text1}</p>
       </section>
       <section className={styles.whyOms}>
         <h2>{header}</h2>
-        <img src={image2} alt="" />
+        <Img
+          outerWrapperClassName={styles.imageContainer}
+          style={{ height: '100%', width: '100%' }}
+          sizes={findImageSize(image2, imageSizes)}
+        />
         <p>{text2}</p>
       </section>
       <section className={styles.careerPerks}>
@@ -86,11 +97,13 @@ CareerPageTemplate.propTypes = {
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
   perkList: PropTypes.arrayOf(PropTypes.object),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const perkList = data.perks.edges;
+  const imageSizes = data.imageSizes.edges;
   colorCounter = 0;
 
   return (
@@ -104,6 +117,7 @@ const CareerPage = ({ data }) => {
       subHeader1={post.frontmatter.subHeader1}
       subHeader2={post.frontmatter.subHeader2}
       perkList={perkList}
+      imageSizes={imageSizes}
     />
   );
 };
@@ -137,6 +151,19 @@ export const careerPageQuery = graphql`
           frontmatter {
             title
             text
+          }
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 1440) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }

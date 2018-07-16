@@ -6,32 +6,48 @@
   .intro {
     background-color: white;
     h2 {
+      margin: 0;
+      padding: 75px 0;
       color: #1c315b;
-      font-size: 72px;
+      font-size: 4.5rem;
       padding-left: 10%;
     }
 
     /* Sticky Link menu when scrolling down past it */
-    .sticky {
+    .stickyMenu {
+      // Ensuring the sticky menu is on top
+      z-index: 1000;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: center;
-      align-content: space-between;
-      transition: all 1s;
       position: fixed;
-      top: 0;
       width: 100%;
       background-color: white;
       box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+
+      animation: slideDown 0.5s forwards;
+
+      @keyframes slideDown {
+        from {
+          top: -200px;
+        }
+        to {
+          top: 0px;
+        }
+      }
+
+      button {
+        margin: 0px 20px;
+      }
     }
 
-    .notSticky {
+    .notStickyMenu {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
       align-content: space-around;
       transition: all 1s;
-      max-width: 1540px;
+      max-width: 70%;
       margin: auto;
     }
   }
@@ -41,7 +57,6 @@
 
     p {
       margin-top: 60px;
-      font-size: 24px;
       min-width: 600px;
       width: 40%;
       line-height: 1.5em;
@@ -49,27 +64,26 @@
 
     .investor {
       // This fixes scrollIntoViewIfNeeded scrolling too far
-      padding-top: 100px;
-      margin-top: -100px;
+      padding-top: 150px;
+      margin-top: -150px;
+      // ------
 
       width: 100%;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
 
-      img {
-        display: block;
+      .imageContainer {
         width: 40%;
-        min-width: 600px;
-        height: auto;
-        align-self: center;
       }
 
       h3 {
-        font-size: 64px;
+        text-align: left;
+        font-size: 3.2rem;
         border-bottom: 2px solid #49b869;
         margin-right: 50%;
         margin-bottom: 0;
+        min-width: 600px;
       }
     }
 
@@ -77,13 +91,17 @@
       width: 100%;
 
       p {
-        margin-top: 20px;
+        margin-top: 2rem;
       }
 
       h4 {
-        font-size: 46px;
+        display: inline-block;
+        width: 30%;
+        min-width: 335px;
+        font-size: 2.8rem;
         border-bottom: 2px solid #49b869;
-        margin: 100px 80% 0px 0px;
+        margin-top: 100px;
+        padding-right: 50px;
       }
     }
   }
@@ -95,15 +113,16 @@
     align-content: center;
     width: 100%;
     height: 360px;
-    background-color: lightgrey;
+    background-color: #f1f3f5;
     text-align: center;
     margin-top: 200px;
 
     h4 {
       width: 100%;
-      margin: 0 0 40px 0;
+      margin: 0;
+      padding-bottom: 40px;
       color: #1c315b;
-      font-size: 46px;
+      font-size: 2.8rem;
     }
 
     button {
@@ -116,7 +135,7 @@
       text-align: center;
       text-decoration: underline;
       display: inline-block;
-      font-size: 26px;
+      font-size: 1.5rem;
     }
   }
 
@@ -124,10 +143,9 @@
     width: 100%;
     margin-top: 50px;
     h4 {
-      font-size: 46px;
+      font-size: 2.8rem;
     }
     p {
-      font-size: 24px;
       min-width: 600px;
       width: 40%;
       line-height: 1.5em;
@@ -135,8 +153,8 @@
 
     .product {
       // This fixes scrollIntoViewIfNeeded scrolling too far
-      padding-top: 120px;
-      margin-top: -120px;
+      padding-top: 150px;
+      margin-top: -150px;
       // ------
 
       display: flex;

@@ -15,16 +15,8 @@
     transform: scale(1.01);
   }
 
-  .image {
-    display: flex;
-    overflow: hidden;
+  .imageContainer {
     height: 190px;
-    justify-content: center;
-    align-items: center;
-    img {
-      height: auto;
-      width: 100%;
-    }
   }
 
   .header {
