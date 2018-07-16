@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // has the exact same code except for query
 // we don't need both.
 import IndexPage from '../../pages/no/index';
+import PreviewWrapper from '../../components/previewWrapper';
 
 // This preview template is a little special because
 // IndexPage doesn't have a template in its index.js-file.
@@ -90,7 +91,11 @@ const IndexPagePreview = ({ entry }) => {
     },
   };
 
-  return <IndexPage data={data} />;
+  return (
+    <PreviewWrapper>
+      <IndexPage data={data} />;
+    </PreviewWrapper>
+  );
 };
 
 IndexPagePreview.propTypes = {
