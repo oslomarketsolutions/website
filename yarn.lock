@@ -4463,6 +4463,12 @@ gatsby-plugin-eslint@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-1.0.3.tgz#39ffdbe6e286a0b27183d7da50628f9a2419119d"
 
+gatsby-plugin-google-analytics@^1.0.31:
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.31.tgz#eaf16e1809461b10badf12c05038c429745783c0"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-netlify-cms@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-2.0.1.tgz#1c22c3b4019486436295cfb6ee8180658847dbd8"
