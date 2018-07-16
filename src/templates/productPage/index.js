@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
+import classNames from 'classnames';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
 import oneYearGraph from '../../components/oneYearGraph';
-
-const classNames = require('classnames');
 
 if (typeof window !== `undefined`) {
   // eslint-disable-next-line
