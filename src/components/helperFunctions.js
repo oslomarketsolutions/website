@@ -24,5 +24,3 @@ export const findImageResolutions = (image, imageResolutions) => {
 
   return element ? element.node.childImageSharp.resolutions : {};
 };
-
-export default null;
