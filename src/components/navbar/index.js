@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Helmet from 'react-helmet';
@@ -119,40 +119,40 @@ export default class Navbar extends Component {
                 styles.socialMedia
               }`}
             >
-              <a
+              <OutboundLink
                 href="https://www.linkedin.com/company/oslo-market-solutions-as/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'linkedin']} />
-              </a>
+              </OutboundLink>
             </li>
             <li className={`${styles.noPaddingRight} ${styles.socialMedia}`}>
-              <a
+              <OutboundLink
                 href="https://www.facebook.com/oslomarketsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'facebook']} />
-              </a>
+              </OutboundLink>
             </li>
             <li className={`${styles.noPaddingRight} ${styles.socialMedia}`}>
-              <a
+              <OutboundLink
                 href="https://medium.com/shark-bytes"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'medium']} />
-              </a>
+              </OutboundLink>
             </li>
             <li className={`${styles.borderRight} ${styles.socialMedia}`}>
-              <a
+              <OutboundLink
                 href="https://github.com/oslomarketsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={['fab', 'github-square']} />
-              </a>
+              </OutboundLink>
             </li>
             <li className={styles.noPaddingRight}>
               <Link to={this.changePageLanguage()}>
