@@ -30,13 +30,13 @@ investorPortal:
       image: /img/chemex.jpg
   title: Investor Portals
 products:
-  - description: '123123'
+  - description: 'Keep investor clients informed and up to date anywhere and at any time.  Visualize exposure to different sectors and regions, risk allocation and performance.'
     title: Market data feed
     image: /img/chemex.jpg
-  - description: '444444'
-    title: Noe annet
+  - description: 'Keep investor clients informed and up to date anywhere and at any time.  Visualize exposure to different sectors and regions, risk allocation and performance.'
+    title: OMS Components
     image: /img/chemex.jpg
-  - description: '555555'
+  - description: 'Keep investor clients informed and up to date anywhere and at any time.  Visualize exposure to different sectors and regions, risk allocation and performance.'
     title: Noe annet igjen
     image: /img/chemex.jpg
 ---
