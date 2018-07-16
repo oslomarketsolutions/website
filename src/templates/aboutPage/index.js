@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
-import { findImageSize } from '../../components/helperFunctions';
+import { findImageSizes } from '../../components/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 export const AboutPageTemplate = ({
@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({
         <ImageWrapper
           alt={imageAlt}
           src={image}
-          sizes={findImageSize(image, imageSizes)}
+          sizes={findImageSizes(image, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
         />
       </section>
@@ -42,8 +42,8 @@ export const AboutPageTemplate = ({
               name={employeeName}
               description={employeeDescription}
               jobTitle={employeeJobTitle}
-              portraitSize={findImageSize(employeeImage, imageSizes)}
-              headerBackgroundSize={findImageSize(
+              portraitSize={findImageSizes(employeeImage, imageSizes)}
+              headerBackgroundSize={findImageSizes(
                 'ansattkortHeader.png',
                 imageSizes,
               )}

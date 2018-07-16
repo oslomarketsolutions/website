@@ -5,8 +5,8 @@ import Observer from 'react-intersection-observer';
 import classNames from 'classnames';
 import ImageWrapper from '../../components/imageWrapper';
 import {
-  findImageSize,
-  findImageResolution,
+  findImageSizes,
+  findImageResolutions,
 } from '../../components/helperFunctions';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
@@ -86,7 +86,7 @@ export class ProductPageTemplate extends Component {
             product={product}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
-            imageResolution={findImageResolution(
+            imageResolution={findImageResolutions(
               investorPortal.image,
               imageResolutions,
             )}
@@ -125,7 +125,7 @@ export class ProductPageTemplate extends Component {
               src={investorPortal.image}
               outerWrapperClassName={styles.imageContainer}
               style={{ height: '100%', width: '100%' }}
-              sizes={findImageSize(investorPortal.image, imageSizes)}
+              sizes={findImageSizes(investorPortal.image, imageSizes)}
             />
           </div>
           {investorPortal.features &&
@@ -152,7 +152,7 @@ export class ProductPageTemplate extends Component {
               >
                 <ProductCard
                   product={product}
-                  sizes={findImageSize(product.image, imageSizes)}
+                  sizes={findImageSizes(product.image, imageSizes)}
                 />
               </div>
             ))}

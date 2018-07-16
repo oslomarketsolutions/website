@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
-import { findImageSize } from '../../components/helperFunctions';
+import { findImageSizes } from '../../components/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 let colorCounter = 0;
@@ -51,7 +51,7 @@ export const CareerPageTemplate = ({
           src={image1}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
-          sizes={findImageSize(image1, imageSizes)}
+          sizes={findImageSizes(image1, imageSizes)}
         />
         <p>{text1}</p>
       </section>
@@ -62,7 +62,7 @@ export const CareerPageTemplate = ({
           src={image2}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
-          sizes={findImageSize(image2, imageSizes)}
+          sizes={findImageSizes(image2, imageSizes)}
         />
         <p>{text2}</p>
       </section>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from '../indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
-import { findImageSize } from '../../components/helperFunctions';
+import { findImageSizes } from '../../components/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 const IndexPage = ({ data }) => {
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
         <ImageWrapper
           src={topImage.image}
           alt={topImage.alt}
-          sizes={findImageSize(topImage, imageSizes)}
+          sizes={findImageSizes(topImage.image, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
           style={{ height: '100%', width: '100%' }}
         />
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
             <ImageWrapper
               src={configurationLogo.logo}
               alt={configurationLogo.name}
-              sizes={findImageSize(configurationLogo.logo, imageSizes)}
+              sizes={findImageSizes(configurationLogo.logo, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
               style={{ height: '100%', width: '100%' }}
             />
@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
           alt={featuredContent.header}
           src={featuredContent.image}
           outerWrapperClassName={styles.imageContainer}
-          sizes={findImageSize(featuredContent.image, imageSizes)}
+          sizes={findImageSizes(featuredContent.image, imageSizes)}
         />
       </section>
       <section className={styles.customization}>
@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
                 title={customizationCard.header}
                 description={customizationCard.description}
                 features={customizationCard.features}
-                sizes={findImageSize(customizationCard.image, imageSizes)}
+                sizes={findImageSizes(customizationCard.image, imageSizes)}
                 image={customizationCard.image}
               />
             ))}
@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
             src={solutionsContent.firstCard.image}
             outerWrapperClassName={styles.imageContainer}
             style={{ height: '100%', width: '100%' }}
-            sizes={findImageSize(solutionsContent.firstCard.image, imageSizes)}
+            sizes={findImageSizes(solutionsContent.firstCard.image, imageSizes)}
           />
           <h4> {solutionsContent.firstCard.header} </h4>
           <p> {solutionsContent.firstCard.text} </p>
@@ -93,7 +93,10 @@ const IndexPage = ({ data }) => {
             src={solutionsContent.secondCard.image}
             outerWrapperClassName={styles.imageContainer}
             style={{ height: '100%', width: '100%' }}
-            sizes={findImageSize(solutionsContent.secondCard.image, imageSizes)}
+            sizes={findImageSizes(
+              solutionsContent.secondCard.image,
+              imageSizes,
+            )}
           />
           <h4> {solutionsContent.secondCard.header} </h4>
           <p> {solutionsContent.secondCard.text} </p>
@@ -106,7 +109,7 @@ const IndexPage = ({ data }) => {
               alt={customerLogo.name}
               src={customerLogo.logo}
               outerWrapperClassName={styles.imageContainer}
-              sizes={findImageSize(customerLogo.logo, imageSizes)}
+              sizes={findImageSizes(customerLogo.logo, imageSizes)}
               style={{ height: '100%', width: '100%' }}
             />
           ))}
