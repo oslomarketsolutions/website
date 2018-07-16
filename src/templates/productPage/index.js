@@ -7,6 +7,7 @@ import {
   findImageSize,
   findImageResolution,
 } from '../../components/helperFunctions';
+import classNames from 'classnames';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -67,23 +68,22 @@ export class ProductPageTemplate extends Component {
       imageResolutions,
     } = this.props;
 
-    const linkCards = (stickyMenu, inView) => {
-      let className = styles.notStickyMenu;
-      let style = {};
-      if (stickyMenu) {
-        // If intro-section is in view
-        if (inView) {
-          style = { display: 'none' };
-          className = '';
-        } else {
-          className = styles.stickyMenu;
-        }
-      }
-
-      return (
-        <div className={className} style={style}>
+    const linkCards = (stickyMenu, inView) => (
+      <div
+        className={classNames({
+          [styles.hidden]: stickyMenu && inView,
+          [styles.stickyMenu]: stickyMenu && !inView,
+          [styles.notStickyMenu]: !stickyMenu,
+        })}
+      >
+        <LinkCard
+          product={investorPortal}
+          onClickFunction={this.scrollToRef}
+          sticky={stickyMenu}
+        />
+        {products.map(product => (
           <LinkCard
-            product={investorPortal}
+            product={product}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
             imageResolution={findImageResolution(
@@ -91,86 +91,71 @@ export class ProductPageTemplate extends Component {
               imageResolutions,
             )}
           />
-          {products.map(product => (
-            <LinkCard
-              product={product}
-              onClickFunction={this.scrollToRef}
-              sticky={stickyMenu}
-              imageResolution={findImageResolution(
-                product.image,
-                imageResolutions,
-              )}
-            />
-          ))}
-        </div>
-      );
-    };
+        ))}
+      </div>
+    );
 
     return (
-      <main>
-        <div className={styles.container}>
-          <Observer>
-            {({ inView, ref }) => (
-              <section className={styles.intro} ref={ref}>
-                <h2>{intro.title}</h2>
-                <div>
-                  {// Sticky
-                  linkCards(true, inView)}
-                  {// Not sticky
-                  linkCards(false, inView)}
-                </div>
-              </section>
-            )}
-          </Observer>
+      <main className={styles.container}>
+        <Observer>
+          {({ inView, ref }) => (
+            <section className={styles.intro} ref={ref}>
+              <h2>{intro.title}</h2>
+              {// Sticky link bar
+              linkCards(true, inView)}
+              {// Intro cards
+              linkCards(false, inView)}
+            </section>
+          )}
+        </Observer>
 
-          {oneYearGraph()}
+        {oneYearGraph()}
 
-          <section
-            ref={section => {
-              this[investorPortal.title] = section;
-            }}
-            className={styles.investorPortal}
-          >
-            <div className={styles.investor}>
-              <h3>{investorPortal.title}</h3>
-              <p>{investorPortal.description}</p>
-              <ImageWrapper
-                src={investorPortal.image}
-                outerWrapperClassName={styles.imageContainer}
-                style={{ height: '100%', width: '100%' }}
-                sizes={findImageSize(investorPortal.image, imageSizes)}
-              />
-            </div>
-            {investorPortal.features &&
-              investorPortal.features.map(feature => (
-                <div className={styles.features}>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.description}</p>
-                </div>
-              ))}
-          </section>
-          <section className={styles.investorContact}>
-            <h4>Contact us today to get more info about our traders!</h4>
-            <button>Contact</button>
-          </section>
+        <section
+          ref={section => {
+            this[investorPortal.title] = section;
+          }}
+          className={styles.investorPortal}
+        >
+          <div className={styles.investor}>
+            <h3>{investorPortal.title}</h3>
+            <p>{investorPortal.description}</p>
+            <ImageWrapper
+              src={investorPortal.image}
+              outerWrapperClassName={styles.imageContainer}
+              style={{ height: '100%', width: '100%' }}
+              sizes={findImageSize(investorPortal.image, imageSizes)}
+            />
+          </div>
+          {investorPortal.features &&
+            investorPortal.features.map(feature => (
+              <div className={styles.features}>
+                <h4>{feature.title}</h4>
+                <p>{feature.description}</p>
+              </div>
+            ))}
+        </section>
+        <section className={styles.investorContact}>
+          <h4>Contact us today to get more info about our traders!</h4>
+          <button>Contact</button>
+        </section>
 
-          <section className={styles.productsContainer}>
-            {products &&
-              products.map(product => (
-                <div
-                  className={styles.product}
-                  ref={card => {
-                    this[product.title] = card;
-                  }}
-                >
-                  <ProductCard
-                    product={product}
-                    sizes={findImageSize(product.image, imageSizes)}
-                  />
-                </div>
-              ))}
-          </section>
-        </div>
+        <section className={styles.productsContainer}>
+          {products &&
+            products.map(product => (
+              <div
+                className={styles.product}
+                ref={card => {
+                  this[product.title] = card;
+                }}
+              >
+                <ProductCard
+                  product={product}
+                  sizes={findImageSize(product.image, imageSizes)}
+                />
+              </div>
+            ))}
+        </section>
       </main>
     );
   }
