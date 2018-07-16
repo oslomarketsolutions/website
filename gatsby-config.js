@@ -12,6 +12,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-101364630-3',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        // DNT = Do Not Track, Google Analytics doesn't technically go under
+        // tracking.
+        respectDNT: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-eslint',
       options: {
         options: {

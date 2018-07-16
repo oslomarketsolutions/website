@@ -6,7 +6,6 @@ import { findImageSizes } from '../../components/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 let colorCounter = 0;
-
 const color = () => {
   const colors = [
     '#fff6ae',
