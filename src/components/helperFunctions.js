@@ -1,6 +1,6 @@
 export const findImageSize = (image, imageSizes) => {
   // If not both image and imageSizes are true then return empty object
-  if (!(image && imageSizes)) return null;
+  if (!image || !imageSizes) return null;
 
   // If image is a path, get only the image name
   const imageName = image.split('/').pop();
@@ -14,7 +14,7 @@ export const findImageSize = (image, imageSizes) => {
 
 export const findImageResolution = (image, imageResolutions) => {
   // If not both image and imageResolutions are true then return empty object
-  if (!(image && imageResolutions)) return null;
+  if (!image || !imageResolutions) return null;
 
   // If `image` is a path, get only the image name
   const imageName = image.split('/').pop();

@@ -13,21 +13,13 @@ const ImageWrapper = props => {
     imgStyle,
   } = props;
 
-  if (resolutions) {
+  if (resolutions || sizes) {
     return (
       <Img
         outerWrapperClassName={outerWrapperClassName}
         style={style}
         imgStyle={imgStyle}
         resolutions={resolutions}
-      />
-    );
-  } else if (sizes) {
-    return (
-      <Img
-        outerWrapperClassName={outerWrapperClassName}
-        style={style}
-        imgStyle={imgStyle}
         sizes={sizes}
       />
     );
