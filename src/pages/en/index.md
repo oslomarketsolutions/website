@@ -3,59 +3,70 @@ topImage: /img/products-full-width.jpg
 featuredContent:
   header: Investor portals
   image: /img/chemex.jpg
-  text: Whether you want a fully hosted and managed web trader, fund savings platform, portfolio reporting or market data information, OMS can help you get there. 
-customizationCards:
-  - description: >-
-      We provide market data from the whole world and a connection to the broker
-      house’s trading system.
-    features:
-      - Real Time
-      - Flexible
-      - Rapid
-      - Customized
-      - Probroker
-      - User Friendly
-    header: Feed/API
-    image: /img/products-grid2.jpg
-  - description: >-
-      A full coverage of the financial markets with a market data portal with
-      live, streaming data with smart links to content.
-    features:
-      - Real Time
-      - Flexible
-      - Rapid
-      - Customized
-      - Probroker
-      - User Friendly
-    header: OMS Web Components
-    image: /img/products-grid2.jpg
-  - description: >-
-      Keep investor clients informed and up to date anywhere and at any time.
-      Visualize exposure to different sectors and regions, risk allocation and
-      performance.
-    features:
-      - Real Time
-      - Flexible
-      - Rapid
-      - Customized
-      - Probroker
-      - User Friendly
-    header: Managed solutions
-    image: /img/products-grid2.jpg
+  text: >-
+    Whether you want a fully hosted and managed web trader, fund savings
+    platform, portfolio reporting or market data information, OMS can help you
+    get there.
+customization:
+  cards:
+    - description: >-
+        We provide market data from the whole world and a connection to the
+        broker house’s trading system.
+      features:
+        - Real Time
+        - Flexible
+        - Rapid
+        - Customized
+        - Probroker
+        - User Friendly
+      header: Feed/API
+      image: /img/rawpixel-656709-unsplash.jpg
+    - description: >-
+        A full coverage of the financial markets with a market data portal with
+        live, streaming data with smart links to content.
+      features:
+        - Real Time
+        - Flexible
+        - Rapid
+        - Customized
+        - Probroker
+        - User Friendly
+      header: OMS Web Components
+      image: /img/lukas-blazek-367945-unsplash.jpg
+    - description: >-
+        Keep investor clients informed and up to date anywhere and at any time.
+        Visualize exposure to different sectors and regions, risk allocation and
+        performance.
+      features:
+        - Real Time
+        - Flexible
+        - Rapid
+        - Customized
+        - Probroker
+        - User Friendly
+      header: Managed solutions
+      image: /img/carlos-muza-84523-unsplash.jpg
+  header: Chose your level of customization
 configurationLogos:
-  - logo: /img/phone-in-hand.jpg
-  - logo: /img/jumbotron.jpg
-  - logo: /img/tutorials.png
+  - logo: /img/euronex_logo.png
+  - logo: /img/nasdaq_logo.png
 solutionsContent:
   firstCard:
     header: Investor Relations
-    image: /img/phone-in-hand.jpg
-    text: Keep investor clients informed and up to date anywhere and at any time. Visualize exposure to different sectors and regions, risk allocation and performance.
+    image: /img/rawpixel-567016-unsplash.jpg
+    text: >-
+      Keep investor clients informed and up to date anywhere and at any time.
+      Visualize exposure to different sectors and regions, risk allocation and
+      performance.
   header: Choose your level of customization
   secondCard:
     header: Arena
-    image: /img/products-grid2.jpg
-    text: The information portal for professionals within the Norwegian securities market, with Top Shareholders and the Corporate Actions Calendar
+    image: /img/phone-in-hand.jpg
+    text: >-
+      The information portal for professionals within the Norwegian securities
+      market, with Top Shareholders and the Corporate Actions Calendar
 customerLogos:
-  - logo: /img/coffee.png
+  - logo: /img/er-logo-dagligbank-sparebank1.png
+  - logo: /img/afm_logo_blue.png
 ---
+

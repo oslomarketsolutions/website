@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ProductPageTemplate } from '../../templates/productPage/index';
+import PreviewWrapper from '../../components/previewWrapper';
 
 const ProductPagePreview = ({ entry }) => {
   const entryFeatures = entry.getIn(['data', 'investorPortal', 'features']);
@@ -10,17 +11,19 @@ const ProductPagePreview = ({ entry }) => {
   const products = entryProducts ? entryProducts.toJS() : [];
 
   return (
-    <ProductPageTemplate
-      intro={{
-        title: entry.getIn(['data', 'intro', 'title']),
-      }}
-      investorPortal={{
-        title: entry.getIn(['data', 'investorPortal', 'title']),
-        description: entry.getIn(['data', 'investorPortal', 'description']),
-        features,
-      }}
-      products={products}
-    />
+    <PreviewWrapper>
+      <ProductPageTemplate
+        intro={{
+          title: entry.getIn(['data', 'intro', 'title']),
+        }}
+        investorPortal={{
+          title: entry.getIn(['data', 'investorPortal', 'title']),
+          description: entry.getIn(['data', 'investorPortal', 'description']),
+          features,
+        }}
+        products={products}
+      />
+    </PreviewWrapper>     
   );
 };
 

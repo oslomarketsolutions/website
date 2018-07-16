@@ -62,14 +62,13 @@
     margin: auto;
     padding: 100px 0;
 
-    h3 {
+    h2 {
       margin-top: 0;
-      font-size: 6.4rem;
+      text-align: center;
     }
 
     p {
       width: 50%;
-      font-size: 2.2rem;
     }
 
     img {
@@ -81,10 +80,9 @@
     background-color: white;
     padding: 100px 0;
 
-    h3 {
+    h2 {
       margin-bottom: 20px;
       color: $darkBlue;
-      font-size: 6.4rem;
       text-align: center;
     }
     .customizationCards {
@@ -120,7 +118,7 @@
         background-color: #224466;
         margin-top: -10px; // Some weird margin/padding between the img and h4
         margin-bottom: 20px;
-        font-size: 4.4rem;
+        font-size: 2.75rem;
         padding-left: 20px;
         border-bottom: solid green;
       }
@@ -128,7 +126,7 @@
       p {
         margin: 0;
         padding: 20px;
-        font-size: 2.2rem;
+        font-size: 1.375rem;
         color: $darkBlue;
       }
     }

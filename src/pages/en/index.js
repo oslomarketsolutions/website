@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     topImage,
     configurationLogos,
     featuredContent,
-    customizationCards,
+    customization,
     solutionsContent,
     customerLogos,
   } = data.markdownRemark.frontmatter;
@@ -20,65 +20,65 @@ const IndexPage = ({ data }) => {
   };
 
   return (
-    <div className={styles.homePage}>
-      <section className={styles.animation}>
-        <button className={styles.scrollButton} onClick={onScrollButtonClick}>
-          <FontAwesomeIcon icon={caretDown} size="2x" />
-        </button>
-        <img src={topImage} alt={topImage} />
-      </section>
-      <section className={styles.configurationLogos}>
-        {configurationLogos &&
-          configurationLogos.map(configurationLogo => (
-            <img src={configurationLogo.logo} alt={configurationLogo.logo} />
-          ))}
-      </section>
-      <section className={styles.featuredCase}>
-        <div>
-          <h3>{featuredContent.header}</h3>
+    <main>
+      <div className={styles.homePage}>
+        <section className={styles.animation}>
+          <button className={styles.scrollButton} onClick={onScrollButtonClick}>
+            <FontAwesomeIcon icon={caretDown} size="2x" />
+          </button>
+          <img src={topImage} alt={topImage} />
+        </section>
+        <section className={styles.configurationLogos}>
+          {configurationLogos &&
+            configurationLogos.map(configurationLogo => (
+              <img src={configurationLogo.logo} alt={configurationLogo.logo} />
+            ))}
+        </section>
+        <section className={styles.featuredCase}>
+          <h2>{featuredContent.header}</h2>
           <p>{featuredContent.text}</p>
           <img src={featuredContent.image} alt={featuredContent.image} />
-        </div>
-      </section>
-      <section className={styles.customization}>
-        <h3>{solutionsContent.header}</h3>
-        <section className={styles.customizationCards}>
-          {customizationCards.map(customizationCard => (
-            <FeatureCard
-              title={customizationCard.header}
-              description={customizationCard.description}
-              features={customizationCard.features}
-              image={customizationCard.image}
-            />
-          ))}
         </section>
-      </section>
-
-      <section className={styles.solutions}>
-        <article className={styles.solution}>
-          <img
-            src={solutionsContent.firstCard.image}
-            alt={solutionsContent.firstCard.image}
-          />
-          <h4> {solutionsContent.firstCard.header} </h4>
-          <p> {solutionsContent.firstCard.text} </p>
-        </article>
-        <article className={styles.solution}>
-          <img
-            src={solutionsContent.secondCard.image}
-            alt={solutionsContent.secondCard.image}
-          />
-          <h4> {solutionsContent.secondCard.header} </h4>
-          <p> {solutionsContent.secondCard.text} </p>
-        </article>
-      </section>
-      <section className={styles.customerLogos}>
-        {customerLogos &&
-          customerLogos.map(customerLogo => (
-            <img src={customerLogo.logo} alt={customerLogo.logo} />
-          ))}
-      </section>
-    </div>
+        <section className={styles.customization}>
+          <h2>{customization.header}</h2>
+          <section className={styles.customizationCards}>
+            {customization.cards &&
+              customization.cards.map(customizationCard => (
+                <FeatureCard
+                  title={customizationCard.header}
+                  description={customizationCard.description}
+                  features={customizationCard.features}
+                  image={customizationCard.image}
+                />
+              ))}
+          </section>
+        </section>
+        <section className={styles.solutions}>
+          <article className={styles.solution}>
+            <img
+              src={solutionsContent.firstCard.image}
+              alt={solutionsContent.firstCard.image}
+            />
+            <h4> {solutionsContent.firstCard.header} </h4>
+            <p> {solutionsContent.firstCard.text} </p>
+          </article>
+          <article className={styles.solution}>
+            <img
+              src={solutionsContent.secondCard.image}
+              alt={solutionsContent.secondCard.image}
+            />
+            <h4> {solutionsContent.secondCard.header} </h4>
+            <p> {solutionsContent.secondCard.text} </p>
+          </article>
+        </section>
+        <section className={styles.customerLogos}>
+          {customerLogos &&
+            customerLogos.map(customerLogo => (
+              <img src={customerLogo.logo} alt={customerLogo.logo} />
+            ))}
+        </section>
+      </div>
+    </main>
   );
 };
 
@@ -102,18 +102,20 @@ export const pageQuery = graphql`
           image
           text
         }
-        customizationCards {
+        customization {
           header
-          description
-          image
-          features
+          cards {
+            header
+            description
+            image
+            features
+          }
         }
 
         configurationLogos {
           logo
         }
         solutionsContent {
-          header
           firstCard {
             image
             header

@@ -1,60 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
-import '../../layouts/style.scss';
 import styles from './aboutPage.module.scss';
 
 export const AboutPageTemplate = ({
   title,
-  header1,
   image,
   text,
-  header2,
+  header,
   employeeList,
 }) => (
   <main>
     <div className={styles.aboutPage}>
-      <article>
+      <section className={styles.aboutOms}>
         <h2>{title}</h2>
-        <p>submeny | placeholder</p>
-      </article>
-      <article className={styles.aboutOms}>
-        <h2>{header1}</h2>
-        <section>{text}</section>
+        <p>{text}</p>
         <img src={image} alt="" />
-      </article>
-      <article className={styles.aboutEmployees}>
-        <h2>{header2}</h2>
-        {employeeList.map(employee => {
-          const {
-            title: employeeName,
-            description: employeeDescription,
-            jobTitle: employeeJobTitle,
-            image: employeeImage,
-            jobType: employeeJobType,
-          } = employee.node.frontmatter;
-          return (
-            <EmployeeCard
-              name={employeeName}
-              description={employeeDescription}
-              jobTitle={employeeJobTitle}
-              image={employeeImage}
-              jobType={employeeJobType}
-            />
-          );
-        })}
-      </article>
+      </section>
+      <section className={styles.aboutEmployees}>
+        <h2>{header}</h2>
+        {employeeList &&
+          employeeList.map(employee => {
+            const {
+              title: employeeName,
+              description: employeeDescription,
+              jobTitle: employeeJobTitle,
+              image: employeeImage,
+              jobType: employeeJobType,
+            } = employee.node.frontmatter;
+            return (
+              <EmployeeCard
+                key={employeeName}
+                name={employeeName}
+                description={employeeDescription}
+                jobTitle={employeeJobTitle}
+                image={employeeImage}
+                jobType={employeeJobType}
+              />
+            );
+          })}
+      </section>
     </div>
   </main>
 );
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  header1: PropTypes.string,
   image: PropTypes.string,
   text: PropTypes.string,
-  header2: PropTypes.string,
-  employeeList: PropTypes.arrayOf(PropTypes.string),
+  header: PropTypes.string,
+  employeeList: PropTypes.arrayOf(PropTypes.object),
 };
 
 const AboutPage = ({ data }) => {
@@ -63,10 +58,9 @@ const AboutPage = ({ data }) => {
   return (
     <AboutPageTemplate
       title={post.frontmatter.title}
-      header1={post.frontmatter.header1}
       image={post.frontmatter.image}
       text={post.frontmatter.text}
-      header2={post.frontmatter.header2}
+      header={post.frontmatter.header}
       employeeList={employeeList}
     />
   );
@@ -83,10 +77,9 @@ export const aboutPageQuery = graphql`
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        header1
         image
         text
-        header2
+        header
       }
     }
 
