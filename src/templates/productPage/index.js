@@ -7,6 +7,8 @@ import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
 import oneYearGraph from '../../components/oneYearGraph';
 
+const classNames = require('classnames');
+
 if (typeof window !== `undefined`) {
   // eslint-disable-next-line
   require('intersection-observer');
@@ -54,36 +56,28 @@ export class ProductPageTemplate extends Component {
   render() {
     const { intro, investorPortal, products } = this.props;
 
-    const linkCards = (stickyMenu, inView) => {
-      let className = styles.notStickyMenu;
-      let style = {};
-      if (stickyMenu) {
-        // If intro-section is in view
-        if (inView) {
-          style = { display: 'none' };
-          className = '';
-        } else {
-          className = styles.stickyMenu;
-        }
-      }
-
-      return (
-        <div className={className} style={style}>
+    const linkCards = (stickyMenu, inView) => (
+      <div
+        className={classNames({
+          [styles.hidden]: stickyMenu && inView,
+          [styles.stickyMenu]: stickyMenu && !inView,
+          [styles.notStickyMenu]: !stickyMenu,
+        })}
+      >
+        <LinkCard
+          product={investorPortal}
+          onClickFunction={this.scrollToRef}
+          sticky={stickyMenu}
+        />
+        {products.map(product => (
           <LinkCard
-            product={investorPortal}
+            product={product}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
           />
-          {products.map(product => (
-            <LinkCard
-              product={product}
-              onClickFunction={this.scrollToRef}
-              sticky={stickyMenu}
-            />
-          ))}
-        </div>
-      );
-    };
+        ))}
+      </div>
+    );
 
     return (
       <main className={styles.container}>
