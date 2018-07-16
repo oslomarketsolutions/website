@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Observer from 'react-intersection-observer';
+import classNames from 'classnames';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -54,36 +55,28 @@ export class ProductPageTemplate extends Component {
   render() {
     const { intro, investorPortal, products } = this.props;
 
-    const linkCards = (stickyMenu, inView) => {
-      let className = styles.notStickyMenu;
-      let style = {};
-      if (stickyMenu) {
-        // If intro-section is in view
-        if (inView) {
-          style = { display: 'none' };
-          className = '';
-        } else {
-          className = styles.stickyMenu;
-        }
-      }
-
-      return (
-        <div className={className} style={style}>
+    const linkCards = (stickyMenu, inView) => (
+      <div
+        className={classNames({
+          [styles.hidden]: stickyMenu && inView,
+          [styles.stickyMenu]: stickyMenu && !inView,
+          [styles.notStickyMenu]: !stickyMenu,
+        })}
+      >
+        <LinkCard
+          product={investorPortal}
+          onClickFunction={this.scrollToRef}
+          sticky={stickyMenu}
+        />
+        {products.map(product => (
           <LinkCard
-            product={investorPortal}
+            product={product}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
           />
-          {products.map(product => (
-            <LinkCard
-              product={product}
-              onClickFunction={this.scrollToRef}
-              sticky={stickyMenu}
-            />
-          ))}
-        </div>
-      );
-    };
+        ))}
+      </div>
+    );
 
     return (
       <main className={styles.container}>
@@ -120,11 +113,11 @@ export class ProductPageTemplate extends Component {
               </div>
             ))}
         </section>
+
         <section className={styles.investorContact}>
           <h4>Contact us today to get more info about our traders!</h4>
           <button>Contact</button>
         </section>
-
         <section className={styles.productsContainer}>
           {products &&
             products.map(product => (
