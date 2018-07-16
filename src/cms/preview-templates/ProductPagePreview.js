@@ -4,23 +4,19 @@ import { ProductPageTemplate } from '../../templates/productPage/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
 const ProductPagePreview = ({ entry, getAsset }) => {
-  const features = [];
-  entry.getIn(['data', 'investorPortal', 'features']).forEach(feature => {
-    features.push({
+  const features = entry
+    .getIn(['data', 'investorPortal', 'features'])
+    .map(feature => ({
       title: feature.getIn(['title']),
       description: feature.getIn(['description']),
       image: getAsset(feature.getIn(['image'])),
-    });
-  });
+    }));
 
-  const products = [];
-  entry.getIn(['data', 'products']).forEach(product => {
-    products.push({
-      title: product.getIn(['title']),
-      image: getAsset(product.getIn(['image'])),
-      description: product.getIn(['description']),
-    });
-  });
+  const products = entry.getIn(['data', 'products']).map(product => ({
+    title: product.getIn(['title']),
+    image: getAsset(product.getIn(['image'])),
+    description: product.getIn(['description']),
+  }));
 
   return (
     <PreviewWrapper>

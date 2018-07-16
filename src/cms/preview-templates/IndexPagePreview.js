@@ -11,29 +11,26 @@ import PreviewWrapper from '../../components/previewWrapper';
 // That means it takes in one prop (data) unlike the other pages (which has templates)
 // that take in multiple props.
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const customerLogos = [];
-  entry.getIn(['data', 'customerLogos']).forEach(customerLogo => {
-    customerLogos.push({
+  const customerLogos = entry
+    .getIn(['data', 'customerLogos'])
+    .map(customerLogo => ({
       logo: getAsset(customerLogo.getIn(['logo'])),
-    });
-  });
+    }));
 
-  const customizationCards = [];
-  entry.getIn(['data', 'customization', 'cards']).forEach(card => {
-    customizationCards.push({
+  const customizationCards = entry
+    .getIn(['data', 'customization', 'cards'])
+    .map(card => ({
       header: card.getIn(['header']),
       image: getAsset(card.getIn(['image'])),
       description: card.getIn(['description']),
       features: card.getIn(['features']).toJS(),
-    });
-  });
+    }));
 
-  const configurationLogos = [];
-  entry.getIn(['data', 'configurationLogos']).forEach(configurationLogo => {
-    configurationLogos.push({
+  const configurationLogos = entry
+    .getIn(['data', 'configurationLogos'])
+    .map(configurationLogo => ({
       logo: getAsset(configurationLogo.getIn(['logo'])),
-    });
-  });
+    }));
 
   // Create the data object IndexPage expects
   const data = {
