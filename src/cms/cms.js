@@ -23,6 +23,8 @@ CMS.registerPreviewTemplate('norwegianPerks', PerkPreview);
 CMS.registerPreviewTemplate('englishPerks', PerkPreview);
 CMS.registerPreviewTemplate('english_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_featureCard', FeaturePreview);
+CMS.registerPreviewTemplate('norwegian_products_page', ProductPagePreview);
+CMS.registerPreviewTemplate('english_products_page', ProductPagePreview);
 CMS.registerPreviewTemplate('footer', FooterPreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
