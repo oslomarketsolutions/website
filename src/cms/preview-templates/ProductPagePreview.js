@@ -3,12 +3,20 @@ import PropTypes from 'prop-types';
 import { ProductPageTemplate } from '../../templates/productPage/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
-const ProductPagePreview = ({ entry }) => {
-  const entryFeatures = entry.getIn(['data', 'investorPortal', 'features']);
-  const features = entryFeatures ? entryFeatures.toJS() : [];
+const ProductPagePreview = ({ entry, getAsset }) => {
+  const features = entry
+    .getIn(['data', 'investorPortal', 'features'])
+    .map(feature => ({
+      title: feature.getIn(['title']),
+      description: feature.getIn(['description']),
+      image: getAsset(feature.getIn(['image'])),
+    }));
 
-  const entryProducts = entry.getIn(['data', 'products']);
-  const products = entryProducts ? entryProducts.toJS() : [];
+  const products = entry.getIn(['data', 'products']).map(product => ({
+    title: product.getIn(['title']),
+    image: getAsset(product.getIn(['image'])),
+    description: product.getIn(['description']),
+  }));
 
   return (
     <PreviewWrapper>
@@ -19,6 +27,7 @@ const ProductPagePreview = ({ entry }) => {
         investorPortal={{
           title: entry.getIn(['data', 'investorPortal', 'title']),
           description: entry.getIn(['data', 'investorPortal', 'description']),
+          image: getAsset(entry.getIn(['data', 'investorPortal', 'image'])),
           features,
         }}
         products={products}
@@ -31,6 +40,7 @@ ProductPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  getAsset: PropTypes.func,
 };
 
 export default ProductPagePreview;

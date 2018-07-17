@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // As the norwegian and english index pages
 // has the exact same code except for query
-// we don't need both.
+// we don't need two previews.
 import IndexPage from '../../pages/no/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
@@ -10,23 +10,27 @@ import PreviewWrapper from '../../components/previewWrapper';
 // IndexPage doesn't have a template in its index.js-file.
 // That means it takes in one prop (data) unlike the other pages (which has templates)
 // that take in multiple props.
-const IndexPagePreview = ({ entry }) => {
-  const entryCustomerLogos = entry.getIn(['data', 'customerLogos']);
-  const customerLogos = entryCustomerLogos ? entryCustomerLogos.toJS() : [];
+const IndexPagePreview = ({ entry, getAsset }) => {
+  const customerLogos = entry
+    .getIn(['data', 'customerLogos'])
+    .map(customerLogo => ({
+      logo: getAsset(customerLogo.getIn(['logo'])),
+    }));
 
-  const entryCustomizationCards = entry.getIn([
-    'data',
-    'customization',
-    'cards',
-  ]);
-  const customizationCards = entryCustomizationCards
-    ? entryCustomizationCards.toJS()
-    : [];
+  const customizationCards = entry
+    .getIn(['data', 'customization', 'cards'])
+    .map(card => ({
+      header: card.getIn(['header']),
+      image: getAsset(card.getIn(['image'])),
+      description: card.getIn(['description']),
+      features: card.getIn(['features']).toJS(),
+    }));
 
-  const entryConfigurationLogos = entry.getIn(['data', 'configurationLogos']);
-  const configurationLogos = entryConfigurationLogos
-    ? entryConfigurationLogos.toJS()
-    : [];
+  const configurationLogos = entry
+    .getIn(['data', 'configurationLogos'])
+    .map(configurationLogo => ({
+      logo: getAsset(configurationLogo.getIn(['logo'])),
+    }));
 
   // Create the data object IndexPage expects
   const data = {
@@ -34,12 +38,12 @@ const IndexPagePreview = ({ entry }) => {
     page: {
       frontmatter: {
         topImage: {
-          image: entry.getIn(['data', 'topImage', 'image']),
+          image: getAsset(entry.getIn(['data', 'topImage', 'image'])),
           alt: entry.getIn(['data', 'topImage', 'alt']),
         },
         configurationLogos,
         featuredContent: {
-          image: entry.getIn(['data', 'featuredContent', 'image']),
+          image: getAsset(entry.getIn(['data', 'featuredContent', 'image'])),
           header: entry.getIn(['data', 'featuredContent', 'header']),
           text: entry.getIn(['data', 'featuredContent', 'text']),
         },
@@ -49,12 +53,9 @@ const IndexPagePreview = ({ entry }) => {
         },
         solutionsContent: {
           firstCard: {
-            image: entry.getIn([
-              'data',
-              'solutionsContent',
-              'firstCard',
-              'image',
-            ]),
+            image: getAsset(
+              entry.getIn(['data', 'solutionsContent', 'firstCard', 'image']),
+            ),
             header: entry.getIn([
               'data',
               'solutionsContent',
@@ -69,12 +70,9 @@ const IndexPagePreview = ({ entry }) => {
             ]),
           },
           secondCard: {
-            image: entry.getIn([
-              'data',
-              'solutionsContent',
-              'secondCard',
-              'image',
-            ]),
+            image: getAsset(
+              entry.getIn(['data', 'solutionsContent', 'secondCard', 'image']),
+            ),
             header: entry.getIn([
               'data',
               'solutionsContent',
@@ -105,6 +103,7 @@ IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  getAsset: PropTypes.func,
 };
 
 export default IndexPagePreview;

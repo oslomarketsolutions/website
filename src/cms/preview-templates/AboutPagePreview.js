@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { AboutPageTemplate } from '../../templates/aboutPage/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
-const AboutPagePreview = ({ entry }) => (
+const AboutPagePreview = ({ entry, getAsset }) => (
   <PreviewWrapper>
     <AboutPageTemplate
       title={entry.getIn(['data', 'title'])}
       header1={entry.getIn(['data', 'header1'])}
-      image={entry.getIn(['data', 'image'])}
+      image={getAsset(entry.getIn(['data', 'image']))}
       imageAlt={entry.getIn(['data', 'imageAlt'])}
       text={entry.getIn(['data', 'text'])}
       header2={entry.getIn(['data', 'header2'])}
@@ -20,6 +20,7 @@ AboutPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  getAsset: PropTypes.func,
 };
 
 export default AboutPagePreview;
