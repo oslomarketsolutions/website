@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from '../indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
-import { findImageSizes } from '../../components/helperFunctions';
+import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 const IndexPage = ({ data }) => {

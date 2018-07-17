@@ -7,7 +7,7 @@ import ImageWrapper from '../../components/imageWrapper';
 import {
   findImageSizes,
   findImageResolutions,
-} from '../../components/helperFunctions';
+} from '../../utils/helperFunctions';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';

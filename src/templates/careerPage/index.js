@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
-import { findImageSizes } from '../../components/helperFunctions';
+import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 let colorCounter = 0;
