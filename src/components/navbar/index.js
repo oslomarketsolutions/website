@@ -56,14 +56,14 @@ export default class Navbar extends Component {
   };
 
   render() {
-    let navLogoWhite = this.props.location.pathname.split('/').length < 3;
-
+    let navLogoWhite = this.props.location.pathname.toString().length < 5;
+    console.log('her: ', this.props.location.pathname.split('/').length);
     if (this.state.navOpen === true) navLogoWhite = false;
 
     return (
       <header
         className={
-          this.props.location.pathname.split('/').length < 3
+          this.props.location.pathname.toString().length < 5
             ? styles.navColorWhite
             : ''
         }
