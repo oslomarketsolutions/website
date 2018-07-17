@@ -56,9 +56,8 @@ export default class Navbar extends Component {
   };
 
   render() {
-    let navColorWhite = this.props.location.pathname.toString().length < 5;
-
-    if (this.state.navOpen === true) navColorWhite = false;
+    const isOnHomePage = this.props.location.pathname.toString().length < 5;
+    const navColorWhite = this.state.navOpen ? false : isOnHomePage;
 
     return (
       <header className={navColorWhite ? styles.navColorWhite : ''}>
