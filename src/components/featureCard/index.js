@@ -2,15 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styles from './FeatureCard.module.scss';
+import ImageWrapper from '../imageWrapper';
 
 const FeatureCard = props => {
   // link should be the slug for whatever the featurecard is linking to
-  const { title, description, image, features, link = '' } = props;
+  const { title, image, description, sizes, features, link = '' } = props;
   return (
     <Link to={link} className={styles.FeatureCard}>
-      <section className={styles.image}>
-        <img src={image} alt={title} />
-      </section>
+      <ImageWrapper
+        outerWrapperClassName={styles.imageContainer}
+        sizes={sizes}
+        src={image}
+        alt={title}
+      />
       <section className={styles.header}>
         <h4>{title}</h4>
       </section>
@@ -31,8 +35,9 @@ FeatureCard.propTypes = {
   title: PropTypes.string,
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
-  image: PropTypes.string,
   link: PropTypes.string,
+  sizes: PropTypes.arrayOf(PropTypes.object),
+  image: PropTypes.string,
 };
 
 export default FeatureCard;
