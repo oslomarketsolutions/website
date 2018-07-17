@@ -26,7 +26,7 @@ export const AboutPageTemplate = ({
           outerWrapperClassName={styles.imageContainer}
         />
       </section>
-      <article className={styles.aboutEmployees}>
+      <section className={styles.aboutEmployees}>
         <h2>{header}</h2>
         {employeeList.map(employee => {
           const {
@@ -52,7 +52,7 @@ export const AboutPageTemplate = ({
             />
           );
         })}
-      </article>
+      </section>
     </div>
   </main>
 );
