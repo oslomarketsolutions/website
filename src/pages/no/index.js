@@ -40,6 +40,7 @@ const IndexPage = ({ data }) => {
         {configurationLogos &&
           configurationLogos.map(configurationLogo => (
             <ImageWrapper
+              key={configurationLogo.name}
               src={configurationLogo.logo}
               alt={configurationLogo.name}
               sizes={findImageSizes(configurationLogo.logo, imageSizes)}
@@ -63,6 +64,7 @@ const IndexPage = ({ data }) => {
           {customization.cards &&
             customization.cards.map(customizationCard => (
               <FeatureCard
+                key={customizationCard.header}
                 title={customizationCard.header}
                 description={customizationCard.description}
                 features={customizationCard.features}
@@ -102,6 +104,7 @@ const IndexPage = ({ data }) => {
         {customerLogos &&
           customerLogos.map(customerLogo => (
             <ImageWrapper
+              key={customerLogo.name}
               alt={customerLogo.name}
               src={customerLogo.logo}
               outerWrapperClassName={styles.imageContainer}
@@ -118,7 +121,9 @@ IndexPage.propTypes = {
     page: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
-    imageSizes: PropTypes.arrayOf(PropTypes.object),
+    imageSizes: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object),
+    }),
   }),
 };
 
