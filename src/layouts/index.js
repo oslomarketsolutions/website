@@ -46,7 +46,7 @@ const fontAwesomeCSS = dom.css();
 const TemplateWrapper = ({ children, location, data }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
   const language = parsedPath && parsedPath[1];
-
+  console.log('Her: ', data);
   return (
     <React.Fragment>
       <Helmet title="Oslo Market Solutions">

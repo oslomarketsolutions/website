@@ -1,0 +1,47 @@
+.responsibleDisclosurePage {
+  max-width: 90%;
+  margin: 112px auto 0 auto;
+
+  section {
+    padding: 32px 0;
+  }
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0px 1em 0px;
+    padding-left: 40px;
+  }
+
+  p {
+    display: block;
+    margin: 1em 0px 1em 0px;
+  }
+
+  h2 {
+    margin: 0 0 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsibleDisclosurePage {
+    max-width: 1864px;
+    padding: 0 32px;
+
+    section {
+      padding: 138px 0 138px;
+    }
+
+    section:first-of-type {
+      padding-top: 275px;
+    }
+
+    section:last-of-type {
+      padding-bottom: 275px;
+    }
+
+    ul {
+      font-size: 1.375rem;
+    }
+  }
+}
