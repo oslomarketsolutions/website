@@ -7,7 +7,7 @@ import ImageWrapper from '../../components/imageWrapper';
 import {
   findImageSizes,
   findImageResolutions,
-} from '../../components/helperFunctions';
+} from '../../utils/helperFunctions';
 import styles from './productPage.module.scss';
 import LinkCard from '../../components/linkCard';
 import ProductCard from '../../components/productCard';
@@ -19,7 +19,7 @@ if (typeof window !== `undefined`) {
 }
 
 export class ProductPageTemplate extends Component {
-  propTypes = {
+  static propTypes = {
     intro: PropTypes.shape({
       title: PropTypes.string,
       links: PropTypes.arrayOf(
@@ -83,6 +83,7 @@ export class ProductPageTemplate extends Component {
         />
         {products.map(product => (
           <LinkCard
+            key={product.title}
             product={product}
             onClickFunction={this.scrollToRef}
             sticky={stickyMenu}
@@ -129,7 +130,7 @@ export class ProductPageTemplate extends Component {
             </div>
             {investorPortal.features &&
               investorPortal.features.map(feature => (
-                <div className={styles.features}>
+                <div key={feature.title} className={styles.features}>
                   <h4>{feature.title}</h4>
                   <p>{feature.description}</p>
                 </div>
@@ -144,6 +145,7 @@ export class ProductPageTemplate extends Component {
             {products &&
               products.map(product => (
                 <div
+                  key={product.title}
                   className={styles.product}
                   ref={card => {
                     this[product.title] = card;

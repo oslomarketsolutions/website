@@ -69,8 +69,20 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  portraitSize: PropTypes.arrayOf(PropTypes.object),
-  headerBackgroundSize: PropTypes.arrayOf(PropTypes.object),
+  portraitSize: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
+  headerBackgroundSize: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
   image: PropTypes.string,
 };
 

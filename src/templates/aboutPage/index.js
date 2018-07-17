@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
-import { findImageSizes } from '../../components/helperFunctions';
+import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 export const AboutPageTemplate = ({

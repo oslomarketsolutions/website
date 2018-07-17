@@ -43,8 +43,20 @@ const ImageWrapper = props => {
 
 ImageWrapper.propTypes = {
   src: PropTypes.string,
-  sizes: PropTypes.arrayOf(PropTypes.object),
-  resolutions: PropTypes.arrayOf(PropTypes.object),
+  sizes: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
+  resolutions: PropTypes.shape({
+    height: PropTypes.number,
+    width: PropTypes.number,
+    base64: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
   alt: PropTypes.string,
   outerWrapperClassName: PropTypes.string,
   style: PropTypes.shape({
