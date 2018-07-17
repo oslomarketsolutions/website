@@ -20,7 +20,7 @@ header {
   margin: 16px auto 0;
 
   nav {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     top: 0;
     right: 0;
@@ -63,7 +63,7 @@ header {
   }
 
   button {
-    z-index: 3;
+    z-index: 4;
     position: relative;
     display: block;
     height: 60px;
@@ -78,7 +78,7 @@ header {
   .logo {
     padding: 0;
     margin-right: auto;
-    z-index: 3;
+    z-index: 4;
 
     img {
       width: 100px;
