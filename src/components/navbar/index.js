@@ -56,18 +56,12 @@ export default class Navbar extends Component {
   };
 
   render() {
-    let navLogoWhite = this.props.location.pathname.toString().length < 5;
+    let navColorWhite = this.props.location.pathname.toString().length < 5;
 
-    if (this.state.navOpen === true) navLogoWhite = false;
+    if (this.state.navOpen === true) navColorWhite = false;
 
     return (
-      <header
-        className={
-          this.props.location.pathname.toString().length < 5
-            ? styles.navColorWhite
-            : ''
-        }
-      >
+      <header className={navColorWhite ? styles.navColorWhite : ''}>
         <div className={styles.navbar}>
           <Helmet>
             <body className={this.state.navOpen ? styles.noScroll : null} />
@@ -77,7 +71,7 @@ export default class Navbar extends Component {
             to={`/${this.props.language}`}
             onClick={this.closeNav}
           >
-            <img src={navLogoWhite ? logoWhite : logo} alt="Oms logo" />
+            <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
           </Link>
           <button
             onClick={this.toggleNav}
