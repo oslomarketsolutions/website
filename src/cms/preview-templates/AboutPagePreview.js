@@ -9,6 +9,7 @@ const AboutPagePreview = ({ entry }) => (
       title={entry.getIn(['data', 'title'])}
       header1={entry.getIn(['data', 'header1'])}
       image={entry.getIn(['data', 'image'])}
+      imageAlt={entry.getIn(['data', 'imageAlt'])}
       text={entry.getIn(['data', 'text'])}
       header2={entry.getIn(['data', 'header2'])}
     />

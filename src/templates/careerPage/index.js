@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
+import { findImageSizes } from '../../components/helperFunctions';
+import ImageWrapper from '../../components/imageWrapper';
 
 let colorCounter = 0;
 const color = () => {
@@ -28,24 +30,37 @@ const color = () => {
 export const CareerPageTemplate = ({
   title,
   image1,
+  image1Alt,
   text1,
   header,
   image2,
+  image2Alt,
   text2,
   subHeader1,
   subHeader2,
   perkList,
+  imageSizes,
 }) => (
   <main>
     <div className={styles.careerPage}>
       <section className={styles.careerOms}>
         <h2>{title}</h2>
-        <img src={image1} alt="" />
+        <ImageWrapper
+          alt={image1Alt}
+          src={image1}
+          outerWrapperClassName={styles.imageContainer}
+          sizes={findImageSizes(image1, imageSizes)}
+        />
         <p>{text1}</p>
       </section>
       <section className={styles.whyOms}>
         <h2>{header}</h2>
-        <img src={image2} alt="" />
+        <ImageWrapper
+          alt={image2Alt}
+          src={image2}
+          outerWrapperClassName={styles.imageContainer}
+          sizes={findImageSizes(image2, imageSizes)}
+        />
         <p>{text2}</p>
       </section>
       <section className={styles.careerPerks}>
@@ -78,31 +93,38 @@ export const CareerPageTemplate = ({
 CareerPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image1: PropTypes.string,
+  image1Alt: PropTypes.string,
   text1: PropTypes.string,
   header: PropTypes.string,
   image2: PropTypes.string,
+  image2Alt: PropTypes.string,
   text2: PropTypes.string,
   subHeader1: PropTypes.string,
   subHeader2: PropTypes.string,
   perkList: PropTypes.arrayOf(PropTypes.object),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const perkList = data.perks.edges;
+  const imageSizes = data.imageSizes.edges;
   colorCounter = 0;
 
   return (
     <CareerPageTemplate
       title={post.frontmatter.title}
       image1={post.frontmatter.image1}
+      image1Alt={post.frontmatter.image1Alt}
       text1={post.frontmatter.text1}
       header={post.frontmatter.header}
       image2={post.frontmatter.image2}
+      image2Alt={post.frontmatter.image2Alt}
       text2={post.frontmatter.text2}
       subHeader1={post.frontmatter.subHeader1}
       subHeader2={post.frontmatter.subHeader2}
       perkList={perkList}
+      imageSizes={imageSizes}
     />
   );
 };
@@ -119,9 +141,11 @@ export const careerPageQuery = graphql`
       frontmatter {
         title
         image1
+        image1Alt
         text1
         header
         image2
+        image2Alt
         text2
         subHeader1
         subHeader2
@@ -136,6 +160,19 @@ export const careerPageQuery = graphql`
           frontmatter {
             title
             text
+          }
+        }
+      }
+    }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 1440) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }

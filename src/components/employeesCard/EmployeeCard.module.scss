@@ -1,11 +1,11 @@
-$textColorDark: #1c315b;
+@import '../../layouts/variables';
 
 .EmployeeCard {
   display: grid;
   grid-template-areas:
     'image header'
     'image  description';
-  grid-template-columns: 140px auto;
+  grid-template-columns: 140px 425px;
   grid-template-rows: 100px 100px;
   width: 565px;
   transition: 0.3s;
@@ -13,21 +13,30 @@ $textColorDark: #1c315b;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
   margin-bottom: 64px;
 
-  img {
+  .imageContainer {
     width: 100%;
-    height: 100%;
+    height: 200px;
     grid-area: image;
     object-fit: cover;
   }
 
   .header {
-    background-image: url(../../../static/img/ansattkortHeader.png);
     grid-area: header;
     display: grid;
     grid-template-areas:
       'name icon'
       'title icon';
     grid-template-columns: 70% 30%;
+
+    .headerBackground {
+      position: absolute !important;
+      z-index: -1;
+      height: 100px;
+      width: calc(
+        565px - 140px
+      ); // Width is card width minus image-column-width
+      background-color: $darkBlue; // Fallback if background pattern doesn't load
+    }
   }
 
   .description {
@@ -67,13 +76,13 @@ $textColorDark: #1c315b;
   }
 
   p {
-    color: $textColorDark;
+    color: $darkBlue;
     margin: 0 20px;
     font-size: 1rem;
   }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 565px) {
   .EmployeeCard {
     grid-template-columns: auto;
     grid-template-rows: 400px 135px 150px;
@@ -82,8 +91,18 @@ $textColorDark: #1c315b;
       'header'
       'description';
 
-    img {
+    .imageContainer {
+      width: 100%;
       height: 400px;
+      grid-area: image;
+      object-fit: cover;
+    }
+    .header {
+      .headerBackground {
+        height: 135px;
+        width: 100%; // This needs fixing
+        background-color: $darkBlue; // Fallback if background pattern doesn't load
+      }
     }
   }
 }

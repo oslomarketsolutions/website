@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProductCard.module.scss';
 
-const ProductCard = ({ product }) => (
+import styles from './ProductCard.module.scss';
+import ImageWrapper from '../imageWrapper';
+
+const ProductCard = ({ product, sizes }) => (
   <div className={styles.ProductCard}>
     <section className={styles.header}>
       <h3>{product.title}</h3>
@@ -10,9 +12,12 @@ const ProductCard = ({ product }) => (
     <section className={styles.description}>
       <p>{product.description}</p>
     </section>
-    <section className={styles.image}>
-      <img src={product.image} alt={product.title} />
-    </section>
+    <ImageWrapper
+      src={product.image}
+      outerWrapperClassName={styles.imageContainer}
+      sizes={sizes}
+      alt={product.title}
+    />
     <section className={styles.footer}>
       <ul>
         <li>test</li>
@@ -27,6 +32,7 @@ ProductCard.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
   }),
+  sizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default ProductCard;
