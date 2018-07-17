@@ -9,17 +9,20 @@
       margin: 0;
       padding: 75px 0;
       color: #1c315b;
-      font-size: 7.2rem;
+      font-size: 4.5rem;
+      padding-left: 10%;
     }
 
     .hidden {
       display: none;
     }
 
-    // Sticky Link menu when scrolling down past it
+    /* Sticky Link menu when scrolling down past it */
     .stickyMenu {
+      // Ensuring the sticky menu is on top
+      z-index: 1000;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: center;
       position: fixed;
       width: 100%;
@@ -80,12 +83,8 @@
       flex-flow: row wrap;
       justify-content: space-between;
 
-      img {
-        display: block;
+      .imageContainer {
         width: 40%;
-        min-width: 600px;
-        height: auto;
-        align-self: center;
       }
 
       h3 {

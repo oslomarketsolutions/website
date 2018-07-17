@@ -95,7 +95,12 @@ collections:
         name: "norwegian_index_page"
         label: "no/Homepage"
         fields:
-          - {label: "Welcome Image", name: "topImage", widget: "image"}
+          - label: "Welcome Image"
+            name: "topImage"
+            widget: "object"
+            fields:
+              - {label: "Description of image/animation", name: "alt", widget: "string"}
+              - {label: "Welcome Image", name: "image", widget: "image"}
           - label: "Featured Content"
             name: "featuredContent"
             widget: "object"
@@ -118,6 +123,7 @@ collections:
             name: "configurationLogos"
             widget: "list"
             fields:
+              - {label: "Name, name: "name", widget: "string"}
               - {label: "Logo", name: "logo", widget: "image"}
           - label: "Solutions Content"
             name: "solutionsContent"
@@ -138,13 +144,19 @@ collections:
             name: "customerLogos"
             widget: "list"
             fields:
+              - {label: "Name", name: "name", widget: "string"}
               - {label: "Logo", name: "logo", widget: "image"}
 
       - file: "src/pages/en/index.md"
         name: "english_index_page"
         label: "en/Homepage"
         fields:
-          - {label: "Welcome Image", name: "topImage", widget: "image"}
+          - label: "Welcome Image"
+            name: "topImage"
+            widget: "object"
+            fields:
+              - {label: "Description of image/animation", name: "alt", widget: "string"}
+              - {label: "Welcome Image", name: "image", widget: "image"}
           - label: "Featured Content"
             name: "featuredContent"
             widget: "object"
@@ -167,6 +179,7 @@ collections:
             name: "configurationLogos"
             widget: "list"
             fields:
+              - {label: "Name, name: "name", widget: "string"}
               - {label: "Logo", name: "logo", widget: "image"}
           - label: "Solutions Content"
             name: "solutionsContent"
@@ -187,6 +200,7 @@ collections:
             name: "customerLogos"
             widget: "list"
             fields:
+              - {label: "Name", name: "name", widget: "string"}
               - {label: "Logo", name: "logo", widget: "image"}
 
       - file: "src/pages/no/about/index.md"
@@ -196,6 +210,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
           - {label: "First header", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
+          - {label: "Image Description", name: "imageAlt", widget: "string"}
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Second header", name: "header", widget: "string"}
 
@@ -206,6 +221,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
           - {label: "First header", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
+          - {label: "Image Description", name: "imageAlt", widget: "string"}
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Second header", name: "header", widget: "string"}
 

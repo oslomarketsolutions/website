@@ -1,61 +1,55 @@
 @import '../../layouts/variables';
 
-.stickyCard {
+.sticky {
   display: flex;
-  flex-flow: column-reverse wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row wrap;
   background: none;
   border: 2px solid $darkBlue;
   padding: 0;
   color: $darkBlue;
   height: 100px;
   width: 300px;
+  justify-content: center;
   cursor: pointer;
-
-  img {
-    margin: 0px 10px;
-    width: 100px;
-    height: 70%;
-    object-fit: contain;
-  }
 
   h4 {
     font-size: 18px;
     margin: auto;
   }
 
+  .imageContainer,
   p {
     display: none;
   }
 }
 
-.notStickyCard {
+.notSticky {
   display: flex;
   flex-flow: row wrap;
   background: none;
+  border: none;
+  outline: solid 2px $darkBlue;
   padding: 0;
   margin: 20px;
   color: $darkBlue;
-  height: 200px;
-  width: 600px;
+  height: 100px;
+  width: 400px;
   cursor: pointer;
   text-align: left;
-
-  div {
-    width: 50%;
+  &:hover {
+    background-color: $darkBlue;
+    color: white;
   }
 
-  img {
-    justify-content: flex-start;
-    margin-right: 10px;
-    width: 180px;
-    height: 100%;
-    object-fit: cover;
+  .imageContainer {
+    width: 150px;
+    height: 100px;
   }
 
-  h4 {
-    font-size: 24px;
+  .textContainer {
+    h4 {
+      padding-left: 20px;
+      font-size: 24px;
+    }
   }
 }
