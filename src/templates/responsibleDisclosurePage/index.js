@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './responsibleDisclosurePage.module.scss';
 import ContactCard from '../../components/contactCard/index';
 import { findImageSizes } from '../../utils/helperFunctions';
-import Content, { HTMLContent } from '../../components/content/index';
+import { HTMLContent } from '../../components/content/index';
 
 export const ResponsibleDisclosurePageTemplate = ({
   title,
@@ -13,29 +13,25 @@ export const ResponsibleDisclosurePageTemplate = ({
   mailAddress,
   content,
   imageSizes,
-}) => {
-  const PageContent = HTMLContent || Content;
-
-  return (
-    <main>
-      <div className={styles.responsibleDisclosurePage}>
-        <section className={styles.left}>
-          <PageContent content={content} />
-        </section>
-        <section className={styles.right}>
-          <ContactCard
-            title={title}
-            visitingAddress={visitingAddress}
-            phoneNumber={phoneNumber}
-            mailAddress={mailAddress}
-            sizes={findImageSizes(image, imageSizes)}
-            image={image}
-          />
-        </section>
-      </div>
-    </main>
-  );
-};
+}) => (
+  <main>
+    <div className={styles.responsibleDisclosurePage}>
+      <section className={styles.left}>
+        <HTMLContent content={content} />
+      </section>
+      <section className={styles.right}>
+        <ContactCard
+          title={title}
+          visitingAddress={visitingAddress}
+          phoneNumber={phoneNumber}
+          mailAddress={mailAddress}
+          sizes={findImageSizes(image, imageSizes)}
+          image={image}
+        />
+      </section>
+    </div>
+  </main>
+);
 
 ResponsibleDisclosurePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
