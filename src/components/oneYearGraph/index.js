@@ -7,6 +7,7 @@ const oneYearGraph = () => (
       className={styles.oneYearGraph}
       width="2560"
       height="635"
+      viewBox="0 0 2560 635"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
