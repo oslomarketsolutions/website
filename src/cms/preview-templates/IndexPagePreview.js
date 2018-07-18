@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // As the norwegian and english index pages
 // has the exact same code except for query
 // we don't need two previews.
-import IndexPage from '../../pages/no/index';
+import IndexPageTemplate from '../../templates/indexPage';
 import PreviewWrapper from '../../components/previewWrapper';
 
 // This preview template is a little special because
@@ -96,7 +96,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 
   return (
     <PreviewWrapper>
-      <IndexPage data={data} />
+      <IndexPageTemplate data={data} />
     </PreviewWrapper>
   );
 };
