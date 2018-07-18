@@ -45,6 +45,7 @@ const fontAwesomeCSS = dom.css();
 
 const TemplateWrapper = ({ children, location, data }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
+  console.log(parsedPath, 'prs');
   const language = parsedPath && parsedPath[1];
 
   return (
