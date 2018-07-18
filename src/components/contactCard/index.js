@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './contactCard.module.scss';
-import ImageWrapper from '../imageWrapper';
+import ImageWrapper from '../imageWrapper/index';
 
 const ContactCard = ({
   title,

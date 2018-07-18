@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ResponsibleDisclosureTemplate } from '../../templates/responsibleDisclosurePage/index';
-import PreviewWrapper from '../../components/previewWrapper';
+import PreviewWrapper from '../../components/previewWrapper/index';
 
-const ResponsibleDisclosurePreview = ({ entry, getAsset, widgetFor }) => (
+const ResponsibleDisclosurePreview = ({ entry, getAsset }) => (
   <PreviewWrapper>
     <ResponsibleDisclosureTemplate
       title={entry.getIn(['data', 'contactInfo', 'title'])}
@@ -11,7 +11,7 @@ const ResponsibleDisclosurePreview = ({ entry, getAsset, widgetFor }) => (
       visitingAddress={entry.getIn(['data', 'contactInfo', 'visitingAddress'])}
       phoneNumber={entry.getIn(['data', 'contactInfo', 'phoneNumber'])}
       mailAddress={entry.getIn(['data', 'contactInfo', 'mailAddress'])}
-      content={widgetFor('body')}
+      content={entry.getIn(['data', 'body'])}
     />
   </PreviewWrapper>
 );
@@ -21,7 +21,6 @@ ResponsibleDisclosurePreview.propTypes = {
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
-  widgetFor: PropTypes.func,
 };
 
 export default ResponsibleDisclosurePreview;
