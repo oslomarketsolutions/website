@@ -1,4 +1,7 @@
 .responsibleDisclosurePage {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   max-width: 90%;
   margin: 112px auto 0 auto;
 
@@ -21,6 +24,14 @@
   h2 {
     margin: 0 0 16px;
   }
+
+  .left {
+    width: 55%;
+  }
+
+  .right {
+    width: 500px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -29,16 +40,16 @@
     padding: 0 32px;
 
     section {
-      padding: 138px 0 138px;
+      padding: 275px 0 275px;
     }
-
+    /* 
     section:first-of-type {
       padding-top: 275px;
     }
 
     section:last-of-type {
       padding-bottom: 275px;
-    }
+    } */
 
     ul {
       font-size: 1.375rem;

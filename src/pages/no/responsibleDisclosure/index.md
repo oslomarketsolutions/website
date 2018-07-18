@@ -3,7 +3,7 @@ templateKey: 'responsibleDisclosurePage'
 path: /responsibleDisclosure
 contactInfo:
   title: 'Kontakt oss'
-  image: /img/chemex.jpg
+  image: /img/logo_oms_hoved.png
   visitingAddress: 'Fred Olsens gate 1, 0152 Oslo'
   phoneNumber: '+47 40 00 23 13'
   mailAddress: 'Postboks 1174 Sentrum, 0107 Oslo'
@@ -17,7 +17,7 @@ Hvis du finner en sårbarhet i våre systemer ønsker vi å få vite om det slik
 
 Vennligst følg disse retningslinjene:
 
-* Send dine funn via e-post til <mailto:security@oms.no>. Krypter e-post og dine funn med vår PGP-nøkkel for å forhindre at sensitive data kommer på avveie.
+* Send dine funn via e-post til <mailto:security@oms.no>. Krypter e-post og dine funn med [vår PGP-nøkkel](/oms-pgp-key.txt) for å forhindre at sensitive data kommer på avveie.
 * Ikke utnytt sårbarheten mer enn nødvendig ved å for eksempel: slette, modifisere eller laste ned unødvendig mye data. Du skal kun demonstrere sårbarheten, ikke ta full nytte av den.
 * Ikke avslør dine funn til andre enn oss før sårbarheten er rettet.
 * Ikke benytt angrep mot vår fysiske sikkerhet, våre ansatte (sosial manipulasjon), tjenestenektangrep, spam eller mot tredjeparter.

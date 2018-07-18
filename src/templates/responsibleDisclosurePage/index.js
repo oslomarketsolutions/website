@@ -20,10 +20,10 @@ export const ResponsibleDisclosurePageTemplate = ({
   return (
     <main>
       <div className={styles.responsibleDisclosurePage}>
-        <section>
+        <section className={styles.left}>
           <PageContent content={content} />
         </section>
-        <section>
+        <section className={styles.right}>
           <ContactCard
             title={title}
             visitingAddress={visitingAddress}

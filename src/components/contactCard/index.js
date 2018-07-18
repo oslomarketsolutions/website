@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './contactCard.module.scss';
 import ImageWrapper from '../imageWrapper';
 
@@ -20,9 +21,18 @@ const ContactCard = ({
       alt={title}
     />
     <ul>
-      <li>{visitingAddress}</li>
-      <li>{phoneNumber}</li>
-      <li>{mailAddress}</li>
+      <li>
+        <FontAwesomeIcon icon={['fas', 'map-pin']} />
+        {visitingAddress}
+      </li>
+      <li>
+        <FontAwesomeIcon icon={['fas', 'phone']} />
+        {phoneNumber}
+      </li>
+      <li>
+        <FontAwesomeIcon icon={['fas', 'envelope']} />
+        {mailAddress}
+      </li>
     </ul>
   </div>
 );
@@ -32,7 +42,7 @@ ContactCard.propTypes = {
   visitingAddress: PropTypes.string,
   phoneNumber: PropTypes.string,
   mailAddress: PropTypes.string,
-  sizes: PropTypes.arrayOf(PropTypes.object),
+  sizes: PropTypes.shape({}),
   image: PropTypes.string,
 };
 

@@ -16,6 +16,9 @@ import {
   faCoffee,
   faFlask,
   faUserSecret,
+  faMapPin,
+  faPhone,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
@@ -39,6 +42,9 @@ export const faLibrary = library.add(
   faCoffee,
   faFlask,
   faUserSecret,
+  faMapPin,
+  faPhone,
+  faEnvelope,
 );
 
 const fontAwesomeCSS = dom.css();
@@ -46,7 +52,7 @@ const fontAwesomeCSS = dom.css();
 const TemplateWrapper = ({ children, location, data }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
   const language = parsedPath && parsedPath[1];
-  console.log('Her: ', data);
+
   return (
     <React.Fragment>
       <Helmet title="Oslo Market Solutions">
