@@ -12,10 +12,9 @@ export const ResponsibleDisclosurePageTemplate = ({
   phoneNumber,
   mailAddress,
   content,
-  contentComponent,
   imageSizes,
 }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = HTMLContent || Content;
 
   return (
     <main>
@@ -45,7 +44,6 @@ ResponsibleDisclosurePageTemplate.propTypes = {
   phoneNumber: PropTypes.string,
   mailAddress: PropTypes.string,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
@@ -61,7 +59,6 @@ const ResponsibleDisclosurePage = ({ data }) => {
       phoneNumber={post.frontmatter.contactInfo.phoneNumber}
       mailAddress={post.frontmatter.contactInfo.mailAddress}
       content={post.html}
-      contentComponent={HTMLContent}
       imageSizes={imageSizes}
     />
   );
