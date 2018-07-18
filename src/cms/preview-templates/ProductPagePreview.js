@@ -7,18 +7,18 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   const features = entry
     .getIn(['data', 'investorPortal', 'features'])
     .map(feature => ({
-      title: feature.getIn(['title']),
-      description: feature.getIn(['description']),
-      image: getAsset(feature.getIn(['image'])),
+      title: feature.get('title'),
+      description: feature.get('description'),
+      image: getAsset(feature.get('image')),
     }))
     .toJS();
 
   const products = entry
     .getIn(['data', 'products'])
     .map(product => ({
-      title: product.getIn(['title']),
-      image: getAsset(product.getIn(['image'])),
-      description: product.getIn(['description']),
+      title: product.get('title'),
+      image: getAsset(product.get('image')),
+      description: product.get('description'),
     }))
     .toJS();
 
@@ -43,6 +43,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 ProductPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
+    get: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 };

@@ -14,24 +14,24 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const customerLogos = entry
     .getIn(['data', 'customerLogos'])
     .map(customerLogo => ({
-      logo: getAsset(customerLogo.getIn(['logo'])),
-      name: customerLogo.getIn(['name']),
+      logo: getAsset(customerLogo.get('logo')),
+      name: customerLogo.get('name'),
     }));
 
   const customizationCards = entry
     .getIn(['data', 'customization', 'cards'])
     .map(card => ({
-      header: card.getIn(['header']),
-      image: getAsset(card.getIn(['image'])),
-      description: card.getIn(['description']),
-      features: card.getIn(['features']).toJS(),
+      header: card.get('header'),
+      image: getAsset(card.get('image')),
+      description: card.get('description'),
+      features: card.get('features').toJS(),
     }));
 
   const configurationLogos = entry
     .getIn(['data', 'configurationLogos'])
     .map(configurationLogo => ({
-      logo: getAsset(configurationLogo.getIn(['logo'])),
-      name: configurationLogo.getIn(['name']),
+      logo: getAsset(configurationLogo.get('logo')),
+      name: configurationLogo.get('name'),
     }));
 
   // Create the data object IndexPage expects
@@ -104,6 +104,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
+    get: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 };
