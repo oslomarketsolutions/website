@@ -123,7 +123,7 @@ collections:
             name: "configurationLogos"
             widget: "list"
             fields:
-              - {label: "Name, name: "name", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
               - {label: "Logo", name: "logo", widget: "image"}
           - label: "Solutions Content"
             name: "solutionsContent"
@@ -179,7 +179,7 @@ collections:
             name: "configurationLogos"
             widget: "list"
             fields:
-              - {label: "Name, name: "name", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
               - {label: "Logo", name: "logo", widget: "image"}
           - label: "Solutions Content"
             name: "solutionsContent"

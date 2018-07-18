@@ -10,7 +10,7 @@
   width: 565px;
   transition: 0.3s;
   color: white;
-  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
+  box-shadow: $boxShadow;
   margin-bottom: 64px;
 
   .imageContainer {
