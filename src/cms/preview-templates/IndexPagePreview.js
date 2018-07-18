@@ -15,6 +15,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     .getIn(['data', 'customerLogos'])
     .map(customerLogo => ({
       logo: getAsset(customerLogo.getIn(['logo'])),
+      name: customerLogo.getIn(['name']),
     }));
 
   const customizationCards = entry
@@ -30,6 +31,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     .getIn(['data', 'configurationLogos'])
     .map(configurationLogo => ({
       logo: getAsset(configurationLogo.getIn(['logo'])),
+      name: configurationLogo.getIn(['name']),
     }));
 
   // Create the data object IndexPage expects

@@ -10,13 +10,17 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       title: feature.getIn(['title']),
       description: feature.getIn(['description']),
       image: getAsset(feature.getIn(['image'])),
-    }));
+    }))
+    .toJS();
 
-  const products = entry.getIn(['data', 'products']).map(product => ({
-    title: product.getIn(['title']),
-    image: getAsset(product.getIn(['image'])),
-    description: product.getIn(['description']),
-  }));
+  const products = entry
+    .getIn(['data', 'products'])
+    .map(product => ({
+      title: product.getIn(['title']),
+      image: getAsset(product.getIn(['image'])),
+      description: product.getIn(['description']),
+    }))
+    .toJS();
 
   return (
     <PreviewWrapper>

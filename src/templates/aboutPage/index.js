@@ -28,30 +28,31 @@ export const AboutPageTemplate = ({
       </section>
       <section className={styles.aboutEmployees}>
         <h2>{header}</h2>
-        {employeeList.map(employee => {
-          const {
-            title: employeeName,
-            description: employeeDescription,
-            jobTitle: employeeJobTitle,
-            image: employeeImage,
-            jobType: employeeJobType,
-          } = employee.node.frontmatter;
-          return (
-            <EmployeeCard
-              key={employeeName}
-              name={employeeName}
-              description={employeeDescription}
-              jobTitle={employeeJobTitle}
-              portraitSize={findImageSizes(employeeImage, imageSizes)}
-              headerBackgroundSize={findImageSizes(
-                'ansattkortHeader.png',
-                imageSizes,
-              )}
-              jobType={employeeJobType}
-              image={employeeImage}
-            />
-          );
-        })}
+        {employeeList &&
+          employeeList.map(employee => {
+            const {
+              title: employeeName,
+              description: employeeDescription,
+              jobTitle: employeeJobTitle,
+              image: employeeImage,
+              jobType: employeeJobType,
+            } = employee.node.frontmatter;
+            return (
+              <EmployeeCard
+                key={employeeName}
+                name={employeeName}
+                description={employeeDescription}
+                jobTitle={employeeJobTitle}
+                portraitSize={findImageSizes(employeeImage, imageSizes)}
+                headerBackgroundSize={findImageSizes(
+                  'ansattkortHeader.png',
+                  imageSizes,
+                )}
+                jobType={employeeJobType}
+                image={employeeImage}
+              />
+            );
+          })}
       </section>
     </div>
   </main>
@@ -59,7 +60,7 @@ export const AboutPageTemplate = ({
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   imageAlt: PropTypes.string,
   text: PropTypes.string,
   header: PropTypes.string,
