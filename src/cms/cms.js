@@ -8,7 +8,7 @@ import FeaturePreview from './preview-templates/FeaturePreview';
 import ProductPagePreview from './preview-templates/ProductPagePreview';
 import PerkPreview from './preview-templates/PerkPreview';
 import FooterPreview from './preview-templates/FooterPreview';
-// import ResponsibleDisclosurePreview from './preview-templates/ResponsibleDisclosurePreview';
+import ResponsibleDisclosurePreview from './preview-templates/ResponsibleDisclosurePreview';
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
@@ -25,12 +25,12 @@ CMS.registerPreviewTemplate('english_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_products_page', ProductPagePreview);
 CMS.registerPreviewTemplate('english_products_page', ProductPagePreview);
-/* CMS.registerPreviewTemplate(
+CMS.registerPreviewTemplate(
   'norwegian_responsibleDisclosure_page',
   ResponsibleDisclosurePreview,
 );
 CMS.registerPreviewTemplate(
   'english_responsibleDisclosure_page',
   ResponsibleDisclosurePreview,
-); */
+);
 CMS.registerPreviewTemplate('footer', FooterPreview);
