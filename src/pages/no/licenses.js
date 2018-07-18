@@ -19,7 +19,7 @@ LicensesPage.propTypes = {
 };
 
 export const licensesPageQuery = graphql`
-  query LicensesPage {
+  query NorLicensesPage {
     markdownRemark(id: { regex: "/licenses.md/" }) {
       html
     }
