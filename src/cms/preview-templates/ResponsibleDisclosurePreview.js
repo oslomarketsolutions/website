@@ -11,6 +11,7 @@ const ResponsibleDisclosurePreview = ({ entry, getAsset }) => (
       visitingAddress={entry.getIn(['data', 'visitingAddress'])}
       phoneNumber={entry.getIn(['data', 'phoneNumber'])}
       mailAddress={entry.getIn(['data', 'mailAddress'])}
+      content={entry.getIn(['data', 'body'])}
     />
   </PreviewWrapper>
 );
