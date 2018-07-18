@@ -8,7 +8,7 @@ const FeaturePreview = ({ entry, getAsset }) => (
     <FeatureCard
       title={entry.getIn(['data', 'title'])}
       description={entry.getIn(['data', 'description'])}
-      features={entry.getIn(['data', 'features'])}
+      features={entry.getIn(['data', 'features']).toJS()}
       image={getAsset(entry.getIn(['data', 'image']))}
     />
   </PreviewWrapper>

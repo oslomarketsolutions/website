@@ -30,7 +30,7 @@ ProductCard.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-    image: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   }),
   sizes: PropTypes.shape({
     aspectRatio: PropTypes.number,

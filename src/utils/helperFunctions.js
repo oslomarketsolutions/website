@@ -1,5 +1,5 @@
 export const findImageSizes = (image, imageSizes) => {
-  if (image == null || imageSizes == null) return {};
+  if (typeof image !== 'string' || !imageSizes) return null;
 
   // If image is a path, get only the image name
   const imageName = image.split('/').pop();
@@ -8,11 +8,11 @@ export const findImageSizes = (image, imageSizes) => {
     imageSizesObject => imageSizesObject.node.relativePath === imageName,
   );
 
-  return element ? element.node.childImageSharp.sizes : {};
+  return element ? element.node.childImageSharp.sizes : null;
 };
 
 export const findImageResolutions = (image, imageResolutions) => {
-  if (image === null || imageResolutions === null) return {};
+  if (typeof image !== 'string' || !imageResolutions) return null;
 
   // If `image` is a path, get only the image name
   const imageName = image.split('/').pop();
@@ -22,5 +22,5 @@ export const findImageResolutions = (image, imageResolutions) => {
       imageResolutionsObject.node.relativePath === imageName,
   );
 
-  return element ? element.node.childImageSharp.resolutions : {};
+  return element ? element.node.childImageSharp.resolutions : null;
 };

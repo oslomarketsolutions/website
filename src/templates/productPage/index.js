@@ -36,7 +36,7 @@ export class ProductPageTemplate extends Component {
         PropTypes.shape({
           text: PropTypes.string,
           title: PropTypes.string,
-          image: PropTypes.string,
+          image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
         }),
       ),
     }),
@@ -81,18 +81,19 @@ export class ProductPageTemplate extends Component {
           onClickFunction={this.scrollToRef}
           sticky={stickyMenu}
         />
-        {products.map(product => (
-          <LinkCard
-            key={product.title}
-            product={product}
-            onClickFunction={this.scrollToRef}
-            sticky={stickyMenu}
-            imageResolution={findImageResolutions(
-              investorPortal.image,
-              imageResolutions,
-            )}
-          />
-        ))}
+        {products &&
+          products.map(product => (
+            <LinkCard
+              key={product.title}
+              product={product}
+              onClickFunction={this.scrollToRef}
+              sticky={stickyMenu}
+              imageResolution={findImageResolutions(
+                investorPortal.image,
+                imageResolutions,
+              )}
+            />
+          ))}
       </div>
     );
 
