@@ -232,9 +232,11 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "First header", name: "title", widget: "string"}
           - {label: "First image", name: "image1", widget: "image"}
+          - {label: "First image description", name: "image1Alt", widget: "string"}
           - {label: "First text", name: "text1", widget: "text"}
           - {label: "Second header", name: "header", widget: "string"}
           - {label: "Second image", name: "image2", widget: "image"}
+          - {label: "Second image description", name: "image2Alt", widget: "string"}
           - {label: "Second text", name: "text2", widget: "text"}
           - {label: "First sub-header", name: "subHeader1", widget: "string"}
           - {label: "Second sub-header", name: "subHeader2", widget: "string"}
@@ -246,9 +248,11 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "First header", name: "title", widget: "string"}
           - {label: "First image", name: "image1", widget: "image"}
+          - {label: "First Image Description", name: "image1Alt", widget: "string"}
           - {label: "First text", name: "text1", widget: "text"}
           - {label: "Second header", name: "header", widget: "string"}
           - {label: "Second image", name: "image2", widget: "image"}
+          - {label: "Second image description", name: "image2Alt", widget: "string"}
           - {label: "Second text", name: "text2", widget: "text"}
           - {label: "First sub-header", name: "subHeader1", widget: "string"}
           - {label: "Second sub-header", name: "subHeader2", widget: "string"}

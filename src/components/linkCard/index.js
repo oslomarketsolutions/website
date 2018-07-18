@@ -27,7 +27,7 @@ LinkCard.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-    image: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     features: PropTypes.arrayOf(PropTypes.object),
   }),
   onClickFunction: PropTypes.func,

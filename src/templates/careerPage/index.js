@@ -66,17 +66,21 @@ export const CareerPageTemplate = ({
       <section className={styles.careerPerks}>
         <h3>{subHeader1}</h3>
         <div className={styles.perkCardContainer}>
-          {perkList.map(perk => {
-            const { title: perkTitle, text: perkText } = perk.node.frontmatter;
-            return (
-              <PerkCard
-                key={perkTitle}
-                title={perkTitle}
-                text={perkText}
-                color={color()}
-              />
-            );
-          })}
+          {perkList &&
+            perkList.map(perk => {
+              const {
+                title: perkTitle,
+                text: perkText,
+              } = perk.node.frontmatter;
+              return (
+                <PerkCard
+                  key={perkTitle}
+                  title={perkTitle}
+                  text={perkText}
+                  color={color()}
+                />
+              );
+            })}
         </div>
       </section>
       <section className={styles.careerJobVacancies}>
@@ -92,11 +96,11 @@ export const CareerPageTemplate = ({
 
 CareerPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  image1: PropTypes.string,
+  image1: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   image1Alt: PropTypes.string,
   text1: PropTypes.string,
   header: PropTypes.string,
-  image2: PropTypes.string,
+  image2: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   image2Alt: PropTypes.string,
   text2: PropTypes.string,
   subHeader1: PropTypes.string,

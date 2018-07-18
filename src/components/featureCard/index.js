@@ -43,7 +43,7 @@ FeatureCard.propTypes = {
     src: PropTypes.string,
     srcSet: PropTypes.string,
   }),
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default FeatureCard;

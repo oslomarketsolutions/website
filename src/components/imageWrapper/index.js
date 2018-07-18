@@ -42,7 +42,7 @@ const ImageWrapper = props => {
 };
 
 ImageWrapper.propTypes = {
-  src: PropTypes.string,
+  src: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   sizes: PropTypes.shape({
     aspectRatio: PropTypes.number,
     base64: PropTypes.string,
