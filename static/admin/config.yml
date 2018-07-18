@@ -307,9 +307,7 @@ collections:
         label: "no/Responsible disclosure page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
-          - {label: "Text", name: "text", widget: "object", fields: [
-              {label: "Body", name: "body", widget: "markdown"},
-            ]}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image"},
@@ -323,9 +321,7 @@ collections:
         label: "en/Responsible disclosure page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
-          - {label: "Text", name: "text", widget: "object", fields: [
-              {label: "Body", name: "body", widget: "markdown"},
-            ]}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image"},
