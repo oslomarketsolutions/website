@@ -96,7 +96,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 
   return (
     <PreviewWrapper>
-      <IndexPage data={data} />;
+      <IndexPage data={data} />
     </PreviewWrapper>
   );
 };
