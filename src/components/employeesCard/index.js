@@ -52,7 +52,6 @@ const EmployeeCard = props => {
         {/* Background-image for header */}
         <ImageWrapper
           outerWrapperClassName={styles.headerBackground}
-          imgStyle={{ height: '250%', width: '250%' }}
           sizes={headerBackgroundSize}
           src={headerBackground}
         />

@@ -21,6 +21,7 @@
   }
 
   .header {
+    position: relative;
     grid-area: header;
     display: grid;
     grid-template-areas:
@@ -31,11 +32,14 @@
     .headerBackground {
       position: absolute !important;
       z-index: -1;
-      height: 100px;
-      width: calc(
-        565px - 140px
-      ); // Width is card width minus image-column-width
+      height: 100%;
+      width: 100%;
       background-color: $darkBlue; // Fallback if background pattern doesn't load
+
+      img {
+        height: 500% !important;
+        width: 500% !important;
+      }
     }
   }
 
@@ -96,12 +100,6 @@
       height: 400px;
       grid-area: image;
       object-fit: cover;
-    }
-    .header {
-      .headerBackground {
-        height: 135px;
-        width: 90%;
-      }
     }
   }
 }
