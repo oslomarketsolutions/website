@@ -1,27 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { HTMLContent } from '../../components/content';
 
-const LicensesPage = ({ data }) => (
-  <main style={{ paddingTop: '200px' }}>
-    <HTMLContent content={data.markdownRemark.html} />
-  </main>
-);
+export class LicensesPage extends Component {
+  static propTypes = {
+    data: PropTypes.shape({
+      file: PropTypes.shape({
+        publicURL: PropTypes.string,
+      }),
+    }),
+  };
+
+  state = {
+    licenses: '',
+    loading: true,
+  };
+
+  componentDidMount() {
+    // Fetch the licenses.md file
+    fetch(this.props.data.file.publicURL)
+      .then(response => response.text())
+      .then(text => {
+        this.setState({
+          licenses: text,
+          loading: false,
+        });
+      });
+  }
+
+  render() {
+    return (
+      <pre style={{ padding: '200px 20px' }}>
+        {this.state.loading ? 'Loading licenses' : this.state.licenses}
+      </pre>
+    );
+  }
+}
 
 export default LicensesPage;
 
-LicensesPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      html: PropTypes.string,
-    }),
-  }),
-};
-
 export const licensesPageQuery = graphql`
   query NorLicensesPage {
-    markdownRemark(id: { regex: "/licenses.md/" }) {
-      html
+    file(id: { regex: "/licenses.md/" }) {
+      publicURL
     }
   }
 `;
