@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+// Polyfill for fetch in IE11
+import 'whatwg-fetch';
+import styles from '../licensesPage.module.scss';
 
 export class LicensesPage extends Component {
   static propTypes = {
@@ -29,7 +32,7 @@ export class LicensesPage extends Component {
 
   render() {
     return (
-      <pre style={{ padding: '200px 20px' }}>
+      <pre className={styles.licensesContainer}>
         {this.state.loading ? 'Loading licenses' : this.state.licenses}
       </pre>
     );
