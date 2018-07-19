@@ -163,6 +163,7 @@ const Footer = ({ language, data }) => {
         <div className={styles.copyright}>
           <FontAwesomeIcon icon={['far', 'copyright']} />
           <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
+          <Link to={`/${language}/licenses`}>Licenses</Link>
         </div>
       </div>
     </footer>

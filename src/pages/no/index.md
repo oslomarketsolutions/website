@@ -1,10 +1,10 @@
 ---
 topImage:
-  alt: "Steam coming up from a red cup"
+  alt: Steam coming up from a red cup
   image: /img/products-full-width.jpg
 featuredContent:
   header: Investor portals
-  image: /img/chemex.jpg
+  image: /img/carlos-muza-84523-unsplash.jpg
   text: >-
     Whether you want a fully hosted and managed web trader, fund savings
     platform, portfolio reporting or market data information, OMS can help you
@@ -54,6 +54,14 @@ configurationLogos:
     name: Euronex
   - logo: /img/nasdaq_logo.png
     name: Nasdaq
+  - logo: /img/evry_logo.png
+    name: Evry
+  - logo: /img/centevo_logo.png
+    name: Centevo
+  - logo: /img/vps_logo.png
+    name: VPS
+  - logo: /img/tieto_logo.png
+    name: Tieto
 solutionsContent:
   firstCard:
     header: Investor Relations
@@ -72,6 +80,8 @@ solutionsContent:
 customerLogos:
   - logo: /img/er-logo-dagligbank-sparebank1.png
     name: Sparebank1
+  - logo: /img/norne_logo.png
+    name: Norne
   - logo: /img/afm_logo_blue.png
     name: Arctic Fund Management
 ---
