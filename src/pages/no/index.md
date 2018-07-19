@@ -1,7 +1,7 @@
 ---
 topImage:
   alt: Steam coming up from a red cup
-  image: /img/blur-business-chart-159888.jpg
+  image: /img/products-full-width.jpg
 featuredContent:
   header: Investor portals
   image: /img/carlos-muza-84523-unsplash.jpg
