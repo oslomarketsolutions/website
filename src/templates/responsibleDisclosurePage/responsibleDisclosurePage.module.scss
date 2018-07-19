@@ -1,0 +1,77 @@
+.responsibleDisclosurePage {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 90%;
+  margin: 112px auto 0;
+
+  section {
+    padding: 32px 0;
+  }
+
+  section:last-of-type {
+    padding-bottom: 64px;
+  }
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0px 1em 0px;
+    padding-left: 40px;
+  }
+
+  p {
+    display: block;
+    margin: 1em 0px 1em 0px;
+  }
+
+  h2 {
+    margin: 0 0 16px;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsibleDisclosurePage {
+    max-width: 1864px;
+    padding: 0 32px;
+
+    ul {
+      font-size: 1.375rem;
+    }
+
+    section:first-of-type {
+      padding-top: 275px;
+    }
+
+    section:last-of-type {
+      padding-bottom: 275px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .responsibleDisclosurePage {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    section {
+      padding: 275px 0 275px;
+    }
+
+    .left {
+      width: 58%;
+      padding-right: 50px;
+    }
+
+    .right {
+      width: 500px;
+    }
+  }
+}

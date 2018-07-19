@@ -306,6 +306,34 @@ collections:
               {label: "Description", name: "description", widget: "text"},
             ]}
 
+      - file: "src/pages/no/responsibleDisclosure/index.md"
+        name: "norwegian_responsibleDisclosure_page"
+        label: "no/Responsible disclosure page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Visiting address", name: "visitingAddress", widget: "string"},
+              {label: "Phone number", name: "phoneNumber", widget: "string"},
+              {label: "Mail address", name: "mailAddress", widget: "string"},
+            ]}
+
+      - file: "src/pages/en/responsibleDisclosure/index.md"
+        name: "english_responsibleDisclosure_page"
+        label: "en/Responsible disclosure page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Visiting address", name: "visitingAddress", widget: "string"},
+              {label: "Phone number", name: "phoneNumber", widget: "string"},
+              {label: "Mail address", name: "mailAddress", widget: "string"},
+            ]}
+
       - file: "src/pages/footer/index.md"
         name: "footer"
         label: "Footer"

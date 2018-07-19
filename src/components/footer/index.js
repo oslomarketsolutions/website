@@ -99,6 +99,13 @@ const Footer = ({ language, data }) => {
               </Link>
             </li>
             <li>
+              <Link to={`/${language}/responsibleDisclosure`}>
+                {language === 'en'
+                  ? 'Responsible Disclosure'
+                  : 'Sårbarhetsrapportering'}
+              </Link>
+            </li>
+            <li>
               <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
             </li>
           </ul>

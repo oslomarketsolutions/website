@@ -85,4 +85,3 @@ customerLogos:
   - logo: /img/afm_logo_blue.png
     name: Arctic Fund Management
 ---
-

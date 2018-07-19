@@ -1,3 +1,5 @@
+@import '../../layouts/variables';
+
 .perkCard {
   padding: 30px;
   width: 286px;
@@ -7,7 +9,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
+  box-shadow: $boxShadow;
   text-align: center;
 
   h4 {
