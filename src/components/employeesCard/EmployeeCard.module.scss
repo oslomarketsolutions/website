@@ -28,22 +28,7 @@
       'name icon'
       'title icon';
     grid-template-columns: 70% 30%;
-
-    // !important is used here to override inline style injected by Gatsby-Image
-    .headerBackground {
-      position: absolute !important;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      background-color: $darkBlue; // Fallback if background pattern doesn't load
-
-      // These scale the image. The reason for the !important tag
-      // is that it has to override inline style injected by Gatsby-Image
-      img {
-        height: 500% !important;
-        width: 500% !important;
-      }
-    }
+    background-image: url(../../../static/img/ansattkortHeader.jpg);
   }
 
   .description {

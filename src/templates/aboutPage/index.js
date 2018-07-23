@@ -44,10 +44,6 @@ export const AboutPageTemplate = ({
                 description={employeeDescription}
                 jobTitle={employeeJobTitle}
                 portraitSize={findImageSizes(employeeImage, imageSizes)}
-                headerBackgroundSize={findImageSizes(
-                  'ansattkortHeader.png',
-                  imageSizes,
-                )}
                 jobType={employeeJobType}
                 image={employeeImage}
               />

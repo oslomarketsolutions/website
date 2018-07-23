@@ -31,11 +31,7 @@ const ImageWrapper = props => {
   return (
     <div className={outerWrapperClassName}>
       <div className={styles.innerImageWrapper} style={style}>
-        <img
-          src={src}
-          alt={alt}
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-        />
+        <img className={styles.nonGatsbyImage} src={src} alt={alt} />
       </div>
     </div>
   );
