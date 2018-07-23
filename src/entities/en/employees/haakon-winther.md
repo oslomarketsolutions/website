@@ -2,6 +2,7 @@
 title: Haakon Winther
 jobTitle: Frontend developer
 description: Texxt
-image: /img/chemex.jpg
+image: /img/haakonw.png
 jobType: frontEnd
 ---
+
