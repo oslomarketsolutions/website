@@ -21,22 +21,14 @@
   }
 
   .header {
+    position: relative;
     grid-area: header;
     display: grid;
     grid-template-areas:
       'name icon'
       'title icon';
     grid-template-columns: 70% 30%;
-
-    .headerBackground {
-      position: absolute !important;
-      z-index: -1;
-      height: 100px;
-      width: calc(
-        565px - 140px
-      ); // Width is card width minus image-column-width
-      background-color: $darkBlue; // Fallback if background pattern doesn't load
-    }
+    background-image: url(../../../static/img/ansattkortHeader.jpg);
   }
 
   .description {
@@ -96,13 +88,6 @@
       height: 400px;
       grid-area: image;
       object-fit: cover;
-    }
-    .header {
-      .headerBackground {
-        height: 135px;
-        width: 100%; // This needs fixing
-        background-color: $darkBlue; // Fallback if background pattern doesn't load
-      }
     }
   }
 }
