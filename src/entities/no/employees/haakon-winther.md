@@ -2,6 +2,7 @@
 title: Haakon Winther
 jobTitle: Frontendutvikler
 description: Lang
-image: /img/chemex.jpg
+image: /img/haakonw.png
 jobType: frontEnd
 ---
+
