@@ -1,7 +1,8 @@
 ---
 title: Åsmund Staldvik
 jobTitle: Sommervikar
-description: Lang
-image: /img/chemex.jpg
+description: Tekst
+image: /img/etogås.png
 jobType: summerIntern
 ---
+
