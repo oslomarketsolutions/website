@@ -1,7 +1,7 @@
 ---
 title: Haakon Winther
 jobTitle: Frontendutvikler
-description: Lang
+description: Tekst
 image: /img/haakonw.png
 jobType: frontEnd
 ---
