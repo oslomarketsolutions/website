@@ -42,6 +42,7 @@ collections:
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
         - {label: "Operations", value: "operations"}
+        - {label: "Support", value: "support"}
         - {label: "Summer intern", value: "summerIntern"}
 
   - name: "english_employees"
