@@ -25,7 +25,7 @@ const sortedEmployeeList = array => {
 
     newArray.push(newElement);
   });
-  console.log('Her: ', newArray.sort((a, b) => a.sortOrder - b.sortOrder));
+
   return newArray.sort(
     (a, b) => a.node.frontmatter.sortOrder - b.node.frontmatter.sortOrder,
   );
