@@ -10,16 +10,19 @@ const iconMatcher = jobType => {
       return ['fas', 'server'];
 
     case 'backEnd':
-      return ['fas', 'coffee'];
+      return ['fas', 'cogs'];
 
     case 'frontEnd':
-      return ['fas', 'flask'];
+      return ['fas', 'code'];
 
     case 'summerIntern':
       return ['fas', 'graduation-cap'];
 
+    case 'support':
+      return ['fas', 'fire-extinguisher'];
+
     default:
-      return ['fas', 'user-secret'];
+      return ['fas', 'briefcase'];
   }
 };
 

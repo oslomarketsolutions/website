@@ -5,6 +5,32 @@ import styles from './aboutPage.module.scss';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
+const sortedEmployeeList = array => {
+  const newArray = [];
+  array.forEach(element => {
+    const newElement = element;
+    if (newElement.node.frontmatter.jobType === 'management') {
+      newElement.node.frontmatter.sortOrder = 1;
+    } else if (newElement.node.frontmatter.jobType === 'operations') {
+      newElement.node.frontmatter.sortOrder = 2;
+    } else if (newElement.node.frontmatter.jobType === 'support') {
+      newElement.node.frontmatter.sortOrder = 3;
+    } else if (newElement.node.frontmatter.jobType === 'frontEnd') {
+      newElement.node.frontmatter.sortOrder = 4;
+    } else if (newElement.node.frontmatter.jobType === 'backEnd') {
+      newElement.node.frontmatter.sortOrder = 5;
+    } else if (newElement.node.frontmatter.jobType === 'summerIntern') {
+      newElement.node.frontmatter.sortOrder = 6;
+    }
+
+    newArray.push(newElement);
+  });
+  console.log('Her: ', newArray.sort((a, b) => a.sortOrder - b.sortOrder));
+  return newArray.sort(
+    (a, b) => a.node.frontmatter.sortOrder - b.node.frontmatter.sortOrder,
+  );
+};
+
 export const AboutPageTemplate = ({
   image,
   imageAlt,
@@ -28,8 +54,8 @@ export const AboutPageTemplate = ({
       </section>
       <section className={styles.aboutEmployees}>
         <h2>{header}</h2>
-        {employeeList &&
-          employeeList.map(employee => {
+        {sortedEmployeeList(employeeList) &&
+          sortedEmployeeList(employeeList).map(employee => {
             const {
               title: employeeName,
               description: employeeDescription,
