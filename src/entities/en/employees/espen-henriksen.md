@@ -1,7 +1,8 @@
 ---
 title: Espen Henriksen
-jobTitle: Team Lead Frontend
-description: Test test
-image: /img/products-grid3.jpg
+jobTitle: Teamleader frontend
+description: Text
+image: /img/espen_henriksen.jpg
 jobType: frontEnd
 ---
+
