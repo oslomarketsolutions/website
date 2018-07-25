@@ -37,13 +37,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         path: `${__dirname}/static/img`,
         name: 'staticImages',
       },
@@ -60,6 +53,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/entities`,
         name: 'entities',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
     'gatsby-plugin-sharp',

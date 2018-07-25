@@ -63,6 +63,22 @@ export const pageQuery = graphql`
       }
     }
 
+    news: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/no/news/" } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            image
+          }
+        }
+      }
+    }
+
     imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
       edges {
         node {

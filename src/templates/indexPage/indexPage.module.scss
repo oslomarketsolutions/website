@@ -129,6 +129,12 @@
     }
   }
 
+  .news {
+    color: $darkBlue;
+    height: 500px; // Temp before slider is made
+    background-color: aliceblue;
+  }
+
   .customerLogos {
     display: flex;
     flex-flow: row nowrap;

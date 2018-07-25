@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from './indexPage.module.scss';
@@ -17,6 +18,7 @@ const IndexPageTemplate = ({ data }) => {
     customerLogos,
   } = data.page.frontmatter;
 
+  const news = data.news.edges;
   const imageSizes = data.imageSizes.edges;
 
   const onScrollButtonClick = () => {
@@ -100,6 +102,18 @@ const IndexPageTemplate = ({ data }) => {
           <p> {solutionsContent.secondCard.text} </p>
         </article>
       </section>
+      <section className={styles.news}>
+        <h2>Hei her kommer det linker til news!</h2>
+        {news &&
+          news.map(newsArticle => (
+            <Link
+              key={newsArticle.node.fields.slug}
+              to={newsArticle.node.fields.slug}
+            >
+              {newsArticle.node.frontmatter.title}
+            </Link>
+          ))}
+      </section>
       <section className={styles.customerLogos}>
         {customerLogos &&
           customerLogos.map(customerLogo => (
@@ -120,6 +134,9 @@ IndexPageTemplate.propTypes = {
   data: PropTypes.shape({
     page: PropTypes.shape({
       frontmatter: PropTypes.object,
+    }),
+    news: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object),
     }),
     imageSizes: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object),
