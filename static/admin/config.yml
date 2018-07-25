@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-120-NyhetsSide
 
 media_folder: static/img
 public_folder: /img

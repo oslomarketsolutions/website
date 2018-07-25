@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
+import NewsCard from '../../components/newsCard';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
@@ -105,17 +106,18 @@ const IndexPageTemplate = ({ data }) => {
       <section className={styles.news}>
         <h2>Hei her kommer det linker til news!</h2>
         {news &&
-          news.map(newsArticle => (
-            <Link
-              key={newsArticle.node.fields.slug}
-              to={newsArticle.node.fields.slug}
-            >
-              {newsArticle.node.frontmatter.sticky.toString()
-                ? 'Sticky'
-                : 'Not Sticky'}{' '}
-              {newsArticle.node.frontmatter.title}
-            </Link>
-          ))}
+          news.map(newsArticle => {
+            const { frontmatter: content, fields } = newsArticle.node;
+            return (
+              <NewsCard
+                slug={fields.slug}
+                title={content.title}
+                description={content.description}
+                image={content.image}
+                sizes={findImageSizes(content.image, imageSizes)}
+              />
+            );
+          })}
       </section>
       <section className={styles.customerLogos}>
         {customerLogos &&

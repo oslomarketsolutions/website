@@ -130,16 +130,14 @@
   }
 
   .news {
+    display: flex;
+    flex-flow: row wrap;
     color: $darkBlue;
-    height: 500px; // Temp before slider is made
     background-color: aliceblue;
+    padding: 50px;
 
     a {
-      width: 200px;
-      display: block;
-      margin: 50px;
-      padding: 20px 0px;
-      background-color: lightblue;
+      margin: 20px;
     }
   }
 
