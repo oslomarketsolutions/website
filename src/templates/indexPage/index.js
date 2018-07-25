@@ -110,6 +110,9 @@ const IndexPageTemplate = ({ data }) => {
               key={newsArticle.node.fields.slug}
               to={newsArticle.node.fields.slug}
             >
+              {newsArticle.node.frontmatter.sticky.toString()
+                ? 'Sticky'
+                : 'Not Sticky'}{' '}
               {newsArticle.node.frontmatter.title}
             </Link>
           ))}

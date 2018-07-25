@@ -25,22 +25,24 @@ export default class Navbar extends Component {
   };
 
   changePageLanguage = () => {
-    const pathSplitArray = this.props.location.pathname.split('/');
-    let returnPath;
+    const path = this.props.location.pathname;
+
+    // For now we redirect users back to the homepage if they're in a news article
+    if (path.includes('/news/'))
+      return this.props.language === 'en' ? 'no' : 'en';
 
     if (this.props.language === 'en') {
-      if (pathSplitArray.length < 3) {
-        returnPath = 'no';
-      } else {
-        returnPath = `/no/${pathSplitArray[2]}`;
-      }
-    } else if (pathSplitArray.length < 3) {
-      returnPath = 'en';
-    } else {
-      returnPath = `/en/${pathSplitArray[2]}`;
+      // If path is longer than 3 it's not the frontpage and afterslash is also needed
+      return path.length > 3
+        ? path.replace('/en/', '/no/')
+        : path.replace('/en', '/no');
+    } else if (this.props.language === 'no') {
+      return path.length > 3
+        ? path.replace('/no/', '/en/')
+        : path.replace('/no', '/en');
     }
 
-    return returnPath;
+    return 'en';
   };
 
   toggleNav = () => {

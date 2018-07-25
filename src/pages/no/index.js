@@ -74,6 +74,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             image
+            sticky
           }
         }
       }

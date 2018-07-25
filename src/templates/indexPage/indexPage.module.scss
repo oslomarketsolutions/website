@@ -133,6 +133,14 @@
     color: $darkBlue;
     height: 500px; // Temp before slider is made
     background-color: aliceblue;
+
+    a {
+      width: 200px;
+      display: block;
+      margin: 50px;
+      padding: 20px 0px;
+      background-color: lightblue;
+    }
   }
 
   .customerLogos {
