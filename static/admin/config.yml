@@ -39,6 +39,7 @@ collections:
         widget: "select"
         options:
         - {label: "Front-end", value: "frontEnd"}
+        - {label: "Designer", value: "designer"}
         - {label: "Back-end", value: "backEnd"}
         - {label: "Management", value: "management"}
         - {label: "Operations", value: "operations"}

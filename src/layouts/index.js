@@ -20,6 +20,7 @@ import {
   faPhone,
   faEnvelope,
   faFireExtinguisher,
+  faPaintBrush,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
@@ -47,6 +48,7 @@ export const faLibrary = library.add(
   faPhone,
   faEnvelope,
   faFireExtinguisher,
+  faPaintBrush,
 );
 
 const fontAwesomeCSS = dom.css();
