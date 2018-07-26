@@ -1,7 +1,8 @@
 ---
 title: Paal Steihaug
-jobTitle: Backendutvikler
-description: Lang
-image: /img/chemex.jpg
+jobTitle: Teamleder backend
+description: Tekst
+image: /img/paal-steihaug_phonebook_user1.jpg
 jobType: backEnd
 ---
+

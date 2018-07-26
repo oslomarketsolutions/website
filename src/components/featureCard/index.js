@@ -36,8 +36,14 @@ FeatureCard.propTypes = {
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
   link: PropTypes.string,
-  sizes: PropTypes.arrayOf(PropTypes.object),
-  image: PropTypes.string,
+  sizes: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default FeatureCard;

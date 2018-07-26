@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // As the norwegian and english index pages
 // has the exact same code except for query
 // we don't need two previews.
-import IndexPage from '../../pages/no/index';
+import IndexPageTemplate from '../../templates/indexPage';
 import PreviewWrapper from '../../components/previewWrapper';
 
 // This preview template is a little special because
@@ -14,22 +14,24 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const customerLogos = entry
     .getIn(['data', 'customerLogos'])
     .map(customerLogo => ({
-      logo: getAsset(customerLogo.getIn(['logo'])),
+      logo: getAsset(customerLogo.get('logo')),
+      name: customerLogo.get('name'),
     }));
 
   const customizationCards = entry
     .getIn(['data', 'customization', 'cards'])
     .map(card => ({
-      header: card.getIn(['header']),
-      image: getAsset(card.getIn(['image'])),
-      description: card.getIn(['description']),
-      features: card.getIn(['features']).toJS(),
+      header: card.get('header'),
+      image: getAsset(card.get('image')),
+      description: card.get('description'),
+      features: card.get('features').toJS(),
     }));
 
   const configurationLogos = entry
     .getIn(['data', 'configurationLogos'])
     .map(configurationLogo => ({
-      logo: getAsset(configurationLogo.getIn(['logo'])),
+      logo: getAsset(configurationLogo.get('logo')),
+      name: configurationLogo.get('name'),
     }));
 
   // Create the data object IndexPage expects
@@ -94,7 +96,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 
   return (
     <PreviewWrapper>
-      <IndexPage data={data} />;
+      <IndexPageTemplate data={data} />
     </PreviewWrapper>
   );
 };
@@ -102,6 +104,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
+    get: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 };

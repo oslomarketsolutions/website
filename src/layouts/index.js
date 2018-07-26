@@ -13,9 +13,13 @@ import {
   faArrowUp,
   faServer,
   faGraduationCap,
-  faCoffee,
-  faFlask,
-  faUserSecret,
+  faCogs,
+  faCode,
+  faBriefcase,
+  faMapPin,
+  faPhone,
+  faEnvelope,
+  faFireExtinguisher,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
@@ -36,9 +40,13 @@ export const faLibrary = library.add(
   faArrowUp,
   faServer,
   faGraduationCap,
-  faCoffee,
-  faFlask,
-  faUserSecret,
+  faCogs,
+  faCode,
+  faBriefcase,
+  faMapPin,
+  faPhone,
+  faEnvelope,
+  faFireExtinguisher,
 );
 
 const fontAwesomeCSS = dom.css();

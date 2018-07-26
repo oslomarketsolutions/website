@@ -31,20 +31,28 @@ const ImageWrapper = props => {
   return (
     <div className={outerWrapperClassName}>
       <div className={styles.innerImageWrapper} style={style}>
-        <img
-          src={src}
-          alt={alt}
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-        />
+        <img className={styles.nonGatsbyImage} src={src} alt={alt} />
       </div>
     </div>
   );
 };
 
 ImageWrapper.propTypes = {
-  src: PropTypes.string,
-  sizes: PropTypes.arrayOf(PropTypes.object),
-  resolutions: PropTypes.arrayOf(PropTypes.object),
+  src: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  sizes: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
+  resolutions: PropTypes.shape({
+    height: PropTypes.number,
+    width: PropTypes.number,
+    base64: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
   alt: PropTypes.string,
   outerWrapperClassName: PropTypes.string,
   style: PropTypes.shape({

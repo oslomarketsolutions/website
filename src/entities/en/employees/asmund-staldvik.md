@@ -1,7 +1,7 @@
 ---
 title: Åsmund Staldvik
-jobTitle: Summer Intern
-description: tekst tekst
-image: /img/chemex.jpg
+jobTitle: Summer intern
+description: Text
+image: /img/asmund_staldvik.png
 jobType: summerIntern
 ---

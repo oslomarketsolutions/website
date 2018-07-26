@@ -1,0 +1,40 @@
+@import '../../layouts/variables';
+
+.contactCard {
+  margin: 0 auto;
+  border: 2px solid $darkBlue;
+  position: sticky;
+  top: 250px;
+  padding: 40px 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: $boxShadow;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  .imageContainer {
+    width: 50%;
+    min-width: 170px;
+    margin: 60px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactCard {
+    max-width: 500px;
+    padding: 60px 10px;
+
+    .imageContainer {
+      margin: 100px auto;
+    }
+  }
+}

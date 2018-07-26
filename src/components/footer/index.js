@@ -99,6 +99,13 @@ const Footer = ({ language, data }) => {
               </Link>
             </li>
             <li>
+              <Link to={`/${language}/responsibleDisclosure`}>
+                {language === 'en'
+                  ? 'Responsible Disclosure'
+                  : 'Sårbarhetsrapportering'}
+              </Link>
+            </li>
+            <li>
               <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
             </li>
           </ul>
@@ -156,6 +163,7 @@ const Footer = ({ language, data }) => {
         <div className={styles.copyright}>
           <FontAwesomeIcon icon={['far', 'copyright']} />
           <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
+          <Link to={`/${language}/licenses`}>Licenses</Link>
         </div>
       </div>
     </footer>

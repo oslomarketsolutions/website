@@ -22,9 +22,11 @@ const CareerPagePreview = ({ entry, getAsset }) => {
       <CareerPageTemplate
         title={entry.getIn(['data', 'title'])}
         image1={getAsset(entry.getIn(['data', 'image1']))}
+        image1Alt={entry.getIn(['data', 'image1Alt'])}
         text1={entry.getIn(['data', 'text1'])}
         header={entry.getIn(['data', 'header'])}
         image2={getAsset(entry.getIn(['data', 'image2']))}
+        image2Alt={entry.getIn(['data', 'image2Alt'])}
         text2={entry.getIn(['data', 'text2'])}
         subHeader1={entry.getIn(['data', 'subHeader1'])}
         subHeader2={entry.getIn(['data', 'subHeader2'])}

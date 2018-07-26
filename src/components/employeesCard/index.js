@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ImageWrapper from '../imageWrapper';
 import styles from './EmployeeCard.module.scss';
-import headerBackground from '../../../static/img/ansattkortHeader.png';
 
 const iconMatcher = jobType => {
   switch (jobType) {
@@ -11,29 +10,24 @@ const iconMatcher = jobType => {
       return ['fas', 'server'];
 
     case 'backEnd':
-      return ['fas', 'coffee'];
+      return ['fas', 'cogs'];
 
     case 'frontEnd':
-      return ['fas', 'flask'];
+      return ['fas', 'code'];
 
     case 'summerIntern':
       return ['fas', 'graduation-cap'];
 
+    case 'support':
+      return ['fas', 'fire-extinguisher'];
+
     default:
-      return ['fas', 'user-secret'];
+      return ['fas', 'briefcase'];
   }
 };
 
 const EmployeeCard = props => {
-  const {
-    name,
-    jobTitle,
-    description,
-    portraitSize,
-    headerBackgroundSize,
-    jobType,
-    image,
-  } = props;
+  const { name, jobTitle, description, portraitSize, jobType, image } = props;
   return (
     <section className={styles.EmployeeCard}>
       <ImageWrapper
@@ -49,13 +43,6 @@ const EmployeeCard = props => {
         <figure>
           <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
         </figure>
-        {/* Background-image for header */}
-        <ImageWrapper
-          outerWrapperClassName={styles.headerBackground}
-          imgStyle={{ height: '250%', width: '250%' }}
-          sizes={headerBackgroundSize}
-          src={headerBackground}
-        />
       </section>
       <section className={styles.description}>
         <p>{description}</p>
@@ -69,9 +56,14 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  portraitSize: PropTypes.arrayOf(PropTypes.object),
-  headerBackgroundSize: PropTypes.arrayOf(PropTypes.object),
-  image: PropTypes.string,
+  portraitSize: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default EmployeeCard;

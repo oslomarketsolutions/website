@@ -2,8 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
-import { findImageSizes } from '../../components/helperFunctions';
+import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
+
+const sortedEmployeeList = array => {
+  const newArray = [];
+  array.forEach(element => {
+    const newElement = element;
+    if (newElement.node.frontmatter.jobType === 'management') {
+      newElement.node.frontmatter.sortOrder = 1;
+    } else if (newElement.node.frontmatter.jobType === 'operations') {
+      newElement.node.frontmatter.sortOrder = 2;
+    } else if (newElement.node.frontmatter.jobType === 'support') {
+      newElement.node.frontmatter.sortOrder = 3;
+    } else if (newElement.node.frontmatter.jobType === 'frontEnd') {
+      newElement.node.frontmatter.sortOrder = 4;
+    } else if (newElement.node.frontmatter.jobType === 'backEnd') {
+      newElement.node.frontmatter.sortOrder = 5;
+    } else if (newElement.node.frontmatter.jobType === 'summerIntern') {
+      newElement.node.frontmatter.sortOrder = 6;
+    }
+
+    newArray.push(newElement);
+  });
+
+  return newArray.sort(
+    (a, b) => a.node.frontmatter.sortOrder - b.node.frontmatter.sortOrder,
+  );
+};
 
 export const AboutPageTemplate = ({
   image,
@@ -28,30 +54,27 @@ export const AboutPageTemplate = ({
       </section>
       <section className={styles.aboutEmployees}>
         <h2>{header}</h2>
-        {employeeList.map(employee => {
-          const {
-            title: employeeName,
-            description: employeeDescription,
-            jobTitle: employeeJobTitle,
-            image: employeeImage,
-            jobType: employeeJobType,
-          } = employee.node.frontmatter;
-          return (
-            <EmployeeCard
-              key={employeeName}
-              name={employeeName}
-              description={employeeDescription}
-              jobTitle={employeeJobTitle}
-              portraitSize={findImageSizes(employeeImage, imageSizes)}
-              headerBackgroundSize={findImageSizes(
-                'ansattkortHeader.png',
-                imageSizes,
-              )}
-              jobType={employeeJobType}
-              image={employeeImage}
-            />
-          );
-        })}
+        {sortedEmployeeList(employeeList) &&
+          sortedEmployeeList(employeeList).map(employee => {
+            const {
+              title: employeeName,
+              description: employeeDescription,
+              jobTitle: employeeJobTitle,
+              image: employeeImage,
+              jobType: employeeJobType,
+            } = employee.node.frontmatter;
+            return (
+              <EmployeeCard
+                key={employeeName}
+                name={employeeName}
+                description={employeeDescription}
+                jobTitle={employeeJobTitle}
+                portraitSize={findImageSizes(employeeImage, imageSizes)}
+                jobType={employeeJobType}
+                image={employeeImage}
+              />
+            );
+          })}
       </section>
     </div>
   </main>
@@ -59,7 +82,7 @@ export const AboutPageTemplate = ({
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   imageAlt: PropTypes.string,
   text: PropTypes.string,
   header: PropTypes.string,

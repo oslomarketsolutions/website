@@ -1,7 +1,8 @@
 ---
 title: Elias Thøgersen
 jobTitle: Sommervikar
-description: Long
-image: /img/chemex.jpg
+description: Tekst
+image: /img/0.jpeg
 jobType: summerIntern
 ---
+

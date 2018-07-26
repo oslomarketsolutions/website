@@ -30,9 +30,15 @@ ProductCard.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-    image: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   }),
-  sizes: PropTypes.arrayOf(PropTypes.object),
+  sizes: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
 };
 
 export default ProductCard;

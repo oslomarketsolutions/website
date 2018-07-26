@@ -1,7 +1,8 @@
 ---
 title: Andreas Holen
 jobTitle: Operations Manager
-description: Text text text more text and text did anyone say text?
+description: Text
 image: /img/469px-Andreas.jpg
 jobType: operations
 ---
+

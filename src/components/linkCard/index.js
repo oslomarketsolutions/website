@@ -5,7 +5,6 @@ import ImageWrapper from '../imageWrapper';
 
 const LinkCard = ({ product, onClickFunction, sticky, imageResolution }) => {
   const style = sticky ? styles.sticky : styles.notSticky;
-
   return (
     <button onClick={() => onClickFunction(product.title)} className={style}>
       <ImageWrapper
@@ -24,8 +23,19 @@ const LinkCard = ({ product, onClickFunction, sticky, imageResolution }) => {
 export default LinkCard;
 
 LinkCard.propTypes = {
-  product: PropTypes.arrayOf(PropTypes.object),
+  product: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    features: PropTypes.arrayOf(PropTypes.object),
+  }),
   onClickFunction: PropTypes.func,
   sticky: PropTypes.bool,
-  imageResolution: PropTypes.arrayOf(PropTypes.object),
+  imageResolution: PropTypes.shape({
+    height: PropTypes.number,
+    width: PropTypes.number,
+    base64: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }),
 };
