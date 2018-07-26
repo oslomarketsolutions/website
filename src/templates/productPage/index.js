@@ -39,6 +39,13 @@ export class ProductPageTemplate extends Component {
           image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
         }),
       ),
+      services: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          title: PropTypes.string,
+          image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+        }),
+      ),
     }),
     products: PropTypes.arrayOf(
       PropTypes.shape({
@@ -66,6 +73,7 @@ export class ProductPageTemplate extends Component {
       products,
       imageSizes,
       imageResolutions,
+      services,
     } = this.props;
 
     const linkCards = (stickyMenu, inView) => (
@@ -119,28 +127,46 @@ export class ProductPageTemplate extends Component {
             }}
             className={styles.investorPortal}
           >
-            <div className={styles.investor}>
-              <h3>{investorPortal.title}</h3>
+            <div className={styles.investorIntro}>
+              <h2>{investorPortal.title}</h2>
               <p>{investorPortal.description}</p>
-              <ImageWrapper
-                alt={investorPortal.title}
-                src={investorPortal.image}
-                outerWrapperClassName={styles.imageContainer}
-                sizes={findImageSizes(investorPortal.image, imageSizes)}
-              />
             </div>
-            {investorPortal.features &&
-              investorPortal.features.map(feature => (
-                <div key={feature.title} className={styles.features}>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.description}</p>
+            <div className={styles.cardContainer}>
+              {investorPortal.features &&
+                investorPortal.features.map(feature => (
+                  <div className={styles.feature}>
+                    <ProductCard
+                      product={feature}
+                      sizes={findImageSizes(feature.image, imageSizes)}
+                    />
+                  </div>
+                ))}
+            </div>
+          </section>
+
+          <section className={styles.productsContainer}>
+            <h2>Products</h2>
+            {products &&
+              products.map(product => (
+                <div
+                  key={product.title}
+                  className={styles.product}
+                  ref={card => {
+                    this[product.title] = card;
+                  }}
+                >
+                  <ProductCard
+                    product={product}
+                    sizes={findImageSizes(product.image, imageSizes)}
+                  />
                 </div>
               ))}
           </section>
 
-          <section className={styles.productsContainer}>
-            {products &&
-              products.map(product => (
+          <section className={styles.servicesContainer}>
+            <h2>Services</h2>
+            {services &&
+              services.map(product => (
                 <div
                   key={product.title}
                   className={styles.product}
@@ -200,7 +226,6 @@ export const productPageQuery = graphql`
         investorPortal {
           title
           description
-          image
           features {
             title
             image

@@ -4,7 +4,6 @@
   color: white;
   .intro {
     padding-top: 100px;
-    background-color: white;
     h2 {
       margin: 0;
       padding: 75px 0;
@@ -52,100 +51,60 @@
     }
   }
   .investorPortal {
-    padding: 0 10%;
-    p {
-      margin-top: 60px;
-      min-width: 600px;
-      width: 40%;
-      line-height: 1.5em;
-    }
-    .investor {
+    .investorIntro {
       // This fixes scrollIntoViewIfNeeded scrolling too far
       padding-top: 150px;
       margin-top: -150px;
       // ------
-      width: 100%;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
-      .imageContainer {
-        width: 40%;
-      }
-      h3 {
-        text-align: left;
-        font-size: 3.2rem;
-        border-bottom: 2px solid #49b869;
-        margin-right: 50%;
-        margin-bottom: 0;
-        min-width: 600px;
-      }
-    }
-    .features {
-      width: 100%;
-      p {
-        margin-top: 2rem;
-      }
-      h4 {
-        display: inline-block;
-        width: 30%;
-        min-width: 335px;
-        font-size: 2.8rem;
-        border-bottom: 2px solid #49b869;
-        margin-top: 100px;
-        padding-right: 50px;
-      }
-    }
-  }
-  .investorContact {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    height: 360px;
-    background-color: #f1f3f5;
-    text-align: center;
-    margin-top: 200px;
-    h4 {
-      width: 100%;
-      margin: 0;
-      padding-bottom: 40px;
-      color: #1c315b;
-      font-size: 2.8rem;
-    }
-    button {
-      background-color: #1c315b;
-      height: 121px;
-      width: 426px;
-      color: white;
-      border: none;
-      padding: 15px 32px;
+      justify-content: center;
       text-align: center;
-      text-decoration: underline;
-      display: inline-block;
-      font-size: 1.5rem;
+      padding-bottom: 75px;
+
+      h2 {
+        padding-bottom: 50px;
+      }
+      p {
+        width: 60%;
+      }
+    }
+
+    .cardContainer {
+      margin: auto;
+
+      .feature {
+        margin: auto;
+        width: 80%;
+        padding-bottom: 50px;
+      }
     }
   }
+
   .productsContainer {
-    width: 100%;
-    margin-top: 50px;
-    h4 {
-      font-size: 2.8rem;
+    padding-top: 100px;
+
+    h2 {
+      text-align: center;
+      padding: 50px;
     }
+
     .product {
       // This fixes scrollIntoViewIfNeeded scrolling too far
       padding-top: 150px;
       margin-top: -150px;
       // ------
-      display: flex;
-      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
       padding-bottom: 50px;
     }
   }
-  .featureCards {
-    display: flex;
-    background-color: lightcoral;
-    flex-flow: row wrap;
-    justify-content: center;
+
+  .servicesContainer {
+    h2 {
+      text-align: center;
+      padding: 50px;
+    }
   }
 }
