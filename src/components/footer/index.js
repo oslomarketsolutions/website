@@ -105,7 +105,7 @@ const Footer = ({ language, data }) => {
                   : 'Sårbarhetsrapportering'}
               </Link>
             </li>
-            <li>
+            <li className={styles.scrollButton}>
               <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
             </li>
           </ul>
@@ -160,10 +160,14 @@ const Footer = ({ language, data }) => {
             </li>
           </ul>
         </div>
-        <div className={styles.copyright}>
-          <FontAwesomeIcon icon={['far', 'copyright']} />
-          <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
-          <Link to={`/${language}/licenses`}>Licenses</Link>
+        <div className={styles.bottom}>
+          <div className={styles.copyright}>
+            <FontAwesomeIcon icon={['far', 'copyright']} />
+            <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
+          </div>
+          <div className={styles.licenses}>
+            <Link to={`/${language}/licenses`}>Licenses</Link>
+          </div>
         </div>
       </div>
     </footer>
