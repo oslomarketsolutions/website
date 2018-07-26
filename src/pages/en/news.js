@@ -77,5 +77,18 @@ export const newsOverviewPageQuery = graphql`
         }
       }
     }
+
+    imageSizes: allFile(filter: { absolutePath: { regex: "/static/img/" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            sizes(maxWidth: 2560) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
   }
 `;
