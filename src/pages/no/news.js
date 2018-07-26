@@ -50,7 +50,7 @@ const NewsOverviewPage = ({ data }) => {
 NewsOverviewPage.propTypes = {
   data: PropTypes.shape({
     news: PropTypes.shape({
-      edges: PropTypes.edge(PropTypes.object),
+      edges: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
 };
