@@ -105,19 +105,25 @@ const IndexPageTemplate = ({ data }) => {
       </section>
       <section className={styles.news}>
         <h2>Hei her kommer det linker til news!</h2>
-        {news &&
-          news.map(newsArticle => {
-            const { frontmatter: content, fields } = newsArticle.node;
-            return (
-              <NewsCard
-                slug={fields.slug}
-                title={content.title}
-                description={content.description}
-                image={content.image}
-                sizes={findImageSizes(content.image, imageSizes)}
-              />
-            );
-          })}
+        <section className={styles.cardContainer}>
+          {news &&
+            news.map(newsArticle => {
+              const { frontmatter: content, fields } = newsArticle.node;
+              return (
+                <NewsCard
+                  slug={fields.slug}
+                  title={content.title}
+                  description={content.description}
+                  date={content.date}
+                  image={content.image}
+                  sizes={findImageSizes(content.image, imageSizes)}
+                />
+              );
+            })}
+        </section>
+        <Link to="/no/news">
+          <button>More News!</button>
+        </Link>
       </section>
       <section className={styles.customerLogos}>
         {customerLogos &&

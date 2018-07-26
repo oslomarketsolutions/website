@@ -73,6 +73,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date
             image
             sticky
           }

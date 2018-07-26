@@ -94,7 +94,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Sticky?", name: "sticky", widget: "boolean"}
+      - {label: "Sticky?", name: "sticky", widget: "boolean", default: false}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "newsPage"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publiseringsdato", name: "date", widget: "datetime"}
@@ -107,7 +107,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Sticky?", name: "sticky", widget: "boolean"}
+      - {label: "Sticky?", name: "sticky", widget: "boolean", default: false}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "newsPage"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}

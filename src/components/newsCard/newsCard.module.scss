@@ -2,10 +2,12 @@
 
 .newsCard {
   position: relative;
+  overflow: hidden; // Hides overflow in rounded corners
+  border-radius: 10px;
   transition: transform 0.2s;
   display: flex;
   flex-flow: row wrap;
-  height: 400px;
+  height: 300px;
   width: 500px;
   background-color: lightblue;
   &:hover {
@@ -13,22 +15,33 @@
   }
 
   .imageContainer {
-    position: absolute;
     height: 100%;
     width: 100%;
   }
 
-  .textContainer {
+  .overlay {
     position: absolute;
-    align-self: flex-end;
-    height: 200px;
+    display: flex;
+    height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    color: white;
 
-    h3,
-    p {
-      padding: 20px;
-      color: white;
+    .textContainer {
+      align-self: flex-end;
+
+      .dateString {
+        font-size: 0.8rem;
+      }
+
+      h3 {
+        padding-bottom: 20px;
+      }
+
+      .description {
+        font-size: 1.2rem;
+      }
     }
   }
 }

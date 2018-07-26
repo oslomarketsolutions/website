@@ -130,14 +130,26 @@
   }
 
   .news {
-    display: flex;
-    flex-flow: row wrap;
-    color: $darkBlue;
-    background-color: aliceblue;
-    padding: 50px;
+    background-color: white;
+    padding: 50px 0px;
 
-    a {
-      margin: 20px;
+    h2 {
+      width: 100%;
+      text-align: center;
+      color: $darkBlue;
+    }
+
+    .cardContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      color: $darkBlue;
+      padding: 50px;
+
+      a {
+        flex: 0 0 auto;
+        margin: 20px;
+      }
     }
   }
 
