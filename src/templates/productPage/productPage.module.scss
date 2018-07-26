@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  background-color: rgb(34, 68, 102);
+  background-color: #1c315b;
   color: white;
   .intro {
     padding-top: 100px;
@@ -131,11 +131,6 @@
     margin-top: 50px;
     h4 {
       font-size: 2.8rem;
-    }
-    p {
-      min-width: 600px;
-      width: 40%;
-      line-height: 1.5em;
     }
     .product {
       // This fixes scrollIntoViewIfNeeded scrolling too far

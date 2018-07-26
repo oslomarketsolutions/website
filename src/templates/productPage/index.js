@@ -137,10 +137,6 @@ export class ProductPageTemplate extends Component {
                 </div>
               ))}
           </section>
-          <section className={styles.investorContact}>
-            <h4>Contact us today to get more info about our traders!</h4>
-            <button>Contact</button>
-          </section>
 
           <section className={styles.productsContainer}>
             {products &&
