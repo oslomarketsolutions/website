@@ -1,0 +1,17 @@
+.newsOverviewPage {
+  padding: 200px 40px;
+
+  h1 {
+    margin: 20px;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    a {
+      margin: 20px;
+    }
+  }
+}

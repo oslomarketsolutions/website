@@ -29,7 +29,6 @@ const EmployeeCard = props => {
     <section className={styles.EmployeeCard}>
       <ImageWrapper
         outerWrapperClassName={styles.imageContainer}
-        style={{ gridArea: 'image' }}
         sizes={portraitSize}
         src={image}
         alt={name}

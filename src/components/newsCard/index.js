@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import styles from './newsCard.module.scss';
 import ImageWrapper from '../imageWrapper';
 
-const NewsCard = ({ slug, title, date, description, image, sizes }) => {
+const NewsCard = ({ slug, title, date, image, sizes }) => {
   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   const dateString = new Date(date).toLocaleDateString('no-NB', dateOptions);
   return (
@@ -37,7 +37,6 @@ NewsCard.propTypes = {
   slug: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
-  description: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   sizes: PropTypes.shape({
     height: PropTypes.number,
