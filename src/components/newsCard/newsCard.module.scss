@@ -54,3 +54,16 @@
     color: white;
   }
 }
+
+@media (max-width: 400px) {
+  .newsCard {
+    width: 250px;
+    height: 150px;
+  }
+
+  .textContainer {
+    .description {
+      display: none;
+    }
+  }
+}
