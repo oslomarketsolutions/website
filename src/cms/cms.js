@@ -9,6 +9,7 @@ import ProductPagePreview from './preview-templates/ProductPagePreview';
 import PerkPreview from './preview-templates/PerkPreview';
 import FooterPreview from './preview-templates/FooterPreview';
 import ResponsibleDisclosurePreview from './preview-templates/ResponsibleDisclosurePreview';
+import NewsPagePreview from './preview-templates/NewsPagePreview';
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
@@ -33,4 +34,6 @@ CMS.registerPreviewTemplate(
   'english_responsibleDisclosure_page',
   ResponsibleDisclosurePreview,
 );
+CMS.registerPreviewTemplate('norwegian_news', NewsPagePreview);
+CMS.registerPreviewTemplate('english_news', NewsPagePreview);
 CMS.registerPreviewTemplate('footer', FooterPreview);

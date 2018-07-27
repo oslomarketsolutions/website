@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-120-NyhetsSide
 
 media_folder: static/img
 public_folder: /img
@@ -88,6 +88,32 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Features", name: "features", widget: "list"}
+
+  - name: "norwegian_news"
+    label: "no/News"
+    folder: "src/pages/no/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Sticky?", name: "sticky", widget: "boolean", default: false}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "newsPage"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publiseringsdato", name: "date", widget: "datetime"}
+      - {label: "Bilde", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "english_news"
+    label: "en/News"
+    folder: "src/pages/en/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Sticky?", name: "sticky", widget: "boolean", default: false}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "newsPage"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pages"

@@ -129,6 +129,31 @@
     }
   }
 
+  .news {
+    background-color: white;
+    padding: 50px 0px;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      color: $darkBlue;
+    }
+
+    .cardContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      color: $darkBlue;
+      padding: 50px;
+
+      a {
+        flex: 0 0 auto;
+        margin: 20px;
+        max-width: 100%;
+      }
+    }
+  }
+
   .customerLogos {
     display: flex;
     flex-flow: row nowrap;

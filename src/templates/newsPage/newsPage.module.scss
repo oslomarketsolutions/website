@@ -1,0 +1,67 @@
+@import '../../layouts/variables';
+
+.newsPage {
+  max-width: 90%;
+  margin: 200px auto 200px auto;
+
+  .intro {
+    .imageContainer {
+      width: 100%;
+      margin: 40px auto;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+    }
+  }
+
+  .content {
+    h1,
+    h2 {
+      padding-bottom: 20px;
+    }
+
+    p {
+      padding: 20px 0;
+    }
+
+    pre {
+      overflow: scroll;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: aliceblue;
+    }
+
+    blockquote {
+      background: aliceblue;
+      border-left: 10px solid lightblue;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+    }
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 2em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+    }
+    blockquote p {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsPage {
+    max-width: 1024px;
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  iframe {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+}

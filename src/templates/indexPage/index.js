@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import caretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
+import NewsCard from '../../components/newsCard';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
@@ -17,6 +19,7 @@ const IndexPageTemplate = ({ data }) => {
     customerLogos,
   } = data.page.frontmatter;
 
+  const news = data.news.edges;
   const imageSizes = data.imageSizes.edges;
 
   const onScrollButtonClick = () => {
@@ -100,6 +103,39 @@ const IndexPageTemplate = ({ data }) => {
           <p> {solutionsContent.secondCard.text} </p>
         </article>
       </section>
+      <section className={styles.news}>
+        <h2>Hei her kommer det linker til news!</h2>
+        <section className={styles.cardContainer}>
+          {news &&
+            news
+              .sort((a, b) => {
+                if (a.node.frontmatter.sticky) {
+                  // If both are sticky return 'equal', if b is not sticky return 'a first'
+                  return b.node.frontmatter.sticky ? 0 : -1;
+                }
+                // If only b is sticky return 'b first', if neither is sticky return 'equal'
+                return b.node.frontmatter.sticky ? 1 : 0;
+              })
+              .map(newsArticle => {
+                const { frontmatter: content, fields } = newsArticle.node;
+                return (
+                  <NewsCard
+                    key={fields.slug}
+                    sticky={content.sticky}
+                    slug={fields.slug}
+                    title={content.title}
+                    description={content.description}
+                    date={content.date}
+                    image={content.image}
+                    sizes={findImageSizes(content.image, imageSizes)}
+                  />
+                );
+              })}
+        </section>
+        <Link to="/no/news">
+          <button>More News!</button>
+        </Link>
+      </section>
       <section className={styles.customerLogos}>
         {customerLogos &&
           customerLogos.map(customerLogo => (
@@ -120,6 +156,9 @@ IndexPageTemplate.propTypes = {
   data: PropTypes.shape({
     page: PropTypes.shape({
       frontmatter: PropTypes.object,
+    }),
+    news: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object),
     }),
     imageSizes: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object),
