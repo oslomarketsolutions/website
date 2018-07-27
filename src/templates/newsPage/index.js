@@ -12,29 +12,41 @@ export const NewsPageTemplate = ({
   imageAlt,
   content,
   imageSizes,
-}) => (
-  <main>
-    <div className={styles.newsPage}>
-      <section className={styles.intro}>
-        <h1>{title}</h1>
-        <p>{date}</p>
-        {// Only render image if provided
-        // Some news might not need an image
-        image && (
-          <ImageWrapper
-            alt={imageAlt}
-            src={image}
-            outerWrapperClassName={styles.imageContainer}
-            sizes={findImageSizes(image, imageSizes)}
-          />
-        )}
-      </section>
-      <section className={styles.content}>
-        <HTMLContent content={content} />
-      </section>
-    </div>
-  </main>
-);
+}) => {
+  const dateOptions = {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+  const dateString = new Date(date).toLocaleString('no-NB', dateOptions);
+
+  return (
+    <main>
+      <div className={styles.newsPage}>
+        <section className={styles.intro}>
+          <h1>{title}</h1>
+          <p>{dateString}</p>
+          {// Only render image if provided
+          // Some news might not need an image
+          image && (
+            <ImageWrapper
+              alt={imageAlt}
+              src={image}
+              outerWrapperClassName={styles.imageContainer}
+              sizes={findImageSizes(image, imageSizes)}
+            />
+          )}
+        </section>
+        <section className={styles.content}>
+          <HTMLContent content={content} />
+        </section>
+      </div>
+    </main>
+  );
+};
 
 NewsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,

@@ -1,39 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NewsCard from '../../components/newsCard';
-import styles from '../newsOverviewPage.module.scss';
-import { findImageSizes } from '../../utils/helperFunctions';
-
-export const NewsOverviewPageTemplate = ({ newsArticles, imageSizes }) => (
-  <main>
-    <section className={styles.newsOverviewPage}>
-      <h1>News</h1>
-
-      <section className={styles.cardContainer}>
-        {newsArticles &&
-          newsArticles.map(newsArticle => (
-            <NewsCard
-              slug={newsArticle.node.fields.slug}
-              title={newsArticle.node.frontmatter.title}
-              image={newsArticle.node.frontmatter.image}
-              date={newsArticle.node.frontmatter.date}
-              sizes={findImageSizes(
-                newsArticle.node.frontmatter.image,
-                imageSizes,
-              )}
-            />
-          ))}
-      </section>
-    </section>
-  </main>
-);
-
-NewsOverviewPageTemplate.propTypes = {
-  newsArticles: PropTypes.arrayOf(PropTypes.object),
-  imageSizes: PropTypes.shape({
-    edges: PropTypes.arrayOf(PropTypes.object),
-  }),
-};
+import NewsOverviewPageTemplate from '../../templates/newsOverviewPage/news';
 
 const NewsOverviewPage = ({ data }) => {
   const { edges: newsArticles } = data.news;
@@ -60,8 +27,8 @@ export default NewsOverviewPage;
 export const newsOverviewPageQuery = graphql`
   query EngNewsOverviewPage {
     news: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/no/news/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/en/news/" } }
+      sort: { fields: [frontmatter___sticky, frontmatter___date], order: DESC }
     ) {
       edges {
         node {
@@ -69,6 +36,7 @@ export const newsOverviewPageQuery = graphql`
             slug
           }
           frontmatter {
+            sticky
             title
             image
             description

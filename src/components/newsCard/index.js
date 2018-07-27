@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import styles from './newsCard.module.scss';
 import ImageWrapper from '../imageWrapper';
 
-const NewsCard = ({ slug, title, date, image, sizes }) => {
+const NewsCard = ({ slug, title, date, image, sizes, sticky }) => {
   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   const dateString = new Date(date).toLocaleDateString('no-NB', dateOptions);
   return (
@@ -17,6 +17,7 @@ const NewsCard = ({ slug, title, date, image, sizes }) => {
           alt={title}
         />
       )}
+      <div className={sticky ? styles.stickyMark : ''} />
       <div className={styles.overlay}>
         <div className={styles.textContainer}>
           <p className={styles.dateString}>{dateString}</p>
@@ -45,4 +46,5 @@ NewsCard.propTypes = {
     src: PropTypes.string,
     srcSet: PropTypes.string,
   }),
+  sticky: PropTypes.bool,
 };

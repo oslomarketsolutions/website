@@ -2,7 +2,7 @@
 sticky: true
 templateKey: newsPage
 title: Questionable News!
-date: '2018-07-24T16:41:29+02:00'
+date: '2018-07-29T16:41:29+02:00'
 ---
 
 Denne nyhetssaken er kun for å få korrekt syntaks på .md-fila som CMSet kommer til å spytte ut.
