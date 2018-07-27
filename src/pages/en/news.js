@@ -28,7 +28,7 @@ export const newsOverviewPageQuery = graphql`
   query EngNewsOverviewPage {
     news: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/en/news/" } }
-      sort: { fields: [frontmatter___sticky, frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {

@@ -107,19 +107,29 @@ const IndexPageTemplate = ({ data }) => {
         <h2>Hei her kommer det linker til news!</h2>
         <section className={styles.cardContainer}>
           {news &&
-            news.map(newsArticle => {
-              const { frontmatter: content, fields } = newsArticle.node;
-              return (
-                <NewsCard
-                  slug={fields.slug}
-                  title={content.title}
-                  description={content.description}
-                  date={content.date}
-                  image={content.image}
-                  sizes={findImageSizes(content.image, imageSizes)}
-                />
-              );
-            })}
+            news
+              .sort((a, b) => {
+                if (a.node.frontmatter.sticky) {
+                  // If both are sticky return 'equal', if b is not sticky return 'a first'
+                  return b.node.frontmatter.sticky ? 0 : -1;
+                }
+                // If only b is sticky return 'b first', if neither is sticky return 'equal'
+                return b.node.frontmatter.sticky ? 1 : 0;
+              })
+              .map(newsArticle => {
+                const { frontmatter: content, fields } = newsArticle.node;
+                return (
+                  <NewsCard
+                    sticky={content.sticky}
+                    slug={fields.slug}
+                    title={content.title}
+                    description={content.description}
+                    date={content.date}
+                    image={content.image}
+                    sizes={findImageSizes(content.image, imageSizes)}
+                  />
+                );
+              })}
         </section>
         <Link to="/no/news">
           <button>More News!</button>

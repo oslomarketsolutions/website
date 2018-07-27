@@ -65,6 +65,7 @@ export const pageQuery = graphql`
 
     news: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/no/news/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
