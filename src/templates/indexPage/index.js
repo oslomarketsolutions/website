@@ -120,6 +120,7 @@ const IndexPageTemplate = ({ data }) => {
                 const { frontmatter: content, fields } = newsArticle.node;
                 return (
                   <NewsCard
+                    key={fields.slug}
                     sticky={content.sticky}
                     slug={fields.slug}
                     title={content.title}

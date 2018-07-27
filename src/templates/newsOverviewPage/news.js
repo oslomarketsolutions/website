@@ -24,6 +24,7 @@ const NewsOverviewPageTemplate = ({ newsArticles, imageSizes }) => {
           {newsArticles &&
             newsArticles.map(newsArticle => (
               <NewsCard
+                key={newsArticle.node.fields.slug}
                 slug={newsArticle.node.fields.slug}
                 title={newsArticle.node.frontmatter.title}
                 image={newsArticle.node.frontmatter.image}
@@ -45,7 +46,5 @@ export default NewsOverviewPageTemplate;
 
 NewsOverviewPageTemplate.propTypes = {
   newsArticles: PropTypes.arrayOf(PropTypes.object),
-  imageSizes: PropTypes.shape({
-    edges: PropTypes.arrayOf(PropTypes.object),
-  }),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
