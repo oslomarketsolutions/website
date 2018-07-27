@@ -17,7 +17,7 @@ const NewsCard = ({ slug, title, date, image, sizes, sticky }) => {
           alt={title}
         />
       )}
-      <div className={sticky ? styles.stickyMark : ''} />
+      <div className={sticky ? styles.stickyMark : styles.hidden}>Pinned</div>
       <div className={styles.overlay}>
         <div className={styles.textContainer}>
           <p className={styles.dateString}>{dateString}</p>

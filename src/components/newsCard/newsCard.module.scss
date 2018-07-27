@@ -48,8 +48,9 @@
 
   .stickyMark {
     position: absolute;
+    z-index: 2;
     height: 20px;
-    width: 20px;
     background-color: red;
+    color: white;
   }
 }
