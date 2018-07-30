@@ -17,10 +17,12 @@ const sortedEmployeeList = array => {
       newElement.node.frontmatter.sortOrder = 3;
     } else if (newElement.node.frontmatter.jobType === 'frontEnd') {
       newElement.node.frontmatter.sortOrder = 4;
-    } else if (newElement.node.frontmatter.jobType === 'backEnd') {
+    } else if (newElement.node.frontmatter.jobType === 'designer') {
       newElement.node.frontmatter.sortOrder = 5;
-    } else if (newElement.node.frontmatter.jobType === 'summerIntern') {
+    } else if (newElement.node.frontmatter.jobType === 'backEnd') {
       newElement.node.frontmatter.sortOrder = 6;
+    } else if (newElement.node.frontmatter.jobType === 'summerIntern') {
+      newElement.node.frontmatter.sortOrder = 7;
     }
 
     newArray.push(newElement);
