@@ -4,7 +4,6 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from 'gatsby-link';
-import ScrollButton from '../scrollButton/index';
 import '../../layouts/style.scss';
 import styles from './footer.module.scss';
 
@@ -14,6 +13,38 @@ const Footer = ({ language, data }) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
+        <div className={styles.navigate}>
+          <h3>{language === 'en' ? 'Navigate' : 'Navigasjon'}</h3>
+          <ul>
+            <li>
+              <Link to={`/${language}`}>
+                {language === 'en' ? 'Home' : 'Hjem'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/products`}>
+                {language === 'en' ? 'Products' : 'Produkter'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/career`}>
+                {language === 'en' ? 'Work' : 'Jobb'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/about`}>
+                {language === 'en' ? 'About us' : 'Om oss'}
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${language}/responsibleDisclosure`}>
+                {language === 'en'
+                  ? 'Responsible Disclosure'
+                  : 'Sårbarhetsrapportering'}
+              </Link>
+            </li>
+          </ul>
+        </div>
         <div className={styles.groupWebsites}>
           <h3>
             {language === 'en' ? 'Group websites' : 'Konsernets nettsteder'}
@@ -72,41 +103,6 @@ const Footer = ({ language, data }) => {
               >
                 {groupWebsites.website6.title}
               </OutboundLink>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.navigate}>
-          <h3>{language === 'en' ? 'Navigate' : 'Navigasjon'}</h3>
-          <ul>
-            <li>
-              <Link to={`/${language}`}>
-                {language === 'en' ? 'Home' : 'Hjem'}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/products`}>
-                {language === 'en' ? 'Products' : 'Produkter'}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/career`}>
-                {language === 'en' ? 'Work' : 'Jobb'}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/about`}>
-                {language === 'en' ? 'About us' : 'Om oss'}
-              </Link>
-            </li>
-            <li>
-              <Link to={`/${language}/responsibleDisclosure`}>
-                {language === 'en'
-                  ? 'Responsible Disclosure'
-                  : 'Sårbarhetsrapportering'}
-              </Link>
-            </li>
-            <li className={styles.scrollButton}>
-              <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
             </li>
           </ul>
         </div>
