@@ -80,21 +80,38 @@
     }
   }
 
-  .copyright {
+  .bottom {
     display: flex;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 0 16px 0;
-    font-size: 0.75rem;
     color: $copyrightColor;
+    font-size: 0.75rem;
 
-    p {
-      margin: 0;
+    .copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      p {
+        margin: 0;
+      }
     }
+  }
 
-    a {
-      margin-left: 10px;
+  @media (max-width: 472px) {
+    .footerContainer {
+      .navigate {
+        padding-top: 51px;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .scrollButton {
+      display: none;
     }
   }
 
@@ -116,7 +133,7 @@
     .groupWebsites,
     .navigate,
     .contact {
-      width: 28%;
+      width: 30%;
       max-width: 232px;
       padding: 32px 0;
     }
@@ -132,7 +149,7 @@
 
   @media (min-width: 1024px) {
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     ul {
