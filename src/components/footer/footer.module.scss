@@ -40,7 +40,7 @@
   .groupWebsites,
   .navigate,
   .contact {
-    width: 46%;
+    width: 100%;
     padding-top: 32px;
 
     li {
@@ -53,7 +53,6 @@
   }
 
   .contact {
-    width: 100%;
     padding-bottom: 32px;
   }
 
@@ -101,17 +100,23 @@
     }
   }
 
-  @media (max-width: 472px) {
-    .footerContainer {
-      .navigate {
-        padding-top: 51px;
-      }
+  @media (min-width: 472px) {
+    .groupWebsites,
+    .navigate {
+      width: 46%;
     }
-  }
 
-  @media (max-width: 760px) {
-    .scrollButton {
-      display: none;
+    .groupWebsites {
+      order: -2;
+    }
+
+    .navigate {
+      order: -1;
+    }
+
+    .contact {
+      order: 0;
+      width: 100%;
     }
   }
 
@@ -138,12 +143,18 @@
       padding: 32px 0;
     }
 
+    .groupWebsites {
+      order: -2;
+    }
+
     .navigate {
       text-align: center;
+      order: -1;
     }
 
     .contact {
       text-align: right;
+      order: 0;
     }
   }
 
