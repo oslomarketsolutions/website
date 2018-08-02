@@ -1,7 +1,10 @@
 @import '../../layouts/variables';
 
 .footer {
-  background-color: $footerBackgroundColor;
+  z-index: 2;
+  background-color: $darkBlue;
+  grid-column: full;
+  color: $antiFlashWhite;
 
   a,
   a:link,
@@ -9,12 +12,12 @@
   a:hover,
   a:focus,
   a:active {
-    color: inherit;
+    color: $antiFlashWhite;
     text-decoration: none;
   }
 
   ul {
-    font-size: 0.875rem;
+    // font-size: 0.875rem;
     margin: 0;
     padding: 0;
 
@@ -24,10 +27,10 @@
   }
 
   h3 {
-    font-size: 1.125rem;
+    // font-size: 1.125rem;
     margin: 18px 0;
     padding-bottom: 8px;
-    border-bottom: 1px solid $darkBlue;
+    border-bottom: 1px solid $antiFlashWhite;
   }
 
   .footerContainer {
@@ -60,7 +63,7 @@
   .socialMedia {
     width: 100%;
     padding: 32px 0;
-    border-top: 1px solid $darkBlue;
+    border-top: 1px solid $antiFlashWhite;
 
     ul {
       display: flex;
@@ -86,8 +89,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    color: $copyrightColor;
-    font-size: 0.75rem;
+    color: $antiFlashWhite;
+    // font-size: 0.75rem;
 
     .copyright {
       display: flex;
@@ -95,8 +98,9 @@
       justify-content: center;
       width: 100%;
 
-      p {
-        margin: 0;
+      svg {
+        font-size: 12px;
+        margin-right: 2px;
       }
     }
   }
@@ -117,7 +121,7 @@
 
   @media (min-width: 760px) {
     .footerContainer {
-      padding: 0 32px;
+      padding: 0;
     }
 
     .socialMedia {
@@ -148,16 +152,16 @@
   }
 
   @media (min-width: 1024px) {
-    h3 {
+    /* h3 {
       font-size: 1.4rem;
     }
 
     ul {
       font-size: 1.125rem;
-    }
+    } */
 
     .footerContainer {
-      max-width: 1800px;
+      max-width: 1140px;
       margin: 0 auto;
     }
 

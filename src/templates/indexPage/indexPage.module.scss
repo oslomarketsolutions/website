@@ -1,47 +1,391 @@
-/* Very temporary css */
 @import '../../layouts/variables';
 
 .homePage {
-  margin: 0;
-  padding: 0;
-  background-color: $darkBlue;
-  color: white;
+  .centered {
+    text-align: center;
+  }
 
   .animation {
+    grid-column: full;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-template-rows:
+      [emptySpace-start] 350px [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
+        100%
+      )
+      [row3-end];
+    grid-column-gap: 16px;
+    color: $antiFlashWhite;
     width: 100%;
     height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    .imageContainer {
-      width: 100%;
-      height: 100%;
+    background-color: $darkBlue;
+
+    h1 {
+      grid-column: main;
+      grid-row: row1;
     }
-    .scrollButton {
-      z-index: 2;
+
+    p {
+      padding: $XXL 0;
+      grid-column: main;
+      grid-row: row2;
+    }
+
+    button {
+      grid-column: 2 / span 8;
+      grid-row: row3;
+      background-color: $vibrantBlue;
+      border: none;
+      border-radius: 90px;
+      color: $antiFlashWhite;
+      height: 80px;
+      width: 273px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: $primaryButtonHover;
+    }
+  }
+
+  .transition {
+    position: absolute;
+    width: 100%;
+    max-width: 1140px;
+    height: 452px;
+    top: calc(100vh - 130px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: [main-start] repeat(8, minmax(0, 128.5px)) [main-end];
+    grid-template-rows: [row1-start] fit-content(100%) [row1-end row2-start] auto [row2-end];
+    grid-column-gap: 16px;
+    align-items: center;
+    color: $textColor;
+    box-shadow: $newBoxShadow;
+    border-radius: $S;
+    padding: $XXL 0;
+
+    .socialMedia {
+      color: $antiFlashWhite;
       position: absolute;
-      width: 50px;
-      height: 50px;
-      bottom: 20px;
-      left: 50%;
-      margin: 0px -25px;
-      background-color: white;
-      border-radius: 50px;
-      text-align: center;
-      svg {
-        color: #b2cfae;
-        margin-top: 10px;
+      top: -60px;
+      right: 0;
+
+      ul {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
       }
 
-      &:hover {
-        cursor: pointer;
-        transform: scale(0.99);
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.15);
+      li {
+        list-style-type: none;
+        padding: 0 10px;
+      }
+
+      li:last-of-type {
+        padding-right: 0;
+      }
+
+      svg {
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+
+    .first,
+    .second,
+    .third {
+      margin: 0 auto;
+    }
+
+    .first {
+      grid-column: 1 / span 2;
+      grid-row: row1;
+      width: 135px;
+      align-self: end;
+    }
+
+    .second {
+      grid-column: 3 / span 2;
+      grid-row: row1;
+      width: 272px;
+      align-self: end;
+    }
+
+    .third {
+      grid-column: 5 / span 4;
+      grid-row: row1;
+      width: 400px;
+      align-self: end;
+    }
+
+    .big {
+      font-size: 62px;
+    }
+  }
+
+  .customerLogos {
+    grid-column: 1 / span 8;
+    grid-row: row2;
+    width: 100%;
+    height: 100%;
+
+    .imageContainer {
+      width: 28%;
+      max-width: 286px;
+    }
+  }
+
+  .blueText {
+    color: $vibrantBlue;
+  }
+
+  .investorPortal {
+    color: $textColor;
+    grid-column: full;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-template-rows:
+      [emptySpace-start] 500px [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
+        100%
+      )
+      [row3-end row4-start] 220px [row4-end row5-start] fit-content(100%)
+      [row5-end row6-start] fit-content(100%) [row6-end row7-start] fit-content(
+        100%
+      )
+      [row7-end row8-start] fit-content(100%) [row8-end row9-start]fit-content(
+        100%
+      )
+      [row9-end row10-start] fit-content(100%) [row10-end];
+    grid-column-gap: 16px;
+    align-items: center;
+    height: 2578px;
+    background-color: $antiFlashWhite;
+
+    h1 {
+      grid-column: 2 / span 3;
+      grid-row: row1;
+    }
+
+    h1 + p {
+      padding: $XL 0;
+      grid-column: 2 / span 3;
+      grid-row: row2;
+    }
+
+    a {
+      grid-column: 2 / span 2;
+      grid-row: row3;
+    }
+
+    .subHeader1 {
+      grid-column: 3 / span 6;
+      grid-row: row5;
+    }
+
+    .subHeader1 + p {
+      padding: $XXL 0;
+      grid-column: 4 / span 4;
+      grid-row: row6;
+    }
+
+    .customizationCards {
+      padding: 0 0 192px 0;
+      grid-column: 2 / span 8;
+      grid-row: row7;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    .subHeader2 {
+      grid-column: 4 / span 4;
+      grid-row: row8;
+    }
+
+    .subHeader2 + p {
+      padding: $XXL 0;
+      grid-column: 5 / span 2;
+      grid-row: row9;
+    }
+
+    .integrationLogos {
+      grid-column: 1 / span 10;
+      grid-row: row10;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+
+      .imageContainer {
+        width: 18%;
+        max-width: 300px;
       }
     }
   }
 
-  .configurationLogos {
+  .arena {
+    color: $textColor;
+    grid-column: full;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-template-rows:
+      [emptySpace-start] 220px [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
+        100%
+      )
+      [row3-end row4-start] 120px [row4-end];
+    grid-column-gap: 16px;
+
+    h1 {
+      // font-size: 72px;
+      grid-column: 2 / span 3;
+      grid-row: row1;
+    }
+
+    h1 + p {
+      padding: $XL 0;
+      grid-column: 2 / span 3;
+      grid-row: row2;
+    }
+
+    a {
+      grid-column: 2 / span 2;
+      grid-row: row3;
+    }
+
+    .imageContainer {
+      grid-column: 5 / span 6;
+      grid-row: 1 / span 5;
+      max-width: 880px;
+      width: 86%;
+      align-self: end;
+      margin: 0 20px 0 100px;
+      box-shadow: $newBoxShadow;
+    }
+  }
+
+  .irModules {
+    z-index: 1;
+    color: $textColor;
+    grid-column: full;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-template-rows:
+      [emptySpace-start] 220px [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
+        100%
+      )
+      [row3-end row4-start] 120px [row4-end];
+    grid-column-gap: 16px;
+    background-color: $antiFlashWhite;
+
+    h1 {
+      // font-size: 72px;
+      grid-column: 7 / span 3;
+      grid-row: row1;
+    }
+
+    h1 + p {
+      padding: $XL 0;
+      grid-column: 7 / span 3;
+      grid-row: row2;
+    }
+
+    a {
+      grid-column: 7 / span 2;
+      grid-row: row3;
+    }
+
+    .imageContainer {
+      grid-column: 1 / span 6;
+      grid-row: 1 / span 5;
+      max-width: 880px;
+      width: 86%;
+      align-self: end;
+      justify-self: end;
+      margin: 0 100px 0 20px;
+      box-shadow: $newBoxShadow;
+    }
+  }
+}
+
+@media (max-width: 1172px) {
+  .homePage {
+    .transition {
+      width: 97%;
+    }
+
+    .investorPortal {
+      height: 2278px;
+
+      h1 {
+        grid-column: 3 / span 5;
+      }
+
+      h1 + p {
+        grid-column: 3 / span 5;
+      }
+
+      a {
+        grid-column: 3 / span 5;
+      }
+    }
+
+    .arena,
+    .irModules {
+      grid-template-rows:
+        [row1-start] fit-content(100%) [row1-end row2-start] fit-content(100%)
+        [row2-end row3-start] fit-content(
+          100%
+        ) [row3-end row4-start] fit-content(100%)
+        [row4-end];
+
+      h2 {
+        grid-column: 3 / span 5;
+        grid-row: row1;
+        margin-top: 100px;
+      }
+
+      h2 + p {
+        grid-column: 3 / span 5;
+        grid-row: row2;
+      }
+
+      a {
+        grid-column: 3 / span 5;
+        grid-row: row3;
+      }
+
+      .imageContainer {
+        grid-column: 3 / span 6;
+        grid-row: row4;
+        width: 100%;
+        margin: $XXL 0 0 0;
+      }
+    }
+  }
+}
+
+/* .configurationLogos {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -127,20 +471,4 @@
         color: $darkBlue;
       }
     }
-  }
-
-  .customerLogos {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-    background-color: white;
-
-    .imageContainer {
-      width: 10%;
-    }
-  }
-}
+  } */

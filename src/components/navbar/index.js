@@ -20,9 +20,40 @@ export default class Navbar extends Component {
     language: 'en',
   };
 
+  constructor(props) {
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
   state = {
     navOpen: false,
+    headerUnderline: false,
   };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(event) {
+    if (document != null) {
+      if (
+        document.body.scrollTop !== 0 ||
+        document.documentElement.scrollTop !== 0
+      ) {
+        this.setState({
+          headerUnderline: true,
+        });
+      } else {
+        this.setState({
+          headerUnderline: false,
+        });
+      }
+    }
+  }
 
   changePageLanguage = () => {
     const pathSplitArray = this.props.location.pathname.split('/');
@@ -58,9 +89,14 @@ export default class Navbar extends Component {
   render() {
     const isOnHomePage = this.props.location.pathname.toString().length < 5;
     const navColorWhite = this.state.navOpen ? false : isOnHomePage;
+    const headerUnderline = this.state.headerUnderline;
 
     return (
-      <header className={navColorWhite ? styles.navColorWhite : ''}>
+      <header
+        className={`${navColorWhite ? styles.navColorWhite : ''} ${
+          headerUnderline ? styles.headerUnderline : ''
+        }`}
+      >
         <div className={styles.navbar}>
           <Helmet>
             <body className={this.state.navOpen ? styles.noScroll : null} />
@@ -91,14 +127,14 @@ export default class Navbar extends Component {
             </div>
           </button>
           <nav className={this.state.navOpen ? styles.open : null}>
-            <ul>
+            <ul className="navLinks">
               <li>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/products`}
                   onClick={this.closeNav}
                 >
-                  {this.props.language === 'en' ? 'Products' : 'Produkter'}
+                  {this.props.language === 'en' ? 'Services' : 'Produkter'}
                 </Link>
               </li>
               <li>
@@ -107,10 +143,11 @@ export default class Navbar extends Component {
                   to={`/${this.props.language}/career`}
                   onClick={this.closeNav}
                 >
-                  {this.props.language === 'en' ? 'Work' : 'Jobb'}
+                  {this.props.language === 'en' ? 'Careers' : 'Jobb'}
+                  <span>2</span>
                 </Link>
               </li>
-              <li className={styles.doublePadding}>
+              <li>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
@@ -119,7 +156,7 @@ export default class Navbar extends Component {
                   {this.props.language === 'en' ? 'About us' : 'Om oss'}
                 </Link>
               </li>
-              <li
+              {/* <li
                 className={`${styles.noPaddingRight} ${styles.borderLeft} ${
                   styles.socialMedia
                 }`}
@@ -158,7 +195,7 @@ export default class Navbar extends Component {
                 >
                   <FontAwesomeIcon icon={['fab', 'github-square']} />
                 </OutboundLink>
-              </li>
+              </li> */}
               <li className={styles.noPaddingRight}>
                 <Link to={this.changePageLanguage()}>
                   <FontAwesomeIcon icon="globe" />

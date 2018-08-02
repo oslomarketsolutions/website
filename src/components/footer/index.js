@@ -13,7 +13,7 @@ const Footer = ({ language, data }) => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerContainer}>
+      <div className={`bodyNormal ${styles.footerContainer}`}>
         <div className={styles.groupWebsites}>
           <h3>
             {language === 'en' ? 'Group websites' : 'Konsernets nettsteder'}
@@ -163,9 +163,11 @@ const Footer = ({ language, data }) => {
         <div className={styles.bottom}>
           <div className={styles.copyright}>
             <FontAwesomeIcon icon={['far', 'copyright']} />
-            <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
+            <p className="bodySmall">
+              2018 Oslo Market Solutions. All Rights Reserved.
+            </p>
           </div>
-          <div className={styles.licenses}>
+          <div className={`bodySmall ${styles.licenses}`}>
             <Link to={`/${language}/licenses`}>Licenses</Link>
           </div>
         </div>

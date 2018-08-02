@@ -9,9 +9,15 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
+  background-color: #fff;
+}
+
+header.headerUnderline {
+  border-bottom: 1px solid $lapisLazuli;
 }
 
 .navbar {
@@ -36,6 +42,20 @@ header {
   li {
     list-style-type: none;
 
+    span {
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $vibrantOrange;
+      color: #fff;
+      text-align: center;
+      margin-left: 10px;
+    }
+
     svg {
       font-size: 2rem;
     }
@@ -48,9 +68,9 @@ header {
     }
   }
 
-  a {
+  /* a {
     font-size: 1.25rem;
-  }
+  } */
 
   a,
   a:link,
@@ -60,7 +80,7 @@ header {
   a:active {
     color: inherit;
     text-decoration: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 
   button {
@@ -117,9 +137,10 @@ header {
 
 @media (min-width: 1024px) {
   .navbar {
-    padding: 16px 32px 0 32px;
+    max-width: 1140px;
+    padding: 16px 0 0;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
 
     button,
     .menuGraph {
@@ -127,7 +148,7 @@ header {
     }
 
     .logo > img {
-      width: 150px;
+      width: 125px;
     }
 
     nav {
@@ -166,7 +187,7 @@ header {
           left: 0;
           right: 0;
           height: 2px;
-          background-color: $darkBlue;
+          background-color: $vibrantBlue;
         }
         &:before {
           opacity: 0;
@@ -237,22 +258,27 @@ header {
       border-right: 2px solid $darkBlue;
     }
   }
+
+  header.navColorWhite {
+    background-color: $darkBlue;
+  }
+
   header.navColorWhite .navbar {
     color: #fff;
 
     a {
       &:before,
       &:after {
-        background-color: #fff;
+        background-color: $vibrantBlue;
       }
     }
 
     .borderLeft {
-      border-color: #fff;
+      border-color: $vibrantBlue;
     }
 
     .borderRight {
-      border-color: #fff;
+      border-color: $vibrantBlue;
     }
   }
 }
