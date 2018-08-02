@@ -148,16 +148,17 @@ html {
     line-height: 1.5rem;
     letter-spacing: 0.75px;
   }
+  ///////////////////////front page transiton big numbers/////////////////////////////////
+  .temp {
+    letter-spacing: -0.2px;
+    line-height: 1.5rem;
+    font-size: 3.875rem;
+  }
   // end Typography
 
   ul {
     margin-left: 0;
   }
-
-  /* .container {
-    width: 1124px;
-    margin: 112px auto 0;
-  } */
 
   .grid {
     display: grid;
@@ -183,6 +184,8 @@ html {
 
     h1.hero {
       letter-spacing: -0.24px;
+      font-size: 2rem;
+      line-height: 2.5rem;
     }
 
     h1 {
@@ -223,6 +226,24 @@ html {
       line-height: 1.5rem;
       letter-spacing: -0.2px;
     }
+
+    .navLinks {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.56px;
+    }
+
+    .temp {
+      font-size: 3.25rem;
+    }
     // end Typography
+  }
+}
+
+@media (max-width: 580px) {
+  html {
+    .temp {
+      font-size: 2rem;
+    }
   }
 }

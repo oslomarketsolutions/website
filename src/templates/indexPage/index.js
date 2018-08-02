@@ -77,7 +77,7 @@ const IndexPageTemplate = ({ data }) => {
         </div>
         <div className={styles.first}>
           <p className="bodyLarge">
-            <span className={styles.big}>
+            <span className="temp">
               {transitionalElement.numbersAndText.companiesNumber}
               <span className={styles.blueText}>+</span>
             </span>
@@ -86,7 +86,7 @@ const IndexPageTemplate = ({ data }) => {
         </div>
         <div className={styles.second}>
           <p className="bodyLarge">
-            <span className={styles.big}>
+            <span className="temp">
               {transitionalElement.numbersAndText.usersNumber}
               <span className={styles.blueText}>+</span>
             </span>

@@ -21,44 +21,57 @@ export const pageQuery = graphql`
   query NorIndexQuery {
     page: markdownRemark(id: { regex: "/src/pages/no/index.md/" }) {
       frontmatter {
-        topImage {
-          alt
-          image
+        onTopOfAnimation {
+          title
+          subtitle
         }
-        featuredContent {
+        transitionalElement {
+          numbersAndText {
+            companiesNumber
+            companiesText
+            usersNumber
+            usersText
+            text
+          }
+          customerLogos {
+            logo
+            name
+          }
+        }
+        investorPortal {
           header
           image
           text
         }
         customization {
           header
+          text
           cards {
             header
             description
-            image
             features
+            isDark
+          }
+          serviceIntegrations {
+            header
+            text
+            integrationLogos {
+              logo
+              name
+            }
           }
         }
-
-        configurationLogos {
-          name
-          logo
-        }
-        solutionsContent {
-          firstCard {
+        otherProducts {
+          arena {
             image
             header
             text
           }
-          secondCard {
+          irModules {
             image
             header
             text
           }
-        }
-        customerLogos {
-          name
-          logo
         }
       }
     }

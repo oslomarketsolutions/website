@@ -24,14 +24,18 @@ const FeatureCard = ({ title, description, features, link, index, isDark }) => {
   }
   return (
     <div className={`${styles.featureCard} ${isDark ? styles.dark : ''}`}>
-      <div
-        className={`${styles.icon} ${
-          codeBranchIcon ? styles.codeBranchIcon : ''
-        }`}
-      >
-        {icon}
+      <div className={styles.header}>
+        <div className={styles.iconWrapper}>
+          <div
+            className={`${styles.icon} ${
+              codeBranchIcon ? styles.codeBranchIcon : ''
+            }`}
+          >
+            {icon}
+          </div>
+        </div>
+        <h3>{title}</h3>
       </div>
-      <h3>{title}</h3>
       <p>{description}</p>
       <ul className="bodySmall">
         {features &&

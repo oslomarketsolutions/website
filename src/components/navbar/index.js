@@ -26,7 +26,7 @@ export default class Navbar extends Component {
   }
 
   state = {
-    navOpen: false,
+    languageSelectorOpen: false,
     headerUnderline: false,
   };
 
@@ -74,15 +74,15 @@ export default class Navbar extends Component {
     return returnPath;
   };
 
-  toggleNav = () => {
+  toggleLanguageSelector = () => {
     this.setState(prevState => ({
-      navOpen: !prevState.navOpen,
+      languageSelectorOpen: !prevState.languageSelectorOpen,
     }));
   };
 
-  closeNav = () => {
+  closeLanguageSelector = () => {
     this.setState({
-      navOpen: false,
+      languageSelectorOpen: false,
     });
   };
 
@@ -98,17 +98,17 @@ export default class Navbar extends Component {
         }`}
       >
         <div className={styles.navbar}>
-          <Helmet>
+          {/* <Helmet>
             <body className={this.state.navOpen ? styles.noScroll : null} />
-          </Helmet>
+          </Helmet> */}
           <Link
             className={`${styles.noHover} ${styles.logo}`}
             to={`/${this.props.language}`}
-            onClick={this.closeNav}
+            /* onClick={this.closeNav} */
           >
             <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
           </Link>
-          <button
+          {/* <button
             onClick={this.toggleNav}
             aria-label={
               this.props.language === 'en' ? 'Toggle menu' : 'Åpne/lukke meny'
@@ -125,14 +125,14 @@ export default class Navbar extends Component {
                 className={this.state.navOpen ? styles.barOpen : styles.bar}
               />
             </div>
-          </button>
+          </button> */}
           <nav className={this.state.navOpen ? styles.open : null}>
             <ul className="navLinks">
               <li>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/products`}
-                  onClick={this.closeNav}
+                  /* onClick={this.closeNav} */
                 >
                   {this.props.language === 'en' ? 'Services' : 'Produkter'}
                 </Link>
@@ -141,7 +141,7 @@ export default class Navbar extends Component {
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/career`}
-                  onClick={this.closeNav}
+                  /* onClick={this.closeNav} */
                 >
                   {this.props.language === 'en' ? 'Careers' : 'Jobb'}
                   <span>2</span>
@@ -151,7 +151,7 @@ export default class Navbar extends Component {
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
-                  onClick={this.closeNav}
+                  /* onClick={this.closeNav} */
                 >
                   {this.props.language === 'en' ? 'About us' : 'Om oss'}
                 </Link>
@@ -196,16 +196,74 @@ export default class Navbar extends Component {
                   <FontAwesomeIcon icon={['fab', 'github-square']} />
                 </OutboundLink>
               </li> */}
-              <li className={styles.noPaddingRight}>
+              <li
+                className={`${styles.languageSelectorDesktop} ${
+                  styles.noPaddingRight
+                }`}
+              >
                 <Link to={this.changePageLanguage()}>
                   <FontAwesomeIcon icon="globe" />
                   {this.props.language === 'no' ? 'English' : 'Norsk'}
                 </Link>
               </li>
+              <li
+                className={`${styles.languageSelectorMobile} ${
+                  styles.noPaddingRight
+                }`}
+              >
+                <button onClick={this.toggleLanguageSelector}>
+                  <FontAwesomeIcon icon="globe" />
+                </button>
+                <ul
+                  className={
+                    this.state.languageSelectorOpen ? styles.open : styles.hide
+                  }
+                >
+                  <li
+                    className={
+                      this.props.language === 'en' ? styles.selected : ''
+                    }
+                  >
+                    <Link
+                      to={this.changePageLanguage()}
+                      onClick={this.closeLanguageSelector}
+                    >
+                      <div
+                        className={
+                          this.props.language === 'en' ? styles.selected : ''
+                        }
+                      >
+                        <FontAwesomeIcon icon="check" />
+                      </div>
+                      English
+                      {/* {this.props.language === 'no' ? 'English' : 'Norsk'} */}
+                    </Link>
+                  </li>
+                  <li
+                    className={
+                      this.props.language === 'no' ? styles.selected : ''
+                    }
+                  >
+                    <Link
+                      to={this.changePageLanguage()}
+                      onClick={this.closeLanguageSelector}
+                    >
+                      <div
+                        className={
+                          this.props.language === 'no' ? styles.selected : ''
+                        }
+                      >
+                        <FontAwesomeIcon icon="check" />
+                      </div>
+                      Norsk
+                    </Link>
+                  </li>
+                </ul>
+              </li>
             </ul>
-            <div className={styles.menuGraph}>
+            {/* <div className={styles.menuGraph}>
               <img src={menuGraph} alt="Graph in the background" />
-            </div>
+            </div> */}
           </nav>
         </div>
       </header>

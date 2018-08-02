@@ -10,13 +10,14 @@
     display: grid;
     grid-template-columns:
       [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
+      [main-start] repeat(8, minmax(0, 128.5px))
+      [main-end] minmax(0, 1fr)
+      [full-end];
     grid-template-rows:
-      [emptySpace-start] 350px [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
-        100%
-      )
+      [emptySpace-start] 30%
+      [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%)
+      [row2-end row3-start] fit-content(100%)
       [row3-end];
     grid-column-gap: 16px;
     color: $antiFlashWhite;
@@ -53,22 +54,28 @@
   }
 
   .transition {
+    z-index: 1;
     position: absolute;
     width: 100%;
     max-width: 1140px;
-    height: 452px;
+    height: 576px;
     top: calc(100vh - 130px);
     left: 0;
     right: 0;
     margin: 0 auto;
     background-color: #fff;
     display: grid;
-    grid-template-columns: [main-start] repeat(8, minmax(0, 128.5px)) [main-end];
-    grid-template-rows: [row1-start] fit-content(100%) [row1-end row2-start] auto [row2-end];
+    grid-template-columns:
+      [main-start] repeat(8, minmax(0, 128.5px))
+      [main-end];
+    grid-template-rows:
+      [row1-start] fit-content(100%)
+      [row1-end row2-start] auto
+      [row2-end];
     grid-column-gap: 16px;
     align-items: center;
     color: $textColor;
-    box-shadow: $newBoxShadow;
+    //box-shadow: $newBoxShadow;
     border-radius: $S;
     padding: $XXL 0;
 
@@ -127,15 +134,29 @@
       align-self: end;
     }
 
-    .big {
+    /* .big {
       font-size: 62px;
-    }
+    } */
+  }
+
+  .transition:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 81%;
+    bottom: 0;
+    left: 0;
+    border-radius: $S;
+    box-shadow: $newBoxShadow;
+    z-index: 0;
   }
 
   .customerLogos {
+    z-index: 2;
     grid-column: 1 / span 8;
     grid-row: row2;
-    width: 100%;
+    width: 93%;
+    margin: $XL auto 0;
     height: 100%;
 
     .imageContainer {
@@ -154,21 +175,22 @@
     display: grid;
     grid-template-columns:
       [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
+      [main-start] repeat(8, minmax(0, 128.5px))
+      [main-end] minmax(0, 1fr)
+      [full-end];
     grid-template-rows:
-      [emptySpace-start] 500px [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
-        100%
-      )
-      [row3-end row4-start] 220px [row4-end row5-start] fit-content(100%)
-      [row5-end row6-start] fit-content(100%) [row6-end row7-start] fit-content(
-        100%
-      )
-      [row7-end row8-start] fit-content(100%) [row8-end row9-start]fit-content(
-        100%
-      )
-      [row9-end row10-start] fit-content(100%) [row10-end];
+      [emptySpace-start] 624px
+      [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%)
+      [row2-end row3-start] fit-content(100%)
+      [row3-end row4-start] 220px
+      [row4-end row5-start] fit-content(100%)
+      [row5-end row6-start] fit-content(100%)
+      [row6-end row7-start] fit-content(100%)
+      [row7-end row8-start] fit-content(100%)
+      [row8-end row9-start]fit-content(100%)
+      [row9-end row10-start] fit-content(100%)
+      [row10-end];
     grid-column-gap: 16px;
     align-items: center;
     height: 2578px;
@@ -191,7 +213,7 @@
     }
 
     .subHeader1 {
-      grid-column: 3 / span 6;
+      grid-column: 2 / span 8;
       grid-row: row5;
     }
 
@@ -211,13 +233,13 @@
     }
 
     .subHeader2 {
-      grid-column: 4 / span 4;
+      grid-column: 2 / span 8;
       grid-row: row8;
     }
 
     .subHeader2 + p {
       padding: $XXL 0;
-      grid-column: 5 / span 2;
+      grid-column: 2 / span 8;
       grid-row: row9;
     }
 
@@ -242,14 +264,16 @@
     display: grid;
     grid-template-columns:
       [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
+      [main-start] repeat(8, minmax(0, 128.5px))
+      [main-end] minmax(0, 1fr)
+      [full-end];
     grid-template-rows:
-      [emptySpace-start] 220px [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
-        100%
-      )
-      [row3-end row4-start] 120px [row4-end];
+      [emptySpace-start] 220px
+      [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%)
+      [row2-end row3-start] fit-content(100%)
+      [row3-end row4-start] 120px
+      [row4-end];
     grid-column-gap: 16px;
 
     h1 {
@@ -287,14 +311,16 @@
     display: grid;
     grid-template-columns:
       [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
+      [main-start] repeat(8, minmax(0, 128.5px))
+      [main-end] minmax(0, 1fr)
+      [full-end];
     grid-template-rows:
-      [emptySpace-start] 220px [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%) [row2-end row3-start] fit-content(
-        100%
-      )
-      [row3-end row4-start] 120px [row4-end];
+      [emptySpace-start] 220px
+      [emptySpace-end row1-start] fit-content(100%)
+      [row1-end row2-start] fit-content(100%)
+      [row2-end row3-start] fit-content(100%)
+      [row3-end row4-start] 120px
+      [row4-end];
     grid-column-gap: 16px;
     background-color: $antiFlashWhite;
 
@@ -335,7 +361,7 @@
     }
 
     .investorPortal {
-      height: 2278px;
+      height: 2378px;
 
       h1 {
         grid-column: 3 / span 5;
@@ -353,19 +379,19 @@
     .arena,
     .irModules {
       grid-template-rows:
-        [row1-start] fit-content(100%) [row1-end row2-start] fit-content(100%)
-        [row2-end row3-start] fit-content(
-          100%
-        ) [row3-end row4-start] fit-content(100%)
+        [row1-start] fit-content(100%)
+        [row1-end row2-start] fit-content(100%)
+        [row2-end row3-start] fit-content(100%)
+        [row3-end row4-start] fit-content(100%)
         [row4-end];
 
-      h2 {
+      h1 {
         grid-column: 3 / span 5;
         grid-row: row1;
         margin-top: 100px;
       }
 
-      h2 + p {
+      h1 + p {
         grid-column: 3 / span 5;
         grid-row: row2;
       }
@@ -380,6 +406,153 @@
         grid-row: row4;
         width: 100%;
         margin: $XXL 0 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .homePage {
+    .animation {
+      button {
+        height: 50px;
+        width: 180px;
+      }
+    }
+
+    .transition {
+      .first {
+        width: 114px;
+      }
+      .second {
+        width: 224px;
+      }
+      .third {
+        width: 358px;
+      }
+    }
+
+    .investorPortal {
+      height: 2878px;
+      .customizationCards {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 120px;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .homePage {
+    .transition {
+      grid-template-rows:
+        [row1-start] fit-content(100%)
+        [row1-end row2-start] fit-content(100%)
+        [row2-end row3-start] auto
+        [row3-end];
+
+      .first {
+        grid-column: 1 / span 4;
+        grid-row: row1;
+      }
+
+      .second {
+        grid-column: 5 / span 4;
+        grid-row: row1;
+      }
+
+      .third {
+        grid-column: 1 / span 8;
+        grid-row: row2;
+        margin: $XL auto;
+      }
+
+      .customerLogos {
+        grid-row: row3;
+        margin: 0 auto 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .homePage {
+    .animation {
+      grid-template-rows:
+        [emptySpace-start] 15%
+        [emptySpace-end row1-start] fit-content(100%)
+        [row1-end row2-start] fit-content(100%)
+        [row2-end row3-start] fit-content(100%)
+        [row3-end];
+    }
+
+    .transition {
+      height: 460px;
+
+      .first {
+        width: 104px;
+      }
+
+      .second {
+        width: 168px;
+      }
+
+      .third {
+        width: 320px;
+      }
+    }
+
+    .investorPortal {
+      height: 2778px;
+      grid-template-rows:
+        [emptySpace-start] 400px
+        [emptySpace-end row1-start] fit-content(100%)
+        [row1-end row2-start] fit-content(100%)
+        [row2-end row3-start] fit-content(100%)
+        [row3-end row4-start] 220px
+        [row4-end row5-start] fit-content(100%)
+        [row5-end row6-start] fit-content(100%)
+        [row6-end row7-start] fit-content(100%)
+        [row7-end row8-start] fit-content(100%)
+        [row8-end row9-start]fit-content(100%)
+        [row9-end row10-start] fit-content(100%)
+        [row10-end];
+
+      h1 {
+        grid-column: 2 / span 8;
+      }
+
+      h1 + p {
+        grid-column: 2 / span 8;
+      }
+
+      a {
+        grid-column: 2 / span 8;
+      }
+
+      .subHeader1 + p {
+        grid-column: 3 / span 6;
+      }
+    }
+
+    .arena,
+    .irModules {
+      h1 {
+        grid-column: 2 / span 8;
+      }
+
+      h1 + p {
+        grid-column: 2 / span 8;
+      }
+
+      a {
+        grid-column: 2 / span 8;
+      }
+
+      .imageContainer {
+        grid-column: 2 / span 8;
       }
     }
   }

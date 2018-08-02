@@ -10,18 +10,18 @@ transitionalElement:
     usersText: Users served daily
     text: These companies use Oslo Market Solutions to empower their customers
   customerLogos:
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat1
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat2
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat3
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat4
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat5
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat6
+    - logo: /img/afm_logo.png
+      name: Artic Fund Management
+    - logo: /img/fif_logo.png
+      name: First Fondene
+    - logo: /img/hb_logo.png
+      name: handelsbanken
+    - logo: /img/sbanken_logo.png
+      name: Sbanken 
+    - logo: /img/sb1_logo.png
+      name: SpareBank 1
+    - logo: /img/sbm_logo.png
+      name: SpareBankMøre
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat7
     - logo: /img/norne_logo.png

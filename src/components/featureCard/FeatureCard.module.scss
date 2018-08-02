@@ -2,13 +2,18 @@
 .featureCard {
   position: relative;
   background-color: #fff;
-  height: 525px;
+  // height: 525px;
   width: 320px;
   padding: $XL $L;
   border-radius: $S;
   box-shadow: $newBoxShadow;
 
+  .header {
+    border-bottom: 1px solid $antiFlashWhite;
+  }
+
   .icon {
+    font-family: 'Work Sans', 'sans-serif';
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -36,7 +41,7 @@
     color: $grey;
     text-align: center;
     padding-bottom: $L;
-    border-bottom: 1px solid $antiFlashWhite;
+    //border-bottom: 1px solid $antiFlashWhite;
   }
 
   p {
@@ -49,6 +54,7 @@
     // font-size: 12px;
     list-style-type: none;
     line-height: 2.5;
+    margin-bottom: 54px;
 
     svg {
       margin-right: $XXS;
@@ -77,6 +83,10 @@
 div.dark {
   background-color: $darkBlue;
 
+  .header {
+    border-color: $lapisLazuli;
+  }
+
   .icon {
     background-color: $lapisLazuli;
     color: #fff;
@@ -84,7 +94,7 @@ div.dark {
 
   h3 {
     color: $antiFlashWhite;
-    border-color: $lapisLazuli;
+    // border-color: $lapisLazuli;
   }
 
   p {
@@ -102,5 +112,53 @@ div.dark {
   .customizationLink {
     border-color: $lapisLazuli;
     color: $selectiveYellow;
+  }
+}
+
+@media (max-width: 1024px) {
+  .featureCard {
+    margin-bottom: $L;
+
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    .iconWrapper {
+      width: 40%;
+    }
+
+    .icon {
+      margin: 0 0 $M 0;
+    }
+
+    h3 {
+      width: 60%;
+      text-align: left;
+      padding-bottom: $M;
+    }
+
+    p {
+      margin: $S 0 $XS 0;
+    }
+
+    ul {
+      margin-bottom: $L;
+    }
+
+    .customizationLink {
+      background-color: $vibrantBlue;
+      color: #fff;
+      border-bottom-left-radius: $S;
+      border-bottom-right-radius: $S;
+      text-align: center;
+    }
+  }
+
+  div.dark {
+    .customizationLink {
+      color: #fff;
+    }
   }
 }

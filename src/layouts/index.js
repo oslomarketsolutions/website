@@ -25,6 +25,7 @@ import {
   faArrowRight,
   faChartArea,
   faCodeBranch,
+  faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faCopyright,
@@ -61,6 +62,7 @@ export const faLibrary = library.add(
   faReact,
   faChartArea,
   faCodeBranch,
+  faCheck,
 );
 
 const fontAwesomeCSS = dom.css();
@@ -76,7 +78,7 @@ const TemplateWrapper = ({ children, location, data }) => {
         <html lang={language} />
         <style>{fontAwesomeCSS}</style>
         <link
-          href="https://fonts.googleapis.com/css?family=Muli:400,700i,800|Work+Sans:300,400"
+          href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800|Work+Sans:300,400"
           rel="stylesheet"
         />
       </Helmet>

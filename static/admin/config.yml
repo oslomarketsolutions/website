@@ -97,24 +97,42 @@ collections:
         name: "norwegian_index_page"
         label: "no/Homepage"
         fields:
-          - label: "Welcome Image"
-            name: "topImage"
+          - label: "On top of animation"
+            name: "onTopOfAnimation"
             widget: "object"
             fields:
-              - {label: "Description of image/animation", name: "alt", widget: "string"}
-              - {label: "Welcome Image", name: "image", widget: "image"}
-          - label: "Featured Content"
-            name: "featuredContent"
+              - {label: "Header", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Transitional element"
+            name: "transitionalElement"
             widget: "object"
             fields:
-              - {label: "Featured Case Header", name: "header", widget: "string"}
+              - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
+                  {label: "Companies number", name: "companiesNumber", widget: "string"}
+                  {label: "Companies text", name: "companiesText", widget: "string"}
+                  {label: "Users number", name: "usersNumber", widget: "string"}
+                  {label: "Users text", name: "usersText", widget: "string"}
+                  {label: "Text", name: "text", widget: "string"}
+                ]}
+              - label: "Customer logos" 
+                name: "customerLogos"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Logo", name: "logo", widget: "image"}
+          - label: "Investor portal"
+            name: "investorPortal"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
-              - {label: "Featured Text", name: "text", widget: "text"}
+              - {label: "Text", name: "text", widget: "text"}
           - label: "Customization"
             name: "customization"
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
               - {label: "Cards", name: "cards", widget: "list", fields: [
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Image", name: "image", widget: "image"},
@@ -122,33 +140,28 @@ collections:
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
                 ]}
-          - label: "Configuration logos"
-            name: "configurationLogos"
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Logo", name: "logo", widget: "image"}
-          - label: "Solutions Content"
-            name: "solutionsContent"
+              - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                    {label: "Name", name: "name", widget: "string"}
+                    {label: "Logo", name: "logo", widget: "image"}
+                  ]}
+              ]}
+          - label: "Other products"
+            name: "otherProducts"
             widget: "object"
             fields:
-              - {label: "Header", name: "header", widget: "string"}
-              - {label: "First Card", name: "firstCard", widget: "object", fields: [
+              - {label: "Arena", name: "arena", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
                 ]}
-              - {label: "Second Card", name: "secondCard", widget: "object", fields: [
+              - {label: "IR Modules", name: "irModules", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
                 ]}
-          - label: "Customer logos"
-            name: "customerLogos"
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Logo", name: "logo", widget: "image"}
 
       - file: "src/pages/en/index.md"
         name: "english_index_page"
