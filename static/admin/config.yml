@@ -135,7 +135,6 @@ collections:
               - {label: "Text", name: "text", widget: "text"}
               - {label: "Cards", name: "cards", widget: "list", fields: [
                   {label: "Header", name: "header", widget: "string"},
-                  {label: "Image", name: "image", widget: "image"},
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
@@ -205,7 +204,6 @@ collections:
               - {label: "Text", name: "text", widget: "text"}
               - {label: "Cards", name: "cards", widget: "list", fields: [
                   {label: "Header", name: "header", widget: "string"},
-                  {label: "Image", name: "image", widget: "image"},
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
