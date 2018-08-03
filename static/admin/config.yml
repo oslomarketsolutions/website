@@ -108,11 +108,11 @@ collections:
             widget: "object"
             fields:
               - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
-                  {label: "Companies number", name: "companiesNumber", widget: "string"}
-                  {label: "Companies text", name: "companiesText", widget: "string"}
-                  {label: "Users number", name: "usersNumber", widget: "string"}
-                  {label: "Users text", name: "usersText", widget: "string"}
-                  {label: "Text", name: "text", widget: "string"}
+                  {label: "Companies number", name: "companiesNumber", widget: "string"},
+                  {label: "Companies text", name: "companiesText", widget: "string"},
+                  {label: "Users number", name: "usersNumber", widget: "string"},
+                  {label: "Users text", name: "usersText", widget: "string"},
+                  {label: "Text", name: "text", widget: "string"},
                 ]}
               - label: "Customer logos" 
                 name: "customerLogos"
@@ -178,11 +178,11 @@ collections:
             widget: "object"
             fields:
               - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
-                  {label: "Companies number", name: "companiesNumber", widget: "string"}
-                  {label: "Companies text", name: "companiesText", widget: "string"}
-                  {label: "Users number", name: "usersNumber", widget: "string"}
-                  {label: "Users text", name: "usersText", widget: "string"}
-                  {label: "Text", name: "text", widget: "string"}
+                  {label: "Companies number", name: "companiesNumber", widget: "string"},
+                  {label: "Companies text", name: "companiesText", widget: "string"},
+                  {label: "Users number", name: "usersNumber", widget: "string"},
+                  {label: "Users text", name: "usersText", widget: "string"},
+                  {label: "Text", name: "text", widget: "string"},
                 ]}
               - label: "Customer logos" 
                 name: "customerLogos"
