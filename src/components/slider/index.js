@@ -61,10 +61,9 @@ const Slide = ({ array, i, slideCount }) => {
     <div
       className={`${styles.slideContainer} ${active ? styles.slideActive : ''}`}
     >
-      {array &&
-        array.map(logo => (
-          <img key={logo.name} alt={logo.name} src={logo.logo} />
-        ))}
+      {array.map(logo => (
+        <img key={logo.name} alt={logo.name} src={logo.logo} />
+      ))}
     </div>
   );
 };
@@ -77,18 +76,17 @@ Slide.propTypes = {
 
 const Dots = ({ dotClick, slides, i }) => (
   <div className={styles.dots}>
-    {slides &&
-      slides.map((slide, index) => {
-        const active = i === index;
-        return (
-          <Dot
-            key={slide[0].name}
-            id={index}
-            active={active}
-            dotClick={dotClick}
-          />
-        );
-      })}
+    {slides.map((slide, index) => {
+      const active = i === index;
+      return (
+        <Dot
+          key={slide[0].name}
+          id={index}
+          active={active}
+          dotClick={dotClick}
+        />
+      );
+    })}
   </div>
 );
 

@@ -109,17 +109,16 @@ const IndexPageTemplate = ({ data }) => {
         </h2>
         <p>{customization.text}</p>
         <div className={styles.customizationCards}>
-          {customization.cards &&
-            customization.cards.map((customizationCard, index) => (
-              <FeatureCard
-                key={customizationCard.header}
-                title={customizationCard.header}
-                description={customizationCard.description}
-                features={customizationCard.features}
-                index={index}
-                isDark={customizationCard.isDark}
-              />
-            ))}
+          {customization.cards.map((customizationCard, index) => (
+            <FeatureCard
+              key={customizationCard.header}
+              title={customizationCard.header}
+              description={customizationCard.description}
+              features={customizationCard.features}
+              index={index}
+              isDark={customizationCard.isDark}
+            />
+          ))}
         </div>
         <h2 className={`${styles.subHeader2} ${styles.centered}`}>
           {customization.serviceIntegrations.header}
@@ -128,18 +127,17 @@ const IndexPageTemplate = ({ data }) => {
           {customization.serviceIntegrations.text}
         </p>
         <div className={styles.integrationLogos}>
-          {customization.serviceIntegrations.integrationLogos &&
-            customization.serviceIntegrations.integrationLogos.map(
-              integrationLogo => (
-                <ImageWrapper
-                  key={integrationLogo.name}
-                  src={integrationLogo.logo}
-                  alt={integrationLogo.name}
-                  sizes={findImageSizes(integrationLogo.logo, imageSizes)}
-                  outerWrapperClassName={styles.imageContainer}
-                />
-              ),
-            )}
+          {customization.serviceIntegrations.integrationLogos.map(
+            integrationLogo => (
+              <ImageWrapper
+                key={integrationLogo.name}
+                src={integrationLogo.logo}
+                alt={integrationLogo.name}
+                sizes={findImageSizes(integrationLogo.logo, imageSizes)}
+                outerWrapperClassName={styles.imageContainer}
+              />
+            ),
+          )}
         </div>
       </section>
       <section className={styles.arena}>

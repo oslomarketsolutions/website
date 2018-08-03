@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: ["error", { "allow": ["_tail",] }] */
 import React from 'react';
 import PropTypes from 'prop-types';
 // As the norwegian and english index pages
@@ -76,7 +77,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'text',
             ]),
           },
-          customerLogos: customerLogo,
+          customerLogos: customerLogo._tail.array,
         },
         investorPortal: {
           header: entry.getIn(['data', 'investorPortal', 'header']),
