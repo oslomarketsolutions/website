@@ -24,8 +24,8 @@ transitionalElement:
       name: SpareBankMøre
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat7
-    - logo: /img/norne_logo.png
-      name: Norne1
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat 8
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat9
     - logo: /img/signicat-logo-black-medium-size.png
@@ -36,8 +36,8 @@ transitionalElement:
       name: Signicat12
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat13
-    - logo: /img/norne_logo.png
-      name: Norne2
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat14
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat15
 investorPortal:
