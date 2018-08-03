@@ -144,8 +144,8 @@ collections:
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
                   {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
-                    {label: "Name", name: "name", widget: "string"}
-                    {label: "Logo", name: "logo", widget: "image"}
+                    {label: "Name", name: "name", widget: "string"},
+                    {label: "Logo", name: "logo", widget: "image"},
                   ]}
               ]}
           - label: "Other products"
@@ -214,8 +214,8 @@ collections:
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
                   {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
-                    {label: "Name", name: "name", widget: "string"}
-                    {label: "Logo", name: "logo", widget: "image"}
+                    {label: "Name", name: "name", widget: "string"},
+                    {label: "Logo", name: "logo", widget: "image"},
                   ]}
               ]}
           - label: "Other products"
