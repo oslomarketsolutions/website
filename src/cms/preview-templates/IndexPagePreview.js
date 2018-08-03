@@ -12,7 +12,7 @@ import PreviewWrapper from '../../components/previewWrapper';
 // that take in multiple props.
 const IndexPagePreview = ({ entry, getAsset }) => {
   const customerLogos = entry
-    .getIn(['data', 'transitionalElement.customerLogos'])
+    .getIn(['data', 'transitionalElement', 'customerLogos'])
     .map(customerLogo => ({
       logo: getAsset(customerLogo.get('logo')),
       name: customerLogo.get('name'),
