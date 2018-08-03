@@ -19,6 +19,7 @@ const IndexPageTemplate = ({ data }) => {
   } = data.page.frontmatter;
 
   const imageSizes = data.imageSizes.edges;
+  console.log(data);
 
   return (
     <main className={styles.homePage}>
