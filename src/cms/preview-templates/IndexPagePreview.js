@@ -11,12 +11,12 @@ import PreviewWrapper from '../../components/previewWrapper';
 // That means it takes in one prop (data) unlike the other pages (which has templates)
 // that take in multiple props.
 const IndexPagePreview = ({ entry, getAsset }) => {
-  /* const customerLogo = entry
+  const customerLogo = entry
     .getIn(['data', 'transitionalElement', 'customerLogos'])
     .map(logo => ({
       logo: getAsset(logo.get('logo')),
       name: logo.get('name'),
-    })); */
+    }));
 
   const customizationCards = entry
     .getIn(['data', 'customization', 'cards'])
@@ -76,11 +76,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'text',
             ]),
           },
-          customerLogos: entry.getIn([
-            'data',
-            'transitionalElement',
-            'customerLogos',
-          ]),
+          customerLogos: customerLogo,
         },
         investorPortal: {
           header: entry.getIn(['data', 'investorPortal', 'header']),
