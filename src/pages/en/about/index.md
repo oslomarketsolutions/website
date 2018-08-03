@@ -1,10 +1,27 @@
 ---
-templateKey: 'aboutPage'
-path: /about
+templateKey: aboutPage
 title: Oslo Market Solutions
 image: /img/chemex.jpg
-imageAlt: Glass flask containing steaming coffee is sitting on a table
-text:
-  Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species. Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+imageAlt: OMS
+text: >-
+  Oslo Market Solutions is one of the leading Nordic suppliers of internet-based
+  solutions for the financial markets. With a Nordic perspective, we focus on
+  high availability, quality, innovation, design, speed and flexibility towards
+  our clients. All of our solutions are hosted and operated by Oslo Market
+  Solutions.
+
+
+  The company has its origins from InfoStream, which in 1997 developed the first
+  version of the middleware Manamind Collect. Manamind was founded in 2001, with
+  Collect as the very corner stone of the company. Today a new version of
+  Collect is still the foundation of our deliveries and is what allows us to
+  collect vast amounts of real-time data and distribute it efficiently to our
+  custom-made web solutions.
+
+
+  With domain knowledge in the field of market data and finance we work hard to
+  provide solutions with high quality, availability, flexibility and great
+  design.
 header: Employees
 ---
+
