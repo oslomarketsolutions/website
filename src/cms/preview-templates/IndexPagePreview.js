@@ -76,22 +76,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'text',
             ]),
           },
-          customerLogos: {
-            logo: getAsset(
-              entry.getIn([
-                'data',
-                'transitionalElement',
-                'customerLogos',
-                'logo',
-              ]),
-            ),
-            name: entry.getIn([
-              'data',
-              'transitionalElement',
-              'customerLogos',
-              'name',
-            ]),
-          },
+          customerLogos: entry.getIn([
+            'data',
+            'transitionalElement',
+            'customerLogos',
+          ]),
         },
         investorPortal: {
           header: entry.getIn(['data', 'investorPortal', 'header']),
