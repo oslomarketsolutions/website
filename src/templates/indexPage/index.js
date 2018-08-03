@@ -102,7 +102,6 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.investorPortal}>
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
-        {/* Need to fix 'to' */}
         <Button to={`/${strippedLanguage}/products`} text="Learn more" />
 
         <h2 className={`${styles.subHeader1} ${styles.centered}`}>
@@ -111,7 +110,6 @@ const IndexPageTemplate = ({ language, data }) => {
         <p>{customization.text}</p>
         <div className={styles.customizationCards}>
           {customization.cards.map((customizationCard, index) => (
-            /* Need to fix 'link' */
             <FeatureCard
               key={customizationCard.header}
               title={customizationCard.header}
@@ -146,7 +144,6 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.arena}>
         <h1>{otherProducts.arena.header}</h1>
         <p className="bodyLarge">{otherProducts.arena.text}</p>
-        {/* Need to fix 'to' */}
         <Button to={`/${strippedLanguage}/products`} text="Learn more" />
         <ImageWrapper
           src={otherProducts.arena.image}
@@ -158,7 +155,6 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.irModules}>
         <h1>{otherProducts.irModules.header}</h1>
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
-        {/* Need to fix 'to' */}
         <Button to={`/${strippedLanguage}/products`} text="Learn more" />
         <ImageWrapper
           src={otherProducts.arena.image}
