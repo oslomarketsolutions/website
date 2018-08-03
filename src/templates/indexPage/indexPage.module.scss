@@ -75,7 +75,6 @@
     grid-column-gap: 16px;
     align-items: center;
     color: $textColor;
-    //box-shadow: $newBoxShadow;
     border-radius: $S;
     padding: $XXL 0;
 
@@ -133,10 +132,6 @@
       width: 400px;
       align-self: end;
     }
-
-    /* .big {
-      font-size: 62px;
-    } */
   }
 
   .transition:after {
@@ -573,91 +568,3 @@
     }
   }
 }
-
-/* .configurationLogos {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: white;
-
-    .imageContainer {
-      width: 10%;
-    }
-  }
-
-  .featuredCase {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    max-width: 1800px;
-    margin: auto;
-    padding: 100px 0;
-
-    h2 {
-      width: 50%;
-      margin-top: 0;
-      text-align: left;
-    }
-
-    p {
-      width: 50%;
-    }
-
-    .imageContainer {
-      width: 50%;
-    }
-  }
-
-  .customization {
-    background-color: white;
-    padding: 100px 0;
-
-    h2 {
-      margin-bottom: 20px;
-      color: $darkBlue;
-      text-align: center;
-    }
-    .customizationCards {
-      padding: 50px 0;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      width: 100%;
-      margin: auto;
-    }
-  }
-
-  .solutions {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    padding: 100px 0;
-
-    .solution {
-      background-color: #f1f3f5;
-      height: 600px;
-      width: 800px;
-      margin: 20px;
-
-      .imageContainer {
-        height: 50%;
-      }
-
-      h4 {
-        background-color: #224466;
-        margin-bottom: 20px;
-        font-size: 2.8rem;
-        padding-left: 20px;
-        border-bottom: solid green;
-      }
-
-      p {
-        margin: 0;
-        padding: 20px;
-        color: $darkBlue;
-      }
-    }
-  } */

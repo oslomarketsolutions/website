@@ -19,6 +19,19 @@ html {
     grid-column-gap: 16px;
   }
 
+  ul {
+    margin-left: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-column-gap: 16px;
+  }
+
   // Typography
   h1,
   h2,
@@ -155,24 +168,9 @@ html {
     font-size: 3.875rem;
   }
   // end Typography
-
-  ul {
-    margin-left: 0;
-  }
-
-  .grid {
-    display: grid;
-    /* width: 1140px;
-    margin: 0 auto; */
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
-    grid-column-gap: 16px;
-  }
 }
 
-//HAVE TO CHANGE MAX-WIDTH
+//MIGHT HAVE TO CHANGE THIS MAX-WIDTH
 @media (max-width: 1024px) {
   html {
     // Typography

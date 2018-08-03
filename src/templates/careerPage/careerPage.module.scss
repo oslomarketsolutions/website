@@ -19,7 +19,6 @@
       [row4-end];
 
     h1 {
-      // font-size: 72px;
       grid-column: 2 / span 8;
       grid-row: row1;
     }
@@ -58,7 +57,6 @@
       [row4-end];
 
     h1 {
-      // font-size: 72px;
       grid-column: 2 / span 8;
       grid-row: row1;
     }
@@ -119,72 +117,3 @@
     }
   }
 }
-
-/* @media (min-width: 945px) {
-  .careerPage {
-    .careerPerks {
-      .perkCardContainer {
-        width: 850px;
-      }
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .careerPage {
-    max-width: 1864px;
-    padding: 0 32px;
-
-    section {
-      padding: 138px 0 138px;
-    }
-
-    section:first-of-type {
-      padding-top: 275px;
-    }
-
-    section:last-of-type {
-      padding-bottom: 275px;
-    }
-
-    .careerOms {
-      flex-flow: row-reverse wrap;
-
-      p {
-        width: 45%;
-      }
-
-      .imageContainer {
-        width: 45%;
-      }
-    }
-
-    .whyOms {
-      .imageContainer {
-        margin-bottom: 32px;
-      }
-    }
-
-    .careerPerks {
-      .perkCardContainer {
-        margin-top: 64px;
-      }
-    }
-
-    .careerJobVacancies {
-      h2 {
-        text-align: center;
-      }
-    }
-  }
-}
-
-@media (min-width: 1477px) {
-  .careerPage {
-    .careerPerks {
-      .perkCardContainer {
-        width: 1410px;
-      }
-    }
-  }
-} */

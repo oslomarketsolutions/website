@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import logo from '../../img/logo_oms_hoved.png';
 import logoWhite from '../../img/logo_oms_hvit.png';
-// import menuGraph from '../../img/menu_graph.png';
 import styles from './navbar.module.scss';
 
 export default class Navbar extends Component {
@@ -97,43 +93,22 @@ export default class Navbar extends Component {
         }`}
       >
         <div className={styles.navbar}>
-          {/* <Helmet>
-            <body className={this.state.navOpen ? styles.noScroll : null} />
-          </Helmet> */}
           <div className={styles.logoWrapper}>
             <Link
               className={`${styles.noHover} ${styles.logo}`}
               to={`/${this.props.language}`}
-              /* onClick={this.closeNav} */
+              onClick={this.closeLanguageSelector}
             >
               <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
             </Link>
           </div>
-          {/* <button
-            onClick={this.toggleNav}
-            aria-label={
-              this.props.language === 'en' ? 'Toggle menu' : 'Åpne/lukke meny'
-            }
-          >
-            <div className={styles.hamburger}>
-              <span
-                className={this.state.navOpen ? styles.barOpen : styles.bar}
-              />
-              <span
-                className={this.state.navOpen ? styles.barOpen : styles.bar}
-              />
-              <span
-                className={this.state.navOpen ? styles.barOpen : styles.bar}
-              />
-            </div>
-          </button> */}
           <nav className={this.state.navOpen ? styles.open : null}>
             <ul className="navLinks">
               <li>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/products`}
-                  /* onClick={this.closeNav} */
+                  onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'Services' : 'Produkter'}
                 </Link>
@@ -142,7 +117,7 @@ export default class Navbar extends Component {
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/career`}
-                  /* onClick={this.closeNav} */
+                  onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'Careers' : 'Jobb'}
                   <span>2</span>
@@ -152,51 +127,11 @@ export default class Navbar extends Component {
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
-                  /* onClick={this.closeNav} */
+                  onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'About us' : 'Om oss'}
                 </Link>
               </li>
-              {/* <li
-                className={`${styles.noPaddingRight} ${styles.borderLeft} ${
-                  styles.socialMedia
-                }`}
-              >
-                <OutboundLink
-                  href="https://www.linkedin.com/company/oslo-market-solutions-as/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={['fab', 'linkedin']} />
-                </OutboundLink>
-              </li>
-              <li className={`${styles.noPaddingRight} ${styles.socialMedia}`}>
-                <OutboundLink
-                  href="https://www.facebook.com/oslomarketsolutions/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={['fab', 'facebook']} />
-                </OutboundLink>
-              </li>
-              <li className={`${styles.noPaddingRight} ${styles.socialMedia}`}>
-                <OutboundLink
-                  href="https://medium.com/shark-bytes"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={['fab', 'medium']} />
-                </OutboundLink>
-              </li>
-              <li className={`${styles.borderRight} ${styles.socialMedia}`}>
-                <OutboundLink
-                  href="https://github.com/oslomarketsolutions"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={['fab', 'github-square']} />
-                </OutboundLink>
-              </li> */}
               <li
                 className={`${styles.languageSelectorDesktop} ${
                   styles.noPaddingRight
@@ -237,7 +172,6 @@ export default class Navbar extends Component {
                         <FontAwesomeIcon icon="check" />
                       </div>
                       English
-                      {/* {this.props.language === 'no' ? 'English' : 'Norsk'} */}
                     </Link>
                   </li>
                   <li
@@ -262,9 +196,6 @@ export default class Navbar extends Component {
                 </ul>
               </li>
             </ul>
-            {/* <div className={styles.menuGraph}>
-              <img src={menuGraph} alt="Graph in the background" />
-            </div> */}
           </nav>
         </div>
       </header>

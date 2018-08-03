@@ -2,7 +2,6 @@
 .featureCard {
   position: relative;
   background-color: #fff;
-  // height: 525px;
   width: 320px;
   padding: $XL $L;
   border-radius: $S;
@@ -41,7 +40,6 @@
     color: $grey;
     text-align: center;
     padding-bottom: $L;
-    //border-bottom: 1px solid $antiFlashWhite;
   }
 
   p {
@@ -51,7 +49,6 @@
 
   ul {
     column-count: 2;
-    // font-size: 12px;
     list-style-type: none;
     line-height: 2.5;
     margin-bottom: 54px;
@@ -94,7 +91,6 @@ div.dark {
 
   h3 {
     color: $antiFlashWhite;
-    // border-color: $lapisLazuli;
   }
 
   p {

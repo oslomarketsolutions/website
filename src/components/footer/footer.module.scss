@@ -17,7 +17,6 @@
   }
 
   ul {
-    // font-size: 0.875rem;
     margin: 0;
     padding: 0;
 
@@ -27,7 +26,6 @@
   }
 
   h3 {
-    // font-size: 1.125rem;
     margin: 18px 0;
     padding-bottom: 8px;
     border-bottom: 1px solid $antiFlashWhite;
@@ -90,13 +88,11 @@
     width: 100%;
     color: $antiFlashWhite;
     margin-bottom: $XXS;
-    // font-size: 0.75rem;
 
     .copyright {
       display: flex;
       align-items: center;
       justify-content: center;
-      // width: 100%;
 
       svg {
         font-size: 12px;
@@ -170,14 +166,6 @@
   }
 
   @media (min-width: 1024px) {
-    /* h3 {
-      font-size: 1.4rem;
-    }
-
-    ul {
-      font-size: 1.125rem;
-    } */
-
     .footerContainer {
       max-width: 1140px;
       margin: 0 auto;

@@ -4,10 +4,6 @@ $duration: 0.2s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-/* .noScroll {
-  overflow: hidden;
-} */
-
 header {
   position: fixed;
   top: 0;
@@ -30,7 +26,6 @@ header.headerUnderline {
     height: 58px;
     .logoWrapper {
       height: 38px;
-      // margin-top: 18px;
       overflow: hidden;
       img {
         width: 90px;
@@ -42,8 +37,6 @@ header.headerUnderline {
 .navbar {
   display: flex;
   align-items: center;
-  // width: 90%;
-  // margin: 16px auto 0;
   max-width: 1140px;
   padding: 16px 0 10px;
   width: 100%;
@@ -69,7 +62,6 @@ header.headerUnderline {
 
     a {
       padding-bottom: 0;
-      // padding: 0 8px 0 8px;
       position: relative;
       height: 36px;
       display: flex;
@@ -144,10 +136,6 @@ header.headerUnderline {
     }
   }
 
-  /* a {
-    font-size: 1.25rem;
-  } */
-
   a,
   a:link,
   a:visited,
@@ -156,7 +144,6 @@ header.headerUnderline {
   a:active {
     color: inherit;
     text-decoration: none;
-    // text-transform: uppercase;
   }
 
   a.noHover:hover {
@@ -209,33 +196,6 @@ header.headerUnderline {
   .languageSelectorMobile {
     display: none;
   }
-  /* .hamburger {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-  }
-
-  .bar {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    max-width: 30px;
-    height: 2px;
-    background-color: $darkBlue;
-    transform-origin: center;
-    transition: all 0.3s ease;
-  }
-
-  .bar:first-child {
-    transform: translate(0, -7px);
-  }
-  .bar:last-child {
-    transform: translate(0, 7px);
-  } */
 }
 
 header.navColorWhite {
@@ -401,238 +361,3 @@ header.navColorWhite .navbar {
     }
   }
 }
-
-@media (min-width: 1024px) {
-  .navbar {
-    /* max-width: 1140px;
-    padding: 16px 0 0;
-    width: 100%;
-    margin: 0 auto; */
-
-    /*  button,
-    .menuGraph {
-      display: none;
-    }  */
-
-    /* .logo > img {
-      width: 125px;
-    } */
-
-    /* nav {
-      position: inherit;
-      visibility: inherit;
-      opacity: inherit;
-
-      .active {
-        &:before,
-        &:after {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-        }
-      }
-
-      a {
-        padding-bottom: 0;
-        padding: 0 8px 0 8px;
-        position: relative;
-        height: 36px;
-        display: flex;
-        align-items: center;
-
-        //Animation for underlining menu
-        &:before,
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 1px;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background-color: $vibrantBlue;
-        }
-        &:before {
-          opacity: 0;
-          transform: translateY(-$distance);
-          transition: transform 0s $easeOutBack, opacity 0s;
-        }
-        &:after {
-          opacity: 0;
-          transform: translateY($distance/2);
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:hover {
-          &:before,
-          &:after {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          &:before {
-            transition: transform $duration $easeOutBack, opacity $duration;
-          }
-          &:after {
-            transition: transform 0s $duration $easeOutBack,
-              opacity 0s $duration;
-          }
-        }
-      }
-    } */
-
-    /* a.noHover:hover {
-      &:before,
-      &:after {
-        opacity: 0;
-        transform: none;
-      }
-      &:before {
-        transition: none;
-      }
-      &:after {
-        transition: none;
-      }
-    } */
-
-    /* ul {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    .noPaddingRight {
-      padding-right: 0;
-    }
-
-    .doublePadding {
-      padding-right: 24px;
-    }
-
-    .borderLeft {
-      border-left: 2px solid $darkBlue;
-    }
-
-    .borderRight {
-      border-right: 2px solid $darkBlue;
-    } */
-  }
-
-  /* header.navColorWhite {
-    background-color: $darkBlue;
-  }
-
-  header.navColorWhite .navbar {
-    color: #fff;
-
-    a {
-      &:before,
-      &:after {
-        background-color: $vibrantBlue;
-      }
-    }
-
-    .borderLeft {
-      border-color: $vibrantBlue;
-    }
-
-    .borderRight {
-      border-color: $vibrantBlue;
-    }
-  } */
-}
-
-/* @media (max-width: 1023px) {
-  .navbar {
-    .menuGraph {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .barOpen {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      max-width: 30px;
-      height: 2px;
-      background-color: $darkBlue;
-      transform-origin: center;
-      transition: all 0.3s ease;
-    }
-
-    .barOpen:first-child {
-      transform: rotate(45deg);
-    }
-
-    .barOpen:nth-child(2) {
-      max-width: 0;
-    }
-
-    .barOpen:last-child {
-      transform: rotate(-45deg);
-    }
-
-    nav.open {
-      color: #fff;
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 0s linear 0s, opacity 0.2s ease;
-      background: $darkBlue;
-    }
-
-    ul {
-      // margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 75%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    li {
-      padding: 16px 0;
-    }
-
-    li:last-of-type {
-      padding-top: 32px;
-    }
-
-    .doublePadding {
-      padding-bottom: 32px;
-    }
-
-    .socialMedia {
-      display: inline-block;
-      padding: 32px 16px;
-      border-top: 1px solid;
-      border-bottom: 1px solid;
-    }
-  }
-
-  header.navColorWhite .navbar {
-    .bar {
-      background-color: #fff;
-    }
-  }
-} */
