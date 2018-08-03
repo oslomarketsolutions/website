@@ -6,7 +6,7 @@ image1Alt: placeholder alt for image1
 text1: >-
   We are always looking for great people! We like people that are passionate
   about new technology and taking part in the creation of good, smart solutions.
-  You should also like Pina Coladas and getting caught in the rain. Or not.
+  You should also like Pina Coladas and getting caught in the rain. Or not. 
 
 
   Do you think you got what it takes? Send us an e-mail!
@@ -21,6 +21,14 @@ text2: >-
 
   We value .... Noe om mulighet til å påvirke selskapet, det man jobber med, se
   resultater etc. etc.?
+
+
+  Noe om personlighet??? Blir fort søkt/kleint
+
+
+  We have rap fans, metal heads and techno listeners, hockeyplayers,
+  non-athletes, yogis, skaters and "Birken-riders". There's meat lovers, vegans
+  and lactose intolerants. - wanna add something to our list?
 subHeader1: 'As an employee we can offer:'
 subHeader2: Job vacancies
 ---
