@@ -63,7 +63,7 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: $white;
     display: grid;
     grid-template-columns:
       [main-start] repeat(8, minmax(0, 128.5px))
@@ -102,7 +102,7 @@
 
       svg {
         font-size: 24px;
-        color: #fff;
+        color: $white;
       }
     }
 
@@ -272,7 +272,6 @@
     grid-column-gap: 16px;
 
     h1 {
-      // font-size: 72px;
       grid-column: 2 / span 3;
       grid-row: row1;
     }
@@ -320,7 +319,6 @@
     background-color: $antiFlashWhite;
 
     h1 {
-      // font-size: 72px;
       grid-column: 7 / span 3;
       grid-row: row1;
     }

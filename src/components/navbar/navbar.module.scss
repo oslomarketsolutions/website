@@ -9,7 +9,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #fff;
+  background-color: $white;
 }
 
 header.headerUnderline {
@@ -118,7 +118,7 @@ header.headerUnderline {
       align-items: center;
       border-radius: 50%;
       background-color: $vibrantOrange;
-      color: #fff;
+      color: $white;
       text-align: center;
       margin-left: 10px;
     }
@@ -203,7 +203,7 @@ header.navColorWhite {
 }
 
 header.navColorWhite .navbar {
-  color: #fff;
+  color: $white;
 
   a {
     &:before,
@@ -284,7 +284,7 @@ header.navColorWhite .navbar {
         border-radius: $XXS;
         border: 1px solid $antiFlashWhite;
         right: 0;
-        background-color: #fff;
+        background-color: $white;
         color: $textColor;
         width: 120px;
       }
@@ -344,7 +344,7 @@ header.navColorWhite .navbar {
     .languageSelectorMobile {
       button {
         svg {
-          color: #fff;
+          color: $white;
         }
       }
     }

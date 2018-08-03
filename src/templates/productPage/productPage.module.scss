@@ -2,10 +2,10 @@
   grid-column: full;
   margin: 112px auto 0;
   background-color: rgb(34, 68, 102);
-  color: white;
+  color: $white;
 
   .intro {
-    background-color: white;
+    background-color: $white;
     h2 {
       margin: 0;
       padding: 75px 0;
@@ -27,7 +27,7 @@
       justify-content: center;
       position: fixed;
       width: 100%;
-      background-color: white;
+      background-color: $white;
       box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
 
       animation: slideDown 0.5s forwards;
@@ -137,7 +137,7 @@
       background-color: #1c315b;
       height: 121px;
       width: 426px;
-      color: white;
+      color: $white;
       border: none;
       padding: 15px 32px;
       text-align: center;

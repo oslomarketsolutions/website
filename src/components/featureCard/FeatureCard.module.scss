@@ -1,7 +1,7 @@
 @import '../../layouts/variables';
 .featureCard {
   position: relative;
-  background-color: #fff;
+  background-color: $white;
   width: 320px;
   padding: $XL $L;
   border-radius: $S;
@@ -86,7 +86,7 @@ div.dark {
 
   .icon {
     background-color: $lapisLazuli;
-    color: #fff;
+    color: $white;
   }
 
   h3 {
@@ -145,7 +145,7 @@ div.dark {
 
     .customizationLink {
       background-color: $vibrantBlue;
-      color: #fff;
+      color: $white;
       border-bottom-left-radius: $S;
       border-bottom-right-radius: $S;
       text-align: center;
@@ -154,7 +154,7 @@ div.dark {
 
   div.dark {
     .customizationLink {
-      color: #fff;
+      color: $white;
     }
   }
 }
