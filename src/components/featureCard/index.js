@@ -46,10 +46,7 @@ const FeatureCard = ({ title, description, features, link, index, isDark }) => {
           ))}
       </ul>
       {/* Linken må få riktig 'to' fra props */}
-      <Link
-        className={`textButton ${styles.customizationLink}`}
-        to="/en/products"
-      >
+      <Link className={`textButton ${styles.customizationLink}`} to={link}>
         Learn more <FontAwesomeIcon icon={['fas', 'arrow-right']} />
       </Link>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
 import Slider from '../../components/slider/index';

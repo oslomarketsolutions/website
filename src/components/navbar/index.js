@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+// import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import logo from '../../img/logo_oms_hoved.png';
 import logoWhite from '../../img/logo_oms_hvit.png';
-import menuGraph from '../../img/menu_graph.png';
+// import menuGraph from '../../img/menu_graph.png';
 import styles from './navbar.module.scss';
 
 export default class Navbar extends Component {
