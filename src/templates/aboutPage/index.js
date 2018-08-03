@@ -42,20 +42,20 @@ export const AboutPageTemplate = ({
   employeeList,
   imageSizes,
 }) => (
-  <main>
-    <div className={styles.aboutPage}>
-      <section className={styles.aboutOms}>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <ImageWrapper
-          alt={imageAlt}
-          src={image}
-          sizes={findImageSizes(image, imageSizes)}
-          outerWrapperClassName={styles.imageContainer}
-        />
-      </section>
-      <section className={styles.aboutEmployees}>
-        <h2>{header}</h2>
+  <main className={styles.aboutPage}>
+    <section className={styles.aboutOms}>
+      <h1>{title}</h1>
+      <p className="bodyLarge">{text}</p>
+      <ImageWrapper
+        alt={imageAlt}
+        src={image}
+        sizes={findImageSizes(image, imageSizes)}
+        outerWrapperClassName={styles.imageContainer}
+      />
+    </section>
+    <section className={styles.aboutEmployees}>
+      <h1>{header}</h1>
+      <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
           sortedEmployeeList(employeeList).map(employee => {
             const {
@@ -77,8 +77,8 @@ export const AboutPageTemplate = ({
               />
             );
           })}
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 );
 

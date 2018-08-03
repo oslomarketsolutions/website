@@ -41,56 +41,51 @@ export const CareerPageTemplate = ({
   perkList,
   imageSizes,
 }) => (
-  <main>
-    <div className={styles.careerPage}>
-      <section className={styles.careerOms}>
-        <h2>{title}</h2>
-        <ImageWrapper
-          alt={image1Alt}
-          src={image1}
-          outerWrapperClassName={styles.imageContainer}
-          sizes={findImageSizes(image1, imageSizes)}
-        />
-        <p>{text1}</p>
-      </section>
-      <section className={styles.whyOms}>
-        <h2>{header}</h2>
-        <ImageWrapper
-          alt={image2Alt}
-          src={image2}
-          outerWrapperClassName={styles.imageContainer}
-          sizes={findImageSizes(image2, imageSizes)}
-        />
-        <p>{text2}</p>
-      </section>
-      <section className={styles.careerPerks}>
-        <h3>{subHeader1}</h3>
-        <div className={styles.perkCardContainer}>
-          {perkList &&
-            perkList.map(perk => {
-              const {
-                title: perkTitle,
-                text: perkText,
-              } = perk.node.frontmatter;
-              return (
-                <PerkCard
-                  key={perkTitle}
-                  title={perkTitle}
-                  text={perkText}
-                  color={color()}
-                />
-              );
-            })}
-        </div>
-      </section>
-      <section className={styles.careerJobVacancies}>
-        <h2>{subHeader2}</h2>
-        <iframe
-          title="Job Vacancies"
-          src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
-        />
-      </section>
-    </div>
+  <main className={styles.careerPage}>
+    <section className={styles.careerOms}>
+      <h1>{title}</h1>
+      <p className="bodyLarge">{text1}</p>
+      <ImageWrapper
+        alt={image1Alt}
+        src={image1}
+        outerWrapperClassName={styles.imageContainer}
+        sizes={findImageSizes(image1, imageSizes)}
+      />
+    </section>
+    <section className={styles.whyOms}>
+      <h1>{header}</h1>
+      <p className="bodyLarge">{text2}</p>
+      <ImageWrapper
+        alt={image2Alt}
+        src={image2}
+        outerWrapperClassName={styles.imageContainer}
+        sizes={findImageSizes(image2, imageSizes)}
+      />
+    </section>
+    <section className={styles.careerPerks}>
+      <h3>{subHeader1}</h3>
+      <div className={styles.perkCardContainer}>
+        {perkList &&
+          perkList.map(perk => {
+            const { title: perkTitle, text: perkText } = perk.node.frontmatter;
+            return (
+              <PerkCard
+                key={perkTitle}
+                title={perkTitle}
+                text={perkText}
+                color={color()}
+              />
+            );
+          })}
+      </div>
+    </section>
+    <section className={styles.careerJobVacancies}>
+      <h2>{subHeader2}</h2>
+      <iframe
+        title="Job Vacancies"
+        src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
+      />
+    </section>
   </main>
 );
 

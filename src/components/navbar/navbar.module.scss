@@ -17,7 +17,26 @@ header {
 }
 
 header.headerUnderline {
+  border-bottom: 1px solid $antiFlashWhite;
+}
+header.headerUnderline.navColorWhite {
   border-bottom: 1px solid $lapisLazuli;
+}
+
+header.headerUnderline {
+  box-shadow: $boxShadow;
+
+  .navbar {
+    height: 58px;
+    .logoWrapper {
+      height: 38px;
+      // margin-top: 18px;
+      overflow: hidden;
+      img {
+        width: 90px;
+      }
+    }
+  }
 }
 
 .navbar {
@@ -29,7 +48,6 @@ header.headerUnderline {
   padding: 16px 0 10px;
   width: 100%;
   margin: 0 auto;
-
   nav {
     position: inherit;
     visibility: inherit;
@@ -123,7 +141,6 @@ header.headerUnderline {
     svg {
       margin: 0 10px 1px 0;
       font-size: 1.125rem;
-      color: #fff;
     }
   }
 
@@ -156,7 +173,7 @@ header.headerUnderline {
     }
   }
 
-  .logo {
+  .logoWrapper {
     padding: 0;
     margin-right: auto;
     z-index: 4;
@@ -252,7 +269,7 @@ header.navColorWhite .navbar {
 
 @media (max-width: 1024px) {
   .navbar {
-    .logo {
+    .logoWrapper {
       img {
         width: 100px;
       }
@@ -271,7 +288,7 @@ header.navColorWhite .navbar {
 
 @media (max-width: 580px) {
   .navbar {
-    .logo {
+    .logoWrapper {
       position: relative;
       width: 88px;
       overflow: hidden;
@@ -304,6 +321,7 @@ header.navColorWhite .navbar {
         position: absolute;
         top: 24px;
         border-radius: $XXS;
+        border: 1px solid $antiFlashWhite;
         right: 0;
         background-color: #fff;
         color: $textColor;
@@ -344,6 +362,7 @@ header.navColorWhite .navbar {
 
         svg {
           margin: 0;
+          color: $darkBlue;
         }
       }
 
@@ -355,8 +374,30 @@ header.navColorWhite .navbar {
         display: block;
       }
     }
+
     .languageSelectorDesktop {
       display: none;
+    }
+  }
+  header.navColorWhite .navbar {
+    .languageSelectorMobile {
+      button {
+        svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+  header.headerUnderline {
+    .navbar {
+      height: 38px;
+      .logoWrapper {
+        height: 32px;
+        margin-top: -6px;
+        img {
+          width: 60px;
+        }
+      }
     }
   }
 }

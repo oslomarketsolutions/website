@@ -38,7 +38,7 @@ export default class Navbar extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll(event) {
+  handleScroll() {
     if (document != null) {
       if (
         document.body.scrollTop !== 0 ||
@@ -89,25 +89,26 @@ export default class Navbar extends Component {
   render() {
     const isOnHomePage = this.props.location.pathname.toString().length < 5;
     const navColorWhite = this.state.navOpen ? false : isOnHomePage;
-    const headerUnderline = this.state.headerUnderline;
 
     return (
       <header
         className={`${navColorWhite ? styles.navColorWhite : ''} ${
-          headerUnderline ? styles.headerUnderline : ''
+          this.state.headerUnderline ? styles.headerUnderline : ''
         }`}
       >
         <div className={styles.navbar}>
           {/* <Helmet>
             <body className={this.state.navOpen ? styles.noScroll : null} />
           </Helmet> */}
-          <Link
-            className={`${styles.noHover} ${styles.logo}`}
-            to={`/${this.props.language}`}
-            /* onClick={this.closeNav} */
-          >
-            <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
-          </Link>
+          <div className={styles.logoWrapper}>
+            <Link
+              className={`${styles.noHover} ${styles.logo}`}
+              to={`/${this.props.language}`}
+              /* onClick={this.closeNav} */
+            >
+              <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
+            </Link>
+          </div>
           {/* <button
             onClick={this.toggleNav}
             aria-label={
