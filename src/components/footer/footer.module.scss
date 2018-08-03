@@ -84,23 +84,30 @@
 
   .bottom {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
     width: 100%;
     color: $antiFlashWhite;
+    margin-bottom: $XXS;
     // font-size: 0.75rem;
 
     .copyright {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      // width: 100%;
 
       svg {
         font-size: 12px;
         margin-right: 2px;
       }
+    }
+
+    .licenses {
+      padding-left: $XS;
+      margin-left: $XS;
+      border-left: 1px solid $antiFlashWhite;
     }
   }
 
@@ -188,7 +195,27 @@
 
 @media (max-width: 1172px) {
   .footerContainer {
-    width: 97%;
+    width: 96%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer {
+    .bottom {
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+
+      .copyright {
+        width: 100%;
+      }
+
+      .licenses {
+        padding-left: 0;
+        margin-left: 0;
+        border-left: none;
+      }
+    }
   }
 }

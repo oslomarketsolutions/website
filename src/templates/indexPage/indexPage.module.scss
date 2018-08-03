@@ -474,6 +474,15 @@
         margin: 0 auto 0;
       }
     }
+    .investorPortal {
+      height: 2978px;
+      .integrationLogos {
+        flex-flow: row wrap;
+        .imageContainer {
+          width: 26%;
+        }
+      }
+    }
   }
 }
 
@@ -496,6 +505,7 @@
       }
 
       .second {
+        grid-column: 4 / span 5;
         width: 168px;
       }
 
@@ -505,7 +515,7 @@
     }
 
     .investorPortal {
-      height: 2778px;
+      height: 2828px;
       grid-template-rows:
         [emptySpace-start] 400px
         [emptySpace-end row1-start] fit-content(100%)
@@ -534,6 +544,12 @@
 
       .subHeader1 + p {
         grid-column: 3 / span 6;
+      }
+
+      .integrationLogos {
+        .imageContainer {
+          width: 44%;
+        }
       }
     }
 

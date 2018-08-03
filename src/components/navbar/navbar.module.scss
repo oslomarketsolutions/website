@@ -26,7 +26,7 @@ header.headerUnderline {
   // width: 90%;
   // margin: 16px auto 0;
   max-width: 1140px;
-  padding: 16px 0 0;
+  padding: 16px 0 10px;
   width: 100%;
   margin: 0 auto;
 
@@ -51,7 +51,7 @@ header.headerUnderline {
 
     a {
       padding-bottom: 0;
-      padding: 0 8px 0 8px;
+      // padding: 0 8px 0 8px;
       position: relative;
       height: 36px;
       display: flex;
@@ -96,6 +96,8 @@ header.headerUnderline {
 
   li {
     list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
 
     span {
       width: 20px;
@@ -171,11 +173,6 @@ header.headerUnderline {
     padding: 0;
   }
 
-  li {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
   .noPaddingRight {
     padding-right: 0;
   }
@@ -249,7 +246,7 @@ header.navColorWhite .navbar {
 
 @media (max-width: 1172px) {
   .navbar {
-    width: 97%;
+    width: 96%;
   }
 }
 
@@ -260,18 +257,80 @@ header.navColorWhite .navbar {
         width: 100px;
       }
     }
+
+    li {
+      span {
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+        margin-left: $XS;
+      }
+    }
   }
 }
 
 @media (max-width: 580px) {
   .navbar {
+    .logo {
+      position: relative;
+      width: 88px;
+      overflow: hidden;
+      height: 46px;
+
+      img {
+        width: 80px;
+        position: absolute;
+        top: 6px;
+        left: -5px;
+      }
+    }
+
+    li {
+      padding: 0 $XS;
+
+      span {
+        width: $XS;
+        height: $XS;
+        font-size: 0px;
+        margin-left: $XXS;
+      }
+    }
+
     .languageSelectorMobile {
       display: list-item;
       position: relative;
 
+      ul {
+        position: absolute;
+        top: 24px;
+        border-radius: $XXS;
+        right: 0;
+        background-color: #fff;
+        color: $textColor;
+        width: 120px;
+      }
+
       li {
         padding: 0;
-        width: 100px;
+        padding: 0 $M 0 $L;
+
+        svg {
+          margin: 0 $XS 0 0;
+          font-size: 14px;
+          opacity: 0;
+          color: $primaryGreen;
+        }
+      }
+
+      li:first-of-type {
+        border-bottom: 1px solid $antiFlashWhite;
+      }
+
+      li.selected {
+        font-weight: 800;
+        svg {
+          opacity: 1;
+        }
       }
 
       button {
@@ -285,34 +344,6 @@ header.navColorWhite .navbar {
 
         svg {
           margin: 0;
-        }
-      }
-
-      ul {
-        position: absolute;
-        top: 24px;
-        border-radius: $XXS;
-        right: 0;
-        background-color: #fff;
-        color: $textColor;
-
-        li:first-of-type {
-          border-bottom: 1px solid $antiFlashWhite;
-        }
-
-        svg {
-          margin: 0 $XS 0 0;
-          font-size: 14px;
-          opacity: 0;
-          color: $primaryGreen;
-        }
-
-        li.selected {
-          font-weight: 800;
-
-          svg {
-            opacity: 1;
-          }
         }
       }
 

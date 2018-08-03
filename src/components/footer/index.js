@@ -23,7 +23,7 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <Link to={`/${language}/products`}>
-                {language === 'en' ? 'Products' : 'Produkter'}
+                {language === 'en' ? 'Services' : 'Produkter'}
               </Link>
             </li>
             <li>
