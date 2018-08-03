@@ -6,7 +6,6 @@ import PreviewWrapper from '../../components/previewWrapper';
 const CareerPagePreview = ({ entry, getAsset }) => {
   // I don't think we have access to the perklist through the CMS preview,
   // it's fetched by a query in careerPage/index.js
-  console.log('Her: ', entry.getIn(['data']));
   const perkList = [
     {
       node: {

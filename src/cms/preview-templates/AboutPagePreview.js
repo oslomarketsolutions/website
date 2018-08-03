@@ -7,11 +7,10 @@ const AboutPagePreview = ({ entry, getAsset }) => (
   <PreviewWrapper>
     <AboutPageTemplate
       title={entry.getIn(['data', 'title'])}
-      header1={entry.getIn(['data', 'header1'])}
       image={getAsset(entry.getIn(['data', 'image']))}
       imageAlt={entry.getIn(['data', 'imageAlt'])}
       text={entry.getIn(['data', 'text'])}
-      header2={entry.getIn(['data', 'header2'])}
+      header={entry.getIn(['data', 'header'])}
     />
   </PreviewWrapper>
 );
