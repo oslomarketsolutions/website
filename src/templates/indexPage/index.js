@@ -11,7 +11,7 @@ import Button from '../../components/button/index';
 
 const IndexPageTemplate = ({ data }) => {
   const {
-    onTopOfAnimation,
+    hero,
     transitionalElement,
     investorPortal,
     customization,
@@ -23,10 +23,8 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <main className={styles.homePage}>
       <section className={styles.animation}>
-        <h1 className={`hero ${styles.centered}`}>{onTopOfAnimation.title}</h1>
-        <p className={`heroSubtitle ${styles.centered}`}>
-          {onTopOfAnimation.subtitle}
-        </p>
+        <h1 className={`hero ${styles.centered}`}>{hero.title}</h1>
+        <p className={`heroSubtitle ${styles.centered}`}>{hero.subtitle}</p>
         <button className="buttonLarge">Contact us</button>
       </section>
 

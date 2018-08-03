@@ -12,7 +12,7 @@ import PreviewWrapper from '../../components/previewWrapper';
 // that take in multiple props.
 const IndexPagePreview = ({ entry, getAsset }) => {
   const customerLogos = entry
-    .getIn(['data', 'customerLogos'])
+    .getIn(['data', 'transitionalElement.customerLogos'])
     .map(customerLogo => ({
       logo: getAsset(customerLogo.get('logo')),
       name: customerLogo.get('name'),
@@ -22,16 +22,16 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     .getIn(['data', 'customization', 'cards'])
     .map(card => ({
       header: card.get('header'),
-      image: getAsset(card.get('image')),
       description: card.get('description'),
       features: card.get('features').toJS(),
+      isDark: card.get('isDark'),
     }));
 
-  const configurationLogos = entry
-    .getIn(['data', 'configurationLogos'])
-    .map(configurationLogo => ({
-      logo: getAsset(configurationLogo.get('logo')),
-      name: configurationLogo.get('name'),
+  const integrationLogo = entry
+    .getIn(['data', 'customization', 'serviceIntegrations', 'integrationLogos'])
+    .map(logo => ({
+      logo: getAsset(logo.get('logo')),
+      name: logo.get('name'),
     }));
 
   // Create the data object IndexPage expects
@@ -39,57 +39,91 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     imageSizes: { edges: [] },
     page: {
       frontmatter: {
-        topImage: {
-          image: getAsset(entry.getIn(['data', 'topImage', 'image'])),
-          alt: entry.getIn(['data', 'topImage', 'alt']),
+        hero: {
+          title: entry.getIn(['data', 'hero', 'title']),
+          subtitle: entry.getIn(['data', 'hero', 'subtitle']),
         },
-        configurationLogos,
-        featuredContent: {
-          image: getAsset(entry.getIn(['data', 'featuredContent', 'image'])),
-          header: entry.getIn(['data', 'featuredContent', 'header']),
-          text: entry.getIn(['data', 'featuredContent', 'text']),
+        transitionalElement: {
+          numbersAndText: {
+            companiesNumber: entry.getIn([
+              'data',
+              'transitionalElement',
+              'numbersAndText',
+              'companiesNumber',
+            ]),
+            companiesText: entry.getIn([
+              'data',
+              'transitionalElement',
+              'numbersAndText',
+              'companiesText',
+            ]),
+            usersNumber: entry.getIn([
+              'data',
+              'transitionalElement',
+              'numbersAndText',
+              'usersNumber',
+            ]),
+            usersText: entry.getIn([
+              'data',
+              'transitionalElement',
+              'numbersAndText',
+              'usersText',
+            ]),
+            text: entry.getIn([
+              'data',
+              'transitionalElement',
+              'numbersAndText',
+              'text',
+            ]),
+          },
+          customerLogos,
+        },
+        investorPortal: {
+          header: entry.getIn(['data', 'investorPortal', 'header']),
+          image: getAsset(entry.getIn(['data', 'investorPortal', 'image'])),
+          text: entry.getIn(['data', 'investorPortal', 'text']),
         },
         customization: {
           header: entry.getIn(['data', 'customization', 'header']),
+          text: entry.getIn(['data', 'customization', 'text']),
           cards: customizationCards,
-        },
-        solutionsContent: {
-          firstCard: {
-            image: getAsset(
-              entry.getIn(['data', 'solutionsContent', 'firstCard', 'image']),
-            ),
+          serviceIntegrations: {
             header: entry.getIn([
               'data',
-              'solutionsContent',
-              'firstCard',
+              'customization',
+              'serviceIntegrations',
               'header',
             ]),
             text: entry.getIn([
               'data',
-              'solutionsContent',
-              'firstCard',
+              'customization',
+              'serviceIntegrations',
               'text',
             ]),
+            integrationLogos: integrationLogo,
           },
-          secondCard: {
+        },
+        otherProducts: {
+          arena: {
             image: getAsset(
-              entry.getIn(['data', 'solutionsContent', 'secondCard', 'image']),
+              entry.getIn(['data', 'otherProducts', 'arena', 'image']),
+            ),
+            header: entry.getIn(['data', 'otherProducts', 'arena', 'header']),
+            text: entry.getIn(['data', 'otherProducts', 'arena', 'text']),
+          },
+          irModules: {
+            image: getAsset(
+              entry.getIn(['data', 'otherProducts', 'irModules', 'image']),
             ),
             header: entry.getIn([
               'data',
-              'solutionsContent',
-              'secondCard',
+              'otherProducts',
+              'irModules',
               'header',
             ]),
-            text: entry.getIn([
-              'data',
-              'solutionsContent',
-              'secondCard',
-              'text',
-            ]),
+            text: entry.getIn(['data', 'otherProducts', 'irModules', 'text']),
           },
         },
-        customerLogos,
       },
     },
   };

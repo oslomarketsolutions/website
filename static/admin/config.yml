@@ -97,8 +97,8 @@ collections:
         name: "norwegian_index_page"
         label: "no/Homepage"
         fields:
-          - label: "On top of animation"
-            name: "onTopOfAnimation"
+          - label: "Hero"
+            name: "hero"
             widget: "object"
             fields:
               - {label: "Header", name: "title", widget: "string"}
@@ -167,8 +167,8 @@ collections:
         name: "english_index_page"
         label: "en/Homepage"
         fields:
-          - label: "On top of animation"
-            name: "onTopOfAnimation"
+          - label: "Hero"
+            name: "hero"
             widget: "object"
             fields:
               - {label: "Header", name: "title", widget: "string"}

@@ -1,5 +1,5 @@
 ---
-onTopOfAnimation:
+hero:
   title: Keeping investors informed and empowered
   subtitle: Trading platforms and services for the modern web
 transitionalElement:

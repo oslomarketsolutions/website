@@ -21,7 +21,7 @@ export const pageQuery = graphql`
   query EngIndexQuery {
     page: markdownRemark(id: { regex: "/src/pages/en/index.md/" }) {
       frontmatter {
-        onTopOfAnimation {
+        hero {
           title
           subtitle
         }
