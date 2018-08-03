@@ -1,15 +1,16 @@
 @import '../../layouts/variables';
 
 .contactCard {
-  margin: 0 auto;
+  margin-left: 10%;
   border: 2px solid $darkBlue;
   position: sticky;
   top: 250px;
-  padding: 40px 10px;
-  width: 100%;
-  max-width: 400px;
+  padding: 60px 10px;
+  width: 92%;
+  max-width: 500px;
   text-align: center;
-  box-shadow: $boxShadow;
+  box-shadow: $newBoxShadow;
+  border-radius: $S;
 
   ul {
     list-style-type: none;
@@ -19,22 +20,29 @@
 
   svg {
     margin-right: 10px;
+    color: $darkBlue;
   }
 
   .imageContainer {
     width: 50%;
     min-width: 170px;
-    margin: 60px auto;
+    margin: 100px auto;
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1300px) {
   .contactCard {
-    max-width: 500px;
-    padding: 60px 10px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactCard {
+    max-width: 400px;
+    padding: 40px 10px;
 
     .imageContainer {
-      margin: 100px auto;
+      margin: 60px auto;
     }
   }
 }

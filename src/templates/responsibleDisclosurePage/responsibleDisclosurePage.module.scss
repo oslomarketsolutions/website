@@ -1,9 +1,6 @@
-.responsibleDisclosurePage {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 90%;
-  margin: 112px auto 0;
+@import '../../layouts/variables';
 
+.responsibleDisclosurePage {
   section {
     padding: 32px 0;
   }
@@ -19,6 +16,14 @@
     padding-left: 40px;
   }
 
+  li {
+    font-family: 'Work Sans', 'sans-serif';
+    font-size: 1rem;
+    font-weight: $thin;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+  }
+
   p {
     display: block;
     margin: 1em 0px 1em 0px;
@@ -29,15 +34,54 @@
   }
 
   .left {
+    margin: 200px 0;
+    grid-column: 2 / span 5;
     width: 100%;
   }
 
   .right {
+    margin: 200px 0;
+    grid-column: 7 / span 4;
     width: 100%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1520px) {
+  .responsibleDisclosurePage {
+    .right {
+      grid-column: 7 / span 3;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .responsibleDisclosurePage {
+    .right {
+      grid-column: main;
+      margin-top: 0;
+    }
+
+    .left {
+      grid-column: 3 / span 6;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .responsibleDisclosurePage {
+    .right {
+      margin-bottom: 30px;
+    }
+
+    .left {
+      margin-top: 100px;
+      grid-column: main;
+    }
+  }
+}
+
+/* @media (min-width: 1024px) {
   .responsibleDisclosurePage {
     max-width: 1864px;
     padding: 0 32px;
@@ -74,4 +118,4 @@
       width: 500px;
     }
   }
-}
+} */
