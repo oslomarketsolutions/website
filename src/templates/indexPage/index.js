@@ -9,7 +9,7 @@ import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import Button from '../../components/button/index';
 
-const IndexPageTemplate = ({ data }) => {
+const IndexPageTemplate = ({ language, data }) => {
   const {
     hero,
     transitionalElement,
@@ -19,6 +19,8 @@ const IndexPageTemplate = ({ data }) => {
   } = data.page.frontmatter;
 
   const imageSizes = data.imageSizes.edges;
+  const parsedPath = /^\/(\w\w)/.exec(language);
+  const strippedLanguage = parsedPath && parsedPath[1];
 
   return (
     <main className={styles.homePage}>
@@ -101,7 +103,7 @@ const IndexPageTemplate = ({ data }) => {
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
         {/* Need to fix 'to' */}
-        <Button to="/en/products" text="Learn more" />
+        <Button to={`/${strippedLanguage}/products`} text="Learn more" />
 
         <h2 className={`${styles.subHeader1} ${styles.centered}`}>
           {customization.header}
@@ -109,12 +111,14 @@ const IndexPageTemplate = ({ data }) => {
         <p>{customization.text}</p>
         <div className={styles.customizationCards}>
           {customization.cards.map((customizationCard, index) => (
+            /* Need to fix 'link' */
             <FeatureCard
               key={customizationCard.header}
               title={customizationCard.header}
               description={customizationCard.description}
               features={customizationCard.features}
               index={index}
+              to={`/${strippedLanguage}/products`}
               isDark={customizationCard.isDark}
             />
           ))}
@@ -143,7 +147,7 @@ const IndexPageTemplate = ({ data }) => {
         <h1>{otherProducts.arena.header}</h1>
         <p className="bodyLarge">{otherProducts.arena.text}</p>
         {/* Need to fix 'to' */}
-        <Button to="/en/products" text="Learn more" />
+        <Button to={`/${strippedLanguage}/products`} text="Learn more" />
         <ImageWrapper
           src={otherProducts.arena.image}
           alt="Abstract arena"
@@ -155,7 +159,7 @@ const IndexPageTemplate = ({ data }) => {
         <h1>{otherProducts.irModules.header}</h1>
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
         {/* Need to fix 'to' */}
-        <Button to="/en/products" text="Learn more" />
+        <Button to={`/${strippedLanguage}/products`} text="Learn more" />
         <ImageWrapper
           src={otherProducts.arena.image}
           alt="Abstract IR Modules"
@@ -176,6 +180,7 @@ IndexPageTemplate.propTypes = {
       edges: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
+  language: PropTypes.string,
 };
 
 export default IndexPageTemplate;

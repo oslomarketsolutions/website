@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndexPageTemplate from '../../templates/indexPage';
 
-const IndexPage = ({ data }) => <IndexPageTemplate data={data} />;
+const IndexPage = ({ location, data }) => (
+  <IndexPageTemplate language={location.pathname} data={data} />
+);
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -13,6 +15,7 @@ IndexPage.propTypes = {
       edges: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
+  location: PropTypes.shape({}),
 };
 
 export default IndexPage;

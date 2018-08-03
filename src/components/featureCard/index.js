@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FeatureCard.module.scss';
 
-const FeatureCard = ({ title, description, features, link, index, isDark }) => {
+const FeatureCard = ({ title, description, features, to, index, isDark }) => {
   let icon = '';
   let codeBranchIcon = false;
 
@@ -45,7 +45,7 @@ const FeatureCard = ({ title, description, features, link, index, isDark }) => {
         ))}
       </ul>
       {/* Linken må få riktig 'to' fra props */}
-      <Link className={`textButton ${styles.customizationLink}`} to={link}>
+      <Link className={`textButton ${styles.customizationLink}`} to={to}>
         Learn more <FontAwesomeIcon icon={['fas', 'arrow-right']} />
       </Link>
     </div>
@@ -56,7 +56,7 @@ FeatureCard.propTypes = {
   title: PropTypes.string,
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
-  link: PropTypes.string,
+  to: PropTypes.string,
   index: PropTypes.number,
   isDark: PropTypes.bool,
 };
