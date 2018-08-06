@@ -7,7 +7,7 @@
     grid-column-gap: 16px;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      220px fit-content(100%) fit-content(100%) fit-content(100%)
+      220px max-content max-content max-content
       120px;
 
     h1 {
@@ -37,7 +37,7 @@
     grid-column-gap: 16px;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      120px fit-content(100%) fit-content(100%) fit-content(100%)
+      120px max-content max-content max-content
       120px;
 
     h1 {

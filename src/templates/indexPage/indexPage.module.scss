@@ -9,9 +9,7 @@
     grid-column: 1 / span 10;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 30% fit-content(100%) fit-content(100%) fit-content(
-        100%
-      );
+    grid-template-rows: 30% max-content max-content max-content;
     grid-column-gap: 16px;
     color: $antiFlashWhite;
     width: 100%;
@@ -48,7 +46,7 @@
     background-color: $white;
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 128.5px));
-    grid-template-rows: fit-content(100%) auto;
+    grid-template-rows: max-content auto;
     grid-column-gap: 16px;
     align-items: center;
     color: $textColor;
@@ -147,11 +145,9 @@
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      624px fit-content(100%) fit-content(100%) fit-content(100%)
-      fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
-        100%
-      )
-      fit-content(100%) fit-content(100%) fit-content(100%);
+      624px max-content max-content max-content
+      max-content max-content max-content max-content
+      max-content max-content max-content max-content;
     grid-column-gap: 16px;
     align-items: center;
     height: 2578px;
@@ -260,7 +256,7 @@
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      220px fit-content(100%) fit-content(100%) fit-content(100%)
+      220px max-content max-content max-content
       120px;
     grid-column-gap: 16px;
 
@@ -298,7 +294,7 @@
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      220px fit-content(100%) fit-content(100%) fit-content(100%)
+      220px max-content max-content max-content
       120px;
     grid-column-gap: 16px;
     background-color: $antiFlashWhite;
@@ -380,9 +376,7 @@
 
     .arena,
     .irModules {
-      grid-template-rows: fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
-          100%
-        );
+      grid-template-rows: max-content max-content max-content max-content;
 
       h1 {
         grid-column: 3 / span 5;
@@ -461,7 +455,7 @@
 @media (max-width: 950px) {
   .homePage {
     .transition {
-      grid-template-rows: fit-content(100%) fit-content(100%) auto;
+      grid-template-rows: max-content max-content auto;
 
       .first {
         grid-column: 1 / span 4;
@@ -499,9 +493,7 @@
 @media (max-width: 580px) {
   .homePage {
     .animation {
-      grid-template-rows: 15% fit-content(100%) fit-content(100%) fit-content(
-          100%
-        );
+      grid-template-rows: 15% max-content max-content max-content;
     }
 
     .transition {
@@ -524,9 +516,9 @@
     .investorPortal {
       height: 3044px;
       grid-template-rows:
-        400px fit-content(100%) fit-content(100%) fit-content(100%)
-        fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%)
-        fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%);
+        400px max-content max-content max-content
+        max-content max-content max-content max-content
+        max-content max-content max-content max-content;
 
       h1 {
         grid-column: 2 / span 8;
