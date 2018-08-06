@@ -19,6 +19,13 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       name: logo.get('name'),
     }));
 
+  const investorPortalImages = entry
+    .getIn(['data', 'investorPortal', 'investorPortalImages'])
+    .map(investorPortalImage => ({
+      image: getAsset(investorPortalImage.get('image')),
+      name: investorPortalImage.get('name'),
+    }));
+
   const customizationCards = entry
     .getIn(['data', 'customization', 'cards'])
     .map(card => ({
@@ -81,7 +88,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         },
         investorPortal: {
           header: entry.getIn(['data', 'investorPortal', 'header']),
-          image: getAsset(entry.getIn(['data', 'investorPortal', 'image'])),
+          image: investorPortalImages,
           text: entry.getIn(['data', 'investorPortal', 'text']),
         },
         customization: {

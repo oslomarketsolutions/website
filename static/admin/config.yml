@@ -101,7 +101,12 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - {label: "Featured Image", name: "image", widget: "image"}
+              - label: "Investor portal images" 
+                name: "investorPortalImages"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
               - {label: "Text", name: "text", widget: "text"}
           - label: "Customization"
             name: "customization"
@@ -170,7 +175,12 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - {label: "Featured Image", name: "image", widget: "image"}
+              - label: "Investor portal images" 
+                name: "investorPortalImages"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
               - {label: "Text", name: "text", widget: "text"}
           - label: "Customization"
             name: "customization"

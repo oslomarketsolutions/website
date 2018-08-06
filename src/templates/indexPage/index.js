@@ -104,24 +104,15 @@ const IndexPageTemplate = ({ language, data }) => {
         <p className="bodyLarge">{investorPortal.text}</p>
         <Button to={`/${strippedLanguage}/products`} text="Learn more" />
         <div className={styles.investorPortalImagesWrapper}>
-          <ImageWrapper
-            src={investorPortal.image}
-            alt="Abstract investorportal"
-            sizes={findImageSizes(investorPortal.image, imageSizes)}
-            outerWrapperClassName={styles.imageContainer}
-          />
-          <ImageWrapper
-            src={investorPortal.image}
-            alt="Abstract investorportal"
-            sizes={findImageSizes(investorPortal.image, imageSizes)}
-            outerWrapperClassName={styles.imageContainer}
-          />
-          <ImageWrapper
-            src={investorPortal.image}
-            alt="Abstract investorportal"
-            sizes={findImageSizes(investorPortal.image, imageSizes)}
-            outerWrapperClassName={styles.imageContainer}
-          />
+          {investorPortal.investorPortalImages.map(investorPortalImage => (
+            <ImageWrapper
+              key={investorPortalImage.name}
+              src={investorPortalImage.image}
+              alt={investorPortalImage.name}
+              sizes={findImageSizes(investorPortalImage.image, imageSizes)}
+              outerWrapperClassName={styles.imageContainer}
+            />
+          ))}
         </div>
         <div className={styles.tickerTape}>
           <ImageWrapper

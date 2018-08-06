@@ -43,7 +43,10 @@ export const pageQuery = graphql`
         }
         investorPortal {
           header
-          image
+          investorPortalImages {
+            image
+            name
+          }
           text
         }
         customization {
