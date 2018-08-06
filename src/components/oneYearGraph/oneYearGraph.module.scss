@@ -1,9 +1,11 @@
+@import '../../layouts/variables';
+
 .container {
   overflow: hidden;
 }
 
 .oneYearGraph {
-  background: white;
+  background: $white;
   margin-bottom: -50px;
   height: 100%;
   width: 100%;

@@ -12,7 +12,7 @@ const Footer = ({ language, data }) => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerContainer}>
+      <div className={`bodyNormal ${styles.footerContainer}`}>
         <div className={styles.navigate}>
           <h3>{language === 'en' ? 'Navigate' : 'Navigasjon'}</h3>
           <ul>
@@ -23,7 +23,7 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <Link to={`/${language}/products`}>
-                {language === 'en' ? 'Products' : 'Produkter'}
+                {language === 'en' ? 'Services' : 'Produkter'}
               </Link>
             </li>
             <li>
@@ -159,9 +159,11 @@ const Footer = ({ language, data }) => {
         <div className={styles.bottom}>
           <div className={styles.copyright}>
             <FontAwesomeIcon icon={['far', 'copyright']} />
-            <p>2018 Oslo Market Solutions. All Rights Reserved.</p>
+            <p className="bodySmall">
+              2018 Oslo Market Solutions. All Rights Reserved.
+            </p>
           </div>
-          <div className={styles.licenses}>
+          <div className={`bodySmall ${styles.licenses}`}>
             <Link to={`/${language}/licenses`}>Licenses</Link>
           </div>
         </div>

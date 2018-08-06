@@ -1,67 +1,160 @@
-.FeatureCard {
-  text-decoration: none;
-  transition: transform 0.2s;
-  display: flex;
-  flex-flow: column wrap;
-  background-color: white;
-  color: #1c315b;
-  width: 620px;
-  height: 550px;
-  margin: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.01);
-  }
-
-  .imageContainer {
-    height: 190px;
-    width: 620px;
-  }
+@import '../../layouts/variables';
+.featureCard {
+  position: relative;
+  background-color: $white;
+  width: 320px;
+  padding: $XL $L;
+  border-radius: $S;
+  box-shadow: $newBoxShadow;
 
   .header {
+    border-bottom: 1px solid $antiFlashWhite;
+  }
+
+  .icon {
+    font-family: 'Work Sans', 'sans-serif';
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: $lightBlue;
+    margin: $L auto;
     display: flex;
-    height: 60px;
-    background-color: #b2cfae;
+    justify-content: center;
+    align-items: center;
+    color: $vibrantBlue;
+    font-size: 28px;
     font-weight: bold;
-    h4 {
-      align-self: center;
-      margin-left: 30px;
-      font-size: 2.1rem;
+
+    svg {
+      font-size: 42px;
     }
   }
 
-  .description {
-    height: 170px;
-    background-color: white;
+  .codeBranchIcon {
+    svg {
+      margin-left: 6px;
+    }
+  }
+
+  h3 {
+    color: $grey;
+    text-align: center;
+    padding-bottom: $L;
+  }
+
+  p {
+    height: 75px;
+    margin: $XL 0;
+  }
+
+  ul {
+    column-count: 2;
+    list-style-type: none;
+    line-height: 2.5;
+    margin-bottom: 54px;
+
+    svg {
+      margin-right: $XXS;
+      font-size: 18px;
+      color: $lapisLazuli;
+    }
+  }
+
+  .customizationLink {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $vibrantBlue;
+    text-decoration: none;
+    padding: $M $L;
+    border-top: 1px solid $antiFlashWhite;
+
+    svg {
+      font-size: 14px;
+      margin-left: 2px;
+    }
+  }
+}
+
+div.dark {
+  background-color: $darkBlue;
+
+  .header {
+    border-color: $lapisLazuli;
+  }
+
+  .icon {
+    background-color: $lapisLazuli;
+    color: $white;
+  }
+
+  h3 {
+    color: $antiFlashWhite;
+  }
+
+  p {
+    color: $antiFlashWhite;
+  }
+
+  ul {
+    color: $antiFlashWhite;
+
+    svg {
+      color: $primaryGreen;
+    }
+  }
+
+  .customizationLink {
+    border-color: $lapisLazuli;
+    color: $selectiveYellow;
+  }
+}
+
+@media (max-width: 1024px) {
+  .featureCard {
+    margin-bottom: $L;
+
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    .iconWrapper {
+      width: 40%;
+    }
+
+    .icon {
+      margin: 0 0 $M 0;
+    }
+
+    h3 {
+      width: 60%;
+      text-align: left;
+      padding-bottom: $M;
+    }
 
     p {
-      margin: 0;
-      padding: 30px 30px;
-      font-size: 21px;
-      line-height: 1.75em;
+      margin: $S 0 $XS 0;
+    }
+
+    ul {
+      margin-bottom: $L;
+    }
+
+    .customizationLink {
+      background-color: $vibrantBlue;
+      color: $white;
+      border-bottom-left-radius: $S;
+      border-bottom-right-radius: $S;
+      text-align: center;
     }
   }
 
-  .footer {
-    display: flex;
-    height: 130px;
-    background-color: #f7f7f7;
-
-    ul {
-      align-self: center;
-      margin: 0px 30px;
-      padding: 0;
-      column-count: 2;
-      list-style-image: url('../../img/greenBullet.svg');
-      list-style-position: inside;
-      font-size: 18px;
-      line-height: 2em;
-
-      li {
-        margin-right: 100px;
-      }
+  div.dark {
+    .customizationLink {
+      color: $white;
     }
   }
 }

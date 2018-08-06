@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndexPageTemplate from '../../templates/indexPage';
 
-const IndexPage = ({ data }) => <IndexPageTemplate data={data} />;
+const IndexPage = ({ location, data }) => (
+  <IndexPageTemplate language={location.pathname} data={data} />
+);
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -13,6 +15,7 @@ IndexPage.propTypes = {
       edges: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
+  location: PropTypes.shape({}),
 };
 
 export default IndexPage;
@@ -21,44 +24,57 @@ export const pageQuery = graphql`
   query NorIndexQuery {
     page: markdownRemark(id: { regex: "/src/pages/no/index.md/" }) {
       frontmatter {
-        topImage {
-          alt
-          image
+        hero {
+          title
+          subtitle
         }
-        featuredContent {
+        transitionalElement {
+          numbersAndText {
+            companiesNumber
+            companiesText
+            usersNumber
+            usersText
+            text
+          }
+          customerLogos {
+            logo
+            name
+          }
+        }
+        investorPortal {
           header
           image
           text
         }
         customization {
           header
+          text
           cards {
             header
             description
-            image
             features
+            isDark
+          }
+          serviceIntegrations {
+            header
+            text
+            integrationLogos {
+              logo
+              name
+            }
           }
         }
-
-        configurationLogos {
-          name
-          logo
-        }
-        solutionsContent {
-          firstCard {
+        otherProducts {
+          arena {
             image
             header
             text
           }
-          secondCard {
+          irModules {
             image
             header
             text
           }
-        }
-        customerLogos {
-          name
-          logo
         }
       }
     }

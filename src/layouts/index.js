@@ -7,6 +7,7 @@ import {
   faFacebook,
   faMedium,
   faGithubSquare,
+  faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faGlobe,
@@ -21,8 +22,15 @@ import {
   faEnvelope,
   faFireExtinguisher,
   faPaintBrush,
+  faArrowRight,
+  faChartArea,
+  faCodeBranch,
+  faCheck,
 } from '@fortawesome/free-solid-svg-icons';
-import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import {
+  faCopyright,
+  faCheckCircle,
+} from '@fortawesome/free-regular-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';
@@ -49,6 +57,12 @@ export const faLibrary = library.add(
   faEnvelope,
   faFireExtinguisher,
   faPaintBrush,
+  faArrowRight,
+  faCheckCircle,
+  faReact,
+  faChartArea,
+  faCodeBranch,
+  faCheck,
 );
 
 const fontAwesomeCSS = dom.css();
@@ -63,10 +77,16 @@ const TemplateWrapper = ({ children, location, data }) => {
         <link rel="icon" type="image/png" href={favicon} />
         <html lang={language} />
         <style>{fontAwesomeCSS}</style>
+        <link
+          href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800|Work+Sans:300,400"
+          rel="stylesheet"
+        />
       </Helmet>
-      <Navbar language={language} location={location} />
-      {children()}
-      <Footer language={language} data={data} />
+      <div className="grid">
+        <Navbar language={language} location={location} />
+        {children()}
+        <Footer language={language} data={data} />
+      </div>
     </React.Fragment>
   );
 };

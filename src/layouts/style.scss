@@ -2,31 +2,246 @@
 
 html {
   overflow-y: initial;
+  font-size: 16px;
 
   body {
-    color: $darkBlue;
+    color: $textColor;
     margin: 0;
+  }
 
-    main {
-      h2,
-      h3 {
-        width: 100%;
-      }
+  main {
+    display: grid;
+    grid-column: full;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-column-gap: 16px;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
+      minmax(0, 1fr) [full-end];
+    grid-column-gap: 16px;
+  }
+
+  // Typography
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Muli', 'sans-serif';
+    letter-spacing: -0.45px;
+  }
+
+  h1.hero {
+    font-size: 3.75rem;
+  }
+
+  h1 {
+    font-weight: $extraBold;
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  h2 {
+    font-weight: $regular; // $bold
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-weight: $regular; // $bold
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-weight: $regular; // $bold
+    font-size: 1.3125rem;
+    line-height: 1.5rem;
+  }
+
+  h5 {
+    font-weight: $regular; // $bold
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  h6 {
+    font-weight: $regular; // $bold
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  p {
+    font-family: 'Work Sans', 'sans-serif';
+    font-size: 1rem;
+    font-weight: $thin;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+  }
+
+  p.heroSubtitle {
+    font-weight: $thin;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1px;
+  }
+
+  p.subtitle {
+    letter-spacing: 0.1px;
+  }
+
+  p.subtitleSmall {
+    font-weight: $regular;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.1px;
+  }
+
+  p.bodyLarge {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .bodyNormal {
+    font-family: 'Work Sans', 'sans-serif';
+    font-size: 1rem;
+    font-weight: $thin;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+  }
+
+  .bodySmall {
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: $regular;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.1px;
+  }
+
+  .buttonLarge {
+    font-family: 'Muli', 'sans-serif';
+    font-weight: $regular; // $bold
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  .buttonNormal {
+    font-family: 'Muli', 'sans-serif';
+    font-weight: $regular;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+  }
+
+  .textButton {
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: $regular;
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 0.2px;
+  }
+
+  .navLinks {
+    font-family: 'Muli', 'sans-serif';
+    font-weight: $regular; // $bold
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.75px;
+  }
+  ///////////////////////front page transiton big numbers/////////////////////////////////
+  .temp {
+    letter-spacing: -0.2px;
+    line-height: 1.5rem;
+    font-size: 3.875rem;
+  }
+  // end Typography
+}
+
+//MIGHT HAVE TO CHANGE THIS MAX-WIDTH
+@media (max-width: 1024px) {
+  html {
+    // Typography
+    h1,
+    h2,
+    h3 {
+      letter-spacing: -0.25px;
     }
 
-    ul {
-      margin-left: 0;
+    h1.hero {
+      letter-spacing: -0.24px;
+      font-size: 2rem;
+      line-height: 2.5rem;
     }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    p.bodyLarge {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: -0.2px;
+    }
+
+    p.heroSubtitle {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.05px;
+    }
+
+    .buttonLarge {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: -0.2px;
+    }
+
+    .buttonNormal {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: -0.2px;
+    }
+
+    .navLinks {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.56px;
+    }
+
+    .temp {
+      font-size: 3.25rem;
+    }
+    // end Typography
   }
 }
 
-@media (min-width: 1024px) {
-  main {
-    h2 {
-      font-size: 2.25rem;
-    }
-    p {
-      font-size: 1.375rem;
+@media (max-width: 580px) {
+  html {
+    .temp {
+      font-size: 2rem;
     }
   }
 }

@@ -10,7 +10,7 @@
   grid-template-rows: 200px 300px 200px;
 
   text-decoration: none;
-  background-color: white;
+  background-color: $white;
   color: $darkBlue;
   width: 80%;
   height: 700px;
@@ -38,7 +38,7 @@
   .description {
     grid-area: description;
     height: 300px;
-    background-color: white;
+    background-color: $white;
 
     p {
       margin: 0;

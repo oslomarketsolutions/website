@@ -17,22 +17,20 @@ export const ResponsibleDisclosurePageTemplate = ({
   const PageContent = HTMLContent || Content;
 
   return (
-    <main>
-      <div className={styles.responsibleDisclosurePage}>
-        <section className={styles.left}>
-          <PageContent content={content} />
-        </section>
-        <section className={styles.right}>
-          <ContactCard
-            title={title}
-            visitingAddress={visitingAddress}
-            phoneNumber={phoneNumber}
-            mailAddress={mailAddress}
-            sizes={findImageSizes(image, imageSizes)}
-            image={image}
-          />
-        </section>
-      </div>
+    <main className={styles.responsibleDisclosurePage}>
+      <section className={styles.left}>
+        <PageContent content={content} />
+      </section>
+      <section className={styles.right}>
+        <ContactCard
+          title={title}
+          visitingAddress={visitingAddress}
+          phoneNumber={phoneNumber}
+          mailAddress={mailAddress}
+          sizes={findImageSizes(image, imageSizes)}
+          image={image}
+        />
+      </section>
     </main>
   );
 };

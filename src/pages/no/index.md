@@ -1,87 +1,119 @@
 ---
-topImage:
-  alt: Steam coming up from a red cup
-  image: /img/products-full-width.jpg
-featuredContent:
+hero:
+  title: Keeping investors informed and empowered
+  subtitle: Trading platforms and services for the modern web
+transitionalElement:
+  numbersAndText:
+    companiesNumber: '100'
+    companiesText: Companies
+    usersNumber: '100 000'
+    usersText: Users served daily
+    text: These companies use Oslo Market Solutions to empower their customers
+  customerLogos:
+    - logo: /img/afm_logo.png
+      name: Artic Fund Management
+    - logo: /img/fif_logo.png
+      name: First Fondene
+    - logo: /img/hb_logo.png
+      name: handelsbanken
+    - logo: /img/sbanken_logo.png
+      name: Sbanken 
+    - logo: /img/sb1_logo.png
+      name: SpareBank 1
+    - logo: /img/sbm_logo.png
+      name: SpareBankMøre
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat7
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat 8
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat9
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat10
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat11
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat12
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat13
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat14
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat15
+investorPortal:
   header: Investor portals
-  image: /img/carlos-muza-84523-unsplash.jpg
-  text: >-
+  image: investorportal.png
+  text:
     Whether you want a fully hosted and managed web trader, fund savings
     platform, portfolio reporting or market data information, OMS can help you
     get there.
 customization:
+  header: Choose your level of customization
+  text: 
+    'Whether you want a fully hosted and managed web trader, fund savings platform, portfolio reporting or market data information, OMS can help you get there.'
   cards:
-    - description: >-
-        We provide market data from the whole world and a connection to the
-        broker house’s trading system.
+    - description: 
+        'A full coverage of the financial markets with a market data portal with live, 
+        streaming data'
       features:
         - Real Time
         - Flexible
         - Rapid
         - Customized
-        - Probroker
+        - ProBroker
         - User Friendly
       header: Feed/API
-      image: /img/rawpixel-656709-unsplash.jpg
-    - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+      isDark: false
+    - description: 
+        'A full coverage of the financial markets with a market data portal with live, 
+        streaming data'
       features:
         - Real Time
         - Flexible
         - Rapid
         - Customized
-        - Probroker
+        - ProBroker
         - User Friendly
-      header: OMS Web Components
-      image: /img/lukas-blazek-367945-unsplash.jpg
-    - description: >-
-        Keep investor clients informed and up to date anywhere and at any time.
-        Visualize exposure to different sectors and regions, risk allocation and
-        performance.
+      header: OMS Components
+      isDark: false
+    - description: 
+        'Keep investor clients informed and up to date anywhere and at any'
       features:
         - Real Time
         - Flexible
         - Rapid
         - Customized
-        - Probroker
+        - ProBroker
         - User Friendly
       header: Managed solutions
-      image: /img/carlos-muza-84523-unsplash.jpg
-  header: Chose your level of customization
-configurationLogos:
-  - logo: /img/euronex_logo.png
-    name: Euronex
-  - logo: /img/nasdaq_logo.png
-    name: Nasdaq
-  - logo: /img/evry_logo.png
-    name: Evry
-  - logo: /img/centevo_logo.png
-    name: Centevo
-  - logo: /img/vps_logo.png
-    name: VPS
-  - logo: /img/tieto_logo.png
-    name: Tieto
-solutionsContent:
-  firstCard:
-    header: Investor Relations
-    image: /img/rawpixel-567016-unsplash.jpg
-    text: >-
-      Keep investor clients informed and up to date anywhere and at any time.
-      Visualize exposure to different sectors and regions, risk allocation and
-      performance.
-  header: Choose your level of customization
-  secondCard:
+      isDark: true
+  serviceIntegrations:
+    header: Service integrations
+    text: We play well with others
+    integrationLogos:
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Signicat1
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Signicat2
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Signicat3
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Signicat4
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Signicat5
+otherProducts:
+  arena:
     header: Arena
-    image: /img/phone-in-hand.jpg
-    text: >-
-      The information portal for professionals within the Norwegian securities
-      market, with Top Shareholders and the Corporate Actions Calendar
-customerLogos:
-  - logo: /img/er-logo-dagligbank-sparebank1.png
-    name: Sparebank1
-  - logo: /img/norne_logo.png
-    name: Norne
-  - logo: /img/afm_logo_blue.png
-    name: Arctic Fund Management
+    image: /img/arena.png
+    text:
+      'Arena provides information on securities listed on Oslo Børs, Oslo Axess and N-OTC. 
+      There are currently two information products available in 
+      Arena: Top Shareholders and Corporate Actions Calendar.'
+  irModules:
+    header: IR Modules
+    image: /img/arena.png
+    text: 
+      'Whether you want a fully hosted and managed web trader, 
+      fund savings platform, portfolio reporting or market data information, 
+      OMS can help you get there.'
 ---

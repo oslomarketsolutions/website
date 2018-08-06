@@ -1,15 +1,16 @@
 @import '../../layouts/variables';
 
 .EmployeeCard {
+  background-color: $white;
   display: grid;
   grid-template-areas:
     'image header'
     'image  description';
-  grid-template-columns: 140px 425px;
+  grid-template-columns: 140px 375px;
   grid-template-rows: 100px 100px;
-  width: 565px;
+  width: 515px;
   transition: 0.3s;
-  color: white;
+  color: $white;
   box-shadow: $boxShadow;
   margin-bottom: 64px;
 
