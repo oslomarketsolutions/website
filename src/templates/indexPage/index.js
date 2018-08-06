@@ -8,6 +8,7 @@ import Slider from '../../components/slider/index';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import Button from '../../components/button/index';
+import BigButton from '../../components/bigButton/index';
 
 const IndexPageTemplate = ({ language, data }) => {
   const {
@@ -27,7 +28,7 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.animation}>
         <h1 className={`hero ${styles.centered}`}>{hero.title}</h1>
         <p className={`heroSubtitle ${styles.centered}`}>{hero.subtitle}</p>
-        <button className="buttonLarge">Contact us</button>
+        <BigButton to="mailto:info@oms.no" text="Contact us" />
       </section>
 
       <section className={styles.transition}>
