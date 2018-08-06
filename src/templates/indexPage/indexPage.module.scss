@@ -1,12 +1,15 @@
 @import '../../layouts/variables';
 
 .homePage {
+  grid-template-rows: max-content max-content max-content max-content;
+
   .centered {
     text-align: center;
   }
 
   .animation {
     grid-column: 1 / span 10;
+    grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows: 30% max-content max-content max-content;
@@ -142,6 +145,7 @@
   .investorPortal {
     color: $textColor;
     grid-column: 1 / span 10;
+    grid-row: 2;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
@@ -253,6 +257,7 @@
   .arena {
     color: $textColor;
     grid-column: 1 / span 10;
+    grid-row: 3;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
@@ -291,6 +296,7 @@
     z-index: 1;
     color: $textColor;
     grid-column: 1 / span 10;
+    grid-row: 4;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:

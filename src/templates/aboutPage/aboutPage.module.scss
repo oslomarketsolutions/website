@@ -1,9 +1,12 @@
 @import '../../layouts/variables';
 
 .aboutPage {
+  grid-template-rows: max-content max-content;
+
   .aboutOms {
     color: $textColor;
     grid-column: 1 / span 10;
+    grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
@@ -34,6 +37,7 @@
   .aboutEmployees {
     background-color: $antiFlashWhite;
     grid-column: 1 / span 10;
+    grid-row: 2;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows: 100px max-content max-content;

@@ -12,6 +12,7 @@ html {
   main {
     display: grid;
     grid-column: 1 / span 10;
+    grid-row: 1;
     grid-template-columns: $gridColumnTemplate;
     grid-column-gap: 16px;
   }
@@ -22,6 +23,7 @@ html {
 
   .grid {
     display: grid;
+    grid-template-rows: max-content max-content;
     grid-template-columns: $gridColumnTemplate;
     grid-column-gap: 16px;
   }
