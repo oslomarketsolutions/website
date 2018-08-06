@@ -8,7 +8,7 @@
   .animation {
     grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns: $grid;
+    grid-template-columns: $gridColumnTemplate;
     grid-template-rows: 30% fit-content(100%) fit-content(100%) fit-content(
         100%
       );
@@ -156,12 +156,13 @@
     color: $textColor;
     grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns: $grid;
-    grid-template-rows: 624px fit-content(100%) fit-content(100%) fit-content(
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows:
+      624px fit-content(100%) fit-content(100%) fit-content(100%)
+      fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
         100%
-      ) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
-        100%
-      ) fit-content(100%) fit-content(100%) fit-content(100%);
+      )
+      fit-content(100%) fit-content(100%) fit-content(100%);
     grid-column-gap: 16px;
     align-items: center;
     height: 2578px;
@@ -268,10 +269,10 @@
     color: $textColor;
     grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns: $grid;
-    grid-template-rows: 220px fit-content(100%) fit-content(100%) fit-content(
-        100%
-      ) 120px;
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows:
+      220px fit-content(100%) fit-content(100%) fit-content(100%)
+      120px;
     grid-column-gap: 16px;
 
     h1 {
@@ -306,10 +307,10 @@
     color: $textColor;
     grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns: $grid;
-    grid-template-rows: 220px fit-content(100%) fit-content(100%) fit-content(
-        100%
-      ) 120px;
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows:
+      220px fit-content(100%) fit-content(100%) fit-content(100%)
+      120px;
     grid-column-gap: 16px;
     background-color: $antiFlashWhite;
 
@@ -533,13 +534,10 @@
 
     .investorPortal {
       height: 3044px;
-      grid-template-rows: 400px fit-content(100%) fit-content(100%) fit-content(
-          100%
-        ) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
-          100%
-        ) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
-          100%
-        );
+      grid-template-rows:
+        400px fit-content(100%) fit-content(100%) fit-content(100%)
+        fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%)
+        fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%);
 
       h1 {
         grid-column: 2 / span 8;

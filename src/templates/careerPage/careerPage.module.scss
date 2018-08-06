@@ -5,10 +5,10 @@
     grid-column: 1 / span 10;
     display: grid;
     grid-column-gap: 16px;
-    grid-template-columns: $grid;
-    grid-template-rows: 220px fit-content(100%) fit-content(100%) fit-content(
-        100%
-      ) 120px;
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows:
+      220px fit-content(100%) fit-content(100%) fit-content(100%)
+      120px;
 
     h1 {
       grid-column: 2 / span 8;
@@ -35,10 +35,10 @@
     grid-column: 1 / span 10;
     display: grid;
     grid-column-gap: 16px;
-    grid-template-columns: $grid;
-    grid-template-rows: 120px fit-content(100%) fit-content(100%) fit-content(
-        100%
-      ) 120px;
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows:
+      120px fit-content(100%) fit-content(100%) fit-content(100%)
+      120px;
 
     h1 {
       grid-column: 2 / span 8;
