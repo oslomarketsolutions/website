@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 // Polyfill for fetch in IE11
 import 'whatwg-fetch';
 import styles from '../licensesPage.module.scss';
 
 export class LicensesPage extends Component {
-  static propTypes = {
-    data: PropTypes.shape({
-      file: PropTypes.shape({
-        publicURL: PropTypes.string,
-      }),
-    }),
-  };
-
   state = {
     licenses: '',
     loading: true,
   };
 
   componentDidMount() {
-    // Fetch the licenses.md file
-    fetch(this.props.data.file.publicURL)
+    // Fetch the licenses.txt file
+    fetch('/licenses.txt')
       .then(response => response.text())
       .then(text => {
         this.setState({
@@ -40,11 +31,3 @@ export class LicensesPage extends Component {
 }
 
 export default LicensesPage;
-
-export const licensesPageQuery = graphql`
-  query EngLicensesPage {
-    file(id: { regex: "/licenses.md/" }) {
-      publicURL
-    }
-  }
-`;
