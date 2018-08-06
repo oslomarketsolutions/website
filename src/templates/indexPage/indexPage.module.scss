@@ -178,14 +178,15 @@
       [emptySpace-end row1-start] fit-content(100%)
       [row1-end row2-start] fit-content(100%)
       [row2-end row3-start] fit-content(100%)
-      [row3-end row4-start] 220px
+      [row3-end row4-start] fit-content(100%)
       [row4-end row5-start] fit-content(100%)
       [row5-end row6-start] fit-content(100%)
       [row6-end row7-start] fit-content(100%)
       [row7-end row8-start] fit-content(100%)
-      [row8-end row9-start]fit-content(100%)
-      [row9-end row10-start] fit-content(100%)
-      [row10-end];
+      [row8-end row9-start] fit-content(100%)
+      [row9-end row10-start]fit-content(100%)
+      [row10-end row11-start] fit-content(100%)
+      [row11-end];
     grid-column-gap: 16px;
     align-items: center;
     height: 2578px;
@@ -207,21 +208,55 @@
       grid-row: row3;
     }
 
+    .investorPortalImagesWrapper {
+      grid-column: 6 / span 5;
+      grid-row: 2 / span 3;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      margin-left: -20px;
+
+      .imageContainer {
+        display: inline-block;
+        max-width: 620px;
+        width: 86%;
+        box-shadow: 0px -14px 24px 0 #c7d3e3;
+        margin: 0 $XXL 0 $XXL;
+      }
+      .imageContainer:first-of-type {
+        margin-left: 20px;
+      }
+    }
+
+    .tickerTape {
+      height: 100%;
+      grid-column: 6 / span 5;
+      grid-row: row4;
+      padding: $XXL 0 100px 0;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      .imageContainer {
+        width: 1447px;
+        display: inline-block;
+      }
+    }
+
     .subHeader1 {
       grid-column: 2 / span 8;
-      grid-row: row5;
+      grid-row: row6;
     }
 
     .subHeader1 + p {
       padding: $XXL 0;
       grid-column: 4 / span 4;
-      grid-row: row6;
+      grid-row: row7;
     }
 
     .customizationCards {
       padding: 0 0 192px 0;
       grid-column: 2 / span 8;
-      grid-row: row7;
+      grid-row: row8;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
@@ -229,18 +264,18 @@
 
     .subHeader2 {
       grid-column: 2 / span 8;
-      grid-row: row8;
+      grid-row: row9;
     }
 
     .subHeader2 + p {
       padding: $XXL 0;
       grid-column: 2 / span 8;
-      grid-row: row9;
+      grid-row: row10;
     }
 
     .integrationLogos {
       grid-column: 1 / span 10;
-      grid-row: row10;
+      grid-row: row11;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -354,7 +389,7 @@
     }
 
     .investorPortal {
-      height: 2378px;
+      height: 2778px;
 
       h1 {
         grid-column: 3 / span 5;
@@ -364,8 +399,28 @@
         grid-column: 3 / span 5;
       }
 
-      a {
+      p + a {
         grid-column: 3 / span 5;
+        grid-row: row5;
+        margin-bottom: 100px;
+      }
+      .investorPortalImagesWrapper {
+        height: 340px;
+        grid-column: 3 / span 8;
+        grid-row: row3;
+
+        .imageContainer {
+          max-width: 480px;
+          width: 86%;
+          box-shadow: $newBoxShadow;
+          margin: 0 $XXL 0 $XXL;
+        }
+      }
+
+      .tickerTape {
+        grid-column: 3 / span 8;
+        grid-row: row4;
+        padding: $XS 0 $XL 0;
       }
     }
 
@@ -426,7 +481,22 @@
     }
 
     .investorPortal {
-      height: 2878px;
+      height: 3048px;
+      .investorPortalImagesWrapper {
+        height: 240px;
+
+        .imageContainer {
+          max-width: 332px;
+          width: 86%;
+          margin: 0 $XXL 0 $XXL;
+        }
+      }
+
+      .tickerTape {
+        .imageContainer {
+          width: 1000px;
+        }
+      }
       .customizationCards {
         flex-flow: column nowrap;
         justify-content: space-around;
@@ -468,7 +538,7 @@
       }
     }
     .investorPortal {
-      height: 2978px;
+      height: 3138px;
       .integrationLogos {
         flex-flow: row wrap;
         .imageContainer {
@@ -508,20 +578,21 @@
     }
 
     .investorPortal {
-      height: 2828px;
+      height: 3044px;
       grid-template-rows:
         [emptySpace-start] 400px
         [emptySpace-end row1-start] fit-content(100%)
         [row1-end row2-start] fit-content(100%)
         [row2-end row3-start] fit-content(100%)
-        [row3-end row4-start] 220px
+        [row3-end row4-start] fit-content(100%)
         [row4-end row5-start] fit-content(100%)
         [row5-end row6-start] fit-content(100%)
         [row6-end row7-start] fit-content(100%)
         [row7-end row8-start] fit-content(100%)
-        [row8-end row9-start]fit-content(100%)
-        [row9-end row10-start] fit-content(100%)
-        [row10-end];
+        [row8-end row9-start] fit-content(100%)
+        [row9-end row10-start]fit-content(100%)
+        [row10-end row11-start] fit-content(100%)
+        [row11-end];
 
       h1 {
         grid-column: 2 / span 8;
@@ -531,8 +602,19 @@
         grid-column: 2 / span 8;
       }
 
-      a {
+      p + a {
         grid-column: 2 / span 8;
+      }
+
+      .investorPortalImagesWrapper {
+        grid-column: 2 / span 9;
+        .imageContainer:last-of-type {
+          margin-right: $M;
+        }
+      }
+      .tickerTape {
+        grid-column: 2 / span 9;
+        padding: 0 0 $XL 0;
       }
 
       .subHeader1 + p {

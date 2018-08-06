@@ -103,6 +103,34 @@ const IndexPageTemplate = ({ language, data }) => {
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
         <Button to={`/${strippedLanguage}/products`} text="Learn more" />
+        <div className={styles.investorPortalImagesWrapper}>
+          <ImageWrapper
+            src={investorPortal.image}
+            alt="Abstract investorportal"
+            sizes={findImageSizes(investorPortal.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+          <ImageWrapper
+            src={investorPortal.image}
+            alt="Abstract investorportal"
+            sizes={findImageSizes(investorPortal.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+          <ImageWrapper
+            src={investorPortal.image}
+            alt="Abstract investorportal"
+            sizes={findImageSizes(investorPortal.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </div>
+        <div className={styles.tickerTape}>
+          <ImageWrapper
+            src="/img/tickertape.png"
+            alt="Abstract investorportal"
+            sizes={findImageSizes('/img/tickertape.png', imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </div>
 
         <h2 className={`${styles.subHeader1} ${styles.centered}`}>
           {customization.header}

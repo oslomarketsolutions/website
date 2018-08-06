@@ -42,7 +42,7 @@ transitionalElement:
       name: Signicat15
 investorPortal:
   header: Investor portals
-  image: /img/carlos-muza-84523-unsplash.jpg
+  image: investorportal.png
   text:
     Whether you want a fully hosted and managed web trader, fund savings
     platform, portfolio reporting or market data information, OMS can help you
