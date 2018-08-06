@@ -77,6 +77,8 @@ const TemplateWrapper = ({ children, location, data }) => {
         <link rel="icon" type="image/png" href={favicon} />
         <html lang={language} />
         <style>{fontAwesomeCSS}</style>
+        {/* Below script is a test */}
+        <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,Symbol" />
         <link
           href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800|Work+Sans:300,400"
           rel="stylesheet"
