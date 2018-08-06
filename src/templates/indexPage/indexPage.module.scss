@@ -6,19 +6,12 @@
   }
 
   .animation {
-    grid-column: full;
+    grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end] minmax(0, 1fr)
-      [full-end];
-    grid-template-rows:
-      [emptySpace-start] 30%
-      [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%)
-      [row2-end row3-start] fit-content(100%)
-      [row3-end];
+    grid-template-columns: $grid;
+    grid-template-rows: 30% fit-content(100%) fit-content(100%) fit-content(
+        100%
+      );
     grid-column-gap: 16px;
     color: $antiFlashWhite;
     width: 100%;
@@ -26,19 +19,19 @@
     background-color: $darkBlue;
 
     h1 {
-      grid-column: main;
-      grid-row: row1;
+      grid-column: 2 / span 8;
+      grid-row: 2;
     }
 
     p {
       padding: $XXL 0;
-      grid-column: main;
-      grid-row: row2;
+      grid-column: 2 / span 8;
+      grid-row: 3;
     }
 
     button {
       grid-column: 2 / span 8;
-      grid-row: row3;
+      grid-row: 4;
       background-color: $vibrantBlue;
       border: none;
       border-radius: 90px;
@@ -65,13 +58,8 @@
     margin: 0 auto;
     background-color: $white;
     display: grid;
-    grid-template-columns:
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end];
-    grid-template-rows:
-      [row1-start] fit-content(100%)
-      [row1-end row2-start] auto
-      [row2-end];
+    grid-template-columns: repeat(8, minmax(0, 128.5px));
+    grid-template-rows: fit-content(100%) auto;
     grid-column-gap: 16px;
     align-items: center;
     color: $textColor;
@@ -114,21 +102,21 @@
 
     .first {
       grid-column: 1 / span 2;
-      grid-row: row1;
+      grid-row: 1;
       width: 135px;
       align-self: end;
     }
 
     .second {
       grid-column: 3 / span 2;
-      grid-row: row1;
+      grid-row: 1;
       width: 272px;
       align-self: end;
     }
 
     .third {
       grid-column: 5 / span 4;
-      grid-row: row1;
+      grid-row: 1;
       width: 400px;
       align-self: end;
     }
@@ -149,7 +137,7 @@
   .customerLogos {
     z-index: 2;
     grid-column: 1 / span 8;
-    grid-row: row2;
+    grid-row: 2;
     width: 93%;
     margin: $XL auto 0;
     height: 100%;
@@ -166,27 +154,14 @@
 
   .investorPortal {
     color: $textColor;
-    grid-column: full;
+    grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end] minmax(0, 1fr)
-      [full-end];
-    grid-template-rows:
-      [emptySpace-start] 624px
-      [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%)
-      [row2-end row3-start] fit-content(100%)
-      [row3-end row4-start] fit-content(100%)
-      [row4-end row5-start] fit-content(100%)
-      [row5-end row6-start] fit-content(100%)
-      [row6-end row7-start] fit-content(100%)
-      [row7-end row8-start] fit-content(100%)
-      [row8-end row9-start] fit-content(100%)
-      [row9-end row10-start]fit-content(100%)
-      [row10-end row11-start] fit-content(100%)
-      [row11-end];
+    grid-template-columns: $grid;
+    grid-template-rows: 624px fit-content(100%) fit-content(100%) fit-content(
+        100%
+      ) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
+        100%
+      ) fit-content(100%) fit-content(100%) fit-content(100%);
     grid-column-gap: 16px;
     align-items: center;
     height: 2578px;
@@ -194,18 +169,18 @@
 
     h1 {
       grid-column: 2 / span 3;
-      grid-row: row1;
+      grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
       grid-column: 2 / span 3;
-      grid-row: row2;
+      grid-row: 3;
     }
 
     a {
       grid-column: 2 / span 2;
-      grid-row: row3;
+      grid-row: 4;
     }
 
     .investorPortalImagesWrapper {
@@ -231,7 +206,7 @@
     .tickerTape {
       height: 100%;
       grid-column: 6 / span 5;
-      grid-row: row4;
+      grid-row: 5;
       padding: $XXL 0 0 0;
       overflow-x: scroll;
       overflow-y: hidden;
@@ -245,19 +220,19 @@
     .subHeader1 {
       padding-top: 100px;
       grid-column: 2 / span 8;
-      grid-row: row6;
+      grid-row: 7;
     }
 
     .subHeader1 + p {
       padding: $XXL 0;
       grid-column: 4 / span 4;
-      grid-row: row7;
+      grid-row: 8;
     }
 
     .customizationCards {
       padding: 0 0 192px 0;
       grid-column: 2 / span 8;
-      grid-row: row8;
+      grid-row: 9;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
@@ -265,18 +240,18 @@
 
     .subHeader2 {
       grid-column: 2 / span 8;
-      grid-row: row9;
+      grid-row: 10;
     }
 
     .subHeader2 + p {
       padding: $XXL 0;
       grid-column: 2 / span 8;
-      grid-row: row10;
+      grid-row: 11;
     }
 
     .integrationLogos {
       grid-column: 1 / span 10;
-      grid-row: row11;
+      grid-row: 12;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -291,36 +266,28 @@
 
   .arena {
     color: $textColor;
-    grid-column: full;
+    grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end] minmax(0, 1fr)
-      [full-end];
-    grid-template-rows:
-      [emptySpace-start] 220px
-      [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%)
-      [row2-end row3-start] fit-content(100%)
-      [row3-end row4-start] 120px
-      [row4-end];
+    grid-template-columns: $grid;
+    grid-template-rows: 220px fit-content(100%) fit-content(100%) fit-content(
+        100%
+      ) 120px;
     grid-column-gap: 16px;
 
     h1 {
       grid-column: 2 / span 3;
-      grid-row: row1;
+      grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
       grid-column: 2 / span 3;
-      grid-row: row2;
+      grid-row: 3;
     }
 
     a {
       grid-column: 2 / span 2;
-      grid-row: row3;
+      grid-row: 4;
     }
 
     .imageContainer {
@@ -337,37 +304,29 @@
   .irModules {
     z-index: 1;
     color: $textColor;
-    grid-column: full;
+    grid-column: 1 / span 10;
     display: grid;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end] minmax(0, 1fr)
-      [full-end];
-    grid-template-rows:
-      [emptySpace-start] 220px
-      [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%)
-      [row2-end row3-start] fit-content(100%)
-      [row3-end row4-start] 120px
-      [row4-end];
+    grid-template-columns: $grid;
+    grid-template-rows: 220px fit-content(100%) fit-content(100%) fit-content(
+        100%
+      ) 120px;
     grid-column-gap: 16px;
     background-color: $antiFlashWhite;
 
     h1 {
       grid-column: 7 / span 3;
-      grid-row: row1;
+      grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
       grid-column: 7 / span 3;
-      grid-row: row2;
+      grid-row: 3;
     }
 
     a {
       grid-column: 7 / span 2;
-      grid-row: row3;
+      grid-row: 4;
     }
 
     .imageContainer {
@@ -402,14 +361,14 @@
 
       p + a {
         grid-column: 3 / span 5;
-        grid-row: row5;
+        grid-row: 6;
         margin-top: $XL;
         margin-bottom: 100px;
       }
       .investorPortalImagesWrapper {
         height: 340px;
         grid-column: 3 / span 8;
-        grid-row: row3;
+        grid-row: 4;
 
         .imageContainer {
           max-width: 480px;
@@ -421,7 +380,7 @@
 
       .tickerTape {
         grid-column: 3 / span 8;
-        grid-row: row4;
+        grid-row: 5;
         padding: $XS 0 0 0;
       }
       .subHeader1 {
@@ -431,32 +390,29 @@
 
     .arena,
     .irModules {
-      grid-template-rows:
-        [row1-start] fit-content(100%)
-        [row1-end row2-start] fit-content(100%)
-        [row2-end row3-start] fit-content(100%)
-        [row3-end row4-start] fit-content(100%)
-        [row4-end];
+      grid-template-rows: fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
+          100%
+        );
 
       h1 {
         grid-column: 3 / span 5;
-        grid-row: row1;
+        grid-row: 1;
         margin-top: 100px;
       }
 
       h1 + p {
         grid-column: 3 / span 5;
-        grid-row: row2;
+        grid-row: 2;
       }
 
       a {
         grid-column: 3 / span 5;
-        grid-row: row3;
+        grid-row: 3;
       }
 
       .imageContainer {
         grid-column: 3 / span 6;
-        grid-row: row4;
+        grid-row: 4;
         width: 100%;
         margin: $XXL 0 0 0;
       }
@@ -515,30 +471,26 @@
 @media (max-width: 950px) {
   .homePage {
     .transition {
-      grid-template-rows:
-        [row1-start] fit-content(100%)
-        [row1-end row2-start] fit-content(100%)
-        [row2-end row3-start] auto
-        [row3-end];
+      grid-template-rows: fit-content(100%) fit-content(100%) auto;
 
       .first {
         grid-column: 1 / span 4;
-        grid-row: row1;
+        grid-row: 1;
       }
 
       .second {
         grid-column: 5 / span 4;
-        grid-row: row1;
+        grid-row: 1;
       }
 
       .third {
         grid-column: 1 / span 8;
-        grid-row: row2;
+        grid-row: 2;
         margin: $XL auto;
       }
 
       .customerLogos {
-        grid-row: row3;
+        grid-row: 3;
         margin: 0 auto 0;
       }
     }
@@ -557,12 +509,9 @@
 @media (max-width: 580px) {
   .homePage {
     .animation {
-      grid-template-rows:
-        [emptySpace-start] 15%
-        [emptySpace-end row1-start] fit-content(100%)
-        [row1-end row2-start] fit-content(100%)
-        [row2-end row3-start] fit-content(100%)
-        [row3-end];
+      grid-template-rows: 15% fit-content(100%) fit-content(100%) fit-content(
+          100%
+        );
     }
 
     .transition {
@@ -584,20 +533,13 @@
 
     .investorPortal {
       height: 3044px;
-      grid-template-rows:
-        [emptySpace-start] 400px
-        [emptySpace-end row1-start] fit-content(100%)
-        [row1-end row2-start] fit-content(100%)
-        [row2-end row3-start] fit-content(100%)
-        [row3-end row4-start] fit-content(100%)
-        [row4-end row5-start] fit-content(100%)
-        [row5-end row6-start] fit-content(100%)
-        [row6-end row7-start] fit-content(100%)
-        [row7-end row8-start] fit-content(100%)
-        [row8-end row9-start] fit-content(100%)
-        [row9-end row10-start]fit-content(100%)
-        [row10-end row11-start] fit-content(100%)
-        [row11-end];
+      grid-template-rows: 400px fit-content(100%) fit-content(100%) fit-content(
+          100%
+        ) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
+          100%
+        ) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
+          100%
+        );
 
       h1 {
         grid-column: 2 / span 8;

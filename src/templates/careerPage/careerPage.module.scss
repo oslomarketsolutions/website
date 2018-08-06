@@ -2,36 +2,28 @@
 
 .careerPage {
   .careerOms {
-    grid-column: full;
+    grid-column: 1 / span 10;
     display: grid;
     grid-column-gap: 16px;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end] minmax(0, 1fr)
-      [full-end];
-    grid-template-rows:
-      [emptySpace-start] 220px
-      [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%)
-      [row2-end row3-start] fit-content(100%)
-      [row3-end row4-start] 120px
-      [row4-end];
+    grid-template-columns: $grid;
+    grid-template-rows: 220px fit-content(100%) fit-content(100%) fit-content(
+        100%
+      ) 120px;
 
     h1 {
       grid-column: 2 / span 8;
-      grid-row: row1;
+      grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
       grid-column: 2 / span 8;
-      grid-row: row2;
+      grid-row: 3;
     }
 
     .imageContainer {
       grid-column: 2 / span 8;
-      grid-row: row3;
+      grid-row: 4;
       width: 100%;
       margin: 0 auto;
       box-shadow: $newBoxShadow;
@@ -40,36 +32,28 @@
 
   .whyOms {
     background-color: $antiFlashWhite;
-    grid-column: full;
+    grid-column: 1 / span 10;
     display: grid;
     grid-column-gap: 16px;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px))
-      [main-end] minmax(0, 1fr)
-      [full-end];
-    grid-template-rows:
-      [emptySpace-start] 120px
-      [emptySpace-end row1-start] fit-content(100%)
-      [row1-end row2-start] fit-content(100%)
-      [row2-end row3-start] fit-content(100%)
-      [row3-end row4-start] 120px
-      [row4-end];
+    grid-template-columns: $grid;
+    grid-template-rows: 120px fit-content(100%) fit-content(100%) fit-content(
+        100%
+      ) 120px;
 
     h1 {
       grid-column: 2 / span 8;
-      grid-row: row1;
+      grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
       grid-column: 2 / span 8;
-      grid-row: row2;
+      grid-row: 3;
     }
 
     .imageContainer {
       grid-column: 2 / span 8;
-      grid-row: row3;
+      grid-row: 4;
       width: 100%;
       margin: 0 auto;
       box-shadow: $newBoxShadow;
@@ -78,7 +62,7 @@
 
   .careerPerks {
     background-color: $antiFlashWhite;
-    grid-column: full;
+    grid-column: 1 / span 10;
     margin-bottom: 100px;
     padding-bottom: 68px;
 
@@ -97,7 +81,7 @@
   }
 
   .careerJobVacancies {
-    grid-column: main;
+    grid-column: 2 / span 8;
     display: flex;
     flex-flow: row wrap;
     align-items: center;

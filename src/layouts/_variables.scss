@@ -34,3 +34,6 @@ $regular: 400;
 $semiBold: 600;
 $bold: 700;
 $extraBold: 800;
+
+// GRID
+$grid: minmax(0, 1fr) repeat(8, minmax(0, 128.5px)) minmax(0, 1fr);

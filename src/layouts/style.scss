@@ -11,11 +11,8 @@ html {
 
   main {
     display: grid;
-    grid-column: full;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
+    grid-column: 1 / span 10;
+    grid-template-columns: $grid;
     grid-column-gap: 16px;
   }
 
@@ -25,10 +22,7 @@ html {
 
   .grid {
     display: grid;
-    grid-template-columns:
-      [full-start] minmax(0, 1fr)
-      [main-start] repeat(8, minmax(0, 128.5px)) [main-end]
-      minmax(0, 1fr) [full-end];
+    grid-template-columns: $grid;
     grid-column-gap: 16px;
   }
 
