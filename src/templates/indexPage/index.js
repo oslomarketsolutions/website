@@ -28,8 +28,7 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.animation}>
         <h1 className={`hero ${styles.centered}`}>{hero.title}</h1>
         <p className={`heroSubtitle ${styles.centered}`}>{hero.subtitle}</p>
-        {/* <button className="buttonLarge">Contact us</button> */}
-        <BigButton to="mailto: info@oms.no" text="Contact us" />
+        <BigButton to="mailto:info@oms.no" text="Contact us" />
       </section>
 
       <section className={styles.transition}>
