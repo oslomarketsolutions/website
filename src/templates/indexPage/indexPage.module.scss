@@ -232,7 +232,7 @@
       height: 100%;
       grid-column: 6 / span 5;
       grid-row: row4;
-      padding: $XXL 0 100px 0;
+      padding: $XXL 0 0 0;
       overflow-x: scroll;
       overflow-y: hidden;
       white-space: nowrap;
@@ -243,6 +243,7 @@
     }
 
     .subHeader1 {
+      padding-top: 100px;
       grid-column: 2 / span 8;
       grid-row: row6;
     }
@@ -402,6 +403,7 @@
       p + a {
         grid-column: 3 / span 5;
         grid-row: row5;
+        margin-top: $XL;
         margin-bottom: 100px;
       }
       .investorPortalImagesWrapper {
@@ -420,7 +422,10 @@
       .tickerTape {
         grid-column: 3 / span 8;
         grid-row: row4;
-        padding: $XS 0 $XL 0;
+        padding: $XS 0 0 0;
+      }
+      .subHeader1 {
+        padding-top: 0;
       }
     }
 
@@ -614,7 +619,6 @@
       }
       .tickerTape {
         grid-column: 2 / span 9;
-        padding: 0 0 $XL 0;
       }
 
       .subHeader1 + p {

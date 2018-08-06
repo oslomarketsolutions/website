@@ -12,11 +12,18 @@ import PreviewWrapper from '../../components/previewWrapper';
 // That means it takes in one prop (data) unlike the other pages (which has templates)
 // that take in multiple props.
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const customerLogo = entry
+  const customerLogos = entry
     .getIn(['data', 'transitionalElement', 'customerLogos'])
-    .map(logo => ({
-      logo: getAsset(logo.get('logo')),
-      name: logo.get('name'),
+    .map(customerLogo => ({
+      logo: getAsset(customerLogo.get('logo')),
+      name: customerLogo.get('name'),
+    }));
+
+  const investorPortalImages = entry
+    .getIn(['data', 'investorPortal', 'investorPortalImages'])
+    .map(investorPortalImage => ({
+      image: getAsset(investorPortalImage.get('image')),
+      name: investorPortalImage.get('name'),
     }));
 
   const customizationCards = entry
@@ -28,11 +35,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       isDark: card.get('isDark'),
     }));
 
-  const integrationLogo = entry
+  const integrationLogos = entry
     .getIn(['data', 'customization', 'serviceIntegrations', 'integrationLogos'])
-    .map(logo => ({
-      logo: getAsset(logo.get('logo')),
-      name: logo.get('name'),
+    .map(integrationLogo => ({
+      logo: getAsset(integrationLogo.get('logo')),
+      name: integrationLogo.get('name'),
     }));
 
   // Create the data object IndexPage expects
@@ -77,11 +84,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'text',
             ]),
           },
-          customerLogos: customerLogo._tail.array,
+          customerLogos: customerLogos._tail.array,
         },
         investorPortal: {
           header: entry.getIn(['data', 'investorPortal', 'header']),
-          image: getAsset(entry.getIn(['data', 'investorPortal', 'image'])),
+          investorPortalImages,
           text: entry.getIn(['data', 'investorPortal', 'text']),
         },
         customization: {
@@ -101,7 +108,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'serviceIntegrations',
               'text',
             ]),
-            integrationLogos: integrationLogo,
+            integrationLogos,
           },
         },
         otherProducts: {
