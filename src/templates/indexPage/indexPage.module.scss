@@ -36,20 +36,9 @@
       grid-row: row2;
     }
 
-    button {
+    p + a {
       grid-column: 2 / span 8;
       grid-row: row3;
-      background-color: $vibrantBlue;
-      border: none;
-      border-radius: 90px;
-      color: $antiFlashWhite;
-      height: 80px;
-      width: 273px;
-      margin: 0 auto;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: $primaryButtonHover;
     }
   }
 
@@ -467,7 +456,7 @@
 @media (max-width: 1024px) {
   .homePage {
     .animation {
-      button {
+      p + a {
         height: 50px;
         width: 180px;
       }

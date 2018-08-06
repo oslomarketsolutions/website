@@ -1,0 +1,35 @@
+@import '../../layouts/variables';
+
+.bigButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $vibrantBlue;
+  border: none;
+  border-radius: 90px;
+  color: $antiFlashWhite;
+  height: 80px;
+  width: 273px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  svg {
+    font-size: 19px;
+    margin-left: 10px;
+  }
+}
+
+.bigButton,
+.bigButton:link,
+.bigButton:visited,
+.bigButton:hover,
+.bigButton:focus,
+.bigButton:active {
+  text-decoration: none;
+}
+
+.bigButton:hover {
+  background-color: $primaryButtonHover;
+  cursor: pointer;
+}
