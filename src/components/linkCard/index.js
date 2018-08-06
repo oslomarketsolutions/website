@@ -15,7 +15,6 @@ const LinkCard = ({ product, onClickFunction, sticky, imageResolution }) => {
       />
       <div className={styles.textContainer}>
         <h4>{product.title}</h4>
-        <p>{product.description && product.description.slice(0, 140)}</p>
       </div>
     </button>
   );

@@ -5,7 +5,7 @@ import styles from './ProductCard.module.scss';
 import ImageWrapper from '../imageWrapper';
 
 const ProductCard = ({ product, sizes }) => (
-  <div className={styles.ProductCard}>
+  <div className={styles.productCard}>
     <section className={styles.header}>
       <h3>{product.title}</h3>
     </section>
@@ -18,11 +18,7 @@ const ProductCard = ({ product, sizes }) => (
       sizes={sizes}
       alt={product.title}
     />
-    <section className={styles.footer}>
-      <ul>
-        <li>test</li>
-      </ul>
-    </section>
+    <button className={styles.button}>Contact</button>
   </div>
 );
 

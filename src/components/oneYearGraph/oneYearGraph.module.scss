@@ -3,10 +3,12 @@
 }
 
 .oneYearGraph {
-  background: white;
   margin-bottom: -50px;
   height: 100%;
   width: 100%;
+  stroke: #0071eb;
+  fill: #1c315b;
+  stroke-width: 8px;
 
   stroke-dasharray: 5000;
   animation: dash 5s linear;
