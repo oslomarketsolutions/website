@@ -130,7 +130,7 @@
     grid-row: 2;
     width: 93%;
     margin: $XL auto 0;
-    height: 100%;
+    height: 350px;
 
     .imageContainer {
       width: 28%;
@@ -517,6 +517,10 @@
 
       .third {
         width: 320px;
+      }
+
+      .customerLogos {
+        height: 200px;
       }
     }
 

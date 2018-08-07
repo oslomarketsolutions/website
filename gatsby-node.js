@@ -1,6 +1,15 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  // For babel polyfill (imported in gatsby-browser)
+  if (stage === 'build-javascript') {
+    config._config.entry.app = ['babel-polyfill', config.resolve().entry.app];
+  }
+
+  return config;
+};
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage, createRedirect } = boundActionCreators;
   createRedirect({ fromPath: '/', toPath: '/en/' });
