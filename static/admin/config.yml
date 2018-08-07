@@ -51,308 +51,8 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/no/index.md"
-        name: "norwegian_index_page"
-        label: "no/Homepage"
-        fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - {label: "Header", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Transitional element"
-            name: "transitionalElement"
-            widget: "object"
-            fields:
-              - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
-                  {label: "Companies number", name: "companiesNumber", widget: "string"},
-                  {label: "Companies text", name: "companiesText", widget: "string"},
-                  {label: "Users number", name: "usersNumber", widget: "string"},
-                  {label: "Users text", name: "usersText", widget: "string"},
-                  {label: "Text", name: "text", widget: "string"},
-                ]}
-              - label: "Customer logos" 
-                name: "customerLogos"
-                widget: "list"
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Logo", name: "logo", widget: "image"}
-          - label: "Investor portal"
-            name: "investorPortal"
-            widget: "object"
-            fields:
-              - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
-                name: "investorPortalImages"
-                widget: "list"
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Image", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
-          - label: "Customization"
-            name: "customization"
-            widget: "object"
-            fields:
-              - {label: "Header", name: "header", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
-              - {label: "Cards", name: "cards", widget: "list", fields: [
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Description", name: "description", widget: "text"},
-                  {label: "Features", name: "features", widget: "list"},
-                  {label: "Dark", name: "isDark", widget: "boolean"},
-                ]}
-              - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
-                    {label: "Name", name: "name", widget: "string"},
-                    {label: "Logo", name: "logo", widget: "image"},
-                  ]}
-              ]}
-          - label: "Other products"
-            name: "otherProducts"
-            widget: "object"
-            fields:
-              - {label: "Arena", name: "arena", widget: "object", fields: [
-                  {label: "Image", name: "image", widget: "image"},
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]}
-              - {label: "IR Modules", name: "irModules", widget: "object", fields: [
-                  {label: "Image", name: "image", widget: "image"},
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]}
 
-      - file: "src/pages/en/index.md"
-        name: "english_index_page"
-        label: "en/Homepage"
-        fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - {label: "Header", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Transitional element"
-            name: "transitionalElement"
-            widget: "object"
-            fields:
-              - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
-                  {label: "Companies number", name: "companiesNumber", widget: "string"},
-                  {label: "Companies text", name: "companiesText", widget: "string"},
-                  {label: "Users number", name: "usersNumber", widget: "string"},
-                  {label: "Users text", name: "usersText", widget: "string"},
-                  {label: "Text", name: "text", widget: "string"},
-                ]}
-              - label: "Customer logos" 
-                name: "customerLogos"
-                widget: "list"
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Logo", name: "logo", widget: "image"}
-          - label: "Investor portal"
-            name: "investorPortal"
-            widget: "object"
-            fields:
-              - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
-                name: "investorPortalImages"
-                widget: "list"
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Image", name: "image", widget: "image"}
-              - {label: "Text", name: "text", widget: "text"}
-          - label: "Customization"
-            name: "customization"
-            widget: "object"
-            fields:
-              - {label: "Header", name: "header", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
-              - {label: "Cards", name: "cards", widget: "list", fields: [
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Description", name: "description", widget: "text"},
-                  {label: "Features", name: "features", widget: "list"},
-                  {label: "Dark", name: "isDark", widget: "boolean"},
-                ]}
-              - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
-                    {label: "Name", name: "name", widget: "string"},
-                    {label: "Logo", name: "logo", widget: "image"},
-                  ]}
-              ]}
-          - label: "Other products"
-            name: "otherProducts"
-            widget: "object"
-            fields:
-              - {label: "Arena", name: "arena", widget: "object", fields: [
-                  {label: "Image", name: "image", widget: "image"},
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]}
-              - {label: "IR Modules", name: "irModules", widget: "object", fields: [
-                  {label: "Image", name: "image", widget: "image"},
-                  {label: "Header", name: "header", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]}
-
-      - file: "src/pages/no/about/index.md"
-        name: "norwegian_about_page"
-        label: "no/About page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image Description", name: "imageAlt", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
-
-      - file: "src/pages/en/about/index.md"
-        name: "english_about_page"
-        label: "en/About page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image Description", name: "imageAlt", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
-
-      - file: "src/pages/no/career/index.md"
-        name: "norwegian_career_page"
-        label: "no/Career page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "First section", name: "firstSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
-           ]}
-          - {label: "Second section", name: "secondSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
-              {label: "Perks", name: "perks", widget: "object", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
-                  {label: "Perk title", name: "perkTitle", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]},
-              ]},
-            ]}
-          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-            ]}
-
-      - file: "src/pages/en/career/index.md"
-        name: "english_career_page"
-        label: "en/Career page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "First section", name: "firstSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
-           ]}
-          - {label: "Second section", name: "secondSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
-              {label: "Perks", name: "perks", widget: "object", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
-                  {label: "Perk title", name: "perkTitle", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]},
-              ]},
-            ]}
-          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-            ]}
-
-      - file: "src/pages/no/products/index.md"
-        name: "norwegian_products_page"
-        label: "no/Products page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
-          - {label: "Intro", name: "intro", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-            ]}
-          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Features", name: "features", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Description", name: "description", widget: "text"},
-                {label: "Image", name: "image", widget: "image"},
-              ]},
-            ]}
-          - {label: "Products", name: "products", widget: "list", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Description", name: "description", widget: "text"},
-            ]}
-
-
-      - file: "src/pages/en/products/index.md"
-        name: "english_products_page"
-        label: "en/Products page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
-          - {label: "Intro", name: "intro", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-            ]}
-          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Features", name: "features", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Description", name: "description", widget: "text"},
-                {label: "Image", name: "image", widget: "image"},
-              ]},
-            ]}
-          - {label: "Products", name: "products", widget: "list", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Description", name: "description", widget: "text"},
-            ]}
-
-      - file: "src/pages/no/responsibleDisclosure/index.md"
-        name: "norwegian_responsibleDisclosure_page"
-        label: "no/Responsible disclosure page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Visiting address", name: "visitingAddress", widget: "string"},
-              {label: "Phone number", name: "phoneNumber", widget: "string"},
-              {label: "Mail address", name: "mailAddress", widget: "string"},
-            ]}
-
-      - file: "src/pages/en/responsibleDisclosure/index.md"
-        name: "english_responsibleDisclosure_page"
-        label: "en/Responsible disclosure page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Visiting address", name: "visitingAddress", widget: "string"},
-              {label: "Phone number", name: "phoneNumber", widget: "string"},
-              {label: "Mail address", name: "mailAddress", widget: "string"},
-            ]}
+############### FOOTER ###############
 
       - file: "src/pages/footer/index.md"
         name: "footer"
@@ -391,6 +91,314 @@ collections:
               {label: "Email", name: "email", widget: "string"},
               {label: "Mail address", name: "mailAddress", widget: "string"},
             ]}
+
+############### ENGLISH PAGES ###############
+
+      - file: "src/pages/en/responsibleDisclosure/index.md"
+        name: "english_responsibleDisclosure_page"
+        label: "English - Responsible disclosure page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Visiting address", name: "visitingAddress", widget: "string"},
+              {label: "Phone number", name: "phoneNumber", widget: "string"},
+              {label: "Mail address", name: "mailAddress", widget: "string"},
+            ]}
+
+      - file: "src/pages/en/about/index.md"
+        name: "english_about_page"
+        label: "English - About page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
+          - {label: "First header", name: "title", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Image Description", name: "imageAlt", widget: "string"}
+          - {label: "Text", name: "text", widget: "text"}
+          - {label: "Second header", name: "header", widget: "string"}
+
+      - file: "src/pages/en/career/index.md"
+        name: "english_career_page"
+        label: "English - Career page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
+          - {label: "First section", name: "firstSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+           ]}
+          - {label: "Second section", name: "secondSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+              {label: "Perks", name: "perks", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
+                  {label: "Perk title", name: "perkTitle", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]},
+              ]},
+            ]}
+          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+            ]}
+
+      - file: "src/pages/en/products/index.md"
+        name: "english_products_page"
+        label: "English - Products page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
+          - {label: "Intro", name: "intro", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+            ]}
+          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Features", name: "features", widget: "list", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Description", name: "description", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+            ]}
+          - {label: "Products", name: "products", widget: "list", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Description", name: "description", widget: "text"},
+            ]}
+
+      - file: "src/pages/en/index.md"
+        name: "english_index_page"
+        label: "English - Homepage"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Transitional element"
+            name: "transitionalElement"
+            widget: "object"
+            fields:
+              - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
+                  {label: "Companies number", name: "companiesNumber", widget: "string"},
+                  {label: "Companies text", name: "companiesText", widget: "string"},
+                  {label: "Users number", name: "usersNumber", widget: "string"},
+                  {label: "Users text", name: "usersText", widget: "string"},
+                  {label: "Text", name: "text", widget: "string"},
+                ]}
+              - label: "Customer logos" 
+                name: "customerLogos"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Logo", name: "logo", widget: "image"}
+          - label: "Investor portal"
+            name: "investorPortal"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - label: "Investor portal images" 
+                name: "investorPortalImages"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Customization"
+            name: "customization"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Description", name: "description", widget: "text"},
+                  {label: "Features", name: "features", widget: "list"},
+                  {label: "Dark", name: "isDark", widget: "boolean"},
+                ]}
+              - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                    {label: "Name", name: "name", widget: "string"},
+                    {label: "Logo", name: "logo", widget: "image"},
+                  ]}
+              ]}
+          - label: "Other products"
+            name: "otherProducts"
+            widget: "object"
+            fields:
+              - {label: "Arena", name: "arena", widget: "object", fields: [
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]}
+              - {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]}
+
+############### NORWEGIAN PAGES ###############
+
+      - file: "src/pages/no/responsibleDisclosure/index.md"
+        name: "norwegian_responsibleDisclosure_page"
+        label: "Norwegian - Responsible disclosure page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Visiting address", name: "visitingAddress", widget: "string"},
+              {label: "Phone number", name: "phoneNumber", widget: "string"},
+              {label: "Mail address", name: "mailAddress", widget: "string"},
+            ]}
+
+      - file: "src/pages/no/about/index.md"
+        name: "norwegian_about_page"
+        label: "Norwegian - About page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
+          - {label: "First header", name: "title", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Image Description", name: "imageAlt", widget: "string"}
+          - {label: "Text", name: "text", widget: "text"}
+          - {label: "Second header", name: "header", widget: "string"}
+
+      - file: "src/pages/no/career/index.md"
+        name: "norwegian_career_page"
+        label: "Norwegian - Career page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
+          - {label: "First section", name: "firstSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+           ]}
+          - {label: "Second section", name: "secondSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+              {label: "Perks", name: "perks", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
+                  {label: "Perk title", name: "perkTitle", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]},
+              ]},
+            ]}
+          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+            ]}
+
+      - file: "src/pages/no/products/index.md"
+        name: "norwegian_products_page"
+        label: "Norwegian - Products page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
+          - {label: "Intro", name: "intro", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+            ]}
+          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Features", name: "features", widget: "list", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Description", name: "description", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+            ]}
+          - {label: "Products", name: "products", widget: "list", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Description", name: "description", widget: "text"},
+            ]}
+
+      - file: "src/pages/no/index.md"
+        name: "norwegian_index_page"
+        label: "Norwegian - Homepage"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Transitional element"
+            name: "transitionalElement"
+            widget: "object"
+            fields:
+              - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
+                  {label: "Companies number", name: "companiesNumber", widget: "string"},
+                  {label: "Companies text", name: "companiesText", widget: "string"},
+                  {label: "Users number", name: "usersNumber", widget: "string"},
+                  {label: "Users text", name: "usersText", widget: "string"},
+                  {label: "Text", name: "text", widget: "string"},
+                ]}
+              - label: "Customer logos" 
+                name: "customerLogos"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Logo", name: "logo", widget: "image"}
+          - label: "Investor portal"
+            name: "investorPortal"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - label: "Investor portal images" 
+                name: "investorPortalImages"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "Customization"
+            name: "customization"
+            widget: "object"
+            fields:
+              - {label: "Header", name: "header", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Description", name: "description", widget: "text"},
+                  {label: "Features", name: "features", widget: "list"},
+                  {label: "Dark", name: "isDark", widget: "boolean"},
+                ]}
+              - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                    {label: "Name", name: "name", widget: "string"},
+                    {label: "Logo", name: "logo", widget: "image"},
+                  ]}
+              ]}
+          - label: "Other products"
+            name: "otherProducts"
+            widget: "object"
+            fields:
+              - {label: "Arena", name: "arena", widget: "object", fields: [
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]}
+              - {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Header", name: "header", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]}
+
+############### NAVBAR ###############
 
       - file: "src/pages/navbar/index.md"
         name: "navbar"
