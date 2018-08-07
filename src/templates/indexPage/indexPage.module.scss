@@ -293,6 +293,7 @@
   }
 
   .irModules {
+    position: relative;
     z-index: 1;
     color: $textColor;
     grid-column: 1 / span 10;
