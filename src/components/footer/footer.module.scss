@@ -2,8 +2,9 @@
 
 .footer {
   z-index: 2;
+  grid-row: 2;
   background-color: $darkBlue;
-  grid-column: full;
+  grid-column: 1 / span 10;
   color: $antiFlashWhite;
 
   a,
