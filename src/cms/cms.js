@@ -8,6 +8,7 @@ import FeaturePreview from './preview-templates/FeaturePreview';
 import ProductPagePreview from './preview-templates/ProductPagePreview';
 import PerkPreview from './preview-templates/PerkPreview';
 import FooterPreview from './preview-templates/FooterPreview';
+import NavbarPreview from './preview-templates/NavbarPreview';
 import ResponsibleDisclosurePreview from './preview-templates/ResponsibleDisclosurePreview';
 
 CMS.registerPreviewStyle('/styles.css');
@@ -34,3 +35,4 @@ CMS.registerPreviewTemplate(
   ResponsibleDisclosurePreview,
 );
 CMS.registerPreviewTemplate('footer', FooterPreview);
+CMS.registerPreviewTemplate('navbar', NavbarPreview);
