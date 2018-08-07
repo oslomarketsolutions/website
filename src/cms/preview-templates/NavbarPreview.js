@@ -9,10 +9,13 @@ const FooterPreview = ({ entry }) => {
       numberOfJobVacancies: entry.getIn(['data', 'numberOfJobVacancies']),
     },
   };
+  const location = {
+    pathname: '/en',
+  };
 
   return (
     <PreviewWrapper>
-      <Navbar language="en" location="/en/" data={data} />
+      <Navbar language="en" location={location} data={data} />
     </PreviewWrapper>
   );
 };

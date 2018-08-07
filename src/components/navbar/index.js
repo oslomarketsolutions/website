@@ -10,7 +10,7 @@ export default class Navbar extends Component {
   static propTypes = {
     language: PropTypes.string,
     location: PropTypes.shape({ pathname: PropTypes.string }),
-    data: PropTypes.shape({ frontmatter: PropTypes.string }),
+    data: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
   };
 
   static defaultProps = {
@@ -20,6 +20,7 @@ export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    console.log(this.props.location);
   }
 
   state = {

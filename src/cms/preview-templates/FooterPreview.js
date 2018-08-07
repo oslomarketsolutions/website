@@ -48,7 +48,7 @@ const FooterPreview = ({ entry }) => {
 
   return (
     <PreviewWrapper>
-      <Footer data={data.markdownRemark} language="en" />
+      <Footer data={data} language="en" />
     </PreviewWrapper>
   );
 };
