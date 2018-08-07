@@ -4,33 +4,46 @@ import { CareerPageTemplate } from '../../templates/careerPage/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
 const CareerPagePreview = ({ entry, getAsset }) => {
-  // I don't think we have access to the perklist through the CMS preview,
-  // it's fetched by a query in careerPage/index.js
-  const perkList = [
-    {
-      node: {
-        frontmatter: {
-          title: 'Perk Card',
-          text: 'Disse kortene redigeres på egen side',
-        },
-      },
-    },
-  ];
+  const firstSection = {
+    title: entry.getIn(['data', 'firstSection', 'title']),
+    text: entry.getIn(['data', 'firstSection', 'text']),
+    image: getAsset(entry.getIn(['data', 'firstSection', 'image'])),
+    imageAlt: entry.getIn(['data', 'firstSection', 'imageAlt']),
+  };
+
+  const secondSection = {
+    title: entry.getIn(['data', 'secondSection', 'title']),
+    text: entry.getIn(['data', 'secondSection', 'text']),
+    image: getAsset(entry.getIn(['data', 'secondSection', 'image'])),
+    imageAlt: entry.getIn(['data', 'secondSection', 'imageAlt']),
+  };
+
+  const thirdSection = {
+    title: entry.getIn(['data', 'thirdSection', 'title']),
+    text: entry.getIn(['data', 'thirdSection', 'text']),
+    image: getAsset(entry.getIn(['data', 'thirdSection', 'image'])),
+    imageAlt: entry.getIn(['data', 'thirdSection', 'imageAlt']),
+  };
+
+  const perkCards = entry
+    .getIn(['data', 'secondSection', 'perks', 'perkCards'])
+    .map(perkCard => ({
+      perkTitle: perkCard.get('perkTitle'),
+      text: perkCard.get('text'),
+    }));
+
+  const perks = {
+    title: entry.getIn(['data', 'secondSection', 'perks', 'title']),
+    perkCards,
+  };
 
   return (
     <PreviewWrapper>
       <CareerPageTemplate
-        title={entry.getIn(['data', 'title'])}
-        image1={getAsset(entry.getIn(['data', 'image1']))}
-        image1Alt={entry.getIn(['data', 'image1Alt'])}
-        text1={entry.getIn(['data', 'text1'])}
-        header={entry.getIn(['data', 'header'])}
-        image2={getAsset(entry.getIn(['data', 'image2']))}
-        image2Alt={entry.getIn(['data', 'image2Alt'])}
-        text2={entry.getIn(['data', 'text2'])}
-        subHeader1={entry.getIn(['data', 'subHeader1'])}
-        subHeader2={entry.getIn(['data', 'subHeader2'])}
-        perkList={perkList}
+        firstSection={firstSection}
+        secondSection={secondSection}
+        perks={perks}
+        thirdSection={thirdSection}
       />
     </PreviewWrapper>
   );

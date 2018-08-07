@@ -37,7 +37,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       const id = edge.node.id;
       const lang = edge.node.fields.slug.substring(1, 3);
       const employeeRegex = `/${lang}/employees/`;
-      const perkRegex = `/${lang}/perks/`;
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
@@ -48,7 +47,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           id,
           // We need to figure out a better way to pull data in correct language
           employeeRegex,
-          perkRegex,
         },
       });
     });

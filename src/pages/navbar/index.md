@@ -1,3 +1,3 @@
 ---
-numberOfJobVacancies: 2
+numberOfJobVacancies: '2'
 ---
