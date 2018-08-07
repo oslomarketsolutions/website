@@ -10,6 +10,7 @@ export default class Navbar extends Component {
   static propTypes = {
     language: PropTypes.string,
     location: PropTypes.shape({ pathname: PropTypes.string }),
+    data: PropTypes.shape({ frontmatter: PropTypes.string }),
   };
 
   static defaultProps = {
@@ -120,7 +121,9 @@ export default class Navbar extends Component {
                   onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'Careers' : 'Jobb'}
-                  <span>2</span>
+                  <span>
+                    {this.props.data.frontmatter.numberOfJobVacancies}
+                  </span>
                 </Link>
               </li>
               <li>

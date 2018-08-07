@@ -8,7 +8,7 @@ import '../../layouts/style.scss';
 import styles from './footer.module.scss';
 
 const Footer = ({ language, data }) => {
-  const { groupWebsites, contactInfo } = data.markdownRemark.frontmatter;
+  const { groupWebsites, contactInfo } = data.frontmatter;
 
   return (
     <footer className={styles.footer}>

@@ -385,3 +385,9 @@ collections:
               {label: "Email", name: "email", widget: "string"},
               {label: "Mail address", name: "mailAddress", widget: "string"},
             ]}
+
+      - file: "src/pages/navbar/index.md"
+        name: "navbar"
+        label: "Navbar"
+        fields:
+          - {label: "Number of job vacancies", name: "numberOfJobVacancies", widget: "string"}

@@ -83,9 +83,9 @@ const TemplateWrapper = ({ children, location, data }) => {
         />
       </Helmet>
       <div className="grid">
-        <Navbar language={language} location={location} />
+        <Navbar language={language} location={location} data={data.navbar} />
         {children()}
-        <Footer language={language} data={data} />
+        <Footer language={language} data={data.footer} />
       </div>
     </React.Fragment>
   );
@@ -103,9 +103,9 @@ TemplateWrapper.propTypes = {
 
 export default TemplateWrapper;
 
-export const footerQuery = graphql`
-  query Footer {
-    markdownRemark(id: { regex: "/src/pages/footer/index.md/" }) {
+export const footerAndNavbarQuery = graphql`
+  query FooterAndNavbar {
+    footer: markdownRemark(id: { regex: "/src/pages/footer/index.md/" }) {
       frontmatter {
         groupWebsites {
           website1 {
@@ -140,6 +140,11 @@ export const footerQuery = graphql`
           email
           mailAddress
         }
+      }
+    }
+    navbar: markdownRemark(id: { regex: "/src/pages/navbar/index.md/" }) {
+      frontmatter {
+        numberOfJobVacancies
       }
     }
   }
