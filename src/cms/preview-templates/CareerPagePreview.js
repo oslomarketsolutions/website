@@ -33,7 +33,7 @@ const CareerPagePreview = ({ entry, getAsset }) => {
     }));
 
   const perks = {
-    title: entry.getIn(['data', 'perks', 'title']),
+    title: entry.getIn(['data', 'secondSection', 'perks', 'title']),
     perkCards,
   };
 
