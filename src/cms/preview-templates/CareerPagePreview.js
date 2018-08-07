@@ -3,22 +3,36 @@ import PropTypes from 'prop-types';
 import { CareerPageTemplate } from '../../templates/careerPage/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
-const CareerPagePreview = ({ entry, getAsset }) => (
-  <PreviewWrapper>
-    <CareerPageTemplate
-      title={entry.getIn(['data', 'title'])}
-      image1={getAsset(entry.getIn(['data', 'image1']))}
-      image1Alt={entry.getIn(['data', 'image1Alt'])}
-      text1={entry.getIn(['data', 'text1'])}
-      header={entry.getIn(['data', 'header'])}
-      image2={getAsset(entry.getIn(['data', 'image2']))}
-      image2Alt={entry.getIn(['data', 'image2Alt'])}
-      text2={entry.getIn(['data', 'text2'])}
-      perks={entry.getIn(['data', 'perks'])}
-      jobVacanciesTitle={entry.getIn(['data', 'jobVacanciesTitle'])}
-    />
-  </PreviewWrapper>
-);
+const CareerPagePreview = ({ entry, getAsset }) => {
+  const perkCards = entry
+    .getIn(['data', 'perks', 'perkCards'])
+    .map(perkCard => ({
+      perkTitle: perkCard.get('perkTitle'),
+      text: perkCard.get('text'),
+    }));
+
+  const perks = {
+    title: entry.getIn(['data', 'perks', 'title']),
+    perkCards,
+  };
+
+  return (
+    <PreviewWrapper>
+      <CareerPageTemplate
+        title={entry.getIn(['data', 'title'])}
+        image1={getAsset(entry.getIn(['data', 'image1']))}
+        image1Alt={entry.getIn(['data', 'image1Alt'])}
+        text1={entry.getIn(['data', 'text1'])}
+        header={entry.getIn(['data', 'header'])}
+        image2={getAsset(entry.getIn(['data', 'image2']))}
+        image2Alt={entry.getIn(['data', 'image2Alt'])}
+        text2={entry.getIn(['data', 'text2'])}
+        perks={perks}
+        jobVacanciesTitle={entry.getIn(['data', 'jobVacanciesTitle'])}
+      />
+    </PreviewWrapper>
+  );
+};
 
 CareerPagePreview.propTypes = {
   entry: PropTypes.shape({
