@@ -6,24 +6,6 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "englishPerks"
-    label: "en/Perk"
-    folder: "src/entities/en/perks"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Perk name", name: "title", widget: "string"}
-      - {label: "Text", name: "text", widget: "string"}
-
-  - name: "norwegianPerks"
-    label: "no/Perk"
-    folder: "src/entities/no/perks"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Perk name", name: "title", widget: "string"}
-      - {label: "Text", name: "text", widget: "string"}
-
   - name: "norwegian_employees"
     label: "no/Employee"
     folder: "src/entities/no/employees"
