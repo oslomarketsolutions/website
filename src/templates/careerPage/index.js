@@ -28,37 +28,31 @@ const color = () => {
 };
 
 export const CareerPageTemplate = ({
-  title,
-  image1,
-  image1Alt,
-  text1,
-  header,
-  image2,
-  image2Alt,
-  text2,
+  firstSection,
+  secondSection,
   perks,
-  jobVacanciesTitle,
+  thirdSection,
   imageSizes,
 }) => (
   <main className={styles.careerPage}>
     <section className={styles.careerOms}>
-      <h1>{title}</h1>
-      <p className="bodyLarge">{text1}</p>
+      <h1>{firstSection.title}</h1>
+      <p className="bodyLarge">{firstSection.text}</p>
       <ImageWrapper
-        alt={image1Alt}
-        src={image1}
+        alt={firstSection.imageAlt}
+        src={firstSection.image}
         outerWrapperClassName={styles.imageContainer}
-        sizes={findImageSizes(image1, imageSizes)}
+        sizes={findImageSizes(firstSection.image, imageSizes)}
       />
     </section>
     <section className={styles.whyOms}>
-      <h1>{header}</h1>
-      <p className="bodyLarge">{text2}</p>
+      <h1>{secondSection.title}</h1>
+      <p className="bodyLarge">{secondSection.text}</p>
       <ImageWrapper
-        alt={image2Alt}
-        src={image2}
+        alt={secondSection.imageAlt}
+        src={secondSection.image}
         outerWrapperClassName={styles.imageContainer}
-        sizes={findImageSizes(image2, imageSizes)}
+        sizes={findImageSizes(secondSection.image, imageSizes)}
       />
     </section>
     <section className={styles.careerPerks}>
@@ -75,7 +69,7 @@ export const CareerPageTemplate = ({
       </div>
     </section>
     <section className={styles.careerJobVacancies}>
-      <h2>{jobVacanciesTitle}</h2>
+      <h2>{thirdSection.title}</h2>
       <iframe
         title="Job Vacancies"
         src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
@@ -85,16 +79,10 @@ export const CareerPageTemplate = ({
 );
 
 CareerPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  image1: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  image1Alt: PropTypes.string,
-  text1: PropTypes.string,
-  header: PropTypes.string,
-  image2: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  image2Alt: PropTypes.string,
-  text2: PropTypes.string,
+  firstSection: PropTypes.shape({}),
+  secondSection: PropTypes.shape({}),
   perks: PropTypes.shape({}),
-  jobVacanciesTitle: PropTypes.string,
+  thirdSection: PropTypes.shape({}),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
@@ -105,16 +93,10 @@ const CareerPage = ({ data }) => {
 
   return (
     <CareerPageTemplate
-      title={post.frontmatter.title}
-      image1={post.frontmatter.image1}
-      image1Alt={post.frontmatter.image1Alt}
-      text1={post.frontmatter.text1}
-      header={post.frontmatter.header}
-      image2={post.frontmatter.image2}
-      image2Alt={post.frontmatter.image2Alt}
-      text2={post.frontmatter.text2}
-      perks={post.frontmatter.perks}
-      jobVacanciesTitle={post.frontmatter.jobVacanciesTitle}
+      firstSection={post.frontmatter.firstSection}
+      secondSection={post.frontmatter.secondSection}
+      perks={post.frontmatter.secondSection.perks}
+      thirdSection={post.frontmatter.thirdSection}
       imageSizes={imageSizes}
     />
   );
@@ -130,22 +112,28 @@ export const careerPageQuery = graphql`
   query CareerPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        image1
-        image1Alt
-        text1
-        header
-        image2
-        image2Alt
-        text2
-        perks {
+        firstSection {
           title
-          perkCards {
-            perkTitle
-            text
+          text
+          image
+          imageAlt
+        }
+        secondSection {
+          title
+          text
+          image
+          imageAlt
+          perks {
+            title
+            perkCards {
+              perkTitle
+              text
+            }
           }
         }
-        jobVacanciesTitle
+        thirdSection {
+          title
+        }
       }
     }
 

@@ -239,51 +239,61 @@ collections:
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Second header", name: "header", widget: "string"}
 
-      - file: "src/pages/no/career/index.md"
-        name: "norwegian_career_page"
-        label: "no/Career page"
+      - file: "src/pages/en/career/index.md"
+        name: "english_career_page"
+        label: "en/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "First image", name: "image1", widget: "image"}
-          - {label: "First Image Description", name: "image1Alt", widget: "string"}
-          - {label: "First text", name: "text1", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
-          - {label: "Second image", name: "image2", widget: "image"}
-          - {label: "Second image description", name: "image2Alt", widget: "string"}
-          - {label: "Second text", name: "text2", widget: "text"}
-          - {label: "First sub-header", name: "subHeader1", widget: "string"}
-          - {label: "Perks", name: "perks", widget: "object", fields: [
+          - {label: "First section", name: "firstSection", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
-              {label: "Perk cards", name: "perkCards", widget: "list", fields: [
-                {label: "Perk title", name: "perkTitle", widget: "string"},
-                {label: "Text", name: "text", widget: "text"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+           ]}
+          - {label: "Second section", name: "secondSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+              {label: "Perks", name: "perks", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
+                  {label: "Perk title", name: "perkTitle", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]},
               ]},
             ]}
-          - {label: "Job vacancies title", name: "jobVacanciesTitle", widget: "string"}
+          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+            ]}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
         label: "en/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "First image", name: "image1", widget: "image"}
-          - {label: "First Image Description", name: "image1Alt", widget: "string"}
-          - {label: "First text", name: "text1", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
-          - {label: "Second image", name: "image2", widget: "image"}
-          - {label: "Second image description", name: "image2Alt", widget: "string"}
-          - {label: "Second text", name: "text2", widget: "text"}
-          - {label: "First sub-header", name: "subHeader1", widget: "string"}
-          - {label: "Perks", name: "perks", widget: "object", fields: [
+          - {label: "First section", name: "firstSection", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
-              {label: "Perk cards", name: "perkCards", widget: "list", fields: [
-                {label: "Perk title", name: "perkTitle", widget: "string"},
-                {label: "Text", name: "text", widget: "text"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+           ]}
+          - {label: "Second section", name: "secondSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Image description", name: "imageAlt", widget: "string"},
+              {label: "Perks", name: "perks", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
+                  {label: "Perk title", name: "perkTitle", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"},
+                ]},
               ]},
             ]}
-          - {label: "Job vacancies title", name: "jobVacanciesTitle", widget: "string"}
+          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+            ]}
 
       - file: "src/pages/no/products/index.md"
         name: "norwegian_products_page"
