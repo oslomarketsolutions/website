@@ -29,7 +29,24 @@ text2: >-
   We have rap fans, metal heads and techno listeners, hockeyplayers,
   non-athletes, yogis, skaters and "Birken-riders". There's meat lovers, vegans
   and lactose intolerants. - wanna add something to our list?
-subHeader1: 'As an employee we can offer:'
-subHeader2: Job vacancies
+perks: 
+  title: 'As an employee we can offer:'
+  perkCards:
+    - perkTitle: 'Employee insurance'
+      text: 'With us everyone is insured'
+    - perkTitle: 'Flexible work hours'
+      text: 'Work when it suits you'
+    - perkTitle: 'Paid phone'
+      text: 'As an employee we pay your phone bill'
+    - perkTitle: 'Cafeteria'
+      text: 'Serves both lunch and breakfast'
+    - perkTitle: 'Company cabins'
+      text: 'With us everyone is insured'
+    - perkTitle: 'Apartments'
+      text: 'Located in Villefranche and Albir'
+    - perkTitle: 'Social events'
+      text: 'Annual social events with the entire group'
+    - perkTitle: Spotify
+      text: 'Paid subscription to Spotify or your favourite streaming service'
+jobVacanciesTitle: Job vacancies
 ---
-

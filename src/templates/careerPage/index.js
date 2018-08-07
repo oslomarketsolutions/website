@@ -36,9 +36,8 @@ export const CareerPageTemplate = ({
   image2,
   image2Alt,
   text2,
-  subHeader1,
-  subHeader2,
-  perkList,
+  perks,
+  jobVacanciesTitle,
   imageSizes,
 }) => (
   <main className={styles.careerPage}>
@@ -63,24 +62,20 @@ export const CareerPageTemplate = ({
       />
     </section>
     <section className={styles.careerPerks}>
-      <h3>{subHeader1}</h3>
+      <h3>{perks.title}</h3>
       <div className={styles.perkCardContainer}>
-        {perkList &&
-          perkList.map(perk => {
-            const { title: perkTitle, text: perkText } = perk.node.frontmatter;
-            return (
-              <PerkCard
-                key={perkTitle}
-                title={perkTitle}
-                text={perkText}
-                color={color()}
-              />
-            );
-          })}
+        {perks.perkCards.map(perkCard => (
+          <PerkCard
+            key={perkCard.perkTitle}
+            title={perkCard.perkTitle}
+            text={perkCard.text}
+            color={color()}
+          />
+        ))}
       </div>
     </section>
     <section className={styles.careerJobVacancies}>
-      <h2>{subHeader2}</h2>
+      <h2>{jobVacanciesTitle}</h2>
       <iframe
         title="Job Vacancies"
         src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
@@ -98,15 +93,13 @@ CareerPageTemplate.propTypes = {
   image2: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   image2Alt: PropTypes.string,
   text2: PropTypes.string,
-  subHeader1: PropTypes.string,
-  subHeader2: PropTypes.string,
-  perkList: PropTypes.arrayOf(PropTypes.object),
+  perks: PropTypes.shape({}),
+  jobVacanciesTitle: PropTypes.string,
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  const perkList = data.perks.edges;
   const imageSizes = data.imageSizes.edges;
   colorCounter = 0;
 
@@ -120,9 +113,8 @@ const CareerPage = ({ data }) => {
       image2={post.frontmatter.image2}
       image2Alt={post.frontmatter.image2Alt}
       text2={post.frontmatter.text2}
-      subHeader1={post.frontmatter.subHeader1}
-      subHeader2={post.frontmatter.subHeader2}
-      perkList={perkList}
+      perks={post.frontmatter.perks}
+      jobVacanciesTitle={post.frontmatter.jobVacanciesTitle}
       imageSizes={imageSizes}
     />
   );
@@ -135,7 +127,7 @@ CareerPage.propTypes = {
 export default CareerPage;
 
 export const careerPageQuery = graphql`
-  query CareerPage($id: String!, $perkRegex: String!) {
+  query CareerPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -146,21 +138,14 @@ export const careerPageQuery = graphql`
         image2
         image2Alt
         text2
-        subHeader1
-        subHeader2
-      }
-    }
-
-    perks: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: $perkRegex } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
+        perks {
+          title
+          perkCards {
+            perkTitle
             text
           }
         }
+        jobVacanciesTitle
       }
     }
 
