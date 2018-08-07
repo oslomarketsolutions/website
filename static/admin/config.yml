@@ -96,7 +96,7 @@ collections:
 
       - file: "src/pages/en/responsibleDisclosure/index.md"
         name: "english_responsibleDisclosure_page"
-        label: "English - Responsible disclosure page"
+        label: "eng - Responsible disclosure page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
           - {label: "Body", name: "body", widget: "markdown"}
@@ -110,7 +110,7 @@ collections:
 
       - file: "src/pages/en/about/index.md"
         name: "english_about_page"
-        label: "English - About page"
+        label: "eng - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
           - {label: "First header", name: "title", widget: "string"}
@@ -121,7 +121,7 @@ collections:
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
-        label: "English - Career page"
+        label: "eng - Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "First section", name: "firstSection", widget: "object", fields: [
@@ -149,7 +149,7 @@ collections:
 
       - file: "src/pages/en/products/index.md"
         name: "english_products_page"
-        label: "English - Products page"
+        label: "eng - Products page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
           - {label: "Intro", name: "intro", widget: "object", fields: [
@@ -173,7 +173,7 @@ collections:
 
       - file: "src/pages/en/index.md"
         name: "english_index_page"
-        label: "English - Homepage"
+        label: "eng - Homepage"
         fields:
           - label: "Hero"
             name: "hero"
@@ -249,7 +249,7 @@ collections:
 
       - file: "src/pages/no/responsibleDisclosure/index.md"
         name: "norwegian_responsibleDisclosure_page"
-        label: "Norwegian - Responsible disclosure page"
+        label: "nor - Responsible disclosure page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "responsibleDisclosurePage"}
           - {label: "Body", name: "body", widget: "markdown"}
@@ -263,7 +263,7 @@ collections:
 
       - file: "src/pages/no/about/index.md"
         name: "norwegian_about_page"
-        label: "Norwegian - About page"
+        label: "nor - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
           - {label: "First header", name: "title", widget: "string"}
@@ -274,7 +274,7 @@ collections:
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"
-        label: "Norwegian - Career page"
+        label: "nor - Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "First section", name: "firstSection", widget: "object", fields: [
@@ -302,7 +302,7 @@ collections:
 
       - file: "src/pages/no/products/index.md"
         name: "norwegian_products_page"
-        label: "Norwegian - Products page"
+        label: "nor - Products page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
           - {label: "Intro", name: "intro", widget: "object", fields: [
@@ -326,7 +326,7 @@ collections:
 
       - file: "src/pages/no/index.md"
         name: "norwegian_index_page"
-        label: "Norwegian - Homepage"
+        label: "nor - Homepage"
         fields:
           - label: "Hero"
             name: "hero"
