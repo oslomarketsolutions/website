@@ -239,9 +239,9 @@ collections:
           - {label: "Text", name: "text", widget: "text"}
           - {label: "Second header", name: "header", widget: "string"}
 
-      - file: "src/pages/en/career/index.md"
-        name: "english_career_page"
-        label: "en/Career page"
+      - file: "src/pages/no/career/index.md"
+        name: "norwegian_career_page"
+        label: "no/Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
           - {label: "First section", name: "firstSection", widget: "object", fields: [
