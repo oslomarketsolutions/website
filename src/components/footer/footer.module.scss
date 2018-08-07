@@ -1,7 +1,8 @@
 @import '../../layouts/variables';
 
 .footer {
-  z-index: 2;
+  position: relative;
+  z-index: 99; // Navbar is 100
   grid-row: 2;
   background-color: $darkBlue;
   grid-column: 1 / span 10;
@@ -66,14 +67,12 @@
     ul {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       width: 100%;
       margin: 0 auto;
       padding: 0;
 
       li {
-        margin: 0 auto;
-
         svg {
           font-size: 36px;
         }
@@ -136,10 +135,6 @@
     .socialMedia {
       ul {
         width: 50%;
-        margin: 0 auto;
-        li {
-          margin: 0 auto;
-        }
       }
     }
 
