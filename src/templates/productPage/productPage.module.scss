@@ -156,15 +156,14 @@
     }
 
     .arena {
-      color: $textColor;
       grid-column: $full;
       grid-row: 3;
       display: grid;
       grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
       grid-template-rows:
         220px max-content max-content max-content
         120px;
-      grid-column-gap: $gridColumnGap;
 
       h2 {
         grid-column: 2 / span 3;
@@ -188,23 +187,22 @@
         max-width: 880px;
         width: 86%;
         align-self: end;
-        margin: 0 20px 0 100px;
+        margin: 0 20px 0 120px;
         box-shadow: $newBoxShadow;
       }
     }
 
     .irModules {
-      z-index: 1;
-      color: $textColor;
       grid-column: $full;
       grid-row: 4;
       display: grid;
       grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
       grid-template-rows:
         220px max-content max-content max-content
         120px;
-      grid-column-gap: $gridColumnGap;
       background-color: $antiFlashWhite;
+      z-index: 1;
 
       h2 {
         grid-column: 7 / span 3;
@@ -229,7 +227,7 @@
         width: 86%;
         align-self: end;
         justify-self: end;
-        margin: 0 100px 0 20px;
+        margin: 0 120px 0 20px;
         box-shadow: $newBoxShadow;
       }
     }

@@ -255,7 +255,6 @@
   }
 
   .arena {
-    color: $textColor;
     grid-column: $full;
     grid-row: 3;
     display: grid;
@@ -294,7 +293,6 @@
 
   .irModules {
     z-index: 1;
-    color: $textColor;
     grid-column: $full;
     grid-row: 4;
     display: grid;
