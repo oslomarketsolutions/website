@@ -61,9 +61,9 @@ customization:
         - Real Time
         - Flexible
         - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
+        - Plug n Play
+        - CA's and Adjustment Factors
+        - Worldwide data
       header: Feed/API
       isDark: false
     - description: >-
