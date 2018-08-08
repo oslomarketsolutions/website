@@ -75,7 +75,9 @@ customization:
         - Worldwide data
       header: OMS Components
       isDark: false
-    - description: Keep investor clients informed and up to date anywhere and at any
+    - description: >-
+        Fully managed and operated custom solutions with OMS unique domain
+        expertise
       features:
         - Real Time
         - Customized
@@ -90,15 +92,15 @@ customization:
     header: Service integrations
     integrationLogos:
       - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat1
+        name: Centevo
       - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat2
+        name: ProBroker
       - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat3
+        name: Advent
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: VPS
       - logo: /img/signicat-logo-black-medium-size.png
         name: Signicat4
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat5
     text: We play well with others
   text: >-
     Whether you want a fully hosted and managed service, to build your own
@@ -110,8 +112,8 @@ otherProducts:
     image: /img/arena.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
-      and N-OTC.  There are currently two information products available in 
-      Arena: Top Shareholders and Corporate Actions Calendar.
+      and N-OTC with the two products Top Shareholders and Corporate Actions
+      Calendar.
   irModules:
     header: IR Web Modules
     image: /img/arena.png
