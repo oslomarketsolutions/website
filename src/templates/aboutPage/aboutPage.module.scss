@@ -1,10 +1,11 @@
 @import '../../layouts/variables';
 
 .aboutPage {
-  grid-template-rows: max-content max-content;
+  grid-template-rows: 750px max-content max-content;
 
-  .aboutOms {
-    color: $textColor;
+  .hero {
+    position: relative;
+    color: $white;
     grid-column: 1 / span 10;
     grid-row: 1;
     display: grid;
@@ -15,49 +16,121 @@
     grid-column-gap: 16px;
 
     h1 {
-      grid-column: 2 / span 8;
+      grid-column: 3 / span 6;
       grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
-      grid-column: 2 / span 8;
+      grid-column: 3 / span 6;
       grid-row: 3;
+      line-height: 2.5rem;
     }
 
-    .imageContainer {
-      grid-column: 2 / span 8;
+    .backgroundImage {
+      position: absolute;
+      z-index: -1;
+      height: 750px;
+      grid-column: 1 / span 10;
+      grid-row: 1 / span 5;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($darkBlue, 0.7);
+      }
+    }
+  }
+
+  .history {
+    grid-column: 1 / span 10;
+    grid-row: 2;
+    background-color: $antiFlashWhite;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows: 100px max-content max-content max-content 100px;
+    grid-column-gap: 16px;
+
+    h5 {
+      grid-column: 3 / 3;
+      font-weight: 200;
+      width: 40px;
+      grid-row: 2;
+      border-bottom: solid $vibrantBlue;
+      padding: 10px 0;
+      font-size: 0.75rem;
+    }
+
+    h2 {
+      grid-column: 3 / span 6;
+      grid-row: 3;
+      margin: 20px 0;
+    }
+
+    p {
+      grid-column: 3 / span 6;
       grid-row: 4;
-      width: 100%;
-      margin: 0 auto;
-      box-shadow: $newBoxShadow;
     }
   }
 
   .aboutEmployees {
-    background-color: $antiFlashWhite;
-    grid-column: 1 / span 10;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 100px max-content max-content;
-    grid-column-gap: 16px;
-    padding-bottom: 100px;
+    grid-column: 2 / span 8;
+    grid-row: 3;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 100px 0;
 
     .employeeWrapper {
-      grid-column: 1 / span 10;
-      grid-row: 3;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       margin: $XL auto 0 auto;
-      max-width: 1762px;
+      max-width: 1580px;
     }
 
-    h1 {
-      grid-column: 2 / span 8;
-      grid-row: 2;
+    h2 {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1172px) {
+  .aboutPage {
+    .aboutEmployees {
+      grid-column: 3 / span 6;
+
+      .employeeWrapper {
+        max-width: 800px;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .aboutPage {
+    .hero {
+      grid-template-rows:
+        120px max-content max-content max-content
+        120px;
+
+      h1 + p {
+        line-height: 2rem;
+      }
+    }
+    .aboutEmployees {
+      grid-column: 2 / span 8;
+
+      .employeeWrapper {
+        max-width: 800px;
+        justify-content: space-around;
+      }
     }
   }
 }

@@ -34,27 +34,30 @@ const sortedEmployeeList = array => {
 };
 
 export const AboutPageTemplate = ({
-  image,
-  imageAlt,
-  text,
-  title,
-  header,
+  hero,
+  history,
+  employees,
   employeeList,
   imageSizes,
 }) => (
   <main className={styles.aboutPage}>
-    <section className={styles.aboutOms}>
-      <h1>{title}</h1>
-      <p className="bodyLarge">{text}</p>
+    <section className={styles.hero}>
+      <h1>{hero.title}</h1>
+      <p className="bodyLarge">{hero.text}</p>
       <ImageWrapper
-        alt={imageAlt}
-        src={image}
-        sizes={findImageSizes(image, imageSizes)}
-        outerWrapperClassName={styles.imageContainer}
+        alt="Background image covering top half of screen"
+        src={hero.backgroundImage}
+        sizes={findImageSizes(hero.backgroundImage, imageSizes)}
+        outerWrapperClassName={styles.backgroundImage}
       />
     </section>
+    <section className={styles.history}>
+      <h5>ABOUT</h5>
+      <h2>{history.header}</h2>
+      <p>{history.text}</p>
+    </section>
     <section className={styles.aboutEmployees}>
-      <h1>{header}</h1>
+      <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
           sortedEmployeeList(employeeList).map(employee => {
@@ -83,11 +86,18 @@ export const AboutPageTemplate = ({
 );
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  imageAlt: PropTypes.string,
-  text: PropTypes.string,
-  header: PropTypes.string,
+  hero: PropTypes.shape({
+    title: PropTypes.string,
+    text: PropTypes.string,
+    backgroundImage: PropTypes.string,
+  }),
+  history: PropTypes.shape({
+    header: PropTypes.string,
+    texT: PropTypes.string,
+  }),
+  employees: PropTypes.shape({
+    header: PropTypes.string,
+  }),
   employeeList: PropTypes.arrayOf(PropTypes.object),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
@@ -99,10 +109,9 @@ const AboutPage = ({ data }) => {
 
   return (
     <AboutPageTemplate
-      image={post.frontmatter.image}
-      title={post.frontmatter.title}
-      text={post.frontmatter.text}
-      header={post.frontmatter.header}
+      hero={post.frontmatter.hero}
+      history={post.frontmatter.history}
+      employees={post.frontmatter.employees}
       employeeList={employeeList}
       imageSizes={imageSizes}
     />
@@ -119,11 +128,18 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!, $employeeRegex: String!) {
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        image
-        imageAlt
-        text
-        header
+        hero {
+          title
+          text
+          backgroundImage
+        }
+        history {
+          header
+          text
+        }
+        employees {
+          header
+        }
       }
     }
 

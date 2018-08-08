@@ -9,8 +9,8 @@
     'description description';
   grid-template-columns: 30% 70%;
   grid-template-rows: 50% 50%;
-  height: 400px;
-  width: 500px;
+  height: 300px;
+  width: 350px;
   transition: all 0.3s;
   color: $grey;
   box-shadow: $boxShadow;
@@ -42,8 +42,8 @@
     border-radius: 50%;
     overflow: hidden;
     align-self: center;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 
     img {
       filter: grayscale(100%);
@@ -65,7 +65,7 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: $vibrantBlue;
   }
 

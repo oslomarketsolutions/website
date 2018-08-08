@@ -113,11 +113,33 @@ collections:
         label: "eng - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image Description", name: "imageAlt", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Hero", name: "hero", widget: "object" fields: [
+              {label: "Header", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+            ]}
+          - {label: "History", name: "history", widget: "object", fields: [
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Text", "name": text, widget: "text"},
+            ]}
+          - {label: "Employees", name: "employees", widget: "object", fields: [
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Employees", name: "employees", widget: "list", fields: [
+                {label: "Name", name: "title", widget: "string"},
+                {label: "Job Title", name: "jobTitle", widget: "string"},
+                {label: "Description", name: "description", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Job Type", name: "jobType", widget: "select", options: [
+                  {label: "Front-end", value: "frontEnd"},
+                  {label: "Designer", value: "designer"},
+                  {label: "Back-end", value: "backEnd"},
+                  {label: "Management", value: "management"},
+                  {label: "Operations", value: "operations"},
+                  {label: "Support", value: "support"},
+                  {label: "Summer intern", value: "summerIntern"},
+                ]},
+              ]},
+            ]}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
@@ -192,7 +214,7 @@ collections:
                   {label: "Users text", name: "usersText", widget: "string"},
                   {label: "Text", name: "text", widget: "string"},
                 ]}
-              - label: "Customer logos" 
+              - label: "Customer logos"
                 name: "customerLogos"
                 widget: "list"
                 fields:
@@ -203,7 +225,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
+              - label: "Investor portal images"
                 name: "investorPortalImages"
                 widget: "list"
                 fields:
@@ -266,11 +288,33 @@ collections:
         label: "nor - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image Description", name: "imageAlt", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Hero", name: "hero", widget: "object" fields: [
+              {label: "Header", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+            ]}
+          - {label: "History", name: "history", widget: "object", fields: [
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Text", "name": text, widget: "text"},
+            ]}
+          - {label: "Employees", name: "employees", widget: "object", fields: [
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Employees", name: "employees", widget: "list", fields: [
+                {label: "Name", name: "title", widget: "string"},
+                {label: "Job Title", name: "jobTitle", widget: "string"},
+                {label: "Description", name: "description", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Job Type", name: "jobType", widget: "select", options: [
+                  {label: "Front-end", value: "frontEnd"},
+                  {label: "Designer", value: "designer"},
+                  {label: "Back-end", value: "backEnd"},
+                  {label: "Management", value: "management"},
+                  {label: "Operations", value: "operations"},
+                  {label: "Support", value: "support"},
+                  {label: "Summer intern", value: "summerIntern"},
+                ]},
+              ]},
+            ]}
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"
@@ -345,7 +389,7 @@ collections:
                   {label: "Users text", name: "usersText", widget: "string"},
                   {label: "Text", name: "text", widget: "string"},
                 ]}
-              - label: "Customer logos" 
+              - label: "Customer logos"
                 name: "customerLogos"
                 widget: "list"
                 fields:
@@ -356,7 +400,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
+              - label: "Investor portal images"
                 name: "investorPortalImages"
                 widget: "list"
                 fields:

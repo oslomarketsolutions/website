@@ -1,10 +1,12 @@
 ---
-templateKey: 'aboutPage'
-path: /about
-title: Oslo Market Solutions
-image: /img/chemex.jpg
-imageAlt: Glass flask containing steaming coffee is sitting on a table
-text: 
-  Kaffe er et lite tre eller en busk som vokser i skogen understory i sin ville form, og tradisjonelt ble dyrket kommersielt under andre trær som ga skygge. Den skoglignende strukturen i skygge kaffebarer gir habitat for et stort antall trekkende og bosatt arter. Kaffe med en opprinnelse er kaffe som vokser innenfor en enkelt kjent geografisk opprinnelse. Noen ganger er dette en enkelt gård eller en bestemt samling av bønner fra et enkelt land. Navnet på kaffen er da vanligvis stedet det ble dyrket til hvilken grad som er tilgjengelig.
-header: Ansatte
+templateKey: aboutPage
+hero:
+  title: Oslo Market solutions
+  text: Oslo Market Solutions is one of the leading Nordic suppliers of internet-based solutions for the financial markets. With a Nordic perspective, we focus on high availability, quality, innovation, design, speed and flexibility towards our clients. All of our solutions are hosted and operated by Oslo Market Solutions.
+  backgroundImage: /img/chemex.jpg
+history:
+  header: history
+  text: HelloHello
+employees:
+  header: Employees
 ---
