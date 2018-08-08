@@ -50,7 +50,7 @@ investorPortal:
     - image: investorportal.png
       name: Investorportal 3
   text: >-
-    Ready to lift your onlíne services to the next level? We offer customized
+    Ready to lift your online services to the next level? We offer customized
     Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
     with your portfolio management systems like ProFamily, Tradex and APX,
     Centevo and more.
@@ -104,8 +104,8 @@ customization:
     text: We play well with others
   text: >-
     Whether you want a fully hosted and managed service, to build your own
-    platform with our flexible React components or start from scratch with only
-    the market data API, we got what you need to get started.
+    platform with our flexible React components or start from scratch with the
+    market data API, we got what you need to get started.
 otherProducts:
   arena:
     header: Arena
