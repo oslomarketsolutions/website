@@ -62,31 +62,28 @@ customization:
         - Flexible
         - Rapid
         - Plug n Play
-        - CA's and Adjustment Factors
+        - Adjustement Factos
         - Worldwide data
       header: Feed/API
       isDark: false
-    - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live,  streaming data
+    - description: '@Espen: Text here. Add features too'
       features:
-        - Real Time
-        - Flexible
-        - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
+        - Rankings
+        - Advanced charts
+        - Heat maps
+        - Financial calendar
+        - Worldwide data
       header: OMS Components
       isDark: false
     - description: Keep investor clients informed and up to date anywhere and at any
       features:
         - Real Time
-        - Flexible
-        - Rapid
         - Customized
-        - ProBroker
         - User Friendly
-      header: Managed solutions
+        - ProFamily
+        - Advent
+        - Centevo
+      header: Hosted solutions
       isDark: true
   header: Choose your level of customization
   serviceIntegrations:
