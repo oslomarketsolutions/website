@@ -116,11 +116,10 @@ otherProducts:
       and N-OTC.  There are currently two information products available in 
       Arena: Top Shareholders and Corporate Actions Calendar.
   irModules:
-    header: IR Modules
+    header: IR Web Modules
     image: /img/arena.png
     text: >-
-      Whether you want a fully hosted and managed web trader,  fund savings
-      platform, portfolio reporting or market data information,  OMS can help
-      you get there.
+      Showcase your share to existing and potential investors with flexible web
+      modules from OMS. From simple quotes to advanced charting tools.
 ---
 
