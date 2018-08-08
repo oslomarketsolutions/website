@@ -51,21 +51,19 @@ investorPortal:
       name: Investorportal 3
   text: >-
     Ready to lift your onlíne services to the next level? We offer customized
-    web traders, fund savings platform, portfolio reporting or market data
-    information integrated with your portfolio management systems like
-    ProFamily, Tradex and APX, Centevo and more.
+    Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
+    with your portfolio management systems like ProFamily, Tradex and APX,
+    Centevo and more.
 customization:
   cards:
-    - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live,  streaming data
+    - description: A full coverage of the financial markets with REST and Websockets APIs
       features:
         - Real Time
         - Flexible
         - Rapid
         - Customized
         - ProBroker
-        - User Friendly
+        - test
       header: Feed/API
       isDark: false
     - description: >-
