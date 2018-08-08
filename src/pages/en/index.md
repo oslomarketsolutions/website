@@ -62,7 +62,7 @@ customization:
         - Flexible
         - Rapid
         - Plug n Play
-        - Adjustement Factos
+        - Adjf factors
         - Worldwide data
       header: Feed/API
       isDark: false
@@ -71,7 +71,7 @@ customization:
         - Rankings
         - Advanced charts
         - Heat maps
-        - Financial calendar
+        - Order depth
         - Worldwide data
       header: OMS Components
       isDark: false
