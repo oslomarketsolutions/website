@@ -1,3 +1,4 @@
+// COLORS
 $darkBlue: #1c315b;
 $vibrantBlue: #0080ff;
 $primaryButtonHover: #0066d4;
@@ -16,6 +17,10 @@ $white: #fff;
 $footerBackgroundColor: #f1f3f5;
 $copyrightColor: #808080;
 
+// BOX-SHADOW
+$navbarShadow: 0 8px 10px 1px rgba(77, 111, 158, 0.14),
+  0 3px 14px 2px rgba(77, 111, 158, 0.12),
+  0 5px 5px -3px rgba(77, 111, 158, 0.2);
 $boxShadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.13);
 $newBoxShadow: 0 16px 24px 0 #c7d3e3;
 
@@ -37,3 +42,6 @@ $extraBold: 800;
 
 // GRID
 $gridColumnTemplate: minmax(0, 1fr) repeat(8, minmax(0, 128.5px)) minmax(0, 1fr);
+$gridColumnGap: 16px;
+$full: 1 / span 10;
+$main: 2 / span 8;

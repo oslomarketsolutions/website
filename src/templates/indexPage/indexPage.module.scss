@@ -8,30 +8,30 @@
   }
 
   .animation {
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows: 30% max-content max-content max-content;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     color: $antiFlashWhite;
     width: 100%;
     height: 100vh;
     background-color: $darkBlue;
 
     h1 {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 2;
     }
 
     p {
       padding: $XXL 0;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 3;
     }
 
     p + a {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 4;
     }
   }
@@ -50,7 +50,7 @@
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 128.5px));
     grid-template-rows: max-content auto;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     align-items: center;
     color: $textColor;
     border-radius: $S;
@@ -144,7 +144,7 @@
 
   .investorPortal {
     color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 2;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
@@ -152,7 +152,7 @@
       624px max-content max-content max-content
       max-content max-content max-content max-content
       max-content max-content max-content max-content;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     align-items: center;
     height: 2578px;
     background-color: $antiFlashWhite;
@@ -209,7 +209,7 @@
 
     .subHeader1 {
       padding-top: 100px;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 7;
     }
 
@@ -221,7 +221,7 @@
 
     .customizationCards {
       padding: 0 0 192px 0;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 9;
       display: flex;
       flex-flow: row wrap;
@@ -229,18 +229,18 @@
     }
 
     .subHeader2 {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 10;
     }
 
     .subHeader2 + p {
       padding: $XXL 0;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 11;
     }
 
     .integrationLogos {
-      grid-column: 1 / span 10;
+      grid-column: $full;
       grid-row: 12;
       display: flex;
       flex-flow: row nowrap;
@@ -256,14 +256,14 @@
 
   .arena {
     color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 3;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
       220px max-content max-content max-content
       120px;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
 
     h1 {
       grid-column: 2 / span 3;
@@ -295,14 +295,14 @@
   .irModules {
     z-index: 1;
     color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 4;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
       220px max-content max-content max-content
       120px;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     background-color: $antiFlashWhite;
 
     h1 {
@@ -527,15 +527,15 @@
         max-content max-content max-content max-content;
 
       h1 {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       h1 + p {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       p + a {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       .investorPortalImagesWrapper {
@@ -562,19 +562,19 @@
     .arena,
     .irModules {
       h1 {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       h1 + p {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       a {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       .imageContainer {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
     }
   }

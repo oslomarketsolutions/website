@@ -1,12 +1,322 @@
 @import '../../layouts/variables';
 
 .productPage {
+  grid-template-rows: max-content max-content max-content max-content;
+
+  .centered {
+    text-align: center;
+  }
+
   .linkCardsSection {
+    grid-column: $full;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+    grid-column-gap: $gridColumnGap;
+    grid-template-rows: max-content max-content;
+    background-color: $antiFlashWhite;
+
+    h1 {
+      grid-column: $main;
+      grid-row: 1;
+      margin-top: 160px;
+      padding: 0 64px;
+    }
+
+    .linkCards {
+      grid-column: $main;
+      grid-row: 2;
+      height: 700px;
+    }
   }
   .investorPortal {
+    grid-column: $full;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+    grid-column-gap: $gridColumnGap;
+    grid-template-rows: max-content max-content max-content max-content;
+
+    section:first-of-type {
+      grid-row: 1;
+      grid-column: 3 / span 6;
+    }
+
+    .marketData {
+      grid-column: $full;
+      grid-row: 2;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
+      grid-template-rows: 164px max-content max-content 164px;
+      margin: 130px 0 65px 0;
+
+      h2 {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+      }
+
+      h2 + p {
+        grid-column: 2 / span 3;
+        grid-row: 3;
+        padding: $XL 0;
+      }
+
+      .imageContainer {
+        grid-column: 6 / span 5;
+        grid-row: 1 / span 4;
+        box-shadow: $newBoxShadow;
+        width: 86%;
+        max-width: 880px;
+        align-self: center;
+        margin: 0 $M 0 $M;
+      }
+    }
+
+    .trading {
+      grid-column: $full;
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
+      grid-template-rows: max-content max-content 359px;
+      margin: 65px 0;
+
+      h2 {
+        grid-column: 7 / span 3;
+        grid-row: 1;
+      }
+
+      h2 + p {
+        grid-column: 7 / span 3;
+        grid-row: 2;
+        padding: $XL 0;
+      }
+
+      .imageContainer {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 4;
+        box-shadow: $newBoxShadow;
+        width: 86%;
+        max-width: 880px;
+        justify-self: end;
+        align-self: center;
+        margin: 0 $M 0 $M;
+      }
+    }
+
+    .onlinePortfolio {
+      grid-column: $full;
+      grid-row: 4;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
+      grid-template-rows: max-content max-content max-content 270px;
+      margin: 65px 0 130px 0;
+
+      .overline {
+        grid-column: 2 / span 3;
+        grid-row: 1;
+      }
+
+      h2 {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+      }
+
+      h2 + p {
+        grid-column: 2 / span 3;
+        grid-row: 3;
+        padding: $XL 0;
+      }
+
+      .imageContainer {
+        grid-column: 6 / span 5;
+        grid-row: 1 / span 5;
+        box-shadow: $newBoxShadow;
+        width: 86%;
+        max-width: 880px;
+        align-self: center;
+        margin: 0 $M 0 $M;
+      }
+    }
   }
+
   .standardProducts {
+    grid-column: $full;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+    grid-column-gap: $gridColumnGap;
+    grid-template-rows: max-content max-content;
+    background-color: $antiFlashWhite;
+
+    section:first-of-type {
+      grid-column: 3 / span 6;
+    }
+
+    .arena {
+      color: $textColor;
+      grid-column: $full;
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-template-rows:
+        220px max-content max-content max-content
+        120px;
+      grid-column-gap: $gridColumnGap;
+
+      h2 {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+      }
+
+      h2 + p {
+        padding: $XL 0;
+        grid-column: 2 / span 3;
+        grid-row: 3;
+      }
+
+      a {
+        grid-column: 2 / span 2;
+        grid-row: 4;
+      }
+
+      .imageContainer {
+        grid-column: 5 / span 6;
+        grid-row: 1 / span 5;
+        max-width: 880px;
+        width: 86%;
+        align-self: end;
+        margin: 0 20px 0 100px;
+        box-shadow: $newBoxShadow;
+      }
+    }
+
+    .irModules {
+      z-index: 1;
+      color: $textColor;
+      grid-column: $full;
+      grid-row: 4;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-template-rows:
+        220px max-content max-content max-content
+        120px;
+      grid-column-gap: $gridColumnGap;
+      background-color: $antiFlashWhite;
+
+      h2 {
+        grid-column: 7 / span 3;
+        grid-row: 2;
+      }
+
+      h2 + p {
+        padding: $XL 0;
+        grid-column: 7 / span 3;
+        grid-row: 3;
+      }
+
+      a {
+        grid-column: 7 / span 2;
+        grid-row: 4;
+      }
+
+      .imageContainer {
+        grid-column: 1 / span 6;
+        grid-row: 1 / span 5;
+        max-width: 880px;
+        width: 86%;
+        align-self: end;
+        justify-self: end;
+        margin: 0 100px 0 20px;
+        box-shadow: $newBoxShadow;
+      }
+    }
   }
   .services {
+    grid-column: $full;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+    grid-column-gap: $gridColumnGap;
+    grid-template-rows: max-content max-content;
+    background-color: $white;
+    z-index: 2;
+
+    section:first-of-type {
+      grid-column: 3 / span 6;
+    }
+
+    .feedAPI {
+      grid-column: $full;
+      grid-row: 2;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
+      grid-template-rows: 164px max-content max-content max-content 164px;
+      margin: 80px 0 0 0;
+
+      h2 {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+      }
+
+      h2 + p {
+        grid-column: 2 / span 3;
+        grid-row: 3;
+        padding: $XL 0;
+      }
+
+      a {
+        grid-column: 2 / span 2;
+        grid-row: 4;
+      }
+
+      .imageContainer {
+        grid-column: 6 / span 5;
+        grid-row: 1 / span 5;
+        width: 86%;
+        max-width: 880px;
+        align-self: center;
+        margin: 0 $M 0 $M;
+      }
+    }
+
+    .omsComponents {
+      grid-column: $full;
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: $gridColumnTemplate;
+      grid-column-gap: $gridColumnGap;
+      grid-template-rows: 164px max-content max-content max-content 164px;
+      margin: 0 0 130px 0;
+
+      h2 {
+        grid-column: 7 / span 3;
+        grid-row: 2;
+      }
+
+      h2 + p {
+        grid-column: 7 / span 3;
+        grid-row: 3;
+        padding: $XL 0;
+      }
+
+      a {
+        grid-column: 7 / span 2;
+        grid-row: 4;
+      }
+
+      .imageContainer {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 5;
+        width: 86%;
+        max-width: 880px;
+        align-self: center;
+        justify-self: end;
+        margin: 0 $M 0 $M;
+      }
+    }
   }
 }

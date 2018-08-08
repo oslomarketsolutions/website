@@ -5,28 +5,28 @@
 
   .aboutOms {
     color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
       220px max-content max-content max-content
       120px;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
 
     h1 {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 2;
     }
 
     h1 + p {
       padding: $XL 0;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 3;
     }
 
     .imageContainer {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 4;
       width: 100%;
       margin: 0 auto;
@@ -36,16 +36,16 @@
 
   .aboutEmployees {
     background-color: $antiFlashWhite;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 2;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows: 100px max-content max-content;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     padding-bottom: 100px;
 
     .employeeWrapper {
-      grid-column: 1 / span 10;
+      grid-column: $full;
       grid-row: 3;
       display: flex;
       flex-flow: row wrap;
@@ -55,7 +55,7 @@
     }
 
     h1 {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 2;
       width: 100%;
     }

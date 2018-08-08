@@ -11,10 +11,10 @@ html {
 
   main {
     display: grid;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 1;
     grid-template-columns: $gridColumnTemplate;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
   }
 
   ul {
@@ -25,7 +25,7 @@ html {
     display: grid;
     grid-template-rows: max-content max-content;
     grid-template-columns: $gridColumnTemplate;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
   }
 
   // Typography
@@ -50,7 +50,7 @@ html {
   }
 
   h2 {
-    font-weight: $regular; // $bold
+    font-weight: $bold; // $bold
     font-size: 2.25rem;
     line-height: 3rem;
   }
@@ -103,6 +103,14 @@ html {
     font-size: 0.875rem;
     line-height: 1rem;
     letter-spacing: 0.1px;
+  }
+
+  p.overline {
+    font-weight: $regular;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
   }
 
   p.bodyLarge {

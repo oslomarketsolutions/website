@@ -57,7 +57,7 @@
 @media (max-width: 1300px) {
   .responsibleDisclosurePage {
     .right {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       margin-top: 0;
     }
 
@@ -76,7 +76,7 @@
 
     .left {
       margin-top: 100px;
-      grid-column: 2 / span 8;
+      grid-column: $main;
     }
   }
 }

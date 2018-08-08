@@ -103,7 +103,11 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.investorPortal}>
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
-        <Button to={`/${strippedLanguage}/products`} text="Learn more" />
+        <Button
+          to={`/${strippedLanguage}/products`}
+          text="Learn more"
+          useArrow
+        />
         <div className={styles.investorPortalImagesWrapper}>
           {investorPortal.investorPortalImages.map(investorPortalImage => (
             <ImageWrapper
@@ -164,7 +168,11 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.arena}>
         <h1>{otherProducts.arena.header}</h1>
         <p className="bodyLarge">{otherProducts.arena.text}</p>
-        <Button to={`/${strippedLanguage}/products`} text="Learn more" />
+        <Button
+          to={`/${strippedLanguage}/products`}
+          text="Learn more"
+          useArrow
+        />
         <ImageWrapper
           src={otherProducts.arena.image}
           alt="Abstract arena"
@@ -175,11 +183,15 @@ const IndexPageTemplate = ({ language, data }) => {
       <section className={styles.irModules}>
         <h1>{otherProducts.irModules.header}</h1>
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
-        <Button to={`/${strippedLanguage}/products`} text="Learn more" />
+        <Button
+          to={`/${strippedLanguage}/products`}
+          text="Learn more"
+          useArrow
+        />
         <ImageWrapper
-          src={otherProducts.arena.image}
+          src={otherProducts.irModules.image}
           alt="Abstract IR Modules"
-          sizes={findImageSizes(otherProducts.arena.image, imageSizes)}
+          sizes={findImageSizes(otherProducts.irModules.image, imageSizes)}
           outerWrapperClassName={styles.imageContainer}
         />
       </section>

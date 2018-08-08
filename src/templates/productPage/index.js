@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import ImageWrapper from '../../components/imageWrapper';
 import { findImageSizes } from '../../utils/helperFunctions';
 import styles from './productPage.module.scss';
+import SectionHeader from '../../components/sectionHeader/index';
+import Button from '../../components/button/index';
 // import LinkCard from '../../components/linkCard';
 // import ProductCard from '../../components/productCard';
 // import oneYearGraph from '../../components/oneYearGraph';
@@ -21,30 +23,124 @@ export const ProductPageTemplate = ({
   standardProducts,
   services,
   imageSizes,
+  language,
 }) => {
-  const ting = 'ting';
+  const parsedPath = /^\/(\w\w)/.exec(language);
+  const strippedLanguage = parsedPath && parsedPath[1];
 
   return (
     <main className={styles.productPage}>
       <section className={styles.linkCardsSection}>
-        <h1>hei</h1>
-        <div>{ting}</div>
+        <h1 className={styles.centered}>{linkCardsSection.title}</h1>
+        <div className={styles.linkCards} />
       </section>
       <section className={styles.investorPortal}>
-        <h1>{investorPortal.sectionHeader.title}</h1>
+        <SectionHeader
+          header={investorPortal.sectionHeader.header}
+          subHeader={investorPortal.sectionHeader.subHeader}
+          text={investorPortal.sectionHeader.text}
+        />
+        <section className={styles.marketData}>
+          <h2>{investorPortal.marketData.header}</h2>
+          <p className="bodyLarge">{investorPortal.marketData.text}</p>
+          <ImageWrapper
+            key={investorPortal.marketData.header}
+            src={investorPortal.marketData.image}
+            alt={investorPortal.marketData.header}
+            sizes={findImageSizes(investorPortal.marketData.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
+        <section className={styles.trading}>
+          <h2>{investorPortal.trading.header}</h2>
+          <p className="bodyLarge">{investorPortal.trading.text}</p>
+          <ImageWrapper
+            key={investorPortal.trading.header}
+            src={investorPortal.trading.image}
+            alt={investorPortal.trading.header}
+            sizes={findImageSizes(investorPortal.trading.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
+        <section className={styles.onlinePortfolio}>
+          <p className={`overline ${styles.overline}`}>
+            {investorPortal.onlinePortfolio.overline}
+          </p>
+          <h2>{investorPortal.onlinePortfolio.header}</h2>
+          <p className="bodyLarge">{investorPortal.onlinePortfolio.text}</p>
+          <ImageWrapper
+            key={investorPortal.onlinePortfolio.header}
+            src={investorPortal.onlinePortfolio.image}
+            alt={investorPortal.onlinePortfolio.header}
+            sizes={findImageSizes(
+              investorPortal.onlinePortfolio.image,
+              imageSizes,
+            )}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
       </section>
       <section className={styles.standardProducts}>
-        <h1>{standardProducts.sectionHeader.title}</h1>
+        <SectionHeader
+          header={standardProducts.sectionHeader.header}
+          subHeader={standardProducts.sectionHeader.subHeader}
+          text={standardProducts.sectionHeader.text}
+        />
+        <section className={styles.arena}>
+          <h2>{standardProducts.arena.header}</h2>
+          <p className="bodyLarge">{standardProducts.arena.text}</p>
+          <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+          <ImageWrapper
+            key={standardProducts.arena.header}
+            src={standardProducts.arena.image}
+            alt={standardProducts.arena.header}
+            sizes={findImageSizes(standardProducts.arena.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
+        <section className={styles.irModules}>
+          <h2>{standardProducts.irModules.header}</h2>
+          <p className="bodyLarge">{standardProducts.irModules.text}</p>
+          <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+          <ImageWrapper
+            key={standardProducts.irModules.header}
+            src={standardProducts.irModules.image}
+            alt={standardProducts.irModules.header}
+            sizes={findImageSizes(standardProducts.irModules.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
       </section>
       <section className={styles.services}>
-        <h1>{services.sectionHeader.title}</h1>
-        <ImageWrapper
-          key={services.feedAPI.title}
-          src={services.feedAPI.image}
-          alt={services.feedAPI.title}
-          sizes={findImageSizes(services.feedAPI.image, imageSizes)}
-          outerWrapperClassName={styles.imageContainer}
+        <SectionHeader
+          header={services.sectionHeader.header}
+          subHeader={services.sectionHeader.subHeader}
+          text={services.sectionHeader.text}
         />
+        <section className={styles.feedAPI}>
+          <h2>{services.feedAPI.header}</h2>
+          <p className="bodyLarge">{services.feedAPI.text}</p>
+          <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+          <ImageWrapper
+            key={services.feedAPI.header}
+            src={services.feedAPI.image}
+            alt={services.feedAPI.header}
+            sizes={findImageSizes(services.feedAPI.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
+        <section className={styles.omsComponents}>
+          <h2>{services.omsComponents.header}</h2>
+          <p className="bodyLarge">{services.omsComponents.text}</p>
+          <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+          <ImageWrapper
+            key={services.omsComponents.header}
+            src={services.omsComponents.image}
+            alt={services.omsComponents.header}
+            sizes={findImageSizes(services.omsComponents.image, imageSizes)}
+            outerWrapperClassName={styles.imageContainer}
+          />
+        </section>
       </section>
     </main>
   );
@@ -55,10 +151,11 @@ ProductPageTemplate.propTypes = {
   investorPortal: PropTypes.shape({}),
   standardProducts: PropTypes.shape({}),
   services: PropTypes.shape({}),
-  imageSizes: PropTypes.shape({}),
+  imageSizes: PropTypes.arrayOf(PropTypes.object),
+  language: PropTypes.string,
 };
 
-const ProductPage = ({ data }) => {
+const ProductPage = ({ data, location }) => {
   const page = data.page.frontmatter;
   const imageSizes = data.imageSizes.edges;
 
@@ -69,6 +166,7 @@ const ProductPage = ({ data }) => {
       standardProducts={page.standardProducts}
       services={page.services}
       imageSizes={imageSizes}
+      language={location.pathname}
     />
   );
 };
@@ -81,6 +179,7 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
+  location: PropTypes.shape({}),
 };
 
 export const productPageQuery = graphql`
@@ -90,35 +189,35 @@ export const productPageQuery = graphql`
         linkCardsSection {
           title
           linkCards {
-            title
+            header
             description
             isDark
           }
         }
         investorPortal {
           sectionHeader {
-            title
-            subTitle
+            header
+            subHeader
             text
           }
           marketData {
-            title
+            header
             text
             image
           }
           trading {
-            title
+            header
             text
             image
           }
           onlinePortfolio {
             overline
-            title
+            header
             text
             image
           }
           serviceIntegrations {
-            title
+            header
             text
             integrationsLogos {
               logo
@@ -128,34 +227,34 @@ export const productPageQuery = graphql`
         }
         standardProducts {
           sectionHeader {
-            title
-            subTitle
+            header
+            subHeader
             text
           }
           arena {
-            title
+            header
             image
             text
           }
           irModules {
-            title
+            header
             image
             text
           }
         }
         services {
           sectionHeader {
-            title
-            subTitle
+            header
+            subHeader
             text
           }
           feedAPI {
-            title
+            header
             image
             text
           }
           omsComponents {
-            title
+            header
             image
             text
           }

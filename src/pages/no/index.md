@@ -117,7 +117,7 @@ otherProducts:
       Arena: Top Shareholders and Corporate Actions Calendar.'
   irModules:
     header: IR Modules
-    image: /img/arena.png
+    image: /img/irModulesPlaceholder.png
     text: 
       'Whether you want a fully hosted and managed web trader, 
       fund savings platform, portfolio reporting or market data information, 

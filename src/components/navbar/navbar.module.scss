@@ -10,6 +10,7 @@ header {
   width: 100%;
   z-index: 100;
   background-color: $white;
+  box-shadow: $navbarShadow;
 }
 
 header.headerUnderline {
@@ -20,7 +21,7 @@ header.headerUnderline.navColorWhite {
 }
 
 header.headerUnderline {
-  box-shadow: $boxShadow;
+  box-shadow: $navbarShadow;
 
   .navbar {
     height: 58px;
@@ -199,8 +200,9 @@ header.headerUnderline {
   }
 }
 
-header.navColorWhite {
+.navColorWhite {
   background-color: $darkBlue;
+  box-shadow: none;
 }
 
 header.navColorWhite .navbar {
