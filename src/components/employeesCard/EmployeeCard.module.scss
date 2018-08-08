@@ -2,79 +2,92 @@
 
 .EmployeeCard {
   background-color: $white;
+  border-radius: 15px;
   display: grid;
   grid-template-areas:
     'image header'
-    'image  description';
-  grid-template-columns: 140px 375px;
-  grid-template-rows: 100px 100px;
-  width: 515px;
-  transition: 0.3s;
-  color: $white;
+    'description description';
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 50% 50%;
+  height: 400px;
+  width: 500px;
+  transition: all 0.3s;
+  color: $grey;
   box-shadow: $boxShadow;
-  margin-bottom: 64px;
+  padding: 25px;
+  margin-bottom: 20px; // This should be set elsewhere
+
+  &:hover {
+    transform: scale(1.08);
+    box-shadow: $newBoxShadow;
+
+    .imageContainer {
+      img {
+        animation: fadeFromGray 0.3s forwards;
+      }
+    }
+  }
+
+  @keyframes fadeFromGray {
+    from {
+      filter: grayscale(100%);
+    }
+    to {
+      filter: grayscale(0%);
+    }
+  }
 
   .imageContainer {
-    width: 100%;
-    height: 200px;
     grid-area: image;
-    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    align-self: center;
+    width: 125px;
+    height: 125px;
+
+    img {
+      filter: grayscale(100%);
+      animation-play-state: paused;
+    }
   }
 
   .header {
-    position: relative;
+    display: flex;
     grid-area: header;
-    display: grid;
-    grid-template-areas:
-      'name icon'
-      'title icon';
-    grid-template-columns: 70% 30%;
-    background-image: url(../../../static/img/ansattkortHeader.jpg);
+    flex-flow: column wrap;
+    justify-content: center;
   }
 
   .description {
+    height: 100px;
     grid-area: description;
-    justify-self: start;
-    align-self: center;
-  }
-
-  figure {
-    display: grid;
-    grid-area: icon;
-    align-items: center;
-    justify-content: center;
+    padding-top: 50px;
   }
 
   h3 {
     font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-    grid-area: name;
-    align-self: end;
+    color: $vibrantBlue;
   }
 
   h4 {
-    font-size: 1.125rem;
-    grid-area: title;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 1rem;
+    color: $lightGrey;
   }
 
   h3,
   h4 {
     text-align: left;
     font-weight: 400;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
   }
 
   p {
     color: $darkBlue;
-    margin: 0 20px;
     font-size: 1rem;
   }
 }
 
+/* We'll see if we need resizing
 @media (max-width: 565px) {
   .EmployeeCard {
     grid-template-columns: auto;
@@ -92,3 +105,4 @@
     }
   }
 }
+*/

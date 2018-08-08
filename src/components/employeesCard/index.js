@@ -30,12 +30,11 @@ const iconMatcher = jobType => {
 };
 
 const EmployeeCard = props => {
-  const { name, jobTitle, description, portraitSize, jobType, image } = props;
+  const { name, jobTitle, description, portraitSize, image } = props;
   return (
     <section className={styles.EmployeeCard}>
       <ImageWrapper
         outerWrapperClassName={styles.imageContainer}
-        style={{ gridArea: 'image' }}
         sizes={portraitSize}
         src={image}
         alt={name}
@@ -43,9 +42,6 @@ const EmployeeCard = props => {
       <section className={styles.header}>
         <h3>{name}</h3>
         <h4>{jobTitle}</h4>
-        <figure>
-          <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
-        </figure>
       </section>
       <section className={styles.description}>
         <p>{description}</p>
