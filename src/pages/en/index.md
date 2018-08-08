@@ -63,7 +63,7 @@ customization:
         - Rapid
         - Customized
         - ProBroker
-        - test
+        - User Friendly
       header: Feed/API
       isDark: false
     - description: >-
