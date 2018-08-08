@@ -50,9 +50,10 @@ investorPortal:
     - image: investorportal.png
       name: Investorportal 3
   text: >-
-    Whether you want a fully hosted and managed web trader, fund savings
-    platform, portfolio reporting or market data information, OMS can help you
-    get there.
+    Ready to lift your onlíne services to the next level? We offer customized
+    web traders, fund savings platform, portfolio reporting or market data
+    information integrated with your portfolio management systems like
+    ProFamily, Tradex and APX, Centevo and more.
 customization:
   cards:
     - description: >-
@@ -105,9 +106,9 @@ customization:
         name: Signicat5
     text: We play well with others
   text: >-
-    Whether you want a fully hosted and managed web trader, fund savings
-    platform, portfolio reporting or market data information, OMS can help you
-    get there.
+    Whether you want a fully hosted and managed service, to build your own
+    platform with our flexible React components or start from scratch with only
+    the market data API, we got what you need to get started.
 otherProducts:
   arena:
     header: Arena
