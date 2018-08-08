@@ -62,7 +62,7 @@ customization:
         - Flexible
         - Rapid
         - Plug n Play
-        - Adjf factors
+        - Adj. factors
         - Worldwide data
       header: Feed/API
       isDark: false
