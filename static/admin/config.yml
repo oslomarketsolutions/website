@@ -124,27 +124,29 @@ collections:
         label: "eng - Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "First section", name: "firstSection", widget: "object", fields: [
+          - {label: "Hero", name: "hero", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+              {label: "Image description", name: "backgroundImageAlt", widget: "string"},
            ]}
-          - {label: "Second section", name: "secondSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
+          - {label: "About", name: "about", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
-              {label: "Perks", name: "perks", widget: "object", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
-                  {label: "Perk title", name: "perkTitle", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]},
-              ]},
             ]}
-          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
+          - {label: "Perks", name: "perks", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Perk cards", name: "perkCards", widget: "list", fields: [
+                {label: "Perk title", name: "perkTitle", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Icon", name;: "icon", widget: "image"}
+              ]},
+            ]},
+          - {label: "Positions", name: "positions", widget: "object", fields: [
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
             ]}
 
       - file: "src/pages/en/products/index.md"
@@ -192,7 +194,7 @@ collections:
                   {label: "Users text", name: "usersText", widget: "string"},
                   {label: "Text", name: "text", widget: "string"},
                 ]}
-              - label: "Customer logos" 
+              - label: "Customer logos"
                 name: "customerLogos"
                 widget: "list"
                 fields:
@@ -203,7 +205,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
+              - label: "Investor portal images"
                 name: "investorPortalImages"
                 widget: "list"
                 fields:
@@ -277,27 +279,29 @@ collections:
         label: "nor - Career page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careerPage"}
-          - {label: "First section", name: "firstSection", widget: "object", fields: [
+          - {label: "Hero", name: "hero", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+              {label: "Image description", name: "backgroundImageAlt", widget: "string"},
            ]}
-          - {label: "Second section", name: "secondSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
+          - {label: "About", name: "about", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Image description", name: "imageAlt", widget: "string"},
-              {label: "Perks", name: "perks", widget: "object", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Perk cards", name: "perkCards", widget: "list", fields: [
-                  {label: "Perk title", name: "perkTitle", widget: "string"},
-                  {label: "Text", name: "text", widget: "text"},
-                ]},
-              ]},
             ]}
-          - {label: "Third section", name: "thirdSection", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
+          - {label: "Perks", name: "perks", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Perk cards", name: "perkCards", widget: "list", fields: [
+                {label: "Perk title", name: "perkTitle", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Icon", name;: "icon", widget: "image"}
+              ]},
+            ]},
+          - {label: "Positions", name: "positions", widget: "object", fields: [
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
             ]}
 
       - file: "src/pages/no/products/index.md"
@@ -345,7 +349,7 @@ collections:
                   {label: "Users text", name: "usersText", widget: "string"},
                   {label: "Text", name: "text", widget: "string"},
                 ]}
-              - label: "Customer logos" 
+              - label: "Customer logos"
                 name: "customerLogos"
                 widget: "list"
                 fields:
@@ -356,7 +360,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
+              - label: "Investor portal images"
                 name: "investorPortalImages"
                 widget: "list"
                 fields:
