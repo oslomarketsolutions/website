@@ -7,23 +7,23 @@
   grid-template-areas:
     'image header'
     'description description';
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 100px 200px;
   grid-template-rows: 50% 50%;
   height: 300px;
   width: 350px;
   transition: all 0.3s;
   color: $grey;
-  box-shadow: $boxShadow;
+  box-shadow: $newBoxShadow;
   padding: 25px;
   margin-bottom: 20px; // This should be set elsewhere
 
   &:hover {
     transform: scale(1.08);
-    box-shadow: $newBoxShadow;
-
-    .imageContainer {
-      img {
-        animation: fadeFromGray 0.3s forwards;
+    .imageAndIconContainer {
+      .imageContainer {
+        img {
+          animation: fadeFromGray 0.5s forwards;
+        }
       }
     }
   }
@@ -37,17 +37,40 @@
     }
   }
 
-  .imageContainer {
+  .imageAndIconContainer {
+    position: relative;
     grid-area: image;
-    border-radius: 50%;
-    overflow: hidden;
-    align-self: center;
-    width: 100px;
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    img {
-      filter: grayscale(100%);
-      animation-play-state: paused;
+    .iconContainer {
+      position: absolute;
+      overflow: hidden;
+      bottom: 5px;
+      right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: solid $white;
+      width: 35px;
+      height: 35px;
+      background-color: $vibrantBlue;
+      color: $white;
+    }
+
+    .imageContainer {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+
+      img {
+        filter: grayscale(100%);
+        animation-play-state: paused;
+      }
     }
   }
 
