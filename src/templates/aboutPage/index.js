@@ -63,7 +63,7 @@ export const AboutPageTemplate = ({
       <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
-          sortedEmployeeList(employeeList).map(employee => {
+          sortedEmployeeList(employeeList).map((employee, index) => {
             const {
               title: employeeName,
               description: employeeDescription,
@@ -71,6 +71,15 @@ export const AboutPageTemplate = ({
               image: employeeImage,
               jobType: employeeJobType,
             } = employee.node.frontmatter;
+
+            if (index === 1) {
+              return (
+                <div className={styles.quoteWrapper}>
+                  <h2>Don't be afraid to stand out from the crowd</h2>
+                  <p>Name Last name</p>
+                </div>
+              );
+            }
             return (
               <EmployeeCard
                 key={employeeName}

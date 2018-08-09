@@ -94,6 +94,20 @@
       margin: $XL auto 0 auto;
       width: 100%;
       max-width: 1580px;
+
+      .quoteWrapper {
+        height: 300px;
+        width: 700px;
+        text-align: right;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+
+        h2 {
+          width: 70%;
+          align-self: flex-end;
+        }
+      }
     }
 
     h2 {
@@ -121,6 +135,16 @@
       .employeeWrapper {
         max-width: 800px;
         justify-content: space-around;
+
+        .quoteWrapper {
+          width: 350px;
+
+          h2 {
+            width: 95%;
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+          }
+        }
       }
     }
   }
