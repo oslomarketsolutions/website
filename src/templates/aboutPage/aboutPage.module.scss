@@ -152,15 +152,45 @@
 
 @media (max-width: 580px) {
   .aboutPage {
+    grid-template-rows: max-content max-content max-content max-content;
+
     .hero {
-      grid-template-rows:
-        120px max-content max-content max-content
-        120px;
+      color: $grey;
+      grid-template-rows: 400px max-content max-content max-content;
+
+      .backgroundImage {
+        height: 350px;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      h1 {
+        grid-column: 2 / span 8;
+      }
 
       h1 + p {
+        grid-column: 2 / span 8;
         line-height: 2rem;
+        padding-bottom: 100px;
       }
     }
+
+    .history {
+      h5 {
+        grid-column: 2;
+      }
+
+      h2 {
+        grid-column: 2 / span 8;
+      }
+
+      p {
+        grid-column: 2 / span 8;
+      }
+    }
+
     .aboutEmployees {
       grid-column: 2 / span 8;
 
