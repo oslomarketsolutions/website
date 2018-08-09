@@ -105,6 +105,14 @@ html {
     letter-spacing: 0.1px;
   }
 
+  p.overline {
+    font-weight: $regular;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+  }
+
   p.bodyLarge {
     font-size: 1.5rem;
     line-height: 2rem;

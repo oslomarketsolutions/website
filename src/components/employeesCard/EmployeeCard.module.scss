@@ -102,29 +102,4 @@
     font-weight: 400;
     margin-left: 15px;
   }
-
-  p {
-    color: $darkBlue;
-    font-size: 1rem;
-  }
 }
-
-/* We'll see if we need resizing
-@media (max-width: 565px) {
-  .EmployeeCard {
-    grid-template-columns: auto;
-    grid-template-rows: 400px 135px 150px;
-    grid-template-areas:
-      'image'
-      'header'
-      'description';
-
-    .imageContainer {
-      width: 100%;
-      height: 400px;
-      grid-area: image;
-      object-fit: cover;
-    }
-  }
-}
-*/

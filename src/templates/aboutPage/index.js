@@ -45,7 +45,7 @@ export const AboutPageTemplate = ({
   <main className={styles.aboutPage}>
     <section className={styles.hero}>
       <h1>{hero.title}</h1>
-      <p className="bodyLarge">{hero.text}</p>
+      <p className="heroSubtitle">{hero.text}</p>
       <ImageWrapper
         alt="Background image covering top half of screen"
         src={hero.backgroundImage}
@@ -54,12 +54,12 @@ export const AboutPageTemplate = ({
       />
     </section>
     <section className={styles.history}>
-      <h5>{history.section}</h5>
+      <p className="overline">{history.section}</p>
       <h2>{history.header}</h2>
-      <p>{history.text}</p>
+      <p className="bodyLarge">{history.text}</p>
     </section>
     <section className={styles.aboutEmployees}>
-      <h5>{employees.section}</h5>
+      <p className="overline">{employees.section}</p>
       <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
