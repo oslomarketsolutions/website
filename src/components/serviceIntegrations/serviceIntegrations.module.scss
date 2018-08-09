@@ -1,0 +1,49 @@
+@import '../../layouts/variables';
+
+.serviceIntegrations {
+  margin-bottom: 60px;
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 + p {
+    padding: $XL 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .integrationLogos {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .imageContainer {
+      width: 18%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .serviceIntegrations {
+    .integrationLogos {
+      flex-flow: row wrap;
+      .imageContainer {
+        width: 26%;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .serviceIntegrations {
+    .integrationLogos {
+      .imageContainer {
+        width: 44%;
+      }
+    }
+  }
+}

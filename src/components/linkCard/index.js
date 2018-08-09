@@ -1,31 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './linkCard.module.scss';
 
-const LinkCard = ({ product, onClickFunction }) => {
-  const ting = 'ting';
+const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
+  let icon = '';
+
+  switch (index) {
+    case 1:
+      icon = <FontAwesomeIcon icon={['fab', 'react']} />;
+      break;
+    case 2:
+      icon = <FontAwesomeIcon icon={['fab', 'react']} />;
+      break;
+    case 3:
+      icon = <FontAwesomeIcon icon={['fab', 'react']} />;
+      break;
+    case 4:
+      icon = <FontAwesomeIcon icon={['fab', 'react']} />;
+      break;
+    default:
+      icon = <FontAwesomeIcon icon={['fab', 'react']} />;
+  }
+
   return (
-    <button
-      onClick={() => onClickFunction(product.title)}
-      className={styles.linkCard}
-    >
-      <div className={styles.textContainer}>
-        <h4>{product.title}</h4>
-        <div>{ting}</div>
-        <p>{product.description && product.description.slice(0, 140)}</p>
+    <div className={`${styles.linkCard} ${isDark ? styles.dark : ''}`}>
+      <div className={styles.header}>
+        <div className={styles.iconWrapper}>
+          <div className={styles.icon}>{icon}</div>
+        </div>
+        <h3>{header}</h3>
       </div>
-    </button>
+      <p>{description}</p>
+      <button
+        className={`textButton ${styles.link}`}
+        onClick={() => onClickFunction(header)}
+      >
+        Go to {header}
+      </button>
+    </div>
   );
 };
 
 export default LinkCard;
 
 LinkCard.propTypes = {
-  product: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    features: PropTypes.arrayOf(PropTypes.object),
-  }),
+  header: PropTypes.string,
+  description: PropTypes.string,
+  isDark: PropTypes.bool,
+  index: PropTypes.number,
   onClickFunction: PropTypes.func,
 };

@@ -10,7 +10,6 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  faGlobe,
   faArrowUp,
   faServer,
   faGraduationCap,
@@ -31,6 +30,8 @@ import {
   faCopyright,
   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
+
+import { faGlobe } from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';

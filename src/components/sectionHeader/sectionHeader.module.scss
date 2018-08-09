@@ -12,3 +12,11 @@
     padding: 0 80px;
   }
 }
+
+@media (max-width: 580px) {
+  .sectionHeader {
+    p + p {
+      padding: 0;
+    }
+  }
+}

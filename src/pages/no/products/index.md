@@ -114,7 +114,7 @@ services:
       There are currently two information products available in 
       Arena: Top Shareholders and Corporate Actions Calendar.'
   omsComponents:
-    header: OMS components
+    header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: 
       'Whether you want a fully hosted and managed web trader, 

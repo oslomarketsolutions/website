@@ -143,7 +143,7 @@ export default class Navbar extends Component {
                 }`}
               >
                 <Link to={this.changePageLanguage()}>
-                  <FontAwesomeIcon icon="globe" />
+                  <FontAwesomeIcon icon={['fal', 'globe']} />
                   {this.props.language === 'no' ? 'English' : 'Norsk'}
                 </Link>
               </li>
@@ -153,7 +153,7 @@ export default class Navbar extends Component {
                 }`}
               >
                 <button onClick={this.toggleLanguageSelector}>
-                  <FontAwesomeIcon icon="globe" />
+                  <FontAwesomeIcon icon={['fal', 'globe']} />
                 </button>
                 <ul
                   className={

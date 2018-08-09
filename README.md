@@ -6,6 +6,14 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 ## Access Locally
 
+You need to set up a TOKEN to access fontawesome pro
+so that yarn install works.
+
+```
+npm config set "@fortawesome:registry" https://npm.fontawesome.com/ \
+npm config set "//npm.fontawesome.com/:_authToken" TOKEN
+```
+
 ```
 $ nvm install
 $ yarn

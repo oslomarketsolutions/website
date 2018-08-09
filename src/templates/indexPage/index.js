@@ -9,6 +9,7 @@ import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import Button from '../../components/button/index';
 import BigButton from '../../components/bigButton/index';
+import ServiceIntegrations from '../../components/serviceIntegrations';
 
 const IndexPageTemplate = ({ language, data }) => {
   const {
@@ -109,15 +110,16 @@ const IndexPageTemplate = ({ language, data }) => {
           useArrow
         />
         <div className={styles.investorPortalImagesWrapper}>
-          {investorPortal.investorPortalImages.map(investorPortalImage => (
-            <ImageWrapper
-              key={investorPortalImage.name}
-              src={investorPortalImage.image}
-              alt={investorPortalImage.name}
-              sizes={findImageSizes(investorPortalImage.image, imageSizes)}
-              outerWrapperClassName={styles.imageContainer}
-            />
-          ))}
+          {investorPortal.investorPortalImages &&
+            investorPortal.investorPortalImages.map(investorPortalImage => (
+              <ImageWrapper
+                key={investorPortalImage.name}
+                src={investorPortalImage.image}
+                alt={investorPortalImage.name}
+                sizes={findImageSizes(investorPortalImage.image, imageSizes)}
+                outerWrapperClassName={styles.imageContainer}
+              />
+            ))}
         </div>
         <div className={styles.tickerTape}>
           <ImageWrapper
@@ -133,37 +135,25 @@ const IndexPageTemplate = ({ language, data }) => {
         </h2>
         <p>{customization.text}</p>
         <div className={styles.customizationCards}>
-          {customization.cards.map((customizationCard, index) => (
-            <FeatureCard
-              key={customizationCard.header}
-              title={customizationCard.header}
-              description={customizationCard.description}
-              features={customizationCard.features}
-              index={index}
-              to={`/${strippedLanguage}/products`}
-              isDark={customizationCard.isDark}
-            />
-          ))}
-        </div>
-        <h2 className={`${styles.subHeader2} ${styles.centered}`}>
-          {customization.serviceIntegrations.header}
-        </h2>
-        <p className={styles.centered}>
-          {customization.serviceIntegrations.text}
-        </p>
-        <div className={styles.integrationLogos}>
-          {customization.serviceIntegrations.integrationLogos.map(
-            integrationLogo => (
-              <ImageWrapper
-                key={integrationLogo.name}
-                src={integrationLogo.logo}
-                alt={integrationLogo.name}
-                sizes={findImageSizes(integrationLogo.logo, imageSizes)}
-                outerWrapperClassName={styles.imageContainer}
+          {customization.cards &&
+            customization.cards.map((customizationCard, index) => (
+              <FeatureCard
+                key={customizationCard.header}
+                title={customizationCard.header}
+                description={customizationCard.description}
+                features={customizationCard.features}
+                index={index}
+                to={`/${strippedLanguage}/products`}
+                isDark={customizationCard.isDark}
               />
-            ),
-          )}
+            ))}
         </div>
+        <ServiceIntegrations
+          header={customization.serviceIntegrations.header}
+          text={customization.serviceIntegrations.text}
+          logos={customization.serviceIntegrations.integrationLogos}
+          imageSizes={imageSizes}
+        />
       </section>
       <section className={styles.arena}>
         <h1>{otherProducts.arena.header}</h1>

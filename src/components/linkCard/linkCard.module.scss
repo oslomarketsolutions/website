@@ -1,58 +1,123 @@
 @import '../../layouts/variables';
 
 .linkCard {
-}
+  float: left;
+  margin: 18px;
+  position: relative;
+  background-color: $white;
+  width: 356px;
+  padding: $XL $L;
+  border-radius: $S;
+  box-shadow: $newBoxShadow;
 
-.sticky {
-  display: flex;
-  flex-flow: row wrap;
-  background: none;
-  border: 2px solid $darkBlue;
-  padding: 0;
-  color: $darkBlue;
-  height: 100px;
-  width: 300px;
-  justify-content: center;
-  cursor: pointer;
-
-  h4 {
-    font-size: 18px;
-    margin: auto;
+  .header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
   }
 
-  .imageContainer,
+  .icon {
+    font-family: 'Work Sans', 'sans-serif';
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: $lightBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $vibrantBlue;
+    font-size: 28px;
+    font-weight: bold;
+
+    svg {
+      font-size: 42px;
+    }
+  }
+  .iconWrapper {
+    display: inline-block;
+  }
+  h3 {
+    display: inline-block;
+    color: $grey;
+    text-align: center;
+    padding-left: $M;
+  }
+
   p {
-    display: none;
+    height: 75px;
+    margin: $L 0 60px 0;
+  }
+
+  ul {
+    column-count: 2;
+    list-style-type: none;
+    line-height: 2.5;
+    margin-bottom: 54px;
+
+    svg {
+      margin-right: $XXS;
+      font-size: 18px;
+      color: $lapisLazuli;
+    }
+  }
+
+  .link {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    text-align: left;
+    background-color: transparent;
+    color: $vibrantBlue;
+    text-decoration: none;
+    padding: $M $L;
+    border: none;
+    border-top: 1px solid $antiFlashWhite;
+    border-bottom-left-radius: $S;
+    border-bottom-right-radius: $S;
+
+    svg {
+      font-size: 14px;
+      margin-left: 2px;
+    }
+  }
+  .link:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #80b9fd;
   }
 }
 
-.notSticky {
-  display: flex;
-  flex-flow: row wrap;
-  background: none;
-  border: none;
-  outline: solid 2px $darkBlue;
-  padding: 0;
-  margin: 20px;
-  color: $darkBlue;
-  height: 100px;
-  width: 400px;
-  cursor: pointer;
-  text-align: left;
-  &:hover {
-    background-color: $darkBlue;
+div.dark {
+  background-color: $darkBlue;
+
+  .header {
+    border-color: $lapisLazuli;
+  }
+
+  .icon {
+    background-color: $lapisLazuli;
     color: $white;
   }
 
-  .imageContainer {
-    width: 150px;
-    height: 100px;
+  h3 {
+    color: $antiFlashWhite;
   }
 
-  .textContainer {
-    h4 {
-      padding-left: 20px;
-      font-size: 24px;
+  p {
+    color: $antiFlashWhite;
+  }
+
+  ul {
+    color: $antiFlashWhite;
+
+    svg {
+      color: $primaryGreen;
     }
+  }
+
+  .link {
+    border-color: $lapisLazuli;
+    color: $selectiveYellow;
   }
 }
