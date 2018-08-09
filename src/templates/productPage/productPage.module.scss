@@ -348,6 +348,13 @@
 
 @media (max-width: 1450px) {
   .productPage {
+    .investorPortal {
+      .marketData,
+      .trading,
+      .onlinePortfolio {
+        grid-template-rows: max-content max-content max-content 80px;
+      }
+    }
     .standardProducts {
       .arena,
       .irModules {
@@ -370,6 +377,7 @@
       .trading,
       .onlinePortfolio {
         grid-template-rows: max-content max-content max-content max-content;
+        margin: 80px 0 0;
 
         .overline {
           grid-column: 3 / span 5;
@@ -392,6 +400,9 @@
           width: 100%;
           margin: 0;
         }
+      }
+      section:last-of-type {
+        margin-top: 80px;
       }
     }
     .standardProducts {
