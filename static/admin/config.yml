@@ -113,7 +113,7 @@ collections:
         label: "eng - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "Hero", name: "hero", widget: "object" fields: [
+          - {label: "Hero", name: "hero", widget: "object", fields: [
               {label: "Header", name: "title", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
               {label: "Background Image", name: "backgroundImage", widget: "image"},
@@ -140,6 +140,7 @@ collections:
                 ]},
               ]},
             ]}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
@@ -288,7 +289,7 @@ collections:
         label: "nor - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "Hero", name: "hero", widget: "object" fields: [
+          - {label: "Hero", name: "hero", widget: "object", fields: [
               {label: "Header", name: "title", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
               {label: "Background Image", name: "backgroundImage", widget: "image"},
@@ -315,6 +316,7 @@ collections:
                 ]},
               ]},
             ]}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"

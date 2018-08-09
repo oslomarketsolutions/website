@@ -4,6 +4,7 @@ import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
+import BigButton from '../../components/bigButton';
 
 const sortedEmployeeList = array => {
   const newArray = [];
@@ -37,6 +38,7 @@ export const AboutPageTemplate = ({
   hero,
   history,
   employees,
+  buttonText,
   employeeList,
   imageSizes,
 }) => (
@@ -57,6 +59,7 @@ export const AboutPageTemplate = ({
       <p>{history.text}</p>
     </section>
     <section className={styles.aboutEmployees}>
+      <h5>TEAM</h5>
       <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
@@ -82,6 +85,9 @@ export const AboutPageTemplate = ({
           })}
       </div>
     </section>
+    <section className={styles.joinTheTeam}>
+      <BigButton to="/career" text={buttonText} />
+    </section>
   </main>
 );
 
@@ -98,6 +104,7 @@ AboutPageTemplate.propTypes = {
   employees: PropTypes.shape({
     header: PropTypes.string,
   }),
+  buttonText: PropTypes.string,
   employeeList: PropTypes.arrayOf(PropTypes.object),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
@@ -112,6 +119,7 @@ const AboutPage = ({ data }) => {
       hero={post.frontmatter.hero}
       history={post.frontmatter.history}
       employees={post.frontmatter.employees}
+      buttonText={post.frontmatter.buttonText}
       employeeList={employeeList}
       imageSizes={imageSizes}
     />
@@ -140,6 +148,7 @@ export const aboutPageQuery = graphql`
         employees {
           header
         }
+        buttonText
       }
     }
 

@@ -9,4 +9,5 @@ history:
   text: The company has its origins from InfoStream, which in 1997 developed the first version of the middleware Manamind Collect. Manamind was founded in 2001, with Collect as the very corner stone of the company. Today a new version of Collect is still the foundation of our deliveries and is what allows us to collect vast amounts of real-time data and distribute it efficiently to our custom-made web solutions. With domain knowledge in the field of market data and finance we work hard to provide solutions with high quality, availability, flexibility and great design.
 employees:
   header: Who we are
+buttonText: Join the Team
 ---

@@ -23,9 +23,21 @@ const AboutPagePreview = ({ entry, getAsset }) => {
   const entryHero = entry.getIn(['data', 'hero']);
   const hero = entryHero ? entryHero.toJS() : [];
 
+  const entryHistory = entry.getIn(['data', 'history']);
+  const history = entryHistory ? entryHistory.toJS() : [];
+
+  const entryEmployees = entry.getIn(['data', 'employees']);
+  const employees = entryEmployees ? entryEmployees.toJS() : [];
+
   return (
     <PreviewWrapper>
-      <AboutPageTemplate hero={hero} employeeList={employeeList} />
+      <AboutPageTemplate
+        hero={hero}
+        history={history}
+        employees={employees}
+        buttonText={entry.getIn(['data', 'buttonText'])}
+        employeeList={employeeList}
+      />
     </PreviewWrapper>
   );
 };
