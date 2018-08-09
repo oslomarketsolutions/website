@@ -79,6 +79,9 @@ export class ProductPageTemplate extends Component {
             text={investorPortal.sectionHeader.text}
           />
           <section className={styles.marketData}>
+            <p className={`overline ${styles.overline}`}>
+              {investorPortal.marketData.overline}
+            </p>
             <h2>{investorPortal.marketData.header}</h2>
             <p className="bodyLarge">{investorPortal.marketData.text}</p>
             <ImageWrapper
@@ -93,6 +96,9 @@ export class ProductPageTemplate extends Component {
             />
           </section>
           <section className={styles.trading}>
+            <p className={`overline ${styles.overline}`}>
+              {investorPortal.trading.overline}
+            </p>
             <h2>{investorPortal.trading.header}</h2>
             <p className="bodyLarge">{investorPortal.trading.text}</p>
             <ImageWrapper
@@ -272,11 +278,13 @@ export const productPageQuery = graphql`
             text
           }
           marketData {
+            overline
             header
             text
             image
           }
           trading {
+            overline
             header
             text
             image

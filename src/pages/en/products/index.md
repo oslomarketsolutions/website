@@ -37,14 +37,16 @@ investorPortal:
       fund savings platform, portfolio reporting or market data 
       information, OMS can help you get there.
   marketData:
-    header: Market Data
+    overline: Market Data
+    header: Buzzword your things with ease
     text: 
       'Arena provides information on securities listed om Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in Arena:
       Top Shareholders and Corporate Actions Calendar'
     image: /img/productsPagePlaceholder.png
   trading:
-    header: Trading
+    overline: Trading
+    header: Buzzword your things with ease
     text:
       Whether you want a fully hosted and managed web trader,
       fund savings platform, portfolio reporting or market data 
