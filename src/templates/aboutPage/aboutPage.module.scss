@@ -80,13 +80,23 @@
   }
 
   .aboutEmployees {
-    grid-column: 2 / span 8;
+    grid-column: 1 / span 10;
     grid-row: 3;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 100px 0;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+    grid-template-rows: 100px max-content max-content max-content 100px;
+    grid-column-gap: 16px;
+
+    h2 {
+      grid-column: 3 / span 6;
+      grid-row: 3;
+      width: 100%;
+      margin: 20px 0;
+    }
 
     .employeeWrapper {
+      grid-column: 2 / span 8;
+      grid-row: 4;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
@@ -109,11 +119,6 @@
         }
       }
     }
-
-    h2 {
-      width: 100%;
-      margin: 20px 0;
-    }
   }
 
   .joinTheTeam {
@@ -130,8 +135,6 @@
 @media (max-width: 1172px) {
   .aboutPage {
     .aboutEmployees {
-      grid-column: 3 / span 6;
-
       .employeeWrapper {
         max-width: 800px;
         justify-content: space-around;
@@ -145,6 +148,18 @@
             line-height: 2.5rem;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .aboutPage {
+    .aboutEmployees {
+      .employeeWrapper {
+        grid-column: 1 / span 10;
+        max-width: 800px;
+        justify-content: space-around;
       }
     }
   }
@@ -192,7 +207,13 @@
     }
 
     .aboutEmployees {
-      grid-column: 2 / span 8;
+      h5 {
+        grid-column: 2;
+      }
+
+      h2 {
+        grid-column: 2 / span 8;
+      }
 
       .employeeWrapper {
         max-width: 800px;
