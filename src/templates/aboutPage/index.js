@@ -54,12 +54,12 @@ export const AboutPageTemplate = ({
       />
     </section>
     <section className={styles.history}>
-      <h5>ABOUT</h5>
+      <h5>{history.section}</h5>
       <h2>{history.header}</h2>
       <p>{history.text}</p>
     </section>
     <section className={styles.aboutEmployees}>
-      <h5>TEAM</h5>
+      <h5>{employees.section}</h5>
       <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
@@ -73,10 +73,14 @@ export const AboutPageTemplate = ({
             } = employee.node.frontmatter;
 
             if (index === 1) {
+              const quote =
+                employees.quotes[
+                  Math.floor(Math.random() * employees.quotes.length)
+                ];
               return (
                 <div className={styles.quoteWrapper}>
-                  <h2>Don't be afraid to stand out from the crowd</h2>
-                  <p>Name Last name</p>
+                  <h2>{quote.text}</h2>
+                  <p>{quote.author}</p>
                 </div>
               );
             }
@@ -151,11 +155,17 @@ export const aboutPageQuery = graphql`
           backgroundImage
         }
         history {
+          section
           header
           text
         }
         employees {
+          section
           header
+          quotes {
+            text
+            author
+          }
         }
         buttonText
       }
