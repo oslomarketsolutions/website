@@ -22,6 +22,9 @@ const AboutPagePreview = ({ entry, getAsset }) => {
 
   const entryHero = entry.getIn(['data', 'hero']);
   const hero = entryHero ? entryHero.toJS() : [];
+  hero.backgroundImage = getAsset(
+    entry.getIn(['data', 'hero', 'backgroundImage']),
+  );
 
   const entryHistory = entry.getIn(['data', 'history']);
   const history = entryHistory ? entryHistory.toJS() : [];
