@@ -3,6 +3,7 @@ import 'babel-polyfill';
 exports.onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-image (Safari, IE)
   if (typeof window.IntersectionObserver === `undefined`) {
+    // eslint-disable-next-line
     require(`intersection-observer`);
   }
 
@@ -12,6 +13,7 @@ exports.onClientEntry = () => {
     typeof testImg.style.objectFit === `undefined` ||
     typeof testImg.style.objectPosition === `undefined`
   ) {
+    // eslint-disable-next-line
     require(`object-fit-images`)();
   }
 };

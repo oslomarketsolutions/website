@@ -4,6 +4,7 @@ import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
+import BigButton from '../../components/bigButton';
 
 const sortedEmployeeList = array => {
   const newArray = [];
@@ -34,30 +35,35 @@ const sortedEmployeeList = array => {
 };
 
 export const AboutPageTemplate = ({
-  image,
-  imageAlt,
-  text,
-  title,
-  header,
+  hero,
+  history,
+  employees,
+  buttonText,
   employeeList,
   imageSizes,
 }) => (
   <main className={styles.aboutPage}>
-    <section className={styles.aboutOms}>
-      <h1>{title}</h1>
-      <p className="bodyLarge">{text}</p>
+    <section className={styles.hero}>
+      <h1>{hero.title}</h1>
+      <p className="heroSubtitle">{hero.text}</p>
       <ImageWrapper
-        alt={imageAlt}
-        src={image}
-        sizes={findImageSizes(image, imageSizes)}
-        outerWrapperClassName={styles.imageContainer}
+        alt="Background image covering top half of screen"
+        src={hero.backgroundImage}
+        sizes={findImageSizes(hero.backgroundImage, imageSizes)}
+        outerWrapperClassName={styles.backgroundImage}
       />
     </section>
+    <section className={styles.history}>
+      <p className="overline">{history.section}</p>
+      <h2>{history.header}</h2>
+      <p className="bodyLarge">{history.text}</p>
+    </section>
     <section className={styles.aboutEmployees}>
-      <h1>{header}</h1>
+      <p className="overline">{employees.section}</p>
+      <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
         {sortedEmployeeList(employeeList) &&
-          sortedEmployeeList(employeeList).map(employee => {
+          sortedEmployeeList(employeeList).map((employee, index) => {
             const {
               title: employeeName,
               description: employeeDescription,
@@ -65,6 +71,19 @@ export const AboutPageTemplate = ({
               image: employeeImage,
               jobType: employeeJobType,
             } = employee.node.frontmatter;
+
+            if (index === 1) {
+              const quote =
+                employees.quotes[
+                  Math.floor(Math.random() * employees.quotes.length)
+                ];
+              return (
+                <div className={styles.quoteWrapper}>
+                  <h2>{quote.text}</h2>
+                  <p>{quote.author}</p>
+                </div>
+              );
+            }
             return (
               <EmployeeCard
                 key={employeeName}
@@ -79,15 +98,26 @@ export const AboutPageTemplate = ({
           })}
       </div>
     </section>
+    <section className={styles.joinTheTeam}>
+      <BigButton to="/career" text={buttonText} />
+    </section>
   </main>
 );
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  imageAlt: PropTypes.string,
-  text: PropTypes.string,
-  header: PropTypes.string,
+  hero: PropTypes.shape({
+    title: PropTypes.string,
+    text: PropTypes.string,
+    backgroundImage: PropTypes.string,
+  }),
+  history: PropTypes.shape({
+    header: PropTypes.string,
+    texT: PropTypes.string,
+  }),
+  employees: PropTypes.shape({
+    header: PropTypes.string,
+  }),
+  buttonText: PropTypes.string,
   employeeList: PropTypes.arrayOf(PropTypes.object),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
@@ -99,10 +129,10 @@ const AboutPage = ({ data }) => {
 
   return (
     <AboutPageTemplate
-      image={post.frontmatter.image}
-      title={post.frontmatter.title}
-      text={post.frontmatter.text}
-      header={post.frontmatter.header}
+      hero={post.frontmatter.hero}
+      history={post.frontmatter.history}
+      employees={post.frontmatter.employees}
+      buttonText={post.frontmatter.buttonText}
       employeeList={employeeList}
       imageSizes={imageSizes}
     />
@@ -119,11 +149,25 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!, $employeeRegex: String!) {
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        image
-        imageAlt
-        text
-        header
+        hero {
+          title
+          text
+          backgroundImage
+        }
+        history {
+          section
+          header
+          text
+        }
+        employees {
+          section
+          header
+          quotes {
+            text
+            author
+          }
+        }
+        buttonText
       }
     }
 

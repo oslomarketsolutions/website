@@ -113,11 +113,25 @@ collections:
         label: "eng - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image Description", name: "imageAlt", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Hero", name: "hero", widget: "object", fields: [
+              {label: "Header", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+            ]}
+          - {label: "History", name: "history", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Text", "name": text, widget: "text"},
+            ]}
+          - {label: "Employees", name: "employees", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Quotes", name: "quotes", widget: "list", fields: [
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Author", name: "author", widget: "string"},
+              ]},
+            ]}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
@@ -192,7 +206,7 @@ collections:
                   {label: "Users text", name: "usersText", widget: "string"},
                   {label: "Text", name: "text", widget: "string"},
                 ]}
-              - label: "Customer logos" 
+              - label: "Customer logos"
                 name: "customerLogos"
                 widget: "list"
                 fields:
@@ -203,7 +217,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
+              - label: "Investor portal images"
                 name: "investorPortalImages"
                 widget: "list"
                 fields:
@@ -266,11 +280,25 @@ collections:
         label: "nor - About page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutPage"}
-          - {label: "First header", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image Description", name: "imageAlt", widget: "string"}
-          - {label: "Text", name: "text", widget: "text"}
-          - {label: "Second header", name: "header", widget: "string"}
+          - {label: "Hero", name: "hero", widget: "object", fields: [
+              {label: "Header", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+            ]}
+          - {label: "History", name: "history", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Text", "name": text, widget: "text"},
+            ]}
+          - {label: "Employees", name: "employees", widget: "object", fields: [
+              {label: "Section name", name: "section", widget: "string"},
+              {label: "Header", name: "header", widget: "string"},
+              {label: "Quotes", name: "quotes", widget: "list", fields: [
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Author", name: "author", widget: "string"},
+              ]},
+            ]}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"
@@ -345,7 +373,7 @@ collections:
                   {label: "Users text", name: "usersText", widget: "string"},
                   {label: "Text", name: "text", widget: "string"},
                 ]}
-              - label: "Customer logos" 
+              - label: "Customer logos"
                 name: "customerLogos"
                 widget: "list"
                 fields:
@@ -356,7 +384,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Header", name: "header", widget: "string"}
-              - label: "Investor portal images" 
+              - label: "Investor portal images"
                 name: "investorPortalImages"
                 widget: "list"
                 fields:

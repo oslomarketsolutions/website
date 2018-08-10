@@ -30,27 +30,29 @@ const iconMatcher = jobType => {
 };
 
 const EmployeeCard = props => {
-  const { name, jobTitle, description, portraitSize, jobType, image } = props;
+  const { name, jobTitle, description, jobType, portraitSize, image } = props;
   return (
-    <section className={styles.EmployeeCard}>
-      <ImageWrapper
-        outerWrapperClassName={styles.imageContainer}
-        style={{ gridArea: 'image' }}
-        sizes={portraitSize}
-        src={image}
-        alt={name}
-      />
-      <section className={styles.header}>
+    <div className={styles.EmployeeCard}>
+      <div className={styles.imageAndIconContainer}>
+        <ImageWrapper
+          outerWrapperClassName={styles.imageContainer}
+          sizes={portraitSize}
+          src={image}
+          alt={name}
+        />
+        <div className={styles.iconContainer}>
+          <FontAwesomeIcon icon={iconMatcher(jobType)} />
+        </div>
+      </div>
+
+      <div className={styles.header}>
         <h3>{name}</h3>
         <h4>{jobTitle}</h4>
-        <figure>
-          <FontAwesomeIcon icon={iconMatcher(jobType)} size="3x" />
-        </figure>
-      </section>
-      <section className={styles.description}>
+      </div>
+      <div className={styles.description}>
         <p>{description}</p>
-      </section>
-    </section>
+      </div>
+    </div>
   );
 };
 
