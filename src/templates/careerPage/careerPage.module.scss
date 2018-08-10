@@ -59,7 +59,7 @@
       grid-column: 2;
       grid-row: 2;
       border-bottom: solid $vibrantBlue;
-      padding: 10px 0;
+      padding: $S 0;
     }
 
     h2 {
@@ -144,10 +144,11 @@
     .hero {
       color: $textColor;
       grid-template-rows: 500px max-content max-content max-content;
+      background-color: $antiFlashWhite;
 
       .backgroundImage {
         height: 500px;
-
+        z-index: inherit;
         &:before {
           display: none;
         }
@@ -171,9 +172,11 @@
 
       & > p:first-of-type {
         grid-column: 3;
+        padding: $L 0 $S;
       }
 
       h2 {
+        margin-top: $XXL;
         grid-column: 3 / span 6;
         grid-row: 3;
       }
