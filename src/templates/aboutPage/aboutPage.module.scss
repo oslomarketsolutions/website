@@ -47,16 +47,6 @@
     }
   }
 
-  section > h5 {
-    grid-column: 3;
-    font-weight: 200;
-    width: 40px;
-    grid-row: 2;
-    border-bottom: solid $vibrantBlue;
-    padding: 10px 0;
-    font-size: 0.75rem;
-  }
-
   .history {
     grid-column: 1 / span 10;
     grid-row: 2;
