@@ -1,7 +1,7 @@
 @import '../../layouts/variables';
 
 .aboutPage {
-  grid-template-rows: 750px max-content max-content max-content;
+  grid-template-rows: max-content max-content max-content max-content;
 
   .hero {
     position: relative;
@@ -27,6 +27,7 @@
     }
 
     .backgroundImage {
+      margin-top: 100px;
       position: absolute;
       z-index: -1;
       height: 750px;
@@ -53,7 +54,7 @@
     background-color: $antiFlashWhite;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 100px max-content max-content max-content 100px;
+    grid-template-rows: 50px max-content max-content max-content 100px;
     grid-column-gap: 16px;
 
     & > p:first-of-type {
@@ -139,6 +140,27 @@
 
 @media (max-width: 1172px) {
   .aboutPage {
+    .hero {
+      color: $grey;
+      grid-template-rows: 572px max-content max-content max-content;
+
+      h1 {
+        margin-top: $M;
+      }
+
+      h1 + p {
+        padding-bottom: $XXL;
+      }
+
+      .backgroundImage {
+        margin-top: 72px;
+        height: 500px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
     .aboutEmployees {
       .employeeWrapper {
         max-width: 800px;
@@ -172,20 +194,7 @@
 
 @media (max-width: 580px) {
   .aboutPage {
-    grid-template-rows: max-content max-content max-content max-content;
-
     .hero {
-      color: $grey;
-      grid-template-rows: 400px max-content max-content max-content;
-
-      .backgroundImage {
-        height: 350px;
-
-        &:before {
-          display: none;
-        }
-      }
-
       h1 {
         grid-column: 2 / span 8;
       }
@@ -193,7 +202,6 @@
       h1 + p {
         grid-column: 2 / span 8;
         line-height: 2rem;
-        padding-bottom: 100px;
       }
     }
 
