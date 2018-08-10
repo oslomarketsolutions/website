@@ -5,28 +5,6 @@ import styles from './careerPage.module.scss';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
-let colorCounter = 0;
-const color = () => {
-  const colors = [
-    '#fff6ae',
-    '#c6b5e3',
-    '#fd9e72',
-    '#91e0ff',
-    '#fd9e72',
-    '#91e0ff',
-    '#fff6ae',
-    '#c6b5e3',
-  ];
-  const returnColor = colorCounter;
-
-  if (colorCounter >= 7) {
-    colorCounter = 0;
-  }
-  colorCounter += 1;
-
-  return colors[returnColor];
-};
-
 export const CareerPageTemplate = ({
   hero,
   about,
@@ -59,7 +37,6 @@ export const CareerPageTemplate = ({
             key={perkCard.perkTitle}
             title={perkCard.perkTitle}
             text={perkCard.text}
-            color={color()}
           />
         ))}
       </div>
@@ -86,7 +63,6 @@ CareerPageTemplate.propTypes = {
 const CareerPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const imageSizes = data.imageSizes.edges;
-  colorCounter = 0;
 
   return (
     <CareerPageTemplate

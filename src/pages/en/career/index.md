@@ -13,7 +13,7 @@ hero:
   backgroundImage: /img/working.png
   backgroundImageAlt: placeholder alt for image1
 about:
-  section: about
+  section: ABOUT
   header: Why OMS?
   text:
     OMS has a casual, but professional, working environment. We focus on personal
@@ -32,7 +32,7 @@ about:
     non-athletes, yogis, skaters and "Birken-riders". There's meat lovers, vegans
     and lactose intolerants. - wanna add something to our list?
 perks:
-  section: Perks
+  section: PERKS
   header: 'What we can offer'
   perkCards:
     - perkTitle: 'Employee insurance'
