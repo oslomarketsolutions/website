@@ -2,93 +2,104 @@
 
 .EmployeeCard {
   background-color: $white;
+  border-radius: 15px;
   display: grid;
-  grid-template-areas:
-    'image header'
-    'image  description';
-  grid-template-columns: 140px 375px;
-  grid-template-rows: 100px 100px;
-  width: 515px;
-  transition: 0.3s;
-  color: $white;
-  box-shadow: $boxShadow;
-  margin-bottom: 64px;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 50% 50%;
+  height: 300px;
+  width: 350px;
+  transition: all 0.3s;
+  color: $grey;
+  box-shadow: $newBoxShadow;
+  padding: 25px;
+  margin-bottom: 20px; // This should be set elsewhere
 
-  .imageContainer {
-    width: 100%;
-    height: 200px;
-    grid-area: image;
-    object-fit: cover;
+  &:hover {
+    transform: scale(1.08);
+    .imageAndIconContainer {
+      .imageContainer {
+        img {
+          animation: fadeFromGray 0.5s forwards;
+        }
+      }
+    }
+  }
+
+  @keyframes fadeFromGray {
+    from {
+      filter: grayscale(100%);
+    }
+    to {
+      filter: grayscale(0%);
+    }
+  }
+
+  .imageAndIconContainer {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .iconContainer {
+      position: absolute;
+      overflow: hidden;
+      bottom: 5px;
+      right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: solid $white;
+      width: 35px;
+      height: 35px;
+      background-color: $vibrantBlue;
+      color: $white;
+    }
+
+    .imageContainer {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+
+      img {
+        filter: grayscale(100%);
+        animation-play-state: paused;
+      }
+    }
   }
 
   .header {
-    position: relative;
-    grid-area: header;
-    display: grid;
-    grid-template-areas:
-      'name icon'
-      'title icon';
-    grid-template-columns: 70% 30%;
-    background-image: url(../../../static/img/ansattkortHeader.jpg);
-  }
-
-  .description {
-    grid-area: description;
-    justify-self: start;
-    align-self: center;
-  }
-
-  figure {
-    display: grid;
-    grid-area: icon;
-    align-items: center;
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    flex-flow: column wrap;
     justify-content: center;
   }
 
+  .description {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    padding-top: 50px;
+  }
+
   h3 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-    grid-area: name;
-    align-self: end;
+    font-size: 1.1rem;
+    color: $vibrantBlue;
   }
 
   h4 {
-    font-size: 1.125rem;
-    grid-area: title;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 1rem;
+    color: $lightGrey;
   }
 
   h3,
   h4 {
     text-align: left;
     font-weight: 400;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  p {
-    color: $darkBlue;
-    margin: 0 20px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 565px) {
-  .EmployeeCard {
-    grid-template-columns: auto;
-    grid-template-rows: 400px 135px 150px;
-    grid-template-areas:
-      'image'
-      'header'
-      'description';
-
-    .imageContainer {
-      width: 100%;
-      height: 400px;
-      grid-area: image;
-      object-fit: cover;
-    }
+    margin-left: 15px;
   }
 }

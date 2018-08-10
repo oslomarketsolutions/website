@@ -12,27 +12,32 @@ import NavbarPreview from './preview-templates/NavbarPreview';
 import ResponsibleDisclosurePreview from './preview-templates/ResponsibleDisclosurePreview';
 
 CMS.registerPreviewStyle('/styles.css');
-CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
-CMS.registerPreviewTemplate('english_about_page', AboutPagePreview);
+
+CMS.registerPreviewTemplate('footer', FooterPreview);
+CMS.registerPreviewTemplate('navbar', NavbarPreview);
+
+// Norwegian
 CMS.registerPreviewTemplate('norwegian_index_page', IndexPagePreview);
-CMS.registerPreviewTemplate('english_index_page', IndexPagePreview);
-CMS.registerPreviewTemplate('norwegian_career_page', CareerPagePreview);
-CMS.registerPreviewTemplate('english_career_page', CareerPagePreview);
-CMS.registerPreviewTemplate('norwegian_employees', EmployeePreview);
-CMS.registerPreviewTemplate('english_employees', EmployeePreview);
-CMS.registerPreviewTemplate('norwegianPerks', PerkPreview);
-CMS.registerPreviewTemplate('englishPerks', PerkPreview);
-CMS.registerPreviewTemplate('english_featureCard', FeaturePreview);
-CMS.registerPreviewTemplate('norwegian_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate('norwegian_products_page', ProductPagePreview);
-CMS.registerPreviewTemplate('english_products_page', ProductPagePreview);
+CMS.registerPreviewTemplate('norwegian_career_page', CareerPagePreview);
+CMS.registerPreviewTemplate('norwegian_about_page', AboutPagePreview);
+CMS.registerPreviewTemplate('norwegian_employees', EmployeePreview);
+CMS.registerPreviewTemplate('norwegianPerks', PerkPreview);
+CMS.registerPreviewTemplate('norwegian_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate(
   'norwegian_responsibleDisclosure_page',
   ResponsibleDisclosurePreview,
 );
+
+// English
+CMS.registerPreviewTemplate('english_index_page', IndexPagePreview);
+CMS.registerPreviewTemplate('english_products_page', ProductPagePreview);
+CMS.registerPreviewTemplate('english_career_page', CareerPagePreview);
+CMS.registerPreviewTemplate('english_about_page', AboutPagePreview);
+CMS.registerPreviewTemplate('english_employees', EmployeePreview);
+CMS.registerPreviewTemplate('englishPerks', PerkPreview);
+CMS.registerPreviewTemplate('english_featureCard', FeaturePreview);
 CMS.registerPreviewTemplate(
   'english_responsibleDisclosure_page',
   ResponsibleDisclosurePreview,
 );
-CMS.registerPreviewTemplate('footer', FooterPreview);
-CMS.registerPreviewTemplate('navbar', NavbarPreview);

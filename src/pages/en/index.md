@@ -1,29 +1,23 @@
 ---
 hero:
-  title: Keeping investors informed and empowered
-  subtitle: Trading platforms and services for the modern web
+  subtitle: 'Web services for stock and fund trading, market data and more'
+  title: Trading and portfolio platforms for the modern web
 transitionalElement:
-  numbersAndText:
-    companiesNumber: '100'
-    companiesText: Companies
-    usersNumber: '100 000'
-    usersText: Users served daily
-    text: These companies use Oslo Market Solutions to empower their customers
   customerLogos:
+    - logo: /img/hb_logo.png
+      name: handelsbanken
+    - logo: /img/sbanken_logo.png
+      name: Sbanken
+    - logo: /img/sb1_logo.png
+      name: SpareBank 1
     - logo: /img/afm_logo.png
       name: Artic Fund Management
     - logo: /img/fif_logo.png
       name: First Fondene
-    - logo: /img/hb_logo.png
-      name: handelsbanken
-    - logo: /img/sbanken_logo.png
-      name: Sbanken 
-    - logo: /img/sb1_logo.png
-      name: SpareBank 1
-    - logo: /img/sbm_logo.png
-      name: SpareBankMøre
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat7
+    - logo: /img/sbm_logo.png
+      name: SpareBankMøre
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat 8
     - logo: /img/signicat-logo-black-medium-size.png
@@ -40,86 +34,91 @@ transitionalElement:
       name: Signicat14
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat15
+  numbersAndText:
+    companiesNumber: '150'
+    companiesText: Companies
+    text: Here are some of the companies using services from Oslo Market Solutions
+    usersNumber: '0,5 mill.'
+    usersText: Users served daily
 investorPortal:
   header: Investor portals
-  investorPortalImages: 
+  investorPortalImages:
     - image: investorportal.png
       name: Investorportal 1
     - image: investorportal.png
       name: Investorportal 2
     - image: investorportal.png
       name: Investorportal 3
-  text:
-    Whether you want a fully hosted and managed web trader, fund savings
-    platform, portfolio reporting or market data information, OMS can help you
-    get there.
+  text: >-
+    Ready to lift your online services to the next level? We offer customized
+    Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
+    with your portfolio management systems like ProFamily, Tradex and APX,
+    Centevo and more.
 customization:
-  header: Choose your level of customization
-  text: 
-    'Whether you want a fully hosted and managed web trader, fund savings platform, portfolio reporting or market data information, OMS can help you get there.'
   cards:
-    - description: 
-        'A full coverage of the financial markets with a market data portal with live, 
-        streaming data'
+    - description: A full coverage of the financial markets with REST and Websockets APIs
       features:
         - Real Time
         - Flexible
         - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
+        - Plug n Play
+        - Adj. factors
+        - Worldwide data
       header: Feed/API
       isDark: false
-    - description: 
-        'A full coverage of the financial markets with a market data portal with live, 
-        streaming data'
+    - description: '@Espen: Text here. Add features too'
       features:
-        - Real Time
-        - Flexible
-        - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
+        - Rankings
+        - Advanced charts
+        - Heat maps
+        - Order depth
+        - Worldwide data
       header: OMS Components
       isDark: false
-    - description: 
-        'Keep investor clients informed and up to date anywhere and at any'
+    - description: >-
+        Fully managed and operated custom solutions with OMS unique domain
+        expertise
       features:
         - Real Time
-        - Flexible
-        - Rapid
         - Customized
-        - ProBroker
         - User Friendly
-      header: Managed solutions
+        - ProFamily
+        - Advent
+        - Centevo
+      header: Hosted solutions
       isDark: true
+  header: Choose your level of customization
   serviceIntegrations:
     header: Service integrations
-    text: We play well with others
     integrationLogos:
       - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat1
+        name: Centevo
       - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat2
+        name: ProBroker
       - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat3
+        name: Advent
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: VPS
       - logo: /img/signicat-logo-black-medium-size.png
         name: Signicat4
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat5
+    text: We play well with others
+  text: >-
+    Whether you want a fully hosted and managed service, to build your own
+    platform with our flexible React components or start from scratch with the
+    market data API, we got what you need to get started.
 otherProducts:
   arena:
     header: Arena
     image: /img/arena.png
-    text:
-      'Arena provides information on securities listed on Oslo Børs, Oslo Axess and N-OTC. 
-      There are currently two information products available in 
-      Arena: Top Shareholders and Corporate Actions Calendar.'
+    text: >-
+      Arena provides information on securities listed on Oslo Børs, Oslo Axess
+      and N-OTC with the two products Top Shareholders and Corporate Actions
+      Calendar.
   irModules:
-    header: IR Modules
+    header: IR Web Modules
     image: /img/arena.png
-    text: 
-      'Whether you want a fully hosted and managed web trader, 
-      fund savings platform, portfolio reporting or market data information, 
-      OMS can help you get there.'
+    text: >-
+      Showcase your share to existing and potential investors with flexible web
+      modules from OMS. From simple quotes to advanced charting tools.
 ---
+

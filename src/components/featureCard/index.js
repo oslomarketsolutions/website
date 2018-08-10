@@ -38,11 +38,12 @@ const FeatureCard = ({ title, description, features, to, index, isDark }) => {
       </div>
       <p>{description}</p>
       <ul className="bodySmall">
-        {features.map(feature => (
-          <li key={feature}>
-            <FontAwesomeIcon icon={['far', 'check-circle']} /> {feature}
-          </li>
-        ))}
+        {features &&
+          features.map(feature => (
+            <li key={feature}>
+              <FontAwesomeIcon icon={['far', 'check-circle']} /> {feature}
+            </li>
+          ))}
       </ul>
       {/* Linken må få riktig 'to' fra props */}
       <Link className={`textButton ${styles.customizationLink}`} to={to}>

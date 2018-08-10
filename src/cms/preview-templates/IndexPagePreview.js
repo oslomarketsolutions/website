@@ -31,7 +31,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     .map(card => ({
       header: card.get('header'),
       description: card.get('description'),
-      features: card.get('features').toJS(),
+      features: card.get('features'),
       isDark: card.get('isDark'),
     }));
 
