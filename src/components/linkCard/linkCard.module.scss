@@ -1,7 +1,6 @@
 @import '../../layouts/variables';
 
 .linkCard {
-  float: left;
   margin: 18px;
   position: relative;
   background-color: $white;
@@ -66,13 +65,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    cursor: pointer;
     text-align: left;
-    background-color: transparent;
     color: $vibrantBlue;
     text-decoration: none;
     padding: $M $L;
-    border: none;
     border-top: 1px solid $antiFlashWhite;
     border-bottom-left-radius: $S;
     border-bottom-right-radius: $S;
@@ -91,10 +87,6 @@
 div.dark {
   background-color: $darkBlue;
 
-  .header {
-    border-color: $lapisLazuli;
-  }
-
   .icon {
     background-color: $lapisLazuli;
     color: $white;
@@ -108,16 +100,72 @@ div.dark {
     color: $antiFlashWhite;
   }
 
-  ul {
-    color: $antiFlashWhite;
-
-    svg {
-      color: $primaryGreen;
-    }
-  }
-
   .link {
     border-color: $lapisLazuli;
     color: $selectiveYellow;
+  }
+}
+
+@media (max-width: 814px) {
+  .linkCard {
+    background-color: transparent;
+    box-shadow: none;
+    width: 246px;
+
+    .header {
+      flex-flow: row wrap;
+    }
+
+    .iconWrapper,
+    h3 {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+    .iconWrapper {
+      margin-bottom: 16px;
+    }
+    .icon {
+      margin: 0 auto;
+    }
+
+    p {
+      display: none;
+    }
+
+    .link {
+      display: none;
+    }
+  }
+
+  div.dark {
+    background-color: transparent;
+
+    .icon {
+      background-color: $lightBlue;
+      color: $vibrantBlue;
+    }
+
+    h3 {
+      color: initial;
+    }
+  }
+}
+
+@media (max-width: 594px) {
+  .linkCard {
+    padding: 0;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 522px) {
+  .linkCard {
+    margin: 16px;
+    width: 136px;
+    h3 {
+      font-size: 1rem;
+      font-weight: $bold;
+    }
   }
 }

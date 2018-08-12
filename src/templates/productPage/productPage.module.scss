@@ -487,8 +487,33 @@
   }
 }
 
+@media (max-width: 814px) {
+  .productPage {
+    .linkCardsSection {
+      .linkCards {
+        width: 564px;
+      }
+    }
+  }
+}
+@media (max-width: 594px) {
+  .productPage {
+    .linkCardsSection {
+      .linkCards {
+        width: 492px;
+      }
+    }
+  }
+}
+
 @media (max-width: 580px) {
   .productPage {
+    .linkCardsSection {
+      h1 {
+        margin-top: 92px;
+        padding: 0;
+      }
+    }
     .investorPortal {
       .marketData,
       .trading,
@@ -539,6 +564,16 @@
         .imageContainer {
           grid-column: $main;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 522px) {
+  .productPage {
+    .linkCardsSection {
+      .linkCards {
+        width: 336px;
       }
     }
   }

@@ -1,10 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'gatsby-link';
 import styles from './linkCard.module.scss';
 
-const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
+const LinkCard = ({ header, description, isDark, index }) => {
   let icon = '';
+
+  /* const scrollTo = (duration) => {
+    if(document != null) {
+      const to = document.getElementById(header).offsetTop;
+      const element = document.documentElement;
+      const difference = to - element.scrollTop;
+      const perTick = difference / duration * 10;
+
+      setTimeout(() => {
+          element.scrollTop += perTick;
+          if (element.scrollTop === to) return;
+          scrollTo(duration - 10);
+      }, 10);
+    }
+  }; */
 
   switch (index) {
     case 1:
@@ -32,13 +48,9 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
         <h3>{header}</h3>
       </div>
       <p>{description}</p>
-      {/* below should not be button */}
-      <button
-        className={`textButton ${styles.link}`}
-        onClick={() => onClickFunction(header)}
-      >
+      <Link className={`textButton ${styles.link}`} to={`#${header}`}>
         Go to {header}
-      </button>
+      </Link>
     </div>
   );
 };
@@ -50,5 +62,4 @@ LinkCard.propTypes = {
   description: PropTypes.string,
   isDark: PropTypes.bool,
   index: PropTypes.number,
-  onClickFunction: PropTypes.func,
 };
