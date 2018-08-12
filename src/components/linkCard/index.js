@@ -51,6 +51,12 @@ const LinkCard = ({ header, description, isDark, index }) => {
       <Link className={`textButton ${styles.link}`} to={`#${header}`}>
         Go to {header}
       </Link>
+      <Link className={`textButton ${styles.mobileLink}`} to={`#${header}`}>
+        <div className={styles.iconWrapper}>
+          <div className={styles.icon}>{icon}</div>
+        </div>
+        <h3>{header}</h3>
+      </Link>
     </div>
   );
 };

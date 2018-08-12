@@ -82,6 +82,22 @@
     outline: none;
     box-shadow: 0 0 3pt 2pt #80b9fd;
   }
+
+  .mobileLink {
+    display: none;
+
+    .iconWrapper,
+    h3 {
+      padding: 0;
+      width: 100%;
+    }
+    .iconWrapper {
+      margin-bottom: 16px;
+    }
+    .icon {
+      margin: 0 auto;
+    }
+  }
 }
 
 div.dark {
@@ -113,20 +129,7 @@ div.dark {
     width: 246px;
 
     .header {
-      flex-flow: row wrap;
-    }
-
-    .iconWrapper,
-    h3 {
-      display: block;
-      width: 100%;
-      padding: 0;
-    }
-    .iconWrapper {
-      margin-bottom: 16px;
-    }
-    .icon {
-      margin: 0 auto;
+      display: none;
     }
 
     p {
@@ -136,11 +139,13 @@ div.dark {
     .link {
       display: none;
     }
+    .mobileLink {
+      display: block;
+    }
   }
 
   div.dark {
     background-color: transparent;
-
     .icon {
       background-color: $lightBlue;
       color: $vibrantBlue;
@@ -163,9 +168,11 @@ div.dark {
   .linkCard {
     margin: 16px;
     width: 136px;
-    h3 {
-      font-size: 1rem;
-      font-weight: $bold;
+    .mobileLink {
+      h3 {
+        font-size: 1rem;
+        font-weight: $bold;
+      }
     }
   }
 }
