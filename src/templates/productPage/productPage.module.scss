@@ -27,6 +27,8 @@
       grid-column: $main;
       grid-row: 2;
       margin: $XXL -18px 80px;
+      display: flex;
+      flex-flow: row wrap;
     }
   }
   .investorPortal {

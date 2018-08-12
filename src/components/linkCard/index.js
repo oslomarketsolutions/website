@@ -32,6 +32,7 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
         <h3>{header}</h3>
       </div>
       <p>{description}</p>
+      {/* below should not be button */}
       <button
         className={`textButton ${styles.link}`}
         onClick={() => onClickFunction(header)}

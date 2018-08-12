@@ -3,6 +3,7 @@
 html {
   overflow-y: initial;
   font-size: 16px;
+  //-webkit-font-smoothing: antialiased;
 
   body {
     color: $textColor;
@@ -174,6 +175,16 @@ html {
   // end Typography
 }
 
+@media (max-width: 767px) {
+  html {
+    .navLinks {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.56px;
+    }
+  }
+}
+
 //MIGHT HAVE TO CHANGE THIS MAX-WIDTH
 @media (max-width: 1024px) {
   html {
@@ -227,12 +238,6 @@ html {
       font-size: 1.25rem;
       line-height: 1.5rem;
       letter-spacing: -0.2px;
-    }
-
-    .navLinks {
-      font-size: 0.75rem;
-      line-height: 1rem;
-      letter-spacing: 0.56px;
     }
 
     .temp {

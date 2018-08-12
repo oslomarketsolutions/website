@@ -28,6 +28,6 @@ export default ServiceIntegrations;
 ServiceIntegrations.propTypes = {
   header: PropTypes.string,
   text: PropTypes.string,
-  logos: PropTypes.string,
-  imageSizes: PropTypes.arrayOf(PropTypes.object),
+  logos: PropTypes.arrayOf(PropTypes.shape({})),
+  imageSizes: PropTypes.arrayOf(PropTypes.shape({})),
 };

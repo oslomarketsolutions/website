@@ -25,6 +25,7 @@ import {
   faChartArea,
   faCodeBranch,
   faCheck,
+  faAdjust,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faCopyright,
@@ -64,6 +65,7 @@ export const faLibrary = library.add(
   faChartArea,
   faCodeBranch,
   faCheck,
+  faAdjust,
 );
 
 const fontAwesomeCSS = dom.css();
