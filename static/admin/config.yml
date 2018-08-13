@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: OMS-141/ProductPageCMS
 
 media_folder: static/img
 public_folder: /img
@@ -166,23 +166,80 @@ collections:
         label: "eng - Products page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
-          - {label: "Intro", name: "intro", widget: "object", fields: [
+          - {label: "Link-cards section", name: "linkCardsSection", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
-            ]}
-          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Features", name: "features", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
+              {label: "Link cards", name: "linkCards", widget: "list", allow_add: false, fields: [
+                {label: "Header", name: "header", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
-                {label: "Image", name: "image", widget: "image"},
+                {label: "Is dark", name: "isDark", widget: "boolean"},
               ]},
             ]}
-          - {label: "Products", name: "products", widget: "list", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Description", name: "description", widget: "text"},
+          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
+              {label: "Section header", name: "sectionHeader", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Sub-header", name: "subHeader", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "Market data", name: "marketData", widget: "object", fields: [
+                {label: "Overline", name: "overline", widget: "string"},
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+              {label: "Trading", name: "trading", widget: "object", fields: [
+                {label: "Overline", name: "overline", widget: "string"},
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+              {label: "Online portfolio", name: "onlinePortfolio", widget: "object", fields: [
+                {label: "Overline", name: "overline", widget: "string"},
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+              {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                  {label: "Name", name: "name", widget: "string"},
+                  {label: "Logo", name: "logo", widget: "image"},
+                ]},
+              ]},
+            ]},
+          - {label: "Standard products", name: "standardProducts", widget: "object", fields: [
+              {label: "Section header", name: "sectionHeader", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Sub-header", name: "subHeader", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "Arena", name: "arena", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+            ]},
+          - {label: "Services", name: "services", widget: "object", fields: [
+              {label: "Section header", name: "sectionHeader", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Sub-header", name: "subHeader", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "Feed API", name: "feedAPI", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
             ]}
 
       - file: "src/pages/en/index.md"
@@ -333,23 +390,80 @@ collections:
         label: "nor - Products page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "productsPage"}
-          - {label: "Intro", name: "intro", widget: "object", fields: [
+          - {label: "Link-cards section", name: "linkCardsSection", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
-            ]}
-          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Features", name: "features", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
+              {label: "Link cards", name: "linkCards", widget: "list", allow_add: false, fields: [
+                {label: "Header", name: "header", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
-                {label: "Image", name: "image", widget: "image"},
+                {label: "Is dark", name: "isDark", widget: "boolean"},
               ]},
             ]}
-          - {label: "Products", name: "products", widget: "list", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Description", name: "description", widget: "text"},
+          - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
+              {label: "Section header", name: "sectionHeader", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Sub-header", name: "subHeader", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "Market data", name: "marketData", widget: "object", fields: [
+                {label: "Overline", name: "overline", widget: "string"},
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+              {label: "Trading", name: "trading", widget: "object", fields: [
+                {label: "Overline", name: "overline", widget: "string"},
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+              {label: "Online portfolio", name: "onlinePortfolio", widget: "object", fields: [
+                {label: "Overline", name: "overline", widget: "string"},
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+              ]},
+              {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+                {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                  {label: "Name", name: "name", widget: "string"},
+                  {label: "Logo", name: "logo", widget: "image"},
+                ]},
+              ]},
+            ]},
+          - {label: "Standard products", name: "standardProducts", widget: "object", fields: [
+              {label: "Section header", name: "sectionHeader", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Sub-header", name: "subHeader", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "Arena", name: "arena", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+            ]},
+          - {label: "Services", name: "services", widget: "object", fields: [
+              {label: "Section header", name: "sectionHeader", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Sub-header", name: "subHeader", widget: "string"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "Feed API", name: "feedAPI", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
+              {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
+                {label: "Header", name: "header", widget: "string"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"},
+              ]},
             ]}
 
       - file: "src/pages/no/index.md"
