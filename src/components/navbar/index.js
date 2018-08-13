@@ -25,6 +25,7 @@ export default class Navbar extends Component {
   }
 
   state = {
+    cookieManagerOpen: false,
     languageSelectorOpen: false,
     headerUnderline: false,
   };
@@ -71,6 +72,12 @@ export default class Navbar extends Component {
     }
 
     return returnPath;
+  };
+
+  toggleCookieManager = () => {
+    this.setState(prevState => ({
+      cookieManagerOpen: !prevState.cookieManagerOpen,
+    }));
   };
 
   toggleLanguageSelector = () => {
@@ -193,9 +200,16 @@ export default class Navbar extends Component {
                 </ul>
               </li>
               <li className={styles.cookie}>
-                <button>
+                <button onClick={this.toggleCookieManager}>
                   <FontAwesomeIcon icon={['fas', 'adjust']} />
                 </button>
+                <div
+                  className={`${styles.cookieManager} ${
+                    this.state.cookieManagerOpen ? styles.open : styles.hide
+                  }`}
+                >
+                  <div className={styles.indicator} />
+                </div>
               </li>
             </ul>
           </nav>

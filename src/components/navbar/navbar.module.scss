@@ -43,6 +43,10 @@ header.headerUnderline {
         transition: all 200ms ease;
       }
     }
+
+    .cookieManager {
+      display: none;
+    }
   }
 }
 
@@ -181,6 +185,38 @@ header.headerUnderline {
         color: $vibrantBlue;
       }
     }
+  }
+
+  .cookieManager {
+    position: absolute;
+    top: 48px;
+    right: -20px;
+    width: 400px;
+    height: 1000px;
+    background-color: $darkBlue;
+    border: 1px solid $lapisLazuli;
+    border-radius: $S;
+
+    .indicator {
+      position: absolute;
+      transform: rotate(45deg);
+      top: -10px;
+      right: 26px;
+      width: 20px;
+      height: 20px;
+      background-color: $darkBlue;
+      border-left: 1px solid $lapisLazuli;
+      border-top: 1px solid $lapisLazuli;
+      border-radius: 2px;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .open {
+    display: block;
   }
 
   a,
