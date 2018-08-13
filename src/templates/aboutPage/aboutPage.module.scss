@@ -87,29 +87,29 @@
 
     & > p:first-of-type {
       width: 40px;
-      grid-column: 3;
+      grid-column: 2;
       grid-row: 2;
       border-bottom: solid $vibrantBlue;
       padding: 10px 0;
     }
 
     h2 {
-      grid-column: 3 / span 6;
+      grid-column: 2 / span 8;
       grid-row: 3;
       width: 100%;
       margin: 20px 0;
     }
 
     .employeeWrapper {
-      grid-column: 2 / span 8;
+      grid-column: 1 / span 10;
       grid-row: 4;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       align-content: center;
       margin: $XL auto 0 auto;
       width: 100%;
-      max-width: 1580px;
+      max-width: 1140px;
 
       .quoteWrapper {
         height: 300px;
@@ -162,6 +162,14 @@
       }
     }
     .aboutEmployees {
+      & > p:first-of-type {
+        grid-column: 3;
+      }
+
+      h2 {
+        grid-column: 3 / span 6;
+      }
+
       .employeeWrapper {
         max-width: 800px;
         justify-content: space-around;

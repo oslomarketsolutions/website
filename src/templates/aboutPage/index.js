@@ -6,11 +6,14 @@ import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import BigButton from '../../components/bigButton';
 
-const sortedEmployeeList = array => {
+const sortEmployeeList = array => {
   const newArray = [];
   array.forEach(element => {
     const newElement = element;
-    if (newElement.node.frontmatter.jobType === 'management') {
+
+    if (newElement.node.frontmatter.jobTitle === 'CEO') {
+      newElement.node.frontmatter.sortOrder = 0;
+    } else if (newElement.node.frontmatter.jobType === 'management') {
       newElement.node.frontmatter.sortOrder = 1;
     } else if (newElement.node.frontmatter.jobType === 'operations') {
       newElement.node.frontmatter.sortOrder = 2;
@@ -41,68 +44,81 @@ export const AboutPageTemplate = ({
   buttonText,
   employeeList,
   imageSizes,
-}) => (
-  <main className={styles.aboutPage}>
-    <section className={styles.hero}>
-      <h1>{hero.title}</h1>
-      <p className="heroSubtitle">{hero.text}</p>
-      <ImageWrapper
-        alt="Background image covering top half of screen"
-        src={hero.backgroundImage}
-        sizes={findImageSizes(hero.backgroundImage, imageSizes)}
-        outerWrapperClassName={styles.backgroundImage}
-      />
-    </section>
-    <section className={styles.history}>
-      <p className="overline">{history.section}</p>
-      <h2>{history.header}</h2>
-      <p className="bodyLarge">{history.text}</p>
-    </section>
-    <section className={styles.aboutEmployees}>
-      <p className="overline">{employees.section}</p>
-      <h2>{employees.header}</h2>
-      <div className={styles.employeeWrapper}>
-        {sortedEmployeeList(employeeList) &&
-          sortedEmployeeList(employeeList).map((employee, index) => {
-            const {
-              title: employeeName,
-              description: employeeDescription,
-              jobTitle: employeeJobTitle,
-              image: employeeImage,
-              jobType: employeeJobType,
-            } = employee.node.frontmatter;
+}) => {
+  const sortedEmployeeList = sortEmployeeList(employeeList);
+  // Insert a placeholder as second item in array.
+  // In employeeWrapper the map will replace the placeholder with actual quote
+  sortedEmployeeList.splice(1, 0, {
+    node: { frontmatter: { title: 'quoteWrapper' } },
+  });
 
-            if (index === 1) {
-              const quote =
-                employees.quotes[
-                  Math.floor(Math.random() * employees.quotes.length)
-                ];
+  return (
+    <main className={styles.aboutPage}>
+      <section className={styles.hero}>
+        <h1>{hero.title}</h1>
+        <p className="heroSubtitle">{hero.text}</p>
+        <ImageWrapper
+          alt="Background image covering top half of screen"
+          src={hero.backgroundImage}
+          sizes={findImageSizes(hero.backgroundImage, imageSizes)}
+          outerWrapperClassName={styles.backgroundImage}
+        />
+      </section>
+      <section className={styles.history}>
+        <p className="overline">{history.section}</p>
+        <h2>{history.header}</h2>
+        <p className="bodyLarge">{history.text}</p>
+      </section>
+      <section className={styles.aboutEmployees}>
+        <p className="overline">{employees.section}</p>
+        <h2>{employees.header}</h2>
+        <div className={styles.employeeWrapper}>
+          {// The second element in sortedEmployeeList is a placeholder
+          // for the quote.
+          sortedEmployeeList &&
+            sortedEmployeeList.map((employee, index) => {
+              const {
+                title: employeeName,
+                description: employeeDescription,
+                jobTitle: employeeJobTitle,
+                image: employeeImage,
+                jobType: employeeJobType,
+              } = employee.node.frontmatter;
+
+              // Quote should be the second card to be displayed
+              if (index === 1) {
+                // Get a random quote from the quotes-array
+                const quote =
+                  employees.quotes[
+                    Math.floor(Math.random() * employees.quotes.length)
+                  ];
+                return (
+                  <div className={styles.quoteWrapper}>
+                    <h2>{quote.text}</h2>
+                    <p>{quote.author}</p>
+                  </div>
+                );
+              }
               return (
-                <div className={styles.quoteWrapper}>
-                  <h2>{quote.text}</h2>
-                  <p>{quote.author}</p>
-                </div>
+                <EmployeeCard
+                  key={employeeName}
+                  name={employeeName}
+                  description={employeeDescription}
+                  jobTitle={employeeJobTitle}
+                  portraitSize={findImageSizes(employeeImage, imageSizes)}
+                  jobType={employeeJobType}
+                  image={employeeImage}
+                />
               );
-            }
-            return (
-              <EmployeeCard
-                key={employeeName}
-                name={employeeName}
-                description={employeeDescription}
-                jobTitle={employeeJobTitle}
-                portraitSize={findImageSizes(employeeImage, imageSizes)}
-                jobType={employeeJobType}
-                image={employeeImage}
-              />
-            );
-          })}
-      </div>
-    </section>
-    <section className={styles.joinTheTeam}>
-      <BigButton to="/career" text={buttonText} />
-    </section>
-  </main>
-);
+            })}
+        </div>
+      </section>
+      <section className={styles.joinTheTeam}>
+        <BigButton to="/career" text={buttonText} />
+      </section>
+    </main>
+  );
+};
 
 AboutPageTemplate.propTypes = {
   hero: PropTypes.shape({
