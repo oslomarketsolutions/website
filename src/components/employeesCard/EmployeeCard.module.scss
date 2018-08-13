@@ -78,6 +78,16 @@
     grid-row: 1;
     flex-flow: column wrap;
     justify-content: center;
+
+    h4 {
+      color: $vibrantBlue;
+    }
+
+    h4,
+    p {
+      text-align: left;
+      margin-left: 15px;
+    }
   }
 
   .description {
@@ -87,17 +97,7 @@
     align-items: center;
   }
 
-  h4 {
-    color: $vibrantBlue;
-  }
-
   p {
     color: $dimGrey;
-  }
-
-  h4,
-  p {
-    text-align: left;
-    margin-left: 15px;
   }
 }

@@ -101,7 +101,7 @@
     }
 
     .employeeWrapper {
-      grid-column: 2 / span 8;
+      grid-column: 1 / span 10;
       grid-row: 4;
       display: flex;
       flex-flow: row wrap;
@@ -109,7 +109,7 @@
       align-content: center;
       margin: $XL auto 0 auto;
       width: 100%;
-      max-width: 1580px;
+      max-width: 1140px;
 
       .quoteWrapper {
         height: 300px;
