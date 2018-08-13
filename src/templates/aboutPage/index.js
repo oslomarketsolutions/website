@@ -46,6 +46,8 @@ export const AboutPageTemplate = ({
   imageSizes,
 }) => {
   const sortedEmployeeList = sortEmployeeList(employeeList);
+  // Insert a placeholder as second item in array.
+  // In employeeWrapper the map will replace the placeholder with actual quote
   sortedEmployeeList.splice(1, 0, {
     node: { frontmatter: { title: 'quoteWrapper' } },
   });
@@ -80,8 +82,10 @@ export const AboutPageTemplate = ({
                 image: employeeImage,
                 jobType: employeeJobType,
               } = employee.node.frontmatter;
-
+              
+              // Quote should be the second card to be displayed
               if (index === 1) {
+                // Get a random quote from the quotes-array
                 const quote =
                   employees.quotes[
                     Math.floor(Math.random() * employees.quotes.length)
