@@ -11,13 +11,11 @@
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged",
-    "prettier":
-      "prettier --trailing-comma all --single-quote \"{gatsby-*.js,src/**/*.js}\"",
+    "prettier": "prettier --trailing-comma all --single-quote \"{gatsby-*.js,src/**/*.js}\"",
     "format": "npm run prettier -- --write",
     "lint:prettier": "./scripts/lint-prettier.sh",
     "lint:js": "eslint src",
-    "eslint-check":
-      "eslint --print-config .eslintrc.yml | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.yml | eslint-config-prettier-check"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
@@ -71,7 +69,9 @@
     "null-loader": "^0.1.1",
     "prettier": "^1.12.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "lint-staged": {
     "*.{js,json,css,scss,md}": [
