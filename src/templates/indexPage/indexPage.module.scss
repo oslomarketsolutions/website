@@ -48,7 +48,7 @@
     margin: 0 auto;
     background-color: $white;
     display: grid;
-    grid-template-columns: repeat(8, minmax(0, 128.5px));
+    grid-template-columns: $gridColumnTemplate;
     grid-template-rows: max-content auto;
     grid-column-gap: $gridColumnGap;
     align-items: center;
@@ -91,50 +91,50 @@
     }
 
     .first {
-      grid-column: 1 / span 2;
+      grid-column: 2 / span 2;
       grid-row: 1;
       width: 135px;
       align-self: end;
     }
 
     .second {
-      grid-column: 3 / span 2;
+      grid-column: 4 / span 2;
       grid-row: 1;
       width: 272px;
       align-self: end;
     }
 
     .third {
-      grid-column: 5 / span 4;
+      grid-column: 6 / span 4;
       grid-row: 1;
       width: 400px;
       align-self: end;
     }
-  }
 
-  .transition:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 81%;
-    bottom: 0;
-    left: 0;
-    border-radius: $S;
-    box-shadow: $newBoxShadow;
-    z-index: 0;
-  }
+    .customerLogos {
+      z-index: 2;
+      grid-column: 2 / span 8;
+      grid-row: 2;
+      width: 93%;
+      margin: $XL auto 0;
+      height: 350px;
 
-  .customerLogos {
-    z-index: 2;
-    grid-column: 1 / span 8;
-    grid-row: 2;
-    width: 93%;
-    margin: $XL auto 0;
-    height: 350px;
+      .imageContainer {
+        width: 28%;
+        max-width: 286px;
+      }
+    }
 
-    .imageContainer {
-      width: 28%;
-      max-width: 286px;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 81%;
+      bottom: 0;
+      left: 0;
+      border-radius: $S;
+      box-shadow: $newBoxShadow;
+      z-index: 0;
     }
   }
 
@@ -319,6 +319,10 @@
     }
 
     .investorPortal {
+      grid-template-rows:
+        624px max-content max-content 305px
+        75px max-content max-content max-content
+        max-content max-content max-content max-content;
       h1 {
         grid-column: 3 / span 5;
       }
@@ -408,6 +412,10 @@
     }
 
     .investorPortal {
+      grid-template-rows:
+        624px max-content max-content 240px
+        51px max-content max-content max-content
+        max-content max-content max-content max-content;
       .investorPortalImagesWrapper {
         height: 240px;
 
@@ -439,17 +447,17 @@
       grid-template-rows: max-content max-content auto;
 
       .first {
-        grid-column: 1 / span 4;
+        grid-column: 2 / span 4;
         grid-row: 1;
       }
 
       .second {
-        grid-column: 5 / span 4;
+        grid-column: 6 / span 4;
         grid-row: 1;
       }
 
       .third {
-        grid-column: 1 / span 8;
+        grid-column: 2 / span 8;
         grid-row: 2;
         margin: $XL auto;
       }
@@ -477,7 +485,7 @@
       }
 
       .second {
-        grid-column: 4 / span 5;
+        grid-column: 5 / span 5;
         width: 168px;
       }
 
@@ -492,8 +500,8 @@
 
     .investorPortal {
       grid-template-rows:
-        400px max-content max-content max-content
-        max-content max-content max-content max-content
+        400px max-content max-content 240px
+        51px max-content max-content max-content
         max-content max-content max-content max-content;
 
       h1 {
