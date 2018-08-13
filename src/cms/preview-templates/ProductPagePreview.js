@@ -17,6 +17,17 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     linkCards,
   };
 
+  const sectionHeaderInvestorPortal = {
+    header: entry.getIn(['data', 'investorPortal', 'sectionHeader', 'header']),
+    subHeader: entry.getIn([
+      'data',
+      'investorPortal',
+      'sectionHeader',
+      'subHeader',
+    ]),
+    text: entry.getIn(['data', 'investorPortal', 'sectionHeader', 'text']),
+  };
+
   const marketData = {
     overline: entry.getIn(['data', 'investorPortal', 'marketData', 'overline']),
     header: entry.getIn(['data', 'investorPortal', 'marketData', 'header']),
@@ -83,11 +94,27 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const investorPortal = {
-    sectionHeader: entry.getIn(['data', 'investorPortal', 'sectionHeader']),
+    sectionHeader: sectionHeaderInvestorPortal,
     marketData,
     trading,
     onlinePortfolio,
     serviceIntegrations,
+  };
+
+  const sectionHeaderStandardProducts = {
+    header: entry.getIn([
+      'data',
+      'standardProducts',
+      'sectionHeader',
+      'header',
+    ]),
+    subHeader: entry.getIn([
+      'data',
+      'standardProducts',
+      'sectionHeader',
+      'subHeader',
+    ]),
+    text: entry.getIn(['data', 'standardProducts', 'sectionHeader', 'text']),
   };
 
   const arena = {
@@ -107,9 +134,15 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const standardProducts = {
-    sectionHeader: entry.getIn(['data', 'investorPortal', 'sectionHeader']),
+    sectionHeader: sectionHeaderStandardProducts,
     arena,
     irModules,
+  };
+
+  const sectionHeaderServices = {
+    header: entry.getIn(['data', 'services', 'sectionHeader', 'header']),
+    subHeader: entry.getIn(['data', 'services', 'sectionHeader', 'subHeader']),
+    text: entry.getIn(['data', 'services', 'sectionHeader', 'text']),
   };
 
   const feedAPI = {
@@ -127,7 +160,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const services = {
-    sectionHeader: entry.getIn(['data', 'investorPortal', 'sectionHeader']),
+    sectionHeader: sectionHeaderServices,
     feedAPI,
     omsComponents,
   };
