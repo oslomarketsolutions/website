@@ -1,4 +1,7 @@
 .licensesContainer {
-  padding: 200px 20px;
+  grid-column: 2 / span 8;
+  grid-row: 1;
+  min-height: 65vh; // Fixes footer floating in the middle of the screen
+  padding: 200px 0;
   white-space: pre-wrap;
 }

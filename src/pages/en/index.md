@@ -66,7 +66,9 @@ customization:
         - Worldwide data
       header: Feed/API
       isDark: false
-    - description: '@Espen: Text here. Add features too'
+    - description: >-
+        Well documented React components for those who want more autonomy, but
+        still high quality.
       features:
         - Rankings
         - Advanced charts
@@ -116,9 +118,8 @@ otherProducts:
       Calendar.
   irModules:
     header: IR Web Modules
-    image: /img/arena.png
+    image: /img/irModulesPlaceholder.png
     text: >-
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
-

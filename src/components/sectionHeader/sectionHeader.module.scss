@@ -1,0 +1,22 @@
+@import '../../layouts/variables';
+
+.sectionHeader {
+  text-align: center;
+  margin-top: 80px;
+
+  h1 + p {
+    padding: $XL 0;
+  }
+
+  p + p {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 580px) {
+  .sectionHeader {
+    p + p {
+      padding: 0;
+    }
+  }
+}

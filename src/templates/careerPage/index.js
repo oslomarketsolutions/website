@@ -15,7 +15,7 @@ export const CareerPageTemplate = ({
   <main className={styles.careerPage}>
     <section className={styles.hero}>
       <h1>{hero.title}</h1>
-      <p className="bodyLarge">{hero.text}</p>
+      <p className="heroSubtitle">{hero.text}</p>
       <ImageWrapper
         alt={hero.backgroundImageAlt}
         src={hero.backgroundImage}
@@ -61,15 +61,15 @@ CareerPageTemplate.propTypes = {
 };
 
 const CareerPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: page } = data;
   const imageSizes = data.imageSizes.edges;
 
   return (
     <CareerPageTemplate
-      hero={post.frontmatter.hero}
-      about={post.frontmatter.about}
-      perks={post.frontmatter.perks}
-      positions={post.frontmatter.positions}
+      hero={page.frontmatter.hero}
+      about={page.frontmatter.about}
+      perks={page.frontmatter.perks}
+      positions={page.frontmatter.positions}
       imageSizes={imageSizes}
     />
   );

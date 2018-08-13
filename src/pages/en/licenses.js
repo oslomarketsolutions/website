@@ -5,8 +5,7 @@ import styles from '../licensesPage.module.scss';
 
 export class LicensesPage extends Component {
   state = {
-    licenses: '',
-    loading: true,
+    licenses: 'Loading licenses',
   };
 
   componentDidMount() {
@@ -16,16 +15,13 @@ export class LicensesPage extends Component {
       .then(text => {
         this.setState({
           licenses: text,
-          loading: false,
         });
       });
   }
 
   render() {
     return (
-      <pre className={styles.licensesContainer}>
-        {this.state.loading ? 'Loading licenses' : this.state.licenses}
-      </pre>
+      <pre className={styles.licensesContainer}>{this.state.licenses}</pre>
     );
   }
 }
