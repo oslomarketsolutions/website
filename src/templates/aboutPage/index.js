@@ -62,16 +62,8 @@ export const AboutPageTemplate = ({
       <p className="overline">{employees.section}</p>
       <h2>{employees.header}</h2>
       <div className={styles.employeeWrapper}>
-        {sortedEmployeeList(employeeList) &&
-          sortedEmployeeList(employeeList).map((employee, index) => {
-            const {
-              title: employeeName,
-              description: employeeDescription,
-              jobTitle: employeeJobTitle,
-              image: employeeImage,
-              jobType: employeeJobType,
-            } = employee.node.frontmatter;
-
+        {employeeList &&
+          employeeList.map((employee, index) => {
             if (index === 1) {
               const quote =
                 employees.quotes[
@@ -84,6 +76,13 @@ export const AboutPageTemplate = ({
                 </div>
               );
             }
+            const {
+              title: employeeName,
+              description: employeeDescription,
+              jobTitle: employeeJobTitle,
+              image: employeeImage,
+              jobType: employeeJobType,
+            } = employee;
             return (
               <EmployeeCard
                 key={employeeName}
@@ -124,7 +123,7 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const post = data.page;
-  const employeeList = data.employees.edges;
+  const { employeeList } = post.frontmatter.employees;
   const imageSizes = data.imageSizes.edges;
 
   return (
@@ -165,6 +164,13 @@ export const aboutPageQuery = graphql`
           quotes {
             text
             author
+          }
+          employeeList {
+            title
+            jobTitle
+            description
+            image
+            jobType
           }
         }
         buttonText

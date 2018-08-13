@@ -16,5 +16,11 @@ employees:
       author: John Burroughs
     - text: Start where you are. Use what you have. Do what you can.
       author: Arthur Ashe
+  employeeList:
+    - title: Åsmund Staldvik
+      jobTitle: Sommervikar
+      description: Tekst
+      image: /img/chemex.jpg
+      jobType: 'summerIntern'
 buttonText: Join the Team
 ---
