@@ -223,8 +223,8 @@
       grid-column: $main;
       grid-row: 9;
       display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
+      flex-flow: row nowrap;
+      justify-content: center;
     }
 
     section:last-of-type {
