@@ -73,7 +73,9 @@ export const AboutPageTemplate = ({
         <p className="overline">{employees.section}</p>
         <h2>{employees.header}</h2>
         <div className={styles.employeeWrapper}>
-          {sortedEmployeeList &&
+          {// The second element in sortedEmployeeList is a placeholder
+          // for the quote.
+          sortedEmployeeList &&
             sortedEmployeeList.map((employee, index) => {
               const {
                 title: employeeName,
@@ -82,7 +84,7 @@ export const AboutPageTemplate = ({
                 image: employeeImage,
                 jobType: employeeJobType,
               } = employee.node.frontmatter;
-              
+
               // Quote should be the second card to be displayed
               if (index === 1) {
                 // Get a random quote from the quotes-array
