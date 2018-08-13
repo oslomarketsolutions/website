@@ -6,12 +6,11 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 ## Access Locally
 
-You need to set up a TOKEN to access fontawesome pro
-so that yarn install works.
+You need to set an environment variable to use fontawesome pro.
+Contact epshen to get the token.
 
 ```
-npm config set "@fortawesome:registry" https://npm.fontawesome.com/ \
-npm config set "//npm.fontawesome.com/:_authToken" TOKEN
+export FONTAWESOME_TOKEN="00000000-0000-0000-0000-000000000000"
 ```
 
 ```
