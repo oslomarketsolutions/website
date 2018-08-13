@@ -1,80 +1,120 @@
 ---
-
 hero:
-subtitle: 'Web services for stock and fund trading, market data and more'
-title: Trading and portfolio platforms for the modern web
+  subtitle: 'Web services for stock and fund trading, market data and more'
+  title: Trading and portfolio platforms for the modern web
 transitionalElement:
-customerLogos: - logo: /img/hb_logo.png
-name: handelsbanken - logo: /img/sbanken_logo.png
-name: Sbanken - logo: /img/sb1_logo.png
-name: SpareBank 1 - logo: /img/afm_logo.png
-name: Artic Fund Management - logo: /img/fif_logo.png
-name: First Fondene - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat7 - logo: /img/sbm_logo.png
-name: SpareBankMøre - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat 8 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat9 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat10 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat11 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat12 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat13 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat14 - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat15
-numbersAndText:
-companiesNumber: '150'
-companiesText: Companies
-text: Here are some of the companies using services from Oslo Market Solutions
-usersNumber: '0,5 mill.'
-usersText: Users served daily
+  numbersAndText:
+    companiesNumber: '150'
+    companiesText: Companies
+    text: Here are some of the companies using services from Oslo Market Solutions
+    usersNumber: '0,5 mill.'
+    usersText: Users served daily
+  customerLogos:
+    - logo: /img/hb_logo.png
+      name: handelsbanken
+    - logo: /img/sbanken_logo.png
+      name: Sbanken
+    - logo: /img/sb1_logo.png
+      name: SpareBank 1
+    - logo: /img/afm_logo.png
+      name: Artic Fund Management
+    - logo: /img/fif_logo.png
+      name: First Fondene
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat7
+    - logo: /img/sbm_logo.png
+      name: SpareBankMøre
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat 8
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat9
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat10
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat11
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat12
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat13
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat14
+    - logo: /img/signicat-logo-black-medium-size.png
+      name: Signicat15
 investorPortal:
-header: Investor portals
-investorPortalImages: - image: investorportal.png
-name: Investorportal 1 - image: investorportal.png
-name: Investorportal 2 - image: investorportal.png
-name: Investorportal 3
-text: >-
-Ready to lift your online services to the next level? We offer customized
-Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
-with your portfolio management systems like ProFamily, Tradex and APX,
-Centevo and more.
+  header: Investor portals
+  investorPortalImages:
+    - image: investorportal.png
+      name: Investorportal 1
+    - image: investorportal.png
+      name: Investorportal 2
+    - image: investorportal.png
+      name: Investorportal 3
+  text: >-
+    Ready to lift your online services to the next level? We offer customized
+    Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
+    with your portfolio management systems like ProFamily, Tradex and APX,
+    Centevo and more.
 customization:
-cards: - description: A full coverage of the financial markets with REST and Websockets APIs
-features: - Real Time - Flexible - Rapid - Plug n Play - Adj. factors - Worldwide data
-header: Feed/API
-isDark: false - description: '@Espen: Text here. Add features too'
-features: - Rankings - Advanced charts - Heat maps - Order depth - Worldwide data
-header: OMS Components
-isDark: false - description: >-
-Fully managed and operated custom solutions with OMS unique domain
-expertise
-features: - Real Time - Customized - User Friendly - ProFamily - Advent - Centevo
-header: Hosted solutions
-isDark: true
-header: Choose your level of customization
-serviceIntegrations:
-header: Service integrations
-integrationLogos: - logo: /img/signicat-logo-black-medium-size.png
-name: Centevo - logo: /img/signicat-logo-black-medium-size.png
-name: ProBroker - logo: /img/signicat-logo-black-medium-size.png
-name: Advent - logo: /img/signicat-logo-black-medium-size.png
-name: VPS - logo: /img/signicat-logo-black-medium-size.png
-name: Signicat4
-text: We play well with others
-text: >-
-Whether you want a fully hosted and managed service, to build your own
-platform with our flexible React components or start from scratch with the
-market data API, we got what you need to get started.
+  header: Choose your level of customization
+  text: Whether you want a fully hosted and managed service, to build your own
+    platform with our flexible React components or start from scratch with the
+    market data API, we got what you need to get started.
+  cards:
+    - description: A full coverage of the financial markets with REST and Websockets APIs
+      features:
+        - Real Time
+        - Flexible
+        - Rapid
+        - Plug n Play
+        - Adj. factors
+        - Worldwide data
+      header: Feed/API
+      isDark: false
+    - description: '@Espen: Text here. Add features too'
+      features:
+        - Rankings
+        - Advanced charts
+        - Heat maps
+        - Order depth
+        - Worldwide data
+      header: OMS Components
+      isDark: false
+    - description: Fully managed and operated custom solutions with OMS unique domain expertise
+      features:
+        - Real Time
+        - Customized
+        - User Friendly
+        - ProFamily
+        - Advent
+        - Centevo
+      header: Hosted solutions
+      isDark: true
+  serviceIntegrations:
+    header: Service integrations
+    text: We play well with others
+    integrationLogos:
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Centevo
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: ProBroker
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Advent
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: VPS
+      - logo: /img/signicat-logo-black-medium-size.png
+        name: Signicat4
 otherProducts:
-arena:
-header: Arena
-image: /img/arena.png
-text: >-
-Arena provides information on securities listed on Oslo Børs, Oslo Axess
-and N-OTC with the two products Top Shareholders and Corporate Actions
-Calendar.
-irModules:
-header: IR Web Modules
-image: /img/irModulesPlaceholder.png
-text: >-
-Showcase your share to existing and potential investors with flexible web
-modules from OMS. From simple quotes to advanced charting tools.
+  arena:
+    header: Arena
+    image: /img/arena.png
+    text:
+      Arena provides information on securities listed on Oslo Børs, Oslo Axess
+      and N-OTC with the two products Top Shareholders and Corporate Actions
+      Calendar.
+  irModules:
+    header: IR Web Modules
+    image: /img/irModulesPlaceholder.png
+    text:
+      Showcase your share to existing and potential investors with flexible web
+      modules from OMS. From simple quotes to advanced charting tools.
+---
