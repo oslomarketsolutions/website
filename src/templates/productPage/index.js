@@ -1,56 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import scrollIntoView from 'scroll-into-view-if-needed';
-import Observer from 'react-intersection-observer';
-import classNames from 'classnames';
 import ImageWrapper from '../../components/imageWrapper';
-import {
-  findImageSizes,
-  findImageResolutions,
-} from '../../utils/helperFunctions';
+import { findImageSizes } from '../../utils/helperFunctions';
 import styles from './productPage.module.scss';
+import SectionHeader from '../../components/sectionHeader/index';
+import Button from '../../components/button/index';
 import LinkCard from '../../components/linkCard';
-import ProductCard from '../../components/productCard';
-import oneYearGraph from '../../components/oneYearGraph';
-
-if (typeof window !== `undefined`) {
-  // eslint-disable-next-line
-  require('intersection-observer');
-}
+import ServiceIntegrations from '../../components/serviceIntegrations/index';
 
 export class ProductPageTemplate extends Component {
   static propTypes = {
-    intro: PropTypes.shape({
-      title: PropTypes.string,
-      links: PropTypes.arrayOf(
-        PropTypes.shape({
-          text: PropTypes.string,
-          title: PropTypes.string,
-        }),
-      ),
-    }),
-    investorPortal: PropTypes.shape({
-      title: PropTypes.string,
-      description: PropTypes.string,
-      features: PropTypes.arrayOf(
-        PropTypes.shape({
-          text: PropTypes.string,
-          title: PropTypes.string,
-          image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-        }),
-      ),
-    }),
-    products: PropTypes.arrayOf(
-      PropTypes.shape({
-        description: PropTypes.string,
-        title: PropTypes.string,
-      }),
-    ),
+    linkCardsSection: PropTypes.shape({}),
+    investorPortal: PropTypes.shape({}),
+    standardProducts: PropTypes.shape({}),
+    services: PropTypes.shape({}),
     imageSizes: PropTypes.arrayOf(PropTypes.object),
-    imageResolutions: PropTypes.arrayOf(PropTypes.object),
+    language: PropTypes.string,
   };
 
-  scrollToRef = ref => {
+  scrollToRef = (event, ref) => {
+    event.preventDefault();
     scrollIntoView(this[ref], {
       behavior: 'smooth',
       scrollMode: 'always',
@@ -61,121 +31,208 @@ export class ProductPageTemplate extends Component {
 
   render() {
     const {
-      intro,
+      linkCardsSection,
       investorPortal,
-      products,
+      standardProducts,
+      services,
       imageSizes,
-      imageResolutions,
+      language,
     } = this.props;
 
-    const linkCards = (stickyMenu, inView) => (
-      <div
-        className={classNames({
-          [styles.hidden]: stickyMenu && inView,
-          [styles.stickyMenu]: stickyMenu && !inView,
-          [styles.notStickyMenu]: !stickyMenu,
-        })}
-      >
-        <LinkCard
-          product={investorPortal}
-          onClickFunction={this.scrollToRef}
-          sticky={stickyMenu}
-        />
-        {products &&
-          products.map(product => (
-            <LinkCard
-              key={product.title}
-              product={product}
-              onClickFunction={this.scrollToRef}
-              sticky={stickyMenu}
-              imageResolution={findImageResolutions(
-                investorPortal.image,
-                imageResolutions,
-              )}
-            />
-          ))}
-      </div>
-    );
+    const parsedPath = /^\/(\w\w)/.exec(language);
+    const strippedLanguage = parsedPath && parsedPath[1];
 
     return (
-      <main>
-        <div className={styles.container}>
-          <Observer>
-            {({ inView, ref }) => (
-              <section className={styles.intro} ref={ref}>
-                <h2>{intro.title}</h2>
-                {// Sticky link bar
-                linkCards(true, inView)}
-                {// Intro cards
-                linkCards(false, inView)}
-              </section>
-            )}
-          </Observer>
-
-          {oneYearGraph()}
+      <main className={styles.productPage}>
+        <section className={styles.linkCardsSection}>
+          <h1 className={styles.centered}>{linkCardsSection.title}</h1>
+          <nav className={styles.linkCards}>
+            {linkCardsSection.linkCards &&
+              linkCardsSection.linkCards.map((linkCard, index) => (
+                <LinkCard
+                  key={linkCard.header}
+                  index={index}
+                  header={linkCard.header}
+                  description={linkCard.description}
+                  isDark={linkCard.isDark}
+                  onClickFunction={this.scrollToRef}
+                />
+              ))}
+          </nav>
+        </section>
+        <section
+          className={styles.investorPortal}
+          id={investorPortal.sectionHeader.header}
+          ref={investorPortalSection => {
+            this[investorPortal.sectionHeader.header] = investorPortalSection;
+          }}
+        >
+          <SectionHeader
+            header={investorPortal.sectionHeader.header}
+            subHeader={investorPortal.sectionHeader.subHeader}
+            text={investorPortal.sectionHeader.text}
+          />
+          <section className={styles.marketData}>
+            <p className={`overline ${styles.overline}`}>
+              {investorPortal.marketData.overline}
+            </p>
+            <h2>{investorPortal.marketData.header}</h2>
+            <p className="bodyLarge">{investorPortal.marketData.text}</p>
+            <ImageWrapper
+              key={investorPortal.marketData.header}
+              src={investorPortal.marketData.image}
+              alt={investorPortal.marketData.header}
+              sizes={findImageSizes(
+                investorPortal.marketData.image,
+                imageSizes,
+              )}
+              outerWrapperClassName={styles.imageContainer}
+            />
+          </section>
+          <section className={styles.trading}>
+            <p className={`overline ${styles.overline}`}>
+              {investorPortal.trading.overline}
+            </p>
+            <h2>{investorPortal.trading.header}</h2>
+            <p className="bodyLarge">{investorPortal.trading.text}</p>
+            <ImageWrapper
+              key={investorPortal.trading.header}
+              src={investorPortal.trading.image}
+              alt={investorPortal.trading.header}
+              sizes={findImageSizes(investorPortal.trading.image, imageSizes)}
+              outerWrapperClassName={styles.imageContainer}
+            />
+          </section>
+          <section className={styles.onlinePortfolio}>
+            <p className={`overline ${styles.overline}`}>
+              {investorPortal.onlinePortfolio.overline}
+            </p>
+            <h2>{investorPortal.onlinePortfolio.header}</h2>
+            <p className="bodyLarge">{investorPortal.onlinePortfolio.text}</p>
+            <ImageWrapper
+              key={investorPortal.onlinePortfolio.header}
+              src={investorPortal.onlinePortfolio.image}
+              alt={investorPortal.onlinePortfolio.header}
+              sizes={findImageSizes(
+                investorPortal.onlinePortfolio.image,
+                imageSizes,
+              )}
+              outerWrapperClassName={styles.imageContainer}
+            />
+          </section>
+          <ServiceIntegrations
+            header={investorPortal.serviceIntegrations.header}
+            text={investorPortal.serviceIntegrations.text}
+            logos={investorPortal.serviceIntegrations.integrationsLogos}
+            imageSizes={imageSizes}
+          />
+        </section>
+        <section className={styles.standardProducts}>
+          <SectionHeader
+            header={standardProducts.sectionHeader.header}
+            subHeader={standardProducts.sectionHeader.subHeader}
+            text={standardProducts.sectionHeader.text}
+          />
           <section
-            ref={section => {
-              this[investorPortal.title] = section;
+            className={styles.arena}
+            id={standardProducts.arena.header}
+            ref={arenaSection => {
+              this[standardProducts.arena.header] = arenaSection;
             }}
-            className={styles.investorPortal}
           >
-            <div className={styles.investor}>
-              <h3>{investorPortal.title}</h3>
-              <p>{investorPortal.description}</p>
-              <ImageWrapper
-                alt={investorPortal.title}
-                src={investorPortal.image}
-                outerWrapperClassName={styles.imageContainer}
-                sizes={findImageSizes(investorPortal.image, imageSizes)}
-              />
-            </div>
-            {investorPortal.features &&
-              investorPortal.features.map(feature => (
-                <div key={feature.title} className={styles.features}>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.description}</p>
-                </div>
-              ))}
+            <h2>{standardProducts.arena.header}</h2>
+            <p className="bodyLarge">{standardProducts.arena.text}</p>
+            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <ImageWrapper
+              key={standardProducts.arena.header}
+              src={standardProducts.arena.image}
+              alt={standardProducts.arena.header}
+              sizes={findImageSizes(standardProducts.arena.image, imageSizes)}
+              outerWrapperClassName={styles.imageContainer}
+            />
           </section>
-          <section className={styles.investorContact}>
-            <h4>Contact us today to get more info about our traders!</h4>
-            <button>Contact</button>
+          <section
+            className={styles.irModules}
+            id={standardProducts.irModules.header}
+            ref={irModulesSection => {
+              this[standardProducts.irModules.header] = irModulesSection;
+            }}
+          >
+            <h2>{standardProducts.irModules.header}</h2>
+            <p className="bodyLarge">{standardProducts.irModules.text}</p>
+            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <ImageWrapper
+              key={standardProducts.irModules.header}
+              src={standardProducts.irModules.image}
+              alt={standardProducts.irModules.header}
+              sizes={findImageSizes(
+                standardProducts.irModules.image,
+                imageSizes,
+              )}
+              outerWrapperClassName={styles.imageContainer}
+            />
           </section>
-
-          <section className={styles.productsContainer}>
-            {products &&
-              products.map(product => (
-                <div
-                  key={product.title}
-                  className={styles.product}
-                  ref={card => {
-                    this[product.title] = card;
-                  }}
-                >
-                  <ProductCard
-                    product={product}
-                    sizes={findImageSizes(product.image, imageSizes)}
-                  />
-                </div>
-              ))}
+        </section>
+        <section className={styles.services}>
+          <SectionHeader
+            header={services.sectionHeader.header}
+            subHeader={services.sectionHeader.subHeader}
+            text={services.sectionHeader.text}
+          />
+          <section
+            className={styles.feedAPI}
+            id={services.feedAPI.header}
+            ref={feedAPISection => {
+              this[services.feedAPI.header] = feedAPISection;
+            }}
+          >
+            <h2>{services.feedAPI.header}</h2>
+            <p className="bodyLarge">{services.feedAPI.text}</p>
+            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <ImageWrapper
+              key={services.feedAPI.header}
+              src={services.feedAPI.image}
+              alt={services.feedAPI.header}
+              sizes={findImageSizes(services.feedAPI.image, imageSizes)}
+              outerWrapperClassName={styles.imageContainer}
+            />
           </section>
-        </div>
+          <section
+            className={styles.omsComponents}
+            id={services.omsComponents.header}
+            ref={omsComponentsSection => {
+              this[services.omsComponents.header] = omsComponentsSection;
+            }}
+          >
+            <h2>{services.omsComponents.header}</h2>
+            <p className="bodyLarge">{services.omsComponents.text}</p>
+            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <ImageWrapper
+              key={services.omsComponents.header}
+              src={services.omsComponents.image}
+              alt={services.omsComponents.header}
+              sizes={findImageSizes(services.omsComponents.image, imageSizes)}
+              outerWrapperClassName={styles.imageContainer}
+            />
+          </section>
+        </section>
       </main>
     );
   }
 }
 
-const ProductPage = ({ data }) => {
+const ProductPage = ({ data, location }) => {
   const page = data.page.frontmatter;
   const imageSizes = data.imageSizes.edges;
-  const imageResolutions = data.imageResolutions.edges;
+
   return (
     <ProductPageTemplate
-      intro={page.intro}
+      linkCardsSection={page.linkCardsSection}
       investorPortal={page.investorPortal}
-      products={page.products}
+      standardProducts={page.standardProducts}
+      services={page.services}
       imageSizes={imageSizes}
-      imageResolutions={imageResolutions}
+      language={location.pathname}
     />
   );
 };
@@ -188,33 +245,87 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
+  location: PropTypes.shape({}),
 };
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
-        intro {
+        linkCardsSection {
           title
-          links {
-            title
-            text
+          linkCards {
+            header
+            description
+            isDark
           }
         }
         investorPortal {
-          title
-          description
-          image
-          features {
-            title
+          sectionHeader {
+            header
+            subHeader
+            text
+          }
+          marketData {
+            overline
+            header
+            text
             image
-            description
+          }
+          trading {
+            overline
+            header
+            text
+            image
+          }
+          onlinePortfolio {
+            overline
+            header
+            text
+            image
+          }
+          serviceIntegrations {
+            header
+            text
+            integrationsLogos {
+              logo
+              name
+            }
           }
         }
-        products {
-          title
-          description
-          image
+        standardProducts {
+          sectionHeader {
+            header
+            subHeader
+            text
+          }
+          arena {
+            header
+            image
+            text
+          }
+          irModules {
+            header
+            image
+            text
+          }
+        }
+        services {
+          sectionHeader {
+            header
+            subHeader
+            text
+          }
+          feedAPI {
+            header
+            image
+            text
+          }
+          omsComponents {
+            header
+            image
+            text
+          }
         }
       }
     }
@@ -226,21 +337,6 @@ export const productPageQuery = graphql`
           childImageSharp {
             sizes(maxWidth: 1440) {
               ...GatsbyImageSharpSizes
-            }
-          }
-        }
-      }
-    }
-
-    imageResolutions: allFile(
-      filter: { absolutePath: { regex: "/static/img/" } }
-    ) {
-      edges {
-        node {
-          relativePath
-          childImageSharp {
-            resolutions(width: 150, height: 100) {
-              ...GatsbyImageSharpResolutions
             }
           }
         }

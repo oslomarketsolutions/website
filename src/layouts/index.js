@@ -10,7 +10,6 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  faGlobe,
   faArrowUp,
   faServer,
   faGraduationCap,
@@ -26,11 +25,14 @@ import {
   faChartArea,
   faCodeBranch,
   faCheck,
+  faAdjust,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faCopyright,
   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
+
+import { faGlobe } from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';
@@ -63,6 +65,7 @@ export const faLibrary = library.add(
   faChartArea,
   faCodeBranch,
   faCheck,
+  faAdjust,
 );
 
 const fontAwesomeCSS = dom.css();

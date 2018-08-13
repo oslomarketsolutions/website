@@ -8,30 +8,30 @@
   }
 
   .animation {
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows: 30% max-content max-content max-content;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     color: $antiFlashWhite;
     width: 100%;
     height: 100vh;
     background-color: $darkBlue;
 
     h1 {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 2;
     }
 
     p {
       padding: $XXL 0;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 3;
     }
 
     p + a {
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 4;
     }
   }
@@ -50,7 +50,7 @@
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows: max-content auto;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     align-items: center;
     color: $textColor;
     border-radius: $S;
@@ -144,17 +144,16 @@
 
   .investorPortal {
     color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 2;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
       624px max-content max-content max-content
       max-content max-content max-content max-content
-      max-content max-content max-content max-content;
-    grid-column-gap: 16px;
+      max-content max-content;
+    grid-column-gap: $gridColumnGap;
     align-items: center;
-    height: 2578px;
     background-color: $antiFlashWhite;
 
     h1 {
@@ -209,61 +208,40 @@
 
     .subHeader1 {
       padding-top: 100px;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 7;
     }
 
     .subHeader1 + p {
-      padding: $XXL 0;
+      padding: $XL 0 $XXL 0;
       grid-column: 4 / span 4;
       grid-row: 8;
     }
 
     .customizationCards {
       padding: 0 0 192px 0;
-      grid-column: 2 / span 8;
+      grid-column: $main;
       grid-row: 9;
       display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-    }
-
-    .subHeader2 {
-      grid-column: 2 / span 8;
-      grid-row: 10;
-    }
-
-    .subHeader2 + p {
-      padding: $XXL 0;
-      grid-column: 2 / span 8;
-      grid-row: 11;
-    }
-
-    .integrationLogos {
-      grid-column: 1 / span 10;
-      grid-row: 12;
-      display: flex;
       flex-flow: row nowrap;
-      align-items: center;
       justify-content: center;
+    }
 
-      .imageContainer {
-        width: 18%;
-        max-width: 300px;
-      }
+    section:last-of-type {
+      grid-column: $full;
+      grid-row: 10;
     }
   }
 
   .arena {
-    color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 3;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
       220px max-content max-content max-content
       120px;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
 
     h1 {
       grid-column: 2 / span 3;
@@ -295,15 +273,14 @@
   .irModules {
     position: relative;
     z-index: 1;
-    color: $textColor;
-    grid-column: 1 / span 10;
+    grid-column: $full;
     grid-row: 4;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
       220px max-content max-content max-content
       120px;
-    grid-column-gap: 16px;
+    grid-column-gap: $gridColumnGap;
     background-color: $antiFlashWhite;
 
     h1 {
@@ -342,12 +319,10 @@
     }
 
     .investorPortal {
-      height: 2778px;
       grid-template-rows:
         624px max-content max-content 305px
         75px max-content max-content max-content
         max-content max-content max-content max-content;
-
       h1 {
         grid-column: 3 / span 5;
       }
@@ -437,7 +412,6 @@
     }
 
     .investorPortal {
-      height: 3048px;
       grid-template-rows:
         624px max-content max-content 240px
         51px max-content max-content max-content
@@ -494,15 +468,6 @@
         height: 325px;
       }
     }
-    .investorPortal {
-      height: 3138px;
-      .integrationLogos {
-        flex-flow: row wrap;
-        .imageContainer {
-          width: 26%;
-        }
-      }
-    }
   }
 }
 
@@ -534,22 +499,21 @@
     }
 
     .investorPortal {
-      height: 3044px;
       grid-template-rows:
         400px max-content max-content 240px
         51px max-content max-content max-content
         max-content max-content max-content max-content;
 
       h1 {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       h1 + p {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       p + a {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       .investorPortalImagesWrapper {
@@ -565,30 +529,24 @@
       .subHeader1 + p {
         grid-column: 3 / span 6;
       }
-
-      .integrationLogos {
-        .imageContainer {
-          width: 44%;
-        }
-      }
     }
 
     .arena,
     .irModules {
       h1 {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       h1 + p {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       a {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
 
       .imageContainer {
-        grid-column: 2 / span 8;
+        grid-column: $main;
       }
     }
   }

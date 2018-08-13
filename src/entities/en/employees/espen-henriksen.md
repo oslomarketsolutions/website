@@ -7,4 +7,3 @@ description: >-
 image: /img/espen_henriksen.jpg
 jobType: frontEnd
 ---
-

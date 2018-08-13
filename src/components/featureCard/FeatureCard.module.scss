@@ -6,6 +6,7 @@
   padding: $XL $L;
   border-radius: $S;
   box-shadow: $newBoxShadow;
+  margin: 0 16px;
 
   .header {
     border-bottom: 1px solid $antiFlashWhite;
@@ -69,11 +70,17 @@
     text-decoration: none;
     padding: $M $L;
     border-top: 1px solid $antiFlashWhite;
+    border-bottom-left-radius: $S;
+    border-bottom-right-radius: $S;
 
     svg {
       font-size: 14px;
       margin-left: 2px;
     }
+  }
+  .customizationLink:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #80b9fd;
   }
 }
 

@@ -116,7 +116,7 @@ export default class Navbar extends Component {
                   {this.props.language === 'en' ? 'Services' : 'Produkter'}
                 </Link>
               </li>
-              <li>
+              <li className={styles.careers}>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/career`}
@@ -128,7 +128,7 @@ export default class Navbar extends Component {
                   </span>
                 </Link>
               </li>
-              <li>
+              <li className={styles.noPaddingRight}>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
@@ -137,23 +137,15 @@ export default class Navbar extends Component {
                   {this.props.language === 'en' ? 'About us' : 'Om oss'}
                 </Link>
               </li>
-              <li
-                className={`${styles.languageSelectorDesktop} ${
-                  styles.noPaddingRight
-                }`}
-              >
-                <Link to={this.changePageLanguage()}>
-                  <FontAwesomeIcon icon="globe" />
+              <li className={styles.languageSelectorDesktop}>
+                <Link className={styles.noHover} to={this.changePageLanguage()}>
+                  <FontAwesomeIcon icon={['fal', 'globe']} />
                   {this.props.language === 'no' ? 'English' : 'Norsk'}
                 </Link>
               </li>
-              <li
-                className={`${styles.languageSelectorMobile} ${
-                  styles.noPaddingRight
-                }`}
-              >
+              <li className={styles.languageSelectorMobile}>
                 <button onClick={this.toggleLanguageSelector}>
-                  <FontAwesomeIcon icon="globe" />
+                  <FontAwesomeIcon icon={['fal', 'globe']} />
                 </button>
                 <ul
                   className={
@@ -199,6 +191,11 @@ export default class Navbar extends Component {
                     </Link>
                   </li>
                 </ul>
+              </li>
+              <li className={styles.cookie}>
+                <button>
+                  <FontAwesomeIcon icon={['fas', 'adjust']} />
+                </button>
               </li>
             </ul>
           </nav>

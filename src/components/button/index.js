@@ -4,16 +4,17 @@ import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './button.module.scss';
 
-const Button = ({ to, text }) => (
+const Button = ({ to, text, useArrow }) => (
   <Link to={to} className={`buttonNormal ${styles.button}`}>
     {text}
-    <FontAwesomeIcon icon={['fas', 'arrow-right']} />
+    {useArrow && <FontAwesomeIcon icon={['fas', 'arrow-right']} />}
   </Link>
 );
 
 Button.propTypes = {
   to: PropTypes.string,
   text: PropTypes.string,
+  useArrow: PropTypes.bool,
 };
 
 export default Button;

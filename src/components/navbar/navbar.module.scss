@@ -1,34 +1,46 @@
 @import '../../layouts/variables';
 
-$duration: 0.2s;
-$distance: 8px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
 header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   background-color: $white;
+  box-shadow: $navbarShadow;
 }
 
 header.headerUnderline {
-  border-bottom: 1px solid $antiFlashWhite;
-}
-header.headerUnderline.navColorWhite {
-  border-bottom: 1px solid $lapisLazuli;
-}
-
-header.headerUnderline {
-  box-shadow: $boxShadow;
+  box-shadow: $navbarShadow;
 
   .navbar {
-    height: 58px;
+    height: 64px;
+    transition: all 200ms ease;
+
+    li.cookie {
+      right: -246px;
+      transition: all 200ms ease;
+    }
+
+    li.languageSelectorDesktop {
+      right: -120px;
+      transition: all 200ms ease;
+    }
+
+    li.careers {
+      span {
+        top: 12px;
+        transition: all 200ms ease;
+      }
+    }
+
     .logoWrapper {
-      height: 38px;
+      height: 40px;
+      margin-left: -6px;
       overflow: hidden;
+      transition: all 200ms ease;
       img {
-        width: 90px;
+        width: 96px;
+        transition: all 200ms ease;
       }
     }
   }
@@ -38,82 +50,69 @@ header.headerUnderline {
   display: flex;
   align-items: center;
   max-width: 1140px;
-  padding: 16px 0 10px;
   width: 100%;
+  height: 104px;
   margin: 0 auto;
+  color: $darkBlue;
+  transition: all 200ms ease;
+
   nav {
-    position: inherit;
-    visibility: inherit;
-    opacity: inherit;
+    height: 100%;
 
     .active {
-      &:before,
       &:after {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      &:before {
-        transition: transform $duration $easeOutBack, opacity $duration;
-      }
-      &:after {
-        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        transform: scaleX(1);
       }
     }
 
     a {
       padding-bottom: 0;
       position: relative;
-      height: 36px;
+      height: 100%;
       display: flex;
       align-items: center;
 
       //Animation for underlining menu
-      &:before,
       &:after {
         content: '';
         position: absolute;
-        bottom: 1px;
+        bottom: 0;
         left: 0;
         right: 0;
-        height: 2px;
+        height: 4px;
         background-color: $vibrantBlue;
+        transform: scaleX(0);
+        transition: all 200ms ease;
       }
-      &:before {
-        opacity: 0;
-        transform: translateY(-$distance);
-        transition: transform 0s $easeOutBack, opacity 0s;
-      }
-      &:after {
-        opacity: 0;
-        transform: translateY($distance/2);
-        transition: transform $duration $easeOutBack, opacity $duration;
-      }
-      &:hover {
-        &:before,
-        &:after {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-        }
-      }
+    }
+    a:hover {
+      color: $hoverColor;
     }
   }
 
   li {
+    display: flex;
+    align-items: center;
     list-style-type: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    height: 100%;
+    padding-left: $M;
+    padding-right: $M;
 
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  li.careers {
+    position: relative;
     span {
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
-      font-size: 12px;
+      position: absolute;
+      right: -18px;
+      top: 30px;
+      width: 17px;
+      height: 17px;
+      line-height: 21px;
+      font-size: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -121,11 +120,7 @@ header.headerUnderline {
       background-color: $vibrantOrange;
       color: $white;
       text-align: center;
-      margin-left: 10px;
-    }
-
-    svg {
-      font-size: 2rem;
+      transition: all 200ms ease;
     }
   }
 
@@ -134,6 +129,57 @@ header.headerUnderline {
     svg {
       margin: 0 10px 1px 0;
       font-size: 1.125rem;
+    }
+  }
+
+  li.cookie {
+    position: absolute;
+    right: $XXL;
+    height: $XL;
+    padding: 0;
+    transition: all 200ms ease;
+
+    button {
+      background-color: $antiFlashWhite;
+      border: 0;
+      border-radius: $M;
+      padding: 0 $XS;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      svg {
+        color: $vibrantBlue;
+      }
+    }
+
+    svg {
+      color: $darkBlue;
+      margin: 0;
+      font-size: 1.125rem;
+    }
+  }
+
+  li.languageSelectorDesktop {
+    position: absolute;
+    right: 98px;
+    height: $XL;
+    padding: 0;
+    transition: all 200ms ease;
+    transition-property: padding, margin, height, right;
+
+    a {
+      background-color: $antiFlashWhite;
+      border-radius: $M;
+      padding: 0 $S;
+      height: 100%;
+    }
+    a:hover {
+      color: $darkBlue;
+      svg {
+        color: $vibrantBlue;
+      }
     }
   }
 
@@ -147,31 +193,21 @@ header.headerUnderline {
     text-decoration: none;
   }
 
-  a.noHover:hover {
-    &:before,
-    &:after {
-      opacity: 0;
-      transform: none;
-    }
-    &:before {
-      transition: none;
-    }
-    &:after {
-      transition: none;
-    }
-  }
-
   .logoWrapper {
     padding: 0;
-    margin-right: auto;
+    margin: 16px auto 10px 0;
     z-index: 4;
+    height: 78px;
+    transition: all 200ms ease;
 
     img {
       width: 125px;
+      transition: all 200ms ease;
     }
   }
 
   ul {
+    height: 100%;
     display: flex;
     align-items: center;
     margin: 0;
@@ -199,12 +235,35 @@ header.headerUnderline {
   }
 }
 
-header.navColorWhite {
+.navColorWhite {
   background-color: $darkBlue;
+  box-shadow: none;
 }
 
 header.navColorWhite .navbar {
   color: $white;
+
+  li.cookie {
+    button {
+      background-color: $cookieButtonDarkBackground;
+      svg {
+        color: $white;
+      }
+    }
+    button:hover {
+      svg {
+        color: $vibrantBlue;
+      }
+    }
+  }
+  li.languageSelectorDesktop {
+    a {
+      background-color: $cookieButtonDarkBackground;
+    }
+    a:hover {
+      color: $white;
+    }
+  }
 
   a {
     &:before,
@@ -222,6 +281,32 @@ header.navColorWhite .navbar {
   }
 }
 
+@media (max-width: 1680px) {
+  .navbar {
+    li.cookie {
+      position: initial;
+      padding: 0 0 0 $XS;
+      margin: 0;
+    }
+    li.languageSelectorDesktop {
+      position: initial;
+      padding: 0 $XS 0 64px;
+    }
+  }
+  header.headerUnderline {
+    .navbar {
+      li.cookie {
+        margin-right: -434px;
+        transition: all 200ms ease;
+      }
+      li.languageSelectorDesktop {
+        margin-left: 210px;
+        transition: all 200ms ease;
+      }
+    }
+  }
+}
+
 @media (max-width: 1172px) {
   .navbar {
     width: 96%;
@@ -230,18 +315,62 @@ header.navColorWhite .navbar {
 
 @media (max-width: 1024px) {
   .navbar {
+    height: 82px;
     .logoWrapper {
+      margin: 4px auto 0 0;
+      height: 64px;
       img {
         width: 100px;
       }
     }
-
-    li {
+    li.careers {
       span {
-        width: 15px;
-        height: 15px;
-        font-size: 10px;
-        margin-left: $XS;
+        top: 20px;
+      }
+    }
+  }
+
+  header.headerUnderline {
+    .navbar {
+      li.careers {
+        span {
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .navbar {
+    li.cookie {
+      position: initial;
+      padding: 0 0 0 $XS;
+      margin: 0;
+    }
+    li.languageSelectorDesktop {
+      position: initial;
+      padding: 0 $XS 0 $XL;
+    }
+  }
+
+  header.headerUnderline {
+    .navbar {
+      li.cookie {
+        margin-right: -193px;
+      }
+      li.languageSelectorDesktop {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  header.headerUnderline {
+    .navbar {
+      li.cookie {
+        margin-right: -170px;
       }
     }
   }
@@ -250,8 +379,10 @@ header.navColorWhite .navbar {
 @media (max-width: 580px) {
   .navbar {
     width: 92%;
+    height: 48px;
     .logoWrapper {
       position: relative;
+      padding: 0 20px;
       width: 88px;
       overflow: hidden;
       height: 46px;
@@ -266,33 +397,49 @@ header.navColorWhite .navbar {
 
     li {
       padding: 0 $XS;
+    }
 
+    li.careers {
       span {
-        width: $XS;
-        height: $XS;
-        font-size: 0px;
-        margin-left: $XXS;
+        top: 10px;
+        right: -12px;
+        height: 12px;
+        width: 12px;
+        font-size: 8px;
       }
     }
 
-    .languageSelectorMobile {
-      display: list-item;
+    li.cookie {
+      padding-left: 4px;
+      button {
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+
+    li.languageSelectorMobile {
+      display: flex;
+      align-items: center;
       position: relative;
+      height: 32px;
+      padding: 0 $XS 0 $M;
 
       ul {
         position: absolute;
-        top: 24px;
+        top: 28px;
         border-radius: $XXS;
         border: 1px solid $antiFlashWhite;
-        right: 0;
+        right: 5px;
         background-color: $white;
         color: $textColor;
         width: 120px;
+        height: auto;
       }
 
       li {
         padding: 0;
         padding: 0 $M 0 $L;
+        height: 50px;
 
         svg {
           margin: 0 $XS 0 0;
@@ -317,7 +464,9 @@ header.navColorWhite .navbar {
         z-index: 4;
         display: block;
         border: 0;
-        padding: 0;
+        padding: 0 0;
+        border-radius: $M;
+        height: 100%;
         text-align: center;
         background-color: transparent;
         cursor: pointer;
@@ -349,15 +498,40 @@ header.navColorWhite .navbar {
         }
       }
     }
+    li.cookie {
+      button {
+        background-color: transparent;
+      }
+    }
   }
   header.headerUnderline {
     .navbar {
       height: 38px;
       .logoWrapper {
         height: 32px;
-        margin-top: -6px;
+        margin-top: -3px;
         img {
           width: 60px;
+          left: 2px;
+        }
+      }
+      li.cookie {
+        margin-right: -84px;
+      }
+      li.languageSelectorMobile {
+        margin-left: 20px;
+        transition: all 200ms ease;
+        ul {
+          display: none;
+        }
+      }
+      li.careers {
+        span {
+          top: 4px;
+          right: -12px;
+          height: 12px;
+          width: 12px;
+          font-size: 8px;
         }
       }
     }

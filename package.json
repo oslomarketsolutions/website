@@ -11,21 +11,21 @@
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged",
-    "prettier":
-      "prettier --trailing-comma all --single-quote \"{gatsby-*.js,src/**/*.js}\"",
+    "prettier": "prettier --trailing-comma all --single-quote \"{gatsby-*.js,src/**/*.js}\"",
     "format": "npm run prettier -- --write",
     "lint:prettier": "./scripts/lint-prettier.sh",
     "lint:js": "eslint src",
-    "eslint-check":
-      "eslint --print-config .eslintrc.yml | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.yml | eslint-config-prettier-check"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.2.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
     "@fortawesome/free-regular-svg-icons": "^5.1.0",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/pro-light-svg-icons": "^5.1.0-11",
     "@fortawesome/react-fontawesome": "^0.1.0-11",
     "babel-eslint": "^8.2.5",
     "babel-polyfill": "^6.26.0",
@@ -71,7 +71,9 @@
     "null-loader": "^0.1.1",
     "prettier": "^1.12.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "lint-staged": {
     "*.{js,json,css,scss,md}": [

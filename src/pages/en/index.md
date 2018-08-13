@@ -3,6 +3,12 @@ hero:
   subtitle: 'Web services for stock and fund trading, market data and more'
   title: Trading and portfolio platforms for the modern web
 transitionalElement:
+  numbersAndText:
+    companiesNumber: '150'
+    companiesText: Companies
+    text: Here are some of the companies using services from Oslo Market Solutions
+    usersNumber: '0,5 mill.'
+    usersText: Users served daily
   customerLogos:
     - logo: /img/hb_logo.png
       name: handelsbanken
@@ -34,12 +40,6 @@ transitionalElement:
       name: Signicat14
     - logo: /img/signicat-logo-black-medium-size.png
       name: Signicat15
-  numbersAndText:
-    companiesNumber: '150'
-    companiesText: Companies
-    text: Here are some of the companies using services from Oslo Market Solutions
-    usersNumber: '0,5 mill.'
-    usersText: Users served daily
 investorPortal:
   header: Investor portals
   investorPortalImages:
@@ -55,6 +55,10 @@ investorPortal:
     with your portfolio management systems like ProFamily, Tradex and APX,
     Centevo and more.
 customization:
+  header: Choose your level of customization
+  text: Whether you want a fully hosted and managed service, to build your own
+    platform with our flexible React components or start from scratch with the
+    market data API, we got what you need to get started.
   cards:
     - description: A full coverage of the financial markets with REST and Websockets APIs
       features:
@@ -75,9 +79,7 @@ customization:
         - Worldwide data
       header: OMS Components
       isDark: false
-    - description: >-
-        Fully managed and operated custom solutions with OMS unique domain
-        expertise
+    - description: Fully managed and operated custom solutions with OMS unique domain expertise
       features:
         - Real Time
         - Customized
@@ -87,9 +89,9 @@ customization:
         - Centevo
       header: Hosted solutions
       isDark: true
-  header: Choose your level of customization
   serviceIntegrations:
     header: Service integrations
+    text: We play well with others
     integrationLogos:
       - logo: /img/signicat-logo-black-medium-size.png
         name: Centevo
@@ -101,24 +103,18 @@ customization:
         name: VPS
       - logo: /img/signicat-logo-black-medium-size.png
         name: Signicat4
-    text: We play well with others
-  text: >-
-    Whether you want a fully hosted and managed service, to build your own
-    platform with our flexible React components or start from scratch with the
-    market data API, we got what you need to get started.
 otherProducts:
   arena:
     header: Arena
     image: /img/arena.png
-    text: >-
+    text:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC with the two products Top Shareholders and Corporate Actions
       Calendar.
   irModules:
     header: IR Web Modules
-    image: /img/arena.png
-    text: >-
+    image: /img/irModulesPlaceholder.png
+    text:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
-

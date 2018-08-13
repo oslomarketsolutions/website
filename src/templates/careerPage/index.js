@@ -87,16 +87,16 @@ CareerPageTemplate.propTypes = {
 };
 
 const CareerPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: page } = data;
   const imageSizes = data.imageSizes.edges;
   colorCounter = 0;
 
   return (
     <CareerPageTemplate
-      firstSection={post.frontmatter.firstSection}
-      secondSection={post.frontmatter.secondSection}
-      perks={post.frontmatter.secondSection.perks}
-      thirdSection={post.frontmatter.thirdSection}
+      firstSection={page.frontmatter.firstSection}
+      secondSection={page.frontmatter.secondSection}
+      perks={page.frontmatter.secondSection.perks}
+      thirdSection={page.frontmatter.thirdSection}
       imageSizes={imageSizes}
     />
   );
