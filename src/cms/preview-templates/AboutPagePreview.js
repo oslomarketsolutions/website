@@ -15,7 +15,6 @@ const AboutPagePreview = ({ entry, getAsset }) => {
 
   const entryEmployees = entry.getIn(['data', 'employees']);
   const employees = entryEmployees ? entryEmployees.toJS() : [];
-  console.log(employees);
   return (
     <PreviewWrapper>
       <AboutPageTemplate
