@@ -23,7 +23,7 @@ export const ProductPageTemplate = ({
     <main className={styles.productPage}>
       <section className={styles.linkCardsSection}>
         <h1 className={styles.centered}>{linkCardsSection.title}</h1>
-        <div className={styles.linkCards}>
+        <nav className={styles.linkCards}>
           {linkCardsSection.linkCards &&
             linkCardsSection.linkCards.map((linkCard, index) => (
               <LinkCard
@@ -34,7 +34,7 @@ export const ProductPageTemplate = ({
                 isDark={linkCard.isDark}
               />
             ))}
-        </div>
+        </nav>
       </section>
       <section
         className={styles.investorPortal}

@@ -55,7 +55,7 @@ const LinkCard = ({ header, description, isDark, index }) => {
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>{icon}</div>
         </div>
-        <h3>{header}</h3>
+        <h3 className="linkCardTitle">{header}</h3>
       </Link>
     </div>
   );

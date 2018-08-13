@@ -16,7 +16,6 @@
   }
 
   .icon {
-    font-family: 'Work Sans', 'sans-serif';
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -168,11 +167,5 @@ div.dark {
   .linkCard {
     margin: 16px;
     width: 136px;
-    .mobileLink {
-      h3 {
-        font-size: 1rem;
-        font-weight: $bold;
-      }
-    }
   }
 }

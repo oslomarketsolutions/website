@@ -18,6 +18,7 @@
     "eslint-check": "eslint --print-config .eslintrc.yml | eslint-config-prettier-check"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.2.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
@@ -54,7 +55,6 @@
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.2.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "^2.9.0",
