@@ -13,7 +13,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     }));
 
   const linkCardsSection = {
-    header: entry.getIn(['data', 'linkCardsSection', 'title']),
+    title: entry.getIn(['data', 'linkCardsSection', 'title']),
     linkCards,
   };
 
