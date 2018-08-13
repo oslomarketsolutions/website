@@ -46,8 +46,8 @@ const EmployeeCard = props => {
       </div>
 
       <div className={styles.header}>
-        <h3>{name}</h3>
-        <h4>{jobTitle}</h4>
+        <h4>{name}</h4>
+        <p>{jobTitle}</p>
       </div>
       <div className={styles.description}>
         <p>{description}</p>

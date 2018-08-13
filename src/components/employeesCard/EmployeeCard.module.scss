@@ -83,23 +83,21 @@
   .description {
     grid-column: 1 / span 2;
     grid-row: 2;
-    padding-top: 50px;
+    display: flex;
+    align-items: center;
   }
 
-  h3 {
-    font-size: 1.1rem;
+  h4 {
     color: $vibrantBlue;
   }
 
-  h4 {
-    font-size: 1rem;
-    color: $lightGrey;
+  p {
+    color: $dimGrey;
   }
 
-  h3,
-  h4 {
+  h4,
+  p {
     text-align: left;
-    font-weight: 400;
     margin-left: 15px;
   }
 }
