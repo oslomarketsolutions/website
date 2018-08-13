@@ -206,7 +206,7 @@ collections:
                   {label: "Logo", name: "logo", widget: "image"},
                 ]},
               ]},
-            ]},
+            ]}
           - {label: "Standard products", name: "standardProducts", widget: "object", fields: [
               {label: "Section header", name: "sectionHeader", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
@@ -223,7 +223,7 @@ collections:
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
               ]},
-            ]},
+            ]}
           - {label: "Services", name: "services", widget: "object", fields: [
               {label: "Section header", name: "sectionHeader", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
@@ -430,7 +430,7 @@ collections:
                   {label: "Logo", name: "logo", widget: "image"},
                 ]},
               ]},
-            ]},
+            ]}
           - {label: "Standard products", name: "standardProducts", widget: "object", fields: [
               {label: "Section header", name: "sectionHeader", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
@@ -447,7 +447,7 @@ collections:
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
               ]},
-            ]},
+            ]}
           - {label: "Services", name: "services", widget: "object", fields: [
               {label: "Section header", name: "sectionHeader", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
