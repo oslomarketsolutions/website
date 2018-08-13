@@ -84,6 +84,16 @@ const TemplateWrapper = ({ children, location, data }) => {
           href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800|Work+Sans:300,400"
           rel="stylesheet"
         />
+
+        {/* Start of HubSpot Embed Code */}
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/2235598.js"
+        />
+        {/* End of HubSpot Embed Code */}
       </Helmet>
       <div className="grid">
         <Navbar language={language} location={location} data={data.navbar} />

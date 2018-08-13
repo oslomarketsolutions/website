@@ -20,14 +20,25 @@ const AboutPagePreview = ({ entry, getAsset }) => {
     },
   ];
 
+  const entryHero = entry.getIn(['data', 'hero']);
+  const hero = entryHero ? entryHero.toJS() : [];
+  hero.backgroundImage = getAsset(
+    entry.getIn(['data', 'hero', 'backgroundImage']),
+  );
+
+  const entryHistory = entry.getIn(['data', 'history']);
+  const history = entryHistory ? entryHistory.toJS() : [];
+
+  const entryEmployees = entry.getIn(['data', 'employees']);
+  const employees = entryEmployees ? entryEmployees.toJS() : [];
+
   return (
     <PreviewWrapper>
       <AboutPageTemplate
-        title={entry.getIn(['data', 'title'])}
-        image={getAsset(entry.getIn(['data', 'image']))}
-        imageAlt={entry.getIn(['data', 'imageAlt'])}
-        text={entry.getIn(['data', 'text'])}
-        header={entry.getIn(['data', 'header'])}
+        hero={hero}
+        history={history}
+        employees={employees}
+        buttonText={entry.getIn(['data', 'buttonText'])}
         employeeList={employeeList}
       />
     </PreviewWrapper>
