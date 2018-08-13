@@ -201,7 +201,7 @@ collections:
               {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                {label: "Integration logos", name: "integrationsLogos", widget: "list", fields: [
                   {label: "Name", name: "name", widget: "string"},
                   {label: "Logo", name: "logo", widget: "image"},
                 ]},
@@ -425,7 +425,7 @@ collections:
               {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                {label: "Integration logos", name: "integrationsLogos", widget: "list", fields: [
                   {label: "Name", name: "name", widget: "string"},
                   {label: "Logo", name: "logo", widget: "image"},
                 ]},
