@@ -16,5 +16,98 @@ employees:
       author: John Burroughs
     - text: Start where you are. Use what you have. Do what you can.
       author: Arthur Ashe
+  employeeList:
+    - title: Anders Ranvik
+      jobTitle: Frontend developer
+      description: Text
+      image: /img/anders_ranvik.jpg
+      jobType: frontEnd
+    - title: Andreas Holen
+      jobTitle: Operations Manager
+      description: Text
+      image: /img/469px-Andreas.jpg
+      jobType: operations
+    - title: Åsmund Staldvik
+      jobTitle: Summer intern
+      description: Text
+      image: /img/asmund_staldvik.png
+      jobType: summerIntern
+    - title: Christian Blütecher
+      jobTitle: Project Manager
+      description: Text
+      image: /img/none.jpg
+      jobType: management
+    - title: Eirik Caspari
+      jobTitle: Backend developer
+      description: Text
+      image: /img/eirik_caspari.png
+      jobType: backEnd
+    - title: Elias Thøgersen
+      jobTitle: Summer intern
+      description: Text
+      image: /img/0.jpeg
+      jobType: summerIntern
+    - title: Espen Henriksen
+      jobTitle: Front End Team Lead
+      description: >-
+        Fullstack-developer interested in new technology, DX, a11y, Linux, cross
+        country skiing and hiking in norwegian nature.
+      image: /img/espen_henriksen.jpg
+      jobType: frontEnd
+    - title: Gerrit Witteveen
+      jobTitle: UX Designer
+      description: Text
+      image: /img/gerrit_witteveen.jpg
+      jobType: designer
+    - title: Haakon Winther
+      jobTitle: Frontend developer
+      description: Text
+      image: /img/haakonw.png
+      jobType: frontEnd
+    - title: Inga Wiik-Önnesjö
+      jobTitle: Support
+      description: Text
+      image: /img/inga_wiik-onnesjo.jpg
+      jobType: support
+    - title: John-Erik Bye Johansen
+      jobTitle: Backend developer
+      description: Text
+      image: /img/john-erik_bye_johansen.png
+      jobType: backEnd
+    - title: Kristian Hagen
+      jobTitle: Frontend developer
+      description: Text
+      image: /img/kristian_hagen.jpg
+      jobType: frontEnd
+    - title: Mikael Leckborn
+      jobTitle: Sales
+      description: Text
+      image: /img/mikael_leckborn.png
+      jobType: management
+    - title: Øystein Barstad
+      jobTitle: Backend developer
+      description: Text
+      image: /img/oystein_barstad.jpg
+      jobType: backEnd
+    - title: Paal Steihaug
+      jobTitle: Teamleader backend
+      description: Text
+      image: /img/paal-steihaug_phonebook_user1.jpg
+      jobType: backEnd
+    - title: Rebecca Gjerstad
+      jobTitle: Frontend developer/UX Designer
+      description: Text
+      image: /img/rebecca_gjerstad.jpg
+      jobType: designer
+    - title: Simen Flatby
+      jobTitle: Backend developer
+      description: Text
+      image: /img/simen_flatby.png
+      jobType: backEnd
+    - title: Tine Charlotte Holm
+      jobTitle: CEO
+      description: I only love my bed and my mama
+      image: /img/tine.png
+      jobType: management
 buttonText: Join the Team
 ---
