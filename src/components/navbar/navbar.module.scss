@@ -425,18 +425,20 @@ header.navColorWhite .navbar {
 
       ul {
         position: absolute;
-        top: 24px;
+        top: 28px;
         border-radius: $XXS;
         border: 1px solid $antiFlashWhite;
-        right: 0;
+        right: 5px;
         background-color: $white;
         color: $textColor;
         width: 120px;
+        height: auto;
       }
 
       li {
         padding: 0;
         padding: 0 $M 0 $L;
+        height: 50px;
 
         svg {
           margin: 0 $XS 0 0;
@@ -518,6 +520,9 @@ header.navColorWhite .navbar {
       li.languageSelectorMobile {
         margin-left: 20px;
         transition: all 200ms ease;
+        ul {
+          display: none;
+        }
       }
       li.careers {
         span {
