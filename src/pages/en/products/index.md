@@ -7,7 +7,7 @@ linkCardsSection:
       description:
         A full coverage of the financial markets with a market data portal
         with live, streaming data with smart links to content.
-      isDark: true
+      isDark: false
     - header: Arena
       description:
         A full coverage of the financial markets with a market data portal
