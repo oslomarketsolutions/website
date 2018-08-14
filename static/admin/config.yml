@@ -6,48 +6,6 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "norwegian_employees"
-    label: "no/Employee"
-    folder: "src/entities/no/employees"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Name", name: "title", widget: "string"}
-      - {label: "Job title", name: "jobTitle", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image"}
-      - label: "Job type"
-        name: "jobType"
-        widget: "select"
-        options:
-        - {label: "Front-end", value: "frontEnd"}
-        - {label: "Designer", value: "designer"}
-        - {label: "Back-end", value: "backEnd"}
-        - {label: "Management", value: "management"}
-        - {label: "Operations", value: "operations"}
-        - {label: "Support", value: "support"}
-        - {label: "Summer intern", value: "summerIntern"}
-
-  - name: "english_employees"
-    label: "en/Employee"
-    folder: "src/entities/en/employees"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Name", name: "title", widget: "string"}
-      - {label: "Job title", name: "jobTitle", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image"}
-      - label: "Job type"
-        name: "jobType"
-        widget: "select"
-        options:
-        - {label: "Front-end", value: "frontEnd"}
-        - {label: "Back-end", value: "backEnd"}
-        - {label: "Management", value: "management"}
-        - {label: "Operations", value: "operations"}
-        - {label: "Summer intern", value: "summerIntern"}
-
   - name: "pages"
     label: "Pages"
     files:
@@ -130,6 +88,21 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
                 {label: "Author", name: "author", widget: "string"},
               ]},
+              {label: "Employees", name: "employeeList", widget: "list", fields: [
+                {label: "Name", name: "title", widget: "string"},
+                {label: "Job title", name: "jobTitle", widget: "string"},
+                {label: "Description", name: "description", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Job type", name: "jobType", widget: "select", options: [
+                  {label: "Front-end", value: "frontEnd"},
+                  {label: "Designer", value: "designer"},
+                  {label: "Back-end", value: "backEnd"},
+                  {label: "Management", value: "management"},
+                  {label: "Operations", value: "operations"},
+                  {label: "Support", value: "support"},
+                  {label: "Summer intern", value: "summerIntern"},
+                ]}
+              ]}
             ]}
           - {label: "Button Text", name: "buttonText", widget: "string"}
 
@@ -297,6 +270,21 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
                 {label: "Author", name: "author", widget: "string"},
               ]},
+              {label: "Employees", name: "employeeList", widget: "list", fields: [
+                {label: "Name", name: "title", widget: "string"},
+                {label: "Job title", name: "jobTitle", widget: "string"},
+                {label: "Description", name: "description", widget: "text"},
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Job type", name: "jobType", widget: "select", options: [
+                  {label: "Front-end", value: "frontEnd"},
+                  {label: "Designer", value: "designer"},
+                  {label: "Back-end", value: "backEnd"},
+                  {label: "Management", value: "management"},
+                  {label: "Operations", value: "operations"},
+                  {label: "Support", value: "support"},
+                  {label: "Summer intern", value: "summerIntern"},
+                ]}
+              ]}
             ]}
           - {label: "Button Text", name: "buttonText", widget: "string"}
 
