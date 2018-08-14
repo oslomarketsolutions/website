@@ -25,7 +25,11 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
   }
 
   return (
-    <div className={`${styles.linkCard} ${isDark ? styles.dark : ''}`}>
+    <Link
+      className={`${styles.linkCard} ${isDark ? styles.dark : ''}`}
+      to={`#${header}`}
+      onClick={event => onClickFunction(event, header)}
+    >
       <div className={styles.header}>
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>{icon}</div>
@@ -50,7 +54,7 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
         </div>
         <h3 className="linkCardTitle">{header}</h3>
       </Link>
-    </div>
+    </Link>
   );
 };
 
