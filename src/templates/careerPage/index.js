@@ -37,6 +37,7 @@ export const CareerPageTemplate = ({
             key={perkCard.perkTitle}
             title={perkCard.perkTitle}
             text={perkCard.text}
+            icon={['fab', 'spotify']}
           />
         ))}
       </div>
