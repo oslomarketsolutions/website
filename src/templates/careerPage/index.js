@@ -32,14 +32,15 @@ export const CareerPageTemplate = ({
       <p className="overline">{perks.section}</p>
       <h2>{perks.header}</h2>
       <div className={styles.perkCardContainer}>
-        {perks.perkCards.map(perkCard => (
-          <PerkCard
-            key={perkCard.perkTitle}
-            title={perkCard.perkTitle}
-            text={perkCard.text}
-            icon={['fab', 'spotify']}
-          />
-        ))}
+        {perks.perkCards &&
+          perks.perkCards.map(perkCard => (
+            <PerkCard
+              key={perkCard.perkTitle}
+              title={perkCard.perkTitle}
+              text={perkCard.text}
+              icon={perkCard.icon && perkCard.icon.split(' ')}
+            />
+          ))}
       </div>
     </section>
     <section className={styles.positions}>
@@ -119,7 +120,7 @@ export const careerPageQuery = graphql`
           relativePath
           childImageSharp {
             sizes(maxWidth: 1440) {
-              ...GatsbyImageSharpSizes
+              ...GatsbyImageSharpSizes_tracedSVG
             }
           }
         }

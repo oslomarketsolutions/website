@@ -155,9 +155,11 @@ collections:
               {label: "Perk cards", name: "perkCards", widget: "list", fields: [
                 {label: "Perk title", name: "perkTitle", widget: "string"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Icon", name;: "icon", widget: "image"}
+                {label: "Icon", name: "icon", widget: "select", options: [
+                  {label: "Spotify", value: "fab spotify"},
+                ]},
               ]},
-            ]},
+            ]}
           - {label: "Positions", name: "positions", widget: "object", fields: [
               {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
@@ -324,9 +326,11 @@ collections:
               {label: "Perk cards", name: "perkCards", widget: "list", fields: [
                 {label: "Perk title", name: "perkTitle", widget: "string"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Icon", name;: "icon", widget: "image"}
+                {label: "Icon", name: "icon", widget: "select", options: [
+                  {label: "Spotify", value: "fab spotify"},
+                ]},
               ]},
-            ]},
+            ]}
           - {label: "Positions", name: "positions", widget: "object", fields: [
               {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},

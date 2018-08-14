@@ -10,7 +10,7 @@ hero:
 
 
     Do you think you got what it takes? Send us an e-mail!
-  backgroundImage: /img/working.png
+  backgroundImage: /img/svg.svg
   backgroundImageAlt: placeholder alt for image1
 about:
   section: ABOUT
@@ -37,7 +37,7 @@ perks:
   perkCards:
     - perkTitle: 'Employee insurance'
       text: 'With us everyone is insured'
-      icon: text
+      icon: fab spotify
     - perkTitle: 'Flexible work hours'
       text: 'Work when it suits you'
       icon: text
