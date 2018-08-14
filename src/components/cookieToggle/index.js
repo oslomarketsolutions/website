@@ -7,6 +7,8 @@ import styles from './cookieToggle.module.scss';
 export default class CookieToggle extends Component {
   static propTypes = {
     header: PropTypes.string,
+    text: PropTypes.string,
+    cookies: PropTypes.shape({}),
     isOn: PropTypes.bool,
     disabled: PropTypes.bool,
     handleToggleButton: PropTypes.func,
@@ -27,7 +29,7 @@ export default class CookieToggle extends Component {
   };
 
   render() {
-    const { header, isOn, disabled } = this.props;
+    const { header, isOn, disabled, text, cookies } = this.props;
 
     return (
       <div className={styles.cookieToggle}>
@@ -48,11 +50,7 @@ export default class CookieToggle extends Component {
             handleToggleButton={this.handleToggleButton}
           />
         </div>
-        <p className="bodySmall">
-          These cookies are needed for our website to function providing payment
-          gateway security and their essentials. Therefore they are always on
-          but do not contain personally indetifiable information (PII).
-        </p>
+        <p className="bodySmall">{text}</p>
         <div
           className={`${styles.tableWrapper} ${
             this.state.detailsOpen ? styles.open : ''
@@ -64,24 +62,13 @@ export default class CookieToggle extends Component {
                 <th>Name</th>
                 <th>Purpose</th>
               </tr>
-              <tr>
-                <td>Cookie Example</td>
-                <td>
-                  These cookies are needed for our website to function providing
-                  payment gateway security and their essentials. Therefore they
-                  are always on but do not contain personally indetifiable
-                  information (PII).
-                </td>
-              </tr>
-              <tr>
-                <td>Cookie Example</td>
-                <td>
-                  These cookies are needed for our website to function providing
-                  payment gateway security and their essentials. Therefore they
-                  are always on but do not contain personally indetifiable
-                  information (PII).
-                </td>
-              </tr>
+              {cookies &&
+                cookies.map(cookie => (
+                  <tr>
+                    <td>{cookie.name}</td>
+                    <td>{cookie.purpose}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>

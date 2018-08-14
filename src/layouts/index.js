@@ -168,6 +168,7 @@ export default class TemplateWrapper extends Component {
             language={language}
             location={location}
             data={data.navbar}
+            cookieInfo={data.cookieInfo}
             showCookiePopUp={this.state.showCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
@@ -224,6 +225,45 @@ export const footerAndNavbarQuery = graphql`
     navbar: markdownRemark(id: { regex: "/src/pages/navbar/index.md/" }) {
       frontmatter {
         numberOfJobVacancies
+      }
+    }
+    cookieInfo: markdownRemark(
+      id: { regex: "/src/pages/en/cookieInfo/index.md/" }
+    ) {
+      frontmatter {
+        title
+        cookiePopUp {
+          text
+          manageButtonText
+          confirmationButtonText
+        }
+        cookieManager {
+          necessaryCookies {
+            header
+            text
+            cookies {
+              name
+              purpose
+            }
+          }
+          analyticsCookies {
+            header
+            text
+            cookies {
+              name
+              purpose
+            }
+          }
+          trackingCookies {
+            header
+            text
+            cookies {
+              name
+              purpose
+            }
+          }
+          buttonText
+        }
       }
     }
   }

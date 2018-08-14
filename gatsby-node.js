@@ -4,11 +4,15 @@ const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   // For babel polyfill (imported in gatsby-browser)
+  const returnConfig = config;
   if (stage === 'build-javascript') {
-    config._config.entry.app = ['babel-polyfill', config.resolve().entry.app];
+    returnConfig._config.entry.app = [
+      'babel-polyfill',
+      config.resolve().entry.app,
+    ];
   }
 
-  return config;
+  return returnConfig;
 };
 
 exports.createPages = ({ boundActionCreators, graphql }) => {

@@ -12,8 +12,9 @@ export default class Navbar extends Component {
     language: PropTypes.string,
     location: PropTypes.shape({ pathname: PropTypes.string }),
     data: PropTypes.shape({
-      frontmatter: PropTypes.shape({ numberOfJobVacancies: PropTypes.string }),
+      frontmatter: PropTypes.shape({}),
     }),
+    cookieInfo: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
     showCookiePopUp: PropTypes.bool,
     analyticsOn: PropTypes.bool,
     trackingOn: PropTypes.bool,
@@ -119,6 +120,9 @@ export default class Navbar extends Component {
   };
 
   render() {
+    const data = this.props.data.frontmatter;
+    const cookieInfo = this.props.cookieInfo.frontmatter;
+
     const isOnHomePage = this.props.location.pathname.toString().length < 5;
     const navColorWhite = this.state.navOpen ? false : isOnHomePage;
 
@@ -156,9 +160,7 @@ export default class Navbar extends Component {
                   onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'Careers' : 'Jobb'}
-                  <span>
-                    {this.props.data.frontmatter.numberOfJobVacancies}
-                  </span>
+                  <span>{data.numberOfJobVacancies}</span>
                 </Link>
               </li>
               <li className={styles.noPaddingRight}>
@@ -239,20 +241,30 @@ export default class Navbar extends Component {
                 >
                   <div className={styles.indicator} />
                   <div className={styles.scrollContainer}>
-                    <h4>Cookie settings</h4>
+                    <h4>{cookieInfo.title}</h4>
                     <CookieToggle
-                      header="Necessary cookies"
+                      header={cookieInfo.cookieManager.necessaryCookies.header}
+                      text={cookieInfo.cookieManager.necessaryCookies.text}
+                      cookies={
+                        cookieInfo.cookieManager.necessaryCookies.cookies
+                      }
                       isOn
                       disabled
                       handleToggleButton={this.handleToggleButton}
                     />
                     <CookieToggle
-                      header="Analytics cookies"
+                      header={cookieInfo.cookieManager.analyticsCookies.header}
+                      text={cookieInfo.cookieManager.analyticsCookies.text}
+                      cookies={
+                        cookieInfo.cookieManager.analyticsCookies.cookies
+                      }
                       isOn={this.props.analyticsOn}
                       handleToggleButton={this.handleToggleButton}
                     />
                     <CookieToggle
-                      header="Tracking cookies"
+                      header={cookieInfo.cookieManager.trackingCookies.header}
+                      text={cookieInfo.cookieManager.trackingCookies.text}
+                      cookies={cookieInfo.cookieManager.trackingCookies.cookies}
                       isOn={this.props.trackingOn}
                       handleToggleButton={this.handleToggleButton}
                     />
@@ -260,7 +272,7 @@ export default class Navbar extends Component {
                       onClick={this.toggleCookieManager}
                       className={`textButton ${styles.save}`}
                     >
-                      Save settings
+                      {cookieInfo.cookieManager.buttonText}
                     </button>
                   </div>
                 </div>
@@ -270,24 +282,20 @@ export default class Navbar extends Component {
                   }`}
                 >
                   <div className={styles.indicator} />
-                  <h4>Cookie settings</h4>
-                  <p className="bodySmall">
-                    Uses cookies to personalize content and ads to make our site
-                    easier for you to use. We do also share that information
-                    with third parties for advertising and analytics.
-                  </p>
+                  <h4>{cookieInfo.title}</h4>
+                  <p className="bodySmall">{cookieInfo.cookiePopUp.text}</p>
                   <div className={styles.buttonWrapper}>
                     <button
                       onClick={this.closePopUpAndOpenManager}
                       className={`textButton ${styles.manage}`}
                     >
-                      Manage
+                      {cookieInfo.cookiePopUp.manageButtonText}
                     </button>
                     <button
                       onClick={this.closeCookiePopUp}
                       className={`textButton ${styles.understand}`}
                     >
-                      I understand
+                      {cookieInfo.cookiePopUp.confirmationButtonText}
                     </button>
                   </div>
                 </div>
