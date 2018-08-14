@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import ReactGA from 'react-ga';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faLinkedin,
@@ -70,9 +70,38 @@ export const faLibrary = library.add(
 
 const fontAwesomeCSS = dom.css();
 
+const tryInitializeGA = () => {
+  // Check if allowed to use Google analytics
+  if ('allowed') {
+    console.log('Initializing GA');
+    ReactGA.initialize('UA-101364630-3', {
+      debug: true,
+    });
+    ReactGA.ga('set', 'anonymizeIp', true);
+  }
+};
+
+let oldPathName = '';
+
 const TemplateWrapper = ({ children, location, data }) => {
   const parsedPath = /^\/(\w\w)/.exec(location.pathname);
   const language = parsedPath && parsedPath[1];
+
+  if (typeof window !== 'undefined') {
+    const newPathName = window.location.pathname;
+    if (newPathName !== oldPathName) {
+      if (oldPathName === '') {
+        console.log('First website load!');
+        tryInitializeGA();
+      } else {
+        console.log('Different page');
+        ReactGA.pageview(newPathName);
+      }
+      oldPathName = window.location.pathname;
+    } else {
+      console.log('Same page');
+    }
+  }
 
   return (
     <React.Fragment>
@@ -96,7 +125,12 @@ const TemplateWrapper = ({ children, location, data }) => {
         {/* End of HubSpot Embed Code */}
       </Helmet>
       <div className="grid">
-        <Navbar language={language} location={location} data={data.navbar} />
+        <Navbar
+          language={language}
+          location={location}
+          data={data.navbar}
+          cookieFunc={tryInitializeGA}
+        />
         {children()}
         <Footer language={language} data={data.footer} />
       </div>

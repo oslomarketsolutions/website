@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'react-ga';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
 import Slider from '../../components/slider/index';
@@ -40,7 +40,8 @@ const IndexPageTemplate = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://www.linkedin.com/company/oslo-market-solutions-as/"
+                to="https://www.linkedin.com/company/oslo-market-solutions-as/"
+                eventLabel="LinkedIn from homepage"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -49,7 +50,8 @@ const IndexPageTemplate = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://www.facebook.com/oslomarketsolutions/"
+                to="https://www.facebook.com/oslomarketsolutions/"
+                eventLabel="Facebook from homepage"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -58,7 +60,8 @@ const IndexPageTemplate = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://medium.com/shark-bytes"
+                to="https://medium.com/shark-bytes"
+                eventLabel="Shark Bytes Blog from homepage"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -67,7 +70,8 @@ const IndexPageTemplate = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://github.com/oslomarketsolutions"
+                eventLabel="Github from homepage"
+                to="https://github.com/oslomarketsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
               >
