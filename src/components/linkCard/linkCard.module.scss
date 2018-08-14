@@ -8,6 +8,13 @@
   padding: $XL $L;
   border-radius: $S;
   box-shadow: $newBoxShadow;
+  text-decoration: none;
+  color: $textColor;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.08);
+  }
 
   .header {
     display: flex;
