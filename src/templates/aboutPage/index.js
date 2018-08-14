@@ -6,18 +6,51 @@ import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import BigButton from '../../components/bigButton';
 
+const sortEmployeeList = array => {
+  const newArray = [];
+  array.forEach(element => {
+    const newElement = element;
+
+    if (newElement.node.frontmatter.jobTitle === 'CEO') {
+      newElement.node.frontmatter.sortOrder = 0;
+    } else if (newElement.node.frontmatter.jobType === 'management') {
+      newElement.node.frontmatter.sortOrder = 1;
+    } else if (newElement.node.frontmatter.jobType === 'operations') {
+      newElement.node.frontmatter.sortOrder = 2;
+    } else if (newElement.node.frontmatter.jobType === 'support') {
+      newElement.node.frontmatter.sortOrder = 3;
+    } else if (newElement.node.frontmatter.jobType === 'frontEnd') {
+      newElement.node.frontmatter.sortOrder = 4;
+    } else if (newElement.node.frontmatter.jobType === 'designer') {
+      newElement.node.frontmatter.sortOrder = 5;
+    } else if (newElement.node.frontmatter.jobType === 'backEnd') {
+      newElement.node.frontmatter.sortOrder = 6;
+    } else if (newElement.node.frontmatter.jobType === 'summerIntern') {
+      newElement.node.frontmatter.sortOrder = 7;
+    }
+
+    newArray.push(newElement);
+  });
+
+  return newArray.sort(
+    (a, b) => a.node.frontmatter.sortOrder - b.node.frontmatter.sortOrder,
+  );
+};
+
 export const AboutPageTemplate = ({
   hero,
   history,
   employees,
   buttonText,
+  employeeList,
   imageSizes,
 }) => {
+  const sortedEmployeeList = sortEmployeeList(employeeList);
   // Insert a placeholder as second item in array.
   // In employeeWrapper the map will replace the placeholder with actual quote
-  if (employees.employeeList) {
-    employees.employeeList.splice(1, 0, { title: 'quoteWrapper' });
-  }
+  sortedEmployeeList.splice(1, 0, {
+    node: { frontmatter: { title: 'quoteWrapper' } },
+  });
 
   return (
     <main className={styles.aboutPage}>
@@ -42,15 +75,15 @@ export const AboutPageTemplate = ({
         <div className={styles.employeeWrapper}>
           {// The second element in sortedEmployeeList is a placeholder
           // for the quote.
-          employees.employeeList &&
-            employees.employeeList.map((employee, index) => {
+          sortedEmployeeList &&
+            sortedEmployeeList.map((employee, index) => {
               const {
                 title: employeeName,
                 description: employeeDescription,
                 jobTitle: employeeJobTitle,
                 image: employeeImage,
                 jobType: employeeJobType,
-              } = employee;
+              } = employee.node.frontmatter;
 
               // Quote should be the second card to be displayed
               if (index === 1) {
@@ -98,20 +131,16 @@ AboutPageTemplate.propTypes = {
     texT: PropTypes.string,
   }),
   employees: PropTypes.shape({
-    section: PropTypes.string,
     header: PropTypes.string,
-    quotes: PropTypes.shape({
-      text: PropTypes.string,
-      author: PropTypes.string,
-    }),
-    employeeList: PropTypes.arrayOf(PropTypes.object),
   }),
   buttonText: PropTypes.string,
+  employeeList: PropTypes.arrayOf(PropTypes.object),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
 };
 
 const AboutPage = ({ data }) => {
   const post = data.page;
+  const employeeList = data.employees.edges;
   const imageSizes = data.imageSizes.edges;
 
   return (
@@ -120,6 +149,7 @@ const AboutPage = ({ data }) => {
       history={post.frontmatter.history}
       employees={post.frontmatter.employees}
       buttonText={post.frontmatter.buttonText}
+      employeeList={employeeList}
       imageSizes={imageSizes}
     />
   );
@@ -132,7 +162,7 @@ AboutPage.propTypes = {
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+  query AboutPage($id: String!, $employeeRegex: String!) {
     page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         hero {
@@ -152,7 +182,17 @@ export const aboutPageQuery = graphql`
             text
             author
           }
-          employeeList {
+        }
+        buttonText
+      }
+    }
+
+    employees: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: $employeeRegex } }
+    ) {
+      edges {
+        node {
+          frontmatter {
             title
             jobTitle
             description
@@ -160,7 +200,6 @@ export const aboutPageQuery = graphql`
             jobType
           }
         }
-        buttonText
       }
     }
 
