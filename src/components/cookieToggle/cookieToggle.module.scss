@@ -1,0 +1,66 @@
+@import '../../layouts/variables';
+
+.cookieToggle {
+  color: $white;
+  padding: $M;
+
+  .header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .toggleDetails {
+    color: $white;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-right: auto;
+    text-align: left;
+
+    .chevron {
+      color: $primaryGreen;
+      margin-right: $M;
+      font-size: 1rem;
+      margin-left: 3px;
+      transition: transform 200ms ease;
+    }
+
+    .open {
+      transform: rotate(90deg);
+      transition: transform 200ms ease;
+    }
+
+    h6 {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: $M 0;
+  }
+
+  .tableWrapper {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 250ms ease;
+
+    th {
+      text-transform: uppercase;
+      border-bottom: 2px solid $white;
+      vertical-align: top;
+    }
+
+    td {
+      border-bottom: 1px solid $white;
+      vertical-align: top;
+    }
+  }
+
+  .tableWrapper.open {
+    max-height: 1000px;
+    transition: max-height 800ms ease;
+  }
+}

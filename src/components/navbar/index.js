@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
+import CookieToggle from '../cookieToggle/index';
 import logo from '../../img/logo_oms_hoved.png';
 import logoWhite from '../../img/logo_oms_hvit.png';
 import styles from './navbar.module.scss';
@@ -13,6 +14,11 @@ export default class Navbar extends Component {
     data: PropTypes.shape({
       frontmatter: PropTypes.shape({ numberOfJobVacancies: PropTypes.string }),
     }),
+    showCookiePopUp: PropTypes.bool,
+    analyticsOn: PropTypes.bool,
+    trackingOn: PropTypes.bool,
+    handleConfirmation: PropTypes.func,
+    handleCookieChanges: PropTypes.func,
   };
 
   static defaultProps = {
@@ -25,6 +31,7 @@ export default class Navbar extends Component {
   }
 
   state = {
+    showCookiePopUp: this.props.showCookiePopUp,
     cookieManagerOpen: false,
     languageSelectorOpen: false,
     headerUnderline: false,
@@ -74,10 +81,29 @@ export default class Navbar extends Component {
     return returnPath;
   };
 
+  closePopUpAndOpenManager = () => {
+    this.setState({
+      showCookiePopUp: false,
+      cookieManagerOpen: true,
+    });
+    this.props.handleConfirmation(false);
+  };
+
+  closeCookiePopUp = () => {
+    this.setState({
+      showCookiePopUp: false,
+    });
+    this.props.handleConfirmation(true);
+  };
+
   toggleCookieManager = () => {
     this.setState(prevState => ({
       cookieManagerOpen: !prevState.cookieManagerOpen,
     }));
+  };
+
+  handleToggleButton = (isOn, id) => {
+    this.props.handleCookieChanges(isOn, id);
   };
 
   toggleLanguageSelector = () => {
@@ -200,7 +226,10 @@ export default class Navbar extends Component {
                 </ul>
               </li>
               <li className={styles.cookie}>
-                <button onClick={this.toggleCookieManager}>
+                <button
+                  className={styles.cookieButton}
+                  onClick={this.toggleCookieManager}
+                >
                   <FontAwesomeIcon icon={['fas', 'adjust']} />
                 </button>
                 <div
@@ -209,6 +238,58 @@ export default class Navbar extends Component {
                   }`}
                 >
                   <div className={styles.indicator} />
+                  <div className={styles.scrollContainer}>
+                    <h4>Cookie settings</h4>
+                    <CookieToggle
+                      header="Necessary cookies"
+                      isOn
+                      disabled
+                      handleToggleButton={this.handleToggleButton}
+                    />
+                    <CookieToggle
+                      header="Analytics cookies"
+                      isOn={this.props.analyticsOn}
+                      handleToggleButton={this.handleToggleButton}
+                    />
+                    <CookieToggle
+                      header="Tracking cookies"
+                      isOn={this.props.trackingOn}
+                      handleToggleButton={this.handleToggleButton}
+                    />
+                    <button
+                      onClick={this.toggleCookieManager}
+                      className={`textButton ${styles.save}`}
+                    >
+                      Save settings
+                    </button>
+                  </div>
+                </div>
+                <div
+                  className={`${styles.cookiePopUp} ${
+                    this.state.showCookiePopUp ? styles.open : styles.hide
+                  }`}
+                >
+                  <div className={styles.indicator} />
+                  <h4>Cookie settings</h4>
+                  <p className="bodySmall">
+                    Uses cookies to personalize content and ads to make our site
+                    easier for you to use. We do also share that information
+                    with third parties for advertising and analytics.
+                  </p>
+                  <div className={styles.buttonWrapper}>
+                    <button
+                      onClick={this.closePopUpAndOpenManager}
+                      className={`textButton ${styles.manage}`}
+                    >
+                      Manage
+                    </button>
+                    <button
+                      onClick={this.closeCookiePopUp}
+                      className={`textButton ${styles.understand}`}
+                    >
+                      I understand
+                    </button>
+                  </div>
                 </div>
               </li>
             </ul>

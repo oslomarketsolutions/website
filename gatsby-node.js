@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: ["error", { "allow": ["_config",] }] */
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 

@@ -47,6 +47,9 @@ header.headerUnderline {
     .cookieManager {
       display: none;
     }
+    .cookiePopUp {
+      display: none;
+    }
   }
 }
 
@@ -143,7 +146,7 @@ header.headerUnderline {
     padding: 0;
     transition: all 200ms ease;
 
-    button {
+    .cookieButton {
       background-color: $antiFlashWhite;
       border: 0;
       border-radius: $M;
@@ -152,7 +155,7 @@ header.headerUnderline {
       cursor: pointer;
     }
 
-    button:hover {
+    .cookieButton:hover {
       svg {
         color: $vibrantBlue;
       }
@@ -191,11 +194,11 @@ header.headerUnderline {
     position: absolute;
     top: 48px;
     right: -20px;
-    width: 400px;
-    height: 1000px;
+    width: 360px;
     background-color: $darkBlue;
     border: 1px solid $lapisLazuli;
     border-radius: $S;
+    max-height: 950px;
 
     .indicator {
       position: absolute;
@@ -208,6 +211,85 @@ header.headerUnderline {
       border-left: 1px solid $lapisLazuli;
       border-top: 1px solid $lapisLazuli;
       border-radius: 2px;
+    }
+
+    h4 {
+      margin: $M;
+    }
+
+    .scrollContainer {
+      overflow-y: scroll;
+      max-height: 928px;
+      padding: $M;
+    }
+
+    .save {
+      display: block;
+      background-color: $white;
+      color: $vibrantBlue;
+      padding: 0;
+      border: none;
+      height: 50px;
+      width: 294px;
+      border-radius: 6px;
+      margin: $M auto;
+    }
+    .save:hover {
+      cursor: pointer;
+      background-color: $antiFlashWhite;
+    }
+  }
+
+  .cookiePopUp {
+    position: absolute;
+    top: 48px;
+    right: -20px;
+    width: 360px;
+    background-color: $darkBlue;
+    border: 1px solid $lapisLazuli;
+    border-radius: $S;
+    padding: $XL;
+
+    .indicator {
+      position: absolute;
+      transform: rotate(45deg);
+      top: -10px;
+      right: 26px;
+      width: 20px;
+      height: 20px;
+      background-color: $darkBlue;
+      border-left: 1px solid $lapisLazuli;
+      border-top: 1px solid $lapisLazuli;
+      border-radius: 2px;
+    }
+
+    h4,
+    p {
+      color: $white;
+    }
+    p {
+      padding: $M 0;
+    }
+    .buttonWrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: baseline;
+      justify-content: flex-end;
+      .manage {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: $white;
+      }
+      .understand {
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background-color: $white;
+        height: 40px;
+        margin-left: $XL;
+        padding: 0 $M;
+      }
     }
   }
 
@@ -280,13 +362,13 @@ header.navColorWhite .navbar {
   color: $white;
 
   li.cookie {
-    button {
+    .cookieButton {
       background-color: $cookieButtonDarkBackground;
       svg {
         color: $white;
       }
     }
-    button:hover {
+    .cookieButton:hover {
       svg {
         color: $vibrantBlue;
       }
@@ -447,7 +529,7 @@ header.navColorWhite .navbar {
 
     li.cookie {
       padding-left: 4px;
-      button {
+      .cookieButton {
         padding: 0;
         background-color: transparent;
       }
@@ -535,7 +617,7 @@ header.navColorWhite .navbar {
       }
     }
     li.cookie {
-      button {
+      .cookieButton {
         background-color: transparent;
       }
     }
