@@ -14,8 +14,10 @@ export const CareerPageTemplate = ({
 }) => (
   <main className={styles.careerPage}>
     <section className={styles.hero}>
-      <h1>{hero.title}</h1>
-      <p className="heroSubtitle">{hero.text}</p>
+      <div className={styles.textContainer}>
+        <h1>{hero.title}</h1>
+        <p className="heroSubtitle">{hero.text}</p>
+      </div>
       <ImageWrapper
         alt={hero.backgroundImageAlt}
         src={hero.backgroundImage}
@@ -24,13 +26,17 @@ export const CareerPageTemplate = ({
       />
     </section>
     <section className={styles.about}>
-      <p className="overline">{about.section}</p>
-      <h2>{about.header}</h2>
-      <p>{about.text}</p>
+      <div className={styles.textContainer}>
+        <p className="overline">{about.section}</p>
+        <h2>{about.header}</h2>
+        <p>{about.text}</p>
+      </div>
     </section>
     <section className={styles.perks}>
-      <p className="overline">{perks.section}</p>
-      <h2>{perks.header}</h2>
+      <div className={styles.textContainer}>
+        <p className="overline">{perks.section}</p>
+        <h2>{perks.header}</h2>
+      </div>
       <div className={styles.perkCardContainer}>
         {perks.perkCards &&
           perks.perkCards.map(perkCard => (
@@ -44,8 +50,10 @@ export const CareerPageTemplate = ({
       </div>
     </section>
     <section className={styles.positions}>
-      <h2>{positions.header}</h2>
-      <p className="subtitle">{positions.text}</p>
+      <div className={styles.textContainer}>
+        <h2>{positions.header}</h2>
+        <p className="subtitle">{positions.text}</p>
+      </div>
       <iframe
         title="Job Vacancies"
         src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
