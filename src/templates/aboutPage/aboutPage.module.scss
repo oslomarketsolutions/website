@@ -104,19 +104,21 @@
     }
 
     .employeeWrapper {
-      grid-column: 1 / span 10;
+      grid-column: $full;
       grid-row: 4;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
+      -ms-grid-column-align: center;
+      justify-self: center;
       align-content: center;
-      margin: $XL auto 0 auto;
-      width: 100%;
-      max-width: 1140px;
+      margin: $XL -18px 0 -18px;
+      max-width: 1174px;
 
       .quoteWrapper {
+        margin: 18px;
+        padding-right: $M;
         height: 300px;
-        width: 700px;
+        width: 736px;
         text-align: right;
         display: flex;
         flex-flow: column wrap;
@@ -198,7 +200,7 @@
       .employeeWrapper {
         grid-column: 1 / span 10;
         max-width: 800px;
-        justify-content: space-around;
+        justify-content: center;
       }
     }
   }
