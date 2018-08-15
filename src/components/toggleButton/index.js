@@ -21,6 +21,7 @@ export default class ToggleButton extends Component {
       }),
       () => {
         this.props.handleToggleButton(this.state.isOn, this.props.id);
+        console.log('Local state', this.state.isOn, 'props', this.props.isOn);
       },
     );
   };
@@ -42,7 +43,9 @@ export default class ToggleButton extends Component {
             disabled={this.props.disabled}
           />
         </label>
-        <span className="textButton">{this.state.isOn ? 'On' : 'Off'}</span>
+        <span className="textButton">
+          {this.state.isOn || this.props.isOn ? 'On' : 'Off'}
+        </span>
       </div>
     );
   }
