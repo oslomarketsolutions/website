@@ -6,8 +6,7 @@ hero:
   text: >-
     We are always looking for great people! We like people that are passionate
     about new technology and taking part in the creation of good, smart
-    solutions. You should also like Pina Coladas and getting caught in the rain.
-    Or not.
+    solutions. 
 
 
     Do you think you got what it takes? Send us an e-mail!
@@ -21,16 +20,9 @@ about:
     deliveries and continous product development and innovation.
 
 
-    We value .... Noe om mulighet til å påvirke selskapet, det man jobber med,
-    se resultater etc. etc.?
-
-
-    Noe om personlighet??? Blir fort søkt/kleint
-
-
-    We have rap fans, metal heads and techno listeners, hockeyplayers,
-    non-athletes, yogis, skaters and "Birken-riders". There's meat lovers,
-    vegans and lactose intolerants. - wanna add something to our list?
+    We value our open and including dynamic that gives everyone the opportunity
+    to affect their day to day tasks as well as strategic decisions for the
+    company.
 perks:
   header: What we offer
   perkCards:
@@ -45,11 +37,11 @@ perks:
       text: As an employee we pay your phone bill
     - icon: fal utensils
       perkTitle: 'Breakfast, Lunch & Coffee'
-      text: Serves both lunch and breakfast
-    - icon: text
+      text: Our cafeteria serves both lunch and breakfast
+    - icon: fal home
       perkTitle: Company cabins
-      text: With us everyone is insured
-    - icon: text
+      text: Cabins in Nesbyen and Trysil
+    - icon: fal home
       perkTitle: Apartments
       text: Located in Villefranche and Albir
     - icon: fal calendar-alt
@@ -60,14 +52,12 @@ perks:
       text: Paid subscription to Spotify or your favourite streaming service
     - icon: fal piggy-bank
       perkTitle: Pension
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: |-
+        5 % of salary from 1 kr to  7,1G.
+        8 % of salary from  7,1 to 12G
     - icon: fal chart-line
-      perkTitle: Stock options
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      perkTitle: Stock saving program
+      text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
     - icon: fal shuttle-van
       perkTitle: Shared car
       text: >-
@@ -78,18 +68,11 @@ perks:
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal dollar-sign
-      perkTitle: Bonus
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
     - icon: fal hand-holding-seedling
       perkTitle: Time to innovate
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: 'Dedicated time to learn, innovate and try new things every month.'
     - icon: fal laptop-code
-      perkTitle: Harware & software
+      perkTitle: Hardware & software
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
@@ -103,3 +86,4 @@ positions:
   header: Job vacancies
   text: Some text explaining something
 ---
+
