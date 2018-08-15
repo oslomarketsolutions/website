@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './bigButton.module.scss';
 
-const BigButton = ({ to, text }) => (
-  <a className={`buttonLarge ${styles.bigButton}`} href={to}>
+const BigButton = ({ to, text, onClick }) => (
+  <a onClick={onClick} className={`buttonLarge ${styles.bigButton}`} href={to}>
     {text}
   </a>
 );
@@ -11,6 +11,7 @@ const BigButton = ({ to, text }) => (
 BigButton.propTypes = {
   to: PropTypes.string,
   text: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default BigButton;

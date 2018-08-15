@@ -133,6 +133,7 @@ export default class TemplateWrapper extends Component {
   };
 
   componentDidUpdate = (prevProps, prevState) => {
+    console.log('Layout updated');
     if (prevState !== this.state) {
       if (this.state.setGoogleAnalyticsCookie) {
         this.tryInitializeGoogleAnalytics();
@@ -223,6 +224,7 @@ export default class TemplateWrapper extends Component {
   oldPathName = '';
 
   render() {
+    const { handleCookieChanges } = this;
     const { children, location, data } = this.props;
 
     const parsedPath = /^\/(\w\w)/.exec(location.pathname);
@@ -274,7 +276,7 @@ export default class TemplateWrapper extends Component {
             handleConfirmation={this.handleConfirmation}
             handleCookieChanges={this.handleCookieChanges}
           />
-          {children()}
+          {children({ ...this.props, handleCookieChanges })}
           <Footer language={language} data={data.footer} />
         </div>
       </React.Fragment>
