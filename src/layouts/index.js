@@ -133,7 +133,6 @@ export default class TemplateWrapper extends Component {
   };
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('Layout updated');
     if (prevState !== this.state) {
       if (this.state.setGoogleAnalyticsCookie) {
         this.tryInitializeGoogleAnalytics();
@@ -151,9 +150,7 @@ export default class TemplateWrapper extends Component {
     ) {
       if (window['ga-disable-UA-101364630-3']) {
         window['ga-disable-UA-101364630-3'] = false;
-        console.log('ga-disable is now false');
       }
-      console.log('Initializing GA');
       ReactGA.initialize('UA-101364630-3', {
         debug: true,
       });
@@ -166,7 +163,6 @@ export default class TemplateWrapper extends Component {
 
   tryDisableGoogleAnalytics = () => {
     if (this.state.googleAnalyticsIsActive) {
-      console.log('Disabling GA');
       window['ga-disable-UA-101364630-3'] = true;
       this.setState({
         googleAnalyticsIsActive: false,
@@ -233,14 +229,10 @@ export default class TemplateWrapper extends Component {
     if (typeof window !== 'undefined') {
       const newPathName = window.location.pathname;
       if (newPathName !== this.oldPathName) {
-        console.log('Different page');
         if (this.state.googleAnalyticsIsActive) {
-          console.log('Logged pageview');
           ReactGA.pageview(newPathName);
         }
         this.oldPathName = window.location.pathname;
-      } else {
-        console.log('Same page');
       }
     }
 

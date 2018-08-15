@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
-import {
-  findImageSizes,
-  getCookie,
-  setCookie,
-} from '../../utils/helperFunctions';
+import { findImageSizes, getCookie } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 export const CareerPageTemplate = ({
@@ -18,7 +14,6 @@ export const CareerPageTemplate = ({
   handleCookieChanges,
 }) => {
   const enableAnalytics = () => {
-    console.log('Will this update layout?');
     handleCookieChanges(true, 'Analytics');
   };
 
@@ -87,6 +82,7 @@ CareerPageTemplate.propTypes = {
   perks: PropTypes.shape({}),
   positions: PropTypes.shape({}),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
+  handleCookieChanges: PropTypes.func,
 };
 
 const CareerPage = ({ data, handleCookieChanges }) => {
