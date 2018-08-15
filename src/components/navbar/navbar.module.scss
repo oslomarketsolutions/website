@@ -225,7 +225,7 @@ header.headerUnderline {
     .save {
       display: block;
       background-color: $white;
-      color: $textColor;
+      color: $vibrantBlue;
       padding: 0;
       border: none;
       height: 50px;
@@ -283,6 +283,7 @@ header.headerUnderline {
         border: none;
         border-radius: 6px;
         background-color: $white;
+        color: $vibrantBlue;
         height: 40px;
         margin-left: $XL;
         padding: 0 $M;

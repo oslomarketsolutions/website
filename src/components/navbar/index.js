@@ -32,7 +32,6 @@ export default class Navbar extends Component {
   }
 
   state = {
-    showCookiePopUp: this.props.showCookiePopUp,
     cookieManagerOpen: false,
     languageSelectorOpen: false,
     headerUnderline: false,
@@ -84,21 +83,17 @@ export default class Navbar extends Component {
 
   closePopUpAndOpenManager = () => {
     this.setState({
-      showCookiePopUp: false,
       cookieManagerOpen: true,
     });
     this.props.handleConfirmation(false);
   };
 
   closeCookiePopUp = () => {
-    this.setState({
-      showCookiePopUp: false,
-    });
     this.props.handleConfirmation(true);
   };
 
   toggleCookieManager = () => {
-    if (this.state.showCookiePopUp === true) {
+    if (this.props.showCookiePopUp === true) {
       this.closePopUpAndOpenManager();
     } else {
       this.setState(prevState => ({
@@ -113,9 +108,8 @@ export default class Navbar extends Component {
   };
 
   toggleLanguageSelector = () => {
-    if (this.state.showCookiePopUp === true) {
+    if (this.props.showCookiePopUp === true) {
       this.setState({
-        showCookiePopUp: false,
         languageSelectorOpen: true,
       });
       this.props.handleConfirmation(false);
@@ -295,7 +289,7 @@ export default class Navbar extends Component {
                 </div>
                 <div
                   className={`${styles.cookiePopUp} ${
-                    this.state.showCookiePopUp ? styles.open : styles.hide
+                    this.props.showCookiePopUp ? styles.open : styles.hide
                   }`}
                 >
                   <div className={styles.indicator} />
