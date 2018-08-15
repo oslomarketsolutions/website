@@ -199,7 +199,7 @@ header.headerUnderline {
     background-color: $darkestBlue;
     box-shadow: $navbarShadow;
     border-radius: $S;
-    max-height: 677px;
+    max-height: calc(100vh - 104px);
 
     .indicator {
       position: absolute;
@@ -217,8 +217,8 @@ header.headerUnderline {
     }
 
     .scrollContainer {
-      overflow-y: scroll;
-      max-height: 677px;
+      overflow-y: auto;
+      max-height: calc(100vh - 104px);
       padding: $M;
     }
 
@@ -241,6 +241,7 @@ header.headerUnderline {
 
   .cookiePopUp {
     position: absolute;
+    display: none;
     top: 48px;
     right: -20px;
     width: 360px;
