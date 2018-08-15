@@ -143,6 +143,8 @@ export default class TemplateWrapper extends Component {
     const parsedPath = /^\/(\w\w)/.exec(location.pathname);
     const language = parsedPath && parsedPath[1];
 
+    console.log(this.state.showCookiePopUp);
+
     return (
       <React.Fragment>
         <Helmet title="Oslo Market Solutions">
