@@ -1,7 +1,7 @@
 ---
 templateKey: careerPage
 hero:
-  backgroundImage: /img/working.png
+  backgroundImage: /img/standup.png
   backgroundImageAlt: placeholder alt for image1
   text: >-
     We are always looking for great people! We like people that are passionate

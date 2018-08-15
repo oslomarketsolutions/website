@@ -128,7 +128,7 @@ export const careerPageQuery = graphql`
           relativePath
           childImageSharp {
             sizes(maxWidth: 1440) {
-              ...GatsbyImageSharpSizes_tracedSVG
+              ...GatsbyImageSharpSizes
             }
           }
         }
