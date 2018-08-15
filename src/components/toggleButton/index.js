@@ -10,26 +10,15 @@ export default class ToggleButton extends Component {
     handleToggleButton: PropTypes.func,
   };
 
-  state = {
-    isOn: this.props.isOn,
-  };
-
   toggle = () => {
-    this.setState(
-      prevState => ({
-        isOn: !prevState.isOn,
-      }),
-      () => {
-        this.props.handleToggleButton(this.state.isOn, this.props.id);
-      },
-    );
+    this.props.handleToggleButton(!this.props.isOn, this.props.id);
   };
 
   render() {
     return (
       <div
         className={`${styles.toggleButton} ${
-          this.state.isOn || this.props.isOn ? styles.checked : ''
+          this.props.isOn ? styles.checked : ''
         } ${this.props.disabled ? styles.disabled : ''}`}
       >
         <label className={styles.tglBtn} htmlFor={this.props.id}>
@@ -38,14 +27,11 @@ export default class ToggleButton extends Component {
             id={this.props.id}
             type="checkbox"
             onChange={this.toggle}
-            checked={this.state.isOn || this.props.isOn}
-            defaultChecked={this.props.isOn}
+            checked={this.props.isOn}
             disabled={this.props.disabled}
           />
         </label>
-        <span className="textButton">
-          {this.state.isOn || this.props.isOn ? 'On' : 'Off'}
-        </span>
+        <span className="textButton">{this.props.isOn ? 'On' : 'Off'}</span>
       </div>
     );
   }
