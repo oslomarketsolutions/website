@@ -37,12 +37,15 @@ export default class ToggleButton extends Component {
             className={`${styles.tgl} ${styles.tglLight}`}
             id={this.props.id}
             type="checkbox"
-            onClick={this.toggle}
+            onChange={this.toggle}
             checked={this.state.isOn || this.props.isOn}
+            defaultChecked={this.props.isOn}
             disabled={this.props.disabled}
           />
         </label>
-        <span className="textButton">{this.state.isOn ? 'On' : 'Off'}</span>
+        <span className="textButton">
+          {this.state.isOn || this.props.isOn ? 'On' : 'Off'}
+        </span>
       </div>
     );
   }
