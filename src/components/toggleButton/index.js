@@ -21,7 +21,6 @@ export default class ToggleButton extends Component {
       }),
       () => {
         this.props.handleToggleButton(this.state.isOn, this.props.id);
-        console.log('Local state', this.state.isOn, 'props', this.props.isOn);
       },
     );
   };
@@ -38,8 +37,9 @@ export default class ToggleButton extends Component {
             className={`${styles.tgl} ${styles.tglLight}`}
             id={this.props.id}
             type="checkbox"
-            onClick={this.toggle}
+            onChange={this.toggle}
             checked={this.state.isOn || this.props.isOn}
+            defaultChecked={this.props.isOn}
             disabled={this.props.disabled}
           />
         </label>

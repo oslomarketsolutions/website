@@ -225,7 +225,7 @@ header.headerUnderline {
     .save {
       display: block;
       background-color: $white;
-      color: $vibrantBlue;
+      color: $textColor;
       padding: 0;
       border: none;
       height: 50px;
@@ -241,7 +241,6 @@ header.headerUnderline {
 
   .cookiePopUp {
     position: absolute;
-    display: none;
     top: 48px;
     right: -20px;
     width: 360px;
