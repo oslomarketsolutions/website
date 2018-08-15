@@ -72,33 +72,6 @@ export const faLibrary = library.add(
 );
 
 const fontAwesomeCSS = dom.css();
-const tryInitializeGA = () => {
-  // Check if allowed to use Google analytics
-  if (getCookie('setGoogleAnalyticsCookie')) {
-    console.log('Initializing GA');
-    ReactGA.initialize('UA-101364630-3', {
-      debug: true,
-    });
-    ReactGA.ga('set', 'anonymizeIp', true);
-  }
-};
-
-let oldPathName = '';
-if (typeof window !== 'undefined') {
-  const newPathName = window.location.pathname;
-  if (newPathName !== oldPathName) {
-    if (oldPathName === '') {
-      console.log('First website load!');
-      tryInitializeGA();
-    } else {
-      console.log('Different page');
-      ReactGA.pageview(newPathName);
-    }
-    oldPathName = window.location.pathname;
-  } else {
-    console.log('Same page');
-  }
-}
 
 export default class TemplateWrapper extends Component {
   static propTypes = {
@@ -115,6 +88,53 @@ export default class TemplateWrapper extends Component {
     showCookiePopUp: getCookie('haveSeenPopUp') === '',
     setHubspotCookie: getCookie('setHubspotCookie') !== '',
     setGoogleAnalyticsCookie: getCookie('setGoogleAnalyticsCookie') !== '',
+
+    googleAnalyticsIsActive: false,
+  };
+
+  componentDidMount = () => {
+    this.tryInitializeGoogleAnalytics();
+  };
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevState !== this.state) {
+      if (this.state.setGoogleAnalyticsCookie) {
+        this.tryInitializeGoogleAnalytics();
+      } else {
+        this.tryDisableGoogleAnalytics();
+      }
+    }
+  };
+
+  tryInitializeGoogleAnalytics = () => {
+    // Check if allowed to use Google analytics and if it's already active
+    if (
+      this.state.setGoogleAnalyticsCookie &&
+      !this.state.googleAnalyticsIsActive
+    ) {
+      if (window['ga-disable-UA-101364630-3']) {
+        window['ga-disable-UA-101364630-3'] = false;
+        console.log('ga-disable is now false');
+      }
+      console.log('Initializing GA');
+      ReactGA.initialize('UA-101364630-3', {
+        debug: true,
+      });
+      ReactGA.ga('set', 'anonymizeIp', true);
+      this.setState({
+        googleAnalyticsIsActive: true,
+      });
+    }
+  };
+
+  tryDisableGoogleAnalytics = () => {
+    if (this.state.googleAnalyticsIsActive) {
+      console.log('Disabling GA');
+      window['ga-disable-UA-101364630-3'] = true;
+      this.setState({
+        googleAnalyticsIsActive: false,
+      });
+    }
   };
 
   handleConfirmation = confirmedAll => {
@@ -164,11 +184,27 @@ export default class TemplateWrapper extends Component {
     this.forceUpdate();
   };
 
+  oldPathName = '';
+
   render() {
     const { children, location, data } = this.props;
 
     const parsedPath = /^\/(\w\w)/.exec(location.pathname);
     const language = parsedPath && parsedPath[1];
+
+    if (typeof window !== 'undefined') {
+      const newPathName = window.location.pathname;
+      if (newPathName !== this.oldPathName) {
+        console.log('Different page');
+        if (this.state.googleAnalyticsIsActive) {
+          console.log('Logged pageview');
+          ReactGA.pageview(newPathName);
+        }
+        this.oldPathName = window.location.pathname;
+      } else {
+        console.log('Same page');
+      }
+    }
 
     return (
       <React.Fragment>
