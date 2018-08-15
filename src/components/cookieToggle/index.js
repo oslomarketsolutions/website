@@ -12,6 +12,8 @@ export default class CookieToggle extends Component {
     isOn: PropTypes.bool,
     disabled: PropTypes.bool,
     handleToggleButton: PropTypes.func,
+    language: PropTypes.string,
+    id: PropTypes.string,
   };
 
   state = {
@@ -29,7 +31,7 @@ export default class CookieToggle extends Component {
   };
 
   render() {
-    const { header, isOn, disabled, text, cookies } = this.props;
+    const { header, isOn, disabled, text, cookies, id } = this.props;
 
     return (
       <div className={styles.cookieToggle}>
@@ -44,10 +46,11 @@ export default class CookieToggle extends Component {
             <h6>{header}</h6>
           </button>
           <ToggleButton
-            id={header}
+            id={id}
             isOn={isOn}
             disabled={disabled}
             handleToggleButton={this.handleToggleButton}
+            language={this.props.language}
           />
         </div>
         <p className="bodySmall">{text}</p>

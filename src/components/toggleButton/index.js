@@ -8,6 +8,7 @@ export default class ToggleButton extends Component {
     isOn: PropTypes.bool,
     disabled: PropTypes.bool,
     handleToggleButton: PropTypes.func,
+    language: PropTypes.string,
   };
 
   toggle = () => {
@@ -15,6 +16,11 @@ export default class ToggleButton extends Component {
   };
 
   render() {
+    let OnOrOffText = this.props.isOn ? 'On' : 'Off';
+    if (this.props.language === 'no') {
+      OnOrOffText = this.props.isOn ? 'På' : 'Av';
+    }
+
     return (
       <div
         className={`${styles.toggleButton} ${
@@ -31,7 +37,7 @@ export default class ToggleButton extends Component {
             disabled={this.props.disabled}
           />
         </label>
-        <span className="textButton">{this.props.isOn ? 'On' : 'Off'}</span>
+        <span className="textButton">{OnOrOffText}</span>
       </div>
     );
   }
