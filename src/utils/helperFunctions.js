@@ -26,7 +26,7 @@ export const findImageResolutions = (image, imageResolutions) => {
 };
 
 export const setCookie = (cookieName, cookieValue, expirationDays) => {
-  if (document != null) {
+  if (typeof window.document !== 'undefined') {
     const d = new Date();
     d.setTime(d.getTime() + expirationDays * 24 * 60 * 60 * 1000);
     const expires = `expires=${d.toUTCString()}`;
@@ -35,7 +35,7 @@ export const setCookie = (cookieName, cookieValue, expirationDays) => {
 };
 
 export const getCookie = cookieName => {
-  if (document != null) {
+  if (typeof window.document !== 'undefined') {
     const name = `${cookieName}=`;
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
