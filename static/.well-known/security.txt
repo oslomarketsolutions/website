@@ -1,0 +1,11 @@
+# Our security address
+Contact: security@oms.no
+
+# Out PGP key
+Encryption: https://oms.no/oms-pgp-key.txt
+
+# Our security policy
+Policy: https://oms.no/en/responsibledisclosure/
+
+# Career
+Hiring: https://oms.no/en/career/

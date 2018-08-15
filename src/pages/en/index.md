@@ -1,7 +1,7 @@
 ---
 hero:
   subtitle: 'Web services for stock and fund trading, market data and more'
-  title: Trading and portfolio platforms for the modern web
+  title: Financial platforms for the modern web
 transitionalElement:
   customerLogos:
     - logo: /img/hb_logo.png
@@ -41,12 +41,12 @@ transitionalElement:
     usersNumber: '0,5 mill.'
     usersText: Users served daily
 investorPortal:
-  header: Investor portals
+  header: Investor portal
   investorPortalImages:
     - image: investorportal.png
-      name: Investorportal 1
-    - image: investorportal.png
       name: Investorportal 2
+    - image: investorportal.png
+      name: Investorportal 1
     - image: investorportal.png
       name: Investorportal 3
   text: >-
@@ -123,4 +123,3 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
-

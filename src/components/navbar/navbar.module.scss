@@ -43,6 +43,13 @@ header.headerUnderline {
         transition: all 200ms ease;
       }
     }
+
+    .cookieManager {
+      display: none;
+    }
+    .cookiePopUp {
+      display: none;
+    }
   }
 }
 
@@ -139,7 +146,7 @@ header.headerUnderline {
     padding: 0;
     transition: all 200ms ease;
 
-    button {
+    .cookieButton {
       background-color: $antiFlashWhite;
       border: 0;
       border-radius: $M;
@@ -148,7 +155,7 @@ header.headerUnderline {
       cursor: pointer;
     }
 
-    button:hover {
+    .cookieButton:hover {
       svg {
         color: $vibrantBlue;
       }
@@ -181,6 +188,114 @@ header.headerUnderline {
         color: $vibrantBlue;
       }
     }
+  }
+
+  .cookieManager {
+    position: absolute;
+    top: 48px;
+    right: -20px;
+    width: 360px;
+    color: $white;
+    background-color: $darkestBlue;
+    box-shadow: $navbarShadow;
+    border-radius: $S;
+    max-height: 677px;
+
+    .indicator {
+      position: absolute;
+      transform: rotate(45deg);
+      top: -9px;
+      right: 26px;
+      width: 20px;
+      height: 20px;
+      background-color: $darkestBlue;
+      border-radius: 2px;
+    }
+
+    h4 {
+      margin: $M;
+    }
+
+    .scrollContainer {
+      overflow-y: scroll;
+      max-height: 677px;
+      padding: $M;
+    }
+
+    .save {
+      display: block;
+      background-color: $white;
+      color: $vibrantBlue;
+      padding: 0;
+      border: none;
+      height: 50px;
+      width: 294px;
+      border-radius: 6px;
+      margin: $M auto;
+    }
+    .save:hover {
+      cursor: pointer;
+      background-color: $antiFlashWhite;
+    }
+  }
+
+  .cookiePopUp {
+    position: absolute;
+    top: 48px;
+    right: -20px;
+    width: 360px;
+    background-color: $darkestBlue;
+    box-shadow: $navbarShadow;
+    border-radius: $S;
+    padding: $XL;
+
+    .indicator {
+      position: absolute;
+      transform: rotate(45deg);
+      top: -9px;
+      right: 26px;
+      width: 20px;
+      height: 20px;
+      background-color: $darkestBlue;
+      border-radius: 2px;
+    }
+
+    h4,
+    p {
+      color: $white;
+    }
+    p {
+      padding: $M 0;
+    }
+    .buttonWrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: baseline;
+      justify-content: flex-end;
+      .manage {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: $white;
+      }
+      .understand {
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background-color: $white;
+        height: 40px;
+        margin-left: $XL;
+        padding: 0 $M;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .open {
+    display: block;
   }
 
   a,
@@ -244,13 +359,13 @@ header.navColorWhite .navbar {
   color: $white;
 
   li.cookie {
-    button {
+    .cookieButton {
       background-color: $cookieButtonDarkBackground;
       svg {
         color: $white;
       }
     }
-    button:hover {
+    .cookieButton:hover {
       svg {
         color: $vibrantBlue;
       }
@@ -283,6 +398,7 @@ header.navColorWhite .navbar {
 
 @media (max-width: 1680px) {
   .navbar {
+    position: relative;
     li.cookie {
       position: initial;
       padding: 0 0 0 $XS;
@@ -291,6 +407,14 @@ header.navColorWhite .navbar {
     li.languageSelectorDesktop {
       position: initial;
       padding: 0 $XS 0 64px;
+    }
+    .cookieManager,
+    .cookiePopUp {
+      top: 85px;
+      right: -12px;
+      .indicator {
+        right: 18px;
+      }
     }
   }
   header.headerUnderline {
@@ -327,6 +451,10 @@ header.navColorWhite .navbar {
       span {
         top: 20px;
       }
+    }
+    .cookieManager,
+    .cookiePopUp {
+      top: 74px;
     }
   }
 
@@ -367,6 +495,17 @@ header.navColorWhite .navbar {
 }
 
 @media (max-width: 767px) {
+  .navbar {
+    .cookieManager,
+    .cookiePopUp {
+      top: 74px;
+      right: 0;
+      border-top-right-radius: 7px;
+      .indicator {
+        right: 6px;
+      }
+    }
+  }
   header.headerUnderline {
     .navbar {
       li.cookie {
@@ -411,7 +550,7 @@ header.navColorWhite .navbar {
 
     li.cookie {
       padding-left: 4px;
-      button {
+      .cookieButton {
         padding: 0;
         background-color: transparent;
       }
@@ -424,16 +563,35 @@ header.navColorWhite .navbar {
       height: 32px;
       padding: 0 $XS 0 $M;
 
-      ul {
+      .ulWrapper {
         position: absolute;
-        top: 28px;
+        top: 41px;
         border-radius: $XXS;
         border: 1px solid $antiFlashWhite;
-        right: 5px;
+        right: -3px;
         background-color: $white;
         color: $textColor;
         width: 120px;
         height: auto;
+
+        .indicator {
+          position: absolute;
+          transform: rotate(45deg);
+          top: -8px;
+          right: 12px;
+          width: 16px;
+          height: 16px;
+          background-color: $white;
+          border-left: 1px solid $antiFlashWhite;
+          border-top: 1px solid $antiFlashWhite;
+          border-radius: 2px;
+        }
+      }
+
+      ul {
+        display: block;
+        width: 100%;
+        height: 100%;
       }
 
       li {
@@ -486,6 +644,16 @@ header.navColorWhite .navbar {
       }
     }
 
+    .cookieManager,
+    .cookiePopUp {
+      top: 49px;
+      right: -7px;
+      max-height: calc(100vh - 56px); // 523px;
+      .scrollContainer {
+        max-height: calc(100vh - 57px);
+      }
+    }
+
     .languageSelectorDesktop {
       display: none;
     }
@@ -499,7 +667,7 @@ header.navColorWhite .navbar {
       }
     }
     li.cookie {
-      button {
+      .cookieButton {
         background-color: transparent;
       }
     }

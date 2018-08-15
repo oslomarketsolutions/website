@@ -1,0 +1,139 @@
+@import '../../layouts/variables';
+
+/* .toggleButton {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .tgl {
+    display: none;
+  }
+  .tglBtn {
+    outline: 0;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    background: $lapisLazuli;
+    border-radius: 24px;
+    padding: 2px;
+    transition: all 0.4s ease;
+    &:after,
+    &:before {
+      position: relative;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+    }
+
+    &:after {
+      left: 1px;
+      border-radius: 50%;
+      background: #fff;
+      width: 20px;
+      transition: all 0.2s ease;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-left: $M;
+    width: 25px;
+    text-align: right;
+  }
+}
+
+.toggleButton.checked {
+  .tglBtn {
+    background: $primaryGreen;
+  }
+  .tglBtn:after {
+    left: 53%;
+  }
+}
+
+.toggleButton.disabled {
+  .tglBtn {
+    opacity: 0.5;
+  }
+} */
+
+.toggleButton {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .tgl {
+    display: none;
+  }
+  .tglBtn {
+    outline: 0;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid $white;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 24px;
+    padding: 2px;
+    transition: background-color 0.4s ease;
+    &:after,
+    &:before {
+      position: relative;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+    }
+
+    &:after {
+      left: 0;
+      border-radius: 50%;
+      background: $white;
+      width: 18px;
+      height: 18px;
+      transition: all 0.2s ease;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-left: $M;
+    width: 25px;
+    text-align: right;
+  }
+}
+
+.toggleButton.checked {
+  .tglBtn {
+    background: rgba(255, 255, 255, 1);
+    padding: 1px;
+    transition: background-color 0.4s ease;
+  }
+  .tglBtn:after {
+    left: 54%;
+    background: $primaryGreen;
+    width: 20px;
+    height: 20px;
+    transition: all 0.2s ease;
+  }
+}
+
+.toggleButton.disabled {
+  .tglBtn:after {
+    opacity: 0.4;
+  }
+}
