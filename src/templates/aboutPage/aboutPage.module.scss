@@ -139,27 +139,6 @@
 
 @media (max-width: 1172px) {
   .aboutPage {
-    .hero {
-      color: $grey;
-      grid-template-rows: 572px max-content max-content max-content;
-
-      h1 {
-        margin-top: $M;
-      }
-
-      h1 + p {
-        padding-bottom: $XXL;
-      }
-
-      .backgroundImage {
-        margin-top: 72px;
-        height: 500px;
-
-        &:before {
-          display: none;
-        }
-      }
-    }
     .aboutEmployees {
       & > p:first-of-type {
         grid-column: 3;
@@ -189,6 +168,28 @@
 
 @media (max-width: 1024px) {
   .aboutPage {
+    .hero {
+      color: $textColor;
+      grid-template-rows: 572px max-content max-content max-content;
+
+      h1 {
+        margin-top: $XXL;
+      }
+
+      h1 + p {
+        padding-top: $M;
+        padding-bottom: $XXL;
+      }
+
+      .backgroundImage {
+        margin-top: 72px;
+        height: 500px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
     .aboutEmployees {
       .employeeWrapper {
         grid-column: 1 / span 10;
