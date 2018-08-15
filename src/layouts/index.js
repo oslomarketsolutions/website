@@ -49,6 +49,7 @@ import {
   faPiggyBank,
   faChartLine,
   faShuttleVan,
+  faCalendarAlt,
   faWatchFitness,
 } from '@fortawesome/pro-light-svg-icons';
 
@@ -80,6 +81,7 @@ export const faLibrary = library.add(
   faPiggyBank,
   faChartLine,
   faShuttleVan,
+  faCalendarAlt,
   faWatchFitness,
   faCopyright,
   faArrowUp,

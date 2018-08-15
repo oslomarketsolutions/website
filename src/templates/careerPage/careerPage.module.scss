@@ -33,7 +33,7 @@
       z-index: -1;
       height: 750px;
       width: 100%;
-      grid-column: 1 / span 10;
+      grid-column: $full;
       grid-row: 1 / span 5;
 
       &:before {

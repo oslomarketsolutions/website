@@ -52,7 +52,7 @@ perks:
     - icon: text
       perkTitle: Apartments
       text: Located in Villefranche and Albir
-    - icon: text
+    - icon: fal calendar-alt
       perkTitle: Social events
       text: Annual social events with the entire group
     - icon: fab spotify
@@ -103,4 +103,3 @@ positions:
   header: Job vacancies
   text: Some text explaining something
 ---
-

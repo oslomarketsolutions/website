@@ -5,15 +5,14 @@
 
   .hero {
     position: relative;
-    color: $white;
-    grid-column: 1 / span 10;
+    color: $antiFlashWhite;
+    grid-column: $full;
     grid-row: 1;
     display: grid;
+    grid-column-gap: $gridColumnGap;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows:
-      220px max-content max-content max-content
-      120px;
-    grid-column-gap: 16px;
+    grid-template-rows: 250px max-content max-content max-content;
+    min-height: 750px;
 
     h1 {
       grid-column: 3 / span 6;
@@ -21,17 +20,17 @@
     }
 
     h1 + p {
-      padding: $XL 0;
+      padding: $XXL 0;
       grid-column: 3 / span 6;
       grid-row: 3;
     }
 
     .backgroundImage {
-      margin-top: 100px;
       position: absolute;
       z-index: -1;
       height: 750px;
-      grid-column: 1 / span 10;
+      width: 100%;
+      grid-column: $full;
       grid-row: 1 / span 5;
 
       &:before {
