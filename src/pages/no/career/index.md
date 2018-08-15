@@ -1,65 +1,106 @@
 ---
 templateKey: careerPage
-path: /career
 hero:
-  title: Want to become one of us?
-  text:
+  backgroundImage: /img/working.png
+  backgroundImageAlt: placeholder alt for image1
+  text: >-
     We are always looking for great people! We like people that are passionate
-    about new technology and taking part in the creation of good, smart solutions.
-    You should also like Pina Coladas and getting caught in the rain. Or not.
+    about new technology and taking part in the creation of good, smart
+    solutions. You should also like Pina Coladas and getting caught in the rain.
+    Or not.
 
 
     Do you think you got what it takes? Send us an e-mail!
-  backgroundImage: /img/working.png
-  backgroundImageAlt: placeholder alt for image1
+  title: Want to become one of us?
 about:
-  section: about
   header: Why OMS?
-  text:
-    OMS has a casual, but professional, working environment. We focus on personal
-    and professional development, quality in each part of our deliveries and
-    continous product development and innovation.
+  section: about
+  text: >-
+    OMS has a casual, but professional, working environment. We focus on
+    personal and professional development, quality in each part of our
+    deliveries and continous product development and innovation.
 
 
-    We value .... Noe om mulighet til å påvirke selskapet, det man jobber med, se
-    resultater etc. etc.?
+    We value .... Noe om mulighet til å påvirke selskapet, det man jobber med,
+    se resultater etc. etc.?
 
 
     Noe om personlighet??? Blir fort søkt/kleint
 
 
     We have rap fans, metal heads and techno listeners, hockeyplayers,
-    non-athletes, yogis, skaters and "Birken-riders". There's meat lovers, vegans
-    and lactose intolerants. - wanna add something to our list?
+    non-athletes, yogis, skaters and "Birken-riders". There's meat lovers,
+    vegans and lactose intolerants. - wanna add something to our list?
 perks:
-  section: Perks
-  header: 'As an employee we can offer:'
+  header: What we offer
   perkCards:
-    - perkTitle: 'Employee insurance'
-      text: 'With us everyone is insured'
-      icon: text
-    - perkTitle: 'Flexible work hours'
-      text: 'Work when it suits you'
-      icon: text
-    - perkTitle: 'Paid phone'
-      text: 'As an employee we pay your phone bill'
-      icon: text
-    - perkTitle: 'Cafeteria'
-      text: 'Serves both lunch and breakfast'
-      icon: text
-    - perkTitle: 'Company cabins'
-      text: 'With us everyone is insured'
-      icon: text
-    - perkTitle: 'Apartments'
-      text: 'Located in Villefranche and Albir'
-      icon: text
-    - perkTitle: 'Social events'
-      text: 'Annual social events with the entire group'
-      icon: text
-    - perkTitle: Spotify
-      text: 'Paid subscription to Spotify or your favourite streaming service'
-      icon: text
+    - icon: fal user-clock
+      perkTitle: Flexible work hours
+      text: Work when it suits you
+    - icon: fal briefcase-medical
+      perkTitle: Insurance
+      text: With us everyone is insured
+    - icon: fal mobile
+      perkTitle: Broadband & Mobile
+      text: As an employee we pay your phone bill
+    - icon: fal utensils
+      perkTitle: 'Breakfast, Lunch & Coffee'
+      text: Serves both lunch and breakfast
+    - icon: text
+      perkTitle: Company cabins
+      text: With us everyone is insured
+    - icon: text
+      perkTitle: Apartments
+      text: Located in Villefranche and Albir
+    - icon: text
+      perkTitle: Social events
+      text: Annual social events with the entire group
+    - icon: fab spotify
+      perkTitle: Spotify
+      text: Paid subscription to Spotify or your favourite streaming service
+    - icon: fal piggy-bank
+      perkTitle: Pension
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal chart-line
+      perkTitle: Stock options
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal shuttle-van
+      perkTitle: Shared car
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal hands
+      perkTitle: Massage
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal dollar-sign
+      perkTitle: Bonus
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal hand-holding-seedling
+      perkTitle: Time to innovate
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal laptop-code
+      perkTitle: Harware & software
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+    - icon: fal home
+      perkTitle: Work remotely
+      text: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+  section: Perks
 positions:
   header: Job vacancies
   text: Some text explaining something
 ---
+
