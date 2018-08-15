@@ -4,7 +4,7 @@
   background-color: $white;
   border-radius: $S;
   padding: $L;
-  width: 357px;
+  width: 356px;
   height: 221px;
   display: flex;
   flex-flow: row wrap;
@@ -12,6 +12,7 @@
   transition: 0.3s;
   margin-bottom: $L;
   align-items: flex-start;
+  margin: 18px;
 
   &:hover {
     transform: scale(1.08);
@@ -30,5 +31,31 @@
     h4 {
       margin-left: $S;
     }
+  }
+}
+
+@media (max-width: 1172px) {
+  .perkCard {
+    width: 325px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .perkCard {
+    width: 243px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .perkCard {
+    margin: 18px $XS;
+  }
+}
+
+@media (max-width: 712px) {
+  .perkCard {
+    width: 356px;
+    height: 221px;
   }
 }

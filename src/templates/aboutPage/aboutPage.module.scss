@@ -56,12 +56,14 @@
     grid-template-rows: 50px max-content max-content max-content 100px;
     grid-column-gap: 16px;
 
+    // overline
     & > p:first-of-type {
-      width: 40px;
       grid-column: 3;
       grid-row: 2;
-      border-bottom: solid $vibrantBlue;
-      padding: 10px 0;
+      width: 156px;
+      padding-bottom: $M;
+      margin-bottom: $XS;
+      border-bottom: 2px solid $vibrantBlue;
     }
 
     h2 {
@@ -84,12 +86,14 @@
     grid-template-rows: 100px max-content max-content max-content 100px;
     grid-column-gap: 16px;
 
+    // overline
     & > p:first-of-type {
-      width: 40px;
       grid-column: 2;
       grid-row: 2;
-      border-bottom: solid $vibrantBlue;
-      padding: 10px 0;
+      width: 156px;
+      padding-bottom: $M;
+      margin-bottom: $XS;
+      border-bottom: 2px solid $vibrantBlue;
     }
 
     h2 {

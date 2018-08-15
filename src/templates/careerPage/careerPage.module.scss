@@ -64,10 +64,12 @@
       grid-column: 2 / span 6;
       grid-row: 1;
 
+      // overline
       p:first-of-type {
-        width: 50px;
-        border-bottom: solid $vibrantBlue;
+        width: 156px;
         padding-bottom: $M;
+        margin-bottom: $XS;
+        border-bottom: 2px solid $vibrantBlue;
       }
 
       h2 {
@@ -94,10 +96,13 @@
       grid-column: 2 / span 6;
       grid-row: 1;
       margin-top: $XXL;
+
+      // overline
       p:first-of-type {
-        width: 50px;
-        border-bottom: solid $vibrantBlue;
-        padding: $M 0;
+        width: 156px;
+        padding-bottom: $M;
+        margin-bottom: $XS;
+        border-bottom: 2px solid $vibrantBlue;
       }
 
       h2 {
@@ -108,12 +113,13 @@
     .perkCardContainer {
       grid-row: 2;
       grid-column: $full;
+      -ms-grid-column-align: center;
+      justify-self: center;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
       align-content: center;
-      max-width: 1140px;
-      margin: $XXL auto 0 auto;
+      max-width: 1176px;
+      margin: $XL -18px 0 -18px;
     }
   }
 
@@ -163,8 +169,8 @@
 
     .perks {
       .perkCardContainer {
-        max-width: 800px;
-        justify-content: space-around;
+        max-width: 73%; // ca width of 8 columns
+        justify-content: center;
       }
     }
 
@@ -211,6 +217,11 @@
     .perks {
       .textContainer {
         grid-column: 2 / span 8;
+      }
+
+      .perkCardContainer {
+        grid-column: 1 / span 10;
+        max-width: 100%;
       }
     }
 
