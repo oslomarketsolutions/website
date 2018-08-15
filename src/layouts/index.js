@@ -85,7 +85,7 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    showCookiePopUp: getCookie('haveSeenPopUp') === '',
+    hideCookiePopUp: getCookie('haveSeenPopUp') !== '',
     setHubspotCookie: getCookie('setHubspotCookie') !== '',
     setGoogleAnalyticsCookie: getCookie('setGoogleAnalyticsCookie') !== '',
   };
@@ -101,7 +101,7 @@ export default class TemplateWrapper extends Component {
     }
     setCookie('haveSeenPopUp', 'true', 365);
     this.setState({
-      showCookiePopUp: false,
+      hideCookiePopUp: true,
     });
   };
 
@@ -143,8 +143,6 @@ export default class TemplateWrapper extends Component {
     const parsedPath = /^\/(\w\w)/.exec(location.pathname);
     const language = parsedPath && parsedPath[1];
 
-    console.log(this.state.showCookiePopUp);
-
     return (
       <React.Fragment>
         <Helmet title="Oslo Market Solutions">
@@ -171,7 +169,7 @@ export default class TemplateWrapper extends Component {
             location={location}
             data={data.navbar}
             cookieInfo={data.cookieInfo}
-            showCookiePopUp={this.state.showCookiePopUp}
+            hideCookiePopUp={this.state.hideCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
             handleConfirmation={this.handleConfirmation}
