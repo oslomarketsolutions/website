@@ -152,6 +152,21 @@
       border: none;
       box-shadow: $newBoxShadow;
     }
+
+    .iframeAlt {
+      margin-top: $M;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+
+      p {
+        padding-bottom: $S;
+      }
+
+      button {
+        color: $vibrantBlue;
+      }
+    }
   }
 }
 
