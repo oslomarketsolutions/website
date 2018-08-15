@@ -411,7 +411,8 @@ header.navColorWhite .navbar {
       position: initial;
       padding: 0 $XS 0 64px;
     }
-    .cookieManager {
+    .cookieManager,
+    .cookiePopUp {
       top: 85px;
       right: -12px;
       .indicator {
@@ -454,7 +455,8 @@ header.navColorWhite .navbar {
         top: 20px;
       }
     }
-    .cookieManager {
+    .cookieManager,
+    .cookiePopUp {
       top: 74px;
     }
   }
@@ -497,7 +499,8 @@ header.navColorWhite .navbar {
 
 @media (max-width: 767px) {
   .navbar {
-    .cookieManager {
+    .cookieManager,
+    .cookiePopUp {
       top: 74px;
       right: 0;
       border-top-right-radius: 7px;
@@ -644,7 +647,8 @@ header.navColorWhite .navbar {
       }
     }
 
-    .cookieManager {
+    .cookieManager,
+    .cookiePopUp {
       top: 49px;
       right: -7px;
       max-height: 523px;

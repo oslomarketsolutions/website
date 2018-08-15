@@ -98,10 +98,14 @@ export default class Navbar extends Component {
   };
 
   toggleCookieManager = () => {
-    this.setState(prevState => ({
-      cookieManagerOpen: !prevState.cookieManagerOpen,
-      languageSelectorOpen: false,
-    }));
+    if (this.state.showCookiePopUp === true) {
+      this.closePopUpAndOpenManager();
+    } else {
+      this.setState(prevState => ({
+        cookieManagerOpen: !prevState.cookieManagerOpen,
+        languageSelectorOpen: false,
+      }));
+    }
   };
 
   handleToggleButton = (isOn, id) => {
@@ -109,10 +113,18 @@ export default class Navbar extends Component {
   };
 
   toggleLanguageSelector = () => {
-    this.setState(prevState => ({
-      languageSelectorOpen: !prevState.languageSelectorOpen,
-      cookieManagerOpen: false,
-    }));
+    if (this.state.showCookiePopUp === true) {
+      this.setState({
+        showCookiePopUp: false,
+        languageSelectorOpen: true,
+      });
+      this.props.handleConfirmation(false);
+    } else {
+      this.setState(prevState => ({
+        languageSelectorOpen: !prevState.languageSelectorOpen,
+        cookieManagerOpen: false,
+      }));
+    }
   };
 
   closeLanguageSelector = () => {
