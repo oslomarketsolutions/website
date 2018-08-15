@@ -1,6 +1,6 @@
 @import '../../layouts/variables';
 
-.toggleButton {
+/* .toggleButton {
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -63,9 +63,9 @@
   .tglBtn {
     opacity: 0.5;
   }
-}
+} */
 
-/* .toggleButton {
+.toggleButton {
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -82,27 +82,28 @@
     cursor: pointer;
     user-select: none;
     border: 1px solid $white;
-    background: $darkBlue;
+    background: rgba(255, 255, 255, 0);
     border-radius: 24px;
     padding: 2px;
+    transition: background-color 0.4s ease;
     &:after,
     &:before {
       position: relative;
       display: block;
-      content: "";
+      content: '';
       width: 50%;
       height: 100%;
     }
-    
+
     &:after {
       left: 0;
       border-radius: 50%;
       background: $white;
       width: 18px;
       height: 18px;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
     }
-    
+
     &:before {
       display: none;
     }
@@ -118,15 +119,16 @@
 
 .toggleButton.checked {
   .tglBtn {
-    background: $white;
+    background: rgba(255, 255, 255, 1);
     padding: 1px;
+    transition: background-color 0.4s ease;
   }
   .tglBtn:after {
     left: 54%;
     background: $primaryGreen;
     width: 20px;
     height: 20px;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
 }
 
@@ -134,4 +136,4 @@
   .tglBtn:after {
     opacity: 0.4;
   }
-} */
+}
