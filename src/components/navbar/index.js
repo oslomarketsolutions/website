@@ -253,9 +253,7 @@ export default class Navbar extends Component {
                 </button>
                 <div
                   className={`${styles.cookieManager} ${
-                    this.props.showCookiePopUp && this.state.cookieManagerOpen
-                      ? styles.open
-                      : styles.hide
+                    this.state.cookieManagerOpen ? styles.open : styles.hide
                   }`}
                 >
                   <div className={styles.indicator} />
@@ -297,7 +295,9 @@ export default class Navbar extends Component {
                 </div>
                 <div
                   className={`${styles.cookiePopUp} ${
-                    this.state.showCookiePopUp ? styles.open : styles.hide
+                    this.props.showCookiePopUp && this.state.showCookiePopUp
+                      ? styles.open
+                      : styles.hide
                   }`}
                 >
                   <div className={styles.indicator} />
