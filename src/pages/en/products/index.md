@@ -84,10 +84,10 @@ standardProducts:
   irModules:
     header: IR Web Modules
     image: /img/irModulesPlaceholder.png
-    text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+    text: >+
+      Showcase your share to existing and potential investors with flexible web
+      modules from OMS. From simple quotes to advanced charting tools.
+
   sectionHeader:
     header: Standard products
     subHeader: >-
