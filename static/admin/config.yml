@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: CareerRedesign
 
 media_folder: static/img
 public_folder: /img
@@ -157,6 +157,21 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
                 {label: "Icon", name: "icon", widget: "select", options: [
                   {label: "Spotify", value: "fab spotify"},
+                  {label: "User clock", value: "fal user-clock"},
+                  {label: "Home", value: "fal home"},
+                  {label: "Utensils", value: "fal utensils"},
+                  {label: "Laptop code", value: "fal laptop-code"},
+                  {label: "Hand holding seedling", value: "fal hand-holding-seedling"},
+                  {label: "Briefcase medical", value: "fal briefcase-medical"},
+                  {label: "Snowflake", value: "fal snowflake"},
+                  {label: "Newspaper", value: "fal newspaper"},
+                  {label: "Mobile", value: "fal mobile"},
+                  {label: "Hands", value: "fal hands"},
+                  {label: "Dollar sign", value: "fal dollar-sign"},
+                  {label: "Piggy bank", value: "fal piggy-bank"},
+                  {label: "Chart line", value: "fal chart-line"},
+                  {label: "Shuttle van", value: "fal shuttle-van"},
+                  {label: "Watch fitness", value: "fal watch-fitness"},
                 ]},
               ]},
             ]}
@@ -328,6 +343,21 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
                 {label: "Icon", name: "icon", widget: "select", options: [
                   {label: "Spotify", value: "fab spotify"},
+                  {label: "User clock", value: "fal user-clock"},
+                  {label: "Home", value: "fal home"},
+                  {label: "Utensils", value: "fal utensils"},
+                  {label: "Laptop code", value: "fal laptop-code"},
+                  {label: "Hand holding seedling", value: "fal hand-holding-seedling"},
+                  {label: "Briefcase medical", value: "fal briefcase-medical"},
+                  {label: "Snowflake", value: "fal snowflake"},
+                  {label: "Newspaper", value: "fal newspaper"},
+                  {label: "Mobile", value: "fal mobile"},
+                  {label: "Hands", value: "fal hands"},
+                  {label: "Dollar sign", value: "fal dollar-sign"},
+                  {label: "Piggy bank", value: "fal piggy-bank"},
+                  {label: "Chart line", value: "fal chart-line"},
+                  {label: "Shuttle van", value: "fal shuttle-van"},
+                  {label: "Watch fitness", value: "fal watch-fitness"},
                 ]},
               ]},
             ]}
