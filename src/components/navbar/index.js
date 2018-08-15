@@ -100,6 +100,7 @@ export default class Navbar extends Component {
   toggleCookieManager = () => {
     this.setState(prevState => ({
       cookieManagerOpen: !prevState.cookieManagerOpen,
+      languageSelectorOpen: false,
     }));
   };
 
@@ -110,6 +111,7 @@ export default class Navbar extends Component {
   toggleLanguageSelector = () => {
     this.setState(prevState => ({
       languageSelectorOpen: !prevState.languageSelectorOpen,
+      cookieManagerOpen: false,
     }));
   };
 
@@ -182,50 +184,53 @@ export default class Navbar extends Component {
                 <button onClick={this.toggleLanguageSelector}>
                   <FontAwesomeIcon icon={['fal', 'globe']} />
                 </button>
-                <ul
-                  className={
+                <div
+                  className={`${styles.ulWrapper} ${
                     this.state.languageSelectorOpen ? styles.open : styles.hide
-                  }
+                  }`}
                 >
-                  <li
-                    className={
-                      this.props.language === 'en' ? styles.selected : ''
-                    }
-                  >
-                    <Link
-                      to={this.changePageLanguage()}
-                      onClick={this.closeLanguageSelector}
+                  <div className={styles.indicator} />
+                  <ul>
+                    <li
+                      className={
+                        this.props.language === 'en' ? styles.selected : ''
+                      }
                     >
-                      <div
-                        className={
-                          this.props.language === 'en' ? styles.selected : ''
-                        }
+                      <Link
+                        to={this.changePageLanguage()}
+                        onClick={this.closeLanguageSelector}
                       >
-                        <FontAwesomeIcon icon="check" />
-                      </div>
-                      English
-                    </Link>
-                  </li>
-                  <li
-                    className={
-                      this.props.language === 'no' ? styles.selected : ''
-                    }
-                  >
-                    <Link
-                      to={this.changePageLanguage()}
-                      onClick={this.closeLanguageSelector}
+                        <div
+                          className={
+                            this.props.language === 'en' ? styles.selected : ''
+                          }
+                        >
+                          <FontAwesomeIcon icon="check" />
+                        </div>
+                        English
+                      </Link>
+                    </li>
+                    <li
+                      className={
+                        this.props.language === 'no' ? styles.selected : ''
+                      }
                     >
-                      <div
-                        className={
-                          this.props.language === 'no' ? styles.selected : ''
-                        }
+                      <Link
+                        to={this.changePageLanguage()}
+                        onClick={this.closeLanguageSelector}
                       >
-                        <FontAwesomeIcon icon="check" />
-                      </div>
-                      Norsk
-                    </Link>
-                  </li>
-                </ul>
+                        <div
+                          className={
+                            this.props.language === 'no' ? styles.selected : ''
+                          }
+                        >
+                          <FontAwesomeIcon icon="check" />
+                        </div>
+                        Norsk
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className={styles.cookie}>
                 <button

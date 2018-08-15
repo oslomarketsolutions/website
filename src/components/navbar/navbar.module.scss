@@ -401,6 +401,7 @@ header.navColorWhite .navbar {
 
 @media (max-width: 1680px) {
   .navbar {
+    position: relative;
     li.cookie {
       position: initial;
       padding: 0 0 0 $XS;
@@ -409,6 +410,13 @@ header.navColorWhite .navbar {
     li.languageSelectorDesktop {
       position: initial;
       padding: 0 $XS 0 64px;
+    }
+    .cookieManager {
+      top: 85px;
+      right: -12px;
+      .indicator {
+        right: 18px;
+      }
     }
   }
   header.headerUnderline {
@@ -445,6 +453,9 @@ header.navColorWhite .navbar {
       span {
         top: 20px;
       }
+    }
+    .cookieManager {
+      top: 74px;
     }
   }
 
@@ -485,6 +496,16 @@ header.navColorWhite .navbar {
 }
 
 @media (max-width: 767px) {
+  .navbar {
+    .cookieManager {
+      top: 74px;
+      right: 0;
+      border-top-right-radius: 7px;
+      .indicator {
+        right: 6px;
+      }
+    }
+  }
   header.headerUnderline {
     .navbar {
       li.cookie {
@@ -542,16 +563,35 @@ header.navColorWhite .navbar {
       height: 32px;
       padding: 0 $XS 0 $M;
 
-      ul {
+      .ulWrapper {
         position: absolute;
-        top: 28px;
+        top: 41px;
         border-radius: $XXS;
         border: 1px solid $antiFlashWhite;
-        right: 5px;
+        right: -3px;
         background-color: $white;
         color: $textColor;
         width: 120px;
         height: auto;
+
+        .indicator {
+          position: absolute;
+          transform: rotate(45deg);
+          top: -8px;
+          right: 12px;
+          width: 16px;
+          height: 16px;
+          background-color: $white;
+          border-left: 1px solid $antiFlashWhite;
+          border-top: 1px solid $antiFlashWhite;
+          border-radius: 2px;
+        }
+      }
+
+      ul {
+        display: block;
+        width: 100%;
+        height: 100%;
       }
 
       li {
@@ -601,6 +641,15 @@ header.navColorWhite .navbar {
 
       .open {
         display: block;
+      }
+    }
+
+    .cookieManager {
+      top: 49px;
+      right: -7px;
+      max-height: 523px;
+      .scrollContainer {
+        max-height: 518px;
       }
     }
 

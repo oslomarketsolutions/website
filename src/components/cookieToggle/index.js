@@ -8,7 +8,7 @@ export default class CookieToggle extends Component {
   static propTypes = {
     header: PropTypes.string,
     text: PropTypes.string,
-    cookies: PropTypes.shape({}),
+    cookies: PropTypes.arrayOf(PropTypes.shape({})),
     isOn: PropTypes.bool,
     disabled: PropTypes.bool,
     handleToggleButton: PropTypes.func,
@@ -64,7 +64,7 @@ export default class CookieToggle extends Component {
               </tr>
               {cookies &&
                 cookies.map(cookie => (
-                  <tr>
+                  <tr key={cookie.name}>
                     <td>{cookie.name}</td>
                     <td>{cookie.purpose}</td>
                   </tr>

@@ -29,7 +29,7 @@ export default class ToggleButton extends Component {
     return (
       <div
         className={`${styles.toggleButton} ${
-          this.state.isOn ? styles.checked : ''
+          this.state.isOn || this.props.isOn ? styles.checked : ''
         } ${this.props.disabled ? styles.disabled : ''}`}
       >
         <label className={styles.tglBtn} htmlFor={this.props.id}>
@@ -38,7 +38,7 @@ export default class ToggleButton extends Component {
             id={this.props.id}
             type="checkbox"
             onClick={this.toggle}
-            defaultChecked={this.props.isOn}
+            checked={this.state.isOn || this.props.isOn}
             disabled={this.props.disabled}
           />
         </label>
