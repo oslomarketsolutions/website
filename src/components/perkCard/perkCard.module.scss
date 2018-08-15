@@ -2,31 +2,60 @@
 
 .perkCard {
   background-color: $white;
-  padding: 30px;
-  width: 286px;
-  height: 186px;
-  margin: 0 0 32px;
-  border: 2px solid;
+  border-radius: $S;
+  padding: $L;
+  width: 356px;
+  height: 221px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  box-shadow: $boxShadow;
-  text-align: center;
+  box-shadow: 0 16px 16px 0 #c7d3e3;
+  transition: 0.3s;
+  margin-bottom: $L;
+  align-items: flex-start;
+  margin: 18px;
 
-  h4 {
-    width: 100%;
-    font-size: 1.375rem;
-    margin: 0;
+  &:hover {
+    transform: scale(1.08);
   }
 
-  p {
-    font-size: 1.125rem;
-    margin: 22px 0;
+  .header {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+    width: 100%;
+    svg {
+      font-size: 64px;
+      color: $vibrantBlue;
+    }
+
+    h4 {
+      margin-left: $S;
+    }
   }
 }
 
-@media (min-width: 636px) {
+@media (max-width: 1172px) {
   .perkCard {
-    margin: 0 auto 64px;
+    width: 325px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .perkCard {
+    width: 243px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .perkCard {
+    margin: 18px $XS;
+  }
+}
+
+@media (max-width: 712px) {
+  .perkCard {
+    width: 356px;
+    height: 221px;
   }
 }

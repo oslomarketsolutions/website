@@ -4,46 +4,28 @@ import { CareerPageTemplate } from '../../templates/careerPage/index';
 import PreviewWrapper from '../../components/previewWrapper';
 
 const CareerPagePreview = ({ entry, getAsset }) => {
-  const firstSection = {
-    title: entry.getIn(['data', 'firstSection', 'title']),
-    text: entry.getIn(['data', 'firstSection', 'text']),
-    image: getAsset(entry.getIn(['data', 'firstSection', 'image'])),
-    imageAlt: entry.getIn(['data', 'firstSection', 'imageAlt']),
-  };
+  const entryHero = entry.getIn(['data', 'hero']);
+  const hero = entryHero ? entryHero.toJS() : [];
+  hero.backgroundImage = getAsset(
+    entry.getIn(['data', 'hero', 'backgroundImage']),
+  );
 
-  const secondSection = {
-    title: entry.getIn(['data', 'secondSection', 'title']),
-    text: entry.getIn(['data', 'secondSection', 'text']),
-    image: getAsset(entry.getIn(['data', 'secondSection', 'image'])),
-    imageAlt: entry.getIn(['data', 'secondSection', 'imageAlt']),
-  };
+  const entryAbout = entry.getIn(['data', 'about']);
+  const about = entryAbout ? entryAbout.toJS() : [];
 
-  const thirdSection = {
-    title: entry.getIn(['data', 'thirdSection', 'title']),
-    text: entry.getIn(['data', 'thirdSection', 'text']),
-    image: getAsset(entry.getIn(['data', 'thirdSection', 'image'])),
-    imageAlt: entry.getIn(['data', 'thirdSection', 'imageAlt']),
-  };
+  const entryPerks = entry.getIn(['data', 'perks']);
+  const perks = entryPerks ? entryPerks.toJS() : [];
 
-  const perkCards = entry
-    .getIn(['data', 'secondSection', 'perks', 'perkCards'])
-    .map(perkCard => ({
-      perkTitle: perkCard.get('perkTitle'),
-      text: perkCard.get('text'),
-    }));
-
-  const perks = {
-    title: entry.getIn(['data', 'secondSection', 'perks', 'title']),
-    perkCards,
-  };
+  const entryPositions = entry.getIn(['data', 'positions']);
+  const positions = entryPositions ? entryPositions.toJS() : [];
 
   return (
     <PreviewWrapper>
       <CareerPageTemplate
-        firstSection={firstSection}
-        secondSection={secondSection}
+        hero={hero}
+        about={about}
         perks={perks}
-        thirdSection={thirdSection}
+        positions={positions}
       />
     </PreviewWrapper>
   );

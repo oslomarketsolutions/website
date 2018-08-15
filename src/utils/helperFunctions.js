@@ -5,7 +5,9 @@ export const findImageSizes = (image, imageSizes) => {
   const imageName = image.split('/').pop();
 
   const element = imageSizes.find(
-    imageSizesObject => imageSizesObject.node.relativePath === imageName,
+    imageSizesObject =>
+      imageSizesObject.node.childImageSharp &&
+      imageSizesObject.node.relativePath === imageName,
   );
 
   return element ? element.node.childImageSharp.sizes : null;
