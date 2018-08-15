@@ -17,7 +17,7 @@ transitionalElement:
     - logo: /img/hb_logo.png
       name: handelsbanken
     - logo: /img/sbanken_logo.png
-      name: Sbanken 
+      name: Sbanken
     - logo: /img/sb1_logo.png
       name: SpareBank 1
     - logo: /img/sbm_logo.png
@@ -42,24 +42,22 @@ transitionalElement:
       name: Signicat15
 investorPortal:
   header: Investor portals
-  investorPortalImages: 
+  investorPortalImages:
     - image: investorportal.png
       name: Investorportal 1
     - image: investorportal.png
       name: Investorportal 2
     - image: investorportal.png
       name: Investorportal 3
-  text:
-    Whether you want a fully hosted and managed web trader, fund savings
+  text: Whether you want a fully hosted and managed web trader, fund savings
     platform, portfolio reporting or market data information, OMS can help you
     get there.
 customization:
   header: Choose your level of customization
-  text: 
-    'Whether you want a fully hosted and managed web trader, fund savings platform, portfolio reporting or market data information, OMS can help you get there.'
+  text: 'Whether you want a fully hosted and managed web trader, fund savings platform, portfolio reporting or market data information, OMS can help you get there.'
   cards:
-    - description: 
-        'A full coverage of the financial markets with a market data portal with live, 
+    - description:
+        'A full coverage of the financial markets with a market data portal with live,
         streaming data'
       features:
         - Real Time
@@ -70,8 +68,8 @@ customization:
         - User Friendly
       header: Feed/API
       isDark: false
-    - description: 
-        'A full coverage of the financial markets with a market data portal with live, 
+    - description:
+        'A full coverage of the financial markets with a market data portal with live,
         streaming data'
       features:
         - Real Time
@@ -82,8 +80,7 @@ customization:
         - User Friendly
       header: OMS Components
       isDark: false
-    - description: 
-        'Keep investor clients informed and up to date anywhere and at any'
+    - description: 'Keep investor clients informed and up to date anywhere and at any'
       features:
         - Real Time
         - Flexible
@@ -112,14 +109,13 @@ otherProducts:
     header: Arena
     image: /img/arena.png
     text:
-      'Arena provides information on securities listed on Oslo Børs, Oslo Axess and N-OTC. 
-      There are currently two information products available in 
+      'Arena provides information on securities listed on Oslo Børs, Oslo Axess and N-OTC.
+      There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.'
   irModules:
     header: IR Modules
     image: /img/irModulesPlaceholder.png
-    text: 
-      'Whether you want a fully hosted and managed web trader, 
-      fund savings platform, portfolio reporting or market data information, 
+    text: 'Whether you want a fully hosted and managed web trader,
+      fund savings platform, portfolio reporting or market data information,
       OMS can help you get there.'
 ---
