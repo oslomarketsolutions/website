@@ -111,7 +111,9 @@ const fontAwesomeCSS = dom.css();
 
 export default class TemplateWrapper extends Component {
   static propTypes = {
-    location: PropTypes.shape({}),
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }),
     children: PropTypes.func,
     data: PropTypes.shape({
       allMarkdownRemark: PropTypes.shape({
@@ -126,42 +128,52 @@ export default class TemplateWrapper extends Component {
     setGoogleAnalyticsCookie: getCookie('setGoogleAnalyticsCookie') !== '',
 
     googleAnalyticsIsActive: false,
+    googleAnalyticsHasBeenInitialized: false, // The idea with this is to not initialize GA more than once
   };
 
   componentDidMount = () => {
-    this.tryInitializeGoogleAnalytics();
+    // If previously accepted Analytics
+    if (this.state.setGoogleAnalyticsCookie) {
+      this.tryEnableGoogleAnalytics();
+    }
   };
 
-  componentDidUpdate = (prevProps, prevState) => {
-    if (prevState !== this.state) {
-      if (this.state.setGoogleAnalyticsCookie) {
-        this.tryInitializeGoogleAnalytics();
-      } else {
-        this.tryDisableGoogleAnalytics();
+  componentDidUpdate = prevProps => {
+    // If user navigates to a different page, log it
+    const prevPathname = prevProps.location.pathname;
+    const newPathname = this.props.location.pathname;
+    if (newPathname !== prevPathname) {
+      if (this.state.googleAnalyticsIsActive) {
+        ReactGA.pageview(newPathname);
       }
     }
   };
 
-  tryInitializeGoogleAnalytics = () => {
-    // Check if allowed to use Google analytics and if it's already active
-    if (
-      this.state.setGoogleAnalyticsCookie &&
-      !this.state.googleAnalyticsIsActive
-    ) {
+  enableGoogleAnalytics = () => {
+    // Check if it's not already active
+    if (!this.state.googleAnalyticsIsActive) {
+      // If opt-out has been set earlier, disable it again
       if (window['ga-disable-UA-101364630-3']) {
         window['ga-disable-UA-101364630-3'] = false;
       }
-      ReactGA.initialize('UA-101364630-3', {
-        debug: true,
-      });
-      ReactGA.ga('set', 'anonymizeIp', true);
+      // If Google Analytics hasn't been initialized on this visit
+      if (!this.state.googleAnalyticsHasBeenInitialized) {
+        ReactGA.initialize('UA-101364630-3', {
+          debug: true,
+        });
+        ReactGA.ga('set', 'anonymizeIp', true);
+        ReactGA.pageview(this.props.location.pathname);
+        this.setState({
+          googleAnalyticsHasBeenInitialized: true,
+        });
+      }
       this.setState({
         googleAnalyticsIsActive: true,
       });
     }
   };
 
-  tryDisableGoogleAnalytics = () => {
+  disableGoogleAnalytics = () => {
     if (this.state.googleAnalyticsIsActive) {
       window['ga-disable-UA-101364630-3'] = true;
       this.setState({
@@ -174,6 +186,7 @@ export default class TemplateWrapper extends Component {
     if (confirmedAll) {
       setCookie('setHubspotCookie', 'true', 365);
       setCookie('setGoogleAnalyticsCookie', 'true', 365);
+      this.enableGoogleAnalytics();
       this.setState({
         setHubspotCookie: true,
         setGoogleAnalyticsCookie: true,
@@ -203,12 +216,14 @@ export default class TemplateWrapper extends Component {
     } else if (id === 'analytics') {
       if (isOn) {
         setCookie('setGoogleAnalyticsCookie', 'true', 365);
+        this.enableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: true,
         });
       } else {
         // Deleting google analytics cookies
         setCookie('setGoogleAnalyticsCookie', '', -1);
+        this.disableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: false,
         });
@@ -216,24 +231,12 @@ export default class TemplateWrapper extends Component {
     }
   };
 
-  oldPathName = '';
-
   render() {
     const { handleCookieChanges } = this;
     const { children, location, data } = this.props;
 
     const parsedPath = /^\/(\w\w)/.exec(location.pathname);
     const language = parsedPath && parsedPath[1];
-
-    if (typeof window !== 'undefined') {
-      const newPathName = window.location.pathname;
-      if (newPathName !== this.oldPathName) {
-        if (this.state.googleAnalyticsIsActive) {
-          ReactGA.pageview(newPathName);
-        }
-        this.oldPathName = window.location.pathname;
-      }
-    }
 
     return (
       <React.Fragment>
