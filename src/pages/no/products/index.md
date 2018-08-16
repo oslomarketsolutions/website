@@ -8,6 +8,12 @@ linkCardsSection:
       header: Investor portals
       isDark: false
     - description: >-
+        Sømløs integrasjon med minimalt arbeid. OMS Components er
+        standardkomponenter som kan enkelt integreres i eksisterende
+        nettportaler.
+      header: OMS Components
+      isDark: false
+    - description: >-
         A full coverage of the financial markets with a market data portal with
         live, streaming data with smart links to content.
       header: Arena
@@ -21,11 +27,6 @@ linkCardsSection:
         A full coverage of the financial markets with a market data portal with
         live, streaming data with smart links to content.
       header: Feed API
-      isDark: false
-    - description: >-
-        Standardkomponenter som kan enkelt integreres i eksisterende
-        nettportaler.
-      header: OMS Components
       isDark: false
   title: 'Hosted APIs, React components & fully managed solutions'
 investorPortal:
@@ -103,11 +104,11 @@ services:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: >-
-      Standardkomponenter for presentasjon av streaming markedsdata.
-      Komponentene er skrevet i React og moderne JavaScript og bygget for å være
-      enkle å integrere i eksisterende løsninger. Dersom du ønsker å presentere
-      markedsdata i din nåværende nettportal kan dette være produktet for deg.
-      Kontakt oss for en uforpliktende demo.
+      OMS Components er standardkomponenter for presentasjon av streaming
+      markedsdata. Komponentene er skrevet i React og moderne JavaScript og
+      bygget for å være enkle å integrere i eksisterende løsninger. Dersom du
+      ønsker å presentere markedsdata i din nåværende nettportal kan dette være
+      produktet for deg. Kontakt oss for en uforpliktende demo.
   sectionHeader:
     header: Services
     subHeader: >-
