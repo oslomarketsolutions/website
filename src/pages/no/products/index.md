@@ -23,8 +23,8 @@ linkCardsSection:
       header: Feed API
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        Standardkomponenter som kan enkelt integreres i eksisterende
+        nettportaler.
       header: OMS Components
       isDark: false
   title: 'Hosted APIs, React components & fully managed solutions'
@@ -103,9 +103,11 @@ services:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Standardkomponenter for presentasjon av streaming markedsdata.
+      Komponentene er skrevet i React og moderne JavaScript og bygget for å være
+      enkle å integrere i eksisterende løsninger. Dersom du ønsker å presentere
+      markedsdata i din nåværende nettportal kan dette være produktet for deg.
+      Kontakt oss for en uforpliktende demo.
   sectionHeader:
     header: Services
     subHeader: >-
