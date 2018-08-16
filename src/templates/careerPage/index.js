@@ -69,7 +69,10 @@ export const CareerPageTemplate = ({
         ) : (
           <div className={styles.iframeAlt}>
             <p>{positions.iframeAltText}</p>
-            <button className={styles.iframeButton} onClick={enableAnalytics}>
+            <button
+              className={`textButton ${styles.iframeButton}`}
+              onClick={enableAnalytics}
+            >
               Enable
             </button>
           </div>

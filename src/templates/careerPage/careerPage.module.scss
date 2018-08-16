@@ -168,6 +168,12 @@
         background-color: $vibrantBlue;
         border-radius: $S;
         border: none;
+        width: 200px;
+        height: 50px;
+
+        &:hover {
+          background-color: $primaryButtonHover;
+        }
       }
     }
   }
