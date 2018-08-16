@@ -64,7 +64,7 @@ export const AboutPageTemplate = ({
                     Math.floor(Math.random() * employees.quotes.length)
                   ];
                 return (
-                  <div className={styles.quoteWrapper}>
+                  <div key={quote.text} className={styles.quoteWrapper}>
                     <h2>{quote.text}</h2>
                     <p>{quote.author}</p>
                   </div>
@@ -104,10 +104,12 @@ AboutPageTemplate.propTypes = {
   employees: PropTypes.shape({
     section: PropTypes.string,
     header: PropTypes.string,
-    quotes: PropTypes.shape({
-      text: PropTypes.string,
-      author: PropTypes.string,
-    }),
+    quotes: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string,
+        author: PropTypes.string,
+      }),
+    ),
     employeeList: PropTypes.arrayOf(PropTypes.object),
   }),
   buttonText: PropTypes.string,
