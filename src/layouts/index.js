@@ -186,7 +186,7 @@ export default class TemplateWrapper extends Component {
   };
 
   handleCookieChanges = (isOn, id) => {
-    if (id.split(' ')[0] === 'Tracking') {
+    if (id === 'tracking') {
       if (isOn) {
         setCookie('setHubspotCookie', 'true', 365);
         this.setState({
@@ -200,7 +200,7 @@ export default class TemplateWrapper extends Component {
           setHubspotCookie: false,
         });
       }
-    } else if (id.split(' ')[0] === 'Analytics') {
+    } else if (id === 'analytics') {
       if (isOn) {
         setCookie('setGoogleAnalyticsCookie', 'true', 365);
         this.setState({
@@ -214,7 +214,6 @@ export default class TemplateWrapper extends Component {
         });
       }
     }
-    this.forceUpdate();
   };
 
   oldPathName = '';
@@ -261,7 +260,8 @@ export default class TemplateWrapper extends Component {
             language={language}
             location={location}
             data={data.navbar}
-            cookieInfo={data.cookieInfo}
+            cookieInfoEn={data.cookieInfoEn}
+            cookieInfoNo={data.cookieInfoNo}
             showCookiePopUp={this.state.showCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
@@ -320,7 +320,7 @@ export const footerAndNavbarQuery = graphql`
         numberOfJobVacancies
       }
     }
-    cookieInfo: markdownRemark(
+    cookieInfoEn: markdownRemark(
       id: { regex: "/src/pages/en/cookieInfo/index.md/" }
     ) {
       frontmatter {
@@ -332,6 +332,7 @@ export const footerAndNavbarQuery = graphql`
         }
         cookieManager {
           necessaryCookies {
+            id
             header
             text
             cookies {
@@ -340,6 +341,7 @@ export const footerAndNavbarQuery = graphql`
             }
           }
           analyticsCookies {
+            id
             header
             text
             cookies {
@@ -348,6 +350,49 @@ export const footerAndNavbarQuery = graphql`
             }
           }
           trackingCookies {
+            id
+            header
+            text
+            cookies {
+              name
+              purpose
+            }
+          }
+          buttonText
+        }
+      }
+    }
+    cookieInfoNo: markdownRemark(
+      id: { regex: "/src/pages/no/cookieInfo/index.md/" }
+    ) {
+      frontmatter {
+        title
+        cookiePopUp {
+          text
+          manageButtonText
+          confirmationButtonText
+        }
+        cookieManager {
+          necessaryCookies {
+            id
+            header
+            text
+            cookies {
+              name
+              purpose
+            }
+          }
+          analyticsCookies {
+            id
+            header
+            text
+            cookies {
+              name
+              purpose
+            }
+          }
+          trackingCookies {
+            id
             header
             text
             cookies {

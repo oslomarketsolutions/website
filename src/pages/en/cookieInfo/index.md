@@ -8,6 +8,7 @@ cookiePopUp:
   confirmationButtonText: I understand
 cookieManager:
   necessaryCookies:
+    id: necessary
     header: Necessary cookies
     text: These cookies are needed for our website to function providing payment
       gateway security and their essentials. Therefore they are always on
@@ -24,6 +25,7 @@ cookieManager:
           gateway security and their essentials. Therefore they are always on
           but do not contain personally indetifiable information (PII).
   analyticsCookies:
+    id: analytics
     header: Analytics cookies
     text: These cookies are needed for our website to function providing payment
       gateway security and their essentials. Therefore they are always on
@@ -35,6 +37,7 @@ cookieManager:
           gateway security and their essentials. Therefore they are always on
           but do not contain personally indetifiable information (PII).
   trackingCookies:
+    id: tracking
     header: Tracking cookies
     text: These cookies are needed for our website to function providing payment
       gateway security and their essentials. Therefore they are always on

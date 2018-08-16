@@ -14,7 +14,8 @@ export default class Navbar extends Component {
     data: PropTypes.shape({
       frontmatter: PropTypes.shape({}),
     }),
-    cookieInfo: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
+    cookieInfoEn: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
+    cookieInfoNo: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
     showCookiePopUp: PropTypes.bool,
     analyticsOn: PropTypes.bool,
     trackingOn: PropTypes.bool,
@@ -129,7 +130,10 @@ export default class Navbar extends Component {
 
   render() {
     const data = this.props.data.frontmatter;
-    const cookieInfo = this.props.cookieInfo.frontmatter;
+    const cookieInfo =
+      this.props.language === 'en'
+        ? this.props.cookieInfoEn.frontmatter
+        : this.props.cookieInfoNo.frontmatter;
 
     const isOnHomePage = this.props.location.pathname.toString().length < 5;
     const navColorWhite = this.state.navOpen ? false : isOnHomePage;
@@ -259,9 +263,11 @@ export default class Navbar extends Component {
                       cookies={
                         cookieInfo.cookieManager.necessaryCookies.cookies
                       }
+                      id={cookieInfo.cookieManager.necessaryCookies.id}
                       isOn
                       disabled
                       handleToggleButton={this.handleToggleButton}
+                      language={this.props.language}
                     />
                     <CookieToggle
                       header={cookieInfo.cookieManager.analyticsCookies.header}
@@ -269,15 +275,19 @@ export default class Navbar extends Component {
                       cookies={
                         cookieInfo.cookieManager.analyticsCookies.cookies
                       }
+                      id={cookieInfo.cookieManager.analyticsCookies.id}
                       isOn={this.props.analyticsOn}
                       handleToggleButton={this.handleToggleButton}
+                      language={this.props.language}
                     />
                     <CookieToggle
                       header={cookieInfo.cookieManager.trackingCookies.header}
                       text={cookieInfo.cookieManager.trackingCookies.text}
                       cookies={cookieInfo.cookieManager.trackingCookies.cookies}
+                      id={cookieInfo.cookieManager.trackingCookies.id}
                       isOn={this.props.trackingOn}
                       handleToggleButton={this.handleToggleButton}
+                      language={this.props.language}
                     />
                     <button
                       onClick={this.toggleCookieManager}
@@ -289,7 +299,7 @@ export default class Navbar extends Component {
                 </div>
                 <div
                   className={`${styles.cookiePopUp} ${
-                    this.props.showCookiePopUp ? styles.open : styles.hide
+                    this.props.showCookiePopUp ? styles.open : ''
                   }`}
                 >
                   <div className={styles.indicator} />
