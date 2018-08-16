@@ -8,12 +8,16 @@
   padding: $XL $L;
   border-radius: $S;
   box-shadow: $newBoxShadow;
-  text-decoration: none;
-  color: $textColor;
   transition: 0.3s;
+
+  a {
+    text-decoration: none;
+    color: $textColor;
+  }
 
   &:hover {
     transform: scale(1.08);
+    cursor: pointer;
   }
 
   .header {

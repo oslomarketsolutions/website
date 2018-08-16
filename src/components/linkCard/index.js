@@ -25,26 +25,28 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
   }
 
   return (
-    <Link
-      className={`${styles.linkCard} ${isDark ? styles.dark : ''}`}
-      to={`#${header}`}
-      onClick={event => onClickFunction(event, header)}
-    >
-      <div className={styles.header}>
-        <div className={styles.iconWrapper}>
-          <div className={styles.icon}>{icon}</div>
+    <div className={`${styles.linkCard} ${isDark ? styles.dark : ''}`}>
+      <Link to={`#${header}`} onClick={event => onClickFunction(event, header)}>
+        <div className={styles.header}>
+          <div className={styles.iconWrapper}>
+            <div className={styles.icon}>{icon}</div>
+          </div>
+          <h3>{header}</h3>
         </div>
-        <h3>{header}</h3>
-      </div>
-      <p>{description}</p>
-      <div className={`textButton ${styles.link}`}>Go to {header}</div>
-      <div className={`textButton ${styles.mobileLink}`}>
+        <p>{description}</p>
+        <div className={`textButton ${styles.link}`}>Go to {header}</div>
+      </Link>
+      <Link
+        className={`textButton ${styles.mobileLink}`}
+        to={`#${header}`}
+        onClick={event => onClickFunction(event, header)}
+      >
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>{icon}</div>
         </div>
         <h3 className="linkCardTitle">{header}</h3>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
