@@ -61,7 +61,7 @@ import favicon from '../img/favicon_oms.png';
 import './style.scss';
 import Navbar from '../components/navbar/index';
 import Footer from '../components/footer/index';
-import { getCookie, setCookie } from '../utils/helperFunctions';
+import { getParsedCookie, setCookie, removeCookie } from '../utils/cookies';
 
 export const faLibrary = library.add(
   faLinkedin,
@@ -125,9 +125,9 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    showCookiePopUp: getCookie('haveSeenPopUp') === '',
-    setHubspotCookie: getCookie('setHubspotCookie') !== '',
-    setGoogleAnalyticsCookie: getCookie('setGoogleAnalyticsCookie') !== '',
+    hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
+    setHubspotCookie: getParsedCookie('setHubspotCookie'),
+    setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
 
     googleAnalyticsIsActive: false,
     googleAnalyticsHasBeenInitialized: false, // The idea with this is to not initialize GA more than once
@@ -194,7 +194,7 @@ export default class TemplateWrapper extends Component {
     }
     setCookie('haveSeenPopUp', 'true', 365);
     this.setState({
-      showCookiePopUp: false,
+      hideCookiePopUp: true,
     });
   };
 
@@ -207,8 +207,11 @@ export default class TemplateWrapper extends Component {
         });
       } else {
         // Deleting hubspot cookies
-        setCookie('setHubspotCookie', '', -1);
-        setCookie('hubspotutk', '', -1);
+        removeCookie('setHubspotCookie');
+        removeCookie('hubspotutk');
+        removeCookie('__hssc');
+        removeCookie('__hssrc');
+        removeCookie('__hstc');
         this.setState({
           setHubspotCookie: false,
         });
@@ -222,7 +225,7 @@ export default class TemplateWrapper extends Component {
         });
       } else {
         // Deleting google analytics cookies
-        setCookie('setGoogleAnalyticsCookie', '', -1);
+        removeCookie('setGoogleAnalyticsCookie');
         this.disableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: false,
@@ -265,7 +268,7 @@ export default class TemplateWrapper extends Component {
             data={data.navbar}
             cookieInfoEn={data.cookieInfoEn}
             cookieInfoNo={data.cookieInfoNo}
-            showCookiePopUp={this.state.showCookiePopUp}
+            hideCookiePopUp={this.state.hideCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
             handleConfirmation={handleConfirmation}
