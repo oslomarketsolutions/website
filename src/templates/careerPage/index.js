@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
-import { findImageSizes, getCookie } from '../../utils/helperFunctions';
+import { getCookie } from '../../utils/cookies';
+import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
 export const CareerPageTemplate = ({
