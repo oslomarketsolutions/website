@@ -84,7 +84,7 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
+    showCookiePopUp: !getParsedCookie('haveSeenPopUp'),
     setHubspotCookie: getParsedCookie('setHubspotCookie'),
     setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
   };
@@ -100,7 +100,7 @@ export default class TemplateWrapper extends Component {
     }
     setCookie('haveSeenPopUp', 'true', 365);
     this.setState({
-      hideCookiePopUp: true,
+      showCookiePopUp: false,
     });
   };
 
@@ -171,7 +171,7 @@ export default class TemplateWrapper extends Component {
             data={data.navbar}
             cookieInfoEn={data.cookieInfoEn}
             cookieInfoNo={data.cookieInfoNo}
-            hideCookiePopUp={this.state.hideCookiePopUp}
+            showCookiePopUp={this.state.showCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
             handleConfirmation={this.handleConfirmation}

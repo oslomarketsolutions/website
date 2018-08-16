@@ -1,6 +1,7 @@
 import Cookies from 'js-cookie';
 
 export const getParsedCookie = name => {
+  if (name === 'haveSeenPopUp' && typeof window === 'undefined') return true;
   if (typeof window === 'undefined') return false;
   return Cookies.getJSON(name);
 };

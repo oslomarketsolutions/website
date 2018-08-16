@@ -16,7 +16,7 @@ export default class Navbar extends Component {
     }),
     cookieInfoEn: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
     cookieInfoNo: PropTypes.shape({ frontmatter: PropTypes.shape({}) }),
-    hideCookiePopUp: PropTypes.bool,
+    showCookiePopUp: PropTypes.bool,
     analyticsOn: PropTypes.bool,
     trackingOn: PropTypes.bool,
     handleConfirmation: PropTypes.func,
@@ -94,7 +94,7 @@ export default class Navbar extends Component {
   };
 
   toggleCookieManager = () => {
-    if (this.props.hideCookiePopUp === false) {
+    if (this.props.showCookiePopUp === true) {
       this.closePopUpAndOpenManager();
     } else {
       this.setState(prevState => ({
@@ -109,7 +109,7 @@ export default class Navbar extends Component {
   };
 
   toggleLanguageSelector = () => {
-    if (this.props.hideCookiePopUp === false) {
+    if (this.props.showCookiePopUp === true) {
       this.setState({
         languageSelectorOpen: true,
       });
@@ -299,7 +299,7 @@ export default class Navbar extends Component {
                 </div>
                 <div
                   className={`${styles.cookiePopUp} ${
-                    this.props.hideCookiePopUp ? '' : styles.open
+                    this.props.showCookiePopUp ? styles.open : ''
                   }`}
                 >
                   <div className={styles.indicator} />
