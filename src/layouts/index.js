@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'js-cookie';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faLinkedin,
@@ -41,6 +40,7 @@ import favicon from '../img/favicon_oms.png';
 import './style.scss';
 import Navbar from '../components/navbar/index';
 import Footer from '../components/footer/index';
+import { getParsedCookie, setCookie, removeCookie } from '../utils/cookies';
 
 export const faLibrary = library.add(
   faLinkedin,
@@ -84,21 +84,21 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    hideCookiePopUp: Cookies.getJSON('haveSeenPopUp'),
-    setHubspotCookie: Cookies.getJSON('setHubspotCookie'),
-    setGoogleAnalyticsCookie: Cookies.getJSON('setGoogleAnalyticsCookie'),
+    hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
+    setHubspotCookie: getParsedCookie('setHubspotCookie'),
+    setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
   };
 
   handleConfirmation = confirmedAll => {
     if (confirmedAll) {
-      Cookies.set('setHubspotCookie', 'true', { expires: 365 });
-      Cookies.set('setGoogleAnalyticsCookie', 'true', { expires: 365 });
+      setCookie('setHubspotCookie', 'true', 365);
+      setCookie('setGoogleAnalyticsCookie', 'true', 365);
       this.setState({
         setHubspotCookie: true,
         setGoogleAnalyticsCookie: true,
       });
     }
-    Cookies.set('haveSeenPopUp', 'true', { expires: 365 });
+    setCookie('haveSeenPopUp', 'true', 365);
     this.setState({
       hideCookiePopUp: true,
     });
@@ -107,30 +107,30 @@ export default class TemplateWrapper extends Component {
   handleCookieChanges = (isOn, id) => {
     if (id === 'tracking') {
       if (isOn) {
-        Cookies.set('setHubspotCookie', 'true', { expires: 365 });
+        setCookie('setHubspotCookie', 'true', 365);
         this.setState({
           setHubspotCookie: true,
         });
       } else {
         // Deleting hubspot cookies
-        Cookies.remove('setHubspotCookie');
-        Cookies.remove('hubspotutk');
-        Cookies.remove('_hssc');
-        Cookies.remove('_hssrc');
-        Cookies.remove('-hstc');
+        removeCookie('setHubspotCookie');
+        removeCookie('hubspotutk');
+        removeCookie('__hssc');
+        removeCookie('__hssrc');
+        removeCookie('__hstc');
         this.setState({
           setHubspotCookie: false,
         });
       }
     } else if (id === 'analytics') {
       if (isOn) {
-        Cookies.set('setGoogleAnalyticsCookie', 'true', { expires: 365 });
+        setCookie('setGoogleAnalyticsCookie', 'true', 365);
         this.setState({
           setGoogleAnalyticsCookie: true,
         });
       } else {
         // Deleting google analytics cookies
-        Cookies.remove('setGoogleAnalyticsCookie');
+        removeCookie('setGoogleAnalyticsCookie');
         this.setState({
           setGoogleAnalyticsCookie: false,
         });
