@@ -120,6 +120,7 @@
         width: 86%;
         max-width: 880px;
         justify-self: end;
+        -ms-grid-column-align: end;
         align-self: start;
         margin: 0 $M 0 $M;
       }
@@ -256,6 +257,7 @@
         width: 86%;
         align-self: end;
         justify-self: end;
+        -ms-grid-column-align: end;
         margin: 0 -8px 0 20px;
         box-shadow: $newBoxShadow;
       }
@@ -342,6 +344,7 @@
         max-width: 880px;
         align-self: center;
         justify-self: end;
+        -ms-grid-column-align: end;
         margin: 0 $M 0 $M;
       }
     }
