@@ -160,9 +160,7 @@ export default class TemplateWrapper extends Component {
       }
       // If Google Analytics hasn't been initialized on this visit
       if (!this.state.googleAnalyticsHasBeenInitialized) {
-        ReactGA.initialize('UA-101364630-3', {
-          debug: true,
-        });
+        ReactGA.initialize('UA-101364630-3');
         ReactGA.ga('set', 'anonymizeIp', true);
         ReactGA.pageview(this.props.location.pathname);
         this.setState({
