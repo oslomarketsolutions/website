@@ -61,7 +61,7 @@ export const CareerPageTemplate = ({
           <h2>{positions.header}</h2>
           <p className="subtitle">{positions.text}</p>
         </div>
-        {getParsedCookie('setGoogleAnalyticsCookie') !== '' ? (
+        {getParsedCookie('setGoogleAnalyticsCookie') !== undefined ? (
           <iframe
             title="Job Vacancies"
             src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
@@ -69,7 +69,9 @@ export const CareerPageTemplate = ({
         ) : (
           <div className={styles.iframeAlt}>
             <p>{positions.iframeAltText}</p>
-            <button onClick={enableAnalytics}>Enable</button>
+            <button className={styles.iframeButton} onClick={enableAnalytics}>
+              Enable
+            </button>
           </div>
         )}
       </section>

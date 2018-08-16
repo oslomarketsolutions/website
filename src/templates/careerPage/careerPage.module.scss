@@ -163,8 +163,11 @@
         padding-bottom: $S;
       }
 
-      button {
-        color: $vibrantBlue;
+      .iframeButton {
+        color: $antiFlashWhite;
+        background-color: $vibrantBlue;
+        border-radius: $S;
+        border: none;
       }
     }
   }
