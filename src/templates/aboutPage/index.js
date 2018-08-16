@@ -26,8 +26,10 @@ export const AboutPageTemplate = ({
   return (
     <main className={styles.aboutPage}>
       <section className={styles.hero}>
-        <h1>{hero.title}</h1>
-        <p className="heroSubtitle">{hero.text}</p>
+        <div className={styles.textContainer}>
+          <h1>{hero.title}</h1>
+          <p className="heroSubtitle">{hero.text}</p>
+        </div>
         <ImageWrapper
           alt="Background image covering top half of screen"
           src={hero.backgroundImage}
@@ -36,13 +38,17 @@ export const AboutPageTemplate = ({
         />
       </section>
       <section className={styles.history}>
-        <p className="overline">{history.section}</p>
-        <h2>{history.header}</h2>
-        <p className="bodyLarge">{history.text}</p>
+        <div className={styles.textContainer}>
+          <p className="overline">{history.section}</p>
+          <h2>{history.header}</h2>
+          <p className="bodyLarge">{history.text}</p>
+        </div>
       </section>
       <section className={styles.aboutEmployees}>
-        <p className="overline">{employees.section}</p>
-        <h2>{employees.header}</h2>
+        <div className={styles.textContainer}>
+          <p className="overline">{employees.section}</p>
+          <h2>{employees.header}</h2>
+        </div>
         <div className={styles.employeeWrapper}>
           {// The second element in sortedEmployeeList is a placeholder
           // for the quote.

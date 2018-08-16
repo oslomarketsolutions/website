@@ -36,7 +36,7 @@ export const CareerPageTemplate = ({
         <div className={styles.textContainer}>
           <p className="overline">{about.section}</p>
           <h2>{about.header}</h2>
-          <p>{about.text}</p>
+          <p className="bodyLarge">{about.text}</p>
         </div>
       </section>
       <section className={styles.perks}>
