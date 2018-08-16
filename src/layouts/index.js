@@ -134,7 +134,7 @@ export default class TemplateWrapper extends Component {
   componentDidMount = () => {
     // If previously accepted Analytics
     if (this.state.setGoogleAnalyticsCookie) {
-      this.tryEnableGoogleAnalytics();
+      this.enableGoogleAnalytics();
     }
   };
 
@@ -232,7 +232,7 @@ export default class TemplateWrapper extends Component {
   };
 
   render() {
-    const { handleCookieChanges } = this;
+    const { handleCookieChanges, handleConfirmation } = this;
     const { children, location, data } = this.props;
 
     const parsedPath = /^\/(\w\w)/.exec(location.pathname);
@@ -268,8 +268,8 @@ export default class TemplateWrapper extends Component {
             showCookiePopUp={this.state.showCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
-            handleConfirmation={this.handleConfirmation}
-            handleCookieChanges={this.handleCookieChanges}
+            handleConfirmation={handleConfirmation}
+            handleCookieChanges={handleCookieChanges}
           />
           {children({ ...this.props, handleCookieChanges })}
           <Footer language={language} data={data.footer} />
