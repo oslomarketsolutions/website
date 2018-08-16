@@ -113,7 +113,7 @@ export default class Navbar extends Component {
 
   toggleLanguageSelector = () => {
     if (
-      this.props.hideCookiePopUp ||
+      this.props.hideCookiePopUp === false ||
       this.props.hideCookiePopUp === undefined
     ) {
       this.setState({
