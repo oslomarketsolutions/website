@@ -72,6 +72,15 @@ export const faLibrary = library.add(
 
 const fontAwesomeCSS = dom.css();
 
+const shouldHideCookiePopUp = () => {
+  const haveSeenPopUp = getParsedCookie('haveSeenPopUp');
+
+  // Hide in prerender
+  if (haveSeenPopUp === null) return true;
+
+  // In all other cases, show if user has not consented
+  return haveSeenPopUp;
+};
 export default class TemplateWrapper extends Component {
   static propTypes = {
     location: PropTypes.shape({}),
@@ -84,7 +93,7 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
+    hideCookiePopUp: shouldHideCookiePopUp(),
     setHubspotCookie: getParsedCookie('setHubspotCookie'),
     setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
   };

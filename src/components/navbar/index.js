@@ -94,10 +94,7 @@ export default class Navbar extends Component {
   };
 
   toggleCookieManager = () => {
-    if (
-      this.props.hideCookiePopUp === false ||
-      this.props.hideCookiePopUp === undefined
-    ) {
+    if (!this.props.hideCookiePopUp) {
       this.closePopUpAndOpenManager();
     } else {
       this.setState(prevState => ({
@@ -112,10 +109,7 @@ export default class Navbar extends Component {
   };
 
   toggleLanguageSelector = () => {
-    if (
-      this.props.hideCookiePopUp === false ||
-      this.props.hideCookiePopUp === undefined
-    ) {
+    if (!this.props.hideCookiePopUp) {
       this.setState({
         languageSelectorOpen: true,
       });
@@ -305,10 +299,7 @@ export default class Navbar extends Component {
                 </div>
                 <div
                   className={`${styles.cookiePopUp} ${
-                    this.props.hideCookiePopUp === undefined ||
-                    this.props.hideCookiePopUp
-                      ? ''
-                      : styles.open
+                    this.props.hideCookiePopUp ? '' : styles.open
                   }`}
                 >
                   <div className={styles.indicator} />
