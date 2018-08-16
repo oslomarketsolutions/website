@@ -14,7 +14,7 @@ export const CareerPageTemplate = ({
   handleCookieChanges,
 }) => {
   const enableAnalytics = () => {
-    handleCookieChanges(true, 'Analytics');
+    handleCookieChanges(true, 'analytics');
   };
 
   return (
