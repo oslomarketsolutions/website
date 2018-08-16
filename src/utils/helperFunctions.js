@@ -48,6 +48,7 @@ export const getCookie = cookieName => {
         return c.substring(name.length, c.length);
       }
     }
+    return '';
   }
-  return '';
+  return false;
 };
