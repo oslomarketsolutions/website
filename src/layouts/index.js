@@ -84,15 +84,9 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    hideCookiePopUp: true,
+    hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
     setHubspotCookie: getParsedCookie('setHubspotCookie'),
     setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
-  };
-
-  componentDidMount = () => {
-    this.setState({
-      hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
-    });
   };
 
   handleConfirmation = confirmedAll => {
