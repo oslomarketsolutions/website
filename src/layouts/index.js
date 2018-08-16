@@ -52,6 +52,7 @@ import {
   faShuttleVan,
   faCalendarAlt,
   faWatchFitness,
+  faSmileBeam,
 } from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
@@ -85,6 +86,7 @@ export const faLibrary = library.add(
   faShuttleVan,
   faCalendarAlt,
   faWatchFitness,
+  faSmileBeam,
   faCopyright,
   faArrowUp,
   faServer,
