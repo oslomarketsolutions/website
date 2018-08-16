@@ -8,8 +8,8 @@ linkCardsSection:
       header: Investor portals
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        Standard components that can easily be integrated into existing web
+        portals.
       header: OMS Components
       isDark: false
     - description: >-
@@ -111,8 +111,11 @@ services:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: >-
-      OMS components library with React Components for the most used market data
-      components
+      Standard components for presenting streaming market data. The components
+      are written in React and modern JavaScript and are built to be easy to
+      integrate into existing solutions. If you want to present market data in
+      your current web portal, this may be the product for you. Contact us for a
+      noncommital demo.
   sectionHeader:
     header: DIY
     subHeader: More flexibilty with access to our API or component library
