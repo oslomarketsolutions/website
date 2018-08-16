@@ -125,7 +125,7 @@ export default class TemplateWrapper extends Component {
   };
 
   state = {
-    hideCookiePopUp: true,
+    hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
     setHubspotCookie: getParsedCookie('setHubspotCookie'),
     setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
 
@@ -138,10 +138,6 @@ export default class TemplateWrapper extends Component {
     if (this.state.setGoogleAnalyticsCookie) {
       this.enableGoogleAnalytics();
     }
-
-    this.setState({
-      hideCookiePopUp: getParsedCookie('haveSeenPopUp'),
-    });
   };
 
   componentDidUpdate = prevProps => {
