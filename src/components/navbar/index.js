@@ -305,7 +305,10 @@ export default class Navbar extends Component {
                 </div>
                 <div
                   className={`${styles.cookiePopUp} ${
-                    this.props.hideCookiePopUp ? '' : styles.open
+                    this.props.hideCookiePopUp ||
+                    this.props.hideCookiePopUp === undefined
+                      ? ''
+                      : styles.open
                   }`}
                 >
                   <div className={styles.indicator} />
