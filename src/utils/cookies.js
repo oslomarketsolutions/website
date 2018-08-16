@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 
 export const getParsedCookie = name => {
-  if (typeof window === 'undefined') return false;
+  if (typeof window === 'undefined') return null;
   return Cookies.getJSON(name);
 };
 export const setCookie = (name, value, expirationDays) => {

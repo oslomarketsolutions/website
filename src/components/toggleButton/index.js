@@ -33,7 +33,7 @@ export default class ToggleButton extends Component {
             id={this.props.id}
             type="checkbox"
             onChange={this.toggle}
-            checked={this.props.isOn}
+            checked={this.props.isOn || false}
             disabled={this.props.disabled}
           />
         </label>
