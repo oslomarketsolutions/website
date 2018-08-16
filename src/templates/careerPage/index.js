@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
-import { getCookie } from '../../utils/cookies';
+import { getParsedCookie } from '../../utils/cookies';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
@@ -61,7 +61,7 @@ export const CareerPageTemplate = ({
           <h2>{positions.header}</h2>
           <p className="subtitle">{positions.text}</p>
         </div>
-        {getCookie('setGoogleAnalyticsCookie') !== '' ? (
+        {getParsedCookie('setGoogleAnalyticsCookie') !== '' ? (
           <iframe
             title="Job Vacancies"
             src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
