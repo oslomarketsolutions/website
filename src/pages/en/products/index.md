@@ -8,8 +8,8 @@ linkCardsSection:
       header: Investor portals
       isDark: false
     - description: >-
-        Standard components that can easily be integrated into existing web
-        portals.
+        Seamless integration with least effort. OMS components are standard
+        components that can easily be integrated into existing web portals.
       header: OMS Components
       isDark: false
     - description: >-
@@ -111,11 +111,11 @@ services:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: >-
-      Standard components for presenting streaming market data. The components
-      are written in React and modern JavaScript and are built to be easy to
-      integrate into existing solutions. If you want to present market data in
-      your current web portal, this may be the product for you. Contact us for a
-      noncommital demo.
+      OMS components are standard components for presenting streaming market
+      data. The components are written in React and modern JavaScript and are
+      built to be easy to integrate into existing solutions. If you want to
+      present market data in your current web portal, this may be the product
+      for you. Contact us for a noncommital demo.
   sectionHeader:
     header: DIY
     subHeader: More flexibilty with access to our API or component library
