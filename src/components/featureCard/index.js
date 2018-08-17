@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FeatureCard.module.scss';
@@ -23,13 +24,17 @@ const FeatureCard = ({ title, description, features, to, index, isDark }) => {
     codeBranchIcon = true;
   }
   return (
-    <div className={`${styles.featureCard} ${isDark ? styles.dark : ''}`}>
+    <div
+      className={classNames(styles.featureCard, {
+        [styles.dark]: isDark,
+      })}
+    >
       <div className={styles.header}>
         <div className={styles.iconWrapper}>
           <div
-            className={`${styles.icon} ${
-              codeBranchIcon ? styles.codeBranchIcon : ''
-            }`}
+            className={classNames(styles.icon, {
+              [styles.codeBranchIcon]: codeBranchIcon,
+            })}
           >
             {icon}
           </div>
@@ -45,8 +50,10 @@ const FeatureCard = ({ title, description, features, to, index, isDark }) => {
             </li>
           ))}
       </ul>
-      {/* Linken må få riktig 'to' fra props */}
-      <Link className={`textButton ${styles.customizationLink}`} to={to}>
+      <Link
+        className={classNames('textButton', styles.customizationLink)}
+        to={to}
+      >
         Learn more <FontAwesomeIcon icon={['fas', 'arrow-right']} />
       </Link>
     </div>

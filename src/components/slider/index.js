@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './slider.module.scss';
 
 export default class Slider extends Component {
@@ -59,7 +60,9 @@ const Slide = ({ array, i, slideCount }) => {
   const active = i === slideCount;
   return (
     <div
-      className={`${styles.slideContainer} ${active ? styles.slideActive : ''}`}
+      className={classNames(styles.slideContainer, {
+        [styles.slideActive]: active,
+      })}
     >
       {array.map(logo => (
         <img key={logo.name} alt={logo.name} src={logo.logo} />
@@ -98,7 +101,9 @@ Dots.propTypes = {
 
 const Dot = ({ id, active, dotClick }) => (
   <button
-    className={`${styles.dot} ${active ? styles.active : ''}`}
+    className={classNames(styles.dot, {
+      [styles.active]: active,
+    })}
     onClick={() => dotClick(id)}
   />
 );

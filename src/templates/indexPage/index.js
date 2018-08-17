@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styles from './indexPage.module.scss';
@@ -27,8 +28,10 @@ const IndexPageTemplate = ({ language, data }) => {
   return (
     <main className={styles.homePage}>
       <section className={styles.animation}>
-        <h1 className={`hero ${styles.centered}`}>{hero.title}</h1>
-        <p className={`heroSubtitle ${styles.centered}`}>{hero.subtitle}</p>
+        <h1 className={classNames('hero', styles.centered)}>{hero.title}</h1>
+        <p className={classNames('heroSubtitle', styles.centered)}>
+          {hero.subtitle}
+        </p>
         <BigButton to="mailto:info@oms.no" text="Contact us" />
       </section>
 
@@ -130,7 +133,7 @@ const IndexPageTemplate = ({ language, data }) => {
           />
         </div>
 
-        <h2 className={`${styles.subHeader1} ${styles.centered}`}>
+        <h2 className={classNames(styles.subHeader1, styles.centered)}>
           {customization.header}
         </h2>
         <p>{customization.text}</p>
