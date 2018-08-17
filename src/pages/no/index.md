@@ -57,8 +57,8 @@ investorPortal:
 customization:
   cards:
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data
+        Markedsdata fra hele verden med strømmende data over Websockets og
+        statisk data over REST.
       features:
         - Real Time
         - Flexible
@@ -80,7 +80,7 @@ customization:
         - User Friendly
       header: OMS Components
       isDark: false
-    - description: Keep investor clients informed and up to date anywhere and at any
+    - description: 'En full portal, skreddersydd til ditt behov.'
       features:
         - Real Time
         - Flexible
@@ -88,7 +88,7 @@ customization:
         - Customized
         - ProBroker
         - User Friendly
-      header: Managed solutions
+      header: Driftete tjenester
       isDark: true
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
