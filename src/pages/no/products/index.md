@@ -81,6 +81,7 @@ standardProducts:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
+    buttonText: Kontakt oss
   irModules:
     header: IR Modules
     image: /img/irModulesPlaceholder.png
@@ -88,6 +89,7 @@ standardProducts:
       Whether you want a fully hosted and managed web trader, fund savings
       platform, portfolio reporting or market data information, OMS can help you
       get there.
+    buttonText: Kontakt oss
   sectionHeader:
     header: Standard products
     subHeader: ''
@@ -100,6 +102,7 @@ services:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
+    buttonText: Kontakt oss
   omsComponents:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
@@ -109,6 +112,7 @@ services:
       bygget for å være enkle å integrere i eksisterende løsninger. Dersom du
       ønsker å presentere markedsdata i din nåværende nettportal kan dette være
       produktet for deg. Kontakt oss for en uforpliktende demo.
+    buttonText: Kontakt oss
   sectionHeader:
     header: Services
     subHeader: >-
@@ -119,4 +123,3 @@ services:
       platform, portfolio reporting or market data information, OMS can help you
       get there.
 ---
-

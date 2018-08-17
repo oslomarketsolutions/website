@@ -16,7 +16,6 @@ export class ProductPageTemplate extends Component {
     standardProducts: PropTypes.shape({}),
     services: PropTypes.shape({}),
     imageSizes: PropTypes.arrayOf(PropTypes.object),
-    language: PropTypes.string,
   };
 
   scrollToRef = (event, ref) => {
@@ -36,11 +35,7 @@ export class ProductPageTemplate extends Component {
       standardProducts,
       services,
       imageSizes,
-      language,
     } = this.props;
-
-    const parsedPath = /^\/(\w\w)/.exec(language);
-    const strippedLanguage = parsedPath && parsedPath[1];
 
     return (
       <main className={styles.productPage}>
@@ -142,7 +137,11 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{standardProducts.arena.header}</h2>
             <p className="bodyLarge">{standardProducts.arena.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button
+              to="mailto:info@oms.no"
+              text={standardProducts.arena.buttonText}
+              outBound
+            />
             <ImageWrapper
               key={standardProducts.arena.header}
               src={standardProducts.arena.image}
@@ -160,7 +159,11 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{standardProducts.irModules.header}</h2>
             <p className="bodyLarge">{standardProducts.irModules.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button
+              to="mailto:info@oms.no"
+              text={standardProducts.irModules.buttonText}
+              outBound
+            />
             <ImageWrapper
               key={standardProducts.irModules.header}
               src={standardProducts.irModules.image}
@@ -188,7 +191,11 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{services.feedAPI.header}</h2>
             <p className="bodyLarge">{services.feedAPI.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button
+              to="mailto:info@oms.no"
+              text={services.feedAPI.buttonText}
+              outBound
+            />
             <ImageWrapper
               key={services.feedAPI.header}
               src={services.feedAPI.image}
@@ -206,7 +213,11 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{services.omsComponents.header}</h2>
             <p className="bodyLarge">{services.omsComponents.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button
+              to="mailto:info@oms.no"
+              text={services.omsComponents.buttonText}
+              outBound
+            />
             <ImageWrapper
               key={services.omsComponents.header}
               src={services.omsComponents.image}
@@ -221,7 +232,7 @@ export class ProductPageTemplate extends Component {
   }
 }
 
-const ProductPage = ({ data, location }) => {
+const ProductPage = ({ data }) => {
   const page = data.page.frontmatter;
   const imageSizes = data.imageSizes.edges;
 
@@ -232,7 +243,6 @@ const ProductPage = ({ data, location }) => {
       standardProducts={page.standardProducts}
       services={page.services}
       imageSizes={imageSizes}
-      language={location.pathname}
     />
   );
 };
@@ -245,7 +255,6 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-  location: PropTypes.shape({}),
 };
 
 export const productPageQuery = graphql`
@@ -303,11 +312,13 @@ export const productPageQuery = graphql`
             header
             image
             text
+            buttonText
           }
           irModules {
             header
             image
             text
+            buttonText
           }
         }
         services {
@@ -320,11 +331,13 @@ export const productPageQuery = graphql`
             header
             image
             text
+            buttonText
           }
           omsComponents {
             header
             image
             text
+            buttonText
           }
         }
       }
