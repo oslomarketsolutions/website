@@ -4,6 +4,7 @@ hero:
     Drift og utvikling av løsninger for handel i fond og aksjer,
     porteføljeraportering og markedsdata
   title: Finansielle webløsninger
+  buttonText: Kontakt oss
 transitionalElement:
   customerLogos:
     - logo: /img/afm_logo.png
@@ -54,6 +55,7 @@ investorPortal:
   text: >-
     OMS hjelper deg med løsninger for fond- og aksjehandel, fondsrapportering,
     spareplattformer og børsportaler med markedsdata fra hele verden.
+  buttonText: Lær mer
 customization:
   cards:
     - description: >-
@@ -117,6 +119,7 @@ otherProducts:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
+    buttonText: Learn more
   irModules:
     header: IR Modules
     image: /img/irModulesPlaceholder.png
@@ -124,5 +127,5 @@ otherProducts:
       Whether you want a fully hosted and managed web trader, fund savings
       platform, portfolio reporting or market data information, OMS can help you
       get there.
+    buttonText: Learn more
 ---
-

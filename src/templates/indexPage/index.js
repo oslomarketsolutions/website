@@ -32,7 +32,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <p className={classNames('heroSubtitle', styles.centered)}>
           {hero.subtitle}
         </p>
-        <BigButton to="mailto:info@oms.no" text="Contact us" />
+        <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
       </section>
 
       <section className={styles.transition}>
@@ -109,7 +109,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <p className="bodyLarge">{investorPortal.text}</p>
         <Button
           to={`/${strippedLanguage}/products`}
-          text="Learn more"
+          text={investorPortal.buttonText}
           useArrow
         />
         <div className={styles.investorPortalImagesWrapper}>
@@ -163,7 +163,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <p className="bodyLarge">{otherProducts.arena.text}</p>
         <Button
           to={`/${strippedLanguage}/products`}
-          text="Learn more"
+          text={otherProducts.arena.buttonText}
           useArrow
         />
         <ImageWrapper
@@ -178,7 +178,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
         <Button
           to={`/${strippedLanguage}/products`}
-          text="Learn more"
+          text={otherProducts.irModules.buttonText}
           useArrow
         />
         <ImageWrapper
