@@ -24,9 +24,11 @@
     }
 
     .linkCards {
-      grid-column: $main;
+      grid-column: $full;
+      width: 1170px;
       grid-row: 2;
-      margin: $XXL -18px 80px;
+      // margin: $XXL -16px 80px -14px;
+      margin: $XXL auto 80px;
       display: flex;
       flex-flow: row wrap;
     }
