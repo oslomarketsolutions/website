@@ -250,6 +250,7 @@ collections:
             name: "transitionalElement"
             widget: "object"
             fields:
+              - {label: "Social media text", name: "socialMediaText", widget: "string"}
               - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
                   {label: "Companies number", name: "companiesNumber", widget: "string"},
                   {label: "Companies text", name: "companiesText", widget: "string"},
@@ -512,6 +513,7 @@ collections:
             name: "transitionalElement"
             widget: "object"
             fields:
+              - {label: "Social media text", name: "socialMediaText", widget: "string"}
               - {label: "Numbers and text", name: "numbersAndText", widget: "object", fields: [
                   {label: "Companies number", name: "companiesNumber", widget: "string"},
                   {label: "Companies text", name: "companiesText", widget: "string"},
