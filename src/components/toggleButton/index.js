@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './toggleButton.module.scss';
 
 export default class ToggleButton extends Component {
@@ -23,13 +24,14 @@ export default class ToggleButton extends Component {
 
     return (
       <div
-        className={`${styles.toggleButton} ${
-          this.props.isOn ? styles.checked : ''
-        } ${this.props.disabled ? styles.disabled : ''}`}
+        className={classNames(styles.toggleButton, {
+          [styles.checked]: this.props.isOn,
+          [styles.disabled]: this.props.disabled,
+        })}
       >
         <label className={styles.tglBtn} htmlFor={this.props.id}>
           <input
-            className={`${styles.tgl} ${styles.tglLight}`}
+            className={styles.tgl}
             id={this.props.id}
             type="checkbox"
             onChange={this.toggle}

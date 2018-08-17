@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ToggleButton from '../toggleButton/index';
 import styles from './cookieToggle.module.scss';
@@ -38,9 +39,9 @@ export default class CookieToggle extends Component {
         <div className={styles.header}>
           <button className={styles.toggleDetails} onClick={this.toggleDetails}>
             <FontAwesomeIcon
-              className={`${styles.chevron} ${
-                this.state.detailsOpen ? styles.open : ''
-              }`}
+              className={classNames(styles.chevron, {
+                [styles.open]: this.state.detailsOpen,
+              })}
               icon={['fas', 'chevron-right']}
             />
             <h6>{header}</h6>
@@ -55,9 +56,9 @@ export default class CookieToggle extends Component {
         </div>
         <p className="bodySmall">{text}</p>
         <div
-          className={`${styles.tableWrapper} ${
-            this.state.detailsOpen ? styles.open : ''
-          }`}
+          className={classNames(styles.tableWrapper, {
+            [styles.open]: this.state.detailsOpen,
+          })}
         >
           <table className="bodySmall">
             <tbody>

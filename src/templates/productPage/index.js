@@ -8,6 +8,7 @@ import SectionHeader from '../../components/sectionHeader/index';
 import Button from '../../components/button/index';
 import LinkCard from '../../components/linkCard';
 import ServiceIntegrations from '../../components/serviceIntegrations/index';
+import getLanguage from '../../utils/language';
 
 export class ProductPageTemplate extends Component {
   static propTypes = {
@@ -16,7 +17,7 @@ export class ProductPageTemplate extends Component {
     standardProducts: PropTypes.shape({}),
     services: PropTypes.shape({}),
     imageSizes: PropTypes.arrayOf(PropTypes.object),
-    language: PropTypes.string,
+    location: PropTypes.shape({ pathname: PropTypes.string }),
   };
 
   scrollToRef = (event, ref) => {
@@ -36,11 +37,10 @@ export class ProductPageTemplate extends Component {
       standardProducts,
       services,
       imageSizes,
-      language,
+      location,
     } = this.props;
 
-    const parsedPath = /^\/(\w\w)/.exec(language);
-    const strippedLanguage = parsedPath && parsedPath[1];
+    const language = getLanguage(location.pathname);
 
     return (
       <main className={styles.productPage}>
@@ -142,7 +142,7 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{standardProducts.arena.header}</h2>
             <p className="bodyLarge">{standardProducts.arena.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button to={`/${language}/products`} text="Contact us" />
             <ImageWrapper
               key={standardProducts.arena.header}
               src={standardProducts.arena.image}
@@ -160,7 +160,7 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{standardProducts.irModules.header}</h2>
             <p className="bodyLarge">{standardProducts.irModules.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button to={`/${language}/products`} text="Contact us" />
             <ImageWrapper
               key={standardProducts.irModules.header}
               src={standardProducts.irModules.image}
@@ -188,7 +188,7 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{services.feedAPI.header}</h2>
             <p className="bodyLarge">{services.feedAPI.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button to={`/${language}/products`} text="Contact us" />
             <ImageWrapper
               key={services.feedAPI.header}
               src={services.feedAPI.image}
@@ -206,7 +206,7 @@ export class ProductPageTemplate extends Component {
           >
             <h2>{services.omsComponents.header}</h2>
             <p className="bodyLarge">{services.omsComponents.text}</p>
-            <Button to={`/${strippedLanguage}/products`} text="Contact us" />
+            <Button to={`/${language}/products`} text="Contact us" />
             <ImageWrapper
               key={services.omsComponents.header}
               src={services.omsComponents.image}
@@ -232,7 +232,7 @@ const ProductPage = ({ data, location }) => {
       standardProducts={page.standardProducts}
       services={page.services}
       imageSizes={imageSizes}
-      language={location.pathname}
+      location={location}
     />
   );
 };

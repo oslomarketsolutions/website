@@ -41,6 +41,7 @@ import './style.scss';
 import Navbar from '../components/navbar/index';
 import Footer from '../components/footer/index';
 import { getParsedCookie, setCookie, removeCookie } from '../utils/cookies';
+import getLanguage from '../utils/language';
 
 export const faLibrary = library.add(
   faLinkedin,
@@ -100,14 +101,14 @@ export default class TemplateWrapper extends Component {
 
   handleConfirmation = confirmedAll => {
     if (confirmedAll) {
-      setCookie('setHubspotCookie', 'true', 365);
-      setCookie('setGoogleAnalyticsCookie', 'true', 365);
+      setCookie('setHubspotCookie', true, 365);
+      setCookie('setGoogleAnalyticsCookie', true, 365);
       this.setState({
         setHubspotCookie: true,
         setGoogleAnalyticsCookie: true,
       });
     }
-    setCookie('haveSeenPopUp', 'true', 365);
+    setCookie('haveSeenPopUp', true, 365);
     this.setState({
       hideCookiePopUp: true,
     });
@@ -116,7 +117,7 @@ export default class TemplateWrapper extends Component {
   handleCookieChanges = (isOn, id) => {
     if (id === 'tracking') {
       if (isOn) {
-        setCookie('setHubspotCookie', 'true', 365);
+        setCookie('setHubspotCookie', true, 365);
         this.setState({
           setHubspotCookie: true,
         });
@@ -133,7 +134,7 @@ export default class TemplateWrapper extends Component {
       }
     } else if (id === 'analytics') {
       if (isOn) {
-        setCookie('setGoogleAnalyticsCookie', 'true', 365);
+        setCookie('setGoogleAnalyticsCookie', true, 365);
         this.setState({
           setGoogleAnalyticsCookie: true,
         });
@@ -149,9 +150,7 @@ export default class TemplateWrapper extends Component {
 
   render() {
     const { children, location, data } = this.props;
-
-    const parsedPath = /^\/(\w\w)/.exec(location.pathname);
-    const language = parsedPath && parsedPath[1];
+    const language = getLanguage(location.pathname);
 
     return (
       <React.Fragment>
