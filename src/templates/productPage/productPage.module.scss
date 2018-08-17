@@ -25,12 +25,12 @@
 
     .linkCards {
       grid-column: $full;
-      width: 1170px;
+      max-width: 1170px;
       grid-row: 2;
-      // margin: $XXL -16px 80px -14px;
-      margin: $XXL auto 80px;
+      margin: $XXL -16px 80px -14px;
       display: flex;
       flex-flow: row wrap;
+      justify-self: center;
     }
   }
   .investorPortal {
