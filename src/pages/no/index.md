@@ -6,6 +6,7 @@ hero:
   title: Finansielle webløsninger
   buttonText: Kontakt oss
 transitionalElement:
+  socialMediaText: Follow us
   customerLogos:
     - logo: /img/afm_logo.png
       name: Artic Fund Management
@@ -119,7 +120,7 @@ otherProducts:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
-    buttonText: Learn more
+    buttonText: Lær mer
   irModules:
     header: IR Modules
     image: /img/irModulesPlaceholder.png
@@ -127,5 +128,5 @@ otherProducts:
       Whether you want a fully hosted and managed web trader, fund savings
       platform, portfolio reporting or market data information, OMS can help you
       get there.
-    buttonText: Learn more
+    buttonText: Lær mer
 ---

@@ -39,7 +39,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <div className={styles.socialMedia}>
           <ul>
             <li>
-              <p className="bodyLarge">Follow us</p>
+              <p className="bodyLarge">{transitionalElement.socialMediaText}</p>
             </li>
             <li>
               <OutboundLink

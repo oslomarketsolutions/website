@@ -30,6 +30,7 @@ export const pageQuery = graphql`
           buttonText
         }
         transitionalElement {
+          socialMediaText
           numbersAndText {
             companiesNumber
             companiesText
