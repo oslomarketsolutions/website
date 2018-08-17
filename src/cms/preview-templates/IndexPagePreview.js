@@ -50,8 +50,14 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         hero: {
           title: entry.getIn(['data', 'hero', 'title']),
           subtitle: entry.getIn(['data', 'hero', 'subtitle']),
+          buttonText: entry.getIn(['data', 'hero', 'buttonText']),
         },
         transitionalElement: {
+          socialMediaText: entry.getIn([
+            'data',
+            'transitionalElement',
+            'socialMediaText',
+          ]),
           numbersAndText: {
             companiesNumber: entry.getIn([
               'data',
@@ -118,6 +124,12 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             ),
             header: entry.getIn(['data', 'otherProducts', 'arena', 'header']),
             text: entry.getIn(['data', 'otherProducts', 'arena', 'text']),
+            buttonText: entry.getIn([
+              'data',
+              'otherProducts',
+              'arena',
+              'buttonText',
+            ]),
           },
           irModules: {
             image: getAsset(
@@ -130,6 +142,12 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'header',
             ]),
             text: entry.getIn(['data', 'otherProducts', 'irModules', 'text']),
+            buttonText: entry.getIn([
+              'data',
+              'otherProducts',
+              'irModules',
+              'buttonText',
+            ]),
           },
         },
       },

@@ -6,7 +6,7 @@ hero:
   title: Finansielle webløsninger
   buttonText: Kontakt oss
 transitionalElement:
-  socialMediaText: Follow us
+  socialMediaText: Følg oss
   customerLogos:
     - logo: /img/afm_logo.png
       name: Artic Fund Management

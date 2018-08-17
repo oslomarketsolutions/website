@@ -4,7 +4,7 @@ hero:
   title: Financial platforms for the modern web
   buttonText: Contact us
 transitionalElement:
-  socialMediaText: Følg oss
+  socialMediaText: Follow us
   customerLogos:
     - logo: /img/hb_logo.png
       name: handelsbanken
