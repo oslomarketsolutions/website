@@ -33,10 +33,9 @@ investorPortal:
     header: Boost your media content with live stock data
     image: /img/productsPagePlaceholder.png
     overline: Market data Portal
-    text: >-
-      Full coverage of the financial market with live, streaming data. With
-      smart links to content, we enable you to integrate our flexible wed
-      modules in articles to create a live media site.
+    text: >
+      Full coverage of the financial market with live, streaming data. Create a
+      live media site by integrating our flexible web modules in your articles.
 
       We cover all asset classes from the Nordic region, stocks from Europe, UK,
       US, Canada and Asia, as well as worldwide indices, currencies, commodities
@@ -59,9 +58,9 @@ investorPortal:
       Web Traders, Fund Reports, Savings Platform, Portfolio Reporting, Market
       Data Portal
     text: >-
-      Designed and created for each company's needs, with OMS' powerful standard
-      components and framework as base, combined with customized features for a
-      complete offer to your users. 
+      Designed and created for each company's needs. With OMS' powerful standard
+      components and framework, combined with customized features for a complete
+      offer to your users. 
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -80,15 +79,16 @@ investorPortal:
     header: Stock trading in GDPR  and MiFID II-compliant client portals
     image: /img/productsPagePlaceholder.png
     overline: Web Trader
-    text: >-
-      Empower your investors with a web trader providing streaming data to the
-      browser with a sub-second delay. Full order depth, international data,
-      suitability tests, Iceberg orders and stop loss are just a few of the
-      things we cover in the standard framework on which we rely to build a
-      customized trader just for you. The powerful Admin Tool gives your
-      employees easy access to a full audit trail, ability to see the same as
-      the client, flexibility to adjust client communication and to publish
-      analysis reports and more.
+    text: >
+      Empower your investors with a web trader providing real-time streaming
+      data to the browser. Full order depth, international data, suitability
+      tests, Iceberg orders and stop loss are just a few of the things we
+      deliver with standard OMS framework. In which we build a fully
+      customizable trader for your needs. This is up to date and compliant with
+      GDPR and MiFID II regulations.
+
+      The admin tool gives entitled employees easy access to client management
+      and support functions. 
 standardProducts:
   arena:
     buttonText: Contact us
@@ -131,7 +131,7 @@ services:
       for you. Contact us for a noncommital demo.
   sectionHeader:
     header: DIY
-    subHeader: More flexibilty with access to our API or component library
+    subHeader: More flexibilty with access to our APIs or component library
     text: >-
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
