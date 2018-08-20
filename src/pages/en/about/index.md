@@ -96,7 +96,7 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
-    - description: Text
+    - description: Yogalærer på deltid. Namaste
       image: /img/simen_flatby.png
       jobTitle: Backend developer
       jobType: backEnd
