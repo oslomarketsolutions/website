@@ -191,6 +191,7 @@ header.headerUnderline {
   }
 
   .cookieManager {
+    display: none;
     position: absolute;
     top: 48px;
     right: -20px;
@@ -290,10 +291,6 @@ header.headerUnderline {
         padding: 0 $M;
       }
     }
-  }
-
-  .hide {
-    display: none;
   }
 
   .open {
@@ -566,6 +563,7 @@ header.navColorWhite .navbar {
       padding: 0 $XS 0 $M;
 
       .ulWrapper {
+        display: none;
         position: absolute;
         top: 41px;
         border-radius: $XXS;
@@ -575,6 +573,7 @@ header.navColorWhite .navbar {
         color: $textColor;
         width: 120px;
         height: auto;
+        box-shadow: $navbarShadow;
 
         .indicator {
           position: absolute;
@@ -637,10 +636,6 @@ header.navColorWhite .navbar {
         }
       }
 
-      .hide {
-        display: none;
-      }
-
       .open {
         display: block;
       }
@@ -650,7 +645,7 @@ header.navColorWhite .navbar {
     .cookiePopUp {
       top: 49px;
       right: -7px;
-      max-height: calc(100vh - 56px); // 523px;
+      max-height: calc(100vh - 56px);
       .scrollContainer {
         max-height: calc(100vh - 57px);
       }
@@ -691,7 +686,7 @@ header.navColorWhite .navbar {
       li.languageSelectorMobile {
         margin-left: 20px;
         transition: all 200ms ease;
-        ul {
+        .ulWrapper {
           display: none;
         }
       }

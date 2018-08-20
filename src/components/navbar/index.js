@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
 import CookieToggle from '../cookieToggle/index';
@@ -140,21 +141,22 @@ export default class Navbar extends Component {
 
     return (
       <header
-        className={`${navColorWhite ? styles.navColorWhite : ''} ${
-          this.state.headerUnderline ? styles.headerUnderline : ''
-        }`}
+        className={classNames({
+          [styles.navColorWhite]: navColorWhite,
+          [styles.headerUnderline]: this.state.headerUnderline,
+        })}
       >
         <div className={styles.navbar}>
           <div className={styles.logoWrapper}>
             <Link
-              className={`${styles.noHover} ${styles.logo}`}
+              className={classNames(styles.noHover, styles.logo)}
               to={`/${this.props.language}`}
               onClick={this.closeLanguageSelector}
             >
               <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
             </Link>
           </div>
-          <nav className={this.state.navOpen ? styles.open : null}>
+          <nav>
             <ul className="navLinks">
               <li>
                 <Link
@@ -195,25 +197,25 @@ export default class Navbar extends Component {
                   <FontAwesomeIcon icon={['fal', 'globe']} />
                 </button>
                 <div
-                  className={`${styles.ulWrapper} ${
-                    this.state.languageSelectorOpen ? styles.open : styles.hide
-                  }`}
+                  className={classNames(styles.ulWrapper, {
+                    [styles.open]: this.state.languageSelectorOpen,
+                  })}
                 >
                   <div className={styles.indicator} />
                   <ul>
                     <li
-                      className={
-                        this.props.language === 'en' ? styles.selected : ''
-                      }
+                      className={classNames({
+                        [styles.selected]: this.props.language === 'en',
+                      })}
                     >
                       <Link
                         to={this.changePageLanguage()}
                         onClick={this.closeLanguageSelector}
                       >
                         <div
-                          className={
-                            this.props.language === 'en' ? styles.selected : ''
-                          }
+                          className={classNames({
+                            [styles.selected]: this.props.language === 'en',
+                          })}
                         >
                           <FontAwesomeIcon icon="check" />
                         </div>
@@ -221,18 +223,18 @@ export default class Navbar extends Component {
                       </Link>
                     </li>
                     <li
-                      className={
-                        this.props.language === 'no' ? styles.selected : ''
-                      }
+                      className={classNames({
+                        [styles.selected]: this.props.language === 'no',
+                      })}
                     >
                       <Link
                         to={this.changePageLanguage()}
                         onClick={this.closeLanguageSelector}
                       >
                         <div
-                          className={
-                            this.props.language === 'no' ? styles.selected : ''
-                          }
+                          className={classNames({
+                            [styles.selected]: this.props.language === 'no',
+                          })}
                         >
                           <FontAwesomeIcon icon="check" />
                         </div>
@@ -250,9 +252,9 @@ export default class Navbar extends Component {
                   <FontAwesomeIcon icon={['fas', 'adjust']} />
                 </button>
                 <div
-                  className={`${styles.cookieManager} ${
-                    this.state.cookieManagerOpen ? styles.open : styles.hide
-                  }`}
+                  className={classNames(styles.cookieManager, {
+                    [styles.open]: this.state.cookieManagerOpen,
+                  })}
                 >
                   <div className={styles.indicator} />
                   <div className={styles.scrollContainer}>
@@ -291,30 +293,30 @@ export default class Navbar extends Component {
                     />
                     <button
                       onClick={this.toggleCookieManager}
-                      className={`textButton ${styles.save}`}
+                      className={classNames('textButton', styles.save)}
                     >
                       {cookieInfo.cookieManager.buttonText}
                     </button>
                   </div>
                 </div>
                 <div
-                  className={`${styles.cookiePopUp} ${
-                    this.props.hideCookiePopUp ? '' : styles.open
-                  }`}
+                  className={classNames(styles.cookiePopUp, {
+                    [styles.open]: !this.props.hideCookiePopUp,
+                  })}
                 >
                   <div className={styles.indicator} />
                   <h4>{cookieInfo.title}</h4>
                   <p className="bodySmall">{cookieInfo.cookiePopUp.text}</p>
                   <div className={styles.buttonWrapper}>
                     <button
+                      className={classNames('textButton', styles.manage)}
                       onClick={this.closePopUpAndOpenManager}
-                      className={`textButton ${styles.manage}`}
                     >
                       {cookieInfo.cookiePopUp.manageButtonText}
                     </button>
                     <button
+                      className={classNames('textButton', styles.understand)}
                       onClick={this.closeCookiePopUp}
-                      className={`textButton ${styles.understand}`}
                     >
                       {cookieInfo.cookiePopUp.confirmationButtonText}
                     </button>
