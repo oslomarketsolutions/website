@@ -2,8 +2,10 @@
 templateKey: productPage
 linkCardsSection:
   linkCards:
-    - description: ''
-      header: Investor portals
+    - description: >-
+        Fully managed web traders, stock market portals, fund info and portfolio
+        reports customized and integrated with your back office systems.
+      header: Investor Portals
       isDark: false
     - description: >-
         Seamless integration with least effort. OMS components are standard
@@ -16,13 +18,13 @@ linkCardsSection:
       header: Feed API
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        Showcase your share to existing and potential investors with flexible
+        web modules from OMS
       header: IR Web Modules
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        The information portal for professionals within the Norwegian securities
+        market 
       header: Arena
       isDark: false
   title: What we offer
