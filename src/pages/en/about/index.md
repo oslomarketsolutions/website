@@ -23,29 +23,28 @@ history:
     quality, availability, flexibility and great design.
 employees:
   employeeList:
-    - description: >-
-        Passionate tech-head. Bachelor in Applied Mathemathics to Social
-        Sciences from Université Aix-Marseille III
+    - description: You may have blinked and missed it.
       image: /img/tine.png
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
-    - description: Text
+    - description: Tung som bly
       image: /img/none.jpg
       jobTitle: Project Manager
       jobType: management
       title: Christian Blütecher
-    - description: Text
+    - description: |
+        Hej Micke!
       image: /img/mikael_leckborn.png
       jobTitle: Sales
       jobType: management
       title: Mikael Leckborn
-    - description: Text
+    - description: 'Bor på Nesodden, hardeste ghettoen i landet.'
       image: /img/inga_wiik-onnesjo.jpg
       jobTitle: Support
       jobType: support
       title: Inga Wiik-Önnesjö
-    - description: Text
+    - description: Hater Vazelina.
       image: /img/469px-Andreas.jpg
       jobTitle: Operations Manager
       jobType: operations
@@ -57,7 +56,7 @@ employees:
       jobTitle: Front End Team Lead
       jobType: frontEnd
       title: Espen Henriksen
-    - description: Text
+    - description: Liker å danse swing
       image: /img/kristian_hagen.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
@@ -67,32 +66,32 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Haakon Winther
-    - description: Text
+    - description: Stille og rolig gutt som liker lange turer ved stranden
       image: /img/anders_ranvik.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Anders Ranvik
-    - description: Text
+    - description: Øl-entusiast
       image: /img/rebecca_gjerstad.jpg
       jobTitle: Frontend developer/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
-    - description: Text
+    - description: I promise to quit smoking
       image: /img/gerrit_witteveen.jpg
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
-    - description: Text
+    - description: Elsker hip hop og norsk rap
       image: /img/paal-steihaug_phonebook_user1.jpg
       jobTitle: Teamleader backend
       jobType: backEnd
       title: Pål Steihaug
-    - description: Text
+    - description: <3 Taylor swift <3
       image: /img/john-erik_bye_johansen.png
       jobTitle: Backend developer
       jobType: backEnd
       title: John-Erik Bye Johansen
-    - description: Text
+    - description: <3 Sandra Lyng fan no 1 <3
       image: /img/eirik_caspari.png
       jobTitle: Backend developer
       jobType: backEnd
@@ -126,3 +125,4 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
+
