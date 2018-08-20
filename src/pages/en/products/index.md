@@ -106,14 +106,11 @@ standardProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
   sectionHeader:
-    header: Standard products
-    subHeader: >-
-      Some short line of text that summarizes this set of products. Possibly
-      mention some of the benefits.
+    header: Standard Products
+    subHeader: Get started today with our subscription based products
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      With our plug-n-play products, you will be up and running within a day or
+      two. Contact us to see how our products can help lift your business.
 services:
   feedAPI:
     buttonText: Contact us
