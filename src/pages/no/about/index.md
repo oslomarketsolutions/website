@@ -83,7 +83,7 @@ employees:
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
-    - description: Tekst
+    - description: Hjelp!
       image: /img/paal-steihaug_phonebook_user1.jpg
       jobTitle: Teamleder backend
       jobType: backEnd
