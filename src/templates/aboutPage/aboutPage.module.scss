@@ -121,7 +121,7 @@
       max-width: 1170px;
 
       .quoteWrapper {
-        margin: 18px;
+        margin: 16px;
         padding-right: $M;
         height: 300px;
         width: 736px;
@@ -157,16 +157,13 @@
       }
 
       .employeeWrapper {
-        max-width: 800px;
-        justify-content: space-around;
+        max-width: 780px;
 
         .quoteWrapper {
           width: 350px;
 
           h2 {
-            width: 95%;
-            font-size: 1.75rem;
-            line-height: 2.5rem;
+            width: 100%;
           }
         }
       }
@@ -203,8 +200,34 @@
     .aboutEmployees {
       .employeeWrapper {
         grid-column: 1 / span 10;
-        max-width: 800px;
-        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 814px) {
+  .aboutPage {
+    .aboutEmployees {
+      .employeeWrapper {
+        max-width: 684px;
+
+        .quoteWrapper {
+          width: 310px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .aboutPage {
+    .aboutEmployees {
+      .employeeWrapper {
+        max-width: 375px;
+
+        .quoteWrapper {
+          display: none;
+        }
       }
     }
   }
