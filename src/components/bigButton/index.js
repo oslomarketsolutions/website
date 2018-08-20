@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { OutboundLink } from 'react-ga';
 import styles from './bigButton.module.scss';
 
-const BigButton = ({ to, text, onClick }) => (
-  <a onClick={onClick} className={`buttonLarge ${styles.bigButton}`} href={to}>
+const BigButton = ({ to, text }) => (
+  <OutboundLink className={`buttonLarge ${styles.bigButton}`} to={to} eventLabel={to}>
     {text}
-  </a>
+  </OutboundLink>
 );
 
 BigButton.propTypes = {

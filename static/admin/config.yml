@@ -211,11 +211,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "text"},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "text"},
               ]},
             ]}
           - {label: "Services", name: "services", widget: "object", fields: [
@@ -228,11 +230,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "text"},
               ]},
               {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "text"},
               ]},
             ]}
 

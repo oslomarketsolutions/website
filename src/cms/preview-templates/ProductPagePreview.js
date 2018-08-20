@@ -123,6 +123,12 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       entry.getIn(['data', 'standardProducts', 'arena', 'image']),
     ),
     text: entry.getIn(['data', 'standardProducts', 'arena', 'text']),
+    buttonText: entry.getIn([
+      'data',
+      'standardProducts',
+      'arena',
+      'buttonText',
+    ]),
   };
 
   const irModules = {
@@ -131,6 +137,12 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       entry.getIn(['data', 'standardProducts', 'irModules', 'image']),
     ),
     text: entry.getIn(['data', 'standardProducts', 'irModules', 'text']),
+    buttonText: entry.getIn([
+      'data',
+      'standardProducts',
+      'irModules',
+      'buttonText',
+    ]),
   };
 
   const standardProducts = {
@@ -149,6 +161,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     header: entry.getIn(['data', 'services', 'feedAPI', 'header']),
     image: getAsset(entry.getIn(['data', 'services', 'feedAPI', 'image'])),
     text: entry.getIn(['data', 'services', 'feedAPI', 'text']),
+    buttonText: entry.getIn(['data', 'services', 'feedAPI', 'buttonText']),
   };
 
   const omsComponents = {
@@ -157,6 +170,12 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       entry.getIn(['data', 'services', 'omsComponents', 'image']),
     ),
     text: entry.getIn(['data', 'services', 'omsComponents', 'text']),
+    buttonText: entry.getIn([
+      'data',
+      'services',
+      'omsComponents',
+      'buttonText',
+    ]),
   };
 
   const services = {
