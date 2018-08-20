@@ -30,13 +30,17 @@ linkCardsSection:
   title: What we offer
 investorPortal:
   marketData:
-    header: 'IPS, ASK and all you need'
+    header: A complete savings portal
     image: /img/productsPagePlaceholder.png
-    overline: Fund portal
+    overline: Funds and portfolio reporting
     text: >-
-      Engage your customers and help them save more with a reliable savings
-      platform that is easy to adjust and works just as well on all size of
-      devices
+      Engage your customers and help them save more with a reliable platform
+      that is easy to adjust and works just as well on all size of devices.
+      Integrated with Centevo's platform, ProInvest or SS&Cs Tradex these
+      portals support monthly fund subscriptions, switch, moving to ASK and IPS
+      (for Norwegian accounts) and much more. OMS can handle advanced
+      performance calculations, attribution as well as online onboarding,
+      trading and PDF export of a monthly portfolio report.
   onlinePortfolio:
     header: Live and worldwide
     image: /img/productsPagePlaceholder.png
@@ -47,11 +51,13 @@ investorPortal:
       stock quotes and more.
   sectionHeader:
     header: Investor portals
-    subHeader: 'Funds, stocks, fixed income, international indices and more'
+    subHeader: >-
+      Web Traders, Fund Reports, Savings Platform, Portfolio Reporting, Market
+      Data Portal
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data portal, OMS can help you get
-      there.
+      Designed and created for each company's needs, with OMS' powerful standard
+      components and framework as base, combined with customized features for a
+      complete offer to your users. 
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -67,15 +73,18 @@ investorPortal:
         name: Signicat5
     text: We play well with others
   trading:
-    header: GDPR  and MiFID compliant client portals
+    header: Stock trading in GDPR  and MiFID II-compliant client portals
     image: /img/productsPagePlaceholder.png
     overline: Web Trader
     text: >-
-      Empower your investors with a web trader providings streaming data to the
+      Empower your investors with a web trader providing streaming data to the
       browser with a sub-second delay. Full order depth, international data,
-      suitability tests, Iceberg orders, stop loss  are just a few of the things
-      we cover in the standard framework on which we rely to build a customized
-      trader just for you.
+      suitability tests, Iceberg orders and stop loss are just a few of the
+      things we cover in the standard framework on which we rely to build a
+      customized trader just for you. The powerful Admin Tool gives your
+      employees easy access to a full audit trail, ability to see the same as
+      the client, flexibility to adjust client communication and to publish
+      analysis reports and more.
 standardProducts:
   arena:
     buttonText: Contact us
