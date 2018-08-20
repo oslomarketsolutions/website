@@ -56,8 +56,8 @@ employees:
       jobType: frontEnd
       title: Espen Henriksen
     - description: >-
-        Fullstack-utvikler med spesiell interesse for javascript og web
-        løsninger. Pusler med dataprosessering. 
+        Fullstack-utvikler med spesiell interesse for javascript og
+        webløsninger. Pusler med dataprosessering. 
       image: /img/kristian_hagen.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
