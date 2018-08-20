@@ -100,7 +100,7 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
-    - description: Text
+    - description: "Just let me finish up this code... \U0001F468\U0001F3FB‍\U0001F4BB"
       image: /img/simen_flatby.png
       jobTitle: Backend developer
       jobType: backEnd
