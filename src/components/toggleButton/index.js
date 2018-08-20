@@ -38,6 +38,7 @@ export default class ToggleButton extends Component {
             checked={this.props.isOn || false}
             disabled={this.props.disabled}
           />
+          <span className="sr-only">Toggle for {this.props.id}</span>
         </label>
         <span className="textButton">{OnOrOffText}</span>
       </div>
