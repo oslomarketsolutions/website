@@ -90,7 +90,9 @@ employees:
       jobTitle: Teamleder backend
       jobType: backEnd
       title: Pål Steihaug
-    - description: Tekst
+    - description: >-
+        Datafrisør med ekstra interesse for markedsdata. Ja, også Depeche Mode
+        da.
       image: /img/john-erik_bye_johansen.png
       jobTitle: Senior Systemutvikler
       jobType: backEnd
