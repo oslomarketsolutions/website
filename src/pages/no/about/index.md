@@ -83,7 +83,7 @@ employees:
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
-    - description: Hjelp!
+    - description: Tekst
       image: /img/paal-steihaug_phonebook_user1.jpg
       jobTitle: Teamleder backend
       jobType: backEnd
@@ -93,7 +93,7 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
-    - description: Tekst
+    - description: 'Opptatt av kodekvalitet, clean code og trommespilling.'
       image: /img/eirik.png
       jobTitle: Backendutvikler
       jobType: backEnd
