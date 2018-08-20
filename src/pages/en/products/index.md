@@ -2,9 +2,7 @@
 templateKey: productPage
 linkCardsSection:
   linkCards:
-    - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+    - description: ''
       header: Investor portals
       isDark: false
     - description: >-
@@ -34,9 +32,9 @@ investorPortal:
     image: /img/productsPagePlaceholder.png
     overline: Fund portal
     text: >-
-      Want to engage your customers and help them save more? Do you want a
-      reliable savings platform that is easy to adjust and works just as well on
-      all size of devices?
+      Engage your customers and help them save more with a reliable savings
+      platform that is easy to adjust and works just as well on all size of
+      devices
   onlinePortfolio:
     header: Live and worldwide
     image: /img/productsPagePlaceholder.png
@@ -47,11 +45,11 @@ investorPortal:
       stock quotes and more.
   sectionHeader:
     header: Investor portals
-    subHeader: 'Funds, stocks, fixed income and international indices'
+    subHeader: 'Funds, stocks, fixed income, international indices and more'
     text: >-
       Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      platform, portfolio reporting or market data portal, OMS can help you get
+      there.
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -78,20 +76,20 @@ investorPortal:
       trader just for you.
 standardProducts:
   arena:
+    buttonText: Contact us
     header: Arena
     image: /img/arena.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
-    buttonText: Contact us
   irModules:
+    buttonText: Contact us
     header: IR Web Modules
     image: /img/irModulesPlaceholder.png
-    text: >+
+    text: >
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
-    buttonText: Contact us
   sectionHeader:
     header: Standard products
     subHeader: >-
@@ -103,13 +101,14 @@ standardProducts:
       get there.
 services:
   feedAPI:
+    buttonText: Contact us
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
       With REST-APIs for static and historical data and Websockets feed for
       streaming data....
-    buttonText: Contact us
   omsComponents:
+    buttonText: Contact us
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: >-
@@ -118,7 +117,6 @@ services:
       built to be easy to integrate into existing solutions. If you want to
       present market data in your current web portal, this may be the product
       for you. Contact us for a noncommital demo.
-    buttonText: Contact us
   sectionHeader:
     header: DIY
     subHeader: More flexibilty with access to our API or component library
@@ -126,3 +124,4 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
+
