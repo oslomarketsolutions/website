@@ -68,37 +68,6 @@ export class ProductPageTemplate extends Component {
             subHeader={investorPortal.sectionHeader.subHeader}
             text={investorPortal.sectionHeader.text}
           />
-          <section className={styles.marketData}>
-            <p className={classNames('overline', styles.overline)}>
-              {investorPortal.marketData.overline}
-            </p>
-            <h2>{investorPortal.marketData.header}</h2>
-            <p className="bodyLarge">{investorPortal.marketData.text}</p>
-            <ImageWrapper
-              key={investorPortal.marketData.header}
-              src={investorPortal.marketData.image}
-              alt={investorPortal.marketData.header}
-              sizes={findImageSizes(
-                investorPortal.marketData.image,
-                imageSizes,
-              )}
-              outerWrapperClassName={styles.imageContainer}
-            />
-          </section>
-          <section className={styles.trading}>
-            <p className={classNames('overline', styles.overline)}>
-              {investorPortal.trading.overline}
-            </p>
-            <h2>{investorPortal.trading.header}</h2>
-            <p className="bodyLarge">{investorPortal.trading.text}</p>
-            <ImageWrapper
-              key={investorPortal.trading.header}
-              src={investorPortal.trading.image}
-              alt={investorPortal.trading.header}
-              sizes={findImageSizes(investorPortal.trading.image, imageSizes)}
-              outerWrapperClassName={styles.imageContainer}
-            />
-          </section>
           <section className={styles.onlinePortfolio}>
             <p className={classNames('overline', styles.overline)}>
               {investorPortal.onlinePortfolio.overline}
@@ -115,6 +84,37 @@ export class ProductPageTemplate extends Component {
               )}
               outerWrapperClassName={styles.imageContainer}
             />
+            <section className={styles.trading}>
+              <p className={classNames('overline', styles.overline)}>
+                {investorPortal.trading.overline}
+              </p>
+              <h2>{investorPortal.trading.header}</h2>
+              <p className="bodyLarge">{investorPortal.trading.text}</p>
+              <ImageWrapper
+                key={investorPortal.trading.header}
+                src={investorPortal.trading.image}
+                alt={investorPortal.trading.header}
+                sizes={findImageSizes(investorPortal.trading.image, imageSizes)}
+                outerWrapperClassName={styles.imageContainer}
+              />
+            </section>
+            <section className={styles.marketData}>
+              <p className={classNames('overline', styles.overline)}>
+                {investorPortal.marketData.overline}
+              </p>
+              <h2>{investorPortal.marketData.header}</h2>
+              <p className="bodyLarge">{investorPortal.marketData.text}</p>
+              <ImageWrapper
+                key={investorPortal.marketData.header}
+                src={investorPortal.marketData.image}
+                alt={investorPortal.marketData.header}
+                sizes={findImageSizes(
+                  investorPortal.marketData.image,
+                  imageSizes,
+                )}
+                outerWrapperClassName={styles.imageContainer}
+              />
+            </section>
           </section>
           <ServiceIntegrations
             header={investorPortal.serviceIntegrations.header}
