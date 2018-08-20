@@ -30,9 +30,21 @@ linkCardsSection:
   title: What we offer
 investorPortal:
   marketData:
-    header: A complete savings portal
+    header: Boost your media content with live stock data
     image: /img/productsPagePlaceholder.png
-    overline: Funds and portfolio reporting
+    overline: Market data Portal
+    text: >-
+      Full coverage of the financial market with live, streaming data. With
+      smart links to content, we enable you to integrate our flexible wed
+      modules in articles to create a live media site.
+
+      We cover all asset classes from the Nordic region, stocks from Europe, UK,
+      US, Canada and Asia, as well as worldwide indices, currencies, commodities
+      and more.
+  onlinePortfolio:
+    header: 'A complete savings portal '
+    image: /img/productsPagePlaceholder.png
+    overline: 'Funds and portfolio reporting '
     text: >-
       Engage your customers and help them save more with a reliable platform
       that is easy to adjust and works just as well on all size of devices.
@@ -40,15 +52,7 @@ investorPortal:
       portals support monthly fund subscriptions, switch, moving to ASK and IPS
       (for Norwegian accounts) and much more. OMS can handle advanced
       performance calculations, attribution as well as online onboarding,
-      trading and PDF export of a monthly portfolio report.
-  onlinePortfolio:
-    header: Live and worldwide
-    image: /img/productsPagePlaceholder.png
-    overline: Market Data
-    text: >-
-      A full coverage of the financial market with live, streaming data with
-      smart links to content. We cover indices, currencies, commodities, fund,
-      stock quotes and more.
+      trading and PDF export of a monthly portfolio report. 
   sectionHeader:
     header: Investor portals
     subHeader: >-
