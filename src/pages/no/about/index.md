@@ -89,7 +89,7 @@ employees:
       jobType: backEnd
       title: Pål Steihaug
     - description: Tekst
-      image: /img/eirik_caspari.png
+      image: /img/eirik.png
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
@@ -127,3 +127,4 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
+
