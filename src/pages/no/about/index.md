@@ -60,7 +60,10 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Kristian Hagen
-    - description: Tekst
+    - description: |+
+        3 positive sider ☝️             
+        Ydmyk, smart, intelligent, intellektuell. Negative sider : 
+
       image: /img/haakonw.png
       jobTitle: Frontendutvikler
       jobType: frontEnd
@@ -124,4 +127,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

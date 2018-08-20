@@ -23,7 +23,9 @@ history:
     quality, availability, flexibility and great design.
 employees:
   employeeList:
-    - description: I only love my bed and my mama
+    - description: >-
+        Passionate tech-head. Bachelor in Applied Mathemathics to Social
+        Sciences from Université Aix-Marseille III
       image: /img/tine.png
       jobTitle: CEO
       jobType: management
@@ -124,4 +126,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

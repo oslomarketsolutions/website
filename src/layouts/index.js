@@ -7,6 +7,7 @@ import {
   faMedium,
   faGithubSquare,
   faReact,
+  faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowUp,
@@ -32,7 +33,25 @@ import {
   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
 
-import { faGlobe } from '@fortawesome/pro-light-svg-icons';
+import {
+  faGlobe,
+  faUserClock,
+  faHome,
+  faUtensils,
+  faLaptopCode,
+  faHandHoldingSeedling,
+  faBriefcaseMedical,
+  faSnowflake,
+  faNewspaper,
+  faMobile,
+  faHands,
+  faDollarSign,
+  faPiggyBank,
+  faChartLine,
+  faShuttleVan,
+  faCalendarAlt,
+  faWatchFitness,
+} from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';
@@ -48,7 +67,24 @@ export const faLibrary = library.add(
   faFacebook,
   faMedium,
   faGithubSquare,
+  faSpotify,
   faGlobe,
+  faUserClock,
+  faHome,
+  faUtensils,
+  faLaptopCode,
+  faHandHoldingSeedling,
+  faBriefcaseMedical,
+  faSnowflake,
+  faNewspaper,
+  faMobile,
+  faHands,
+  faDollarSign,
+  faPiggyBank,
+  faChartLine,
+  faShuttleVan,
+  faCalendarAlt,
+  faWatchFitness,
   faCopyright,
   faArrowUp,
   faServer,

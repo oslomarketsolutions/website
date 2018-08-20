@@ -15,7 +15,11 @@ export const AboutPageTemplate = ({
 }) => {
   // Insert a placeholder as second item in array.
   // In employeeWrapper the map will replace the placeholder with actual quote
-  if (employees.employeeList) {
+  if (
+    employees.employeeList &&
+    employees.employeeList[1] &&
+    employees.employeeList[1].title !== 'quoteWrapper'
+  ) {
     employees.employeeList.splice(1, 0, { title: 'quoteWrapper' });
   }
 
