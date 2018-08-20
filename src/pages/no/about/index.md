@@ -93,21 +93,21 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
-    - description: 'Opptatt av kodekvalitet, clean code og trommespilling.'
+    - description: Tekst
       image: /img/eirik.png
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
+    - description: B.eng dataingeniør fra NTNU i Ålesund.
+      image: /img/oystein_barstad.jpg
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Øystein Barstad
     - description: Tekst
       image: /img/simen_flatby.png
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
-    - description: Tekst
-      image: /img/oystein_barstad.jpg
-      jobTitle: Backendutvikler
-      jobType: backEnd
-      title: Øystein Barstad
     - description: Tekst
       image: /img/0.jpeg
       jobTitle: Sommervikar
