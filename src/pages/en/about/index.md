@@ -110,7 +110,9 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Øystein Barstad
-    - description: Text
+    - description: >-
+        Got homework to do, coffee to serve and mediocre code to write. No time
+        for this.
       image: /img/0.jpeg
       jobTitle: Summer intern
       jobType: summerIntern
