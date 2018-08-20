@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Link from 'gatsby-link';
 import { OutboundLink } from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,13 +11,13 @@ const Button = ({ to, text, useArrow, outBound }) => {
     <OutboundLink
       to={to}
       eventLabel={to}
-      className={`buttonNormal ${styles.button}`}
+      className={classNames('buttonNormal', styles.button)}
     >
       {text}
       {useArrow && <FontAwesomeIcon icon={['fas', 'arrow-right']} />}
     </OutboundLink>
   ) : (
-    <Link to={to} className={`buttonNormal ${styles.button}`}>
+    <Link to={to} className={classNames('buttonNormal', styles.button)}>
       {text}
       {useArrow && <FontAwesomeIcon icon={['fas', 'arrow-right']} />}
     </Link>

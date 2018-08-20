@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
 import styles from './linkCard.module.scss';
@@ -25,7 +26,11 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
   }
 
   return (
-    <div className={`${styles.linkCard} ${isDark ? styles.dark : ''}`}>
+    <div
+      className={classNames(styles.linkCard, {
+        [styles.dark]: isDark,
+      })}
+    >
       <Link to={`#${header}`} onClick={event => onClickFunction(event, header)}>
         <div className={styles.header}>
           <div className={styles.iconWrapper}>
@@ -34,10 +39,12 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
           <h3>{header}</h3>
         </div>
         <p>{description}</p>
-        <div className={`textButton ${styles.link}`}>Go to {header}</div>
+        <div className={classNames('textButton', styles.link)}>
+          Go to {header}
+        </div>
       </Link>
       <Link
-        className={`textButton ${styles.mobileLink}`}
+        className={classNames('textButton', styles.mobileLink)}
         to={`#${header}`}
         onClick={event => onClickFunction(event, header)}
       >

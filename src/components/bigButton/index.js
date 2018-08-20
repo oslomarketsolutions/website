@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { OutboundLink } from 'react-ga';
 import styles from './bigButton.module.scss';
 
 const BigButton = ({ to, text }) => (
   <OutboundLink
-    className={`buttonLarge ${styles.bigButton}`}
+    className={classNames('buttonLarge', styles.bigButton)}
     to={to}
     eventLabel={to}
   >

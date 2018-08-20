@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { OutboundLink } from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -12,7 +13,7 @@ const Footer = ({ language, data }) => {
 
   return (
     <footer className={styles.footer}>
-      <div className={`bodyNormal ${styles.footerContainer}`}>
+      <div className={classNames('bodyNormal', styles.footerContainer)}>
         <div className={styles.navigate}>
           <h3>{language === 'en' ? 'Navigate' : 'Navigasjon'}</h3>
           <ul>
@@ -173,7 +174,7 @@ const Footer = ({ language, data }) => {
               2018 Oslo Market Solutions. All Rights Reserved.
             </p>
           </div>
-          <div className={`bodySmall ${styles.licenses}`}>
+          <div className={classNames('bodySmall', styles.licenses)}>
             <Link to={`/${language}/licenses`}>Licenses</Link>
           </div>
         </div>

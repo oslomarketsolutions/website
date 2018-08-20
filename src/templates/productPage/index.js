@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import ImageWrapper from '../../components/imageWrapper';
 import { findImageSizes } from '../../utils/helperFunctions';
@@ -68,7 +69,7 @@ export class ProductPageTemplate extends Component {
             text={investorPortal.sectionHeader.text}
           />
           <section className={styles.marketData}>
-            <p className={`overline ${styles.overline}`}>
+            <p className={classNames('overline', styles.overline)}>
               {investorPortal.marketData.overline}
             </p>
             <h2>{investorPortal.marketData.header}</h2>
@@ -85,7 +86,7 @@ export class ProductPageTemplate extends Component {
             />
           </section>
           <section className={styles.trading}>
-            <p className={`overline ${styles.overline}`}>
+            <p className={classNames('overline', styles.overline)}>
               {investorPortal.trading.overline}
             </p>
             <h2>{investorPortal.trading.header}</h2>
@@ -99,7 +100,7 @@ export class ProductPageTemplate extends Component {
             />
           </section>
           <section className={styles.onlinePortfolio}>
-            <p className={`overline ${styles.overline}`}>
+            <p className={classNames('overline', styles.overline)}>
               {investorPortal.onlinePortfolio.overline}
             </p>
             <h2>{investorPortal.onlinePortfolio.header}</h2>

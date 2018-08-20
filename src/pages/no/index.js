@@ -27,8 +27,10 @@ export const pageQuery = graphql`
         hero {
           title
           subtitle
+          buttonText
         }
         transitionalElement {
+          socialMediaText
           numbersAndText {
             companiesNumber
             companiesText
@@ -48,6 +50,7 @@ export const pageQuery = graphql`
             name
           }
           text
+          buttonText
         }
         customization {
           header
@@ -72,11 +75,13 @@ export const pageQuery = graphql`
             image
             header
             text
+            buttonText
           }
           irModules {
             image
             header
             text
+            buttonText
           }
         }
       }
