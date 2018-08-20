@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: Trying to leave this world better then when I found it.
+    - description: Trying to leave this world better than when I found it.
       image: /img/tine.png
       jobTitle: CEO
       jobType: management
