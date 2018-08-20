@@ -5,7 +5,7 @@ linkCardsSection:
     - description: >-
         Fully managed web traders, stock market portals, fund info and portfolio
         reports customized and integrated with your back office systems.
-      header: Investor Portals
+      header: Investor portals
       isDark: false
     - description: >-
         Seamless integration with least effort. OMS components are standard
@@ -24,7 +24,7 @@ linkCardsSection:
       isDark: false
     - description: >-
         The information portal for professionals within the Norwegian securities
-        market 
+        market
       header: Arena
       isDark: false
   title: What we offer
@@ -52,7 +52,7 @@ investorPortal:
       portals support monthly fund subscriptions, switch, moving to ASK and IPS
       (for Norwegian accounts) and much more. OMS can handle advanced
       performance calculations, attribution as well as online onboarding,
-      trading and PDF export of a monthly portfolio report. 
+      trading and PDF export of a monthly portfolio report.
   sectionHeader:
     header: Investor portals
     subHeader: >-
@@ -61,7 +61,7 @@ investorPortal:
     text: >-
       Designed and created for each company's needs, with OMS' powerful standard
       components and framework as base, combined with customized features for a
-      complete offer to your users. 
+      complete offer to your users.
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -136,4 +136,3 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
-
