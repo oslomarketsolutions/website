@@ -7,7 +7,7 @@ hero:
     internet-based solutions for the financial markets. With a Nordic
     perspective, we focus on high availability, quality, innovation, design,
     speed and flexibility towards our clients. All of our solutions are hosted
-    and operated inhouse and delivered as a software as a service.
+    and operated by Oslo Market Solutions.
   title: Oslo Market solutions
 history:
   header: A brief history
@@ -91,12 +91,12 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: John-Erik Bye Johansen
-    - description: <3 Sandra Lyng fan no 1 <3
+    - description: 'Concerned with code quality, clean code and playing the drums.'
       image: /img/eirik.png
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
-    - description: Yogalærer på deltid. Namaste
+    - description: Text
       image: /img/simen_flatby.png
       jobTitle: Backend developer
       jobType: backEnd
