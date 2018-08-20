@@ -19,7 +19,7 @@ linkCardsSection:
       isDark: false
     - description: >-
         Showcase your share to existing and potential investors with flexible
-        web modules from OMS
+        web modules from OMS. From simple quotes to advanced charting tools.
       header: IR Web Modules
       isDark: false
     - description: >-
@@ -45,13 +45,12 @@ investorPortal:
     image: /img/productsPagePlaceholder.png
     overline: 'Funds and portfolio reporting '
     text: >-
-      Engage your customers and help them save more with a reliable platform
-      that is easy to adjust and works just as well on all size of devices.
-      Integrated with Centevo's platform, ProInvest or SS&Cs Tradex these
-      portals support monthly fund subscriptions, switch, moving to ASK and IPS
-      (for Norwegian accounts) and much more. OMS can handle advanced
-      performance calculations, attribution as well as online onboarding,
-      trading and PDF export of a monthly portfolio report. 
+      Engage your customers and help them invest more with a modern web
+      solution. Integrated with the Centevo platform, ProInvest from Tieto or
+      SS&C/Advent’s Tradex, these portals support monthly fund subscriptions,
+      switch, subscription and redemption. OMS can handle advanced performance
+      calculations, attribution as well as online onboarding and PDF export of a
+      monthly portfolio report.
   sectionHeader:
     header: Investor portals
     subHeader: >-
@@ -117,8 +116,13 @@ services:
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
-      With REST-APIs for static and historical data and Websockets feed for
-      streaming data....
+      Access global market data with high quality REST-APIs. OMS deliver
+      websockets for streaming data and APIs for static and delayed data. The
+      feed is easy to implement and you are able to develop your web site the
+      way you want. Choose between standard or a custom feed. Feed may include
+      real-time and delayed quotes, trades and orders, historical prices,
+      corporate actions, dividends, financial calendars, stock exchange notices,
+      top shareholders and more from several different exchanges globally. 
   omsComponents:
     buttonText: Contact us
     header: OMS Components
