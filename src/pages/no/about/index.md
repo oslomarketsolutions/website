@@ -91,7 +91,7 @@ employees:
       jobType: backEnd
       title: Pål Steihaug
     - description: >-
-        Datafrisør med ekstra interesse for markedsdata. Ja, også Depeche Mode
+        Datafrisør med spesiell interesse for markedsdata. Ja, også Depeche Mode
         da.
       image: /img/john-erik_bye_johansen.png
       jobTitle: Senior Systemutvikler
