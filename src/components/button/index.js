@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from 'gatsby-link';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './button.module.scss';
 
 const Button = ({ to, text, useArrow, outBound }) => {
   const button = outBound ? (
     <OutboundLink
-      href={to}
+      to={to}
+      eventLabel={to}
       className={classNames('buttonNormal', styles.button)}
     >
       {text}

@@ -9,7 +9,7 @@
     display: grid;
     grid-column-gap: $gridColumnGap;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 250px max-content max-content max-content;
+    grid-template-rows: 250px max-content;
     color: $antiFlashWhite;
     min-height: 750px;
 
@@ -29,12 +29,13 @@
     }
 
     .backgroundImage {
+      margin-top: 64px;
       position: absolute;
       z-index: -1;
       height: 750px;
       width: 100%;
       grid-column: $full;
-      grid-row: 1 / span 5;
+      grid-row: 1 / span 2;
 
       &:before {
         content: '';
@@ -57,11 +58,12 @@
     display: grid;
     grid-column-gap: $gridColumnGap;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: max-content max-content max-content;
+    grid-template-rows: max-content 100px;
+    background-color: $antiFlashWhite;
 
     .textContainer {
       margin-top: $XXL;
-      grid-column: 2 / span 6;
+      grid-column: 3 / span 6;
       grid-row: 1;
 
       // overline
@@ -151,6 +153,30 @@
       border: none;
       box-shadow: $newBoxShadow;
     }
+
+    .iframeAlt {
+      margin-top: $M;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+
+      p {
+        padding-bottom: $S;
+      }
+
+      .iframeButton {
+        color: $antiFlashWhite;
+        background-color: $vibrantBlue;
+        border-radius: $S;
+        border: none;
+        width: 200px;
+        height: 50px;
+
+        &:hover {
+          background-color: $primaryButtonHover;
+        }
+      }
+    }
   }
 }
 
@@ -183,8 +209,7 @@
   .careerPage {
     .hero {
       color: $textColor;
-      grid-template-rows: 500px max-content max-content max-content;
-      background-color: $antiFlashWhite;
+      grid-template-rows: 564px max-content;
 
       .backgroundImage {
         height: 500px;
@@ -221,6 +246,13 @@
       .perkCardContainer {
         grid-column: 1 / span 10;
         max-width: 100%;
+      }
+    }
+
+    .hero {
+      grid-template-rows: 538px max-content;
+      .backgroundImage {
+        margin-top: 38px;
       }
     }
 

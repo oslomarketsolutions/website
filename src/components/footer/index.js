@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from 'gatsby-link';
@@ -53,7 +53,8 @@ const Footer = ({ language, data }) => {
           <ul>
             <li>
               <OutboundLink
-                href={groupWebsites.website1.url}
+                to={groupWebsites.website1.url}
+                eventLabel={groupWebsites.website1.title}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -62,7 +63,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href={groupWebsites.website2.url}
+                to={groupWebsites.website2.url}
+                eventLabel={groupWebsites.website2.title}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +73,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href={groupWebsites.website3.url}
+                to={groupWebsites.website3.url}
+                eventLabel={groupWebsites.website3.title}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -80,7 +83,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href={groupWebsites.website4.url}
+                to={groupWebsites.website4.url}
+                eventLabel={groupWebsites.website4.title}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,7 +93,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href={groupWebsites.website5.url}
+                to={groupWebsites.website5.url}
+                eventLabel={groupWebsites.website5.title}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -98,7 +103,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href={groupWebsites.website6.url}
+                to={groupWebsites.website6.url}
+                eventLabel={groupWebsites.website6.title}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -121,7 +127,8 @@ const Footer = ({ language, data }) => {
           <ul>
             <li>
               <OutboundLink
-                href="https://www.linkedin.com/company/oslo-market-solutions-as/"
+                to="https://www.linkedin.com/company/oslo-market-solutions-as/"
+                eventLabel="LinkedIn from footer"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -130,7 +137,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://www.facebook.com/oslomarketsolutions/"
+                to="https://www.facebook.com/oslomarketsolutions/"
+                eventLabel="Facebook from footer"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -139,7 +147,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://medium.com/shark-bytes"
+                to="https://medium.com/shark-bytes"
+                eventLabel="Shark Bytes Blog from footer"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -148,7 +157,8 @@ const Footer = ({ language, data }) => {
             </li>
             <li>
               <OutboundLink
-                href="https://github.com/oslomarketsolutions"
+                to="https://github.com/oslomarketsolutions"
+                eventLabel="Github from footer"
                 target="_blank"
                 rel="noopener noreferrer"
               >

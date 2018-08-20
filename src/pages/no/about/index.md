@@ -1,7 +1,7 @@
 ---
 templateKey: aboutPage
 hero:
-  backgroundImage: /img/chemex.jpg
+  backgroundImage: /img/standup.png
   text: >-
     Oslo Market Solutions is one of the leading Nordic suppliers of
     internet-based solutions for the financial markets. With a Nordic

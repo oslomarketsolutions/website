@@ -26,26 +26,22 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
   }
 
   return (
-    <Link
+    <div
       className={classNames(styles.linkCard, {
         [styles.dark]: isDark,
       })}
-      to={`#${header}`}
-      onClick={event => onClickFunction(event, header)}
     >
-      <div className={styles.header}>
-        <div className={styles.iconWrapper}>
-          <div className={styles.icon}>{icon}</div>
+      <Link to={`#${header}`} onClick={event => onClickFunction(event, header)}>
+        <div className={styles.header}>
+          <div className={styles.iconWrapper}>
+            <div className={styles.icon}>{icon}</div>
+          </div>
+          <h3>{header}</h3>
         </div>
-        <h3>{header}</h3>
-      </div>
-      <p>{description}</p>
-      <Link
-        className={classNames('textButton', styles.link)}
-        to={`#${header}`}
-        onClick={event => onClickFunction(event, header)}
-      >
-        Go to {header}
+        <p>{description}</p>
+        <div className={classNames('textButton', styles.link)}>
+          Go to {header}
+        </div>
       </Link>
       <Link
         className={classNames('textButton', styles.mobileLink)}
@@ -57,7 +53,7 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
         </div>
         <h3 className="linkCardTitle">{header}</h3>
       </Link>
-    </Link>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faLinkedin,
@@ -50,6 +51,7 @@ import {
   faShuttleVan,
   faCalendarAlt,
   faWatchFitness,
+  faSmileBeam,
   faCookieBite,
 } from '@fortawesome/pro-light-svg-icons';
 
@@ -85,6 +87,7 @@ export const faLibrary = library.add(
   faShuttleVan,
   faCalendarAlt,
   faWatchFitness,
+  faSmileBeam,
   faCopyright,
   faArrowUp,
   faServer,
@@ -120,7 +123,9 @@ const shouldHideCookiePopUp = () => {
 };
 export default class TemplateWrapper extends Component {
   static propTypes = {
-    location: PropTypes.shape({}),
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }),
     children: PropTypes.func,
     data: PropTypes.shape({
       allMarkdownRemark: PropTypes.shape({
@@ -133,12 +138,65 @@ export default class TemplateWrapper extends Component {
     hideCookiePopUp: shouldHideCookiePopUp(),
     setHubspotCookie: getParsedCookie('setHubspotCookie'),
     setGoogleAnalyticsCookie: getParsedCookie('setGoogleAnalyticsCookie'),
+
+    googleAnalyticsIsActive: false,
+    googleAnalyticsHasBeenInitialized: false, // The idea with this is to not initialize GA more than once
+  };
+
+  componentDidMount = () => {
+    // If previously accepted Analytics
+    if (this.state.setGoogleAnalyticsCookie) {
+      this.enableGoogleAnalytics();
+    }
+  };
+
+  componentDidUpdate = prevProps => {
+    // If user navigates to a different page, log it
+    const prevPathname = prevProps.location.pathname;
+    const newPathname = this.props.location.pathname;
+    if (newPathname !== prevPathname) {
+      if (this.state.googleAnalyticsIsActive) {
+        ReactGA.pageview(newPathname);
+      }
+    }
+  };
+
+  enableGoogleAnalytics = () => {
+    // Check if it's not already active
+    if (!this.state.googleAnalyticsIsActive) {
+      // If opt-out has been set earlier, disable it again
+      if (window['ga-disable-UA-101364630-3']) {
+        window['ga-disable-UA-101364630-3'] = false;
+      }
+      // If Google Analytics hasn't been initialized on this visit
+      if (!this.state.googleAnalyticsHasBeenInitialized) {
+        ReactGA.initialize('UA-101364630-3');
+        ReactGA.ga('set', 'anonymizeIp', true);
+        ReactGA.pageview(this.props.location.pathname);
+        this.setState({
+          googleAnalyticsHasBeenInitialized: true,
+        });
+      }
+      this.setState({
+        googleAnalyticsIsActive: true,
+      });
+    }
+  };
+
+  disableGoogleAnalytics = () => {
+    if (this.state.googleAnalyticsIsActive) {
+      window['ga-disable-UA-101364630-3'] = true;
+      this.setState({
+        googleAnalyticsIsActive: false,
+      });
+    }
   };
 
   handleConfirmation = confirmedAll => {
     if (confirmedAll) {
       setCookie('setHubspotCookie', true, 365);
       setCookie('setGoogleAnalyticsCookie', true, 365);
+      this.enableGoogleAnalytics();
       this.setState({
         setHubspotCookie: true,
         setGoogleAnalyticsCookie: true,
@@ -171,12 +229,17 @@ export default class TemplateWrapper extends Component {
     } else if (id === 'analytics') {
       if (isOn) {
         setCookie('setGoogleAnalyticsCookie', true, 365);
+        this.enableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: true,
         });
       } else {
         // Deleting google analytics cookies
         removeCookie('setGoogleAnalyticsCookie');
+        removeCookie('_ga');
+        removeCookie('_gat');
+        removeCookie('_gid');
+        this.disableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: false,
         });
@@ -185,6 +248,7 @@ export default class TemplateWrapper extends Component {
   };
 
   render() {
+    const { handleCookieChanges, handleConfirmation } = this;
     const { children, location, data } = this.props;
     const language = getLanguage(location.pathname);
 
@@ -218,10 +282,10 @@ export default class TemplateWrapper extends Component {
             hideCookiePopUp={this.state.hideCookiePopUp}
             analyticsOn={this.state.setGoogleAnalyticsCookie}
             trackingOn={this.state.setHubspotCookie}
-            handleConfirmation={this.handleConfirmation}
-            handleCookieChanges={this.handleCookieChanges}
+            handleConfirmation={handleConfirmation}
+            handleCookieChanges={handleCookieChanges}
           />
-          {children()}
+          {children({ ...this.props, handleCookieChanges })}
           <Footer language={language} data={data.footer} />
         </div>
       </React.Fragment>

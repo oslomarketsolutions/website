@@ -6,7 +6,9 @@ import styles from './perkCard.module.scss';
 const PerkCard = ({ title, text, icon }) => (
   <div className={styles.perkCard}>
     <div className={styles.header}>
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon
+        icon={icon.length === 1 ? ['fal', 'smile-beam'] : icon}
+      />
       <h4>{title}</h4>
     </div>
     <div className={styles.description}>

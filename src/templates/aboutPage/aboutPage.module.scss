@@ -11,27 +11,31 @@
     display: grid;
     grid-column-gap: $gridColumnGap;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 250px max-content max-content max-content;
+    grid-template-rows: 250px max-content;
     min-height: 750px;
 
-    h1 {
-      grid-column: 3 / span 6;
+    .textContainer {
       grid-row: 2;
-    }
-
-    h1 + p {
-      padding: $XXL 0;
       grid-column: 3 / span 6;
-      grid-row: 3;
+      h1 {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+
+      h1 + p {
+        padding: $XXL 0;
+      }
     }
 
     .backgroundImage {
+      margin-top: 64px;
       position: absolute;
       z-index: -1;
       height: 750px;
       width: 100%;
       grid-column: $full;
-      grid-row: 1 / span 5;
+      grid-row: 1 / span 2;
 
       &:before {
         content: '';
@@ -53,28 +57,30 @@
     background-color: $antiFlashWhite;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 50px max-content max-content max-content 100px;
+    grid-template-rows: max-content 100px;
     grid-column-gap: 16px;
 
-    // overline
-    & > p:first-of-type {
-      grid-column: 3;
-      grid-row: 2;
-      width: 156px;
-      padding-bottom: $M;
-      margin-bottom: $XS;
-      border-bottom: 2px solid $vibrantBlue;
-    }
-
-    h2 {
+    .textContainer {
+      margin-top: $XXL;
       grid-column: 3 / span 6;
-      grid-row: 3;
-      margin: 20px 0;
-    }
+      grid-row: 1;
 
-    p:last-of-type {
-      grid-column: 3 / span 6;
-      grid-row: 4;
+      p:first-of-type {
+        grid-column: 3;
+        grid-row: 2;
+        width: 156px;
+        padding-bottom: $M;
+        margin-bottom: $XS;
+        border-bottom: 2px solid $vibrantBlue;
+      }
+
+      h2 {
+        margin-top: $S;
+      }
+
+      h2 + p {
+        padding: $L 0;
+      }
     }
   }
 
@@ -86,21 +92,22 @@
     grid-template-rows: 100px max-content max-content max-content 100px;
     grid-column-gap: 16px;
 
-    // overline
-    & > p:first-of-type {
-      grid-column: 2;
-      grid-row: 2;
-      width: 156px;
-      padding-bottom: $M;
-      margin-bottom: $XS;
-      border-bottom: 2px solid $vibrantBlue;
-    }
+    .textContainer {
+      grid-column: 2 / span 6;
+      grid-row: 1;
+      margin-top: $XXL;
 
-    h2 {
-      grid-column: 2 / span 8;
-      grid-row: 3;
-      width: 100%;
-      margin: 20px 0;
+      // overline
+      p:first-of-type {
+        width: 156px;
+        padding-bottom: $M;
+        margin-bottom: $XS;
+        border-bottom: 2px solid $vibrantBlue;
+      }
+
+      h2 {
+        margin-top: $S;
+      }
     }
 
     .employeeWrapper {
@@ -145,11 +152,7 @@
 @media (max-width: 1172px) {
   .aboutPage {
     .aboutEmployees {
-      & > p:first-of-type {
-        grid-column: 3;
-      }
-
-      h2 {
+      .textContainer {
         grid-column: 3 / span 6;
       }
 
@@ -175,19 +178,21 @@
   .aboutPage {
     .hero {
       color: $textColor;
-      grid-template-rows: 572px max-content max-content max-content;
+      grid-template-rows: 564px max-content;
 
-      h1 {
+      .textContainer {
         margin-top: $XXL;
-      }
+        h1 {
+          width: 100%;
+          text-align: left;
+        }
 
-      h1 + p {
-        padding-top: $M;
-        padding-bottom: $XXL;
+        h1 + p {
+          padding-top: $M;
+        }
       }
 
       .backgroundImage {
-        margin-top: 72px;
         height: 500px;
 
         &:before {
@@ -207,40 +212,22 @@
 
 @media (max-width: 580px) {
   .aboutPage {
-    .hero {
-      h1 {
+    .hero,
+    .history,
+    .aboutEmployees {
+      .textContainer {
         grid-column: 2 / span 8;
-      }
-
-      h1 + p {
-        grid-column: 2 / span 8;
-        line-height: 2rem;
       }
     }
 
-    .history {
-      & > p:first-of-type {
-        grid-column: 2;
-      }
-
-      h2 {
-        grid-column: 2 / span 8;
-      }
-
-      p:last-of-type {
-        grid-column: 2 / span 8;
+    .hero {
+      grid-template-rows: 538px max-content;
+      .backgroundImage {
+        margin-top: 38px;
       }
     }
 
     .aboutEmployees {
-      & > p:first-of-type {
-        grid-column: 2;
-      }
-
-      h2 {
-        grid-column: 2 / span 8;
-      }
-
       .employeeWrapper {
         max-width: 800px;
         justify-content: space-around;
