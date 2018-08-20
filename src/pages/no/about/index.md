@@ -98,7 +98,7 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
-    - description: B.eng dataingeniør fra NTNU i Ålesund.
+    - description: B.Eng dataingeniør ved NTNU.
       image: /img/oystein_barstad.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
