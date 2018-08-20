@@ -87,4 +87,3 @@ positions:
   text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
 ---
-

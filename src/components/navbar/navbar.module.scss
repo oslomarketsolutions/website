@@ -17,11 +17,13 @@ header.headerUnderline {
     transition: all 200ms ease;
 
     li.cookie {
+      top: 16px;
       right: -246px;
       transition: all 200ms ease;
     }
 
     li.languageSelectorDesktop {
+      top: 16px;
       right: -120px;
       transition: all 200ms ease;
     }
@@ -141,6 +143,7 @@ header.headerUnderline {
 
   li.cookie {
     position: absolute;
+    top: 36px;
     right: $XXL;
     height: $XL;
     padding: 0;
@@ -170,6 +173,7 @@ header.headerUnderline {
 
   li.languageSelectorDesktop {
     position: absolute;
+    top: 36px;
     right: 98px;
     height: $XL;
     padding: 0;

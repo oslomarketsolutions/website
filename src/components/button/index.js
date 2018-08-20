@@ -7,7 +7,11 @@ import styles from './button.module.scss';
 
 const Button = ({ to, text, useArrow, outBound }) => {
   const button = outBound ? (
-    <OutboundLink to={to} eventLabel={to} className={`buttonNormal ${styles.button}`}>
+    <OutboundLink
+      to={to}
+      eventLabel={to}
+      className={`buttonNormal ${styles.button}`}
+    >
       {text}
       {useArrow && <FontAwesomeIcon icon={['fas', 'arrow-right']} />}
     </OutboundLink>

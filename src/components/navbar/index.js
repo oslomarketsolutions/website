@@ -249,7 +249,7 @@ export default class Navbar extends Component {
                   className={styles.cookieButton}
                   onClick={this.toggleCookieManager}
                 >
-                  <FontAwesomeIcon icon={['fas', 'adjust']} />
+                  <FontAwesomeIcon icon={['fal', 'cookie-bite']} />
                 </button>
                 <div
                   className={classNames(styles.cookieManager, {
