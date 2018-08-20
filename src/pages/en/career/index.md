@@ -86,4 +86,3 @@ positions:
   header: Job vacancies
   text: Some text explaining something
 ---
-

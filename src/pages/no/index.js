@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import IndexPageTemplate from '../../templates/indexPage';
 
 const IndexPage = ({ location, data }) => (
-  <IndexPageTemplate language={location.pathname} data={data} />
+  <IndexPageTemplate location={location} data={data} />
 );
 
 IndexPage.propTypes = {

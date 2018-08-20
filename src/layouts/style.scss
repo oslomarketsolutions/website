@@ -3,6 +3,7 @@
 html {
   overflow-y: initial;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 
   body {
     color: $textColor;

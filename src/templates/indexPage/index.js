@@ -11,8 +11,9 @@ import ImageWrapper from '../../components/imageWrapper';
 import Button from '../../components/button/index';
 import BigButton from '../../components/bigButton/index';
 import ServiceIntegrations from '../../components/serviceIntegrations';
+import getLanguage from '../../utils/language';
 
-const IndexPageTemplate = ({ language, data }) => {
+const IndexPageTemplate = ({ location, data }) => {
   const {
     hero,
     transitionalElement,
@@ -22,8 +23,7 @@ const IndexPageTemplate = ({ language, data }) => {
   } = data.page.frontmatter;
 
   const imageSizes = data.imageSizes.edges;
-  const parsedPath = /^\/(\w\w)/.exec(language);
-  const strippedLanguage = parsedPath && parsedPath[1];
+  const language = getLanguage(location.pathname);
 
   return (
     <main className={styles.homePage}>
@@ -108,7 +108,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
         <Button
-          to={`/${strippedLanguage}/products`}
+          to={`/${language}/products`}
           text={investorPortal.buttonText}
           useArrow
         />
@@ -146,7 +146,7 @@ const IndexPageTemplate = ({ language, data }) => {
                 description={customizationCard.description}
                 features={customizationCard.features}
                 index={index}
-                to={`/${strippedLanguage}/products`}
+                to={`/${language}/products`}
                 isDark={customizationCard.isDark}
               />
             ))}
@@ -162,7 +162,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <h1>{otherProducts.arena.header}</h1>
         <p className="bodyLarge">{otherProducts.arena.text}</p>
         <Button
-          to={`/${strippedLanguage}/products`}
+          to={`/${language}/products`}
           text={otherProducts.arena.buttonText}
           useArrow
         />
@@ -177,7 +177,7 @@ const IndexPageTemplate = ({ language, data }) => {
         <h1>{otherProducts.irModules.header}</h1>
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
         <Button
-          to={`/${strippedLanguage}/products`}
+          to={`/${language}/products`}
           text={otherProducts.irModules.buttonText}
           useArrow
         />
@@ -201,7 +201,7 @@ IndexPageTemplate.propTypes = {
       edges: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
-  language: PropTypes.string,
+  location: PropTypes.shape({ pathname: PropTypes.string }),
 };
 
 export default IndexPageTemplate;

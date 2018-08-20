@@ -7,12 +7,12 @@
   grid-template-columns: 100px 200px;
   grid-template-rows: 50% 50%;
   height: 300px;
-  width: 350px;
+  width: 358px;
   transition: all 0.3s;
   color: $grey;
   box-shadow: $newBoxShadow;
   padding: 25px;
-  margin: 18px;
+  margin: 16px;
 
   &:hover {
     transform: scale(1.08);

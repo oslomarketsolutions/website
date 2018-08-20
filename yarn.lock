@@ -82,7 +82,7 @@
   version "0.1.7"
   resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.7.tgz#4336c4b06d0b5608ff1215464b66fcf9f4795284"
 
-"@fortawesome/fontawesome-common-types@^0.2.2":
+"@fortawesome/fontawesome-common-types@^0.2.0-9", "@fortawesome/fontawesome-common-types@^0.2.2":
   version "0.2.2"
   resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.2.tgz#7fd64eacf7f64e4d7619d21b0b2f2467f5a70611"
 
@@ -131,6 +131,12 @@
   resolved "https://npm.fontawesome.com/@fortawesome/pro-light-svg-icons/-/pro-light-svg-icons-5.2.0.tgz#03eee61be292249939c424452982b2ec34496b00"
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.2"
+
+"@fortawesome/pro-regular-svg-icons@^5.1.0-11":
+  version "5.1.0-11"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-regular-svg-icons/-/pro-regular-svg-icons-5.1.0-11.tgz#0828391b2ee0323ce7e7941aa14437bcd5bff32b"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0-9"
 
 "@fortawesome/react-fontawesome@^0.1.0-11":
   version "0.1.2"
@@ -6128,6 +6134,10 @@ jpeg-js@^0.2.0:
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.8"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.8.tgz#57a9b130888f956834aa40c5b165ba59c758f033"
+
+js-cookie@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
