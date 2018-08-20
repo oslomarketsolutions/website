@@ -1,10 +1,8 @@
 ---
 hero:
   buttonText: Kontakt oss
-  subtitle: >-
-    Drift og utvikling av løsninger for handel i fond og aksjer,
-    porteføljeraportering og markedsdata
-  title: Investorportaler og børsportaler for moderne web
+  subtitle: Keeping investors informed and empowered
+  title: Investorplatform og børsportaler for moderne web
 transitionalElement:
   customerLogos:
     - logo: /img/afm_logo.png
