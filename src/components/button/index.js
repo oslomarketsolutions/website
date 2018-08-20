@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Link from 'gatsby-link';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,12 +8,15 @@ import styles from './button.module.scss';
 
 const Button = ({ to, text, useArrow, outBound }) => {
   const button = outBound ? (
-    <OutboundLink href={to} className={`buttonNormal ${styles.button}`}>
+    <OutboundLink
+      href={to}
+      className={classNames('buttonNormal', styles.button)}
+    >
       {text}
       {useArrow && <FontAwesomeIcon icon={['fas', 'arrow-right']} />}
     </OutboundLink>
   ) : (
-    <Link to={to} className={`buttonNormal ${styles.button}`}>
+    <Link to={to} className={classNames('buttonNormal', styles.button)}>
       {text}
       {useArrow && <FontAwesomeIcon icon={['fas', 'arrow-right']} />}
     </Link>

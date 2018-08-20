@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styles from './indexPage.module.scss';
@@ -27,16 +28,18 @@ const IndexPageTemplate = ({ location, data }) => {
   return (
     <main className={styles.homePage}>
       <section className={styles.animation}>
-        <h1 className={`hero ${styles.centered}`}>{hero.title}</h1>
-        <p className={`heroSubtitle ${styles.centered}`}>{hero.subtitle}</p>
-        <BigButton to="mailto:info@oms.no" text="Contact us" />
+        <h1 className={classNames('hero', styles.centered)}>{hero.title}</h1>
+        <p className={classNames('heroSubtitle', styles.centered)}>
+          {hero.subtitle}
+        </p>
+        <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
       </section>
 
       <section className={styles.transition}>
         <div className={styles.socialMedia}>
           <ul>
             <li>
-              <p className="bodyLarge">Follow us</p>
+              <p className="bodyLarge">{transitionalElement.socialMediaText}</p>
             </li>
             <li>
               <OutboundLink
@@ -104,7 +107,11 @@ const IndexPageTemplate = ({ location, data }) => {
       <section className={styles.investorPortal}>
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
-        <Button to={`/${language}/products`} text="Learn more" useArrow />
+        <Button
+          to={`/${language}/products`}
+          text={investorPortal.buttonText}
+          useArrow
+        />
         <div className={styles.investorPortalImagesWrapper}>
           {investorPortal.investorPortalImages &&
             investorPortal.investorPortalImages.map(investorPortalImage => (
@@ -126,7 +133,7 @@ const IndexPageTemplate = ({ location, data }) => {
           />
         </div>
 
-        <h2 className={`${styles.subHeader1} ${styles.centered}`}>
+        <h2 className={classNames(styles.subHeader1, styles.centered)}>
           {customization.header}
         </h2>
         <p>{customization.text}</p>
@@ -154,7 +161,11 @@ const IndexPageTemplate = ({ location, data }) => {
       <section className={styles.arena}>
         <h1>{otherProducts.arena.header}</h1>
         <p className="bodyLarge">{otherProducts.arena.text}</p>
-        <Button to={`/${language}/products`} text="Learn more" useArrow />
+        <Button
+          to={`/${language}/products`}
+          text={otherProducts.arena.buttonText}
+          useArrow
+        />
         <ImageWrapper
           src={otherProducts.arena.image}
           alt="Abstract arena"
@@ -165,7 +176,11 @@ const IndexPageTemplate = ({ location, data }) => {
       <section className={styles.irModules}>
         <h1>{otherProducts.irModules.header}</h1>
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
-        <Button to={`/${language}/products`} text="Learn more" useArrow />
+        <Button
+          to={`/${language}/products`}
+          text={otherProducts.irModules.buttonText}
+          useArrow
+        />
         <ImageWrapper
           src={otherProducts.irModules.image}
           alt="Abstract IR Modules"

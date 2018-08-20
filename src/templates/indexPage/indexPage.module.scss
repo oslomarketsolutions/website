@@ -107,6 +107,7 @@
     .third {
       grid-column: 6 / span 4;
       grid-row: 1;
+      height: 96px;
       width: 400px;
       align-self: end;
     }
@@ -461,6 +462,7 @@
         grid-column: 2 / span 8;
         grid-row: 2;
         margin: $XL auto;
+        height: auto;
       }
 
       .customerLogos {
