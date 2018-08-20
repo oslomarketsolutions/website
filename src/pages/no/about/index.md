@@ -99,15 +99,15 @@ employees:
       jobType: backEnd
       title: Eirik Caspari
     - description: Tekst
-      image: /img/oystein_barstad.jpg
-      jobTitle: Backendutvikler
-      jobType: backEnd
-      title: Øystein Barstad
-    - description: Tekst
       image: /img/simen_flatby.png
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
+    - description: Tekst
+      image: /img/oystein_barstad.jpg
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Øystein Barstad
     - description: Tekst
       image: /img/0.jpeg
       jobTitle: Sommervikar
