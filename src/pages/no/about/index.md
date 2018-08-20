@@ -89,15 +89,15 @@ employees:
       jobType: backEnd
       title: Pål Steihaug
     - description: Tekst
-      image: /img/eirik.png
-      jobTitle: Backendutvikler
-      jobType: backEnd
-      title: Eirik Caspari
-    - description: Tekst
       image: /img/john-erik_bye_johansen.png
       jobTitle: Backendutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
+    - description: Tekst
+      image: /img/eirik.png
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Eirik Caspari
     - description: Tekst
       image: /img/oystein_barstad.jpg
       jobTitle: Backendutvikler
