@@ -7,7 +7,7 @@ hero:
     internet-based solutions for the financial markets. With a Nordic
     perspective, we focus on high availability, quality, innovation, design,
     speed and flexibility towards our clients. All of our solutions are hosted
-    and operated by Oslo Market Solutions.
+    and operated inhouse and delivered as a software as a service.
   title: Oslo Market solutions
 history:
   header: A brief history
