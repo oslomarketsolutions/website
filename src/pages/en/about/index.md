@@ -92,7 +92,7 @@ employees:
       jobType: backEnd
       title: John-Erik Bye Johansen
     - description: <3 Sandra Lyng fan no 1 <3
-      image: /img/eirik_caspari.png
+      image: /img/eirik.png
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
