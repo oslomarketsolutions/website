@@ -8,7 +8,6 @@ import SectionHeader from '../../components/sectionHeader/index';
 import Button from '../../components/button/index';
 import LinkCard from '../../components/linkCard';
 import ServiceIntegrations from '../../components/serviceIntegrations/index';
-import getLanguage from '../../utils/language';
 
 export class ProductPageTemplate extends Component {
   static propTypes = {
