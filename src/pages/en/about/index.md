@@ -88,9 +88,11 @@ employees:
       jobTitle: Teamleader backend
       jobType: backEnd
       title: Pål Steihaug
-    - description: <3 Taylor swift <3
+    - description: >-
+        Data hairdresser with particular interest for market data and Depeche
+        Mode.
       image: /img/john-erik_bye_johansen.png
-      jobTitle: Backend developer
+      jobTitle: Senior System Developer
       jobType: backEnd
       title: John-Erik Bye Johansen
     - description: 'Concerned with code quality, clean code and playing the drums.'
