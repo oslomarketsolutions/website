@@ -56,7 +56,9 @@ employees:
       jobTitle: Front End Team Lead
       jobType: frontEnd
       title: Espen Henriksen
-    - description: Liker å danse swing
+    - description: >-
+        Fullstack developer with special interest in javascript and web
+        solutions. Dabbles with data processing.
       image: /img/kristian_hagen.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
