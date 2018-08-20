@@ -18,7 +18,7 @@ history:
     Collect as a cornerstone. Today a new version of Collect is still the
     foundation of our deliveries and is what allows us to collect vast amounts
     of real-time data and distribute it efficiently to our custom-made web
-    solutions. With domain knowledge in the field of market data and finance we
+    solutions. With domain knowledge in the field of market data and finance, we
     work hard to provide solutions with high quality, availability, flexibility
     and great design.
 employees:
