@@ -236,9 +236,9 @@ export default class TemplateWrapper extends Component {
       } else {
         // Deleting google analytics cookies
         removeCookie('setGoogleAnalyticsCookie');
-        removeCookie('_ga');
-        removeCookie('_gat');
-        removeCookie('_gid');
+        removeCookie('_ga', '.oms.netlify.com');
+        removeCookie('_gat', '.oms.netlify.com');
+        removeCookie('_gid', '.oms.netlify.com');
         this.disableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: false,
