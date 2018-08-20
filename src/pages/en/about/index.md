@@ -101,7 +101,7 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Simen Flatby
-    - description: B.Eng Computer Engineering from NTNU in Ålesund.
+    - description: B.Eng Computer Engineering from NTNU.
       image: /img/oystein_barstad.jpg
       jobTitle: Backend developer
       jobType: backEnd
