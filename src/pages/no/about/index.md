@@ -55,7 +55,9 @@ employees:
       jobTitle: Teamleder frontend
       jobType: frontEnd
       title: Espen Henriksen
-    - description: Tekst
+    - description: >-
+        Fullstack-utvikler med spesiell interesse for javascript og web
+        løsninger. Pusler med data prosessering. 
       image: /img/kristian_hagen.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
