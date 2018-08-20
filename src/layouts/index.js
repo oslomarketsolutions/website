@@ -25,7 +25,6 @@ import {
   faChartArea,
   faCodeBranch,
   faCheck,
-  faAdjust,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -51,6 +50,7 @@ import {
   faShuttleVan,
   faCalendarAlt,
   faWatchFitness,
+  faCookieBite,
 } from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
@@ -103,7 +103,7 @@ export const faLibrary = library.add(
   faChartArea,
   faCodeBranch,
   faCheck,
-  faAdjust,
+  faCookieBite,
   faChevronRight,
 );
 
