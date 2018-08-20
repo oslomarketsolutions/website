@@ -249,6 +249,7 @@ export default class TemplateWrapper extends Component {
 
   render() {
     const { handleCookieChanges, handleConfirmation } = this;
+    const { googleAnalyticsIsActive } = this.state;
     const { children, location, data } = this.props;
     const language = getLanguage(location.pathname);
 
@@ -285,7 +286,11 @@ export default class TemplateWrapper extends Component {
             handleConfirmation={handleConfirmation}
             handleCookieChanges={handleCookieChanges}
           />
-          {children({ ...this.props, handleCookieChanges })}
+          {children({
+            ...this.props,
+            handleCookieChanges,
+            googleAnalyticsIsActive,
+          })}
           <Footer language={language} data={data.footer} />
         </div>
       </React.Fragment>
