@@ -306,6 +306,7 @@
       width: 86%;
       align-self: end;
       justify-self: end;
+      -ms-grid-column-align: end;
       margin: 0 100px 0 20px;
       box-shadow: $newBoxShadow;
     }
