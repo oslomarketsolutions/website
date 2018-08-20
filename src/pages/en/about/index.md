@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: You may have blinked and missed it.
+    - description: Trying to leave this world better then when I found it.
       image: /img/tine.png
       jobTitle: CEO
       jobType: management
