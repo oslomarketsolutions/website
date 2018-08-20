@@ -105,7 +105,7 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Øystein Barstad
-    - description: "Skal bare \U0001F468\U0001F3FB‍\U0001F4BB"
+    - description: "Skal bare gjøre ferdig... \U0001F468\U0001F3FB‍\U0001F4BB"
       image: /img/simen_flatby.png
       jobTitle: Backendutvikler
       jobType: backEnd
