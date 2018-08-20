@@ -90,9 +90,9 @@ employees:
       jobTitle: Teamleder backend
       jobType: backEnd
       title: Pål Steihaug
-    - description: Keep calm and listen to Depeche Mode
+    - description: Tekst
       image: /img/john-erik_bye_johansen.png
-      jobTitle: Backendutvikler
+      jobTitle: Senior Systemutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
     - description: Tekst
