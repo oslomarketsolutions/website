@@ -470,11 +470,15 @@
 @media (max-width: 580px) {
   .homePage {
     .animation {
-      grid-template-rows: 15% max-content max-content max-content;
+      grid-template-rows: 17% max-content max-content max-content;
     }
 
     .transition {
       height: 460px;
+
+      .socialMedia {
+        top: -36px;
+      }
 
       .first {
         width: 104px;
@@ -543,6 +547,32 @@
 
       .imageContainer {
         grid-column: $main;
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .homePage {
+    .animation {
+      grid-template-rows: 13% max-content max-content max-content;
+
+      p {
+        padding: $L 0;
+      }
+    }
+
+    .transition {
+      height: 432px;
+      padding: $XL 0;
+
+      .first {
+        margin: 0;
+      }
+
+      .third {
+        width: 278px;
+        margin: $L 0 0 0;
       }
     }
   }
