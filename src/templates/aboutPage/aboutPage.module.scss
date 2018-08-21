@@ -161,6 +161,7 @@
 
       .employeeWrapper {
         max-width: 780px;
+        margin: $XL 0 0;
 
         .quoteWrapper {
           width: 350px;
@@ -252,12 +253,15 @@
         margin-top: 38px;
       }
     }
+  }
+}
 
-    /* .aboutEmployees {
+@media (max-width: 374px) {
+  .aboutPage {
+    .aboutEmployees {
       .employeeWrapper {
-        max-width: 800px;
-        justify-content: space-around;
+        max-width: 320px;
       }
-    }  */
+    }
   }
 }

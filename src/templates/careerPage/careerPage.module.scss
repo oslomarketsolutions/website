@@ -184,6 +184,7 @@
       }
 
       .perkCardContainer {
+        margin: $XL 0 0;
         max-width: 780px;
       }
     }
@@ -262,6 +263,16 @@
 
     .positions {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .careerPage {
+    .perks {
+      .perkCardContainer {
+        max-width: 320px;
+      }
     }
   }
 }

@@ -110,3 +110,10 @@
     grid-template-columns: 100px 192px;
   }
 }
+
+@media (max-width: 374px) {
+  .employeeCard {
+    width: 310px;
+    grid-template-columns: 100px 138px;
+  }
+}

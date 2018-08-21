@@ -584,3 +584,14 @@
     }
   }
 }
+
+@media (max-width: 374px) {
+  .productPage {
+    .linkCardsSection {
+      .linkCards {
+        margin: $L auto $L;
+        width: 320px;
+      }
+    }
+  }
+}
