@@ -115,7 +115,9 @@ employees:
       jobTitle: Sommervikar
       jobType: summerIntern
       title: Elias Thøgersen
-    - description: Tekst
+    - description: >-
+        Informatikkstudent ved NTNU Gløshaugen. For øyeblikket veldig
+        interessert i buldring.
       image: /img/asmund_staldvik.png
       jobTitle: Sommervikar
       jobType: summerIntern
