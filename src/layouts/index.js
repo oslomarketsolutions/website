@@ -235,10 +235,11 @@ export default class TemplateWrapper extends Component {
         });
       } else {
         // Deleting google analytics cookies
+        const domain = `.${window.location.hostname}`;
         removeCookie('setGoogleAnalyticsCookie');
-        removeCookie('_ga');
-        removeCookie('_gat');
-        removeCookie('_gid');
+        removeCookie('_ga', domain);
+        removeCookie('_gat', domain);
+        removeCookie('_gid', domain);
         this.disableGoogleAnalytics();
         this.setState({
           setGoogleAnalyticsCookie: false,
