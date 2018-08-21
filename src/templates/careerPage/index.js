@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PerkCard from '../../components/perkCard';
 import styles from './careerPage.module.scss';
-import { getParsedCookie } from '../../utils/cookies';
 import { findImageSizes } from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 
@@ -13,6 +12,7 @@ export const CareerPageTemplate = ({
   positions,
   imageSizes,
   handleCookieChanges,
+  googleAnalyticsIsActive,
 }) => {
   const enableAnalytics = () => {
     handleCookieChanges(true, 'analytics');
@@ -61,7 +61,7 @@ export const CareerPageTemplate = ({
           <h2>{positions.header}</h2>
           <p className="subtitle">{positions.text}</p>
         </div>
-        {getParsedCookie('setGoogleAnalyticsCookie') !== undefined ? (
+        {googleAnalyticsIsActive ? (
           <iframe
             title="Job Vacancies"
             src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
@@ -89,9 +89,10 @@ CareerPageTemplate.propTypes = {
   positions: PropTypes.shape({}),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
   handleCookieChanges: PropTypes.func,
+  googleAnalyticsIsActive: PropTypes.bool,
 };
 
-const CareerPage = ({ data, handleCookieChanges }) => {
+const CareerPage = ({ data, handleCookieChanges, googleAnalyticsIsActive }) => {
   const { markdownRemark: page } = data;
   const imageSizes = data.imageSizes.edges;
   return (
@@ -102,6 +103,7 @@ const CareerPage = ({ data, handleCookieChanges }) => {
       positions={page.frontmatter.positions}
       imageSizes={imageSizes}
       handleCookieChanges={handleCookieChanges}
+      googleAnalyticsIsActive={googleAnalyticsIsActive}
     />
   );
 };
@@ -109,6 +111,7 @@ const CareerPage = ({ data, handleCookieChanges }) => {
 CareerPage.propTypes = {
   data: PropTypes.shape({}).isRequired,
   handleCookieChanges: PropTypes.func,
+  googleAnalyticsIsActive: PropTypes.bool,
 };
 
 export default CareerPage;
