@@ -68,18 +68,18 @@ export class ProductPageTemplate extends Component {
             subHeader={investorPortal.sectionHeader.subHeader}
             text={investorPortal.sectionHeader.text}
           />
-          <section className={styles.marketData}>
+          <section className={styles.onlinePortfolio}>
             <p className={classNames('overline', styles.overline)}>
-              {investorPortal.marketData.overline}
+              {investorPortal.onlinePortfolio.overline}
             </p>
-            <h2>{investorPortal.marketData.header}</h2>
-            <p className="bodyLarge">{investorPortal.marketData.text}</p>
+            <h2>{investorPortal.onlinePortfolio.header}</h2>
+            <p className="bodyLarge">{investorPortal.onlinePortfolio.text}</p>
             <ImageWrapper
-              key={investorPortal.marketData.header}
-              src={investorPortal.marketData.image}
-              alt={investorPortal.marketData.header}
+              key={investorPortal.onlinePortfolio.header}
+              src={investorPortal.onlinePortfolio.image}
+              alt={investorPortal.onlinePortfolio.header}
               sizes={findImageSizes(
-                investorPortal.marketData.image,
+                investorPortal.onlinePortfolio.image,
                 imageSizes,
               )}
               outerWrapperClassName={styles.imageContainer}
@@ -99,18 +99,18 @@ export class ProductPageTemplate extends Component {
               outerWrapperClassName={styles.imageContainer}
             />
           </section>
-          <section className={styles.onlinePortfolio}>
+          <section className={styles.marketData}>
             <p className={classNames('overline', styles.overline)}>
-              {investorPortal.onlinePortfolio.overline}
+              {investorPortal.marketData.overline}
             </p>
-            <h2>{investorPortal.onlinePortfolio.header}</h2>
-            <p className="bodyLarge">{investorPortal.onlinePortfolio.text}</p>
+            <h2>{investorPortal.marketData.header}</h2>
+            <p className="bodyLarge">{investorPortal.marketData.text}</p>
             <ImageWrapper
-              key={investorPortal.onlinePortfolio.header}
-              src={investorPortal.onlinePortfolio.image}
-              alt={investorPortal.onlinePortfolio.header}
+              key={investorPortal.marketData.header}
+              src={investorPortal.marketData.image}
+              alt={investorPortal.marketData.header}
               sizes={findImageSizes(
-                investorPortal.onlinePortfolio.image,
+                investorPortal.marketData.image,
                 imageSizes,
               )}
               outerWrapperClassName={styles.imageContainer}

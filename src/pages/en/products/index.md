@@ -5,7 +5,7 @@ linkCardsSection:
     - description: >-
         Fully managed web traders, stock market portals, fund info and portfolio
         reports customized and integrated with your back office systems.
-      header: Investor Portals
+      header: Investor portals
       isDark: false
     - description: >-
         Seamless integration with least effort. OMS components are standard
@@ -24,7 +24,7 @@ linkCardsSection:
       isDark: false
     - description: >-
         The information portal for professionals within the Norwegian securities
-        market 
+        market
       header: Arena
       isDark: false
   title: What we offer
@@ -59,7 +59,7 @@ investorPortal:
     text: >-
       Designed and created for each company's needs. With OMS' powerful standard
       components and framework, combined with customized features for a complete
-      offer to your users. 
+      offer to your users.
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -87,7 +87,7 @@ investorPortal:
       GDPR and MiFID II regulations.
 
       The admin tool gives entitled employees easy access to client management
-      and support functions. 
+      and support functions.
 standardProducts:
   arena:
     buttonText: Contact us
@@ -122,7 +122,7 @@ services:
       way you want. Choose between standard or a custom feed. Feed may include
       real-time and delayed quotes, trades and orders, historical prices,
       corporate actions, dividends, financial calendars, stock exchange notices,
-      top shareholders and more from several different exchanges globally. 
+      top shareholders and more from several different exchanges globally.
   omsComponents:
     buttonText: Contact us
     header: OMS Components
@@ -140,4 +140,3 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
-

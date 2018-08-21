@@ -12,6 +12,7 @@
   margin-bottom: $L;
   align-items: flex-start;
   margin: 16px;
+  transition: 0.3s;
 
   &:hover {
     transform: scale(1.08);

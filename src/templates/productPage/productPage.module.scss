@@ -47,14 +47,14 @@
       grid-column: 3 / span 6;
     }
 
-    .marketData {
+    .onlinePortfolio {
       grid-column: $full;
       grid-row: 2;
       display: grid;
       grid-template-columns: $gridColumnTemplate;
       grid-column-gap: $gridColumnGap;
-      grid-template-rows: max-content max-content max-content 270px;
-      margin: 130px 0 65px 0;
+      grid-template-rows: max-content max-content max-content max-content; // 270px;
+      margin: 152px 0 76px 0;
 
       .overline {
         grid-column: 2 / span 3;
@@ -93,8 +93,8 @@
       display: grid;
       grid-template-columns: $gridColumnTemplate;
       grid-column-gap: $gridColumnGap;
-      grid-template-rows: max-content max-content max-content 270px;
-      margin: 65px 0;
+      grid-template-rows: max-content max-content max-content max-content; // 270px;
+      margin: 76px 0;
 
       .overline {
         grid-column: 7 / span 3;
@@ -129,14 +129,14 @@
       }
     }
 
-    .onlinePortfolio {
+    .marketData {
       grid-column: $full;
       grid-row: 4;
       display: grid;
       grid-template-columns: $gridColumnTemplate;
       grid-column-gap: $gridColumnGap;
-      grid-template-rows: max-content max-content max-content 270px;
-      margin: 65px 0 130px 0;
+      grid-template-rows: max-content max-content max-content max-content; // 270px;
+      margin: 76px 0 152px 0;
 
       .overline {
         grid-column: 2 / span 3;
@@ -357,9 +357,9 @@
 @media (max-width: 1450px) {
   .productPage {
     .investorPortal {
-      .marketData,
+      .onlinePortfolio,
       .trading,
-      .onlinePortfolio {
+      .marketData {
         grid-template-rows: max-content max-content max-content 80px;
       }
     }
@@ -387,9 +387,9 @@
       }
     }
     .investorPortal {
-      .marketData,
+      .onlinePortfolio,
       .trading,
-      .onlinePortfolio {
+      .marketData {
         grid-template-rows: max-content max-content max-content max-content;
         margin: 80px 0 0;
 
@@ -521,9 +521,9 @@
       }
     }
     .investorPortal {
-      .marketData,
+      .onlinePortfolio,
       .trading,
-      .onlinePortfolio {
+      .marketData {
         .overline {
           grid-column: $main;
         }
