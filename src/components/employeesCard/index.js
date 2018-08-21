@@ -32,7 +32,7 @@ const iconMatcher = jobType => {
 const EmployeeCard = props => {
   const { name, jobTitle, description, jobType, portraitSize, image } = props;
   return (
-    <div className={styles.EmployeeCard}>
+    <div className={styles.employeeCard}>
       <div className={styles.imageAndIconContainer}>
         <ImageWrapper
           outerWrapperClassName={styles.imageContainer}

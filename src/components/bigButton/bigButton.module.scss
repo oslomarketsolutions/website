@@ -33,3 +33,10 @@
   background-color: $primaryButtonHover;
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .bigButton {
+    height: 50px;
+    width: 180px;
+  }
+}
