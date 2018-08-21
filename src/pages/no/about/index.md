@@ -28,8 +28,8 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
-    - description: Tekst
-      image: /img/none.jpg
+    - description: You're Gonna Need a Bigger Boat
+      image: /img/bilde.png
       jobTitle: Prosjektleder
       jobType: management
       title: Christian Blütecher
