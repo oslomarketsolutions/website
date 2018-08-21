@@ -56,6 +56,7 @@ export const pageQuery = graphql`
           header
           text
           cards {
+            icon
             header
             description
             features

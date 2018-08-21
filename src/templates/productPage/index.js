@@ -44,10 +44,10 @@ export class ProductPageTemplate extends Component {
           <h1 className={styles.centered}>{linkCardsSection.title}</h1>
           <nav className={styles.linkCards}>
             {linkCardsSection.linkCards &&
-              linkCardsSection.linkCards.map((linkCard, index) => (
+              linkCardsSection.linkCards.map(linkCard => (
                 <LinkCard
                   key={linkCard.header}
-                  index={index}
+                  icon={linkCard.icon}
                   header={linkCard.header}
                   description={linkCard.description}
                   isDark={linkCard.isDark}
@@ -265,6 +265,7 @@ export const productPageQuery = graphql`
         linkCardsSection {
           title
           linkCards {
+            icon
             header
             description
             isDark

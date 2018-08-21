@@ -14,27 +14,12 @@
 
   .icon {
     font-family: 'Work Sans', 'sans-serif';
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: $lightBlue;
+    height: 64px;
+    width: 64px;
     margin: $L auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $vibrantBlue;
-    font-size: 28px;
-    font-weight: bold;
-
-    svg {
-      font-size: 42px;
-    }
-  }
-
-  .codeBranchIcon {
-    svg {
-      margin-left: 6px;
-    }
   }
 
   h3 {
@@ -92,7 +77,6 @@ div.dark {
   }
 
   .icon {
-    background-color: $lapisLazuli;
     color: $white;
   }
 

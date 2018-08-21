@@ -27,24 +27,17 @@
   }
 
   .icon {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: $lightBlue;
+    height: 64px;
+    width: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $vibrantBlue;
-    font-size: 28px;
-    font-weight: bold;
-
-    svg {
-      font-size: 42px;
-    }
   }
+
   .iconWrapper {
     display: inline-block;
   }
+
   h3 {
     display: inline-block;
     color: $grey;
