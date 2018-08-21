@@ -8,6 +8,7 @@
   padding: $XL $L;
   border-radius: $S;
   box-shadow: $newBoxShadow;
+  transition: transform 0.3s ease;
 
   a {
     text-decoration: none;

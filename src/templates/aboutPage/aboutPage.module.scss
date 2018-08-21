@@ -120,6 +120,7 @@
       justify-self: center;
       margin: $XL -16px 0 -14px;
       max-width: 1170px;
+      transition: max-width 0.3s ease;
 
       .quoteWrapper {
         margin: 16px;
@@ -130,6 +131,7 @@
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
+        transition: 0.3s;
 
         h2 {
           width: 70%;

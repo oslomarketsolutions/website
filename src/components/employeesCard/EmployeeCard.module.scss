@@ -11,6 +11,7 @@
   box-shadow: $newBoxShadow;
   padding: 25px;
   margin: 16px;
+  transition: 0.3s;
 
   &:hover {
     transform: scale(1.08);
