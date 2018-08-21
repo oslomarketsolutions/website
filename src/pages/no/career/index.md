@@ -34,66 +34,82 @@ about:
 perks:
   header: What we offer
   perkCards:
-    - icon: fal user-clock
+    - icon:
+        fa: fal user-clock
       perkTitle: Flexible work hours
       text: Work when it suits you
-    - icon: fal briefcase-medical
+    - icon:
+        fa: fal briefcase-medical
       perkTitle: Insurance
       text: With us everyone is insured
-    - icon: fal mobile
+    - icon:
+        fa: fal mobile
       perkTitle: Broadband & Mobile
       text: As an employee we pay your phone bill
-    - icon: fal utensils
+    - icon:
+        fa: fal utensils
       perkTitle: 'Breakfast, Lunch & Coffee'
       text: Serves both lunch and breakfast
-    - icon: text
+    - icon:
+        fa: text
       perkTitle: Company cabins
       text: With us everyone is insured
-    - icon: text
+    - icon:
+        fa: text
       perkTitle: Apartments
       text: Located in Villefranche and Albir
-    - icon: fal calendar-alt
+    - icon:
+        fa: fal calendar-alt
       perkTitle: Social events
       text: Annual social events with the entire group
-    - icon: fab spotify
+    - icon:
+        fa: fab spotify
       perkTitle: Spotify
       text: Paid subscription to Spotify or your favourite streaming service
-    - icon: fal piggy-bank
+    - icon:
+        fa: fal piggy-bank
       perkTitle: Pension
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal chart-line
+    - icon:
+        fa: fal chart-line
       perkTitle: Stock options
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal shuttle-van
+    - icon:
+        fa: fal shuttle-van
       perkTitle: Shared car
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal hands
+    - icon:
+        fa: fal hands
       perkTitle: Massage
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal dollar-sign
+    - icon:
+        fa: fal dollar-sign
       perkTitle: Bonus
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal hand-holding-seedling
+    - icon:
+        fa: fal hand-holding-seedling
       perkTitle: Time to innovate
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal laptop-code
+    - icon:
+        fa: fal laptop-code
       perkTitle: Harware & software
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal home
+    - icon:
+        fa: fal home
       perkTitle: Work remotely
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

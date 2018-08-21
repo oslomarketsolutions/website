@@ -51,7 +51,9 @@ export const CareerPageTemplate = ({
                 key={perkCard.perkTitle}
                 title={perkCard.perkTitle}
                 text={perkCard.text}
-                icon={perkCard.icon && perkCard.icon.split(' ')}
+                icon={
+                  perkCard.icon && (perkCard.icon.custom || perkCard.icon.fa)
+                }
               />
             ))}
         </div>
@@ -137,7 +139,10 @@ export const careerPageQuery = graphql`
           perkCards {
             perkTitle
             text
-            icon
+            icon {
+              fa
+              custom
+            }
           }
         }
         positions {
