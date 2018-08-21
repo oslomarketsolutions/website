@@ -54,6 +54,7 @@ investorPortal:
   text: >-
     OMS hjelper deg med løsninger for fond- og aksjehandel, fondsrapportering,
     spareplattformer og børsportaler med markedsdata fra hele verden.
+  buttonText: ' '
 customization:
   cards:
     - description: >-
@@ -127,4 +128,3 @@ otherProducts:
       platform, portfolio reporting or market data information, OMS can help you
       get there.
 ---
-
