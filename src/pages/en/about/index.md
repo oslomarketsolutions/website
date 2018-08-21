@@ -96,7 +96,7 @@ employees:
       jobType: backEnd
       title: John-Erik Bye Johansen
     - description: 'Concerned with code quality, clean code and playing the drums.'
-      image: /img/eirik.png
+      image: /img/eirik_caspari.png
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
