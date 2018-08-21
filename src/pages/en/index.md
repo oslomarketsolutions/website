@@ -1,10 +1,9 @@
 ---
 hero:
+  buttonText: Contact us
   subtitle: 'Web services for stock and fund trading, market data and more'
   title: Financial platforms for the modern web
-  buttonText: Contact us
 transitionalElement:
-  socialMediaText: Follow us
   customerLogos:
     - logo: /img/hb_logo.png
       name: handelsbanken
@@ -42,6 +41,7 @@ transitionalElement:
     text: Here are some of the companies using services from Oslo Market Solutions
     usersNumber: '0,5 mill.'
     usersText: Users served daily
+  socialMediaText: Follow us
 investorPortal:
   header: Investor portal
   investorPortalImages:
@@ -56,10 +56,11 @@ investorPortal:
     Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
     with your portfolio management systems like ProFamily, Tradex and APX,
     Centevo and more.
-  buttonText: Learn more
 customization:
   cards:
-    - description: A full coverage of the financial markets with REST and Websockets APIs
+    - description: >-
+        Full coverage of the financial markets. Market data portal with live,
+        streaming data and smart links to content.
       features:
         - Real Time
         - Flexible
@@ -113,18 +114,19 @@ customization:
     market data API, we got what you need to get started.
 otherProducts:
   arena:
+    buttonText: Learn more
     header: Arena
     image: /img/arena.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC with the two products Top Shareholders and Corporate Actions
       Calendar.
-    buttonText: Learn more
   irModules:
+    buttonText: Learn more
     header: IR Web Modules
     image: /img/irModulesPlaceholder.png
     text: >-
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
-    buttonText: Learn more
 ---
+
