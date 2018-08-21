@@ -49,9 +49,9 @@ header.headerUnderline {
     .cookieManager {
       display: none;
     }
-    .cookiePopUp {
+    /* .cookiePopUp {
       display: none;
-    }
+    } */
   }
 }
 
@@ -732,10 +732,21 @@ header.navColorWhite .navbar {
 
       img {
         width: 56px;
-        // position: absolute;
         top: 2px;
         left: -5px;
       }
+    }
+
+    .cookieManager {
+      width: 308px;
+
+      .save {
+        width: 100%;
+      }
+    }
+
+    .cookiePopUp {
+      width: 308px;
     }
   }
 
