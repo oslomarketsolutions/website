@@ -33,27 +33,7 @@ import {
   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
 
-import {
-  faGlobe,
-  faUserClock,
-  faHome,
-  faUtensils,
-  faLaptopCode,
-  faHandHoldingSeedling,
-  faBriefcaseMedical,
-  faSnowflake,
-  faNewspaper,
-  faMobile,
-  faHands,
-  faDollarSign,
-  faPiggyBank,
-  faChartLine,
-  faShuttleVan,
-  faCalendarAlt,
-  faWatchFitness,
-  faSmileBeam,
-  faCookieBite,
-} from '@fortawesome/pro-light-svg-icons';
+import { faGlobe, faCookieBite } from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';
@@ -71,23 +51,6 @@ export const faLibrary = library.add(
   faGithubSquare,
   faSpotify,
   faGlobe,
-  faUserClock,
-  faHome,
-  faUtensils,
-  faLaptopCode,
-  faHandHoldingSeedling,
-  faBriefcaseMedical,
-  faSnowflake,
-  faNewspaper,
-  faMobile,
-  faHands,
-  faDollarSign,
-  faPiggyBank,
-  faChartLine,
-  faShuttleVan,
-  faCalendarAlt,
-  faWatchFitness,
-  faSmileBeam,
   faCopyright,
   faArrowUp,
   faServer,

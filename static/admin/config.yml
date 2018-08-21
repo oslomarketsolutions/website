@@ -148,7 +148,7 @@ collections:
                     {label: "Shuttle van", value: "fal shuttle-van"},
                     {label: "Watch fitness", value: "fal watch-fitness"},
                   ]},
-                  {label: "Custom logo", name: "custom", widget: "image"},
+                  {label: "Custom logo", name: "custom", widget: "image", default: " "},
                 ]},
               ]},
             ]}
