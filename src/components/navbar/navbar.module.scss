@@ -49,9 +49,13 @@ header.headerUnderline {
     .cookieManager {
       display: none;
     }
-    /* .cookiePopUp {
-      display: none;
-    } */
+    .cookiePopUp {
+      right: 274px;
+      top: 60px;
+      .indicator {
+        display: none;
+      }
+    }
   }
 }
 
@@ -254,6 +258,7 @@ header.headerUnderline {
     box-shadow: $navbarShadow;
     border-radius: $S;
     padding: $XL;
+    transition: all 200ms ease;
 
     .indicator {
       position: absolute;
@@ -430,6 +435,11 @@ header.navColorWhite .navbar {
         margin-left: 210px;
         transition: all 200ms ease;
       }
+
+      .cookiePopUp {
+        right: calc(30px - ((100vw - 1140px) / 2));
+        top: 76px;
+      }
     }
   }
 }
@@ -437,6 +447,14 @@ header.navColorWhite .navbar {
 @media (max-width: 1172px) {
   .navbar {
     width: 96%;
+  }
+  header.headerUnderline {
+    .navbar {
+      .cookiePopUp {
+        right: -12px;
+        top: 85px;
+      }
+    }
   }
 }
 
@@ -513,6 +531,12 @@ header.navColorWhite .navbar {
     .navbar {
       li.cookie {
         margin-right: -170px;
+      }
+
+      .cookiePopUp {
+        right: 0px;
+        top: 74px;
+        border-top-right-radius: $S;
       }
     }
   }
@@ -700,6 +724,12 @@ header.navColorWhite .navbar {
           left: 2px;
         }
       }
+
+      .cookiePopUp {
+        right: -7px;
+        top: 49px;
+      }
+
       li.cookie {
         margin-right: -84px;
       }
@@ -741,7 +771,7 @@ header.navColorWhite .navbar {
       width: 308px;
 
       .save {
-        width: 100%;
+        width: 244px;
       }
     }
 
@@ -760,6 +790,10 @@ header.navColorWhite .navbar {
           width: 56px;
           left: 1px;
         }
+      }
+
+      .cookiePopUp {
+        top: 40px;
       }
 
       li.careers {
