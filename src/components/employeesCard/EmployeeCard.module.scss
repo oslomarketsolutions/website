@@ -1,6 +1,6 @@
 @import '../../layouts/variables';
 
-.EmployeeCard {
+.employeeCard {
   background-color: $white;
   border-radius: 15px;
   display: grid;
@@ -8,8 +8,6 @@
   grid-template-rows: 50% 50%;
   height: 300px;
   width: 358px;
-  transition: all 0.3s;
-  color: $grey;
   box-shadow: $newBoxShadow;
   padding: 25px;
   margin: 16px;
@@ -96,8 +94,18 @@
     display: flex;
     align-items: center;
   }
+}
 
-  p {
-    color: $dimGrey;
+@media (max-width: 814px) {
+  .employeeCard {
+    width: 310px;
+    grid-template-columns: 100px 160px;
+  }
+}
+
+@media (max-width: 690px) {
+  .employeeCard {
+    width: 358px;
+    grid-template-columns: 100px 200px;
   }
 }

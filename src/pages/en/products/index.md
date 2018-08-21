@@ -19,7 +19,7 @@ linkCardsSection:
       isDark: false
     - description: >-
         Showcase your share to existing and potential investors with flexible
-        web modules from OMS
+        web modules from OMS. From simple quotes to advanced charting tools.
       header: IR Web Modules
       isDark: false
     - description: >-
@@ -33,10 +33,9 @@ investorPortal:
     header: Boost your media content with live stock data
     image: /img/productsPagePlaceholder.png
     overline: Market data Portal
-    text: >-
-      Full coverage of the financial market with live, streaming data. With
-      smart links to content, we enable you to integrate our flexible wed
-      modules in articles to create a live media site.
+    text: >
+      Full coverage of the financial market with live, streaming data. Create a
+      live media site by integrating our flexible web modules in your articles.
 
       We cover all asset classes from the Nordic region, stocks from Europe, UK,
       US, Canada and Asia, as well as worldwide indices, currencies, commodities
@@ -46,22 +45,21 @@ investorPortal:
     image: /img/productsPagePlaceholder.png
     overline: 'Funds and portfolio reporting '
     text: >-
-      Engage your customers and help them save more with a reliable platform
-      that is easy to adjust and works just as well on all size of devices.
-      Integrated with Centevo's platform, ProInvest or SS&Cs Tradex these
-      portals support monthly fund subscriptions, switch, moving to ASK and IPS
-      (for Norwegian accounts) and much more. OMS can handle advanced
-      performance calculations, attribution as well as online onboarding,
-      trading and PDF export of a monthly portfolio report.
+      Engage your customers and help them invest more with a modern web
+      solution. Integrated with the Centevo platform, ProInvest from Tieto or
+      SS&C/Advent’s Tradex, these portals support monthly fund subscriptions,
+      switch, subscription and redemption. OMS can handle advanced performance
+      calculations, attribution as well as online onboarding and PDF export of a
+      monthly portfolio report.
   sectionHeader:
     header: Investor portals
     subHeader: >-
       Web Traders, Fund Reports, Savings Platform, Portfolio Reporting, Market
       Data Portal
     text: >-
-      Designed and created for each company's needs, with OMS' powerful standard
-      components and framework as base, combined with customized features for a
-      complete offer to your users.
+      Designed and created for each company's needs. With OMS' powerful standard
+      components and framework, combined with customized features for a complete
+      offer to your users.
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -80,15 +78,16 @@ investorPortal:
     header: Stock trading in GDPR  and MiFID II-compliant client portals
     image: /img/productsPagePlaceholder.png
     overline: Web Trader
-    text: >-
-      Empower your investors with a web trader providing streaming data to the
-      browser with a sub-second delay. Full order depth, international data,
-      suitability tests, Iceberg orders and stop loss are just a few of the
-      things we cover in the standard framework on which we rely to build a
-      customized trader just for you. The powerful Admin Tool gives your
-      employees easy access to a full audit trail, ability to see the same as
-      the client, flexibility to adjust client communication and to publish
-      analysis reports and more.
+    text: >
+      Empower your investors with a web trader providing real-time streaming
+      data to the browser. Full order depth, international data, suitability
+      tests, Iceberg orders and stop loss are just a few of the things we
+      deliver with standard OMS framework. In which we build a fully
+      customizable trader for your needs. This is up to date and compliant with
+      GDPR and MiFID II regulations.
+
+      The admin tool gives entitled employees easy access to client management
+      and support functions.
 standardProducts:
   arena:
     buttonText: Contact us
@@ -117,8 +116,13 @@ services:
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
-      With REST-APIs for static and historical data and Websockets feed for
-      streaming data....
+      Access global market data with high quality REST-APIs. OMS deliver
+      websockets for streaming data and APIs for static and delayed data. The
+      feed is easy to implement and you are able to develop your web site the
+      way you want. Choose between standard or a custom feed. Feed may include
+      real-time and delayed quotes, trades and orders, historical prices,
+      corporate actions, dividends, financial calendars, stock exchange notices,
+      top shareholders and more from several different exchanges globally.
   omsComponents:
     buttonText: Contact us
     header: OMS Components
@@ -131,7 +135,7 @@ services:
       for you. Contact us for a noncommital demo.
   sectionHeader:
     header: DIY
-    subHeader: More flexibilty with access to our API or component library
+    subHeader: More flexibilty with access to our APIs or component library
     text: >-
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components

@@ -194,6 +194,7 @@ export default class Navbar extends Component {
               </li>
               <li className={styles.languageSelectorMobile}>
                 <button onClick={this.toggleLanguageSelector}>
+                  <span className="sr-only">Language selector</span>
                   <FontAwesomeIcon icon={['fal', 'globe']} />
                 </button>
                 <div
@@ -249,6 +250,7 @@ export default class Navbar extends Component {
                   className={styles.cookieButton}
                   onClick={this.toggleCookieManager}
                 >
+                  <span className="sr-only">Cookie manager</span>
                   <FontAwesomeIcon icon={['fal', 'cookie-bite']} />
                 </button>
                 <div

@@ -9,7 +9,6 @@
   display: flex;
   flex-flow: row wrap;
   box-shadow: 0 16px 16px 0 #c7d3e3;
-  transition: 0.3s;
   margin-bottom: $L;
   align-items: flex-start;
   margin: 16px;
@@ -26,6 +25,7 @@
     svg {
       font-size: 64px;
       color: $vibrantBlue;
+      width: 80px;
     }
 
     h4 {
@@ -34,28 +34,16 @@
   }
 }
 
-@media (max-width: 1172px) {
+@media (max-width: 814px) {
   .perkCard {
-    width: 325px;
+    width: 310px;
+    height: 268px;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 690px) {
   .perkCard {
-    width: 243px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .perkCard {
-    margin: 18px $XS;
-  }
-}
-
-@media (max-width: 712px) {
-  .perkCard {
-    width: 356px;
+    width: 358px;
     height: 221px;
   }
 }

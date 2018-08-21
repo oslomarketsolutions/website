@@ -38,6 +38,9 @@ export default class CookieToggle extends Component {
       <div className={styles.cookieToggle}>
         <div className={styles.header}>
           <button className={styles.toggleDetails} onClick={this.toggleDetails}>
+            <span className="sr-only">
+              Toggle more information about {header}
+            </span>
             <FontAwesomeIcon
               className={classNames(styles.chevron, {
                 [styles.open]: this.state.detailsOpen,

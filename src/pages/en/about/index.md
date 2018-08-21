@@ -100,7 +100,7 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
-    - description: Text
+    - description: "Just let me finish up this code... \U0001F468\U0001F3FB‍\U0001F4BB"
       image: /img/simen_flatby.png
       jobTitle: Backend developer
       jobType: backEnd
@@ -110,7 +110,9 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Øystein Barstad
-    - description: Text
+    - description: >-
+        Got homework to do, coffee to serve and mediocre code to write. No time
+        for this.
       image: /img/0.jpeg
       jobTitle: Summer intern
       jobType: summerIntern
@@ -129,4 +131,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-
