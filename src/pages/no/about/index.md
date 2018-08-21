@@ -95,8 +95,11 @@ employees:
       jobTitle: Senior Systemutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
-    - description: Tekst
-      image: /img/eirik.png
+    - description: >-
+        Jeg har det morsomst på jobb når jeg kan finne smartere løsninger til
+        eksisternende utfordringer, og når jeg knuser mine kollegaer i
+        bordtennis.
+      image: /img/eirik_caspari.png
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
