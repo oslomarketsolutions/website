@@ -48,6 +48,7 @@ const IndexPageTemplate = ({ location, data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <span className="sr-only">Link to our LinkedIn</span>
                 <FontAwesomeIcon icon={['fab', 'linkedin']} />
               </OutboundLink>
             </li>
@@ -58,6 +59,7 @@ const IndexPageTemplate = ({ location, data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <span className="sr-only">Link to our Facebook</span>
                 <FontAwesomeIcon icon={['fab', 'facebook']} />
               </OutboundLink>
             </li>
@@ -68,6 +70,7 @@ const IndexPageTemplate = ({ location, data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <span className="sr-only">Link to our Medium blog</span>
                 <FontAwesomeIcon icon={['fab', 'medium']} />
               </OutboundLink>
             </li>
@@ -78,6 +81,7 @@ const IndexPageTemplate = ({ location, data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <span className="sr-only">Link to our Github</span>
                 <FontAwesomeIcon icon={['fab', 'github-square']} />
               </OutboundLink>
             </li>

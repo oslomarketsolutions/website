@@ -87,6 +87,7 @@ const Dots = ({ dotClick, slides, i }) => (
           id={index}
           active={active}
           dotClick={dotClick}
+          i={i}
         />
       );
     })}
@@ -99,17 +100,20 @@ Dots.propTypes = {
   i: PropTypes.number,
 };
 
-const Dot = ({ id, active, dotClick }) => (
+const Dot = ({ id, active, dotClick, i }) => (
   <button
     className={classNames(styles.dot, {
       [styles.active]: active,
     })}
     onClick={() => dotClick(id)}
-  />
+  >
+    <span className="sr-only">Logo page {i}</span>
+  </button>
 );
 
 Dot.propTypes = {
   dotClick: PropTypes.func,
   active: PropTypes.bool,
   id: PropTypes.number,
+  i: PropTypes.number,
 };
