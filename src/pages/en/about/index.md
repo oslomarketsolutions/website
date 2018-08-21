@@ -24,89 +24,89 @@ history:
 employees:
   employeeList:
     - description: Trying to leave this world better than when I found it.
-      image: /img/tine.png
+      image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
     - description: Tung som bly
-      image: /img/none.jpg
+      image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Project Manager
       jobType: management
       title: Christian Blütecher
     - description: |
         Hej Micke!
-      image: /img/mikael_leckborn.png
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
       jobTitle: Sales
       jobType: management
       title: Mikael Leckborn
     - description: 'Bor på Nesodden, hardeste ghettoen i landet.'
-      image: /img/inga_wiik-onnesjo.jpg
+      image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
       jobTitle: Support
       jobType: support
       title: Inga Wiik-Önnesjö
     - description: Hater Vazelina.
-      image: /img/469px-Andreas.jpg
+      image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
       jobTitle: Operations Manager
       jobType: operations
       title: Andreas Holen
     - description: >-
         Fullstack-developer interested in new technology, DX, a11y, Linux, cross
         country skiing and hiking in norwegian nature.
-      image: /img/espen_henriksen.jpg
+      image: /img/espen_henriksen_oms_oslo_bors_fhs_5603.jpg
       jobTitle: Front End Team Lead
       jobType: frontEnd
       title: Espen Henriksen
     - description: >-
         Fullstack developer with special interest in javascript and web
         solutions. Dabbles with data processing.
-      image: /img/kristian_hagen.jpg
+      image: /img/kristian_hagen_oms_oslo_bors_fhs_0243.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Kristian Hagen
     - description: "I didn't choose the thug life, the thug life chose me. \U0001F52B\U0001F525\U0001F693"
-      image: /img/haakonw.png
+      image: /img/haakon_winther_oms_oslo_bors_fhs_5659.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Haakon Winther
     - description: Stille og rolig gutt som liker lange turer ved stranden
-      image: /img/anders_ranvik.jpg
+      image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Anders Ranvik
     - description: Øl-entusiast
-      image: /img/rebecca_gjerstad.jpg
+      image: /img/rebecca_gjerstad_oms_oslo_bors_fhs_5382.jpg
       jobTitle: Frontend developer/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
     - description: I promise to quit smoking
-      image: /img/gerrit_witteveen.jpg
+      image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
     - description: Elsker hip hop og norsk rap
-      image: /img/paal-steihaug_phonebook_user1.jpg
+      image: /img/pal_steihaug_oms_oslo_bors_fhs_5973.jpg
       jobTitle: Teamleader backend
       jobType: backEnd
       title: Pål Steihaug
     - description: >-
         Data hairdresser with particular interest for market data and Depeche
         Mode.
-      image: /img/john-erik_bye_johansen.png
+      image: /img/john-erik_bye_johansen_oms_oslo_bors_fhs_5788.jpg
       jobTitle: Senior System Developer
       jobType: backEnd
       title: John-Erik Bye Johansen
     - description: 'Concerned with code quality, clean code and playing the drums.'
-      image: /img/eirik_caspari.png
+      image: /img/eirik_caspari_oms_oslo_bors_fhs_5712.jpg
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
     - description: "Just let me finish up this code... \U0001F468\U0001F3FB‍\U0001F4BB"
-      image: /img/simen_flatby.png
+      image: /img/simen_flatby_oms_oslo_bors_fhs_5762.jpg
       jobTitle: Backend developer
       jobType: backEnd
       title: Simen Flatby
     - description: B.Eng Computer Engineering from NTNU.
-      image: /img/oystein_barstad.jpg
+      image: /img/øystein_barstad_oms_oslo_bors_fhs_6002.jpg
       jobTitle: Backend developer
       jobType: backEnd
       title: Øystein Barstad
