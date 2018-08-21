@@ -23,7 +23,11 @@ const IndexPageTemplate = ({ location, data }) => {
   } = data.page.frontmatter;
 
   const imageSizes = data.imageSizes.edges;
-  const language = getLanguage(location.pathname);
+  let language = 'en';
+
+  if (location) {
+    language = getLanguage(location.pathname);
+  }
 
   return (
     <main className={styles.homePage}>
