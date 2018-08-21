@@ -43,6 +43,7 @@ transitionalElement:
     usersText: Daglige brukere
   socialMediaText: Følg oss
 investorPortal:
+  buttonText: ' '
   header: Investorportal
   investorPortalImages:
     - image: investorportal.png
@@ -94,7 +95,7 @@ customization:
   serviceIntegrations:
     header: Service integrations
     integrationLogos:
-      - logo: /img/signicat-logo-black-medium-size.png
+      - logo: /img/Norne@3x.png
         name: Signicat1
       - logo: /img/signicat-logo-black-medium-size.png
         name: Signicat2
@@ -127,4 +128,3 @@ otherProducts:
       platform, portfolio reporting or market data information, OMS can help you
       get there.
 ---
-

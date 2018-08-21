@@ -43,6 +43,7 @@ transitionalElement:
     usersText: Users served daily
   socialMediaText: Follow us
 investorPortal:
+  buttonText: ' '
   header: Investor portal
   investorPortalImages:
     - image: investorportal.png
@@ -129,4 +130,3 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
-
