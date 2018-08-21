@@ -12,6 +12,7 @@ export const AboutPageTemplate = ({
   employees,
   buttonText,
   imageSizes,
+  language,
 }) => {
   // Insert a placeholder as second item in array.
   // In employeeWrapper the map will replace the placeholder with actual quote
@@ -91,7 +92,7 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className={styles.joinTheTeam}>
-        <BigButton to="/career" text={buttonText} />
+        <BigButton to={`/${language}/career`} text={buttonText} />
       </section>
     </main>
   );
@@ -120,9 +121,10 @@ AboutPageTemplate.propTypes = {
   }),
   buttonText: PropTypes.string,
   imageSizes: PropTypes.arrayOf(PropTypes.object),
+  language: PropTypes.string,
 };
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, language }) => {
   const post = data.page;
   const imageSizes = data.imageSizes.edges;
 
@@ -133,12 +135,14 @@ const AboutPage = ({ data }) => {
       employees={post.frontmatter.employees}
       buttonText={post.frontmatter.buttonText}
       imageSizes={imageSizes}
+      language={language}
     />
   );
 };
 
 AboutPage.propTypes = {
   data: PropTypes.shape({}).isRequired,
+  language: PropTypes.string,
 };
 
 export default AboutPage;
