@@ -24,41 +24,41 @@ history:
 employees:
   employeeList:
     - description: Tekst
-      image: /img/tine.png
+      image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
     - description: You're Gonna Need a Bigger Boat
-      image: /img/bilde.png
+      image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Prosjektleder
       jobType: management
       title: Christian Blütecher
     - description: Tekst
-      image: /img/mikael_leckborn.png
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
       jobTitle: Salg
       jobType: management
       title: Mikael Leckborn
     - description: Tekst
-      image: /img/469px-Andreas.jpg
+      image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
       jobTitle: Drift Ansvarlig
       jobType: operations
       title: Andreas Holen
     - description: Tekst
-      image: /img/inga_wiik-onnesjo.jpg
+      image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
       jobTitle: Support
       jobType: support
       title: Inga Wiik-Önnesjö
     - description: >-
         Fullstack-utvikler som er interessert i ny teknologi, DX, a11y, Linux,
         langrenn og å tusle i norsk natur.
-      image: /img/espen_henriksen.jpg
+      image: /img/espen_henriksen_oms_oslo_bors_fhs_5603.jpg
       jobTitle: Teamleder frontend
       jobType: frontEnd
       title: Espen Henriksen
     - description: >-
         Fullstack-utvikler med spesiell interesse for javascript og
         webløsninger. Pusler med dataprosessering. 
-      image: /img/kristian_hagen.jpg
+      image: /img/kristian_hagen_oms_oslo_bors_fhs_0243.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Kristian Hagen
@@ -66,47 +66,47 @@ employees:
         3 positive sider ☝️             
         Ydmyk, smart, intelligent, intellektuell. Negative sider : 
 
-      image: /img/haakonw.png
+      image: /img/haakon_winther_oms_oslo_bors_fhs_5659.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Haakon Winther
     - description: Tekst
-      image: /img/anders_ranvik.jpg
+      image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Anders Ranvik
     - description: Tekst
-      image: /img/rebecca_gjerstad.jpg
+      image: /img/rebecca_gjerstad_oms_oslo_bors_fhs_5382.jpg
       jobTitle: Frontendutvikler/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
     - description: Tekst
-      image: /img/gerrit_witteveen.jpg
+      image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
     - description: Tekst
-      image: /img/paal-steihaug_phonebook_user1.jpg
+      image: /img/pal_steihaug_oms_oslo_bors_fhs_5973.jpg
       jobTitle: Teamleder backend
       jobType: backEnd
       title: Pål Steihaug
     - description: Datafrisør med spesiell interesse for markedsdata og Depeche Mode.
-      image: /img/john-erik_bye_johansen.png
+      image: /img/john-erik_bye_johansen_oms_oslo_bors_fhs_5788.jpg
       jobTitle: Senior Systemutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
     - description: 'Opptatt av kodekvalitet, clean code og trommespilling.'
-      image: /img/eirik_caspari.png
+      image: /img/eirik_caspari_oms_oslo_bors_fhs_5712.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
     - description: B.Eng dataingeniør ved NTNU.
-      image: /img/oystein_barstad.jpg
+      image: /img/øystein_barstad_oms_oslo_bors_fhs_6002.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Øystein Barstad
     - description: "Skal bare gjøre ferdig... \U0001F468\U0001F3FB‍\U0001F4BB"
-      image: /img/simen_flatby.png
+      image: /img/simen_flatby_oms_oslo_bors_fhs_5762.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
