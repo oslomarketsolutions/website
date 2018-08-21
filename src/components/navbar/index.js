@@ -177,13 +177,15 @@ export default class Navbar extends Component {
                   <span>{data.numberOfJobVacancies}</span>
                 </Link>
               </li>
-              <li className={styles.noPaddingRight}>
+              <li className={classNames(styles.noPaddingRight, styles.aboutUs)}>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
                   onClick={this.closeLanguageSelector}
                 >
-                  {this.props.language === 'en' ? 'About us' : 'Om oss'}
+                  <span>
+                    {this.props.language === 'en' ? 'About us' : 'Om oss'}
+                  </span>
                 </Link>
               </li>
               <li className={styles.languageSelectorDesktop}>

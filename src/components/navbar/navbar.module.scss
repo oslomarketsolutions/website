@@ -551,6 +551,22 @@ header.navColorWhite .navbar {
       }
     }
 
+    li.aboutUs {
+      width: 45px;
+      a {
+        position: relative;
+        overflow: hidden;
+        width: 45px;
+        span {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          width: 56px;
+          height: 100%;
+        }
+      }
+    }
+
     li.cookie {
       padding-left: 4px;
       .cookieButton {
@@ -701,6 +717,37 @@ header.navColorWhite .navbar {
           height: 12px;
           width: 12px;
           font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .navbar {
+    .logoWrapper {
+      padding: 0;
+      width: 56px;
+      height: 30px;
+
+      img {
+        width: 56px;
+        // position: absolute;
+        top: 2px;
+        left: -5px;
+      }
+    }
+  }
+
+  header.headerUnderline {
+    .navbar {
+      height: 30px;
+      .logoWrapper {
+        height: 30px;
+        margin-top: 3px;
+        img {
+          width: 56px;
+          left: 1px;
         }
       }
     }
