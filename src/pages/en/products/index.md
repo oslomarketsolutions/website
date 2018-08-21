@@ -13,8 +13,8 @@ linkCardsSection:
       header: OMS Components
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        Full coverage of the financial markets. Market data portal with live,
+        streaming data and smart links to content.
       header: Feed API
       isDark: false
     - description: >-
@@ -116,13 +116,14 @@ services:
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
-      Access global market data with high quality REST-APIs. OMS deliver
-      websockets for streaming data and APIs for static and delayed data. The
-      feed is easy to implement and you are able to develop your web site the
-      way you want. Choose between standard or a custom feed. Feed may include
+      Access global market data with high quality REST-APIs. OMS deliver web
+      sockets for streaming data and APIs for static and delayed data. The feed
+      is easy to implement and you have full flexibility to develop solutions on
+      top. Choose between standard or customized feed. Feed may include
       real-time and delayed quotes, trades and orders, historical prices,
-      corporate actions, dividends, financial calendars, stock exchange notices,
-      top shareholders and more from several different exchanges globally.
+      corporate actions, dividends, financial calendars, regulatory news,
+      shareholder information and more from several different exchanges
+      globally.
   omsComponents:
     buttonText: Contact us
     header: OMS Components
@@ -140,3 +141,4 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
+
