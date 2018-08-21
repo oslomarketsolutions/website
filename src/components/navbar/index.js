@@ -37,6 +37,7 @@ export default class Navbar extends Component {
     cookieManagerOpen: false,
     languageSelectorOpen: false,
     headerUnderline: false,
+    intervalId: 0,
   };
 
   componentDidMount() {
@@ -64,6 +65,20 @@ export default class Navbar extends Component {
     }
   }
 
+  scrollStep() {
+    if (window != null) {
+      if (window.pageYOffset === 0) {
+        clearInterval(this.state.intervalId);
+      }
+      window.scroll(0, window.pageYOffset - 100);
+    }
+  }
+
+  scrollToTop() {
+    const intervalId = setInterval(this.scrollStep.bind(this), 16.66);
+    this.setState({ intervalId });
+  }
+
   changePageLanguage = () => {
     const pathSplitArray = this.props.location.pathname.split('/');
     let returnPath;
@@ -84,6 +99,7 @@ export default class Navbar extends Component {
   };
 
   closePopUpAndOpenManager = () => {
+    this.scrollToTop();
     this.setState({
       cookieManagerOpen: true,
     });
@@ -177,13 +193,15 @@ export default class Navbar extends Component {
                   <span>{data.numberOfJobVacancies}</span>
                 </Link>
               </li>
-              <li className={styles.noPaddingRight}>
+              <li className={classNames(styles.noPaddingRight, styles.aboutUs)}>
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
                   onClick={this.closeLanguageSelector}
                 >
-                  {this.props.language === 'en' ? 'About us' : 'Om oss'}
+                  <span>
+                    {this.props.language === 'en' ? 'About us' : 'Om oss'}
+                  </span>
                 </Link>
               </li>
               <li className={styles.languageSelectorDesktop}>
