@@ -128,28 +128,7 @@ collections:
               {label: "Perk cards", name: "perkCards", widget: "list", fields: [
                 {label: "Perk title", name: "perkTitle", widget: "string"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Icon", name: "icon", widget: "object", fields: [
-                  {label: "Font Awesome", name: "fa", widget: "select", options: [
-                    {label: "Spotify", value: "fab spotify"},
-                    {label: "User clock", value: "fal user-clock"},
-                    {label: "Home", value: "fal home"},
-                    {label: "Utensils", value: "fal utensils"},
-                    {label: "Calendar", value: "fal calendar-alt"},
-                    {label: "Laptop code", value: "fal laptop-code"},
-                    {label: "Hand holding seedling", value: "fal hand-holding-seedling"},
-                    {label: "Briefcase medical", value: "fal briefcase-medical"},
-                    {label: "Snowflake", value: "fal snowflake"},
-                    {label: "Newspaper", value: "fal newspaper"},
-                    {label: "Mobile", value: "fal mobile"},
-                    {label: "Hands", value: "fal hands"},
-                    {label: "Dollar sign", value: "fal dollar-sign"},
-                    {label: "Piggy bank", value: "fal piggy-bank"},
-                    {label: "Chart line", value: "fal chart-line"},
-                    {label: "Shuttle van", value: "fal shuttle-van"},
-                    {label: "Watch fitness", value: "fal watch-fitness"},
-                  ]},
-                  {label: "Custom logo", name: "custom", widget: "image", default: " "},
-                ]},
+                {label: "Icon", name: "icon", widget: "image"},
               ]},
             ]}
           - {label: "Positions", name: "positions", widget: "object", fields: [
@@ -399,28 +378,7 @@ collections:
               {label: "Perk cards", name: "perkCards", widget: "list", fields: [
                 {label: "Perk title", name: "perkTitle", widget: "string"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Icon", name: "icon", widget: "object", fields: [
-                  {label: "Font Awesome", name: "fa", widget: "select", options: [
-                    {label: "Spotify", value: "fab spotify"},
-                    {label: "User clock", value: "fal user-clock"},
-                    {label: "Home", value: "fal home"},
-                    {label: "Utensils", value: "fal utensils"},
-                    {label: "Calendar", value: "fal calendar-alt"},
-                    {label: "Laptop code", value: "fal laptop-code"},
-                    {label: "Hand holding seedling", value: "fal hand-holding-seedling"},
-                    {label: "Briefcase medical", value: "fal briefcase-medical"},
-                    {label: "Snowflake", value: "fal snowflake"},
-                    {label: "Newspaper", value: "fal newspaper"},
-                    {label: "Mobile", value: "fal mobile"},
-                    {label: "Hands", value: "fal hands"},
-                    {label: "Dollar sign", value: "fal dollar-sign"},
-                    {label: "Piggy bank", value: "fal piggy-bank"},
-                    {label: "Chart line", value: "fal chart-line"},
-                    {label: "Shuttle van", value: "fal shuttle-van"},
-                    {label: "Watch fitness", value: "fal watch-fitness"},
-                  ]},
-                  {label: "Custom logo", name: "custom", widget: "image"},
-                ]},
+                {label: "Icon", name: "icon", widget: "image"},
               ]},
             ]}
           - {label: "Positions", name: "positions", widget: "object", fields: [
