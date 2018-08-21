@@ -57,7 +57,7 @@ employees:
       title: Espen Henriksen
     - description: >-
         Fullstack-utvikler med spesiell interesse for javascript og
-        webløsninger. Pusler med dataprosessering.
+        webløsninger. Pusler med dataprosessering. 
       image: /img/kristian_hagen.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
@@ -95,10 +95,7 @@ employees:
       jobTitle: Senior Systemutvikler
       jobType: backEnd
       title: John-Erik Bye Johansen
-    - description: >-
-        Jeg har det morsomst på jobb når jeg kan finne smartere løsninger til
-        eksisternende utfordringer, og når jeg knuser mine kollegaer i
-        bordtennis.
+    - description: 'Opptatt av kodekvalitet, clean code og trommespilling.'
       image: /img/eirik_caspari.png
       jobTitle: Backendutvikler
       jobType: backEnd
@@ -132,3 +129,4 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
+
