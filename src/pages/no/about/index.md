@@ -83,7 +83,7 @@ employees:
       jobTitle: Frontendutvikler/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
-    - description: UX designer fra Nederland som fulgte <3-heten til Norge
+    - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
       jobType: designer
