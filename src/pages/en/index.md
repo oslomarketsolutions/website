@@ -97,17 +97,17 @@ customization:
   header: Choose your level of customization
   serviceIntegrations:
     header: Service integrations
-    integrationLogos:
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Centevo
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: ProBroker
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Advent
-      - logo: /img/signicat-logo-black-medium-size.png
+    integrationsLogos:
+      - logo: /img/Integration-1@3x.png
         name: VPS
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat4
+      - logo: /img/Integration-2@3x.png
+        name: Advent
+      - logo: /img/Integration-3@3x.png
+        name: ProInvest
+      - logo: /img/Integration-4@3x.png
+        name: ProBroker
+      - logo: /img/Integration-5@3x.png
+        name: Centevo
     text: We play well with others
   text: >-
     Whether you want a fully hosted and managed service, to build your own

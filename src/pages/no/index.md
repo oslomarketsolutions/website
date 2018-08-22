@@ -94,17 +94,17 @@ customization:
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
     header: Service integrations
-    integrationLogos:
-      - logo: /img/Norne@3x.png
-        name: Signicat1
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat2
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat3
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat4
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat5
+    integrationsLogos:
+      - logo: /img/Integration-1@3x.png
+        name: VPS
+      - logo: /img/Integration-2@3x.png
+        name: Advent
+      - logo: /img/Integration-3@3x.png
+        name: ProInvest
+      - logo: /img/Integration-4@3x.png
+        name: ProBroker
+      - logo: /img/Integration-5@3x.png
+        name: Centevo
     text: We play well with others
   text: >-
     Enten du trenger en driftet tjeneste, mer fleksibilitet med vårt
