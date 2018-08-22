@@ -72,8 +72,8 @@ perks:
     - icon: fal home
       perkTitle: Work remotely
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Most of us go to the office every day because we like it here, but if
+        you need it, you can work from home. Or the beach. Or a mountaintop. 
   section: Perks
 positions:
   header: Job vacancies
