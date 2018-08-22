@@ -30,12 +30,13 @@ linkCardsSection:
   title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   marketData:
-    header: Market Data
+    header: Markedsdata fra hele verden
     image: /img/productsPagePlaceholder.png
+    overline: Børsportal
     text: >-
-      Arena provides information on securities listed om Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar
+      En Børsportal gir leserne oversikt over verdens markeder. Indekser,
+      råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
+      aksje. 
   onlinePortfolio:
     header: Manage your assets with ease
     image: /img/productsPagePlaceholder.png
@@ -45,12 +46,12 @@ investorPortal:
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar
   sectionHeader:
-    header: Investor portals
-    subHeader: Some short line of text that summarizes the investor portals
+    header: Investorportal
+    subHeader: 'Brukervennlig, avansert og moderne'
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Basert på våre standard rammeverk bygger vi raskt og effektivt en
+      avansert, skreddersydd portal for dine kunder. Om det er aksjer, fond
+      eller annet som er i fokus, vi tilpasser og designer i samarbeid med deg.
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -66,12 +67,12 @@ investorPortal:
         name: Signicat5
     text: We play well with others
   trading:
-    header: Trading
+    header: Fra Trading til Sparing
     image: /img/productsPagePlaceholder.png
+    overline: Aksjehandel
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
+      nettbanken eller andre påloggede sider og tilpasser behovet fo
 standardProducts:
   arena:
     header: Arena
