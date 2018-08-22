@@ -6,7 +6,7 @@ hero:
   text: >-
     We are always looking for great people! We like people that are passionate
     about new technology and taking part in the creation of good, smart
-    solutions. 
+    solutions.
 
 
     Do you think you got what it takes? Send us an e-mail!
@@ -86,4 +86,5 @@ positions:
   header: Job vacancies
   text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
+  buttonText: Enable
 ---

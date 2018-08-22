@@ -7,7 +7,7 @@ hero:
     Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
     ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
     finansbransjen. Spiller du ping pong og/eller liker metal, hip hop eller
-    hvilken som helst annen musikksjanger er det også et stort pluss. 
+    hvilken som helst annen musikksjanger er det også et stort pluss.
 
 
   title: Want to become one of us?
@@ -49,7 +49,7 @@ perks:
       perkTitle: Sosialt
       text: >-
         Sosiale events, både med selskapet og hekle konsernet arrangeres flere
-        ganger pr år. 
+        ganger pr år.
     - icon: fab spotify
       perkTitle: Spotify
       text: Paid subscription to Spotify or your favourite streaming service
@@ -88,5 +88,5 @@ positions:
   header: Job vacancies
   iframeAltText: You need to have analytics enabled to view the positions
   text: Some text explaining something
+  buttonText: Enable
 ---
-
