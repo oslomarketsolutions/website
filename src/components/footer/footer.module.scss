@@ -203,3 +203,13 @@
     }
   }
 }
+
+@media (max-width: 374px) {
+  .footer {
+    .bottom {
+      .copyright {
+        width: 111%;
+      }
+    }
+  }
+}
