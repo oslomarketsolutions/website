@@ -87,7 +87,6 @@ perks:
 positions:
   header: Ledige stillinger
   iframeAltText: You need to have analytics enabled to view the positions
-  text: Some text explaining something
   buttonText: Enable
   text: Some text explaining something and something more
 ---
