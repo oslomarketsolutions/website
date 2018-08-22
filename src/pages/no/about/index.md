@@ -41,9 +41,9 @@ employees:
       jobTitle: Salg
       jobType: management
       title: Mikael Leckborn
-    - description: Tekst
+    - description: Driver med drift og div
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
-      jobTitle: Drift Ansvarlig
+      jobTitle: Driftssjef
       jobType: operations
       title: Andreas Holen
     - description: Problemløser med forkjærlighet for David Lynch
@@ -129,8 +129,10 @@ employees:
   quotes:
     - author: 'Ole, Handelsbanken'
       text: Veldig betryggende å ha en "direktelinje" å kontakte dere på!
-    - author: ''
-      text: ''
+    - author: 'Tine, OMS'
+      text: >-
+        Vi er et lite, effektivt team stappfulle av spisskompetanse på
+        verdipapirmarkedet.
   section: TEAM
 buttonText: Join the Team
 ---
