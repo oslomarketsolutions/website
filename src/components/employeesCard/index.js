@@ -30,13 +30,13 @@ const iconMatcher = jobType => {
 };
 
 const EmployeeCard = props => {
-  const { name, jobTitle, description, jobType, portraitSize, image } = props;
+  const { name, jobTitle, description, jobType, resolutions, image } = props;
   return (
     <div className={styles.employeeCard}>
       <div className={styles.imageAndIconContainer}>
         <ImageWrapper
           outerWrapperClassName={styles.imageContainer}
-          sizes={portraitSize}
+          resolutions={resolutions}
           src={image}
           alt={name}
         />
@@ -61,7 +61,7 @@ EmployeeCard.propTypes = {
   jobTitle: PropTypes.string,
   jobType: PropTypes.string,
   description: PropTypes.string,
-  portraitSize: PropTypes.shape({
+  resolutions: PropTypes.shape({
     aspectRatio: PropTypes.number,
     base64: PropTypes.string,
     sizes: PropTypes.string,
