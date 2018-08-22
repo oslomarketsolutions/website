@@ -23,7 +23,7 @@ about:
     Miljøet er sammensveiset og alle er med på å påvirke selskapets retning og
     fremtid.
 perks:
-  header: What we offer
+  header: Hva vi tilbyr
   perkCards:
     - icon: fal user-clock
       perkTitle: Fleksibel arbeidstid
