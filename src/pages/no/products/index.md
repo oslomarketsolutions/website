@@ -101,9 +101,12 @@ services:
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
-      Arena provides information on securities listed on Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar.
+      Få tilgang til markedsdata fra hele verden med høy kvalitet, strømmende
+      data leveres over Websockets mens statisk og historisk data levelers over
+      REST-APIer. Feeden er enkel å implementere og dere får full fleksibilitet
+      til å utvikle det dere ønsker på toppen. Innholdet kan inkludere sanntid
+      og forsinkede kurser, handle og ordre, historiske priser, CAer, utbytte,
+      børsmeldinger, aksjonærlister med mer.
   omsComponents:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
@@ -114,13 +117,11 @@ services:
       ønsker å presentere markedsdata i din nåværende nettportal kan dette være
       produktet for deg. Kontakt oss for en uforpliktende demo.
   sectionHeader:
-    header: Services
-    subHeader: >-
-      Some short line of text that summarizes this set of products. Possibly
-      mention some of the benefits.
+    header: DIY
+    subHeader: Få mer fleksibilitet med tilgang til våre APIer eller komponentbibliotek
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Er ikke en full driftet løsning det rette for dere, tilbyr vi gjerne
+      markedsdata APIer eller lisens til OMS Components, våre kraftige React
+      komponenter
 ---
 
