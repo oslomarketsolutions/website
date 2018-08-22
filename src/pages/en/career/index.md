@@ -59,10 +59,8 @@ perks:
       perkTitle: Stock saving program
       text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
     - icon: fal hands
-      perkTitle: Massage
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      perkTitle: Naprapathy
+      text: Every week there's a Naprapathy treatment offer if needed.
     - icon: fal hand-holding-seedling
       perkTitle: Time to innovate
       text: 'Dedicated time to learn, innovate and try new things every month.'
