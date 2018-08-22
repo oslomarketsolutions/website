@@ -35,7 +35,7 @@ investorPortal:
     text: >-
       En Børsportal gir leserne oversikt over verdens markeder. Indekser,
       råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
-      aksje. 
+      aksje.
   onlinePortfolio:
     header: Komplett spareportal
     image: /img/productsPagePlaceholder.png
@@ -130,4 +130,3 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
-
