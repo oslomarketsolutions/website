@@ -5,36 +5,30 @@ hero:
   title: Investorplatform og børsportaler for moderne web
 transitionalElement:
   customerLogos:
-    - logo: /img/afm_logo.png
+    - logo: /img/Arctic Fund Management@3x.png
       name: Artic Fund Management
-    - logo: /img/fif_logo.png
+    - logo: /img/First Fondene@3x.png
       name: First Fondene
-    - logo: /img/hb_logo.png
-      name: handelsbanken
-    - logo: /img/sbanken_logo.png
+    - logo: /img/Handelsbanken@3x.png
+      name: Handeslbanken
+    - logo: /img/Sbanken@3x.png
       name: Sbanken
-    - logo: /img/sb1_logo.png
+    - logo: /img/Sparebank 1@3x.png
       name: SpareBank 1
-    - logo: /img/sbm_logo.png
+    - logo: /img/SpareBanken Møre@3x.png
       name: SpareBankMøre
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat7
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat 8
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat9
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat10
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat11
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat12
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat13
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat14
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat15
+    - logo: /img/OsloBørs@3x.png
+      name: Oslo Børs
+    - logo: /img/Norne@3x.png
+      name: Norne
+    - logo: /img/FishPool@3x.png
+      name: Fishpool
+    - logo: /img/E24@3x.png
+      name: E24
+    - logo: /img/DN@3x.png
+      name: DN
+    - logo: /img/Catella@3x.png
+      name: Catella
   numbersAndText:
     companiesNumber: '150'
     companiesText: Kunder

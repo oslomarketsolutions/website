@@ -63,16 +63,16 @@ investorPortal:
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat1
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat2
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat3
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat4
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat5
+      - logo: /img/VPS3x.png
+        name: VPS
+      - logo: /img/SSCAdvent@3x.png
+        name: Advent
+      - logo: /img/ProInvest@3x.png
+        name: ProInvest
+      - logo: /img/ProBroker@3x.png
+        name: ProBroker
+      - logo: /img/Centevo@3x.png
+        name: Centevo
     text: We play well with others
   trading:
     header: Stock trading in GDPR  and MiFID II-compliant client portals
@@ -141,4 +141,3 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
-
