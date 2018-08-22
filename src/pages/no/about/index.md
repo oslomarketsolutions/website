@@ -73,7 +73,7 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Haakon Winther
-    - description: Tekst
+    - description: "\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB"
       image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
