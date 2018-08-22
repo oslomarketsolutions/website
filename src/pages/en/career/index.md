@@ -58,11 +58,6 @@ perks:
     - icon: fal chart-line
       perkTitle: Stock saving program
       text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
-    - icon: fal shuttle-van
-      perkTitle: Shared car
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
     - icon: fal hands
       perkTitle: Massage
       text: >-
@@ -84,6 +79,7 @@ perks:
   section: Perks
 positions:
   header: Job vacancies
-  text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
+  text: Some text explaining something
 ---
+
