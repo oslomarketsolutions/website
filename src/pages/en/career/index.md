@@ -66,9 +66,7 @@ perks:
       text: 'Dedicated time to learn, innovate and try new things every month.'
     - icon: fal laptop-code
       perkTitle: Hardware & software
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: 'Choose your own workstation, Linux or Mac!'
     - icon: fal home
       perkTitle: Work remotely
       text: >-
