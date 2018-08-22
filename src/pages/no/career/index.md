@@ -10,7 +10,7 @@ hero:
     hvilken som helst annen musikksjanger er det også et stort pluss. 
 
 
-  title: Want to become one of us?s
+  title: Vil du bli en av oss?
 about:
   header: Hvorfor OMS?
   section: about
@@ -79,13 +79,13 @@ perks:
         Hos oss for man velge hva man vil jobbe på. Vi har ca. halvparten på
         Linux, og halvparten på Mac.
     - icon: fal home
-      perkTitle: Work remotelys
+      perkTitle: Work remotely
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
   section: Perks
 positions:
-  header: Job vacancies
+  header: Ledige stillinger
   iframeAltText: You need to have analytics enabled to view the positions
   text: Some text explaining something
 ---
