@@ -79,7 +79,7 @@ perks:
         Hos oss for man velge hva man vil jobbe på. Vi har ca. halvparten på
         Linux, og halvparten på Mac.
     - icon: fal home
-      perkTitle: Work remotely
+      perkTitle: Work remotelys
       text: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
