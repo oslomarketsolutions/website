@@ -35,11 +35,11 @@ investorPortal:
     text: >-
       En Børsportal gir leserne oversikt over verdens markeder. Indekser,
       råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
-      aksje.
+      aksje. 
   onlinePortfolio:
     header: Komplett spareportal
     image: /img/productsPagePlaceholder.png
-    overline: Porteføljerapportering
+    overline: Portefølje og fondshandel
     text: >-
       Engasjer dine kunder og hjelp dem investere mer med en moderne webløsning.
       Integrert med systemer som Centevo plattformen, ProInvest (Tieto) eller
@@ -69,19 +69,19 @@ investorPortal:
         name: Signicat5
     text: Vi liker godt å spille med andre
   trading:
-    header: Fra trading til sparing
+    header: Fra daytrading til  langsiktig sparing
     image: /img/productsPagePlaceholder.png
     overline: Aksjehandel
     text: >-
       OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
-      nettbanken eller andre påloggede sider og tilpasser etter  behov. Vi
-      strekkers oss for å nå ut til både nybegynnere og mer avanserte
-      aksjehandlere. Tradern levert av oss følger selvsagt alle krav til UU,
-      GDPR og MIFID II etter deres ønsker, med mulighet for å inludere
-      hensiktsmessighetstester, egnethetstester, med mer. Vi gjør det enkelt å
-      velge ASK- eller vanlig konto ved hjelp av vår ProBroker integrasjon. I
-      Admin-verkøtyet får ansatte med rettigheter enkel oversikt over kunder med
-      bl.a. supportfunksjoner, publiseringsmuligheter og full auditlogg
+      nettbanken eller andre påloggede sider og tilpasser etter behov. Vi
+      strekker oss for å nå ut til både nybegynnere og mer avanserte
+      aksjehandlere. Traderen levert av oss følger selvsagt alle krav til UU,
+      GDPR og MiFID II med mulighet for å inludere hensiktsmessighetstester og
+      egnethetstester. Vi gjør det enkelt å velge ASK, IPS eller vanlig konto
+      ved hjelp av vår ProBroker integrasjon. I Admin-verkøtyet får ansatte med
+      rettigheter enkel oversikt over kunder med bl.a. supportfunksjoner,
+      publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
     header: Arena
@@ -130,3 +130,4 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
+
