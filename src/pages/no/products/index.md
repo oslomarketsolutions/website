@@ -14,11 +14,11 @@ linkCardsSection:
         nettportaler.
       header: OMS Components
       isDark: false
-    - description: Verdipapirmarkedets informasjonsportal
+    - description: Verdipapirmarkedets informasjonsportal.
       header: Arena
       isDark: false
     - description: >-
-        Fremhvev Investor Relations-sidene ved å vise frem selskapets aksje med
+        Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         moduler fra OMS. 
       header: IR Webmoduler
       isDark: false
@@ -38,13 +38,16 @@ investorPortal:
       råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
       aksje. 
   onlinePortfolio:
-    header: Manage your assets with ease
+    header: Komplett spareportal
     image: /img/productsPagePlaceholder.png
-    overline: Online portfolio
+    overline: Porteføljerapportering
     text: >-
-      Arena provides information on securities listed om Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar
+      Engasjer dine kunder og hjelp dem investere mer med en moderne webløsning.
+      Integrert med systemer som Centevo plattformen, ProInvest (Tieto) eller
+      APX og Tradex (Advent) støtter våre portaler spareavtaler, fondshandel,
+      flytting til ASK og IPS, fremvisning av skatterapporter med mer. OMS kan
+      håndtere avanserte avkastningsberegninger så vel som online onboarding av
+      dine kunder med hensiktsmessighettest og mer.
   sectionHeader:
     header: Investorportal
     subHeader: 'Brukervennlig, avansert og moderne'
@@ -53,7 +56,7 @@ investorPortal:
       avansert, skreddersydd portal for dine kunder. Om det er aksjer, fond
       eller annet som er i fokus, vi tilpasser og designer i samarbeid med deg.
   serviceIntegrations:
-    header: Service integrations
+    header: Tredjepartsintegrasjoner
     integrationsLogos:
       - logo: /img/signicat-logo-black-medium-size.png
         name: Signicat1
@@ -65,33 +68,34 @@ investorPortal:
         name: Signicat4
       - logo: /img/signicat-logo-black-medium-size.png
         name: Signicat5
-    text: We play well with others
+    text: Vi liker godt å spille med andre
   trading:
     header: Fra Trading til Sparing
     image: /img/productsPagePlaceholder.png
     overline: Aksjehandel
     text: >-
       OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
-      nettbanken eller andre påloggede sider og tilpasser behovet fo
+      nettbanken eller andre påloggede sider og tilpasseretter  behov.
 standardProducts:
   arena:
     header: Arena
     image: /img/arena.png
     text: >-
-      Arena provides information on securities listed on Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar.
+      Arena er en informasjonsportal som tilbyr data på Oslo Børs, Oslo Axess
+      and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
+      aksjonærdata, og Corporta Actions Calendar for alle selskap på Oslo Børs.
   irModules:
-    header: IR Modules
+    header: IR Webmoduler
     image: /img/irModulesPlaceholder.png
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
+      moduler fra OMS.
   sectionHeader:
-    header: Standard products
-    subHeader: ''
-    text: Oslo Market Solutions
+    header: Standardprodukter
+    subHeader: Kom raskt i gang med våre abonnementsløsninger
+    text: >-
+      Med våre plug&play produkter kan din nye løsning være oppe på en dag eller
+      to. Kontakt oss for å se hvordan våre produkter kan hjelpe deg videre!
 services:
   feedAPI:
     header: Feed API
