@@ -87,7 +87,7 @@ export const AboutPageTemplate = ({
                   name={employeeName}
                   description={employeeDescription}
                   jobTitle={employeeJobTitle}
-                  portraitSize={findImageResolutions(
+                  resolutions={findImageResolutions(
                     employeeImage,
                     employeeResolutions,
                   )}
@@ -210,7 +210,7 @@ export const aboutPageQuery = graphql`
         node {
           relativePath
           childImageSharp {
-            resolutions(width: 500, height: 500) {
+            resolutions(width: 100, height: 100, quality: 90) {
               ...GatsbyImageSharpResolutions
             }
           }
