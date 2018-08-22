@@ -35,8 +35,10 @@ perks:
   header: What we offer
   perkCards:
     - icon: fal user-clock
-      perkTitle: Flexible work hours
-      text: Work when it suits you
+      perkTitle: Fleksibel arbeidstid
+      text: >-
+        Vår kjernetid er fra 10-15, da vil vi gjerne vite at vi kan kalle inn
+        til møter. Utenom det synes vi alle skal jobbe når det passer dem
     - icon: fal briefcase-medical
       perkTitle: Insurance
       text: With us everyone is insured
@@ -53,46 +55,38 @@ perks:
       perkTitle: Apartments
       text: Located in Villefranche and Albir
     - icon: fal calendar-alt
-      perkTitle: Social events
-      text: Annual social events with the entire group
+      perkTitle: Sosialt
+      text: >-
+        Sosiale events, både med selskapet og hekle konsernet arrangeres flere
+        ganger pr år. 
     - icon: fab spotify
       perkTitle: Spotify
       text: Paid subscription to Spotify or your favourite streaming service
     - icon: fal piggy-bank
-      perkTitle: Pension
+      perkTitle: Pensjon
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Gode pensjonsordninger skal sikre at våre ansatte har det bra også etter
+        endt arbeidsliv. 5 % fra 1 kr til 7,1G. 8 % fra 7,1 til 12G
     - icon: fal chart-line
-      perkTitle: Stock options
+      perkTitle: Aksjesparing for ansatte
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal shuttle-van
-      perkTitle: Shared car
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Ansatte i Oslo Børs VPS kan spare 1 000 kr i OSLO-aksjen hver måned, med
+        20% rabatt.
     - icon: fal hands
-      perkTitle: Massage
+      perkTitle: Naprapat
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal dollar-sign
-      perkTitle: Bonus
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Én gang i uken kommer det en naprapat som man kan få behandling av, om
+        det skulle trengs
     - icon: fal hand-holding-seedling
-      perkTitle: Time to innovate
+      perkTitle: Tid til innovasjon
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Minst én dag i måneden vies til å prøve nye ting. Dagene avsluttes med
+        show & tell og sosial hygge.
     - icon: fal laptop-code
-      perkTitle: Harware & software
+      perkTitle: Hardware & software
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Hos oss for man velge hva man vil jobbe på. Vi har ca. halvparten på
+        Linux, og halvparten på Mac.
     - icon: fal home
       perkTitle: Work remotely
       text: >-
@@ -101,6 +95,7 @@ perks:
   section: Perks
 positions:
   header: Job vacancies
-  text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
+  text: Some text explaining something
 ---
+
