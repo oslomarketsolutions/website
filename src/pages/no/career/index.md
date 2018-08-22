@@ -10,7 +10,7 @@ hero:
     hvilken som helst annen musikksjanger er det også et stort pluss. 
 
 
-  title: Want to become one of us?
+  title: Want to become one of us?s
 about:
   header: Hvorfor OMS?
   section: about
