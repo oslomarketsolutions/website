@@ -71,11 +71,10 @@ perks:
       perkTitle: Work remotely
       text: >-
         Most of us go to the office every day because we like it here, but if
-        you need it, you can work from home. Or the beach. Or a mountaintop. 
+        you need it, you can work from home. Or the beach. Or a mountaintop.
   section: Perks
 positions:
   header: Job vacancies
   iframeAltText: You need to have analytics enabled to view the positions
   text: Some text explaining something
 ---
-

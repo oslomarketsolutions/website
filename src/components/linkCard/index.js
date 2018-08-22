@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
 import styles from './linkCard.module.scss';
 
-const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
+const LinkCard = ({
+  header,
+  description,
+  isDark,
+  index,
+  onClickFunction,
+  linkText,
+}) => {
   let icon = '';
 
   switch (index) {
@@ -39,9 +46,7 @@ const LinkCard = ({ header, description, isDark, index, onClickFunction }) => {
           <h3>{header}</h3>
         </div>
         <p>{description}</p>
-        <div className={classNames('textButton', styles.link)}>
-          Go to {header}
-        </div>
+        <div className={classNames('textButton', styles.link)}>{linkText}</div>
       </Link>
       <Link
         className={classNames('textButton', styles.mobileLink)}
@@ -62,6 +67,7 @@ export default LinkCard;
 LinkCard.propTypes = {
   header: PropTypes.string,
   description: PropTypes.string,
+  linkText: PropTypes.string,
   isDark: PropTypes.bool,
   index: PropTypes.number,
   onClickFunction: PropTypes.func,

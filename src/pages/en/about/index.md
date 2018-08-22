@@ -120,7 +120,7 @@ employees:
       title: Elias Thøgersen
     - description: >-
         Informatics student at NTNU Gløshaugen. At the moment very into
-        bouldering. 
+        bouldering.
       image: /img/asmund_staldvik.png
       jobTitle: Summer intern
       jobType: summerIntern
@@ -134,4 +134,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

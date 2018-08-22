@@ -51,6 +51,7 @@ export class ProductPageTemplate extends Component {
                   header={linkCard.header}
                   description={linkCard.description}
                   isDark={linkCard.isDark}
+                  linkText={linkCard.linkText}
                   onClickFunction={this.scrollToRef}
                 />
               ))}
@@ -268,6 +269,7 @@ export const productPageQuery = graphql`
             header
             description
             isDark
+            linkText
           }
         }
         investorPortal {
