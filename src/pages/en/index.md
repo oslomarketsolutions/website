@@ -43,7 +43,6 @@ transitionalElement:
     usersText: Users served daily
   socialMediaText: Follow us
 investorPortal:
-  buttonText: ' '
   header: Investor portal
   investorPortalImages:
     - image: investorportal.png
