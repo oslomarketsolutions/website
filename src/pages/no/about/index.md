@@ -46,7 +46,7 @@ employees:
       jobTitle: Drift Ansvarlig
       jobType: operations
       title: Andreas Holen
-    - description: Tekst
+    - description: Problemløser med forkjærlighet for David Lynch
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
       jobTitle: Support
       jobType: support
