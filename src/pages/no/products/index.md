@@ -15,10 +15,11 @@ linkCardsSection:
         nettportaler.
       header: OMS Components
       isDark: false
+      linkText: Gå til OMS Components
     - description: Verdipapirmarkedets informasjonsportal
       header: Arena
       isDark: false
-      linkText: Gå til OMS Components
+      linkText: Gå til Arena
     - description: >-
         Fremhvev Investor Relations-sidene ved å vise frem selskapets aksje med
         moduler fra OMS.
