@@ -254,6 +254,7 @@ export default class TemplateWrapper extends Component {
             ...this.props,
             handleCookieChanges,
             googleAnalyticsIsActive,
+            language,
           })}
           <Footer language={language} data={data.footer} />
         </div>

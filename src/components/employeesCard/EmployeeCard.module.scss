@@ -4,7 +4,7 @@
   background-color: $white;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 100px 200px;
+  grid-template-columns: 100px 192px;
   grid-template-rows: 50% 50%;
   height: 300px;
   width: 358px;
@@ -107,6 +107,13 @@
 @media (max-width: 690px) {
   .employeeCard {
     width: 358px;
-    grid-template-columns: 100px 200px;
+    grid-template-columns: 100px 192px;
+  }
+}
+
+@media (max-width: 374px) {
+  .employeeCard {
+    width: 310px;
+    grid-template-columns: 100px 138px;
   }
 }

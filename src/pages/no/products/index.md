@@ -3,9 +3,10 @@ templateKey: productPage
 linkCardsSection:
   linkCards:
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
-      header: Investor portals
+        En moderne platform for aksjehandel, fondssparing eller markedsdata. Med
+        alt dine brukere trenger av avansert funksjoner kombinert med
+        brukervennlighet.
+      header: Investorportal
       isDark: false
     - description: >-
         Sømløs integrasjon med minimalt arbeid. OMS Components er
@@ -13,30 +14,29 @@ linkCardsSection:
         nettportaler.
       header: OMS Components
       isDark: false
-    - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+    - description: Verdipapirmarkedets informasjonsportal
       header: Arena
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
-      header: IR Modules
+        Fremhvev Investor Relations-sidene ved å vise frem selskapets aksje med
+        moduler fra OMS.
+      header: IR Webmoduler
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        Med markedsdata fra hele verden gir vårt APi deg tilgang til statisk
+        data over Rest og strømmende data over Websockets
       header: Feed API
       isDark: false
-  title: 'Hosted APIs, React components & fully managed solutions'
+  title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   marketData:
-    header: Market Data
+    header: Markedsdata fra hele verden
     image: /img/productsPagePlaceholder.png
+    overline: Børsportal
     text: >-
-      Arena provides information on securities listed om Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar
+      En Børsportal gir leserne oversikt over verdens markeder. Indekser,
+      råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
+      aksje.
   onlinePortfolio:
     header: Manage your assets with ease
     image: /img/productsPagePlaceholder.png
@@ -46,12 +46,12 @@ investorPortal:
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar
   sectionHeader:
-    header: Investor portals
-    subHeader: Some short line of text that summarizes the investor portals
+    header: Investorportal
+    subHeader: 'Brukervennlig, avansert og moderne'
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Basert på våre standard rammeverk bygger vi raskt og effektivt en
+      avansert, skreddersydd portal for dine kunder. Om det er aksjer, fond
+      eller annet som er i fokus, vi tilpasser og designer i samarbeid med deg.
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
@@ -67,12 +67,12 @@ investorPortal:
         name: Signicat5
     text: We play well with others
   trading:
-    header: Trading
+    header: Fra Trading til Sparing
     image: /img/productsPagePlaceholder.png
+    overline: Aksjehandel
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
+      nettbanken eller andre påloggede sider og tilpasser behovet fo
 standardProducts:
   arena:
     header: Arena
@@ -81,7 +81,6 @@ standardProducts:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
-    buttonText: Kontakt oss
   irModules:
     header: IR Modules
     image: /img/irModulesPlaceholder.png
@@ -89,7 +88,6 @@ standardProducts:
       Whether you want a fully hosted and managed web trader, fund savings
       platform, portfolio reporting or market data information, OMS can help you
       get there.
-    buttonText: Kontakt oss
   sectionHeader:
     header: Standard products
     subHeader: ''
@@ -102,7 +100,6 @@ services:
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
-    buttonText: Kontakt oss
   omsComponents:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
@@ -112,7 +109,6 @@ services:
       bygget for å være enkle å integrere i eksisterende løsninger. Dersom du
       ønsker å presentere markedsdata i din nåværende nettportal kan dette være
       produktet for deg. Kontakt oss for en uforpliktende demo.
-    buttonText: Kontakt oss
   sectionHeader:
     header: Services
     subHeader: >-

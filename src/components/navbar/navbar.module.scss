@@ -50,7 +50,11 @@ header.headerUnderline {
       display: none;
     }
     .cookiePopUp {
-      display: none;
+      right: 274px;
+      top: 60px;
+      .indicator {
+        display: none;
+      }
     }
   }
 }
@@ -254,6 +258,7 @@ header.headerUnderline {
     box-shadow: $navbarShadow;
     border-radius: $S;
     padding: $XL;
+    transition: all 200ms ease;
 
     .indicator {
       position: absolute;
@@ -430,6 +435,11 @@ header.navColorWhite .navbar {
         margin-left: 210px;
         transition: all 200ms ease;
       }
+
+      .cookiePopUp {
+        right: calc(30px - ((100vw - 1140px) / 2));
+        top: 76px;
+      }
     }
   }
 }
@@ -437,6 +447,14 @@ header.navColorWhite .navbar {
 @media (max-width: 1172px) {
   .navbar {
     width: 96%;
+  }
+  header.headerUnderline {
+    .navbar {
+      .cookiePopUp {
+        right: -12px;
+        top: 85px;
+      }
+    }
   }
 }
 
@@ -514,6 +532,12 @@ header.navColorWhite .navbar {
       li.cookie {
         margin-right: -170px;
       }
+
+      .cookiePopUp {
+        right: 0px;
+        top: 74px;
+        border-top-right-radius: $S;
+      }
     }
   }
 }
@@ -548,6 +572,22 @@ header.navColorWhite .navbar {
         height: 12px;
         width: 12px;
         font-size: 8px;
+      }
+    }
+
+    li.aboutUs {
+      width: 45px;
+      a {
+        position: relative;
+        overflow: hidden;
+        width: 45px;
+        span {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          width: 56px;
+          height: 100%;
+        }
       }
     }
 
@@ -684,6 +724,12 @@ header.navColorWhite .navbar {
           left: 2px;
         }
       }
+
+      .cookiePopUp {
+        right: -7px;
+        top: 49px;
+      }
+
       li.cookie {
         margin-right: -84px;
       }
@@ -701,6 +747,58 @@ header.navColorWhite .navbar {
           height: 12px;
           width: 12px;
           font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .navbar {
+    .logoWrapper {
+      padding: 0;
+      width: 56px;
+      height: 30px;
+
+      img {
+        width: 56px;
+        top: 2px;
+        left: -5px;
+      }
+    }
+
+    .cookieManager {
+      width: 308px;
+
+      .save {
+        width: 244px;
+      }
+    }
+
+    .cookiePopUp {
+      width: 308px;
+    }
+  }
+
+  header.headerUnderline {
+    .navbar {
+      height: 30px;
+      .logoWrapper {
+        height: 30px;
+        margin-top: 3px;
+        img {
+          width: 56px;
+          left: 1px;
+        }
+      }
+
+      .cookiePopUp {
+        top: 40px;
+      }
+
+      li.careers {
+        span {
+          top: 2px;
         }
       }
     }

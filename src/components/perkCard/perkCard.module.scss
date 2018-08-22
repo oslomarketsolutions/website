@@ -8,7 +8,7 @@
   height: 221px;
   display: flex;
   flex-flow: row wrap;
-  box-shadow: 0 16px 16px 0 #c7d3e3;
+  box-shadow: $newBoxShadow;
   margin-bottom: $L;
   align-items: flex-start;
   margin: 16px;
@@ -46,5 +46,12 @@
   .perkCard {
     width: 358px;
     height: 221px;
+  }
+}
+
+@media (max-width: 374px) {
+  .perkCard {
+    width: 310px;
+    height: 268px;
   }
 }
