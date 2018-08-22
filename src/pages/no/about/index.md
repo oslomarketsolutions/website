@@ -31,16 +31,16 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
+    - description: 'Kontakt meg for datafeed, FinTech og finansielle webplattformer'
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
+      jobTitle: Salgssjef
+      jobType: management
+      title: Mikael Leckborn
     - description: You're Gonna Need a Bigger Boat
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Prosjektleder
       jobType: management
       title: Christian Blütecher
-    - description: Tekst
-      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
-      jobTitle: Salg
-      jobType: management
-      title: Mikael Leckborn
     - description: Driver med drift og div
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
       jobTitle: Driftssjef
