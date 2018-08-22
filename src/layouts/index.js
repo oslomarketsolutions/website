@@ -221,6 +221,9 @@ export default class TemplateWrapper extends Component {
       removeCookie('__hssc');
       removeCookie('__hssrc');
       removeCookie('__hstc');
+      removeCookie('__cfduid', '.hubspot.com');
+      removeCookie('__cfduid', '.hs-scripts.com');
+      removeCookie('__cfduid', '.hs-analytics.net');
       this.setState({
         setHubspotCookie: false,
       });
