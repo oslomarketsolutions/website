@@ -25,6 +25,7 @@ const IndexPageTemplate = ({ location, data }) => {
   const imageSizes = data.imageSizes.edges;
   let language = 'en';
 
+  // This stops CMS from crashing
   if (location) {
     language = getLanguage(location.pathname);
   }
