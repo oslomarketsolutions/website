@@ -3,34 +3,25 @@ templateKey: careerPage
 hero:
   backgroundImage: /img/standup.png
   backgroundImageAlt: placeholder alt for image1
-  text: >-
-    We are always looking for great people! We like people that are passionate
-    about new technology and taking part in the creation of good, smart
-    solutions. You should also like Pina Coladas and getting caught in the rain.
-    Or not.
+  text: >+
+    Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
+    ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
+    finansbransjen. Spiller du ping pong og/eller liker metal, hip hop eller
+    hvilken som helst annen musikksjanger er det også et stort pluss. 
 
 
-    Do you think you got what it takes? Send us an e-mail!
   title: Want to become one of us?
 about:
-  header: Why OMS?
+  header: Hvorfor OMS?
   section: about
   text: >-
-    OMS has a casual, but professional, working environment. We focus on
-    personal and professional development, quality in each part of our
-    deliveries and continous product development and innovation.
+    I OMS får du jobbe i et lite, men veletablert selskap. Du får være med på å
+    lage løsninger til sentrale deler av verdipapirmarkedet, som brukes av
+    tusenvis av mennesker hver dag.
 
 
-    We value .... Noe om mulighet til å påvirke selskapet, det man jobber med,
-    se resultater etc. etc.?
-
-
-    Noe om personlighet??? Blir fort søkt/kleint
-
-
-    We have rap fans, metal heads and techno listeners, hockeyplayers,
-    non-athletes, yogis, skaters and "Birken-riders". There's meat lovers,
-    vegans and lactose intolerants. - wanna add something to our list?
+    Miljøet er sammensveiset og alle er med på å påvirke selskapets retning og
+    fremtid.
 perks:
   header: What we offer
   perkCards:
