@@ -9,6 +9,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     .map(linkCard => ({
       header: linkCard.get('header'),
       description: linkCard.get('description'),
+      linkText: linkCard.get('linkText'),
       isDark: linkCard.get('isDark'),
     }));
 

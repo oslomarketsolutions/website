@@ -147,6 +147,7 @@ collections:
               {label: "Link cards", name: "linkCards", widget: "list", allow_add: false, fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
+                {label: "Link text", name: "linkText", widget: "text"},
                 {label: "Is dark", name: "isDark", widget: "boolean"},
               ]},
             ]}
@@ -397,6 +398,7 @@ collections:
               {label: "Link cards", name: "linkCards", widget: "list", allow_add: false, fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
+                {label: "Link text", name: "linkText", widget: "text"},
                 {label: "Is dark", name: "isDark", widget: "boolean"},
               ]},
             ]}
