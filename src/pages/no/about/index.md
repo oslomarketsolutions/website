@@ -127,10 +127,10 @@ employees:
       title: Åsmund Staldvik
   header: Hvem er vi
   quotes:
-    - author: John Burroughs
-      text: A somebody was once a nobody who wanted to and did.
-    - author: Arthur Ashe
-      text: Start where you are. Use what you have. Do what you can.
+    - author: 'Ole, Handelsbanken'
+      text: Veldig betryggende å ha en "direktelinje" å kontakte dere på!
+    - author: ''
+      text: ''
   section: TEAM
 buttonText: Join the Team
 ---
