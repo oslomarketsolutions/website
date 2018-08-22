@@ -104,7 +104,7 @@ collections:
                 ]}
               ]}
             ]}
-          - {label: "Button Text", name: "buttonText", widget: "string"}
+          - {label: "Button Text", name: "buttonText", widget: "string", default: " "}
 
       - file: "src/pages/en/career/index.md"
         name: "english_career_page"
@@ -230,13 +230,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Button text", name: "buttonText", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Button text", name: "buttonText", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
 
@@ -309,13 +309,13 @@ collections:
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
-                  {label: "Button text", name: "buttonText", widget: "text"},
+                  {label: "Button text", name: "buttonText", widget: "string", default: " "},
                 ]}
               - {label: "IR Modules", name: "irModules", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
-                  {label: "Button text", name: "buttonText", widget: "text"},
+                  {label: "Button text", name: "buttonText", widget: "string", default: " "},
                 ]}
 
 ############### NORWEGIAN PAGES ###############
@@ -372,7 +372,7 @@ collections:
                 ]}
               ]}
             ]}
-          - {label: "Button Text", name: "buttonText", widget: "string"}
+          - {label: "Button Text", name: "buttonText", widget: "string", default: " "}
 
       - file: "src/pages/no/career/index.md"
         name: "norwegian_career_page"
@@ -514,7 +514,7 @@ collections:
             fields:
               - {label: "Header", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Button text", name: "buttonText", widget: "string"}
+              - {label: "Button text", name: "buttonText", widget: "string", default: " "}
           - label: "Transitional element"
             name: "transitionalElement"
             widget: "object"
@@ -573,13 +573,13 @@ collections:
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
-                  {label: "Button text", name: "buttonText", widget: "text"},
+                  {label: "Button text", name: "buttonText", widget: "string", default: " "},
                 ]}
               - {label: "IR Modules", name: "irModules", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
-                  {label: "Button text", name: "buttonText", widget: "text"},
+                  {label: "Button text", name: "buttonText", widget: "string", default: " "},
                 ]}
 
 ############### NAVBAR ###############

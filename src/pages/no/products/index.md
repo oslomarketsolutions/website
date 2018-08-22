@@ -3,9 +3,10 @@ templateKey: productPage
 linkCardsSection:
   linkCards:
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
-      header: Investor portals
+        En moderne platform for aksjehandel, fondssparing eller markedsdata. Med
+        alt dine brukere trenger av avansert funksjoner kombinert med
+        brukervennlighet.
+      header: Investorportal
       isDark: false
     - description: >-
         Sømløs integrasjon med minimalt arbeid. OMS Components er
@@ -13,47 +14,49 @@ linkCardsSection:
         nettportaler.
       header: OMS Components
       isDark: false
-    - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+    - description: Verdipapirmarkedets informasjonsportal.
       header: Arena
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
-      header: IR Modules
+        Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
+        moduler fra OMS.
+      header: IR Webmoduler
       isDark: false
     - description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data with smart links to content.
+        Med markedsdata fra hele verden gir vårt APi deg tilgang til statisk
+        data over Rest og strømmende data over Websockets
       header: Feed API
       isDark: false
-  title: 'Hosted APIs, React components & fully managed solutions'
+  title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   marketData:
-    header: Market Data
+    header: Markedsdata fra hele verden
     image: /img/productsPagePlaceholder.png
+    overline: Børsportal
     text: >-
-      Arena provides information on securities listed om Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar
+      En Børsportal gir leserne oversikt over verdens markeder. Indekser,
+      råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
+      aksje.
   onlinePortfolio:
-    header: Manage your assets with ease
+    header: Komplett spareportal
     image: /img/productsPagePlaceholder.png
-    overline: Online portfolio
+    overline: Porteføljerapportering
     text: >-
-      Arena provides information on securities listed om Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar
+      Engasjer dine kunder og hjelp dem investere mer med en moderne webløsning.
+      Integrert med systemer som Centevo plattformen, ProInvest (Tieto) eller
+      APX og Tradex (Advent) støtter våre portaler spareavtaler, fondshandel,
+      flytting til ASK og IPS, fremvisning av skatterapporter med mer. OMS kan
+      håndtere avanserte avkastningsberegninger så vel som online onboarding av
+      dine kunder med hensiktsmessighettest og mer.
   sectionHeader:
-    header: Investor portals
-    subHeader: Some short line of text that summarizes the investor portals
+    header: Investorportal
+    subHeader: 'Brukervennlig, avansert og moderne'
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Basert på våre standard rammeverk bygger vi raskt og effektivt en
+      avansert, skreddersydd portal for dine kunder. Om det er aksjer, fond
+      eller annet som er i fokus, vi tilpasser og designer i samarbeid med deg.
   serviceIntegrations:
-    header: Service integrations
+    header: Tredjepartsintegrasjoner
     integrationsLogos:
       - logo: /img/VPS@3x.png
         name: VPS
@@ -65,44 +68,52 @@ investorPortal:
         name: ProBroker
       - logo: /img/Centevo@3x.png
         name: Centevo
-    text: We play well with others
+    text: Vi liker godt å spille med andre
   trading:
-    header: Trading
+    header: Fra trading til sparing
     image: /img/productsPagePlaceholder.png
+    overline: Aksjehandel
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
+      nettbanken eller andre påloggede sider og tilpasser etter  behov. Vi
+      strekkers oss for å nå ut til både nybegynnere og mer avanserte
+      aksjehandlere. Tradern levert av oss følger selvsagt alle krav til UU,
+      GDPR og MIFID II etter deres ønsker, med mulighet for å inludere
+      hensiktsmessighetstester, egnethetstester, med mer. Vi gjør det enkelt å
+      velge ASK- eller vanlig konto ved hjelp av vår ProBroker integrasjon. I
+      Admin-verkøtyet får ansatte med rettigheter enkel oversikt over kunder med
+      bl.a. supportfunksjoner, publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
     header: Arena
     image: /img/arena.png
     text: >-
-      Arena provides information on securities listed on Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar.
-    buttonText: Kontakt oss
+      Arena er en informasjonsportal som tilbyr data på Oslo Børs, Oslo Axess
+      and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
+      aksjonærdata, og Corporta Actions Calendar for alle selskap på Oslo Børs.
   irModules:
-    header: IR Modules
+    header: IR Webmoduler
     image: /img/irModulesPlaceholder.png
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
-    buttonText: Kontakt oss
+      Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
+      moduler fra OMS.
   sectionHeader:
-    header: Standard products
-    subHeader: ''
-    text: Oslo Market Solutions
+    header: Standardprodukter
+    subHeader: Kom raskt i gang med våre abonnementsløsninger
+    text: >-
+      Med våre plug&play produkter kan din nye løsning være oppe på en dag eller
+      to. Kontakt oss for å se hvordan våre produkter kan hjelpe deg videre!
 services:
   feedAPI:
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
-      Arena provides information on securities listed on Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar.
-    buttonText: Kontakt oss
+      Få tilgang til markedsdata fra hele verden med høy kvalitet, strømmende
+      data leveres over Websockets mens statisk og historisk data levelers over
+      REST-APIer. Feeden er enkel å implementere og dere får full fleksibilitet
+      til å utvikle det dere ønsker på toppen. Innholdet kan inkludere sanntid
+      og forsinkede kurser, handle og ordre, historiske priser, CAer, utbytte,
+      børsmeldinger, aksjonærlister med mer.
   omsComponents:
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
@@ -112,14 +123,11 @@ services:
       bygget for å være enkle å integrere i eksisterende løsninger. Dersom du
       ønsker å presentere markedsdata i din nåværende nettportal kan dette være
       produktet for deg. Kontakt oss for en uforpliktende demo.
-    buttonText: Kontakt oss
   sectionHeader:
-    header: Services
-    subHeader: >-
-      Some short line of text that summarizes this set of products. Possibly
-      mention some of the benefits.
+    header: DIY
+    subHeader: Få mer fleksibilitet med tilgang til våre APIer eller komponentbibliotek
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Er ikke en full driftet løsning det rette for dere, tilbyr vi gjerne
+      markedsdata APIer eller lisens til OMS Components, våre kraftige React
+      komponenter
 ---

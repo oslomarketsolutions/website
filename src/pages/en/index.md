@@ -51,6 +51,7 @@ investorPortal:
     Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
     with your portfolio management systems like ProFamily, Tradex and APX,
     Centevo and more.
+  buttonText: Learn more
 customization:
   cards:
     - description: >-

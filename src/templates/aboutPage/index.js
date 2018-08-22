@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
-import { findImageSizes } from '../../utils/helperFunctions';
+import {
+  findImageSizes,
+  findImageResolutions,
+} from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import BigButton from '../../components/bigButton';
 
@@ -12,6 +15,8 @@ export const AboutPageTemplate = ({
   employees,
   buttonText,
   imageSizes,
+  employeeResolutions,
+  language,
 }) => {
   // Insert a placeholder as second item in array.
   // In employeeWrapper the map will replace the placeholder with actual quote
@@ -82,7 +87,10 @@ export const AboutPageTemplate = ({
                   name={employeeName}
                   description={employeeDescription}
                   jobTitle={employeeJobTitle}
-                  portraitSize={findImageSizes(employeeImage, imageSizes)}
+                  resolutions={findImageResolutions(
+                    employeeImage,
+                    employeeResolutions,
+                  )}
                   jobType={employeeJobType}
                   image={employeeImage}
                 />
@@ -91,7 +99,7 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className={styles.joinTheTeam}>
-        <BigButton to="/career" text={buttonText} />
+        <BigButton to={`/${language}/career`} text={buttonText} />
       </section>
     </main>
   );
@@ -120,11 +128,14 @@ AboutPageTemplate.propTypes = {
   }),
   buttonText: PropTypes.string,
   imageSizes: PropTypes.arrayOf(PropTypes.object),
+  employeeResolutions: PropTypes.arrayOf(PropTypes.object),
+  language: PropTypes.string,
 };
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, language }) => {
   const post = data.page;
   const imageSizes = data.imageSizes.edges;
+  const employeeResolutions = data.employeeResolutions.edges;
 
   return (
     <AboutPageTemplate
@@ -133,12 +144,15 @@ const AboutPage = ({ data }) => {
       employees={post.frontmatter.employees}
       buttonText={post.frontmatter.buttonText}
       imageSizes={imageSizes}
+      employeeResolutions={employeeResolutions}
+      language={language}
     />
   );
 };
 
 AboutPage.propTypes = {
   data: PropTypes.shape({}).isRequired,
+  language: PropTypes.string,
 };
 
 export default AboutPage;
@@ -183,6 +197,21 @@ export const aboutPageQuery = graphql`
           childImageSharp {
             sizes(maxWidth: 1800) {
               ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+
+    employeeResolutions: allFile(
+      filter: { absolutePath: { regex: "/static/img/" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            resolutions(width: 100, height: 100, quality: 90) {
+              ...GatsbyImageSharpResolutions
             }
           }
         }

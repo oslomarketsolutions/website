@@ -72,3 +72,11 @@
     opacity: 0.4;
   }
 }
+
+@media (max-width: 374px) {
+  .toggleButton {
+    span {
+      display: none;
+    }
+  }
+}

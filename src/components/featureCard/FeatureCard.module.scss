@@ -144,6 +144,7 @@ div.dark {
 
     p {
       margin: $S 0 $XS 0;
+      height: 96px;
     }
 
     ul {
@@ -162,6 +163,16 @@ div.dark {
   div.dark {
     .customizationLink {
       color: $white;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .featureCard {
+    width: 312px;
+
+    p {
+      height: 96px;
     }
   }
 }
