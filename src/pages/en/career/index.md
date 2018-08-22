@@ -58,33 +58,24 @@ perks:
     - icon: fal chart-line
       perkTitle: Stock saving program
       text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
-    - icon: fal shuttle-van
-      perkTitle: Shared car
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
     - icon: fal hands
-      perkTitle: Massage
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      perkTitle: Naprapathy
+      text: Every week there's a Naprapathy treatment offer if needed.
     - icon: fal hand-holding-seedling
       perkTitle: Time to innovate
       text: 'Dedicated time to learn, innovate and try new things every month.'
     - icon: fal laptop-code
       perkTitle: Hardware & software
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: 'Choose your own workstation, Linux or Mac!'
     - icon: fal home
       perkTitle: Work remotely
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Most of us go to the office every day because we like it here, but if
+        you need it, you can work from home. Or the beach. Or a mountaintop.
   section: Perks
 positions:
   header: Job vacancies
-  text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
   buttonText: Enable
+  text: Some text explaining something
 ---
