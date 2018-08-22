@@ -42,7 +42,7 @@ investorPortal:
       and more.
   onlinePortfolio:
     header: 'A complete savings portal '
-    image: /img/productsPagePlaceholder.png
+    image: /img/fundPortalDesktop.png
     overline: 'Funds and portfolio reporting '
     text: >-
       Engage your customers and help them invest more with a modern web
@@ -141,4 +141,3 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
-
