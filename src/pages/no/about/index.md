@@ -31,7 +31,9 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
-    - description: 'Kontakt meg for, FinTech, datafeed og finansielle webplattformer'
+    - description: >-
+        Kontakt meg for FinTech, datafeed og finansielle webplattformer.
+        Interessert i Seiling og digitalisering.
       image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
       jobTitle: Salgssjef
       jobType: management
