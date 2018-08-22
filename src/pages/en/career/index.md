@@ -58,32 +58,23 @@ perks:
     - icon: /img/Icon-Stock.svg
       perkTitle: Stock saving program
       text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
-    - icon: /img/Icon-SharedCar.svg
-      perkTitle: Shared car
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
     - icon: /img/Icon-Massage.svg
       perkTitle: Massage
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: Every week there's a Naprapathy treatment offer if needed.
     - icon: /img/Icon-Innovate.svg
       perkTitle: Time to innovate
       text: 'Dedicated time to learn, innovate and try new things every month.'
     - icon: /img/Icon-Hardware.svg
       perkTitle: Hardware & software
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: 'Choose your own workstation, Linux or Mac!'
     - icon: /img/Icon-Remote.svg
       perkTitle: Work remotely
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Most of us go to the office every day because we like it here, but if
+        you need it, you can work from home. Or the beach. Or a mountaintop.
   section: Perks
 positions:
   header: Job vacancies
-  text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
+  text: Some text explaining something
 ---

@@ -3,47 +3,52 @@ templateKey: aboutPage
 hero:
   backgroundImage: /img/standup.png
   text: >-
-    Oslo Market Solutions is one of the leading Nordic suppliers of
-    internet-based solutions for the financial markets. With a Nordic
-    perspective, we focus on high availability, quality, innovation, design,
-    speed and flexibility towards our clients. All of our solutions are hosted
-    and operated by Oslo Market Solutions.
+    Oslo Market Solutions er en ledende nordisk leverandør av webløsninger for
+    de finansielle markedene. Med et nordisk perspektiv, fokuserer vi på høy
+    kvalitet, feilfri oppetid, innovasjon, design, hastighet og fleksibilitet
+    for kunden. Alle våre løsninger er driftet og hostet av Oslo Market
+    Solutions.
   title: Oslo Market solutions
 history:
-  header: A brief history
-  section: ABOUT
-  text: >-
-    The company has its origins from InfoStream, which in 1997 developed the
-    first version of the middleware Manamind Collect. Manamind was founded in
-    2001, with Collect as the very corner stone of the company. Today a new
-    version of Collect is still the foundation of our deliveries and is what
-    allows us to collect vast amounts of real-time data and distribute it
-    efficiently to our custom-made web solutions. With domain knowledge in the
-    field of market data and finance we work hard to provide solutions with high
-    quality, availability, flexibility and great design.
+  header: Litt historie
+  section: OM OSS
+  text: >+
+    Selskapet har røtter fra InfoStream som i 1997 utviklet første versjon av
+    Collect. Manamind, Oslo Market Solutions' tidligere navn, ble stiftet i
+    2001, med Collect som grunnstenen i selskapet. I dag er en nyere versjon av
+    mellomvaren fremdeles fundamentet i våre leveranser og det som muliggjør
+    innhenting av store mengder sanntidsdata som effektivt distribueres videre
+    til våre skreddersydde løsninger.
+
+
+    Med domenekunnskap om markedsdata og finans jobber vi hardt for å gi våre
+    kunder de beste løsningene.
+
 employees:
   employeeList:
-    - description: Tekst
+    - description: 'Sykler rundt i byn, noterer med Remarkable, men lever ellers digitalt.'
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
+    - description: >-
+        Kontakt meg for FinTech, datafeed og finansielle webplattformer.
+        Interessert i Seiling og digitalisering.
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
+      jobTitle: Salgssjef
+      jobType: management
+      title: Mikael Leckborn
     - description: You're Gonna Need a Bigger Boat
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Prosjektleder
       jobType: management
       title: Christian Blütecher
-    - description: Tekst
-      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
-      jobTitle: Salg
-      jobType: management
-      title: Mikael Leckborn
-    - description: Tekst
+    - description: Driver med drift og div
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
-      jobTitle: Drift Ansvarlig
+      jobTitle: Driftssjef
       jobType: operations
       title: Andreas Holen
-    - description: Tekst
+    - description: Problemløser med forkjærlighet for David Lynch
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
       jobTitle: Support
       jobType: support
@@ -70,17 +75,17 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Haakon Winther
-    - description: Tekst
+    - description: "\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB"
       image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Anders Ranvik
-    - description: Tekst
+    - description: 'Frontend, frontend.'
       image: /img/rebecca_gjerstad_oms_oslo_bors_fhs_5382.jpg
       jobTitle: Frontendutvikler/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
-    - description: Tekst
+    - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
       jobType: designer
@@ -122,12 +127,14 @@ employees:
       jobTitle: Sommervikar
       jobType: summerIntern
       title: Åsmund Staldvik
-  header: Who we are
+  header: Hvem er vi
   quotes:
-    - author: John Burroughs
-      text: A somebody was once a nobody who wanted to and did.
-    - author: Arthur Ashe
-      text: Start where you are. Use what you have. Do what you can.
+    - author: 'Ole, Handelsbanken'
+      text: Veldig betryggende å ha en "direktelinje" å kontakte dere på!
+    - author: 'Tine, OMS'
+      text: >-
+        Vi er et lite, effektivt team stappfulle av spisskompetanse på
+        verdipapirmarkedet.
   section: TEAM
 buttonText: Join the Team
 ---

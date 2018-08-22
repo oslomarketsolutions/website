@@ -10,7 +10,7 @@ hero:
     hvilken som helst annen musikksjanger er det også et stort pluss.
 
 
-  title: Want to become one of us?
+  title: Vil du bli en av oss?
 about:
   header: Hvorfor OMS?
   section: about
@@ -23,7 +23,7 @@ about:
     Miljøet er sammensveiset og alle er med på å påvirke selskapets retning og
     fremtid.
 perks:
-  header: What we offer
+  header: Hva vi tilbyr
   perkCards:
     - icon: /img/Icon-FlexHours.svg
       perkTitle: Fleksibel arbeidstid
@@ -85,7 +85,7 @@ perks:
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
   section: Perks
 positions:
-  header: Job vacancies
+  header: Ledige stillinger
   iframeAltText: You need to have analytics enabled to view the positions
-  text: Some text explaining something
+  text: Some text explaining something and something more
 ---

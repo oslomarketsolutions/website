@@ -171,43 +171,40 @@ export default class TemplateWrapper extends Component {
     });
   };
 
-  handleCookieChanges = (isOn, id) => {
-    if (id === 'tracking') {
-      if (isOn) {
-        setCookie('setHubspotCookie', true, 365);
-        this.setState({
-          setHubspotCookie: true,
-        });
-      } else {
-        // Deleting hubspot cookies
-        removeCookie('setHubspotCookie');
-        removeCookie('hubspotutk');
-        removeCookie('__hssc');
-        removeCookie('__hssrc');
-        removeCookie('__hstc');
-        this.setState({
-          setHubspotCookie: false,
-        });
-      }
-    } else if (id === 'analytics') {
-      if (isOn) {
-        setCookie('setGoogleAnalyticsCookie', true, 365);
-        this.enableGoogleAnalytics();
-        this.setState({
-          setGoogleAnalyticsCookie: true,
-        });
-      } else {
-        // Deleting google analytics cookies
-        const domain = `.${window.location.hostname}`;
-        removeCookie('setGoogleAnalyticsCookie');
-        removeCookie('_ga', domain);
-        removeCookie('_gat', domain);
-        removeCookie('_gid', domain);
-        this.disableGoogleAnalytics();
-        this.setState({
-          setGoogleAnalyticsCookie: false,
-        });
-      }
+  handleCookieChanges = (analyticsIsOn, trackingIsOn) => {
+    if (trackingIsOn) {
+      setCookie('setHubspotCookie', true, 365);
+      this.setState({
+        setHubspotCookie: true,
+      });
+    } else {
+      // Deleting hubspot cookies
+      removeCookie('setHubspotCookie');
+      removeCookie('hubspotutk');
+      removeCookie('__hssc');
+      removeCookie('__hssrc');
+      removeCookie('__hstc');
+      this.setState({
+        setHubspotCookie: false,
+      });
+    }
+    if (analyticsIsOn) {
+      setCookie('setGoogleAnalyticsCookie', true, 365);
+      this.enableGoogleAnalytics();
+      this.setState({
+        setGoogleAnalyticsCookie: true,
+      });
+    } else {
+      // Deleting google analytics cookies
+      const domain = `.${window.location.hostname}`;
+      removeCookie('setGoogleAnalyticsCookie');
+      removeCookie('_ga', domain);
+      removeCookie('_gat', domain);
+      removeCookie('_gid', domain);
+      this.disableGoogleAnalytics();
+      this.setState({
+        setGoogleAnalyticsCookie: false,
+      });
     }
   };
 
