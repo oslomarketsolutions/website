@@ -607,6 +607,7 @@ header.navColorWhite .navbar {
       padding: 0 $XS 0 $M;
 
       .ulWrapper {
+        z-index: 1;
         display: none;
         position: absolute;
         top: 41px;
