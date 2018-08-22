@@ -70,12 +70,19 @@ investorPortal:
         name: Signicat5
     text: Vi liker godt å spille med andre
   trading:
-    header: Fra Trading til Sparing
+    header: Fra trading til sparing
     image: /img/productsPagePlaceholder.png
     overline: Aksjehandel
     text: >-
       OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
-      nettbanken eller andre påloggede sider og tilpasseretter  behov.
+      nettbanken eller andre påloggede sider og tilpasser etter  behov. Vi
+      strekkers oss for å nå ut til både nybegynnere og mer avanserte
+      aksjehandlere. Tradern levert av oss følger selvsagt alle krav til UU,
+      GDPR og MIFID II etter deres ønsker, med mulighet for å inludere
+      hensiktsmessighetstester, egnethetstester, med mer. Vi gjør det enkelt å
+      velge ASK- eller vanlig konto ved hjelp av vår ProBroker integrasjon. I
+      Admin-verkøtyet får ansatte med rettigheter enkel oversikt over kunder med
+      bl.a. supportfunksjoner, publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
     header: Arena
