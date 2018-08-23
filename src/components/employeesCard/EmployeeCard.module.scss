@@ -92,8 +92,9 @@
   .description {
     grid-column: 1 / span 2;
     grid-row: 2;
+    margin-top: $L;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
