@@ -15,9 +15,7 @@ const PerkCard = ({ title, text, icon }) => (
 
       <h4>{title}</h4>
     </div>
-    <div className={styles.description}>
-      <p>{text}</p>
-    </div>
+    <p>{text}</p>
   </div>
 );
 
