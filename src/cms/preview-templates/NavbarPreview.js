@@ -20,13 +20,10 @@ const NavbarPreview = ({ entry }) => {
     confirmationButtonText: 'test',
   };
 
-  const cookie1 = { name: 'test', purpose: 'test' };
-  const cookie2 = { name: 'test', purpose: 'test' };
-
-  const necessaryCookiesCookies = {
-    cookie1,
-    cookie2,
-  };
+  const necessaryCookiesCookies = [
+    { name: 'test', purpose: 'test' },
+    { name: 'test', purpose: 'test' },
+  ];
 
   const necessaryCookies = {
     id: 'test',
@@ -35,10 +32,10 @@ const NavbarPreview = ({ entry }) => {
     cookies: necessaryCookiesCookies,
   };
 
-  const analyticsCookiesCookies = {
-    cookie1,
-    cookie2,
-  };
+  const analyticsCookiesCookies = [
+    { name: 'test', purpose: 'test' },
+    { name: 'test', purpose: 'test' },
+  ];
 
   const analyticsCookies = {
     id: 'test',
@@ -47,10 +44,10 @@ const NavbarPreview = ({ entry }) => {
     cookies: analyticsCookiesCookies,
   };
 
-  const trackingCookiesCookies = {
-    cookie1,
-    cookie2,
-  };
+  const trackingCookiesCookies = [
+    { name: 'test', purpose: 'test' },
+    { name: 'test', purpose: 'test' },
+  ];
 
   const trackingCookies = {
     id: 'test',
