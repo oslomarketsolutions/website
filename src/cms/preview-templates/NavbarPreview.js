@@ -20,9 +20,12 @@ const NavbarPreview = ({ entry }) => {
     confirmationButtonText: 'test',
   };
 
+  const cookie1 = { name: 'test', purpose: 'test' };
+  const cookie2 = { name: 'test', purpose: 'test' };
+
   const necessaryCookiesCookies = {
-    name: 'test',
-    purpose: 'test',
+    cookie1,
+    cookie2,
   };
 
   const necessaryCookies = {
@@ -33,8 +36,8 @@ const NavbarPreview = ({ entry }) => {
   };
 
   const analyticsCookiesCookies = {
-    name: 'test',
-    purpose: 'test',
+    cookie1,
+    cookie2,
   };
 
   const analyticsCookies = {
@@ -45,8 +48,8 @@ const NavbarPreview = ({ entry }) => {
   };
 
   const trackingCookiesCookies = {
-    name: 'test',
-    purpose: 'test',
+    cookie1,
+    cookie2,
   };
 
   const trackingCookies = {
