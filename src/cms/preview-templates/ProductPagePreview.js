@@ -33,8 +33,14 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     overline: entry.getIn(['data', 'investorPortal', 'marketData', 'overline']),
     header: entry.getIn(['data', 'investorPortal', 'marketData', 'header']),
     text: entry.getIn(['data', 'investorPortal', 'marketData', 'text']),
-    image: getAsset(
-      entry.getIn(['data', 'investorPortal', 'marketData', 'image']),
+    desktopImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'marketData', 'desktopImage']),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'marketData', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'marketData', 'mobileImage']),
     ),
   };
 
@@ -42,8 +48,14 @@ const ProductPagePreview = ({ entry, getAsset }) => {
     overline: entry.getIn(['data', 'investorPortal', 'trading', 'overline']),
     header: entry.getIn(['data', 'investorPortal', 'trading', 'header']),
     text: entry.getIn(['data', 'investorPortal', 'trading', 'text']),
-    image: getAsset(
-      entry.getIn(['data', 'investorPortal', 'trading', 'image']),
+    desktopImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'trading', 'desktopImage']),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'trading', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'trading', 'mobileImage']),
     ),
   };
 
@@ -61,8 +73,19 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       'header',
     ]),
     text: entry.getIn(['data', 'investorPortal', 'onlinePortfolio', 'text']),
-    image: getAsset(
-      entry.getIn(['data', 'investorPortal', 'onlinePortfolio', 'image']),
+    desktopImage: getAsset(
+      entry.getIn([
+        'data',
+        'investorPortal',
+        'onlinePortfolio',
+        'desktopImage',
+      ]),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'onlinePortfolio', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'investorPortal', 'onlinePortfolio', 'mobileImage']),
     ),
   };
 
@@ -120,8 +143,14 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 
   const arena = {
     header: entry.getIn(['data', 'standardProducts', 'arena', 'header']),
-    image: getAsset(
-      entry.getIn(['data', 'standardProducts', 'arena', 'image']),
+    desktopImage: getAsset(
+      entry.getIn(['data', 'standardProducts', 'arena', 'desktopImage']),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'standardProducts', 'arena', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'standardProducts', 'arena', 'mobileImage']),
     ),
     text: entry.getIn(['data', 'standardProducts', 'arena', 'text']),
     buttonText: entry.getIn([
@@ -134,8 +163,14 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 
   const irModules = {
     header: entry.getIn(['data', 'standardProducts', 'irModules', 'header']),
-    image: getAsset(
-      entry.getIn(['data', 'standardProducts', 'irModules', 'image']),
+    desktopImage: getAsset(
+      entry.getIn(['data', 'standardProducts', 'irModules', 'desktopImage']),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'standardProducts', 'irModules', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'standardProducts', 'irModules', 'mobileImage']),
     ),
     text: entry.getIn(['data', 'standardProducts', 'irModules', 'text']),
     buttonText: entry.getIn([
@@ -160,15 +195,29 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 
   const feedAPI = {
     header: entry.getIn(['data', 'services', 'feedAPI', 'header']),
-    image: getAsset(entry.getIn(['data', 'services', 'feedAPI', 'image'])),
+    desktopImage: getAsset(
+      entry.getIn(['data', 'services', 'feedAPI', 'desktopImage']),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'services', 'feedAPI', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'services', 'feedAPI', 'mobileImage']),
+    ),
     text: entry.getIn(['data', 'services', 'feedAPI', 'text']),
     buttonText: entry.getIn(['data', 'services', 'feedAPI', 'buttonText']),
   };
 
   const omsComponents = {
     header: entry.getIn(['data', 'services', 'omsComponents', 'header']),
-    image: getAsset(
-      entry.getIn(['data', 'services', 'omsComponents', 'image']),
+    desktopImage: getAsset(
+      entry.getIn(['data', 'services', 'omsComponents', 'desktopImage']),
+    ),
+    tabletImage: getAsset(
+      entry.getIn(['data', 'services', 'omsComponents', 'tabletImage']),
+    ),
+    mobileImage: getAsset(
+      entry.getIn(['data', 'services', 'omsComponents', 'mobileImage']),
     ),
     text: entry.getIn(['data', 'services', 'omsComponents', 'text']),
     buttonText: entry.getIn([

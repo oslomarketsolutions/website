@@ -19,13 +19,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       name: customerLogo.get('name'),
     }));
 
-  const investorPortalImages = entry
-    .getIn(['data', 'investorPortal', 'investorPortalImages'])
-    .map(investorPortalImage => ({
-      image: getAsset(investorPortalImage.get('image')),
-      name: investorPortalImage.get('name'),
-    }));
-
   const customizationCards = entry
     .getIn(['data', 'customization', 'cards'])
     .map(card => ({
@@ -94,7 +87,15 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         },
         investorPortal: {
           header: entry.getIn(['data', 'investorPortal', 'header']),
-          investorPortalImages,
+          desktopImage: getAsset(
+            entry.getIn(['data', 'investorPortal', 'desktopImage']),
+          ),
+          tabletImage: getAsset(
+            entry.getIn(['data', 'investorPortal', 'tabletImage']),
+          ),
+          mobileImage: getAsset(
+            entry.getIn(['data', 'investorPortal', 'mobileImage']),
+          ),
           text: entry.getIn(['data', 'investorPortal', 'text']),
         },
         customization: {
@@ -119,8 +120,14 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         },
         otherProducts: {
           arena: {
-            image: getAsset(
-              entry.getIn(['data', 'otherProducts', 'arena', 'image']),
+            desktopImage: getAsset(
+              entry.getIn(['data', 'otherProducts', 'arena', 'desktopImage']),
+            ),
+            tabletImage: getAsset(
+              entry.getIn(['data', 'otherProducts', 'arena', 'tabletImage']),
+            ),
+            mobileImage: getAsset(
+              entry.getIn(['data', 'otherProducts', 'arena', 'mobileImage']),
             ),
             header: entry.getIn(['data', 'otherProducts', 'arena', 'header']),
             text: entry.getIn(['data', 'otherProducts', 'arena', 'text']),
@@ -132,8 +139,29 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             ]),
           },
           irModules: {
-            image: getAsset(
-              entry.getIn(['data', 'otherProducts', 'irModules', 'image']),
+            desktopImage: getAsset(
+              entry.getIn([
+                'data',
+                'otherProducts',
+                'irModules',
+                'desktopImage',
+              ]),
+            ),
+            tabletImage: getAsset(
+              entry.getIn([
+                'data',
+                'otherProducts',
+                'irModules',
+                'tabletImage',
+              ]),
+            ),
+            mobileImage: getAsset(
+              entry.getIn([
+                'data',
+                'otherProducts',
+                'irModules',
+                'mobileImage',
+              ]),
             ),
             header: entry.getIn([
               'data',
