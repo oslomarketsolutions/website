@@ -89,7 +89,7 @@ customization:
         - Customized
         - ProBroker
         - User Friendly
-      header: Driftete tjenester
+      header: Driftede tjenester
       isDark: true
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:

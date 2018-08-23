@@ -28,17 +28,18 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
+    - description: >-
+        Contact me for FinTech, data feed and financial web platforms.
+        Interested in Sailing and Digitization.
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
+      jobTitle: Sales
+      jobType: management
+      title: Mikael Leckborn
     - description: Tung som bly
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Project Manager
       jobType: management
       title: Christian Blütecher
-    - description: |
-        Hej Micke!
-      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
-      jobTitle: Sales
-      jobType: management
-      title: Mikael Leckborn
     - description: 'Bor på Nesodden, hardeste ghettoen i landet.'
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
       jobTitle: Support
@@ -119,7 +120,7 @@ employees:
       title: Elias Thøgersen
     - description: >-
         Informatics student at NTNU Gløshaugen. At the moment very into
-        bouldering. 
+        bouldering.
       image: /img/asmund_staldvik.png
       jobTitle: Summer intern
       jobType: summerIntern
@@ -133,4 +134,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

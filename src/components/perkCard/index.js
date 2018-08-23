@@ -1,19 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './perkCard.module.scss';
 
 const PerkCard = ({ title, text, icon }) => (
   <div className={styles.perkCard}>
     <div className={styles.header}>
-      <FontAwesomeIcon
-        icon={icon.length === 1 ? ['fal', 'smile-beam'] : icon}
-      />
+      {icon ? (
+        <div className={styles.iconContainer}>
+          <img src={icon} alt={icon} />
+        </div>
+      ) : (
+        <div />
+      )}
+
       <h4>{title}</h4>
     </div>
-    <div className={styles.description}>
-      <p>{text}</p>
-    </div>
+    <p>{text}</p>
   </div>
 );
 
