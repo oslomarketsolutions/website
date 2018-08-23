@@ -7,25 +7,30 @@ linkCardsSection:
         porteføljerapportering integrert med ditt back office-system
       header: Investorportal
       isDark: false
+      linkText: Gå til Investorportal
     - description: >-
         Sømløs integrasjon med minimalt arbeid. OMS Components er
         standardkomponenter som kan enkelt integreres i eksisterende
         nettportaler.
       header: OMS Components
       isDark: false
+      linkText: Gå til OMS Components
     - description: Verdipapirmarkedets informasjonsportal.
       header: Arena
       isDark: false
+      linkText: Gå til Arena
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         webmoduler fra OMS
       header: IR Webmoduler
       isDark: false
+      linkText: Gå til IR Webmoduler
     - description: >-
         Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
         data over REST og strømmende data over Websockets
       header: Feed API
       isDark: false
+      linkText: Gå til Feed API
   title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   marketData:
@@ -35,7 +40,7 @@ investorPortal:
     text: >-
       En Børsportal gir leserne oversikt over verdens markeder. Indekser,
       råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
-      aksje. 
+      aksje.
   onlinePortfolio:
     header: Komplett spareportal
     image: /img/productsPagePlaceholder.png
@@ -134,4 +139,3 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
-
