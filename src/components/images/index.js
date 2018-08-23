@@ -5,12 +5,12 @@ import { findImageSizes } from '../../utils/helperFunctions';
 
 export default class Images extends Component {
   static propTypes = {
-    alt: PropTypes.shape({}),
-    outerWrapperClassName: PropTypes.shape({}),
-    desktopSrc: PropTypes.shape({}),
-    tabletSrc: PropTypes.shape({}),
-    mobileSrc: PropTypes.shape({}),
-    sizes: PropTypes.shape({}),
+    alt: PropTypes.string,
+    outerWrapperClassName: PropTypes.string,
+    desktopSrc: PropTypes.string,
+    tabletSrc: PropTypes.string,
+    mobileSrc: PropTypes.string,
+    sizes: PropTypes.arrayOf(PropTypes.shape({})),
   };
 
   constructor(props) {
