@@ -160,51 +160,29 @@
 
     h1 {
       grid-column: 2 / span 3;
-      grid-row: 2;
+      grid-row: 3;
     }
 
     h1 + p {
       padding: $XL 0;
       grid-column: 2 / span 3;
-      grid-row: 3;
+      grid-row: 4;
     }
 
     a {
       grid-column: 2 / span 2;
-      grid-row: 4;
+      grid-row: 5;
     }
 
     .investorPortalImagesWrapper {
       grid-column: 6 / span 5;
-      grid-row: 2 / span 3;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      white-space: nowrap;
-      margin-left: -20px;
+      grid-row: 2 / span 5;
+      overflow: hidden;
+      border-radius: $M;
 
       .imageContainer {
-        display: inline-block;
-        max-width: 620px;
-        width: 86%;
-        box-shadow: 0px -14px 24px 0 #c7d3e3;
-        margin: 0 $XXL 0 $XXL;
-      }
-      .imageContainer:first-of-type {
-        margin-left: 20px;
-      }
-    }
-
-    .tickerTape {
-      height: 100%;
-      grid-column: 6 / span 5;
-      grid-row: 5;
-      padding: $XXL 0 0 0;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      white-space: nowrap;
-      .imageContainer {
-        width: 1447px;
-        display: inline-block;
+        width: 147%;
+        border-radius: $M;
       }
     }
 
@@ -269,6 +247,8 @@
       align-self: end;
       margin: 0 20px 0 100px;
       box-shadow: $newBoxShadow;
+      border-radius: $M;
+      margin-bottom: -24px;
     }
   }
 
@@ -311,6 +291,8 @@
       -ms-grid-column-align: end;
       margin: 0 100px 0 20px;
       box-shadow: $newBoxShadow;
+      border-radius: $M;
+      margin-bottom: -24px;
     }
   }
 }
@@ -323,43 +305,51 @@
 
     .investorPortal {
       grid-template-rows:
-        624px max-content max-content 305px
-        75px max-content max-content max-content
-        max-content max-content max-content max-content;
+        624px max-content max-content max-content
+        max-content max-content max-content max-content
+        max-content;
       h1 {
         grid-column: 3 / span 5;
+        grid-row: 2;
       }
 
       h1 + p {
         grid-column: 3 / span 5;
+        grid-row: 3;
       }
 
       p + a {
         grid-column: 3 / span 5;
-        grid-row: 6;
+        grid-row: 5;
         margin-top: $XL;
         margin-bottom: 100px;
       }
+
       .investorPortalImagesWrapper {
-        height: 340px;
-        grid-column: 3 / span 8;
+        grid-column: 3 / span 6;
         grid-row: 4;
+        margin: 0 -14px;
 
         .imageContainer {
-          max-width: 480px;
-          width: 86%;
-          box-shadow: $newBoxShadow;
-          margin: 0 $XXL 0 $XXL;
+          width: 100%;
         }
       }
 
-      .tickerTape {
-        grid-column: 3 / span 8;
-        grid-row: 5;
-        padding: $XS 0 0 0;
-      }
       .subHeader1 {
         padding-top: 0;
+        grid-row: 6;
+      }
+
+      .subHeader1 + p {
+        grid-row: 7;
+      }
+
+      .customizationCards {
+        grid-row: 8;
+      }
+
+      section:last-of-type {
+        grid-row: 9;
       }
     }
 
@@ -387,7 +377,7 @@
         grid-column: 3 / span 6;
         grid-row: 4;
         width: 100%;
-        margin: $XXL 0 0 0;
+        margin: $XXL 0 -24px 0;
       }
     }
   }
@@ -409,24 +399,10 @@
 
     .investorPortal {
       grid-template-rows:
-        624px max-content max-content 240px
-        51px max-content max-content max-content
-        max-content max-content max-content max-content;
-      .investorPortalImagesWrapper {
-        height: 240px;
+        574px max-content max-content max-content
+        max-content max-content max-content max-content
+        max-content;
 
-        .imageContainer {
-          max-width: 332px;
-          width: 86%;
-          margin: 0 $XXL 0 $XXL;
-        }
-      }
-
-      .tickerTape {
-        .imageContainer {
-          width: 1000px;
-        }
-      }
       .customizationCards {
         flex-flow: column nowrap;
         justify-content: space-around;
@@ -465,6 +441,38 @@
         height: 325px;
       }
     }
+
+    .investorPortalImagesWrapper {
+      margin: 0 -10px;
+    }
+
+    .arena,
+    .irModules {
+      .imageContainer {
+        margin-bottom: -16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .homePage {
+    .investorPortal {
+      p + a {
+        margin-top: 48px;
+      }
+
+      .investorPortalImagesWrapper {
+        box-shadow: $newBoxShadow;
+        margin: 0;
+      }
+    }
+    .arena,
+    .irModules {
+      .imageContainer {
+        margin-bottom: -10px;
+      }
+    }
   }
 }
 
@@ -501,9 +509,9 @@
 
     .investorPortal {
       grid-template-rows:
-        400px max-content max-content 240px
-        51px max-content max-content max-content
-        max-content max-content max-content max-content;
+        394px max-content max-content max-content
+        max-content max-content max-content max-content
+        max-content;
 
       h1 {
         grid-column: $main;
@@ -518,13 +526,10 @@
       }
 
       .investorPortalImagesWrapper {
-        grid-column: 2 / span 9;
+        grid-column: 2 / span 8;
         .imageContainer:last-of-type {
           margin-right: $M;
         }
-      }
-      .tickerTape {
-        grid-column: 2 / span 9;
       }
 
       .subHeader1 + p {

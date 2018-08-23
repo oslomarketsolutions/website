@@ -44,13 +44,9 @@ transitionalElement:
   socialMediaText: Follow us
 investorPortal:
   header: Investor portal
-  investorPortalImages:
-    - image: investorportal.png
-      name: Investorportal 2
-    - image: investorportal.png
-      name: Investorportal 1
-    - image: investorportal.png
-      name: Investorportal 3
+  desktopImage: /img/portals-desktop-en@2x.png
+  tabletImage: /img/portals-tablet-en@2x.png
+  mobileImage: /img/portals-mobile-en@2x.png
   text: >-
     Ready to lift your online services to the next level? We offer customized
     Web Traders, Fund Platforms, Portfolio and Market Data Portals integrated
@@ -117,7 +113,9 @@ otherProducts:
   arena:
     buttonText: Learn more
     header: Arena
-    image: /img/arena.png
+    desktopImage: /img/arena-desktop@2x.png
+    tabletImage: /img/arena-desktop@2x.png
+    mobileImage: /img/arena-mobile@2x.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC with the two products Top Shareholders and Corporate Actions
@@ -125,7 +123,9 @@ otherProducts:
   irModules:
     buttonText: Learn more
     header: IR Web Modules
-    image: /img/irModulesPlaceholder.png
+    desktopImage: /img/ir-desktop@2x.png
+    tabletImage: /img/ir-desktop@2x.png
+    mobileImage: /img/ir-mobile@2x.png
     text: >-
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.

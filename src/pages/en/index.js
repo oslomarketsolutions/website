@@ -45,10 +45,9 @@ export const pageQuery = graphql`
         }
         investorPortal {
           header
-          investorPortalImages {
-            image
-            name
-          }
+          desktopImage
+          tabletImage
+          mobileImage
           text
           buttonText
         }
@@ -72,13 +71,17 @@ export const pageQuery = graphql`
         }
         otherProducts {
           arena {
-            image
+            desktopImage
+            tabletImage
+            mobileImage
             header
             text
             buttonText
           }
           irModules {
-            image
+            desktopImage
+            tabletImage
+            mobileImage
             header
             text
             buttonText
