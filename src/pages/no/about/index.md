@@ -115,7 +115,9 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
-    - description: Tekst
+    - description:
+        Har lekser som må gjøres, kaffe som må serveres og gjennomsnittlig kode som må skrives.
+        Har ikke tid til dette.
       image: /img/0.jpeg
       jobTitle: Sommervikar
       jobType: summerIntern
