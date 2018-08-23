@@ -51,7 +51,7 @@ export const CareerPageTemplate = ({
                 key={perkCard.perkTitle}
                 title={perkCard.perkTitle}
                 text={perkCard.text}
-                icon={perkCard.icon && perkCard.icon.split(' ')}
+                icon={perkCard.icon}
               />
             ))}
         </div>

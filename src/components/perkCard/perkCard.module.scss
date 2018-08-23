@@ -23,14 +23,14 @@
     align-items: center;
     min-height: 64px;
     width: 100%;
-    svg {
-      font-size: 64px;
-      color: $vibrantBlue;
-      width: 80px;
-    }
 
-    h4 {
-      margin-left: $S;
+    .iconContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 64px;
+      margin-right: $S;
     }
   }
 }
