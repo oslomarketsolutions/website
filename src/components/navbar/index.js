@@ -37,6 +37,9 @@ export default class Navbar extends Component {
     cookieManagerOpen: false,
     languageSelectorOpen: false,
     headerUnderline: false,
+    trackingIsOn: true,
+    analyticsIsOn: true,
+    useLocalState: false,
     intervalId: 0,
   };
 
@@ -102,6 +105,7 @@ export default class Navbar extends Component {
     this.scrollToTop();
     this.setState({
       cookieManagerOpen: true,
+      useLocalState: true,
     });
     this.props.handleConfirmation(false);
   };
@@ -113,6 +117,14 @@ export default class Navbar extends Component {
   toggleCookieManager = () => {
     if (!this.props.hideCookiePopUp) {
       this.closePopUpAndOpenManager();
+    } else if (!this.state.cookieManagerOpen) {
+      this.setState(prevState => ({
+        cookieManagerOpen: !prevState.cookieManagerOpen,
+        analyticsIsOn: this.props.analyticsOn,
+        trackingIsOn: this.props.trackingOn,
+        languageSelectorOpen: false,
+        useLocalState: true,
+      }));
     } else {
       this.setState(prevState => ({
         cookieManagerOpen: !prevState.cookieManagerOpen,
@@ -121,22 +133,33 @@ export default class Navbar extends Component {
     }
   };
 
+  saveSettings = () => {
+    this.setState({
+      cookieManagerOpen: false,
+    });
+    this.props.handleCookieChanges(
+      this.state.analyticsIsOn,
+      this.state.trackingIsOn,
+    );
+  };
+
   handleToggleButton = (isOn, id) => {
-    this.props.handleCookieChanges(isOn, id);
+    if (id === 'tracking') {
+      this.setState({
+        trackingIsOn: isOn,
+      });
+    } else if (id === 'analytics') {
+      this.setState({
+        analyticsIsOn: isOn,
+      });
+    }
   };
 
   toggleLanguageSelector = () => {
-    if (!this.props.hideCookiePopUp) {
-      this.setState({
-        languageSelectorOpen: true,
-      });
-      this.props.handleConfirmation(false);
-    } else {
-      this.setState(prevState => ({
-        languageSelectorOpen: !prevState.languageSelectorOpen,
-        cookieManagerOpen: false,
-      }));
-    }
+    this.setState(prevState => ({
+      languageSelectorOpen: !prevState.languageSelectorOpen,
+      cookieManagerOpen: false,
+    }));
   };
 
   closeLanguageSelector = () => {
@@ -298,7 +321,11 @@ export default class Navbar extends Component {
                         cookieInfo.cookieManager.analyticsCookies.cookies
                       }
                       id={cookieInfo.cookieManager.analyticsCookies.id}
-                      isOn={this.props.analyticsOn}
+                      isOn={
+                        this.state.useLocalState
+                          ? this.state.analyticsIsOn
+                          : this.props.analyticsOn
+                      }
                       handleToggleButton={this.handleToggleButton}
                       language={this.props.language}
                     />
@@ -307,12 +334,16 @@ export default class Navbar extends Component {
                       text={cookieInfo.cookieManager.trackingCookies.text}
                       cookies={cookieInfo.cookieManager.trackingCookies.cookies}
                       id={cookieInfo.cookieManager.trackingCookies.id}
-                      isOn={this.props.trackingOn}
+                      isOn={
+                        this.state.useLocalState
+                          ? this.state.trackingIsOn
+                          : this.props.trackingOn
+                      }
                       handleToggleButton={this.handleToggleButton}
                       language={this.props.language}
                     />
                     <button
-                      onClick={this.toggleCookieManager}
+                      onClick={this.saveSettings}
                       className={classNames('textButton', styles.save)}
                     >
                       {cookieInfo.cookieManager.buttonText}

@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from '../../components/employeesCard';
 import styles from './aboutPage.module.scss';
-import { findImageSizes } from '../../utils/helperFunctions';
+import {
+  findImageSizes,
+  findImageResolutions,
+} from '../../utils/helperFunctions';
 import ImageWrapper from '../../components/imageWrapper';
 import BigButton from '../../components/bigButton';
 
@@ -12,6 +15,7 @@ export const AboutPageTemplate = ({
   employees,
   buttonText,
   imageSizes,
+  employeeResolutions,
   language,
 }) => {
   // Insert a placeholder as second item in array.
@@ -83,7 +87,10 @@ export const AboutPageTemplate = ({
                   name={employeeName}
                   description={employeeDescription}
                   jobTitle={employeeJobTitle}
-                  portraitSize={findImageSizes(employeeImage, imageSizes)}
+                  resolutions={findImageResolutions(
+                    employeeImage,
+                    employeeResolutions,
+                  )}
                   jobType={employeeJobType}
                   image={employeeImage}
                 />
@@ -121,12 +128,14 @@ AboutPageTemplate.propTypes = {
   }),
   buttonText: PropTypes.string,
   imageSizes: PropTypes.arrayOf(PropTypes.object),
+  employeeResolutions: PropTypes.arrayOf(PropTypes.object),
   language: PropTypes.string,
 };
 
 const AboutPage = ({ data, language }) => {
   const post = data.page;
   const imageSizes = data.imageSizes.edges;
+  const employeeResolutions = data.employeeResolutions.edges;
 
   return (
     <AboutPageTemplate
@@ -135,6 +144,7 @@ const AboutPage = ({ data, language }) => {
       employees={post.frontmatter.employees}
       buttonText={post.frontmatter.buttonText}
       imageSizes={imageSizes}
+      employeeResolutions={employeeResolutions}
       language={language}
     />
   );
@@ -187,6 +197,21 @@ export const aboutPageQuery = graphql`
           childImageSharp {
             sizes(maxWidth: 1800) {
               ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+
+    employeeResolutions: allFile(
+      filter: { absolutePath: { regex: "/static/img/" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            resolutions(width: 100, height: 100, quality: 90) {
+              ...GatsbyImageSharpResolutions
             }
           }
         }

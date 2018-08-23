@@ -54,7 +54,7 @@ investorPortal:
   text: >-
     OMS hjelper deg med løsninger for fond- og aksjehandel, fondsrapportering,
     spareplattformer og børsportaler med markedsdata fra hele verden.
-  buttonText: ' '
+  buttonText: Lær mer
 customization:
   cards:
     - description: >-
@@ -91,7 +91,7 @@ customization:
         - Customized
         - ProBroker
         - User Friendly
-      header: Driftete tjenester
+      header: Driftede tjenester
       isDark: true
       icon: /img/Icon-Managed.svg
   header: Velg ditt nivå av skreddersøm

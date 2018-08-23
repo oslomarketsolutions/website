@@ -6,7 +6,7 @@ hero:
   text: >-
     We are always looking for great people! We like people that are passionate
     about new technology and taking part in the creation of good, smart
-    solutions. 
+    solutions.
 
 
     Do you think you got what it takes? Send us an e-mail!
@@ -26,64 +26,55 @@ about:
 perks:
   header: What we offer
   perkCards:
-    - icon: fal user-clock
+    - icon: /img/Icon-FlexHours.svg
       perkTitle: Flexible work hours
       text: Work when it suits you
-    - icon: fal briefcase-medical
+    - icon: /img/Icon-Insurance.svg
       perkTitle: Insurance
       text: With us everyone is insured
-    - icon: fal mobile
+    - icon: /img/Icon-Phone.svg
       perkTitle: Broadband & Mobile
       text: As an employee we pay your phone bill
-    - icon: fal utensils
+    - icon: /img/Icon-Lunch.svg
       perkTitle: 'Breakfast, Lunch & Coffee'
       text: Our cafeteria serves both lunch and breakfast
-    - icon: fal home
+    - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil
-    - icon: fal home
+    - ? icon
       perkTitle: Apartments
       text: Located in Villefranche and Albir
-    - icon: fal calendar-alt
+    - icon: /img/Icon-SocialEvents.svg
       perkTitle: Social events
       text: Annual social events with the entire group
-    - icon: fab spotify
+    - icon: /img/Icon-Spotify.svg
       perkTitle: Spotify
       text: Paid subscription to Spotify or your favourite streaming service
-    - icon: fal piggy-bank
+    - icon: /img/Icon-Pension.svg
       perkTitle: Pension
       text: |-
         5 % of salary from 1 kr to  7,1G.
         8 % of salary from  7,1 to 12G
-    - icon: fal chart-line
+    - icon: /img/Icon-Stock.svg
       perkTitle: Stock saving program
       text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
-    - icon: fal shuttle-van
-      perkTitle: Shared car
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal hands
+    - icon: /img/Icon-Massage.svg
       perkTitle: Massage
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal hand-holding-seedling
+      text: Every week there's a Naprapathy treatment offer if needed.
+    - icon: /img/Icon-Innovate.svg
       perkTitle: Time to innovate
       text: 'Dedicated time to learn, innovate and try new things every month.'
-    - icon: fal laptop-code
+    - icon: /img/Icon-Hardware.svg
       perkTitle: Hardware & software
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
-    - icon: fal home
+      text: 'Choose your own workstation, Linux or Mac!'
+    - icon: /img/Icon-Remote.svg
       perkTitle: Work remotely
       text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+        Most of us go to the office every day because we like it here, but if
+        you need it, you can work from home. Or the beach. Or a mountaintop.
   section: Perks
 positions:
   header: Job vacancies
-  text: Some text explaining something
   iframeAltText: You need to have analytics enabled to view the positions
+  text: Some text explaining something
 ---
