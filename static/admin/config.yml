@@ -212,13 +212,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Button text", name: "buttonText", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Button text", name: "buttonText", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
           - {label: "Services", name: "services", widget: "object", fields: [
@@ -251,7 +251,7 @@ collections:
             fields:
               - {label: "Header", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Button text", name: "buttonText", widget: "string"}
+              - {label: "Button text", name: "buttonText", widget: "string", default: " "}
           - label: "Transitional element"
             name: "transitionalElement"
             widget: "object"
@@ -481,11 +481,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
           - {label: "Services", name: "services", widget: "object", fields: [
@@ -498,11 +500,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
 

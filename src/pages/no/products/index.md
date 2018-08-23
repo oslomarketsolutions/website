@@ -90,6 +90,7 @@ investorPortal:
       bl.a. supportfunksjoner, publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
+    buttonText: Kontakt oss
     header: Arena
     image: /img/arena.png
     text: >-
@@ -97,6 +98,7 @@ standardProducts:
       and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
       aksjonærdata, og Corporta Actions Calendar for alle selskap på Oslo Børs.
   irModules:
+    buttonText: Kontakt oss
     header: IR Webmoduler
     image: /img/irModulesPlaceholder.png
     text: >-
@@ -110,6 +112,7 @@ standardProducts:
       to. Kontakt oss for å se hvordan våre produkter kan hjelpe deg videre!
 services:
   feedAPI:
+    buttonText: Kontakt oss
     header: Feed API
     image: /img/feedAPIplaceholder.png
     text: >-
@@ -120,6 +123,7 @@ services:
       og forsinkede kurser, handle og ordre, historiske priser, CAer, utbytte,
       børsmeldinger, aksjonærlister med mer.
   omsComponents:
+    buttonText: Kontakt oss
     header: OMS Components
     image: /img/omsComponentsPlaceholder.png
     text: >-
