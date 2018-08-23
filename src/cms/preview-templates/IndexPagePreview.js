@@ -97,6 +97,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             entry.getIn(['data', 'investorPortal', 'mobileImage']),
           ),
           text: entry.getIn(['data', 'investorPortal', 'text']),
+          buttonText: entry.getIn(['data', 'investorPortal', 'buttonText']),
         },
         customization: {
           header: entry.getIn(['data', 'customization', 'header']),

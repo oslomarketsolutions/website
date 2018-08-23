@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../../components/navbar';
 import PreviewWrapper from '../../components/previewWrapper';
 
-const FooterPreview = ({ entry }) => {
+const NavbarPreview = ({ entry }) => {
   const data = {
     frontmatter: {
       numberOfJobVacancies: entry.getIn(['data', 'numberOfJobVacancies']),
@@ -20,10 +20,10 @@ const FooterPreview = ({ entry }) => {
   );
 };
 
-FooterPreview.propTypes = {
+NavbarPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
 };
 
-export default FooterPreview;
+export default NavbarPreview;
