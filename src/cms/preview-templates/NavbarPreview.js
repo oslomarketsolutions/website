@@ -78,6 +78,7 @@ const NavbarPreview = ({ entry }) => {
         location={location}
         data={data}
         cookieInfoEn={cookieInfoEn}
+        hideCookiePopUp
       />
     </PreviewWrapper>
   );

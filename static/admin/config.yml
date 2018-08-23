@@ -275,6 +275,7 @@ collections:
               - {label: "Tablet image", name: "tabletImage", widget: "image"}
               - {label: "Mobile image", name: "mobileImage", widget: "image"}
               - {label: "Text", name: "text", widget: "text"}
+              - {label: "Button text", name: "buttonText", widget: "string", default: " "}
           - label: "Customization"
             name: "customization"
             widget: "object"
@@ -541,6 +542,7 @@ collections:
               - {label: "Tablet image", name: "tabletImage", widget: "image"}
               - {label: "Mobile image", name: "mobileImage", widget: "image"}
               - {label: "Text", name: "text", widget: "text"}
+              - {label: "Button text", name: "buttonText", widget: "string", default: " "}
           - label: "Customization"
             name: "customization"
             widget: "object"

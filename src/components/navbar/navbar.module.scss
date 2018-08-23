@@ -46,10 +46,11 @@ header.headerUnderline {
       }
     }
 
-    .cookieManager {
+    /* .cookieManager {
       display: none;
-    }
-    .cookiePopUp {
+    } */
+    .cookiePopUp,
+    .cookieManager {
       right: 274px;
       top: 60px;
       .indicator {
@@ -209,6 +210,7 @@ header.headerUnderline {
     box-shadow: $navbarShadow;
     border-radius: $S;
     max-height: calc(100vh - 104px);
+    transition: all 200ms ease;
 
     .indicator {
       position: absolute;
@@ -436,7 +438,8 @@ header.navColorWhite .navbar {
         transition: all 200ms ease;
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: calc(30px - ((100vw - 1140px) / 2));
         top: 76px;
       }
@@ -450,7 +453,8 @@ header.navColorWhite .navbar {
   }
   header.headerUnderline {
     .navbar {
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: -12px;
         top: 85px;
       }
@@ -533,7 +537,8 @@ header.navColorWhite .navbar {
         margin-right: -170px;
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: 0px;
         top: 74px;
         border-top-right-radius: $S;
@@ -726,7 +731,8 @@ header.navColorWhite .navbar {
         }
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: -7px;
         top: 49px;
       }
@@ -793,7 +799,8 @@ header.navColorWhite .navbar {
         }
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         top: 40px;
       }
 

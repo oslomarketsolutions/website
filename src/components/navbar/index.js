@@ -40,7 +40,6 @@ export default class Navbar extends Component {
     trackingIsOn: true,
     analyticsIsOn: true,
     useLocalState: false,
-    intervalId: 0,
   };
 
   componentDidMount() {
@@ -68,20 +67,6 @@ export default class Navbar extends Component {
     }
   }
 
-  scrollStep() {
-    if (window != null) {
-      if (window.pageYOffset === 0) {
-        clearInterval(this.state.intervalId);
-      }
-      window.scroll(0, window.pageYOffset - 100);
-    }
-  }
-
-  scrollToTop() {
-    const intervalId = setInterval(this.scrollStep.bind(this), 16.66);
-    this.setState({ intervalId });
-  }
-
   changePageLanguage = () => {
     const pathSplitArray = this.props.location.pathname.split('/');
     let returnPath;
@@ -102,7 +87,6 @@ export default class Navbar extends Component {
   };
 
   closePopUpAndOpenManager = () => {
-    this.scrollToTop();
     this.setState({
       cookieManagerOpen: true,
       useLocalState: true,
