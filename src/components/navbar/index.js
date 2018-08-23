@@ -285,7 +285,16 @@ export default class Navbar extends Component {
                 >
                   <div className={styles.indicator} />
                   <div className={styles.scrollContainer}>
-                    <h4>{cookieInfo.title}</h4>
+                    <div className={styles.header}>
+                      <h4>{cookieInfo.title}</h4>
+                      <button
+                        className={styles.close}
+                        onClick={this.toggleCookieManager}
+                      >
+                        <div className={styles.bar} />
+                        <div className={styles.bar} />
+                      </button>
+                    </div>
                     <CookieToggle
                       header={cookieInfo.cookieManager.necessaryCookies.header}
                       text={cookieInfo.cookieManager.necessaryCookies.text}
