@@ -3,9 +3,8 @@ templateKey: productPage
 linkCardsSection:
   linkCards:
     - description: >-
-        En moderne platform for aksjehandel, fondssparing eller markedsdata. Med
-        alt dine brukere trenger av avansert funksjoner kombinert med
-        brukervennlighet.
+        Skreddersydde web traders, børsportaler, fond- og aksjehandel og
+        porteføljerapportering integrert med ditt back office-system
       header: Investorportal
       isDark: false
     - description: >-
@@ -19,12 +18,12 @@ linkCardsSection:
       isDark: false
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
-        moduler fra OMS.
+        webmoduler fra OMS
       header: IR Webmoduler
       isDark: false
     - description: >-
-        Med markedsdata fra hele verden gir vårt APi deg tilgang til statisk
-        data over Rest og strømmende data over Websockets
+        Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
+        data over REST og strømmende data over Websockets
       header: Feed API
       isDark: false
   title: 'API, React-komponenter & driftede løsninger'
@@ -40,14 +39,14 @@ investorPortal:
   onlinePortfolio:
     header: Komplett spareportal
     image: /img/productsPagePlaceholder.png
-    overline: Porteføljerapportering
+    overline: Portefølje og fondshandel
     text: >-
       Engasjer dine kunder og hjelp dem investere mer med en moderne webløsning.
       Integrert med systemer som Centevo plattformen, ProInvest (Tieto) eller
       APX og Tradex (Advent) støtter våre portaler spareavtaler, fondshandel,
-      flytting til ASK og IPS, fremvisning av skatterapporter med mer. OMS kan
-      håndtere avanserte avkastningsberegninger så vel som online onboarding av
-      dine kunder med hensiktsmessighettest og mer.
+      flytting til ASK og IPS og fremvisning av skatterapporter for å nevne noe.
+      OMS kan håndtere avanserte avkastningsberegninger så vel som online
+      onboarding av dine kunder med blant annet hensiktsmessighettest.
   sectionHeader:
     header: Investorportal
     subHeader: 'Brukervennlig, avansert og moderne'
@@ -70,19 +69,19 @@ investorPortal:
         name: Signicat5
     text: Vi liker godt å spille med andre
   trading:
-    header: Fra trading til sparing
+    header: Fra daytrading til  langsiktig sparing
     image: /img/productsPagePlaceholder.png
     overline: Aksjehandel
     text: >-
       OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
-      nettbanken eller andre påloggede sider og tilpasser etter  behov. Vi
-      strekkers oss for å nå ut til både nybegynnere og mer avanserte
-      aksjehandlere. Tradern levert av oss følger selvsagt alle krav til UU,
-      GDPR og MIFID II etter deres ønsker, med mulighet for å inludere
-      hensiktsmessighetstester, egnethetstester, med mer. Vi gjør det enkelt å
-      velge ASK- eller vanlig konto ved hjelp av vår ProBroker integrasjon. I
-      Admin-verkøtyet får ansatte med rettigheter enkel oversikt over kunder med
-      bl.a. supportfunksjoner, publiseringsmuligheter og full auditlogg
+      nettbanken eller andre påloggede sider og tilpasser etter behov. Vi
+      strekker oss for å nå ut til både nybegynnere og mer avanserte
+      aksjehandlere. Traderen levert av oss følger selvsagt alle krav til UU,
+      GDPR og MiFID II med mulighet for å inludere hensiktsmessighetstester og
+      egnethetstester. Vi gjør det enkelt å velge ASK, IPS eller vanlig konto
+      ved hjelp av vår ProBroker integrasjon. I Admin-verkøtyet får ansatte med
+      rettigheter enkel oversikt over kunder med bl.a. supportfunksjoner,
+      publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
     header: Arena
