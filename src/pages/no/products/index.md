@@ -57,15 +57,15 @@ investorPortal:
   serviceIntegrations:
     header: Tredjepartsintegrasjoner
     integrationsLogos:
-      - logo: /img/VPS@3x.png
+      - logo: /img/VPS@2x.png
         name: VPS
-      - logo: /img/SSCAdvent@3x.png
+      - logo: /img/SSCAdvent@2x.png
         name: Advent
-      - logo: /img/ProInvest@3x.png
+      - logo: /img/ProInvest@2x.png
         name: ProInvest
-      - logo: /img/ProBroker@3x.png
+      - logo: /img/ProBroker@2x.png
         name: ProBroker
-      - logo: /img/Centevo@3x.png
+      - logo: /img/Centevo@2x.png
         name: Centevo
     text: Vi liker godt å spille med andre
   trading:

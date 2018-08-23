@@ -5,29 +5,29 @@ hero:
   title: Investorplatform og børsportaler for moderne web
 transitionalElement:
   customerLogos:
-    - logo: /img/Arctic Fund Management@3x.png
+    - logo: /img/Arctic Fund Management@2x.png
       name: Artic Fund Management
-    - logo: /img/First Fondene@3x.png
+    - logo: /img/First Fondene@2x.png
       name: First Fondene
-    - logo: /img/Handelsbanken@3x.png
+    - logo: /img/Handelsbanken@2x.png
       name: Handeslbanken
-    - logo: /img/Sbanken@3x.png
+    - logo: /img/Sbanken@2x.png
       name: Sbanken
-    - logo: /img/Sparebank 1@3x.png
+    - logo: /img/Sparebank 1@2x.png
       name: SpareBank 1
-    - logo: /img/SpareBanken Møre@3x.png
+    - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
-    - logo: /img/OsloBørs@3x.png
+    - logo: /img/OsloBørs@2x.png
       name: Oslo Børs
-    - logo: /img/Norne@3x.png
+    - logo: /img/Norne@2x.png
       name: Norne
-    - logo: /img/FishPool@3x.png
+    - logo: /img/FishPool@2x.png
       name: Fishpool
-    - logo: /img/E24@3x.png
+    - logo: /img/E24@2x.png
       name: E24
-    - logo: /img/DN@3x.png
+    - logo: /img/DN@2x.png
       name: DN
-    - logo: /img/Catella@3x.png
+    - logo: /img/Catella@2x.png
       name: Catella
   numbersAndText:
     companiesNumber: '150'
@@ -89,15 +89,15 @@ customization:
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
-      - logo: /img/Integration-1@3x.png
+      - logo: /img/Integration-1@2x.png
         name: VPS
-      - logo: /img/Integration-2@3x.png
+      - logo: /img/Integration-2@2x.png
         name: Advent
-      - logo: /img/Integration-3@3x.png
+      - logo: /img/Integration-3@2x.png
         name: ProInvest
-      - logo: /img/Integration-4@3x.png
+      - logo: /img/Integration-4@2x.png
         name: ProBroker
-      - logo: /img/Integration-5@3x.png
+      - logo: /img/Integration-5@2x.png
         name: Centevo
     text: We play well with others
   text: >-
