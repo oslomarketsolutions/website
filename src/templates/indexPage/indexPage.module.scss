@@ -109,7 +109,8 @@
       grid-row: 1;
       height: 96px;
       width: 400px;
-      align-self: end;
+      display: flex;
+      align-items: flex-end;
     }
 
     .customerLogos {
