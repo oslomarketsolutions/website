@@ -37,7 +37,6 @@ transitionalElement:
     usersText: Daglige brukere
   socialMediaText: Følg oss
 investorPortal:
-  buttonText: ' '
   header: Investorportal
   investorPortalImages:
     - image: investorportal.png
