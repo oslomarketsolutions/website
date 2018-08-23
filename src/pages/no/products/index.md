@@ -123,7 +123,7 @@ services:
   feedAPI:
     buttonText: Kontakt oss
     header: Feed API
-    desktopImage: /img/feed-desktop-no (1).png
+    desktopImage: /img/feed-desktop-no@2x.png
     tabletImage: /img/feed-desktop-no@2x.png
     mobileImage: /img/feed-mobile-no@2x.png
     text: >-
