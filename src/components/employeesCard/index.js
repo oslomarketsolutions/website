@@ -7,25 +7,25 @@ import styles from './EmployeeCard.module.scss';
 const iconMatcher = jobType => {
   switch (jobType) {
     case 'operations':
-      return ['fas', 'server'];
+      return ['fal', 'server'];
 
     case 'backEnd':
-      return ['fas', 'cogs'];
+      return ['fal', 'cogs'];
 
     case 'frontEnd':
-      return ['fas', 'code'];
+      return ['fal', 'code'];
 
     case 'designer':
-      return ['fas', 'paint-brush'];
+      return ['fal', 'pencil-ruler'];
 
     case 'summerIntern':
-      return ['fas', 'graduation-cap'];
+      return ['fal', 'graduation-cap'];
 
     case 'support':
-      return ['fas', 'fire-extinguisher'];
+      return ['fal', 'fire-extinguisher'];
 
     default:
-      return ['fas', 'briefcase'];
+      return ['fal', 'briefcase'];
   }
 };
 

@@ -12,16 +12,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowUp,
-  faServer,
-  faGraduationCap,
-  faCogs,
-  faCode,
-  faBriefcase,
   faMapPin,
   faPhone,
   faEnvelope,
-  faFireExtinguisher,
-  faPaintBrush,
   faArrowRight,
   faChartArea,
   faCodeBranch,
@@ -33,7 +26,17 @@ import {
   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
 
-import { faGlobe, faCookieBite } from '@fortawesome/pro-light-svg-icons';
+import {
+  faGlobe,
+  faCookieBite,
+  faServer,
+  faCogs,
+  faCode,
+  faPencilRuler,
+  faGraduationCap,
+  faFireExtinguisher,
+  faBriefcase,
+} from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';
@@ -62,7 +65,7 @@ export const faLibrary = library.add(
   faPhone,
   faEnvelope,
   faFireExtinguisher,
-  faPaintBrush,
+  faPencilRuler,
   faArrowRight,
   faCheckCircle,
   faReact,
