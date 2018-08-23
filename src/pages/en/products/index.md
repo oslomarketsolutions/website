@@ -68,7 +68,7 @@ investorPortal:
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
-      - logo: /img/VPS3x.png
+      - logo: /img/VPS@2x.png
         name: VPS
       - logo: /img/SSCAdvent@2x.png
         name: Advent
