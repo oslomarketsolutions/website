@@ -11,6 +11,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       description: linkCard.get('description'),
       linkText: linkCard.get('linkText'),
       isDark: linkCard.get('isDark'),
+      icon: getAsset(linkCard.get('icon')),
     }));
 
   const linkCardsSection = {

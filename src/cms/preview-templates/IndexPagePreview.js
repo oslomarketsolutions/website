@@ -33,6 +33,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       description: card.get('description'),
       features: card.get('features'),
       isDark: card.get('isDark'),
+      icon: getAsset(card.get('icon')),
     }));
 
   const integrationLogos = entry
