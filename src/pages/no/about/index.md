@@ -43,7 +43,7 @@ employees:
       jobTitle: Prosjektleder
       jobType: management
       title: Christian Blütecher
-    - description: Driver med drift og div
+    - description: 'DevOps-, automatiserings- og sikkerhetsentusiast'
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
       jobTitle: Driftssjef
       jobType: operations
@@ -115,9 +115,9 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
-    - description:
-        Har lekser som må gjøres, kaffe som må serveres og gjennomsnittlig kode som må skrives.
-        Har ikke tid til dette.
+    - description: >-
+        Har lekser som må gjøres, kaffe som må serveres og gjennomsnittlig kode
+        som må skrives. Har ikke tid til dette.
       image: /img/0.jpeg
       jobTitle: Sommervikar
       jobType: summerIntern
@@ -140,3 +140,4 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
+
