@@ -21,22 +21,23 @@ import {
   faCheck,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
+
 import {
   faCopyright,
   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
 
 import {
-  faGlobe,
-  faCookieBite,
   faServer,
   faCogs,
   faCode,
-  faPencilRuler,
   faGraduationCap,
   faFireExtinguisher,
   faBriefcase,
-} from '@fortawesome/pro-light-svg-icons';
+  faPencilRuler,
+} from '@fortawesome/pro-regular-svg-icons';
+
+import { faGlobe, faCookieBite } from '@fortawesome/pro-light-svg-icons';
 
 import Helmet from 'react-helmet';
 import favicon from '../img/favicon_oms.png';
