@@ -11,6 +11,7 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-Portals-Gray.svg
         mobile: /img/Icon-Portals-White.svg
+      id: investorportal
     - description: >-
         Sømløs integrasjon med minimalt arbeid. OMS Components er
         standardkomponenter som kan enkelt integreres i eksisterende
@@ -21,13 +22,17 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-React-Gray.svg
         mobile: /img/Icon-React-White.svg
-    - description: Verdipapirmarkedets informasjonsportal.
-      header: Arena
+      id: omsComponents
+    - description: >-
+        Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
+        data over REST og strømmende data over Websockets
+      header: Feed/API
       isDark: false
-      linkText: Gå til Arena
+      linkText: Gå til Feed/API
       icon:
-        desktop: /img/Icon-Arena-Gray.svg
-        mobile: /img/Icon-Arena-White.svg
+        desktop: /img/Icon-Feed-Gray.svg
+        mobile: /img/Icon-Feed-White.svg
+      id: feedAPI
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         webmoduler fra OMS
@@ -37,17 +42,18 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-IRModules-Gray.svg
         mobile: /img/Icon-IRModules-White.svg
-    - description: >-
-        Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
-        data over REST og strømmende data over Websockets
-      header: Feed API
+      id: irModules
+    - description: Verdipapirmarkedets informasjonsportal.
+      header: Arena
       isDark: false
-      linkText: Gå til Feed API
+      linkText: Gå til Arena
       icon:
-        desktop: /img/Icon-Feed-Gray.svg
-        mobile: /img/Icon-Feed-White.svg
+        desktop: /img/Icon-Arena-Gray.svg
+        mobile: /img/Icon-Arena-White.svg
+      id: arena
   title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
+  id: investorportal
   marketData:
     header: Markedsdata fra hele verden
     desktopImage: /img/market-desktop-no@2x.png
@@ -110,6 +116,7 @@ investorPortal:
       publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
+    id: arena
     buttonText: Kontakt oss
     header: Arena
     desktopImage: /img/arena-desktop@2x.png
@@ -120,6 +127,7 @@ standardProducts:
       and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
       aksjonærdata, og Corporta Actions Calendar for alle selskap på Oslo Børs.
   irModules:
+    id: irModules
     buttonText: Kontakt oss
     header: IR Webmoduler
     desktopImage: /img/ir-desktop@2x.png
@@ -136,8 +144,9 @@ standardProducts:
       to. Kontakt oss for å se hvordan våre produkter kan hjelpe deg videre!
 services:
   feedAPI:
+    id: feedAPI
     buttonText: Kontakt oss
-    header: Feed API
+    header: Feed/API
     desktopImage: /img/feed-desktop-no@2x.png
     tabletImage: /img/feed-desktop-no@2x.png
     mobileImage: /img/feed-mobile-no@2x.png
@@ -149,6 +158,7 @@ services:
       og forsinkede kurser, handle og ordre, historiske priser, CAer, utbytte,
       børsmeldinger, aksjonærlister med mer.
   omsComponents:
+    id: omsComponents
     buttonText: Kontakt oss
     header: OMS Components
     desktopImage: /img/omscomponents-desktop-no@2x.png

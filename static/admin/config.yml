@@ -151,12 +151,14 @@ collections:
                   {label: "Desktop", name: "desktop", widget: "image"},
                 ]},
                 {label: "Header", name: "header", widget: "string"},
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Description", name: "description", widget: "text"},
                 {label: "Link text", name: "linkText", widget: "text"},
                 {label: "Is dark", name: "isDark", widget: "boolean"},
               ]},
             ]}
           - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
+              {label: "Id", name: "id", widget: "hidden"},
               {label: "Section header", name: "sectionHeader", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Sub-header", name: "subHeader", widget: "string"},
@@ -202,6 +204,7 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
               ]},
               {label: "Arena", name: "arena", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -210,6 +213,7 @@ collections:
                 {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -225,6 +229,7 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
               ]},
               {label: "Feed API", name: "feedAPI", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -233,6 +238,7 @@ collections:
                 {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -275,6 +281,7 @@ collections:
             name: "investorPortal"
             widget: "object"
             fields:
+              - {label: "Id", name: "id", widget: "hidden"}
               - {label: "Header", name: "header", widget: "string"}
               - {label: "Desktop image", name: "desktopImage", widget: "image"}
               - {label: "Tablet image", name: "tabletImage", widget: "image"}
@@ -293,11 +300,13 @@ collections:
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
+                  {label: "Button text", name: "buttonText", widget: "string", deafault: " "},
+                  {label: "Id", name: "id", widget: "hidden"},
                 ]}
               - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
-                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                  {label: "Integration logos", name: "integrationsLogos", widget: "list", fields: [
                     {label: "Name", name: "name", widget: "string"},
                     {label: "Logo", name: "logo", widget: "image"},
                   ]}
@@ -313,6 +322,7 @@ collections:
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
                   {label: "Button text", name: "buttonText", widget: "string", default: " "},
+                  {label: "Id", name: "id", widget: "hidden"},
                 ]}
               - {label: "IR Modules", name: "irModules", widget: "object", fields: [
                   {label: "Desktop image", name: "desktopImage", widget: "image"},
@@ -321,6 +331,7 @@ collections:
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
                   {label: "Button text", name: "buttonText", widget: "string", default: " "},
+                  {label: "Id", name: "id", widget: "hidden"},
                 ]}
 
 ############### NORWEGIAN PAGES ###############
@@ -427,9 +438,11 @@ collections:
                 {label: "Description", name: "description", widget: "text"},
                 {label: "Link text", name: "linkText", widget: "text"},
                 {label: "Is dark", name: "isDark", widget: "boolean"},
+                {label: "Id", name: "id", widget: "hidden"},
               ]},
             ]}
           - {label: "Investor Portals", name: "investorPortal", widget: "object", fields: [
+              {label: "Id", name: "id", widget: "hidden"},
               {label: "Section header", name: "sectionHeader", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Sub-header", name: "subHeader", widget: "string"},
@@ -475,6 +488,7 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
               ]},
               {label: "Arena", name: "arena", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -483,6 +497,7 @@ collections:
                 {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -498,6 +513,7 @@ collections:
                 {label: "Text", name: "text", widget: "text"},
               ]},
               {label: "Feed API", name: "feedAPI", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -506,6 +522,7 @@ collections:
                 {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
+                {label: "Id", name: "id", widget: "hidden"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Desktop image", name: "desktopImage", widget: "image"},
                 {label: "Tablet image", name: "tabletImage", widget: "image"},
@@ -548,6 +565,7 @@ collections:
             name: "investorPortal"
             widget: "object"
             fields:
+              - {label: "Id", name: "id", widget: "hidden"}
               - {label: "Header", name: "header", widget: "string"}
               - {label: "Desktop image", name: "desktopImage", widget: "image"}
               - {label: "Tablet image", name: "tabletImage", widget: "image"}
@@ -566,11 +584,13 @@ collections:
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
+                  {label: "Button text", name: "buttonText", widget: "string", deafault: " "},
+                  {label: "Id", name: "id", widget: "hidden"},
                 ]}
               - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Text", name: "text", widget: "text"},
-                  {label: "Integration logos", name: "integrationLogos", widget: "list", fields: [
+                  {label: "Integration logos", name: "integrationsLogos", widget: "list", fields: [
                     {label: "Name", name: "name", widget: "string"},
                     {label: "Logo", name: "logo", widget: "image"},
                   ]}
@@ -580,6 +600,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Arena", name: "arena", widget: "object", fields: [
+                  {label: "Id", name: "id", widget: "hidden"},
                   {label: "Desktop image", name: "desktopImage", widget: "image"},
                   {label: "Tablet image", name: "tabletImage", widget: "image"},
                   {label: "Mobile image", name: "mobileImage", widget: "image"},
@@ -588,6 +609,7 @@ collections:
                   {label: "Button text", name: "buttonText", widget: "string", default: " "},
                 ]}
               - {label: "IR Modules", name: "irModules", widget: "object", fields: [
+                  {label: "Id", name: "id", widget: "hidden"},
                   {label: "Desktop image", name: "desktopImage", widget: "image"},
                   {label: "Tablet image", name: "tabletImage", widget: "image"},
                   {label: "Mobile image", name: "mobileImage", widget: "image"},

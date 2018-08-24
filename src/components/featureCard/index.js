@@ -5,7 +5,15 @@ import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FeatureCard.module.scss';
 
-const FeatureCard = ({ title, description, features, to, icon, isDark }) => (
+const FeatureCard = ({
+  title,
+  description,
+  features,
+  to,
+  icon,
+  buttonText,
+  isDark,
+}) => (
   <div
     className={classNames(styles.featureCard, {
       [styles.dark]: isDark,
@@ -32,13 +40,14 @@ const FeatureCard = ({ title, description, features, to, icon, isDark }) => (
       className={classNames('textButton', styles.customizationLink)}
       to={to}
     >
-      Learn more <FontAwesomeIcon icon={['fas', 'arrow-right']} />
+      {buttonText} <FontAwesomeIcon icon={['fas', 'arrow-right']} />
     </Link>
   </div>
 );
 
 FeatureCard.propTypes = {
   title: PropTypes.string,
+  buttonText: PropTypes.string,
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
   to: PropTypes.string,

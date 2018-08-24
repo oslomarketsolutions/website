@@ -37,6 +37,7 @@ transitionalElement:
     usersText: Daglige brukere
   socialMediaText: Følg oss
 investorPortal:
+  id: investorportal
   header: Investorportal
   desktopImage: /img/portals-desktop-no@2x.png
   tabletImage: /img/portals-tablet-no@2x.png
@@ -60,6 +61,8 @@ customization:
       header: Feed/API
       isDark: false
       icon: /img/Icon-Feed-Gray.svg
+      buttonText: Lær mer
+      id: feedAPI
     - description: >-
         A full coverage of the financial markets with a market data portal with
         live, streaming data
@@ -73,6 +76,8 @@ customization:
       header: OMS Components
       isDark: false
       icon: /img/Icon-React-Gray.svg
+      buttonText: Lær mer
+      id: omsComponents
     - description: 'En full portal, skreddersydd til ditt behov.'
       features:
         - Real Time
@@ -84,6 +89,8 @@ customization:
       header: Driftede tjenester
       isDark: true
       icon: /img/Icon-Managed-Gray.svg
+      buttonText: Lær mer
+      id: investorportal
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
     header: Service integrations
@@ -105,6 +112,7 @@ customization:
     våre APIer, har vi det du trenger for å komme i gang.
 otherProducts:
   arena:
+    id: arena
     buttonText: Lær mer
     header: Arena
     desktopImage: /img/arena-desktop@2x.png
@@ -115,8 +123,9 @@ otherProducts:
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
   irModules:
+    id: irModules
     buttonText: Lær mer
-    header: IR Modules
+    header: IR Webmoduler
     desktopImage: /img/ir-desktop@2x.png
     tabletImage: /img/ir-desktop@2x.png
     mobileImage: /img/ir-mobile@2x.png

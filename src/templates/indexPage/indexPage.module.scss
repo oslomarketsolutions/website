@@ -161,6 +161,7 @@
     h1 {
       grid-column: 2 / span 3;
       grid-row: 3;
+      width: 102%;
     }
 
     h1 + p {
@@ -213,7 +214,7 @@
     }
   }
 
-  .arena {
+  .irModules {
     grid-column: $full;
     grid-row: 3;
     display: grid;
@@ -252,7 +253,7 @@
     }
   }
 
-  .irModules {
+  .arena {
     position: relative;
     z-index: 1;
     grid-column: $full;
@@ -353,8 +354,8 @@
       }
     }
 
-    .arena,
-    .irModules {
+    .irModules,
+    .arena {
       grid-template-rows: max-content max-content max-content max-content;
 
       h1 {
@@ -446,8 +447,8 @@
       margin: 0 -10px;
     }
 
-    .arena,
-    .irModules {
+    .irModules,
+    .arena {
       .imageContainer {
         margin-bottom: -16px;
       }
@@ -467,8 +468,8 @@
         margin: 0;
       }
     }
-    .arena,
-    .irModules {
+    .irModules,
+    .arena {
       .imageContainer {
         margin-bottom: -10px;
       }
@@ -537,8 +538,8 @@
       }
     }
 
-    .arena,
-    .irModules {
+    .irModules,
+    .arena {
       h1 {
         grid-column: $main;
       }

@@ -27,10 +27,17 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       features: card.get('features'),
       isDark: card.get('isDark'),
       icon: getAsset(card.get('icon')),
+      buttonText: card.get('buttonText'),
+      id: card.get('id'),
     }));
 
-  const integrationLogos = entry
-    .getIn(['data', 'customization', 'serviceIntegrations', 'integrationLogos'])
+  const integrationsLogos = entry
+    .getIn([
+      'data',
+      'customization',
+      'serviceIntegrations',
+      'integrationsLogos',
+    ])
     .map(integrationLogo => ({
       logo: getAsset(integrationLogo.get('logo')),
       name: integrationLogo.get('name'),
@@ -87,6 +94,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           customerLogos: customerLogos._tail.array,
         },
         investorPortal: {
+          id: entry.getIn(['data', 'investorPortal', 'id']),
           header: entry.getIn(['data', 'investorPortal', 'header']),
           desktopImage: getAsset(
             entry.getIn(['data', 'investorPortal', 'desktopImage']),
@@ -117,7 +125,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'serviceIntegrations',
               'text',
             ]),
-            integrationLogos,
+            integrationsLogos,
           },
         },
         otherProducts: {
@@ -133,6 +141,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             ),
             header: entry.getIn(['data', 'otherProducts', 'arena', 'header']),
             text: entry.getIn(['data', 'otherProducts', 'arena', 'text']),
+            id: entry.getIn(['data', 'otherProducts', 'arena', 'id']),
             buttonText: entry.getIn([
               'data',
               'otherProducts',
@@ -172,6 +181,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'header',
             ]),
             text: entry.getIn(['data', 'otherProducts', 'irModules', 'text']),
+            id: entry.getIn(['data', 'otherProducts', 'irModules', 'id']),
             buttonText: entry.getIn([
               'data',
               'otherProducts',

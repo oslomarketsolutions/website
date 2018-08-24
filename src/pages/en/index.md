@@ -37,7 +37,8 @@ transitionalElement:
     usersText: Users served daily
   socialMediaText: Follow us
 investorPortal:
-  header: Investor portal
+  id: investorportal
+  header: Investor portals
   desktopImage: /img/portals-desktop-en@2x.png
   tabletImage: /img/portals-tablet-en@2x.png
   mobileImage: /img/portals-mobile-en@2x.png
@@ -62,6 +63,8 @@ customization:
       header: Feed/API
       isDark: false
       icon: /img/Icon-Feed-Gray.svg
+      buttonText: Learn more
+      id: feedAPI
     - description: >-
         Well documented React components for those who want more autonomy, but
         still high quality.
@@ -74,6 +77,8 @@ customization:
       header: OMS Components
       isDark: false
       icon: /img/Icon-React-Gray.svg
+      buttonText: Learn more
+      id: omsComponents
     - description: >-
         Fully managed and operated custom solutions with OMS unique domain
         expertise
@@ -87,6 +92,8 @@ customization:
       header: Hosted solutions
       isDark: true
       icon: /img/Icon-Managed-Gray.svg
+      buttonText: Learn more
+      id: investorportal
   header: Choose your level of customization
   serviceIntegrations:
     header: Service integrations
@@ -108,6 +115,7 @@ customization:
     market data API, we got what you need to get started.
 otherProducts:
   arena:
+    id: arena
     buttonText: Learn more
     header: Arena
     desktopImage: /img/arena-desktop@2x.png
@@ -118,6 +126,7 @@ otherProducts:
       and N-OTC with the two products Top Shareholders and Corporate Actions
       Calendar.
   irModules:
+    id: irModules
     buttonText: Learn more
     header: IR Web Modules
     desktopImage: /img/ir-desktop@2x.png

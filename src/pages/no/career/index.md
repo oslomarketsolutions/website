@@ -92,4 +92,3 @@ positions:
     Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
     hoder.
 ---
-

@@ -11,6 +11,7 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-Portals-Gray.svg
         mobile: /img/Icon-Portals-White.svg
+      id: investorportal
     - description: >-
         Seamless integration with least effort. OMS components are standard
         components that can easily be integrated into existing web portals.
@@ -20,15 +21,17 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-React-Gray.svg
         mobile: /img/Icon-React-White.svg
+      id: omsComponents
     - description: >-
         Full coverage of the financial markets. Market data portal with live,
         streaming data and smart links to content.
-      header: Feed API
+      header: Feed/API
       isDark: false
-      linkText: Go to Feed API
+      linkText: Go to Feed/API
       icon:
         desktop: /img/Icon-Feed-Gray.svg
         mobile: /img/Icon-Feed-White.svg
+      id: feedAPI
     - description: >-
         Showcase your share to existing and potential investors with flexible
         web modules from OMS. From simple quotes to advanced charting tools.
@@ -38,6 +41,7 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-IRModules-Gray.svg
         mobile: /img/Icon-IRModules-White.svg
+      id: irModules
     - description: >-
         The information portal for professionals within the Norwegian securities
         market
@@ -47,8 +51,10 @@ linkCardsSection:
       icon:
         desktop: /img/Icon-Arena-Gray.svg
         mobile: /img/Icon-Arena-White.svg
+      id: arena
   title: What we offer
 investorPortal:
+  id: investorportal
   marketData:
     header: Boost your media content with live stock data
     desktopImage: /img/market-desktop-en@2x.png
@@ -116,6 +122,7 @@ investorPortal:
       and support functions.
 standardProducts:
   arena:
+    id: arena
     buttonText: Contact us
     header: Arena
     desktopImage: /img/arena-desktop@2x.png
@@ -126,6 +133,7 @@ standardProducts:
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
   irModules:
+    id: irModules
     buttonText: Contact us
     header: IR Web Modules
     desktopImage: /img/ir-desktop@2x.png
@@ -142,8 +150,9 @@ standardProducts:
       two. Contact us to see how our products can help lift your business.
 services:
   feedAPI:
+    id: feedAPI
     buttonText: Contact us
-    header: Feed API
+    header: Feed/API
     desktopImage: /img/feed-desktop-en@2x.png
     tabletImage: /img/feed-desktop-en@2x.png
     mobileImage: /img/feed-mobile-en@2x.png
@@ -157,6 +166,7 @@ services:
       shareholder information and more from several different exchanges
       globally.
   omsComponents:
+    id: omsComponents
     buttonText: Contact us
     header: OMS Components
     desktopImage: /img/omscomponents-desktop-en@2x.png

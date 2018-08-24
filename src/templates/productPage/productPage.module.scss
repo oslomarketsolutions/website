@@ -180,18 +180,17 @@
 
   .standardProducts {
     grid-column: $full;
-    grid-row: 3;
+    grid-row: 4;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-column-gap: $gridColumnGap;
     grid-template-rows: max-content max-content;
-    background-color: $antiFlashWhite;
 
     section:first-of-type {
       grid-column: 3 / span 6;
     }
 
-    .arena {
+    .irModules {
       grid-column: $full;
       grid-row: 3;
       display: grid;
@@ -200,7 +199,7 @@
       grid-template-rows:
         max-content max-content max-content max-content
         max-content;
-      margin-top: 152px;
+      padding-top: 152px;
 
       h2 {
         grid-column: 2 / span 3;
@@ -230,7 +229,7 @@
       }
     }
 
-    .irModules {
+    .arena {
       grid-column: $full;
       grid-row: 4;
       display: grid;
@@ -239,8 +238,7 @@
       grid-template-rows:
         max-content max-content max-content max-content
         max-content;
-      z-index: 1;
-      margin: 152px 0;
+      padding: 152px 0;
 
       h2 {
         grid-column: 7 / span 3;
@@ -274,26 +272,26 @@
   }
   .services {
     grid-column: $full;
-    grid-row: 4;
+    grid-row: 3;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-column-gap: $gridColumnGap;
     grid-template-rows: max-content max-content;
     background-color: $white;
-    z-index: 2;
+    background-color: $antiFlashWhite;
 
     section:first-of-type {
       grid-column: 3 / span 6;
     }
 
-    .feedAPI {
+    .omsComponents {
       grid-column: $full;
       grid-row: 2;
       display: grid;
       grid-template-columns: $gridColumnTemplate;
       grid-column-gap: $gridColumnGap;
       grid-template-rows: max-content max-content max-content max-content max-content;
-      margin: 152px 0 76px;
+      padding: 152px 0 76px;
 
       h2 {
         grid-column: 2 / span 3;
@@ -322,14 +320,14 @@
       }
     }
 
-    .omsComponents {
+    .feedAPI {
       grid-column: $full;
       grid-row: 3;
       display: grid;
       grid-template-columns: $gridColumnTemplate;
       grid-column-gap: $gridColumnGap;
       grid-template-rows: max-content max-content max-content max-content max-content;
-      margin: 152px 0 152px 0;
+      padding: 76px 0 152px 0;
 
       h2 {
         grid-column: 7 / span 3;
@@ -361,18 +359,6 @@
     }
   }
 }
-
-/* @media (max-width: 1450px) {
-  .productPage {
-    .investorPortal {
-      .onlinePortfolio,
-      .trading,
-      .marketData {
-        grid-template-rows: max-content max-content max-content 80px;
-      }
-    }
-  }
-} */
 
 @media (max-width: 1172px) {
   .productPage {
@@ -416,10 +402,10 @@
       }
     }
     .standardProducts {
-      .arena,
-      .irModules {
+      .irModules,
+      .arena {
         grid-template-rows: max-content max-content max-content max-content;
-        margin: 96px 0 24px;
+        padding: 96px 0 24px;
 
         h2 {
           grid-column: 3 / span 5;
@@ -444,15 +430,15 @@
         }
       }
 
-      .irModules {
-        margin-bottom: 128px;
+      .arena {
+        padding-bottom: 128px;
       }
     }
     .services {
-      .feedAPI,
-      .omsComponents {
+      .omsComponents,
+      .feedAPI {
         grid-template-rows: max-content max-content max-content max-content;
-        margin: 96px 0 24px;
+        padding: 96px 0 24px;
 
         h2 {
           grid-column: 3 / span 5;
@@ -477,8 +463,8 @@
         }
       }
 
-      .omsComponents {
-        margin-bottom: 96px;
+      .feedAPI {
+        padding-bottom: 96px;
       }
     }
   }
@@ -552,8 +538,8 @@
       }
     }
     .standardProducts {
-      .arena,
-      .irModules {
+      .irModules,
+      .arena {
         h2 {
           grid-column: $main;
         }
@@ -569,8 +555,8 @@
       }
     }
     .services {
-      .feedAPI,
-      .omsComponents {
+      .omsComponents,
+      .feedAPI {
         h2 {
           grid-column: $main;
         }

@@ -44,6 +44,7 @@ export const pageQuery = graphql`
           }
         }
         investorPortal {
+          id
           header
           desktopImage
           tabletImage
@@ -60,6 +61,8 @@ export const pageQuery = graphql`
             description
             features
             isDark
+            buttonText
+            id
           }
           serviceIntegrations {
             header
@@ -78,6 +81,7 @@ export const pageQuery = graphql`
             header
             text
             buttonText
+            id
           }
           irModules {
             desktopImage
@@ -86,6 +90,7 @@ export const pageQuery = graphql`
             header
             text
             buttonText
+            id
           }
         }
       }

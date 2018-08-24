@@ -47,6 +47,7 @@ export class ProductPageTemplate extends Component {
                 <LinkCard
                   key={linkCard.header}
                   icon={linkCard.icon}
+                  id={linkCard.id}
                   header={linkCard.header}
                   description={linkCard.description}
                   isDark={linkCard.isDark}
@@ -58,9 +59,9 @@ export class ProductPageTemplate extends Component {
         </section>
         <section
           className={styles.investorPortal}
-          id={investorPortal.sectionHeader.header}
+          id={investorPortal.id}
           ref={investorPortalSection => {
-            this[investorPortal.sectionHeader.header] = investorPortalSection;
+            this[investorPortal.id] = investorPortalSection;
           }}
         >
           <SectionHeader
@@ -120,59 +121,6 @@ export class ProductPageTemplate extends Component {
             imageSizes={imageSizes}
           />
         </section>
-        <section className={styles.standardProducts}>
-          <SectionHeader
-            header={standardProducts.sectionHeader.header}
-            subHeader={standardProducts.sectionHeader.subHeader}
-            text={standardProducts.sectionHeader.text}
-          />
-          <section
-            className={styles.arena}
-            id={standardProducts.arena.header}
-            ref={arenaSection => {
-              this[standardProducts.arena.header] = arenaSection;
-            }}
-          >
-            <h2>{standardProducts.arena.header}</h2>
-            <p className="bodyLarge">{standardProducts.arena.text}</p>
-            <Button
-              to="mailto:info@oms.no"
-              text={standardProducts.arena.buttonText}
-              outBound
-            />
-            <Images
-              alt={standardProducts.arena.header}
-              outerWrapperClassName={styles.imageContainer}
-              desktopSrc={standardProducts.arena.desktopImage}
-              tabletSrc={standardProducts.arena.tabletImage}
-              mobileSrc={standardProducts.arena.mobileImage}
-              sizes={imageSizes}
-            />
-          </section>
-          <section
-            className={styles.irModules}
-            id={standardProducts.irModules.header}
-            ref={irModulesSection => {
-              this[standardProducts.irModules.header] = irModulesSection;
-            }}
-          >
-            <h2>{standardProducts.irModules.header}</h2>
-            <p className="bodyLarge">{standardProducts.irModules.text}</p>
-            <Button
-              to="mailto:info@oms.no"
-              text={standardProducts.irModules.buttonText}
-              outBound
-            />
-            <Images
-              alt={standardProducts.irModules.header}
-              outerWrapperClassName={styles.imageContainer}
-              desktopSrc={standardProducts.irModules.desktopImage}
-              tabletSrc={standardProducts.irModules.tabletImage}
-              mobileSrc={standardProducts.irModules.mobileImage}
-              sizes={imageSizes}
-            />
-          </section>
-        </section>
         <section className={styles.services}>
           <SectionHeader
             header={services.sectionHeader.header}
@@ -180,10 +128,33 @@ export class ProductPageTemplate extends Component {
             text={services.sectionHeader.text}
           />
           <section
+            className={styles.omsComponents}
+            id={services.omsComponents.id}
+            ref={omsComponentsSection => {
+              this[services.omsComponents.id] = omsComponentsSection;
+            }}
+          >
+            <h2>{services.omsComponents.header}</h2>
+            <p className="bodyLarge">{services.omsComponents.text}</p>
+            <Button
+              to="mailto:info@oms.no"
+              text={services.omsComponents.buttonText}
+              outBound
+            />
+            <Images
+              alt={services.omsComponents.header}
+              outerWrapperClassName={styles.imageContainer}
+              desktopSrc={services.omsComponents.desktopImage}
+              tabletSrc={services.omsComponents.tabletImage}
+              mobileSrc={services.omsComponents.mobileImage}
+              sizes={imageSizes}
+            />
+          </section>
+          <section
             className={styles.feedAPI}
-            id={services.feedAPI.header}
+            id={services.feedAPI.id}
             ref={feedAPISection => {
-              this[services.feedAPI.header] = feedAPISection;
+              this[services.feedAPI.id] = feedAPISection;
             }}
           >
             <h2>{services.feedAPI.header}</h2>
@@ -202,26 +173,56 @@ export class ProductPageTemplate extends Component {
               sizes={imageSizes}
             />
           </section>
+        </section>
+        <section className={styles.standardProducts}>
+          <SectionHeader
+            header={standardProducts.sectionHeader.header}
+            subHeader={standardProducts.sectionHeader.subHeader}
+            text={standardProducts.sectionHeader.text}
+          />
           <section
-            className={styles.omsComponents}
-            id={services.omsComponents.header}
-            ref={omsComponentsSection => {
-              this[services.omsComponents.header] = omsComponentsSection;
+            className={styles.irModules}
+            id={standardProducts.irModules.id}
+            ref={irModulesSection => {
+              this[standardProducts.irModules.id] = irModulesSection;
             }}
           >
-            <h2>{services.omsComponents.header}</h2>
-            <p className="bodyLarge">{services.omsComponents.text}</p>
+            <h2>{standardProducts.irModules.header}</h2>
+            <p className="bodyLarge">{standardProducts.irModules.text}</p>
             <Button
               to="mailto:info@oms.no"
-              text={services.omsComponents.buttonText}
+              text={standardProducts.irModules.buttonText}
               outBound
             />
             <Images
-              alt={services.omsComponents.header}
+              alt={standardProducts.irModules.header}
               outerWrapperClassName={styles.imageContainer}
-              desktopSrc={services.omsComponents.desktopImage}
-              tabletSrc={services.omsComponents.tabletImage}
-              mobileSrc={services.omsComponents.mobileImage}
+              desktopSrc={standardProducts.irModules.desktopImage}
+              tabletSrc={standardProducts.irModules.tabletImage}
+              mobileSrc={standardProducts.irModules.mobileImage}
+              sizes={imageSizes}
+            />
+          </section>
+          <section
+            className={styles.arena}
+            id={standardProducts.arena.id}
+            ref={arenaSection => {
+              this[standardProducts.arena.id] = arenaSection;
+            }}
+          >
+            <h2>{standardProducts.arena.header}</h2>
+            <p className="bodyLarge">{standardProducts.arena.text}</p>
+            <Button
+              to="mailto:info@oms.no"
+              text={standardProducts.arena.buttonText}
+              outBound
+            />
+            <Images
+              alt={standardProducts.arena.header}
+              outerWrapperClassName={styles.imageContainer}
+              desktopSrc={standardProducts.arena.desktopImage}
+              tabletSrc={standardProducts.arena.tabletImage}
+              mobileSrc={standardProducts.arena.mobileImage}
               sizes={imageSizes}
             />
           </section>
@@ -271,9 +272,11 @@ export const productPageQuery = graphql`
             description
             isDark
             linkText
+            id
           }
         }
         investorPortal {
+          id
           sectionHeader {
             header
             subHeader
@@ -319,6 +322,7 @@ export const productPageQuery = graphql`
             text
           }
           arena {
+            id
             header
             desktopImage
             tabletImage
@@ -327,6 +331,7 @@ export const productPageQuery = graphql`
             buttonText
           }
           irModules {
+            id
             header
             desktopImage
             tabletImage
@@ -342,6 +347,7 @@ export const productPageQuery = graphql`
             text
           }
           feedAPI {
+            id
             header
             desktopImage
             tabletImage
@@ -350,6 +356,7 @@ export const productPageQuery = graphql`
             buttonText
           }
           omsComponents {
+            id
             header
             desktopImage
             tabletImage
