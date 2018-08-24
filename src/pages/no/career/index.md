@@ -36,21 +36,25 @@ perks:
       perkTitle: Broadband & Mobile
       text: As an employee we pay your phone bill
     - icon: /img/Icon-Lunch.svg
-      perkTitle: 'Breakfast, Lunch & Coffee'
-      text: Our cafeteria serves both lunch and breakfast
+      perkTitle: 'Frokost, lunsj og kaffe'
+      text: >-
+        I kantinen serveres det både frokost, lunsj og kaffe. I tillegg har vi
+        en hipster kaffemaskin på kontoret 
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
-      text: Cabins in Nesbyen and Trysil
-    - perkTitle: Apartments
-      text: Located in Villefranche and Albir
+      text: Firma hytter som kan leies i både Nesbyen og Trysil
+    - perkTitle: Ferieleiligheter
+      text: Konsernet har 2 ferie leilighter i Villefranche og Albir
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Sosialt
       text: >-
-        Sosiale events, både med selskapet og hekle konsernet arrangeres flere
-        ganger pr år.
+        Sosiale events, både med selskapet og hele konsernet arrangeres flere
+        ganger pr år
     - icon: /img/Icon-Spotify.svg
       perkTitle: Spotify
-      text: Paid subscription to Spotify or your favourite streaming service
+      text: >-
+        I OMS får du betalt abbonomentet ditt på Spotify, eller din foretrukne
+        streamingtjeneste
     - icon: /img/Icon-Pension.svg
       perkTitle: Pensjon
       text: >-
@@ -64,13 +68,13 @@ perks:
     - icon: /img/Icon-Massage.svg
       perkTitle: Naprapat
       text: >-
-        Én gang i uken kommer det en naprapat som man kan få behandling av, om
-        det skulle trengs
+        Én gang i uken kommer det naprapat som man kan få behandling av, om det
+        skulle trengs
     - icon: /img/Icon-Innovate.svg
       perkTitle: Tid til innovasjon
       text: >-
-        Minst én dag i måneden vies til å prøve nye ting. Dagene avsluttes med
-        show & tell og sosial hygge.
+        Minst én dag i måneden vies til å gjøre hva du vil og prøve nye ting.
+        Her kan du mislykkes totalt, eller finn opp vårt nye backend system. 
     - icon: /img/Icon-Hardware.svg
       perkTitle: Hardware & software
       text: >-
@@ -78,14 +82,14 @@ perks:
         Linux, og halvparten på Mac.
     - icon: /img/Icon-Remote.svg
       perkTitle: Work remotely
-      text: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
+      text: 'Jobb hjemmefra om du ønsker det. Eller Singapore. '
   section: Perks
 positions:
   buttonText: Enable
   header: Ledige stillinger
-  iframeAltText: You need to have analytics enabled to view the positions
-  text: Some text explaining something and something more
+  iframeAltText: Du må godkjenne bruk av google analytics for å se iFrame med ledige jobber.
+  text: >-
+    Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
+    hoder.
 ---
 
