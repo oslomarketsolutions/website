@@ -22,7 +22,10 @@ const PerkCard = ({ title, text, icon }) => (
 PerkCard.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
-  icon: PropTypes.arrayOf(PropTypes.string),
+  icon: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
 };
 
 export default PerkCard;

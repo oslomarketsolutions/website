@@ -8,7 +8,7 @@ hero:
     perspective, we focus on high availability, quality, innovation, design,
     speed and flexibility towards our clients. All of our solutions are hosted
     and operated by Oslo Market Solutions.
-  title: Oslo Market solutions
+  title: Oslo Market Solutions
 history:
   header: A brief history
   section: ABOUT
