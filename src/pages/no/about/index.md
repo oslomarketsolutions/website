@@ -38,7 +38,9 @@ employees:
       jobTitle: Salgssjef
       jobType: management
       title: Mikael Leckborn
-    - description: You're Gonna Need a Bigger Boat
+    - description: >-
+        Forvent det beste, planlegg for det verste, og forberede deg på å bli
+        forbløffet
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Prosjektleder
       jobType: management
@@ -90,7 +92,7 @@ employees:
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
-    - description: Tekst
+    - description: Jaa9 & OnklP er de beste rapperne noen sinne! <3<3<3<3
       image: /img/pal_steihaug_oms_oslo_bors_fhs_5973.jpg
       jobTitle: Teamleder backend
       jobType: backEnd
@@ -140,4 +142,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

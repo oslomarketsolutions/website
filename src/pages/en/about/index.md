@@ -35,7 +35,7 @@ employees:
       jobTitle: Sales
       jobType: management
       title: Mikael Leckborn
-    - description: Tung som bly
+    - description: 'Expect the best, plan for the worst, and prepare to be surprised'
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Project Manager
       jobType: management
@@ -79,9 +79,11 @@ employees:
       jobTitle: Frontend developer/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
-    - description: I promise to quit smoking
+    - description: >-
+        Digital designer focused on creating usable and delightful user
+        experiences. Likes to tinker with React and friends.
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
-      jobTitle: UX Designer
+      jobTitle: User Experience Designer
       jobType: designer
       title: Gerrit Witteveen
     - description: Elsker hip hop og norsk rap
@@ -134,4 +136,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

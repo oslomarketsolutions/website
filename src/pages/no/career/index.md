@@ -3,14 +3,8 @@ templateKey: careerPage
 hero:
   backgroundImage: /img/standup.png
   backgroundImageAlt: placeholder alt for image1
-  text: >+
-    Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
-    ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
-    finansbransjen. Spiller du ping pong og/eller liker metal, hip hop eller
-    hvilken som helst annen musikksjanger er det også et stort pluss.
-
-
-  title: Vil du bli en av oss?
+  text: "Vi ser alltid etter gode folk! \U0001F64B‍♀️\U0001F64B‍♂️ Vi liker deg som er lidenskapelig opptatt av ny teknologi og ønsker å være med på å lage gode, smarte løsninger for finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for deg! \n\n"
+  title: 'Vil du bli en av oss ? '
 about:
   header: Hvorfor OMS?
   section: about
@@ -20,8 +14,13 @@ about:
     tusenvis av mennesker hver dag.
 
 
-    Miljøet er sammensveiset og alle er med på å påvirke selskapets retning og
-    fremtid.
+    Stemmningen på kontoret speiles av et fremoverlent, fagelig sterkt, kreativt
+    og sosialt godt miljø med en god dose humor.  Vi er opptatt av en god
+    balanse mellom arbeid og privatliv og tilbyr ulike sosiale og faglige
+    aktiviteter gjennom hele året. Vi er en herlig rar kombo av blåskjorter,
+    hettegensere, skatere, metalhoder, rap-fantaster, Birken-nerder. Evt
+    kjennskap til ping pong/foosball er ikke et krav, men et stort pluss om du
+    har har vært borti det før.
 perks:
   header: Hva vi tilbyr
   perkCards:
@@ -42,8 +41,7 @@ perks:
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil
-    - ? icon
-      perkTitle: Apartments
+    - perkTitle: Apartments
       text: Located in Villefranche and Albir
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Sosialt
@@ -85,8 +83,8 @@ perks:
         quis porta erat. Maecenas auctor nisl vel feugiat rutrum.
   section: Perks
 positions:
+  buttonText: Enable
   header: Ledige stillinger
   iframeAltText: You need to have analytics enabled to view the positions
-  buttonText: Enable
   text: Some text explaining something and something more
 ---

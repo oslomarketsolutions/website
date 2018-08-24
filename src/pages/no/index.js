@@ -67,7 +67,7 @@ export const pageQuery = graphql`
           serviceIntegrations {
             header
             text
-            integrationLogos {
+            integrationsLogos {
               logo
               name
             }

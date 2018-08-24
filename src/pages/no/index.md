@@ -5,36 +5,30 @@ hero:
   title: Investorplatform og børsportaler for moderne web
 transitionalElement:
   customerLogos:
-    - logo: /img/afm_logo.png
+    - logo: /img/Arctic Fund Management@2x.png
       name: Artic Fund Management
-    - logo: /img/fif_logo.png
+    - logo: /img/First Fondene@2x.png
       name: First Fondene
-    - logo: /img/hb_logo.png
-      name: handelsbanken
-    - logo: /img/sbanken_logo.png
+    - logo: /img/Handelsbanken@2x.png
+      name: Handelsbanken
+    - logo: /img/Sbanken@2x.png
       name: Sbanken
-    - logo: /img/sb1_logo.png
+    - logo: /img/Sparebank 1@2x.png
       name: SpareBank 1
-    - logo: /img/sbm_logo.png
+    - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat7
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat 8
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat9
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat10
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat11
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat12
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat13
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat14
-    - logo: /img/signicat-logo-black-medium-size.png
-      name: Signicat15
+    - logo: /img/OsloBørs@2x.png
+      name: Oslo Børs
+    - logo: /img/Norne@2x.png
+      name: Norne
+    - logo: /img/FishPool@2x.png
+      name: Fishpool
+    - logo: /img/E24@2x.png
+      name: E24
+    - logo: /img/DN@2x.png
+      name: DN
+    - logo: /img/Catella@2x.png
+      name: Catella
   numbersAndText:
     companiesNumber: '150'
     companiesText: Kunder
@@ -100,17 +94,17 @@ customization:
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
     header: Service integrations
-    integrationLogos:
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat1
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat2
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat3
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat4
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat5
+    integrationsLogos:
+      - logo: /img/Integration-1@2x.png
+        name: VPS
+      - logo: /img/Integration-2@2x.png
+        name: Advent
+      - logo: /img/Integration-3@2x.png
+        name: ProInvest
+      - logo: /img/Integration-4@2x.png
+        name: ProBroker
+      - logo: /img/Integration-5@2x.png
+        name: Centevo
     text: We play well with others
   text: >-
     Enten du trenger en driftet tjeneste, mer fleksibilitet med vårt

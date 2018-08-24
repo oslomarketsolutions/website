@@ -77,16 +77,16 @@ investorPortal:
   serviceIntegrations:
     header: Tredjepartsintegrasjoner
     integrationsLogos:
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat1
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat2
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat3
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat4
-      - logo: /img/signicat-logo-black-medium-size.png
-        name: Signicat5
+      - logo: /img/VPS@2x.png
+        name: VPS
+      - logo: /img/SSCAdvent@2x.png
+        name: Advent
+      - logo: /img/ProInvest@2x.png
+        name: ProInvest
+      - logo: /img/ProBroker@2x.png
+        name: ProBroker
+      - logo: /img/Centevo@2x.png
+        name: Centevo
     text: Vi liker godt å spille med andre
   trading:
     header: Fra daytrading til  langsiktig sparing
