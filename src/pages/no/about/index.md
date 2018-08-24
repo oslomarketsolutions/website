@@ -26,7 +26,7 @@ history:
 
 employees:
   employeeList:
-    - description: '"Vi har det i demo på fredag"'
+    - description: 'Sykler rundt i byn, noterer med Remarkable, men lever ellers digitalt.'
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
@@ -77,7 +77,7 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Haakon Winther
-    - description: "\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB"
+    - description: Det er riktig at jeg ble født i 1991. Rommet ved siden av var 1990.
       image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
