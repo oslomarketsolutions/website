@@ -21,8 +21,7 @@ const LinkCard = ({
       <div className={styles.header}>
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>
-            <img className={styles.desktop} src={icon.desktop} alt={header} />
-            <img className={styles.mobile} src={icon.mobile} alt={header} />
+            <img src={icon.desktop} alt={header} />
           </div>
         </div>
         <h3>{header}</h3>
@@ -37,7 +36,7 @@ const LinkCard = ({
     >
       <div className={styles.iconWrapper}>
         <div className={styles.icon}>
-          <img src={icon} alt={header} />
+          <img src={icon.mobile} alt={header} />
         </div>
       </div>
       <h3 className="linkCardTitle">{header}</h3>

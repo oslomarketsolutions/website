@@ -32,13 +32,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .mobile {
-      display: none;
-    }
-    .desktop {
-      display: block;
-    }
   }
 
   .iconWrapper {
@@ -147,15 +140,6 @@ div.dark {
 
     .header {
       display: none;
-    }
-
-    .icon {
-      .mobile {
-        display: block;
-      }
-      .desktop {
-        display: none;
-      }
     }
 
     p {
