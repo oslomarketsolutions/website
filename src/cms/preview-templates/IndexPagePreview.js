@@ -27,6 +27,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       features: card.get('features'),
       isDark: card.get('isDark'),
       icon: getAsset(card.get('icon')),
+      buttonText: getAsset(card.get('buttonText')),
+      id: getAsset(card.get('id')),
     }));
 
   const integrationLogos = entry
@@ -87,6 +89,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           customerLogos: customerLogos._tail.array,
         },
         investorPortal: {
+          id: entry.getIn(['data', 'investorPortal', 'id']),
           header: entry.getIn(['data', 'investorPortal', 'header']),
           desktopImage: getAsset(
             entry.getIn(['data', 'investorPortal', 'desktopImage']),
@@ -133,6 +136,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             ),
             header: entry.getIn(['data', 'otherProducts', 'arena', 'header']),
             text: entry.getIn(['data', 'otherProducts', 'arena', 'text']),
+            id: entry.getIn(['data', 'otherProducts', 'arena', 'id']),
             buttonText: entry.getIn([
               'data',
               'otherProducts',
@@ -172,6 +176,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'header',
             ]),
             text: entry.getIn(['data', 'otherProducts', 'irModules', 'text']),
+            id: entry.getIn(['data', 'otherProducts', 'irModules', 'id']),
             buttonText: entry.getIn([
               'data',
               'otherProducts',

@@ -12,6 +12,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       linkText: linkCard.get('linkText'),
       isDark: linkCard.get('isDark'),
       icon: getAsset(linkCard.get('icon')),
+      id: getAsset(linkCard.get('id')),
     }));
 
   const linkCardsSection = {
@@ -119,6 +120,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const investorPortal = {
+    id: entry.getIn(['data', 'investorPortal', 'id']),
     sectionHeader: sectionHeaderInvestorPortal,
     marketData,
     trading,
@@ -143,6 +145,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const arena = {
+    id: entry.getIn(['data', 'standardProducts', 'arena', 'id']),
     header: entry.getIn(['data', 'standardProducts', 'arena', 'header']),
     desktopImage: getAsset(
       entry.getIn(['data', 'standardProducts', 'arena', 'desktopImage']),
@@ -163,6 +166,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const irModules = {
+    id: entry.getIn(['data', 'standardProducts', 'irModules', 'id']),
     header: entry.getIn(['data', 'standardProducts', 'irModules', 'header']),
     desktopImage: getAsset(
       entry.getIn(['data', 'standardProducts', 'irModules', 'desktopImage']),
@@ -195,6 +199,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const feedAPI = {
+    id: entry.getIn(['data', 'services', 'feedAPI', 'id']),
     header: entry.getIn(['data', 'services', 'feedAPI', 'header']),
     desktopImage: getAsset(
       entry.getIn(['data', 'services', 'feedAPI', 'desktopImage']),
@@ -210,6 +215,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   };
 
   const omsComponents = {
+    id: entry.getIn(['data', 'services', 'omsComponents', 'id']),
     header: entry.getIn(['data', 'services', 'omsComponents', 'header']),
     desktopImage: getAsset(
       entry.getIn(['data', 'services', 'omsComponents', 'desktopImage']),

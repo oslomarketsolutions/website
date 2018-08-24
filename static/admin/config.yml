@@ -290,6 +290,7 @@ collections:
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
+                  {label: "Button text", name: "buttonText", widget: "string", deafault: " "},
                 ]}
               - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
                   {label: "Header", name: "header", widget: "string"},
@@ -560,6 +561,7 @@ collections:
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
                   {label: "Dark", name: "isDark", widget: "boolean"},
+                  {label: "Button text", name: "buttonText", widget: "string", deafault: " "},
                 ]}
               - {label: "Service integrations", name: "serviceIntegrations", widget: "object", fields: [
                   {label: "Header", name: "header", widget: "string"},
