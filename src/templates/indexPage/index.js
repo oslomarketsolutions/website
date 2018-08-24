@@ -155,7 +155,7 @@ const IndexPageTemplate = ({ location, data }) => {
         <ServiceIntegrations
           header={customization.serviceIntegrations.header}
           text={customization.serviceIntegrations.text}
-          logos={customization.serviceIntegrations.integrationLogos}
+          logos={customization.serviceIntegrations.integrationsLogos}
           imageSizes={imageSizes}
         />
       </section>
