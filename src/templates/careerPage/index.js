@@ -73,7 +73,7 @@ export const CareerPageTemplate = ({
               className={`textButton ${styles.iframeButton}`}
               onClick={enableAnalytics}
             >
-              Enable
+              {positions.buttonText}
             </button>
           </div>
         )}
@@ -144,6 +144,7 @@ export const careerPageQuery = graphql`
           header
           text
           iframeAltText
+          buttonText
         }
       }
     }

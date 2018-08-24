@@ -135,6 +135,7 @@ collections:
               {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
               {label: "Alternative text for HR-iframe", name: "iframeAltText", widget: "text"},
+              {label: "Button text", name: "buttonText", widget: "string"},
             ]}
 
       - file: "src/pages/en/products/index.md"
@@ -145,6 +146,7 @@ collections:
           - {label: "Link-cards section", name: "linkCardsSection", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Link cards", name: "linkCards", widget: "list", allow_add: false, fields: [
+                {label: "Icon", name: "icon", widget: "image"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
                 {label: "Link text", name: "linkText", widget: "text"},
@@ -194,13 +196,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Button text", name: "buttonText", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
-                {label: "Button text", name: "buttonText", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
           - {label: "Services", name: "services", widget: "object", fields: [
@@ -233,7 +235,7 @@ collections:
             fields:
               - {label: "Header", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Button text", name: "buttonText", widget: "string"}
+              - {label: "Button text", name: "buttonText", widget: "string", default: " "}
           - label: "Transitional element"
             name: "transitionalElement"
             widget: "object"
@@ -271,6 +273,7 @@ collections:
               - {label: "Header", name: "header", widget: "string"}
               - {label: "Text", name: "text", widget: "text"}
               - {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Icon", name: "icon", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},
@@ -386,6 +389,7 @@ collections:
               {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
               {label: "Alternative text for HR-iframe", name: "iframeAltText", widget: "text"},
+              {label: "Button text", name: "buttonText", widget: "string"},
             ]}
 
       - file: "src/pages/no/products/index.md"
@@ -396,6 +400,7 @@ collections:
           - {label: "Link-cards section", name: "linkCardsSection", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Link cards", name: "linkCards", widget: "list", allow_add: false, fields: [
+                {label: "Icon", name: "icon", widget: "image"},
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Description", name: "description", widget: "text"},
                 {label: "Link text", name: "linkText", widget: "text"},
@@ -445,11 +450,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "IR Modules", name: "irModules", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
           - {label: "Services", name: "services", widget: "object", fields: [
@@ -462,11 +469,13 @@ collections:
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
               {label: "OMS Componenets", name: "omsComponents", widget: "object", fields: [
                 {label: "Header", name: "header", widget: "string"},
                 {label: "Image", name: "image", widget: "image"},
                 {label: "Text", name: "text", widget: "text"},
+                {label: "Button text", name: "buttonText", widget: "string", default: " "},
               ]},
             ]}
 
@@ -518,6 +527,7 @@ collections:
               - {label: "Header", name: "header", widget: "string"}
               - {label: "Text", name: "text", widget: "text"}
               - {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Icon", name: "icon", widget: "image"},
                   {label: "Header", name: "header", widget: "string"},
                   {label: "Description", name: "description", widget: "text"},
                   {label: "Features", name: "features", widget: "list"},

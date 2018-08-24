@@ -45,9 +45,9 @@ employees:
       jobTitle: Support
       jobType: support
       title: Inga Wiik-Önnesjö
-    - description: Hater Vazelina.
+    - description: 'DevOps, automation, and security enthusiast'
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
-      jobTitle: Operations Manager
+      jobTitle: Head of IT Operations
       jobType: operations
       title: Andreas Holen
     - description: >-
@@ -134,3 +134,4 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
+

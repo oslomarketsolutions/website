@@ -5,67 +5,44 @@ import Link from 'gatsby-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FeatureCard.module.scss';
 
-const FeatureCard = ({ title, description, features, to, index, isDark }) => {
-  let icon = '';
-  let codeBranchIcon = false;
-
-  switch (index) {
-    case 1:
-      icon = <FontAwesomeIcon icon={['fab', 'react']} />;
-      break;
-    case 2:
-      icon = <FontAwesomeIcon icon={['fas', 'code-branch']} />;
-      break;
-    default:
-      icon = '{...}';
-  }
-
-  if (icon !== '{...}' && icon.props.icon[1] === 'code-branch') {
-    codeBranchIcon = true;
-  }
-  return (
-    <div
-      className={classNames(styles.featureCard, {
-        [styles.dark]: isDark,
-      })}
-    >
-      <div className={styles.header}>
-        <div className={styles.iconWrapper}>
-          <div
-            className={classNames(styles.icon, {
-              [styles.codeBranchIcon]: codeBranchIcon,
-            })}
-          >
-            {icon}
-          </div>
+const FeatureCard = ({ title, description, features, to, icon, isDark }) => (
+  <div
+    className={classNames(styles.featureCard, {
+      [styles.dark]: isDark,
+    })}
+  >
+    <div className={styles.header}>
+      <div className={styles.iconWrapper}>
+        <div className={styles.icon}>
+          <img src={icon} alt={title} />
         </div>
-        <h3>{title}</h3>
       </div>
-      <p>{description}</p>
-      <ul className="bodySmall">
-        {features &&
-          features.map(feature => (
-            <li key={feature}>
-              <FontAwesomeIcon icon={['far', 'check-circle']} /> {feature}
-            </li>
-          ))}
-      </ul>
-      <Link
-        className={classNames('textButton', styles.customizationLink)}
-        to={to}
-      >
-        Learn more <FontAwesomeIcon icon={['fas', 'arrow-right']} />
-      </Link>
+      <h3>{title}</h3>
     </div>
-  );
-};
+    <p>{description}</p>
+    <ul className="bodySmall">
+      {features &&
+        features.map(feature => (
+          <li key={feature}>
+            <FontAwesomeIcon icon={['far', 'check-circle']} /> {feature}
+          </li>
+        ))}
+    </ul>
+    <Link
+      className={classNames('textButton', styles.customizationLink)}
+      to={to}
+    >
+      Learn more <FontAwesomeIcon icon={['fas', 'arrow-right']} />
+    </Link>
+  </div>
+);
 
 FeatureCard.propTypes = {
   title: PropTypes.string,
   features: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
   to: PropTypes.string,
-  index: PropTypes.number,
+  icon: PropTypes.string,
   isDark: PropTypes.bool,
 };
 

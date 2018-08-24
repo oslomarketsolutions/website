@@ -63,6 +63,7 @@ customization:
         - User Friendly
       header: Feed/API
       isDark: false
+      icon: /img/Icon-Feed.svg
     - description: >-
         A full coverage of the financial markets with a market data portal with
         live, streaming data
@@ -75,6 +76,7 @@ customization:
         - User Friendly
       header: OMS Components
       isDark: false
+      icon: /img/Icon-React.svg
     - description: 'En full portal, skreddersydd til ditt behov.'
       features:
         - Real Time
@@ -83,8 +85,9 @@ customization:
         - Customized
         - ProBroker
         - User Friendly
-      header: Driftete tjenester
+      header: Driftede tjenester
       isDark: true
+      icon: /img/Icon-Managed.svg
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
     header: Service integrations
