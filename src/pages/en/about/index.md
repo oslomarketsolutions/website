@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: Trying to leave this world better than when I found it.
+    - description: Act with courage
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
