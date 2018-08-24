@@ -129,12 +129,14 @@ employees:
       title: Åsmund Staldvik
   header: Who we are
   quotes:
-    - author: John Burroughs
-      text: A somebody was once a nobody who wanted to and did.
-    - author: Arthur Ashe
-      text: Start where you are. Use what you have. Do what you can.
-    - author: '- Ash Ketchum'
-      text: Gotta catch them all
+    - author: Comment from employee survey
+      text: >-
+        Everyone cooperates to gain knowledge for themselves and everybody
+        around them
+    - author: Comment from employee survey
+      text: >-
+        I like being close to the clients and to work with advanced technology
+        to solve their problems
   section: TEAM
 buttonText: Join the Team
 ---
