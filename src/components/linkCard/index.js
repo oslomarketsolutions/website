@@ -6,6 +6,7 @@ import styles from './linkCard.module.scss';
 
 const LinkCard = ({
   header,
+  id,
   description,
   isDark,
   icon,
@@ -17,7 +18,7 @@ const LinkCard = ({
       [styles.dark]: isDark,
     })}
   >
-    <Link to={`#${header}`} onClick={event => onClickFunction(event, header)}>
+    <Link to={`#${id}`} onClick={event => onClickFunction(event, id)}>
       <div className={styles.header}>
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>
@@ -31,8 +32,8 @@ const LinkCard = ({
     </Link>
     <Link
       className={classNames('textButton', styles.mobileLink)}
-      to={`#${header}`}
-      onClick={event => onClickFunction(event, header)}
+      to={`#${id}`}
+      onClick={event => onClickFunction(event, id)}
     >
       <div className={styles.iconWrapper}>
         <div className={styles.icon}>
@@ -48,6 +49,7 @@ export default LinkCard;
 
 LinkCard.propTypes = {
   header: PropTypes.string,
+  id: PropTypes.string,
   description: PropTypes.string,
   linkText: PropTypes.string,
   isDark: PropTypes.bool,

@@ -120,7 +120,7 @@ const IndexPageTemplate = ({ location, data }) => {
         <h1>{investorPortal.header}</h1>
         <p className="bodyLarge">{investorPortal.text}</p>
         <Button
-          to={`/${language}/products`}
+          to={`/${language}/products/#${investorPortal.id}`}
           text={investorPortal.buttonText}
           useArrow
         />
@@ -147,7 +147,8 @@ const IndexPageTemplate = ({ location, data }) => {
                 description={customizationCard.description}
                 features={customizationCard.features}
                 icon={customizationCard.icon}
-                to={`/${language}/products`}
+                buttonText={customizationCard.buttonText}
+                to={`/${language}/products/#${customizationCard.id}`}
                 isDark={customizationCard.isDark}
               />
             ))}
@@ -159,28 +160,11 @@ const IndexPageTemplate = ({ location, data }) => {
           imageSizes={imageSizes}
         />
       </section>
-      <section className={styles.arena}>
-        <h1>{otherProducts.arena.header}</h1>
-        <p className="bodyLarge">{otherProducts.arena.text}</p>
-        <Button
-          to={`/${language}/products`}
-          text={otherProducts.arena.buttonText}
-          useArrow
-        />
-        <Images
-          alt={otherProducts.arena.header}
-          outerWrapperClassName={styles.imageContainer}
-          desktopSrc={otherProducts.arena.desktopImage}
-          tabletSrc={otherProducts.arena.tabletImage}
-          mobileSrc={otherProducts.arena.mobileImage}
-          sizes={imageSizes}
-        />
-      </section>
       <section className={styles.irModules}>
         <h1>{otherProducts.irModules.header}</h1>
         <p className="bodyLarge">{otherProducts.irModules.text}</p>
         <Button
-          to={`/${language}/products`}
+          to={`/${language}/products/#${otherProducts.irModules.id}`}
           text={otherProducts.irModules.buttonText}
           useArrow
         />
@@ -190,6 +174,23 @@ const IndexPageTemplate = ({ location, data }) => {
           desktopSrc={otherProducts.irModules.desktopImage}
           tabletSrc={otherProducts.irModules.tabletImage}
           mobileSrc={otherProducts.irModules.mobileImage}
+          sizes={imageSizes}
+        />
+      </section>
+      <section className={styles.arena}>
+        <h1>{otherProducts.arena.header}</h1>
+        <p className="bodyLarge">{otherProducts.arena.text}</p>
+        <Button
+          to={`/${language}/products/#${otherProducts.arena.id}`}
+          text={otherProducts.arena.buttonText}
+          useArrow
+        />
+        <Images
+          alt={otherProducts.arena.header}
+          outerWrapperClassName={styles.imageContainer}
+          desktopSrc={otherProducts.arena.desktopImage}
+          tabletSrc={otherProducts.arena.tabletImage}
+          mobileSrc={otherProducts.arena.mobileImage}
           sizes={imageSizes}
         />
       </section>
