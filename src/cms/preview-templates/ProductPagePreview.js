@@ -12,7 +12,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       linkText: linkCard.get('linkText'),
       isDark: linkCard.get('isDark'),
       icon: getAsset(linkCard.get('icon')),
-      id: getAsset(linkCard.get('id')),
+      id: linkCard.get('id'),
     }));
 
   const linkCardsSection = {
