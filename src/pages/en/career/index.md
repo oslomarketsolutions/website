@@ -2,14 +2,8 @@
 templateKey: careerPage
 hero:
   backgroundImage: /img/standup.png
-  backgroundImageAlt: placeholder alt for image1
-  text: >-
-    We are always looking for great people! We like people that are passionate
-    about new technology and taking part in the creation of good, smart
-    solutions.
-
-
-    Do you think you got what it takes? Send us an e-mail!
+  backgroundImageAlt: OMS at stand-up
+  text: "We are always looking for great people! \U0001F64B‍♀️\U0001F64B‍♂️ We like people that are passionate about new technology and taking part in the creation of good, smart solutions.\n\nDo you think you got what it takes? Send us an e-mail!"
   title: Want to become one of us?
 about:
   header: Why OMS?
@@ -17,12 +11,15 @@ about:
   text: >-
     OMS has a casual, but professional, working environment. We focus on
     personal and professional development, quality in each part of our
-    deliveries and continous product development and innovation.
+    deliveries and continuous product development and innovation.
 
 
     We value our open and including dynamic that gives everyone the opportunity
     to affect their day to day tasks as well as strategic decisions for the
-    company.
+    company. We are a random bunch of people, white-collars, hoodies, skaters,
+    metal heads, hip hoppers, Swedes, bicycle nerds and even a Dutch guy. If you
+    are familiar with table tennis or foosball this is an advantage, but not
+    necessary. 
 perks:
   header: What we offer
   perkCards:
@@ -41,8 +38,7 @@ perks:
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil
-    - ? icon
-      perkTitle: Apartments
+    - perkTitle: Apartments
       text: Located in Villefranche and Albir
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Social events
@@ -74,8 +70,9 @@ perks:
         you need it, you can work from home. Or the beach. Or a mountaintop.
   section: Perks
 positions:
+  buttonText: Enable
   header: Job vacancies
   iframeAltText: You need to have analytics enabled to view the positions
-  buttonText: Enable
   text: Some text explaining something
 ---
+
