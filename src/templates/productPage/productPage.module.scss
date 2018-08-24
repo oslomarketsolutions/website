@@ -500,6 +500,16 @@
   .productPage {
     .linkCardsSection {
       .linkCards {
+        width: 748px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .productPage {
+    .linkCardsSection {
+      .linkCards {
         width: 564px;
       }
     }

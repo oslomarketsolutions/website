@@ -61,7 +61,7 @@ customization:
         - Worldwide data
       header: Feed/API
       isDark: false
-      icon: /img/Icon-Feed.svg
+      icon: /img/Icon-Feed-Gray.svg
     - description: >-
         Well documented React components for those who want more autonomy, but
         still high quality.
@@ -73,7 +73,7 @@ customization:
         - Worldwide data
       header: OMS Components
       isDark: false
-      icon: /img/Icon-React.svg
+      icon: /img/Icon-React-Gray.svg
     - description: >-
         Fully managed and operated custom solutions with OMS unique domain
         expertise
@@ -86,7 +86,7 @@ customization:
         - Centevo
       header: Hosted solutions
       isDark: true
-      icon: /img/Icon-Managed.svg
+      icon: /img/Icon-Managed-Gray.svg
   header: Choose your level of customization
   serviceIntegrations:
     header: Service integrations

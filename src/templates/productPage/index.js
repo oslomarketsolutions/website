@@ -263,7 +263,10 @@ export const productPageQuery = graphql`
         linkCardsSection {
           title
           linkCards {
-            icon
+            icon {
+              mobile
+              desktop
+            }
             header
             description
             isDark
