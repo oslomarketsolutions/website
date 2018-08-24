@@ -135,6 +135,7 @@ collections:
               {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
               {label: "Alternative text for HR-iframe", name: "iframeAltText", widget: "text"},
+              {label: "Button text", name: "buttonText", widget: "string"},
             ]}
 
       - file: "src/pages/en/products/index.md"
@@ -388,6 +389,7 @@ collections:
               {label: "Header", name: "header", widget: "string"},
               {label: "Text", name: "text", widget: "text"},
               {label: "Alternative text for HR-iframe", name: "iframeAltText", widget: "text"},
+              {label: "Button text", name: "buttonText", widget: "string"},
             ]}
 
       - file: "src/pages/no/products/index.md"
