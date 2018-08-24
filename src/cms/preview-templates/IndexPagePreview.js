@@ -31,7 +31,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       id: card.get('id'),
     }));
 
-  const integrationLogos = entry
+  const integrationsLogos = entry
     .getIn([
       'data',
       'customization',
@@ -125,7 +125,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
               'serviceIntegrations',
               'text',
             ]),
-            integrationLogos,
+            integrationsLogos,
           },
         },
         otherProducts: {
