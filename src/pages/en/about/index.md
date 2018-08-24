@@ -133,6 +133,9 @@ employees:
       text: A somebody was once a nobody who wanted to and did.
     - author: Arthur Ashe
       text: Start where you are. Use what you have. Do what you can.
+    - author: '- Ash Ketchum'
+      text: Gotta catch them all
   section: TEAM
 buttonText: Join the Team
 ---
+
