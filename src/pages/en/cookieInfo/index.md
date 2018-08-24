@@ -1,29 +1,21 @@
 ---
 title: Cookie settings
 cookiePopUp:
-  text: Uses cookies to personalize content and ads to make our site
-    easier for you to use. We do also share that information
-    with third parties for advertising and analytics.
+  text: We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the Oslo Market Solutions website. However, you can change your settings at any time.
   manageButtonText: Manage
   confirmationButtonText: I understand
 cookieManager:
   necessaryCookies:
     id: necessary
     header: Necessary cookies
-    text: These cookies are needed for our website to function providing payment
-      gateway security and their essentials. Therefore they are always on
+    text:
+      These cookies are needed for our website to function. Therefore they are always on,
       but do not contain personally indetifiable information (PII).
     cookies:
       - name: haveSeenPopUp
         purpose:
-          These cookies are needed for our website to function providing payment
-          gateway security and their essentials. Therefore they are always on
-          but do not contain personally indetifiable information (PII).
-      - name: Language selection
-        purpose:
-          These cookies are needed for our website to function providing payment
-          gateway security and their essentials. Therefore they are always on
-          but do not contain personally indetifiable information (PII).
+          This cookie is set so that you won't have to interact with the cookie pop-up
+          next time you visit our website.
   analyticsCookies:
     id: analytics
     header: Analytics cookies
