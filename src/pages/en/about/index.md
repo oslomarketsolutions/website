@@ -35,7 +35,7 @@ employees:
       jobTitle: Sales
       jobType: management
       title: Mikael Leckborn
-    - description: Tung som bly
+    - description: 'Expect the best, plan for the worst, and prepare to be surprised'
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Project Manager
       jobType: management
