@@ -133,11 +133,11 @@ employees:
       title: Åsmund Staldvik
   header: Hvem er vi
   quotes:
-    - author: Kommentar fra medarbeiderundersøkelse
+    - author: '- Medarbeiderundersøkelse 2018'
       text: >
         Alle er villige til å hjelpe hverandre, samarbeide og heve kompetansen
         til seg selv og alle andre rundt seg
-    - author: Kommentar fra medarbeiderundersøkelse
+    - author: '- Medarbeiderundersøkelse 2018'
       text: >
         Jeg liker nærheten til kundene og å få jobbe med avansert teknologi for
         å løse deres problemer
