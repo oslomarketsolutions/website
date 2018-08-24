@@ -79,9 +79,11 @@ employees:
       jobTitle: Frontend developer/UX Designer
       jobType: designer
       title: Rebecca Gjerstad
-    - description: I promise to quit smoking
+    - description: >-
+        Digital designer focused on creating usable and delightful user
+        experiences. Likes to tinker with React and friends.
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
-      jobTitle: UX Designer
+      jobTitle: User Experience Designer
       jobType: designer
       title: Gerrit Witteveen
     - description: Elsker hip hop og norsk rap
