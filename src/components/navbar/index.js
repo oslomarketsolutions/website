@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 import CookieToggle from '../cookieToggle/index';
 import logo from '../../img/logo_oms_hoved.png';
 import logoWhite from '../../img/logo_oms_hvit.png';
@@ -40,6 +41,7 @@ export default class Navbar extends Component {
     trackingIsOn: true,
     analyticsIsOn: true,
     useLocalState: false,
+    fullScreenCookieManager: false,
   };
 
   componentDidMount() {
@@ -86,6 +88,20 @@ export default class Navbar extends Component {
     return returnPath;
   };
 
+  toggleOverflowHiddenBody = () => {
+    if (window != null && window.innerWidth < 580) {
+      if (!this.state.fullScreenCookieManager) {
+        this.setState({
+          fullScreenCookieManager: true,
+        });
+      } else {
+        this.setState({
+          fullScreenCookieManager: false,
+        });
+      }
+    }
+  };
+
   closePopUpAndOpenManager = () => {
     this.setState({
       cookieManagerOpen: true,
@@ -99,6 +115,7 @@ export default class Navbar extends Component {
   };
 
   toggleCookieManager = () => {
+    this.toggleOverflowHiddenBody();
     if (!this.props.hideCookiePopUp) {
       this.closePopUpAndOpenManager();
     } else if (!this.state.cookieManagerOpen) {
@@ -118,6 +135,7 @@ export default class Navbar extends Component {
   };
 
   saveSettings = () => {
+    this.toggleOverflowHiddenBody();
     this.setState({
       cookieManagerOpen: false,
     });
@@ -170,6 +188,15 @@ export default class Navbar extends Component {
         })}
       >
         <div className={styles.navbar}>
+          <Helmet>
+            {
+              <body
+                className={classNames({
+                  [styles.noScroll]: this.state.fullScreenCookieManager,
+                })}
+              />
+            }
+          </Helmet>
           <div className={styles.logoWrapper}>
             <Link
               className={classNames(styles.noHover, styles.logo)}

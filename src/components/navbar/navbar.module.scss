@@ -1,5 +1,8 @@
 @import '../../layouts/variables';
 
+.noScroll {
+  overflow: hidden;
+}
 header {
   position: fixed;
   top: 0;
@@ -741,13 +744,43 @@ header.navColorWhite .navbar {
       }
     }
 
-    .cookieManager,
     .cookiePopUp {
       top: 49px;
       right: -7px;
       max-height: calc(100vh - 110px);
+    }
+
+    .cookieManager {
+      z-index: 4;
+      top: 0;
+      right: calc(0px - ((100vw - (100vw * 0.92)) / 2));
+      max-height: 100vh;
+      height: 100vh;
+      width: 100vw;
+      border-radius: 0;
+
+      .save {
+        width: 93.726%;
+      }
+
+      .close {
+        visibility: visible;
+        .bar:first-of-type {
+          transform: rotate(45deg);
+          opacity: 1;
+        }
+
+        .bar:last-of-type {
+          transform: rotate(-45deg);
+          opacity: 1;
+        }
+      }
+
       .scrollContainer {
-        max-height: calc(100vh - 112px);
+        max-height: 100vh;
+        height: 100vh;
+        padding: 32px 32px 64px;
+        overflow: auto;
       }
     }
 
@@ -825,10 +858,9 @@ header.navColorWhite .navbar {
     }
 
     .cookieManager {
-      width: 308px;
-
-      .save {
-        width: 244px;
+      .scrollContainer {
+        padding-left: 16px;
+        padding-right: 16px;
       }
     }
 
@@ -847,11 +879,6 @@ header.navColorWhite .navbar {
           width: 56px;
           left: 1px;
         }
-      }
-
-      .cookiePopUp,
-      .cookieManager {
-        top: 40px;
       }
 
       li.careers {
