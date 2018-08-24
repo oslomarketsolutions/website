@@ -8,6 +8,7 @@ linkCardsSection:
       header: Investorportal
       isDark: false
       linkText: Gå til Investorportal
+      icon: /img/Icon-Portals.svg
     - description: >-
         Sømløs integrasjon med minimalt arbeid. OMS Components er
         standardkomponenter som kan enkelt integreres i eksisterende
@@ -15,22 +16,26 @@ linkCardsSection:
       header: OMS Components
       isDark: false
       linkText: Gå til OMS Components
+      icon: /img/Icon-React.svg
     - description: Verdipapirmarkedets informasjonsportal.
       header: Arena
       isDark: false
       linkText: Gå til Arena
+      icon: /img/Icon-Arena.svg
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         webmoduler fra OMS
       header: IR Webmoduler
       isDark: false
       linkText: Gå til IR Webmoduler
+      icon: /img/Icon-IRModules.svg
     - description: >-
         Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
         data over REST og strømmende data over Websockets
       header: Feed API
       isDark: false
       linkText: Gå til Feed API
+      icon: /img/Icon-Feed.svg
   title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   marketData:

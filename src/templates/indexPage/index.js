@@ -152,13 +152,13 @@ const IndexPageTemplate = ({ location, data }) => {
         <p>{customization.text}</p>
         <div className={styles.customizationCards}>
           {customization.cards &&
-            customization.cards.map((customizationCard, index) => (
+            customization.cards.map(customizationCard => (
               <FeatureCard
                 key={customizationCard.header}
                 title={customizationCard.header}
                 description={customizationCard.description}
                 features={customizationCard.features}
-                index={index}
+                icon={customizationCard.icon}
                 to={`/${language}/products`}
                 isDark={customizationCard.isDark}
               />

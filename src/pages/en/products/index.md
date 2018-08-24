@@ -8,30 +8,35 @@ linkCardsSection:
       header: Investor portals
       isDark: false
       linkText: Go to Investor portals
+      icon: /img/Icon-Portals.svg
     - description: >-
         Seamless integration with least effort. OMS components are standard
         components that can easily be integrated into existing web portals.
       header: OMS Components
       isDark: false
       linkText: Go to OMS Components
+      icon: /img/Icon-React.svg
     - description: >-
         Full coverage of the financial markets. Market data portal with live,
         streaming data and smart links to content.
       header: Feed API
       isDark: false
       linkText: Go to Feed API
+      icon: /img/Icon-Feed.svg
     - description: >-
         Showcase your share to existing and potential investors with flexible
         web modules from OMS. From simple quotes to advanced charting tools.
       header: IR Web Modules
       isDark: false
       linkText: Go to IR Web Modules
+      icon: /img/Icon-IRModules.svg
     - description: >-
         The information portal for professionals within the Norwegian securities
         market
       header: Arena
       isDark: false
       linkText: Go to Arena
+      icon: /img/Icon-Arena.svg
   title: What we offer
 investorPortal:
   marketData:
