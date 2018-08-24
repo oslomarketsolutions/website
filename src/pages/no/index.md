@@ -10,7 +10,7 @@ transitionalElement:
     - logo: /img/First Fondene@2x.png
       name: First Fondene
     - logo: /img/Handelsbanken@2x.png
-      name: Handeslbanken
+      name: Handelsbanken
     - logo: /img/Sbanken@2x.png
       name: Sbanken
     - logo: /img/Sparebank 1@2x.png
