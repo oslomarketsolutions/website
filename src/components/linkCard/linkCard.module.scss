@@ -1,7 +1,7 @@
 @import '../../layouts/variables';
 
 .linkCard {
-  margin: 16px;
+  margin: $M;
   position: relative;
   background-color: $white;
   width: 358px;
@@ -32,6 +32,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: block;
+    }
   }
 
   .iconWrapper {
@@ -127,12 +134,28 @@ div.dark {
 
 @media (max-width: 814px) {
   .linkCard {
+    margin: $XS;
+  }
+}
+
+@media (max-width: 768px) {
+  .linkCard {
     background-color: transparent;
     box-shadow: none;
     width: 246px;
+    margin: $M;
 
     .header {
       display: none;
+    }
+
+    .icon {
+      .mobile {
+        display: block;
+      }
+      .desktop {
+        display: none;
+      }
     }
 
     p {
