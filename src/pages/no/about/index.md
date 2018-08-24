@@ -26,7 +26,7 @@ history:
 
 employees:
   employeeList:
-    - description: 'Sykler rundt i byn, noterer med Remarkable, men lever ellers digitalt.'
+    - description: '"Vi har det i demo på fredag"'
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
