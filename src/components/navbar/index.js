@@ -94,11 +94,12 @@ export default class Navbar extends Component {
         this.setState({
           fullScreenCookieManager: true,
         });
-      } else {
-        this.setState({
-          fullScreenCookieManager: false,
-        });
       }
+    }
+    if (this.state.fullScreenCookieManager) {
+      this.setState({
+        fullScreenCookieManager: false,
+      });
     }
   };
 
