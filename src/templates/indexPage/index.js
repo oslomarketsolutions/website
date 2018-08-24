@@ -6,12 +6,11 @@ import { OutboundLink } from 'react-ga';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
 import Slider from '../../components/slider/index';
-import { findImageSizes } from '../../utils/helperFunctions';
-import ImageWrapper from '../../components/imageWrapper';
 import Button from '../../components/button/index';
 import BigButton from '../../components/bigButton/index';
 import ServiceIntegrations from '../../components/serviceIntegrations';
 import getLanguage from '../../utils/language';
+import Images from '../../components/images';
 
 const IndexPageTemplate = ({ location, data }) => {
   const {
@@ -126,26 +125,15 @@ const IndexPageTemplate = ({ location, data }) => {
           useArrow
         />
         <div className={styles.investorPortalImagesWrapper}>
-          {investorPortal.investorPortalImages &&
-            investorPortal.investorPortalImages.map(investorPortalImage => (
-              <ImageWrapper
-                key={investorPortalImage.name}
-                src={investorPortalImage.image}
-                alt={investorPortalImage.name}
-                sizes={findImageSizes(investorPortalImage.image, imageSizes)}
-                outerWrapperClassName={styles.imageContainer}
-              />
-            ))}
-        </div>
-        <div className={styles.tickerTape}>
-          <ImageWrapper
-            src="/img/tickertape.png"
-            alt="Abstract investorportal"
-            sizes={findImageSizes('/img/tickertape.png', imageSizes)}
+          <Images
+            alt={investorPortal.header}
             outerWrapperClassName={styles.imageContainer}
+            desktopSrc={investorPortal.desktopImage}
+            tabletSrc={investorPortal.tabletImage}
+            mobileSrc={investorPortal.mobileImage}
+            sizes={imageSizes}
           />
         </div>
-
         <h2 className={classNames(styles.subHeader1, styles.centered)}>
           {customization.header}
         </h2>
@@ -179,11 +167,13 @@ const IndexPageTemplate = ({ location, data }) => {
           text={otherProducts.arena.buttonText}
           useArrow
         />
-        <ImageWrapper
-          src={otherProducts.arena.image}
-          alt="Abstract arena"
-          sizes={findImageSizes(otherProducts.arena.image, imageSizes)}
+        <Images
+          alt={otherProducts.arena.header}
           outerWrapperClassName={styles.imageContainer}
+          desktopSrc={otherProducts.arena.desktopImage}
+          tabletSrc={otherProducts.arena.tabletImage}
+          mobileSrc={otherProducts.arena.mobileImage}
+          sizes={imageSizes}
         />
       </section>
       <section className={styles.irModules}>
@@ -194,11 +184,13 @@ const IndexPageTemplate = ({ location, data }) => {
           text={otherProducts.irModules.buttonText}
           useArrow
         />
-        <ImageWrapper
-          src={otherProducts.irModules.image}
-          alt="Abstract IR Modules"
-          sizes={findImageSizes(otherProducts.irModules.image, imageSizes)}
+        <Images
+          alt={otherProducts.irModules.header}
           outerWrapperClassName={styles.imageContainer}
+          desktopSrc={otherProducts.irModules.desktopImage}
+          tabletSrc={otherProducts.irModules.tabletImage}
+          mobileSrc={otherProducts.irModules.mobileImage}
+          sizes={imageSizes}
         />
       </section>
     </main>

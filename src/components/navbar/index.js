@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 import CookieToggle from '../cookieToggle/index';
 import logo from '../../img/logo_oms_hoved.png';
 import logoWhite from '../../img/logo_oms_hvit.png';
@@ -40,7 +41,7 @@ export default class Navbar extends Component {
     trackingIsOn: true,
     analyticsIsOn: true,
     useLocalState: false,
-    intervalId: 0,
+    fullScreenCookieManager: false,
   };
 
   componentDidMount() {
@@ -68,20 +69,6 @@ export default class Navbar extends Component {
     }
   }
 
-  scrollStep() {
-    if (window != null) {
-      if (window.pageYOffset === 0) {
-        clearInterval(this.state.intervalId);
-      }
-      window.scroll(0, window.pageYOffset - 100);
-    }
-  }
-
-  scrollToTop() {
-    const intervalId = setInterval(this.scrollStep.bind(this), 16.66);
-    this.setState({ intervalId });
-  }
-
   changePageLanguage = () => {
     const pathSplitArray = this.props.location.pathname.split('/');
     let returnPath;
@@ -101,8 +88,22 @@ export default class Navbar extends Component {
     return returnPath;
   };
 
+  toggleOverflowHiddenBody = () => {
+    if (window != null && window.innerWidth < 580) {
+      if (!this.state.fullScreenCookieManager) {
+        this.setState({
+          fullScreenCookieManager: true,
+        });
+      }
+    }
+    if (this.state.fullScreenCookieManager) {
+      this.setState({
+        fullScreenCookieManager: false,
+      });
+    }
+  };
+
   closePopUpAndOpenManager = () => {
-    this.scrollToTop();
     this.setState({
       cookieManagerOpen: true,
       useLocalState: true,
@@ -115,6 +116,7 @@ export default class Navbar extends Component {
   };
 
   toggleCookieManager = () => {
+    this.toggleOverflowHiddenBody();
     if (!this.props.hideCookiePopUp) {
       this.closePopUpAndOpenManager();
     } else if (!this.state.cookieManagerOpen) {
@@ -134,6 +136,7 @@ export default class Navbar extends Component {
   };
 
   saveSettings = () => {
+    this.toggleOverflowHiddenBody();
     this.setState({
       cookieManagerOpen: false,
     });
@@ -186,6 +189,15 @@ export default class Navbar extends Component {
         })}
       >
         <div className={styles.navbar}>
+          <Helmet>
+            {
+              <body
+                className={classNames({
+                  [styles.noScroll]: this.state.fullScreenCookieManager,
+                })}
+              />
+            }
+          </Helmet>
           <div className={styles.logoWrapper}>
             <Link
               className={classNames(styles.noHover, styles.logo)}
@@ -301,7 +313,17 @@ export default class Navbar extends Component {
                 >
                   <div className={styles.indicator} />
                   <div className={styles.scrollContainer}>
-                    <h4>{cookieInfo.title}</h4>
+                    <div className={styles.header}>
+                      <h4>{cookieInfo.title}</h4>
+                      <button
+                        className={styles.close}
+                        onClick={this.toggleCookieManager}
+                      >
+                        <span className="sr-only">Close cookie manager</span>
+                        <div className={styles.bar} />
+                        <div className={styles.bar} />
+                      </button>
+                    </div>
                     <CookieToggle
                       header={cookieInfo.cookieManager.necessaryCookies.header}
                       text={cookieInfo.cookieManager.necessaryCookies.text}

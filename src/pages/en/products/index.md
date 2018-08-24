@@ -41,7 +41,9 @@ linkCardsSection:
 investorPortal:
   marketData:
     header: Boost your media content with live stock data
-    image: /img/productsPagePlaceholder.png
+    desktopImage: /img/market-desktop-en@2x.png
+    tabletImage: /img/market-desktop-en@2x.png
+    mobileImage: /img/market-mobile-en@2x.png
     overline: Market data Portal
     text: >
       Full coverage of the financial market with live, streaming data. Create a
@@ -52,7 +54,9 @@ investorPortal:
       and more.
   onlinePortfolio:
     header: 'A complete savings portal '
-    image: /img/productsPagePlaceholder.png
+    desktopImage: /img/fundportal-desktop-en@2x.png
+    tabletImage: /img/fundportal-desktop-en@2x.png
+    mobileImage: /img/fundportal-mobile-en@2x.png
     overline: 'Funds and portfolio reporting '
     text: >-
       Engage your customers and help them invest more with a modern web
@@ -86,7 +90,9 @@ investorPortal:
     text: We play well with others
   trading:
     header: Stock trading in GDPR  and MiFID II-compliant client portals
-    image: /img/productsPagePlaceholder.png
+    desktopImage: /img/webtrader-desktop-en@2x.png
+    tabletImage: /img/webtrader-desktop-en@2x.png
+    mobileImage: /img/webtrader-mobile-en@2x.png
     overline: Web Trader
     text: >
       Empower your investors with a web trader providing real-time streaming
@@ -102,7 +108,9 @@ standardProducts:
   arena:
     buttonText: Contact us
     header: Arena
-    image: /img/arena.png
+    desktopImage: /img/arena-desktop@2x.png
+    tabletImage: /img/arena-desktop@2x.png
+    mobileImage: /img/arena-mobile@2x.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
@@ -110,7 +118,9 @@ standardProducts:
   irModules:
     buttonText: Contact us
     header: IR Web Modules
-    image: /img/irModulesPlaceholder.png
+    desktopImage: /img/ir-desktop@2x.png
+    tabletImage: /img/ir-desktop@2x.png
+    mobileImage: /img/ir-mobile@2x.png
     text: >
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
@@ -124,7 +134,9 @@ services:
   feedAPI:
     buttonText: Contact us
     header: Feed API
-    image: /img/feedAPIplaceholder.png
+    desktopImage: /img/feed-desktop-en@2x.png
+    tabletImage: /img/feed-desktop-en@2x.png
+    mobileImage: /img/feed-mobile-en@2x.png
     text: >-
       Access global market data with high quality REST-APIs. OMS deliver web
       sockets for streaming data and APIs for static and delayed data. The feed
@@ -137,7 +149,9 @@ services:
   omsComponents:
     buttonText: Contact us
     header: OMS Components
-    image: /img/omsComponentsPlaceholder.png
+    desktopImage: /img/omscomponents-desktop-en@2x.png
+    tabletImage: /img/omscomponents-desktop-en@2x.png
+    mobileImage: /img/omscomponents-mobile-en@2x.png
     text: >-
       OMS components are standard components for presenting streaming market
       data. The components are written in React and modern JavaScript and are

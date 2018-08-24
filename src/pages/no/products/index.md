@@ -40,7 +40,9 @@ linkCardsSection:
 investorPortal:
   marketData:
     header: Markedsdata fra hele verden
-    image: /img/productsPagePlaceholder.png
+    desktopImage: /img/market-desktop-no@2x.png
+    tabletImage: /img/market-desktop-no@2x.png
+    mobileImage: /img/market-mobile-no@2x.png
     overline: Børsportal
     text: >-
       En Børsportal gir leserne oversikt over verdens markeder. Indekser,
@@ -48,7 +50,9 @@ investorPortal:
       aksje.
   onlinePortfolio:
     header: Komplett spareportal
-    image: /img/productsPagePlaceholder.png
+    desktopImage: /img/fundportal-desktop-no@2x.png
+    tabletImage: /img/fundportal-desktop-no@2x.png
+    mobileImage: /img/fundportal-mobile-no@2x.png
     overline: Portefølje og fondshandel
     text: >-
       Engasjer dine kunder og hjelp dem investere mer med en moderne webløsning.
@@ -80,7 +84,9 @@ investorPortal:
     text: Vi liker godt å spille med andre
   trading:
     header: Fra daytrading til  langsiktig sparing
-    image: /img/productsPagePlaceholder.png
+    desktopImage: /img/webtrader-desktop-no@2x.png
+    tabletImage: /img/webtrader-desktop-no@2x.png
+    mobileImage: /img/webtrader-mobile-no@2x.png
     overline: Aksjehandel
     text: >-
       OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
@@ -96,7 +102,9 @@ standardProducts:
   arena:
     buttonText: Kontakt oss
     header: Arena
-    image: /img/arena.png
+    desktopImage: /img/arena-desktop@2x.png
+    tabletImage: /img/arena-desktop@2x.png
+    mobileImage: /img/arena-mobile@2x.png
     text: >-
       Arena er en informasjonsportal som tilbyr data på Oslo Børs, Oslo Axess
       and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
@@ -104,7 +112,9 @@ standardProducts:
   irModules:
     buttonText: Kontakt oss
     header: IR Webmoduler
-    image: /img/irModulesPlaceholder.png
+    desktopImage: /img/ir-desktop@2x.png
+    tabletImage: /img/ir-desktop@2x.png
+    mobileImage: /img/ir-mobile@2x.png
     text: >-
       Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
       moduler fra OMS.
@@ -118,7 +128,9 @@ services:
   feedAPI:
     buttonText: Kontakt oss
     header: Feed API
-    image: /img/feedAPIplaceholder.png
+    desktopImage: /img/feed-desktop-no@2x.png
+    tabletImage: /img/feed-desktop-no@2x.png
+    mobileImage: /img/feed-mobile-no@2x.png
     text: >-
       Få tilgang til markedsdata fra hele verden med høy kvalitet, strømmende
       data leveres over Websockets mens statisk og historisk data levelers over
@@ -129,7 +141,9 @@ services:
   omsComponents:
     buttonText: Kontakt oss
     header: OMS Components
-    image: /img/omsComponentsPlaceholder.png
+    desktopImage: /img/omscomponents-desktop-no@2x.png
+    tabletImage: /img/omscomponents-desktop-no@2x.png
+    mobileImage: /img/omscomponents-mobile-no@2x.png
     text: >-
       OMS Components er standardkomponenter for presentasjon av streaming
       markedsdata. Komponentene er skrevet i React og moderne JavaScript og

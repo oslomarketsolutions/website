@@ -1,5 +1,8 @@
 @import '../../layouts/variables';
 
+.noScroll {
+  overflow: hidden;
+}
 header {
   position: fixed;
   top: 0;
@@ -46,14 +49,27 @@ header.headerUnderline {
       }
     }
 
+    .cookiePopUp,
     .cookieManager {
-      display: none;
-    }
-    .cookiePopUp {
       right: 274px;
       top: 60px;
       .indicator {
         display: none;
+      }
+    }
+
+    .cookieManager {
+      .close {
+        visibility: visible;
+        .bar:first-of-type {
+          transform: rotate(45deg);
+          opacity: 1;
+        }
+
+        .bar:last-of-type {
+          transform: rotate(-45deg);
+          opacity: 1;
+        }
       }
     }
   }
@@ -209,6 +225,7 @@ header.headerUnderline {
     box-shadow: $navbarShadow;
     border-radius: $S;
     max-height: calc(100vh - 104px);
+    transition: all 200ms ease;
 
     .indicator {
       position: absolute;
@@ -221,8 +238,46 @@ header.headerUnderline {
       border-radius: 2px;
     }
 
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
     h4 {
-      margin: $M;
+      margin: $M auto $M $M;
+      width: 70%;
+    }
+
+    .close {
+      cursor: pointer;
+      position: relative;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+      width: 16px;
+      height: 16px;
+      margin-right: 16px;
+      visibility: hidden;
+      transition: visibility 0 linear 200ms;
+
+      .bar {
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background-color: $white;
+        transition: all 200ms ease;
+      }
+
+      .bar:first-of-type {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+
+      .bar:last-of-type {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
     }
 
     .scrollContainer {
@@ -436,7 +491,8 @@ header.navColorWhite .navbar {
         transition: all 200ms ease;
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: calc(30px - ((100vw - 1140px) / 2));
         top: 76px;
       }
@@ -450,7 +506,8 @@ header.navColorWhite .navbar {
   }
   header.headerUnderline {
     .navbar {
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: -12px;
         top: 85px;
       }
@@ -533,7 +590,8 @@ header.navColorWhite .navbar {
         margin-right: -170px;
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: 0px;
         top: 74px;
         border-top-right-radius: $S;
@@ -686,13 +744,43 @@ header.navColorWhite .navbar {
       }
     }
 
-    .cookieManager,
     .cookiePopUp {
       top: 49px;
       right: -7px;
       max-height: calc(100vh - 110px);
+    }
+
+    .cookieManager {
+      z-index: 4;
+      top: 0;
+      right: calc(0px - ((100vw - (100vw * 0.92)) / 2));
+      max-height: 100vh;
+      height: 100vh;
+      width: 100vw;
+      border-radius: 0;
+
+      .save {
+        width: 93.726%;
+      }
+
+      .close {
+        visibility: visible;
+        .bar:first-of-type {
+          transform: rotate(45deg);
+          opacity: 1;
+        }
+
+        .bar:last-of-type {
+          transform: rotate(-45deg);
+          opacity: 1;
+        }
+      }
+
       .scrollContainer {
-        max-height: calc(100vh - 112px);
+        max-height: 100vh;
+        height: 100vh;
+        padding: 32px 32px 64px;
+        overflow: auto;
       }
     }
 
@@ -726,7 +814,8 @@ header.navColorWhite .navbar {
         }
       }
 
-      .cookiePopUp {
+      .cookiePopUp,
+      .cookieManager {
         right: -7px;
         top: 49px;
       }
@@ -769,10 +858,9 @@ header.navColorWhite .navbar {
     }
 
     .cookieManager {
-      width: 308px;
-
-      .save {
-        width: 244px;
+      .scrollContainer {
+        padding-left: 16px;
+        padding-right: 16px;
       }
     }
 
@@ -791,10 +879,6 @@ header.navColorWhite .navbar {
           width: 56px;
           left: 1px;
         }
-      }
-
-      .cookiePopUp {
-        top: 40px;
       }
 
       li.careers {

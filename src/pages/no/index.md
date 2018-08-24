@@ -44,13 +44,9 @@ transitionalElement:
   socialMediaText: Følg oss
 investorPortal:
   header: Investorportal
-  investorPortalImages:
-    - image: investorportal.png
-      name: Investorportal 1
-    - image: investorportal.png
-      name: Investorportal 2
-    - image: investorportal.png
-      name: Investorportal 3
+  desktopImage: /img/portals-desktop-no@2x.png
+  tabletImage: /img/portals-tablet-no@2x.png
+  mobileImage: /img/portals-mobile-no@2x.png
   text: >-
     OMS hjelper deg med løsninger for fond- og aksjehandel, fondsrapportering,
     spareplattformer og børsportaler med markedsdata fra hele verden.
@@ -117,7 +113,9 @@ otherProducts:
   arena:
     buttonText: Lær mer
     header: Arena
-    image: /img/arena.png
+    desktopImage: /img/arena-desktop@2x.png
+    tabletImage: /img/arena-desktop@2x.png
+    mobileImage: /img/arena-mobile@2x.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
@@ -125,7 +123,9 @@ otherProducts:
   irModules:
     buttonText: Lær mer
     header: IR Modules
-    image: /img/irModulesPlaceholder.png
+    desktopImage: /img/ir-desktop@2x.png
+    tabletImage: /img/ir-desktop@2x.png
+    mobileImage: /img/ir-mobile@2x.png
     text: >-
       Whether you want a fully hosted and managed web trader, fund savings
       platform, portfolio reporting or market data information, OMS can help you

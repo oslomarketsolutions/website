@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import scrollIntoView from 'scroll-into-view-if-needed';
-import ImageWrapper from '../../components/imageWrapper';
-import { findImageSizes } from '../../utils/helperFunctions';
 import styles from './productPage.module.scss';
 import SectionHeader from '../../components/sectionHeader/index';
 import Button from '../../components/button/index';
 import LinkCard from '../../components/linkCard';
 import ServiceIntegrations from '../../components/serviceIntegrations/index';
+import Images from '../../components/images';
 
 export class ProductPageTemplate extends Component {
   static propTypes = {
@@ -75,15 +74,13 @@ export class ProductPageTemplate extends Component {
             </p>
             <h2>{investorPortal.onlinePortfolio.header}</h2>
             <p className="bodyLarge">{investorPortal.onlinePortfolio.text}</p>
-            <ImageWrapper
-              key={investorPortal.onlinePortfolio.header}
-              src={investorPortal.onlinePortfolio.image}
+            <Images
               alt={investorPortal.onlinePortfolio.header}
-              sizes={findImageSizes(
-                investorPortal.onlinePortfolio.image,
-                imageSizes,
-              )}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={investorPortal.onlinePortfolio.desktopImage}
+              tabletSrc={investorPortal.onlinePortfolio.tabletImage}
+              mobileSrc={investorPortal.onlinePortfolio.mobileImage}
+              sizes={imageSizes}
             />
           </section>
           <section className={styles.trading}>
@@ -92,12 +89,13 @@ export class ProductPageTemplate extends Component {
             </p>
             <h2>{investorPortal.trading.header}</h2>
             <p className="bodyLarge">{investorPortal.trading.text}</p>
-            <ImageWrapper
-              key={investorPortal.trading.header}
-              src={investorPortal.trading.image}
+            <Images
               alt={investorPortal.trading.header}
-              sizes={findImageSizes(investorPortal.trading.image, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={investorPortal.trading.desktopImage}
+              tabletSrc={investorPortal.trading.tabletImage}
+              mobileSrc={investorPortal.trading.mobileImage}
+              sizes={imageSizes}
             />
           </section>
           <section className={styles.marketData}>
@@ -106,15 +104,13 @@ export class ProductPageTemplate extends Component {
             </p>
             <h2>{investorPortal.marketData.header}</h2>
             <p className="bodyLarge">{investorPortal.marketData.text}</p>
-            <ImageWrapper
-              key={investorPortal.marketData.header}
-              src={investorPortal.marketData.image}
+            <Images
               alt={investorPortal.marketData.header}
-              sizes={findImageSizes(
-                investorPortal.marketData.image,
-                imageSizes,
-              )}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={investorPortal.marketData.desktopImage}
+              tabletSrc={investorPortal.marketData.tabletImage}
+              mobileSrc={investorPortal.marketData.mobileImage}
+              sizes={imageSizes}
             />
           </section>
           <ServiceIntegrations
@@ -144,12 +140,13 @@ export class ProductPageTemplate extends Component {
               text={standardProducts.arena.buttonText}
               outBound
             />
-            <ImageWrapper
-              key={standardProducts.arena.header}
-              src={standardProducts.arena.image}
+            <Images
               alt={standardProducts.arena.header}
-              sizes={findImageSizes(standardProducts.arena.image, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={standardProducts.arena.desktopImage}
+              tabletSrc={standardProducts.arena.tabletImage}
+              mobileSrc={standardProducts.arena.mobileImage}
+              sizes={imageSizes}
             />
           </section>
           <section
@@ -166,15 +163,13 @@ export class ProductPageTemplate extends Component {
               text={standardProducts.irModules.buttonText}
               outBound
             />
-            <ImageWrapper
-              key={standardProducts.irModules.header}
-              src={standardProducts.irModules.image}
+            <Images
               alt={standardProducts.irModules.header}
-              sizes={findImageSizes(
-                standardProducts.irModules.image,
-                imageSizes,
-              )}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={standardProducts.irModules.desktopImage}
+              tabletSrc={standardProducts.irModules.tabletImage}
+              mobileSrc={standardProducts.irModules.mobileImage}
+              sizes={imageSizes}
             />
           </section>
         </section>
@@ -198,12 +193,13 @@ export class ProductPageTemplate extends Component {
               text={services.feedAPI.buttonText}
               outBound
             />
-            <ImageWrapper
-              key={services.feedAPI.header}
-              src={services.feedAPI.image}
+            <Images
               alt={services.feedAPI.header}
-              sizes={findImageSizes(services.feedAPI.image, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={services.feedAPI.desktopImage}
+              tabletSrc={services.feedAPI.tabletImage}
+              mobileSrc={services.feedAPI.mobileImage}
+              sizes={imageSizes}
             />
           </section>
           <section
@@ -220,12 +216,13 @@ export class ProductPageTemplate extends Component {
               text={services.omsComponents.buttonText}
               outBound
             />
-            <ImageWrapper
-              key={services.omsComponents.header}
-              src={services.omsComponents.image}
+            <Images
               alt={services.omsComponents.header}
-              sizes={findImageSizes(services.omsComponents.image, imageSizes)}
               outerWrapperClassName={styles.imageContainer}
+              desktopSrc={services.omsComponents.desktopImage}
+              tabletSrc={services.omsComponents.tabletImage}
+              mobileSrc={services.omsComponents.mobileImage}
+              sizes={imageSizes}
             />
           </section>
         </section>
@@ -283,19 +280,25 @@ export const productPageQuery = graphql`
             overline
             header
             text
-            image
+            desktopImage
+            tabletImage
+            mobileImage
           }
           trading {
             overline
             header
             text
-            image
+            desktopImage
+            tabletImage
+            mobileImage
           }
           onlinePortfolio {
             overline
             header
             text
-            image
+            desktopImage
+            tabletImage
+            mobileImage
           }
           serviceIntegrations {
             header
@@ -314,13 +317,17 @@ export const productPageQuery = graphql`
           }
           arena {
             header
-            image
+            desktopImage
+            tabletImage
+            mobileImage
             text
             buttonText
           }
           irModules {
             header
-            image
+            desktopImage
+            tabletImage
+            mobileImage
             text
             buttonText
           }
@@ -333,13 +340,17 @@ export const productPageQuery = graphql`
           }
           feedAPI {
             header
-            image
+            desktopImage
+            tabletImage
+            mobileImage
             text
             buttonText
           }
           omsComponents {
             header
-            image
+            desktopImage
+            tabletImage
+            mobileImage
             text
             buttonText
           }
