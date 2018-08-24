@@ -133,12 +133,15 @@ employees:
       title: Åsmund Staldvik
   header: Hvem er vi
   quotes:
-    - author: 'Ole, Handelsbanken'
-      text: Veldig betryggende å ha en "direktelinje" å kontakte dere på!
-    - author: 'Tine, OMS'
-      text: >-
-        Vi er et lite, effektivt team stappfulle av spisskompetanse på
-        verdipapirmarkedet.
+    - author: Kommentar fra medarbeiderundersøkelse
+      text: >
+        Alle er villige til å hjelpe hverandre, samarbeide og heve kompetansen
+        til seg selv og alle andre rundt seg
+    - author: Kommentar fra medarbeiderundersøkelse
+      text: >
+        Jeg liker nærheten til kundene og å få jobbe med avansert teknologi for
+        å løse deres problemer
   section: TEAM
 buttonText: Join the Team
 ---
+
