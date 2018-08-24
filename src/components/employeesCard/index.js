@@ -16,7 +16,7 @@ const iconMatcher = jobType => {
       return ['far', 'code'];
 
     case 'designer':
-      return ['far', 'pencil-ruler'];
+      return ['far', 'drafting-compass'];
 
     case 'summerIntern':
       return ['far', 'graduation-cap'];

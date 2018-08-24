@@ -34,7 +34,7 @@ import {
   faGraduationCap,
   faFireExtinguisher,
   faBriefcase,
-  faPencilRuler,
+  faDraftingCompass,
 } from '@fortawesome/pro-regular-svg-icons';
 
 import { faGlobe, faCookieBite } from '@fortawesome/pro-light-svg-icons';
@@ -66,7 +66,7 @@ export const faLibrary = library.add(
   faPhone,
   faEnvelope,
   faFireExtinguisher,
-  faPencilRuler,
+  faDraftingCompass,
   faArrowRight,
   faCheckCircle,
   faReact,
