@@ -6,70 +6,70 @@ linkCardsSection:
         Skreddersydde web traders, børsportaler, fond- og aksjehandel og
         porteføljerapportering integrert med ditt back office-system
       header: Investorportal
-      isDark: false
-      linkText: Gå til Investorportal
       icon:
         desktop: /img/Icon-Portals-Gray.svg
         mobile: /img/Icon-Portals-White.svg
       id: investorportal
+      isDark: false
+      linkText: Gå til Investorportal
     - description: >-
         Sømløs integrasjon med minimalt arbeid. OMS Components er
         standardkomponenter som kan enkelt integreres i eksisterende
         nettportaler.
       header: OMS Components
-      isDark: false
-      linkText: Gå til OMS Components
       icon:
         desktop: /img/Icon-React-Gray.svg
         mobile: /img/Icon-React-White.svg
       id: omsComponents
+      isDark: false
+      linkText: Gå til OMS Components
     - description: >-
         Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
         data over REST og strømmende data over Websockets
       header: Feed/API
-      isDark: false
-      linkText: Gå til Feed/API
       icon:
         desktop: /img/Icon-Feed-Gray.svg
         mobile: /img/Icon-Feed-White.svg
       id: feedAPI
+      isDark: false
+      linkText: Gå til Feed/API
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         webmoduler fra OMS
       header: IR Webmoduler
-      isDark: false
-      linkText: Gå til IR Webmoduler
       icon:
         desktop: /img/Icon-IRModules-Gray.svg
         mobile: /img/Icon-IRModules-White.svg
       id: irModules
+      isDark: false
+      linkText: Gå til IR Webmoduler
     - description: Verdipapirmarkedets informasjonsportal.
       header: Arena
-      isDark: false
-      linkText: Gå til Arena
       icon:
         desktop: /img/Icon-Arena-Gray.svg
         mobile: /img/Icon-Arena-White.svg
       id: arena
+      isDark: false
+      linkText: Gå til Arena
   title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   id: investorportal
   marketData:
-    header: Markedsdata fra hele verden
     desktopImage: /img/market-desktop-no@2x.png
-    tabletImage: /img/market-desktop-no@2x.png
+    header: Markedsdata fra hele verden
     mobileImage: /img/market-mobile-no@2x.png
     overline: Børsportal
+    tabletImage: /img/market-desktop-no@2x.png
     text: >-
       En Børsportal gir leserne oversikt over verdens markeder. Indekser,
       råvarer og valuta står sentralt, så vel som dypere analyse av hver enkelt
       aksje.
   onlinePortfolio:
-    header: Komplett spareportal
     desktopImage: /img/fundportal-desktop-no@2x.png
-    tabletImage: /img/fundportal-desktop-no@2x.png
+    header: Komplett spareportal
     mobileImage: /img/fundportal-mobile-no@2x.png
     overline: Portefølje og fondshandel
+    tabletImage: /img/fundportal-desktop-no@2x.png
     text: >-
       Engasjer dine kunder og hjelp dem investere mer med en moderne webløsning.
       Integrert med systemer som Centevo plattformen, ProInvest (Tieto) eller
@@ -87,6 +87,8 @@ investorPortal:
   serviceIntegrations:
     header: Tredjepartsintegrasjoner
     integrationsLogos:
+      - logo: /img/Centevo@2x.png
+        name: Centevo
       - logo: /img/VPS@2x.png
         name: VPS
       - logo: /img/SSCAdvent@2x.png
@@ -95,15 +97,13 @@ investorPortal:
         name: ProInvest
       - logo: /img/ProBroker@2x.png
         name: ProBroker
-      - logo: /img/Centevo@2x.png
-        name: Centevo
     text: Vi liker godt å spille med andre
   trading:
-    header: Fra daytrading til  langsiktig sparing
     desktopImage: /img/webtrader-desktop-no@2x.png
-    tabletImage: /img/webtrader-desktop-no@2x.png
+    header: Fra daytrading til  langsiktig sparing
     mobileImage: /img/webtrader-mobile-no@2x.png
     overline: Aksjehandel
+    tabletImage: /img/webtrader-desktop-no@2x.png
     text: >-
       OMS skreddersyr en aksjehandelsløsning, som integreres sømløst i
       nettbanken eller andre påloggede sider og tilpasser etter behov. Vi
@@ -116,23 +116,23 @@ investorPortal:
       publiseringsmuligheter og full auditlogg
 standardProducts:
   arena:
-    id: arena
     buttonText: Kontakt oss
-    header: Arena
     desktopImage: /img/arena-desktop@2x.png
-    tabletImage: /img/arena-desktop@2x.png
+    header: Arena
+    id: arena
     mobileImage: /img/arena-mobile@2x.png
+    tabletImage: /img/arena-desktop@2x.png
     text: >-
       Arena er en informasjonsportal som tilbyr data på Oslo Børs, Oslo Axess
       and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
       aksjonærdata, og Corporta Actions Calendar for alle selskap på Oslo Børs.
   irModules:
-    id: irModules
     buttonText: Kontakt oss
-    header: IR Webmoduler
     desktopImage: /img/ir-desktop@2x.png
-    tabletImage: /img/ir-desktop@2x.png
+    header: IR Webmoduler
+    id: irModules
     mobileImage: /img/ir-mobile@2x.png
+    tabletImage: /img/ir-desktop@2x.png
     text: >-
       Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
       moduler fra OMS.
@@ -144,12 +144,12 @@ standardProducts:
       to. Kontakt oss for å se hvordan våre produkter kan hjelpe deg videre!
 services:
   feedAPI:
-    id: feedAPI
     buttonText: Kontakt oss
-    header: Feed/API
     desktopImage: /img/feed-desktop-no@2x.png
-    tabletImage: /img/feed-desktop-no@2x.png
+    header: Feed/API
+    id: feedAPI
     mobileImage: /img/feed-mobile-no@2x.png
+    tabletImage: /img/feed-desktop-no@2x.png
     text: >-
       Få tilgang til markedsdata fra hele verden med høy kvalitet, strømmende
       data leveres over Websockets mens statisk og historisk data levelers over
@@ -158,12 +158,12 @@ services:
       og forsinkede kurser, handle og ordre, historiske priser, CAer, utbytte,
       børsmeldinger, aksjonærlister med mer.
   omsComponents:
-    id: omsComponents
     buttonText: Kontakt oss
-    header: OMS Components
     desktopImage: /img/omscomponents-desktop-no@2x.png
-    tabletImage: /img/omscomponents-desktop-no@2x.png
+    header: OMS Components
+    id: omsComponents
     mobileImage: /img/omscomponents-mobile-no@2x.png
+    tabletImage: /img/omscomponents-desktop-no@2x.png
     text: >-
       OMS Components er standardkomponenter for presentasjon av streaming
       markedsdata. Komponentene er skrevet i React og moderne JavaScript og
@@ -178,3 +178,4 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
+
