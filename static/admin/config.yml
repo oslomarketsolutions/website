@@ -8,6 +8,7 @@ public_folder: /img
 collections:
   - name: "pages"
     label: "Pages"
+    delete: false
     files:
 
 ############### FOOTER ###############
