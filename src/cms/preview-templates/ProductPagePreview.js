@@ -11,7 +11,10 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       description: linkCard.get('description'),
       linkText: linkCard.get('linkText'),
       isDark: linkCard.get('isDark'),
-      icon: getAsset(linkCard.get('icon')),
+      icon: {
+        mobile: getAsset(linkCard.getIn(['icon', 'mobile'])),
+        desktop: getAsset(linkCard.getIn(['icon', 'desktop'])),
+      },
       id: linkCard.get('id'),
     }));
 

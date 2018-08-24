@@ -1,7 +1,7 @@
 @import '../../layouts/variables';
 
 .linkCard {
-  margin: 16px;
+  margin: $M;
   position: relative;
   background-color: $white;
   width: 358px;
@@ -127,9 +127,16 @@ div.dark {
 
 @media (max-width: 814px) {
   .linkCard {
+    margin: $XS;
+  }
+}
+
+@media (max-width: 768px) {
+  .linkCard {
     background-color: transparent;
     box-shadow: none;
     width: 246px;
+    margin: $M;
 
     .header {
       display: none;

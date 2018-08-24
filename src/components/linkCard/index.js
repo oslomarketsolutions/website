@@ -22,7 +22,7 @@ const LinkCard = ({
       <div className={styles.header}>
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>
-            <img src={icon} alt={header} />
+            <img src={icon.desktop} alt={header} />
           </div>
         </div>
         <h3>{header}</h3>
@@ -37,7 +37,7 @@ const LinkCard = ({
     >
       <div className={styles.iconWrapper}>
         <div className={styles.icon}>
-          <img src={icon} alt={header} />
+          <img src={icon.mobile} alt={header} />
         </div>
       </div>
       <h3 className="linkCardTitle">{header}</h3>
@@ -53,6 +53,9 @@ LinkCard.propTypes = {
   description: PropTypes.string,
   linkText: PropTypes.string,
   isDark: PropTypes.bool,
-  icon: PropTypes.string,
+  icon: PropTypes.shape({
+    mobile: PropTypes.string,
+    desktop: PropTypes.string,
+  }),
   onClickFunction: PropTypes.func,
 };

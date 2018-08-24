@@ -8,7 +8,9 @@ linkCardsSection:
       header: Investor portals
       isDark: false
       linkText: Go to Investor portals
-      icon: /img/Icon-Portals.svg
+      icon:
+        desktop: /img/Icon-Portals-Gray.svg
+        mobile: /img/Icon-Portals-White.svg
       id: investorportal
     - description: >-
         Seamless integration with least effort. OMS components are standard
@@ -16,7 +18,9 @@ linkCardsSection:
       header: OMS Components
       isDark: false
       linkText: Go to OMS Components
-      icon: /img/Icon-React.svg
+      icon:
+        desktop: /img/Icon-React-Gray.svg
+        mobile: /img/Icon-React-White.svg
       id: omsComponents
     - description: >-
         Full coverage of the financial markets. Market data portal with live,
@@ -24,7 +28,9 @@ linkCardsSection:
       header: Feed/API
       isDark: false
       linkText: Go to Feed/API
-      icon: /img/Icon-Feed.svg
+      icon:
+        desktop: /img/Icon-Feed-Gray.svg
+        mobile: /img/Icon-Feed-White.svg
       id: feedAPI
     - description: >-
         Showcase your share to existing and potential investors with flexible
@@ -32,7 +38,9 @@ linkCardsSection:
       header: IR Web Modules
       isDark: false
       linkText: Go to IR Web Modules
-      icon: /img/Icon-IRModules.svg
+      icon:
+        desktop: /img/Icon-IRModules-Gray.svg
+        mobile: /img/Icon-IRModules-White.svg
       id: irModules
     - description: >-
         The information portal for professionals within the Norwegian securities
@@ -40,7 +48,9 @@ linkCardsSection:
       header: Arena
       isDark: false
       linkText: Go to Arena
-      icon: /img/Icon-Arena.svg
+      icon:
+        desktop: /img/Icon-Arena-Gray.svg
+        mobile: /img/Icon-Arena-White.svg
       id: arena
   title: What we offer
 investorPortal:

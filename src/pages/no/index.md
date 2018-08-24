@@ -60,7 +60,7 @@ customization:
         - User Friendly
       header: Feed/API
       isDark: false
-      icon: /img/Icon-Feed.svg
+      icon: /img/Icon-Feed-Gray.svg
       buttonText: Lær mer
       id: feedAPI
     - description: >-
@@ -75,7 +75,7 @@ customization:
         - User Friendly
       header: OMS Components
       isDark: false
-      icon: /img/Icon-React.svg
+      icon: /img/Icon-React-Gray.svg
       buttonText: Lær mer
       id: omsComponents
     - description: 'En full portal, skreddersydd til ditt behov.'
@@ -88,7 +88,7 @@ customization:
         - User Friendly
       header: Driftede tjenester
       isDark: true
-      icon: /img/Icon-Managed.svg
+      icon: /img/Icon-Managed-Gray.svg
       buttonText: Lær mer
       id: investorportal
   header: Velg ditt nivå av skreddersøm
