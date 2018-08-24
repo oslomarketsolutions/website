@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: illustrations
+  branch: master
 
 media_folder: static/img
 public_folder: /img
@@ -590,4 +590,4 @@ collections:
         name: "navbar"
         label: "Navbar"
         fields:
-          - {label: "Number of job vacancies", name: "numberOfJobVacancies", widget: "string"}
+          - {label: "Number of job vacancies", name: "numberOfJobVacancies", widget: "string", default: " "}
