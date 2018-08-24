@@ -256,14 +256,14 @@ header.headerUnderline {
       height: 16px;
       margin-right: 16px;
       visibility: hidden;
-      transition: all 300ms linear;
+      transition: visibility 0 linear 200ms;
 
       .bar {
         position: absolute;
         width: 16px;
         height: 2px;
         background-color: $white;
-        transition: all 300ms ease;
+        transition: all 200ms ease;
       }
 
       .bar:first-of-type {

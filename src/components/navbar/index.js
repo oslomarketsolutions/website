@@ -291,6 +291,7 @@ export default class Navbar extends Component {
                         className={styles.close}
                         onClick={this.toggleCookieManager}
                       >
+                        <span className="sr-only">Close cookie manager</span>
                         <div className={styles.bar} />
                         <div className={styles.bar} />
                       </button>
