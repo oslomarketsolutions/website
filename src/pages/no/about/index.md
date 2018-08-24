@@ -38,7 +38,9 @@ employees:
       jobTitle: Salgssjef
       jobType: management
       title: Mikael Leckborn
-    - description: You're Gonna Need a Bigger Boat
+    - description: >-
+        Forvent det beste, planlegg for det verste, og forberede deg på å bli
+        forbløffet
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Prosjektleder
       jobType: management
