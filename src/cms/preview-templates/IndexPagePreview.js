@@ -32,7 +32,12 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     }));
 
   const integrationLogos = entry
-    .getIn(['data', 'customization', 'serviceIntegrations', 'integrationLogos'])
+    .getIn([
+      'data',
+      'customization',
+      'serviceIntegrations',
+      'integrationsLogos',
+    ])
     .map(integrationLogo => ({
       logo: getAsset(integrationLogo.get('logo')),
       name: integrationLogo.get('name'),
