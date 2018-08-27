@@ -78,14 +78,16 @@ customization:
       id: omsComponents
       isDark: false
     - buttonText: Lær mer
-      description: 'En full portal, skreddersydd til ditt behov'
+      description: >-
+        En full portal, skreddersydd til ditt behov enten det er aksjer, fond
+        eller annet.
       features:
-        - Real Time
-        - Flexible
-        - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
+        - Avansert handel
+        - H-Testing
+        - Bli kunde
+        - Centevo
+        - ProFamily
+        - Advent
       header: Driftede tjenester
       icon: /img/Icon-Managed-Gray.svg
       id: investorportal
