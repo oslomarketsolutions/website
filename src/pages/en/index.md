@@ -60,7 +60,7 @@ customization:
         - Plug n Play
         - Adj. factors
         - Worldwide data
-      header: Feed/API
+      header: Feed API
       isDark: false
       icon: /img/Icon-Feed-Gray.svg
       buttonText: Learn more

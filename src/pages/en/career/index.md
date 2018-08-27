@@ -19,7 +19,7 @@ about:
     company. We are a random bunch of people, white-collars, hoodies, skaters,
     metal heads, hip hoppers, Swedes, bicycle nerds and even a Dutch guy. If you
     are familiar with table tennis or foosball this is an advantage, but not
-    necessary. 
+    necessary.
 perks:
   header: What we offer
   perkCards:
@@ -38,7 +38,8 @@ perks:
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil
-    - perkTitle: Apartments
+    - icon: /img/Icon-Remote.svg
+      perkTitle: Apartments
       text: Located in Villefranche and Albir
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Social events
@@ -75,4 +76,3 @@ positions:
   iframeAltText: You need to have analytics enabled to view the positions
   text: Some text explaining something
 ---
-

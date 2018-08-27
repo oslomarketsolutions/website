@@ -39,11 +39,12 @@ perks:
       perkTitle: 'Frokost, lunsj og kaffe'
       text: >-
         I kantinen serveres det både frokost, lunsj og kaffe. I tillegg har vi
-        en hipster kaffemaskin på kontoret 
+        en hipster kaffemaskin på kontoret
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Firma hytter som kan leies i både Nesbyen og Trysil
-    - perkTitle: Ferieleiligheter
+    - icon: /img/Icon-Remote.svg
+      perkTitle: Ferieleiligheter
       text: Konsernet har 2 ferie leilighter i Villefranche og Albir
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Sosialt
@@ -74,7 +75,7 @@ perks:
       perkTitle: Tid til innovasjon
       text: >-
         Minst én dag i måneden vies til å gjøre hva du vil og prøve nye ting.
-        Her kan du mislykkes totalt, eller finn opp vårt nye backend system. 
+        Her kan du mislykkes totalt, eller finn opp vårt nye backend system.
     - icon: /img/Icon-Hardware.svg
       perkTitle: Hardware & software
       text: >-

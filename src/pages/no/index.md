@@ -58,7 +58,7 @@ customization:
         - Customized
         - ProBroker
         - User Friendly
-      header: Feed/API
+      header: Feed API
       isDark: false
       icon: /img/Icon-Feed-Gray.svg
       buttonText: Lær mer
