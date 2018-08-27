@@ -100,7 +100,7 @@
     .second {
       grid-column: 4 / span 2;
       grid-row: 1;
-      width: 272px;
+      width: 280px;
       align-self: end;
     }
 
@@ -184,6 +184,9 @@
       .imageContainer {
         width: 147%;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -220,9 +223,10 @@
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      220px max-content max-content max-content
-      120px;
+      max-content max-content max-content max-content
+      max-content;
     grid-column-gap: $gridColumnGap;
+    padding-top: 152px;
 
     h1 {
       grid-column: 2 / span 3;
@@ -250,6 +254,9 @@
       box-shadow: $newBoxShadow;
       border-radius: $M;
       margin-bottom: -24px;
+      img {
+        border-radius: $M;
+      }
     }
   }
 
@@ -261,10 +268,11 @@
     display: grid;
     grid-template-columns: $gridColumnTemplate;
     grid-template-rows:
-      220px max-content max-content max-content
-      120px;
+      max-content max-content max-content max-content
+      max-content;
     grid-column-gap: $gridColumnGap;
     background-color: $antiFlashWhite;
+    padding-top: 152px;
 
     h1 {
       grid-column: 7 / span 3;
@@ -294,6 +302,9 @@
       box-shadow: $newBoxShadow;
       border-radius: $M;
       margin-bottom: -24px;
+      img {
+        border-radius: $M;
+      }
     }
   }
 }
@@ -361,7 +372,6 @@
       h1 {
         grid-column: 3 / span 5;
         grid-row: 1;
-        margin-top: 100px;
       }
 
       h1 + p {
@@ -391,7 +401,7 @@
         width: 114px;
       }
       .second {
-        width: 224px;
+        width: 236px;
       }
       .third {
         width: 358px;
@@ -411,6 +421,11 @@
         padding-bottom: 120px;
       }
     }
+
+    .irModules,
+    .arena {
+      padding-top: 76px;
+    }
   }
 }
 
@@ -420,20 +435,27 @@
       grid-template-rows: max-content max-content auto;
 
       .first {
-        grid-column: 2 / span 4;
+        grid-column: 3 / span 3;
         grid-row: 1;
+        justify-self: flex-start;
+        -ms-grid-column-align: start;
+        margin: 0;
       }
 
       .second {
-        grid-column: 6 / span 4;
+        grid-column: 6 / span 3;
         grid-row: 1;
+        justify-self: flex-end;
+        -ms-grid-column-align: end;
+        margin: 0;
       }
 
       .third {
-        grid-column: 2 / span 8;
+        grid-column: 3 / span 6;
         grid-row: 2;
         margin: $XL auto;
         height: auto;
+        width: 100%;
       }
 
       .customerLogos {
@@ -495,12 +517,7 @@
       }
 
       .second {
-        grid-column: 5 / span 5;
         width: 168px;
-      }
-
-      .third {
-        width: 320px;
       }
 
       .customerLogos {
@@ -554,6 +571,24 @@
 
       .imageContainer {
         grid-column: $main;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .homePage {
+    .transition {
+      .first {
+        grid-column: 2 / span 3;
+      }
+
+      .second {
+        grid-column: 7 / span 3;
+      }
+
+      .third {
+        grid-column: 2 / span 8;
       }
     }
   }

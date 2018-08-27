@@ -33,7 +33,7 @@ transitionalElement:
     companiesNumber: '150'
     companiesText: Kunder
     text: Noen av selskapene som bruker tjenester fra Oslo Market Solutions
-    usersNumber: '0,5 mill.'
+    usersNumber: '500 000'
     usersText: Daglige brukere
   socialMediaText: Følg oss
 investorPortal:
@@ -134,4 +134,3 @@ otherProducts:
       Løpende oppdatert aksjekurs og aksjonærlister some sømløst integreres i
       selskapets eksisterende nettsider
 ---
-

@@ -26,13 +26,13 @@ linkCardsSection:
     - description: >-
         Med markedsdata fra hele verden gir vårt API deg tilgang til statisk
         data over REST og strømmende data over Websockets
-      header: Feed/API
+      header: Feed API
       icon:
         desktop: /img/Icon-Feed-Gray.svg
         mobile: /img/Icon-Feed-White.svg
       id: feedAPI
       isDark: false
-      linkText: Gå til Feed/API
+      linkText: Gå til Feed API
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         webmoduler fra OMS
@@ -148,7 +148,7 @@ services:
   feedAPI:
     buttonText: Kontakt oss
     desktopImage: /img/feed-desktop-no@2x.png
-    header: Feed/API
+    header: Feed API
     id: feedAPI
     mobileImage: /img/feed-mobile-no@2x.png
     tabletImage: /img/feed-desktop-no@2x.png
@@ -180,4 +180,3 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
-

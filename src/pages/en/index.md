@@ -5,35 +5,35 @@ hero:
   title: Financial platforms for the modern web
 transitionalElement:
   customerLogos:
-    - logo: /img/Handelsbanken@2x.png
-      name: Handelsbanken
-    - logo: /img/E24@2x.png
-      name: E24
     - logo: /img/OsloBørs@2x.png
       name: Oslo Børs
-    - logo: /img/Sparebank 1@2x.png
-      name: SpareBank 1
-    - logo: /img/Catella@2x.png
-      name: Catella
-    - logo: /img/Arctic Fund Management@2x.png
-      name: Artic Fund Management
+    - logo: /img/Handelsbanken@2x.png
+      name: Handelsbanken
+    - logo: /img/DN@2x.png
+      name: DN
     - logo: /img/Sbanken@2x.png
       name: Sbanken
+    - logo: /img/Arctic Fund Management@2x.png
+      name: Artic Fund Management
+    - logo: /img/Sparebank 1@2x.png
+      name: SpareBank 1
+    - logo: /img/E24@2x.png
+      name: E24
+    - logo: /img/Catella@2x.png
+      name: Catella
+    - logo: /img/First Fondene@2x.png
+      name: First Fondene
     - logo: /img/Norne@2x.png
       name: Norne
     - logo: /img/FishPool@2x.png
       name: Fishpool
-    - logo: /img/First Fondene@2x.png
-      name: First Fondene
-    - logo: /img/DN@2x.png
-      name: DN
     - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
   numbersAndText:
     companiesNumber: '150'
     companiesText: Companies
     text: Here are some of the companies using services from Oslo Market Solutions
-    usersNumber: '0,5 mill.'
+    usersNumber: '500 000'
     usersText: Users served daily
   socialMediaText: Follow us
 investorPortal:
@@ -61,7 +61,7 @@ customization:
         - Plug n Play
         - Adj. factors
         - Worldwide data
-      header: Feed/API
+      header: Feed API
       icon: /img/Icon-Feed-Gray.svg
       id: feedAPI
       isDark: false
@@ -136,4 +136,3 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
-

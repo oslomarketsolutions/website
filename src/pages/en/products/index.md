@@ -25,7 +25,7 @@ linkCardsSection:
     - description: >-
         Full coverage of the financial markets. Market data portal with live,
         streaming data and smart links to content.
-      header: Feed/API
+      header: Feed API
       icon:
         desktop: /img/Icon-Feed-Gray.svg
         mobile: /img/Icon-Feed-White.svg
@@ -154,8 +154,8 @@ standardProducts:
 services:
   feedAPI:
     buttonText: Contact us
+    header: Feed API
     desktopImage: /img/feed-desktop-en@2x.png
-    header: Feed/API
     id: feedAPI
     mobileImage: /img/feed-mobile-en@2x.png
     tabletImage: /img/feed-desktop-en@2x.png
@@ -188,4 +188,3 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
-

@@ -85,6 +85,9 @@
         align-self: start;
         margin: 0 $M 0 $M;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -128,6 +131,9 @@
         align-self: start;
         margin: 0 $M 0 $M;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -169,6 +175,9 @@
         align-self: start;
         margin: 0 $M 0 $M;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -226,6 +235,9 @@
         margin: 0 20px 0 -8px;
         box-shadow: $newBoxShadow;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -267,6 +279,9 @@
         margin: 0 -8px 0 20px;
         box-shadow: $newBoxShadow;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
   }
@@ -317,6 +332,9 @@
         align-self: center;
         margin: 0 $M 0 $M;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -355,6 +373,9 @@
         -ms-grid-column-align: end;
         margin: 0 $M 0 $M;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
   }
@@ -486,7 +507,7 @@
   .productPage {
     .linkCardsSection {
       .linkCards {
-        width: 748px;
+        width: 684px;
       }
     }
   }

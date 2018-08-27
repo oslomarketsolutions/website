@@ -2,7 +2,7 @@
 
 .employeeCard {
   background-color: $white;
-  border-radius: 15px;
+  border-radius: $S;
   display: grid;
   grid-template-columns: 100px 192px;
   grid-template-rows: 50% 50%;
@@ -12,24 +12,16 @@
   padding: 25px;
   margin: 16px;
   transition: 0.3s;
+  -webkit-transform: translateZ(0);
 
   &:hover {
     transform: scale(1.08);
     .imageAndIconContainer {
       .imageContainer {
         img {
-          animation: fadeFromGray 0.5s forwards;
+          filter: grayscale(0%);
         }
       }
-    }
-  }
-
-  @keyframes fadeFromGray {
-    from {
-      filter: grayscale(100%);
-    }
-    to {
-      filter: grayscale(0%);
     }
   }
 
@@ -65,8 +57,8 @@
       height: 100px;
 
       img {
+        border-radius: 50%;
         filter: grayscale(100%);
-        animation-play-state: paused;
       }
     }
   }
