@@ -1,7 +1,7 @@
 ---
 hero:
   buttonText: Contact us
-  subtitle: 'Web services for stock and fund trading, market data and more'
+  subtitle: Advanced features - simple set up
   title: Financial platforms for the modern web
 transitionalElement:
   customerLogos:
