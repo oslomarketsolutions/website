@@ -6,22 +6,22 @@ linkCardsSection:
         Fully managed web traders, stock market portals, fund info and portfolio
         reports customized and integrated with your back office systems.
       header: Investor portals
-      isDark: false
-      linkText: Go to Investor portals
       icon:
         desktop: /img/Icon-Portals-Gray.svg
         mobile: /img/Icon-Portals-White.svg
       id: investorportal
+      isDark: false
+      linkText: Go to Investor portals
     - description: >-
         Seamless integration with least effort. OMS components are standard
         components that can easily be integrated into existing web portals.
       header: OMS Components
-      isDark: false
-      linkText: Go to OMS Components
       icon:
         desktop: /img/Icon-React-Gray.svg
         mobile: /img/Icon-React-White.svg
       id: omsComponents
+      isDark: false
+      linkText: Go to OMS Components
     - description: >-
         Full coverage of the financial markets. Market data portal with live,
         streaming data and smart links to content.
@@ -32,35 +32,37 @@ linkCardsSection:
         desktop: /img/Icon-Feed-Gray.svg
         mobile: /img/Icon-Feed-White.svg
       id: feedAPI
+      isDark: false
+      linkText: Go to Feed/API
     - description: >-
         Showcase your share to existing and potential investors with flexible
         web modules from OMS. From simple quotes to advanced charting tools.
       header: IR Web Modules
-      isDark: false
-      linkText: Go to IR Web Modules
       icon:
         desktop: /img/Icon-IRModules-Gray.svg
         mobile: /img/Icon-IRModules-White.svg
       id: irModules
+      isDark: false
+      linkText: Go to IR Web Modules
     - description: >-
         The information portal for professionals within the Norwegian securities
         market
       header: Arena
-      isDark: false
-      linkText: Go to Arena
       icon:
         desktop: /img/Icon-Arena-Gray.svg
         mobile: /img/Icon-Arena-White.svg
       id: arena
+      isDark: false
+      linkText: Go to Arena
   title: What we offer
 investorPortal:
   id: investorportal
   marketData:
-    header: Boost your media content with live stock data
     desktopImage: /img/market-desktop-en@2x.png
-    tabletImage: /img/market-desktop-en@2x.png
+    header: Boost your media content with live stock data
     mobileImage: /img/market-mobile-en@2x.png
     overline: Market data Portal
+    tabletImage: /img/market-desktop-en@2x.png
     text: >
       Full coverage of the financial market with live, streaming data. Create a
       live media site by integrating our flexible web modules in your articles.
@@ -69,11 +71,11 @@ investorPortal:
       US, Canada and Asia, as well as worldwide indices, currencies, commodities
       and more.
   onlinePortfolio:
-    header: 'A complete savings portal '
     desktopImage: /img/fundportal-desktop-en@2x.png
-    tabletImage: /img/fundportal-desktop-en@2x.png
+    header: 'A complete savings portal '
     mobileImage: /img/fundportal-mobile-en@2x.png
     overline: 'Funds and portfolio reporting '
+    tabletImage: /img/fundportal-desktop-en@2x.png
     text: >-
       Engage your customers and help them invest more with a modern web
       solution. Integrated with the Centevo platform, ProInvest from Tieto or
@@ -105,11 +107,11 @@ investorPortal:
         name: Centevo
     text: We play well with others
   trading:
-    header: Stock trading in GDPR  and MiFID II-compliant client portals
     desktopImage: /img/webtrader-desktop-en@2x.png
-    tabletImage: /img/webtrader-desktop-en@2x.png
+    header: Stock trading in GDPR  and MiFID II-compliant client portals
     mobileImage: /img/webtrader-mobile-en@2x.png
     overline: Web Trader
+    tabletImage: /img/webtrader-desktop-en@2x.png
     text: >
       Empower your investors with a web trader providing real-time streaming
       data to the browser. Full order depth, international data, suitability
@@ -122,26 +124,29 @@ investorPortal:
       and support functions.
 standardProducts:
   arena:
-    id: arena
     buttonText: Contact us
-    header: Arena
     desktopImage: /img/arena-desktop@2x.png
-    tabletImage: /img/arena-desktop@2x.png
+    header: Arena
+    id: arena
     mobileImage: /img/arena-mobile@2x.png
+    tabletImage: /img/arena-desktop@2x.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
   irModules:
-    id: irModules
     buttonText: Contact us
-    header: IR Web Modules
     desktopImage: /img/ir-desktop@2x.png
-    tabletImage: /img/ir-desktop@2x.png
+    header: IR Web Modules
+    id: irModules
     mobileImage: /img/ir-mobile@2x.png
-    text: >
-      Showcase your share to existing and potential investors with flexible web
-      modules from OMS. From simple quotes to advanced charting tools.
+    tabletImage: /img/ir-desktop@2x.png
+    text: >-
+      IR Web Modules provide constantly updated information about a company’s
+      share price and ownership structure. The modules can display the full
+      range of stock exchange information: current share price, the order book,
+      financial calendar, dividends, stock exchange announcements, press
+      releases and the latest trades.
   sectionHeader:
     header: Standard Products
     subHeader: Get started today with our subscription based products
@@ -150,12 +155,16 @@ standardProducts:
       two. Contact us to see how our products can help lift your business.
 services:
   feedAPI:
-    id: feedAPI
     buttonText: Contact us
+<<<<<<< HEAD
     header: Feed API
+=======
+>>>>>>> master
     desktopImage: /img/feed-desktop-en@2x.png
-    tabletImage: /img/feed-desktop-en@2x.png
+    header: Feed/API
+    id: feedAPI
     mobileImage: /img/feed-mobile-en@2x.png
+    tabletImage: /img/feed-desktop-en@2x.png
     text: >-
       Access global market data with high quality REST-APIs. OMS deliver web
       sockets for streaming data and APIs for static and delayed data. The feed
@@ -166,12 +175,12 @@ services:
       shareholder information and more from several different exchanges
       globally.
   omsComponents:
-    id: omsComponents
     buttonText: Contact us
-    header: OMS Components
     desktopImage: /img/omscomponents-desktop-en@2x.png
-    tabletImage: /img/omscomponents-desktop-en@2x.png
+    header: OMS Components
+    id: omsComponents
     mobileImage: /img/omscomponents-mobile-en@2x.png
+    tabletImage: /img/omscomponents-desktop-en@2x.png
     text: >-
       OMS components are standard components for presenting streaming market
       data. The components are written in React and modern JavaScript and are
