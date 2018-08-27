@@ -184,6 +184,9 @@
       .imageContainer {
         width: 147%;
         border-radius: $M;
+        img {
+          border-radius: $M;
+        }
       }
     }
 
@@ -250,6 +253,9 @@
       box-shadow: $newBoxShadow;
       border-radius: $M;
       margin-bottom: -24px;
+      img {
+        border-radius: $M;
+      }
     }
   }
 
@@ -294,6 +300,9 @@
       box-shadow: $newBoxShadow;
       border-radius: $M;
       margin-bottom: -24px;
+      img {
+        border-radius: $M;
+      }
     }
   }
 }
