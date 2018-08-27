@@ -52,7 +52,7 @@ employees:
       title: Andreas Holen
     - description: Problemløser med forkjærlighet for David Lynch
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
-      jobTitle: Support
+      jobTitle: Supportansvarlig
       jobType: support
       title: Inga Wiik-Önnesjö
     - description: >-
