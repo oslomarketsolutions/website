@@ -134,8 +134,10 @@ standardProducts:
     mobileImage: /img/ir-mobile@2x.png
     tabletImage: /img/ir-desktop@2x.png
     text: >-
-      Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
-      moduler fra OMS.
+      IR Web Modules gir oppdatert informasjon om selskapets aksjekurs og
+      eierstruktur. Modulene kan vise hele spekteret av børsinformasjon f.eks.
+      nåværende aksjekurs, ordrebok, finanskalender, utbytte, børsmeldinger,
+      pressemeldinger og de nyeste handler.
   sectionHeader:
     header: Standardprodukter
     subHeader: Kom raskt i gang med våre abonnementsløsninger
