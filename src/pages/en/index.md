@@ -98,6 +98,8 @@ customization:
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
+      - logo: /img/Integration-5@2x.png
+        name: Centevo
       - logo: /img/Integration-1@2x.png
         name: VPS
       - logo: /img/Integration-2@2x.png
@@ -106,8 +108,6 @@ customization:
         name: ProInvest
       - logo: /img/Integration-4@2x.png
         name: ProBroker
-      - logo: /img/Integration-5@2x.png
-        name: Centevo
     text: We play well with others
   text: >-
     Whether you want a fully hosted and managed service, to build your own
