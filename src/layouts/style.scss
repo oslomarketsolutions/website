@@ -177,6 +177,13 @@ html {
     line-height: 1.5rem;
     letter-spacing: 0.75px;
   }
+  .notification {
+    font-family: 'Muli', 'sans-serif';
+    font-weight: $regular;
+    font-size: 0.6875rem;
+    // line-height: 1.25rem;
+    // letter-spacing: 0.6px;
+  }
   ///////////////////////front page transiton big numbers/////////////////////////////////
   .temp {
     letter-spacing: -0.2px;
@@ -192,6 +199,11 @@ html {
       font-size: 0.75rem;
       line-height: 1rem;
       letter-spacing: 0.56px;
+    }
+    .notification {
+      font-size: 0.5rem;
+      // line-height: 1rem;
+      // letter-spacing: 0.2px;
     }
   }
 }

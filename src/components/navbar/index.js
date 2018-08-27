@@ -55,8 +55,8 @@ export default class Navbar extends Component {
   handleScroll() {
     if (document != null) {
       if (
-        document.body.scrollTop !== 0 ||
-        document.documentElement.scrollTop !== 0
+        document.body.scrollTop > 0 ||
+        document.documentElement.scrollTop > 0
       ) {
         this.setState({
           headerUnderline: true,
@@ -225,7 +225,9 @@ export default class Navbar extends Component {
                   onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'Careers' : 'Jobb'}
-                  <span>{data.numberOfJobVacancies}</span>
+                  <div className={styles.notification}>
+                    <p className="notification">{data.numberOfJobVacancies}</p>
+                  </div>
                 </Link>
               </li>
               <li className={classNames(styles.noPaddingRight, styles.aboutUs)}>
