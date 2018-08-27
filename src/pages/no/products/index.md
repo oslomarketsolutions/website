@@ -135,7 +135,7 @@ standardProducts:
     tabletImage: /img/ir-desktop@2x.png
     text: >-
       IR Web Modules gir oppdatert informasjon om selskapets aksjekurs og
-      eierstruktur. Modulene kan vise hele spekteret av børsinformasjon:
+      eierstruktur. Modulene kan vise hele spekteret av børsinformasjon f.eks.
       nåværende aksjekurs, ordrebok, finanskalender, utbytte, børsmeldinger,
       pressemeldinger og de nyeste handler.
   sectionHeader:
