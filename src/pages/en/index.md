@@ -33,7 +33,7 @@ transitionalElement:
     companiesNumber: '150'
     companiesText: Companies
     text: Here are some of the companies using services from Oslo Market Solutions
-    usersNumber: '500 000'
+    usersNumber: 500 000
     usersText: Users served daily
   socialMediaText: Follow us
 investorPortal:
@@ -58,7 +58,7 @@ customization:
         - Real Time
         - Flexible
         - Rapid
-        - Plug n Play
+        - Plug and Play
         - Adj. factors
         - Worldwide data
       header: Feed API
@@ -136,3 +136,4 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
+
