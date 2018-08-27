@@ -95,16 +95,16 @@ customization:
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
-      - logo: /img/Integration-1@2x.png
-        name: VPS
-      - logo: /img/Integration-2@2x.png
-        name: Advent
-      - logo: /img/Integration-3@2x.png
-        name: ProInvest
-      - logo: /img/Integration-4@2x.png
-        name: ProBroker
       - logo: /img/Integration-5@2x.png
         name: Centevo
+      - logo: /img/Integration-1@2x.png
+        name: VPS
+      - logo: /img/Integration-4@2x.png
+        name: ProBroker
+      - logo: /img/Integration-3@2x.png
+        name: ProInvest
+      - logo: /img/Integration-2@2x.png
+        name: Advent
     text: We play well with others
   text: >-
     Enten du trenger en driftet tjeneste, mer fleksibilitet med vårt
