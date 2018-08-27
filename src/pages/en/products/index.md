@@ -142,8 +142,8 @@ standardProducts:
     text: >-
       IR Web Modules provide constantly updated information about a company’s
       share price and ownership structure. The modules can display the full
-      range of stock exchange information: current share price, the order book,
-      financial calendar, dividends, stock exchange announcements, press
+      range of stock exchange information i.e. current share price, the order
+      book, financial calendar, dividends, stock exchange announcements, press
       releases and the latest trades.
   sectionHeader:
     header: Standard Products
