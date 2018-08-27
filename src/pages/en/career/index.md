@@ -34,7 +34,7 @@ perks:
       text: As an employee we pay your phone bill
     - icon: /img/Icon-Lunch.svg
       perkTitle: 'Breakfast, Lunch & Coffee'
-      text: Our cafeteria serves both lunch and breakfast
+      text: Our cafeteria serves both breakfast and lunch
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil
@@ -76,3 +76,4 @@ positions:
   iframeAltText: You need to have analytics enabled to view the positions
   text: Some text explaining something
 ---
+
