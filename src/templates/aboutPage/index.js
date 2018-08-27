@@ -76,7 +76,7 @@ export const AboutPageTemplate = ({
                   ];
                 return (
                   <div key={quote.text} className={styles.quoteWrapper}>
-                    <h2>{quote.text}</h2>
+                    <h2 className="quote">{quote.text}</h2>
                     <p>{quote.author}</p>
                   </div>
                 );

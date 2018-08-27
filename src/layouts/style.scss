@@ -193,22 +193,13 @@ html {
   // end Typography
 }
 
-@media (max-width: 767px) {
-  html {
-    .navLinks {
-      font-size: 0.75rem;
-      line-height: 1rem;
-      letter-spacing: 0.56px;
-    }
-    .notification {
-      font-size: 0.5rem;
-      // line-height: 1rem;
-      // letter-spacing: 0.2px;
-    }
+@media (max-width: 1172px) {
+  h2.quote {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
   }
 }
 
-//MIGHT HAVE TO CHANGE THIS MAX-WIDTH
 @media (max-width: 1024px) {
   html {
     // Typography
@@ -267,6 +258,19 @@ html {
       font-size: 3.25rem;
     }
     // end Typography
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    .navLinks {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.56px;
+    }
+    .notification {
+      font-size: 0.5rem;
+    }
   }
 }
 
