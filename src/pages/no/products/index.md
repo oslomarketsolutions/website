@@ -32,7 +32,7 @@ linkCardsSection:
         mobile: /img/Icon-Feed-White.svg
       id: feedAPI
       isDark: false
-      linkText: Gå til Feed/API
+      linkText: Gå til Feed API
     - description: >-
         Fremhev Investor Relations-sidene ved å vise frem selskapets aksje med
         webmoduler fra OMS

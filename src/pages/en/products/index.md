@@ -27,7 +27,7 @@ linkCardsSection:
         streaming data and smart links to content.
       header: Feed API
       isDark: false
-      linkText: Go to Feed/API
+      linkText: Go to Feed API
       icon:
         desktop: /img/Icon-Feed-Gray.svg
         mobile: /img/Icon-Feed-White.svg
