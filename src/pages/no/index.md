@@ -65,15 +65,14 @@ customization:
       isDark: false
     - buttonText: Lær mer
       description: >-
-        A full coverage of the financial markets with a market data portal with
-        live, streaming data
+        Standardkomponenter  i React og moderne JavaScript, bygget for å være
+        enkle å integrere i eksisterende løsninger
       features:
-        - Real Time
-        - Flexible
-        - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
+        - Rangeringer
+        - Orderdybde
+        - Heat maps
+        - Avansert graf
+        - Global data
       header: OMS Components
       icon: /img/Icon-React-Gray.svg
       id: omsComponents
