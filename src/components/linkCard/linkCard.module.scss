@@ -46,8 +46,8 @@
   }
 
   p {
-    height: 75px;
-    margin: $L 0 60px 0;
+    height: 104px;
+    margin: $L 0 $XL 0;
   }
 
   ul {
@@ -127,7 +127,11 @@ div.dark {
 
 @media (max-width: 814px) {
   .linkCard {
-    margin: $XS;
+    width: 310px;
+
+    p {
+      height: 120px;
+    }
   }
 }
 
