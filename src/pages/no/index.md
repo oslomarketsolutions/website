@@ -1,8 +1,8 @@
 ---
 hero:
   buttonText: Kontakt oss
-  subtitle: Keeping investors informed and empowered
-  title: Investorplatform og børsportaler for moderne web
+  subtitle: Enkelt oppsett - avansert funksjonalitet
+  title: Investorverktøy og børsportaler
 transitionalElement:
   customerLogos:
     - logo: /img/Arctic Fund Management@2x.png
