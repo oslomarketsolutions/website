@@ -52,7 +52,7 @@ employees:
       title: Andreas Holen
     - description: Problemløser med forkjærlighet for David Lynch
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
-      jobTitle: Support
+      jobTitle: Supportansvarlig
       jobType: support
       title: Inga Wiik-Önnesjö
     - description: >-
@@ -77,7 +77,7 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Haakon Winther
-    - description: "\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB\U0001F468\U0001F3FB‍\U0001F4BB"
+    - description: Det er riktig at jeg ble født i 1991. Rommet ved siden av var 1990.
       image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontendutvikler
       jobType: frontEnd
@@ -133,11 +133,11 @@ employees:
       title: Åsmund Staldvik
   header: Hvem er vi
   quotes:
-    - author: Kommentar fra medarbeiderundersøkelse
+    - author: '- Medarbeiderundersøkelse 2018'
       text: >
         Alle er villige til å hjelpe hverandre, samarbeide og heve kompetansen
         til seg selv og alle andre rundt seg
-    - author: Kommentar fra medarbeiderundersøkelse
+    - author: '- Medarbeiderundersøkelse 2018'
       text: >
         Jeg liker nærheten til kundene og å få jobbe med avansert teknologi for
         å løse deres problemer
