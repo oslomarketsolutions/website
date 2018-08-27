@@ -145,9 +145,6 @@ standardProducts:
       range of stock exchange information: current share price, the order book,
       financial calendar, dividends, stock exchange announcements, press
       releases and the latest trades.
-
-
-      The information can be integrated seamlessly into an existing website. 
   sectionHeader:
     header: Standard Products
     subHeader: Get started today with our subscription based products
