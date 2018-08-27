@@ -74,6 +74,6 @@ positions:
   buttonText: Enable
   header: Job vacancies
   iframeAltText: You need to have analytics enabled to view the positions
-  text: Some text explaining something
+  text: 'Please apply here, or send us an open application!'
 ---
 
