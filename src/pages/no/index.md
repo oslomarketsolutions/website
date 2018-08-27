@@ -5,28 +5,28 @@ hero:
   title: Investorverktøy og børsportaler
 transitionalElement:
   customerLogos:
-    - logo: /img/Arctic Fund Management@2x.png
-      name: Artic Fund Management
-    - logo: /img/First Fondene@2x.png
-      name: First Fondene
-    - logo: /img/Handelsbanken@2x.png
-      name: Handelsbanken
-    - logo: /img/Sbanken@2x.png
-      name: Sbanken
-    - logo: /img/Sparebank 1@2x.png
-      name: SpareBank 1
-    - logo: /img/SpareBanken Møre@2x.png
-      name: SpareBankMøre
     - logo: /img/OsloBørs@2x.png
       name: Oslo Børs
+    - logo: /img/Handelsbanken@2x.png
+      name: Handelsbanken
+    - logo: /img/DN@2x.png
+      name: DN
+    - logo: /img/E24@2x.png
+      name: E24
+    - logo: /img/Sbanken@2x.png
+      name: Sbanken
+    - logo: /img/Arctic Fund Management@2x.png
+      name: Artic Fund Management
+    - logo: /img/Sparebank 1@2x.png
+      name: SpareBank 1
+    - logo: /img/First Fondene@2x.png
+      name: First Fondene
+    - logo: /img/SpareBanken Møre@2x.png
+      name: SpareBankMøre
     - logo: /img/Norne@2x.png
       name: Norne
     - logo: /img/FishPool@2x.png
       name: Fishpool
-    - logo: /img/E24@2x.png
-      name: E24
-    - logo: /img/DN@2x.png
-      name: DN
     - logo: /img/Catella@2x.png
       name: Catella
   numbersAndText:
