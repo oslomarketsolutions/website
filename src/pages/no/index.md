@@ -37,20 +37,21 @@ transitionalElement:
     usersText: Daglige brukere
   socialMediaText: Følg oss
 investorPortal:
-  id: investorportal
-  header: Investorportal
+  buttonText: Lær mer
   desktopImage: /img/portals-desktop-no@2x.png
-  tabletImage: /img/portals-tablet-no@2x.png
+  header: Investorportal
+  id: investorportal
   mobileImage: /img/portals-mobile-no@2x.png
+  tabletImage: /img/portals-tablet-no@2x.png
   text: >-
     OMS hjelper deg med løsninger for fond- og aksjehandel, fondsrapportering,
-    spareplattformer og børsportaler med markedsdata fra hele verden.
-  buttonText: Lær mer
+    spareplattformer og børsportaler med markedsdata fra hele verden
 customization:
   cards:
-    - description: >-
+    - buttonText: Lær mer
+      description: >-
         Markedsdata fra hele verden med strømmende data over Websockets og
-        statisk data over REST.
+        statisk data over REST
       features:
         - Real Time
         - Flexible
@@ -59,11 +60,11 @@ customization:
         - ProBroker
         - User Friendly
       header: Feed/API
-      isDark: false
       icon: /img/Icon-Feed-Gray.svg
-      buttonText: Lær mer
       id: feedAPI
-    - description: >-
+      isDark: false
+    - buttonText: Lær mer
+      description: >-
         A full coverage of the financial markets with a market data portal with
         live, streaming data
       features:
@@ -74,11 +75,11 @@ customization:
         - ProBroker
         - User Friendly
       header: OMS Components
-      isDark: false
       icon: /img/Icon-React-Gray.svg
-      buttonText: Lær mer
       id: omsComponents
-    - description: 'En full portal, skreddersydd til ditt behov.'
+      isDark: false
+    - buttonText: Lær mer
+      description: 'En full portal, skreddersydd til ditt behov'
       features:
         - Real Time
         - Flexible
@@ -87,10 +88,9 @@ customization:
         - ProBroker
         - User Friendly
       header: Driftede tjenester
-      isDark: true
       icon: /img/Icon-Managed-Gray.svg
-      buttonText: Lær mer
       id: investorportal
+      isDark: true
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
     header: Service integrations
@@ -109,28 +109,29 @@ customization:
   text: >-
     Enten du trenger en driftet tjeneste, mer fleksibilitet med vårt
     komponentbibliotek  eller å bygge din egen løsning kun basert på data fra
-    våre APIer, har vi det du trenger for å komme i gang.
+    våre APIer, har vi det du trenger for å komme i gang
 otherProducts:
   arena:
-    id: arena
     buttonText: Lær mer
-    header: Arena
     desktopImage: /img/arena-desktop@2x.png
-    tabletImage: /img/arena-desktop@2x.png
+    header: Arena
+    id: arena
     mobileImage: /img/arena-mobile@2x.png
+    tabletImage: /img/arena-desktop@2x.png
     text: >-
       Arena provides information on securities listed on Oslo Børs, Oslo Axess
       and N-OTC. There are currently two information products available in
       Arena: Top Shareholders and Corporate Actions Calendar.
   irModules:
-    id: irModules
     buttonText: Lær mer
-    header: IR Webmoduler
     desktopImage: /img/ir-desktop@2x.png
-    tabletImage: /img/ir-desktop@2x.png
+    header: IR Webmoduler
+    id: irModules
     mobileImage: /img/ir-mobile@2x.png
+    tabletImage: /img/ir-desktop@2x.png
     text: >-
       Whether you want a fully hosted and managed web trader, fund savings
       platform, portfolio reporting or market data information, OMS can help you
       get there.
 ---
+
