@@ -130,8 +130,7 @@ otherProducts:
     mobileImage: /img/ir-mobile@2x.png
     tabletImage: /img/ir-desktop@2x.png
     text: >-
-      Whether you want a fully hosted and managed web trader, fund savings
-      platform, portfolio reporting or market data information, OMS can help you
-      get there.
+      Løpende oppdatert aksjekurs og aksjonærlister some sømløst integreres i
+      selskapets eksisterende nettsider
 ---
 
