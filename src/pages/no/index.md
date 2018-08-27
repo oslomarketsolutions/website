@@ -53,13 +53,13 @@ customization:
         Markedsdata fra hele verden med strømmende data over Websockets og
         statisk data over REST
       features:
-        - Real Time
-        - Flexible
-        - Rapid
-        - Customized
-        - ProBroker
-        - User Friendly
-      header: Feed/API
+        - Sanntid
+        - Fleksibel
+        - Globalt datasett
+        - REST
+        - WebSockets
+        - Corporate action
+      header: Feed API
       icon: /img/Icon-Feed-Gray.svg
       id: feedAPI
       isDark: false
