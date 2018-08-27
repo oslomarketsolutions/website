@@ -40,9 +40,9 @@ employees:
       jobTitle: Project Manager
       jobType: management
       title: Christian Blütecher
-    - description: 'Bor på Nesodden, hardeste ghettoen i landet.'
+    - description: Problem solver with a predilection for David Lynch.
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
-      jobTitle: Support
+      jobTitle: Support Manager
       jobType: support
       title: Inga Wiik-Önnesjö
     - description: 'DevOps, automation, and security enthusiast'
