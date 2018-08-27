@@ -119,9 +119,9 @@ otherProducts:
     mobileImage: /img/arena-mobile@2x.png
     tabletImage: /img/arena-desktop@2x.png
     text: >-
-      Arena provides information on securities listed on Oslo Børs, Oslo Axess
-      and N-OTC. There are currently two information products available in
-      Arena: Top Shareholders and Corporate Actions Calendar.
+      Arena er en bransjeportal som leverer informasjon om verdipapir notert på
+      Oslo Børs, Oslo Axess og A-listen på OTC. De to tilgjengelige produktene i
+      Arena er Top Shareholders og Corporate Actions Calendar
   irModules:
     buttonText: Lær mer
     desktopImage: /img/ir-desktop@2x.png
