@@ -1,8 +1,8 @@
 ---
 templateKey: careerPage
 hero:
-  backgroundImage: /img/m6mrayqq.jpeg
-  backgroundImageAlt: Bilde av ansatt på kontoret
+  backgroundImage: /img/tp5_lwog.jpeg
+  backgroundImageAlt: To ansatte som sammarbeider
   text:
     'Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
     ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
