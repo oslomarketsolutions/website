@@ -40,3 +40,10 @@
     width: 180px;
   }
 }
+
+@media (max-width: 374px) {
+  .bigButton {
+    height: 40px;
+    width: 145px;
+  }
+}
