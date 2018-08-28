@@ -28,12 +28,12 @@
       transform: translate3d(0, 0, 0);
       text-align: center;
       opacity: 1;
-      max-height: 100%;
-      margin: -65px auto 0;
+      // max-height: 100%;
+      margin: -102px auto 0;
 
       svg {
         width: 155% !important;
-        margin-left: -27.5%;
+        margin-left: -30.5%;
       }
     }
 
@@ -336,10 +336,10 @@
   .homePage {
     .animation {
       .animationContainer {
-        margin-top: -161px;
+        margin-top: -178px;
         svg {
-          margin-left: -16.5%;
-          width: 148% !important;
+          margin-left: -19%;
+          width: 141% !important;
         }
       }
     }
@@ -478,7 +478,7 @@
         margin: 0 auto;
 
         svg {
-          margin-left: -30.5%;
+          margin-left: -25%;
         }
       }
     }
@@ -568,6 +568,7 @@
         margin: 33% auto 0;
         svg {
           width: 155% !important;
+          margin-left: -31%;
         }
       }
     }
