@@ -1,9 +1,13 @@
 ---
 templateKey: careerPage
 hero:
-  backgroundImage: /img/standup.png
-  backgroundImageAlt: placeholder alt for image1
-  text: 'Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av ny teknologi og ønsker å være med på å lage gode, smarte løsninger for finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for deg!'
+  backgroundImage: /img/m6mrayqq.jpeg
+  backgroundImageAlt: Bilde av ansatt på kontoret
+  text:
+    'Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
+    ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
+    finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for
+    deg!'
   title: 'Vil du bli en av oss ? '
 about:
   header: Hvorfor OMS?

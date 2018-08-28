@@ -92,7 +92,9 @@ employees:
       jobTitle: UX Designer
       jobType: designer
       title: Gerrit Witteveen
-    - description: Jaa9 & OnklP er de beste rapperne noen sinne! <3<3<3<3
+    - description: |-
+        Bakendeprogrammør, opptatt av ytelse og stabilitet.
+        Spiller ellers hockey, bordtennis og poker.
       image: /img/pal_steihaug_oms_oslo_bors_fhs_5973.jpg
       jobTitle: Teamleder backend
       jobType: backEnd
@@ -144,4 +146,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

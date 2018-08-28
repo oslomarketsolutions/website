@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: Act with courage
+    - description: " Ask me anything and I'll get a colleague who can give you a good answer."
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
@@ -86,7 +86,7 @@ employees:
       jobTitle: User Experience Designer
       jobType: designer
       title: Gerrit Witteveen
-    - description: Elsker hip hop og norsk rap
+    - description: Backend-programmer focused on performance and stability.
       image: /img/pal_steihaug_oms_oslo_bors_fhs_5973.jpg
       jobTitle: Teamleader backend
       jobType: backEnd
@@ -140,4 +140,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-
