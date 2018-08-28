@@ -33,7 +33,7 @@ transitionalElement:
     companiesNumber: '150'
     companiesText: Kunder
     text: Noen av selskapene som bruker tjenester fra Oslo Market Solutions
-    usersNumber: '500 000'
+    usersNumber: 500 000
     usersText: Daglige brukere
   socialMediaText: Følg oss
 investorPortal:
@@ -94,7 +94,7 @@ customization:
       isDark: true
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
-    header: Service integrations
+    header: Integrasjoner
     integrationsLogos:
       - logo: /img/Integration-5@2x.png
         name: Centevo
@@ -106,7 +106,7 @@ customization:
         name: ProInvest
       - logo: /img/Integration-2@2x.png
         name: Advent
-    text: We play well with others
+    text: Vi spiller gjerne sammen med andre
   text: >-
     Enten du trenger en driftet tjeneste, mer fleksibilitet med vårt
     komponentbibliotek  eller å bygge din egen løsning kun basert på data fra
@@ -134,3 +134,4 @@ otherProducts:
       Løpende oppdatert aksjekurs og aksjonærlister some sømløst integreres i
       selskapets eksisterende nettsider
 ---
+
