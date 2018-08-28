@@ -2,7 +2,7 @@
 hero:
   buttonText: Contact us
   subtitle: Advanced features - simple set up
-  title: Financial platforms for the modern web
+  title: Investor tools and market data web
 transitionalElement:
   customerLogos:
     - logo: /img/OsloBørs@2x.png
