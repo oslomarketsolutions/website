@@ -230,7 +230,11 @@ export default class Navbar extends Component {
                   </div>
                 </Link>
               </li>
-              <li className={classNames(styles.noPaddingRight, styles.aboutUs)}>
+              <li
+                className={classNames(styles.noPaddingRight, {
+                  [styles.aboutUs]: this.props.language === 'en',
+                })}
+              >
                 <Link
                   activeClassName={styles.active}
                   to={`/${this.props.language}/about`}
