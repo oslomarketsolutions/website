@@ -1,9 +1,14 @@
 ---
 templateKey: careerPage
 hero:
-  backgroundImage: /img/standup.png
+  backgroundImage: /img/m6mrayqq.jpeg
   backgroundImageAlt: placeholder alt for image1
-  text: "Vi ser alltid etter gode folk! \U0001F64B‍♀️\U0001F64B‍♂️ Vi liker deg som er lidenskapelig opptatt av ny teknologi og ønsker å være med på å lage gode, smarte løsninger for finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for deg! \n\n"
+  text: >+
+    Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
+    ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
+    finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for
+    deg! 
+
   title: 'Vil du bli en av oss ? '
 about:
   header: Hvorfor OMS?
@@ -93,3 +98,4 @@ positions:
     Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
     hoder.
 ---
+
