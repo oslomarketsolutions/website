@@ -46,6 +46,7 @@
     "gatsby-transformer-sharp": "^1.6.24",
     "intersection-observer": "^0.5.0",
     "js-cookie": "^2.2.0",
+    "lottie-web": "^5.2.1",
     "netlify-cms": "1.7.x",
     "object-fit-images": "^3.2.3",
     "prop-types": "^15.6.1",

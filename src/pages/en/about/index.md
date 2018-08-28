@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: ' Ask me anything and I''ll get a colleague who can give you a good answer.'
+    - description: " Ask me anything and I'll get a colleague who can give you a good answer."
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
@@ -140,4 +140,3 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
-

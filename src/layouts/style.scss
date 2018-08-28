@@ -290,3 +290,10 @@ html {
     }
   }
 }
+@media (max-width: 374px) {
+  html {
+    h1.hero {
+      font-size: 1.875rem;
+    }
+  }
+}

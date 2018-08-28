@@ -7,8 +7,6 @@ hero:
     We are always looking for great people! We like people that are passionate
     about new technology and taking part in the creation of good, smart
     solutions.
-
-
     Do you think you got what it takes? Send us an e-mail!
   title: Want to become one of us?
 about:
@@ -82,4 +80,3 @@ positions:
   iframeAltText: You need to have analytics enabled to view the positions
   text: 'Please apply here, or send us an open application!'
 ---
-

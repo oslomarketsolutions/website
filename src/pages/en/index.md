@@ -29,6 +29,8 @@ transitionalElement:
       name: Fishpool
     - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
+    - logo: /img/Skandia@2x.png
+      name: Skandia
   numbersAndText:
     companiesNumber: '150'
     companiesText: Companies
@@ -136,4 +138,3 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
-

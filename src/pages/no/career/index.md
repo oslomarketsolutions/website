@@ -3,12 +3,11 @@ templateKey: careerPage
 hero:
   backgroundImage: /img/tp5_lwog.jpeg
   backgroundImageAlt: To ansatte som sammarbeider
-  text: >+
-    Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
+  text:
+    'Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
     ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
     finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for
-    deg! 
-
+    deg!'
   title: 'Vil du bli en av oss ? '
 about:
   header: Hvorfor OMS?
@@ -98,4 +97,3 @@ positions:
     Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
     hoder.
 ---
-

@@ -12,27 +12,50 @@
     grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 30% max-content max-content max-content;
+    grid-template-rows: 22% max-content max-content max-content max-content;
     grid-column-gap: $gridColumnGap;
     color: $antiFlashWhite;
     width: 100%;
     height: 100vh;
+    padding-bottom: 130px;
     background-color: $darkBlue;
+    position: relative;
+
+    .animationContainer {
+      grid-column: $main;
+      grid-row: 2 / span 4;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+      text-align: center;
+      opacity: 1;
+      // max-height: 100%;
+      margin: -102px auto 0;
+
+      svg {
+        width: 155% !important;
+        margin-left: -30.5%;
+      }
+    }
 
     h1 {
+      width: 70%;
       grid-column: $main;
       grid-row: 2;
+      z-index: 1;
     }
 
     p {
       padding: $XXL 0;
       grid-column: $main;
       grid-row: 3;
+      z-index: 1;
     }
 
     p + a {
       grid-column: $main;
       grid-row: 4;
+      margin: 0;
+      z-index: 1;
     }
   }
 
@@ -309,6 +332,20 @@
   }
 }
 
+@media (max-height: 1050px) {
+  .homePage {
+    .animation {
+      .animationContainer {
+        margin-top: -178px;
+        svg {
+          margin-left: -19%;
+          width: 141% !important;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1172px) {
   .homePage {
     .transition {
@@ -396,6 +433,11 @@
 
 @media (max-width: 1024px) {
   .homePage {
+    .animation {
+      h1 {
+        width: 100%;
+      }
+    }
     .transition {
       .first {
         width: 114px;
@@ -431,6 +473,15 @@
 
 @media (max-width: 950px) {
   .homePage {
+    .animation {
+      .animationContainer {
+        margin: 0 auto;
+
+        svg {
+          margin-left: -25%;
+        }
+      }
+    }
     .transition {
       grid-template-rows: max-content max-content auto;
 
@@ -480,6 +531,11 @@
 
 @media (max-width: 767px) {
   .homePage {
+    .animation {
+      .animationContainer {
+        margin: 13% auto 0;
+      }
+    }
     .investorPortal {
       p + a {
         margin-top: 48px;
@@ -502,7 +558,19 @@
 @media (max-width: 580px) {
   .homePage {
     .animation {
-      grid-template-rows: 17% max-content max-content max-content;
+      grid-template-rows: 17% max-content max-content max-content max-content;
+
+      p {
+        padding: $XL 0;
+      }
+
+      .animationContainer {
+        margin: 33% auto 0;
+        svg {
+          width: 155% !important;
+          margin-left: -31%;
+        }
+      }
     }
 
     .transition {
@@ -597,10 +665,14 @@
 @media (max-width: 374px) {
   .homePage {
     .animation {
-      grid-template-rows: 13% max-content max-content max-content;
+      grid-template-rows: 14% max-content max-content max-content max-content;
+
+      .animationContainer {
+        margin: 41% auto 0;
+      }
 
       p {
-        padding: $L 0;
+        padding: $M 0;
       }
     }
 
