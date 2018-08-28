@@ -561,6 +561,9 @@
 
       .animationContainer {
         margin: 33% auto 0;
+        svg {
+          width: 155% !important;
+        }
       }
     }
 
