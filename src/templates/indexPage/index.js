@@ -12,8 +12,7 @@ import BigButton from '../../components/bigButton/index';
 import ServiceIntegrations from '../../components/serviceIntegrations';
 import getLanguage from '../../utils/language';
 import Images from '../../components/images';
-import animationIn from '../../../static/animationIn.json';
-import animationLoop from '../../../static/animationLoop.json';
+import animation from '../../../static/animation.json';
 
 export default class IndexPageTemplate extends Component {
   static propTypes = {
@@ -28,33 +27,16 @@ export default class IndexPageTemplate extends Component {
     location: PropTypes.shape({ pathname: PropTypes.string }),
   };
 
-  state = {
-    loop: false,
-  };
-
   componentDidMount() {
-    if (this.element && !this.state.loop) {
-      this.animation = lottie.loadAnimation({
-        container: this.element,
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        animationData: animationIn,
-      });
-      setTimeout(() => this.setState({ loop: true }), 3200);
-    }
-  }
-
-  componentDidUpdate() {
-    if (this.element && this.state.loop) {
-      this.animation = lottie.destroy();
+    if (this.element) {
       this.animation = lottie.loadAnimation({
         container: this.element,
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        animationData: animationLoop,
+        animationData: animation,
       });
+      this.animation.playSegments([[0, 120], [121, 340]], true);
     }
   }
 
