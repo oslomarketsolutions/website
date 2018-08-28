@@ -12,27 +12,43 @@
     grid-row: 1;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 30% max-content max-content max-content;
+    grid-template-rows: 22% 176px 96px 96px max-content;
     grid-column-gap: $gridColumnGap;
     color: $antiFlashWhite;
     width: 100%;
     height: 100vh;
     background-color: $darkBlue;
 
+    .animationContainer {
+      grid-column: $full;
+      grid-row: 2 / span 4;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+      text-align: center;
+      opacity: 1;
+      max-width: 1800px;
+      margin: -96px auto 0;
+    }
+
     h1 {
+      width: 70%;
       grid-column: $main;
       grid-row: 2;
+      z-index: 1;
     }
 
     p {
-      padding: $XXL 0;
+      // padding: $XXL 0;
       grid-column: $main;
       grid-row: 3;
+      z-index: 1;
     }
 
     p + a {
       grid-column: $main;
       grid-row: 4;
+      margin: 0;
+      z-index: 1;
     }
   }
 
