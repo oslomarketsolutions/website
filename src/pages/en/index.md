@@ -9,18 +9,18 @@ transitionalElement:
       name: Oslo Børs
     - logo: /img/Handelsbanken@2x.png
       name: Handelsbanken
-    - logo: /img/DN@2x.png
-      name: DN
-    - logo: /img/Sbanken@2x.png
-      name: Sbanken
-    - logo: /img/Arctic Fund Management@2x.png
-      name: Artic Fund Management
-    - logo: /img/Sparebank 1@2x.png
-      name: SpareBank 1
     - logo: /img/E24@2x.png
       name: E24
+    - logo: /img/Arctic Fund Management@2x.png
+      name: Artic Fund Management
+    - logo: /img/Sbanken@2x.png
+      name: Sbanken
     - logo: /img/Catella@2x.png
       name: Catella
+    - logo: /img/Sparebank 1@2x.png
+      name: SpareBank 1
+    - logo: /img/DN@2x.png
+      name: DN
     - logo: /img/First Fondene@2x.png
       name: First Fondene
     - logo: /img/Norne@2x.png
