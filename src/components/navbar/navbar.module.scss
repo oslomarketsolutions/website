@@ -682,6 +682,7 @@ header.navColorWhite .navbar {
       position: relative;
       height: 32px;
       padding: 0 $XS 0 $M;
+      transition: all 200ms ease;
 
       .ulWrapper {
         z-index: 1;
@@ -844,7 +845,6 @@ header.navColorWhite .navbar {
       }
       li.languageSelectorMobile {
         margin-left: 20px;
-        transition: all 200ms ease;
         .ulWrapper {
           display: none;
         }
