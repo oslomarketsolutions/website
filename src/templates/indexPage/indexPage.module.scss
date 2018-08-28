@@ -332,13 +332,14 @@
   }
 }
 
-@media (max-height: 1100px) {
+@media (max-height: 1050px) {
   .homePage {
     .animation {
       .animationContainer {
-        margin-top: -148px;
+        margin-top: -161px;
         svg {
-          margin-left: -23%;
+          margin-left: -16.5%;
+          width: 148% !important;
         }
       }
     }
