@@ -531,6 +531,11 @@
 
 @media (max-width: 767px) {
   .homePage {
+    .animation {
+      .animationContainer {
+        margin: 13% auto 0;
+      }
+    }
     .investorPortal {
       p + a {
         margin-top: 48px;
