@@ -33,7 +33,7 @@
 
       svg {
         width: 155% !important;
-        margin-left: -319px;
+        margin-left: -27.5%;
       }
     }
 
@@ -332,26 +332,21 @@
   }
 }
 
-/* @media (max-width: 1450px) {
+@media (max-height: 1100px) {
   .homePage {
     .animation {
-      overflow: hidden;
       .animationContainer {
-        width: 107%;
-        margin-top: -40px;
+        margin-top: -148px;
+        svg {
+          margin-left: -23%;
+        }
       }
     }
   }
-} */
+}
+
 @media (max-width: 1172px) {
   .homePage {
-    /* .animation {
-      .animationContainer {
-        width: 131%;
-        margin-top: -51px;
-        margin-left: -158px;
-      }
-    } */
     .transition {
       width: 97%;
     }
@@ -437,6 +432,11 @@
 
 @media (max-width: 1024px) {
   .homePage {
+    .animation {
+      h1 {
+        width: 100%;
+      }
+    }
     .transition {
       .first {
         width: 114px;
@@ -472,6 +472,15 @@
 
 @media (max-width: 950px) {
   .homePage {
+    .animation {
+      .animationContainer {
+        margin: 0 auto;
+
+        svg {
+          margin-left: -30.5%;
+        }
+      }
+    }
     .transition {
       grid-template-rows: max-content max-content auto;
 
@@ -543,7 +552,15 @@
 @media (max-width: 580px) {
   .homePage {
     .animation {
-      grid-template-rows: 17% max-content max-content max-content;
+      grid-template-rows: 17% max-content max-content max-content max-content;
+
+      p {
+        padding: $XL 0;
+      }
+
+      .animationContainer {
+        margin: 33% auto 0;
+      }
     }
 
     .transition {
@@ -638,10 +655,14 @@
 @media (max-width: 374px) {
   .homePage {
     .animation {
-      grid-template-rows: 13% max-content max-content max-content;
+      grid-template-rows: 13% max-content max-content max-content max-content;
+
+      .animationContainer {
+        margin: 44% auto 0;
+      }
 
       p {
-        padding: $L 0;
+        padding: $M 0;
       }
     }
 
