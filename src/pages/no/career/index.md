@@ -35,18 +35,18 @@ perks:
         Vår kjernetid er fra 10-15, da vil vi gjerne vite at vi kan kalle inn
         til møter. Utenom det synes vi alle skal jobbe når det passer dem
     - icon: /img/Icon-Insurance.svg
-      perkTitle: Insurance
-      text: With us everyone is insured
+      perkTitle: Forsikringer
+      text: Hos oss er alle forsikret
     - icon: /img/Icon-Phone.svg
-      perkTitle: Broadband & Mobile
-      text: As an employee we pay your phone bill
+      perkTitle: Bredbånd & Mobil
+      text: Som ansatt dekker vi din mobilregning
     - icon: /img/Icon-Lunch.svg
       perkTitle: 'Frokost, lunsj og kaffe'
       text: >-
         I kantinen serveres det både frokost, lunsj og kaffe. I tillegg har vi
         en hipster kaffemaskin på kontoret
     - icon: /img/Icon-Ski.svg
-      perkTitle: Company cabins
+      perkTitle: Firma hytter
       text: Firma hytter som kan leies i både Nesbyen og Trysil
     - icon: /img/Icon-Remote.svg
       perkTitle: Ferieleiligheter
