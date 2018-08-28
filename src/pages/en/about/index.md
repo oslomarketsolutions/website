@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: Act with courage
+    - description: ' Ask me anything and I''ll get a colleague who can give you a good answer.'
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
