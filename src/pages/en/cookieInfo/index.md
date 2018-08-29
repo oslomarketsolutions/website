@@ -30,7 +30,7 @@ cookieManager:
       - name: _gat
         purpose: Used to throttle request rate.
       - name: setGoogleAnalyticsCookie
-        purpose: Used by us to know if you've allowed us to use analytical cookies.
+        purpose: Used by us to know if you've allowed us to use Google Analytics.
   trackingCookies:
     id: tracking
     header: HubSpot
@@ -46,5 +46,7 @@ cookieManager:
         purpose: The main cookie for tracking visitors. It contains the domain, utk (see below), initial timestamp (first visit), last timestamp (last visit), current timestamp (this visit), and session number (increments for each subsequent session).
       - name: hubspotutk
         purpose: This cookie is used for to keep track of a visitor's identity. This cookie is passed to HubSpot on form submission and used when de-duplicating contacts.
+      - name: setHubSpotCookie
+        purpose: Used by us to know if you've allowed us to use HubSpot cookies.
   buttonText: Save settings
 ---
