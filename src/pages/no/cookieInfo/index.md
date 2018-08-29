@@ -1,8 +1,8 @@
 ---
-title: Cookie settings
+title: Cookie innstillinger
 cookiePopUp:
   text:
-    Vi bruker cookies for å gi deg en så behagelig opplevelse som mulig på vår nettside.
+    Vi bruker cookies for å gi deg en så god opplevelse som mulig på vår nettside.
     Hvis du fortsetter uten å endre innstillinger, antar vi at du godtar alle cookiene fra Oslo Market Solutions
     sin nettside. Du kan endre innstillingene dine når du vil.
   manageButtonText: Endre
@@ -21,27 +21,31 @@ cookieManager:
           våre nettsider.
   analyticsCookies:
     id: analytics
-    header: Analytiske cookies
-    text: These cookies are needed for our website to function providing payment
-      gateway security and their essentials. Therefore they are always on
-      but do not contain personally indetifiable information (PII).
+    header: Google Analytics
+    text: Google Analytics er et enkelt, brukervennlig verktøy som hjelper webområdeeiere til å måle hvordan brukere interagerer med innhold på nettstedet. Googles JavaScript-biblioteker bruker HTTP-cookies til å "huske" hva en bruker har gjort på tidligere sider / interaksjoner med nettstedet.
     cookies:
-      - name: Google Analytics
-        purpose:
-          These cookies are needed for our website to function providing payment
-          gateway security and their essentials. Therefore they are always on
-          but do not contain personally indetifiable information (PII).
+      - name: _ga
+        purpose: Brukes for å skille mellom brukere.
+      - name: _gid
+        purpose: Brukes for å skille mellom brukere.
+      - name: _gat
+        purpose: Brukes til å begrense antall forespørsler.
+      - name: setGoogleAnalyticsCookie
+        purpose: Brukes av oss til å vite om du har godtatt at vi bruker analytiske cookies.
   trackingCookies:
     id: tracking
-    header: Sporing cookies
-    text: These cookies are needed for our website to function providing payment
-      gateway security and their essentials. Therefore they are always on
-      but do not contain personally indetifiable information (PII).
+    header: HubSpot
+    text: HubSpot er en markedsførings- og salgsplattform. HubSpot setter disse cookiene etter behov.
     cookies:
-      - name: HubSpot
-        purpose:
-          These cookies are needed for our website to function providing payment
-          gateway security and their essentials. Therefore they are always on
-          but do not contain personally indetifiable information (PII).
+      - name: __cfduid
+        purpose: Denne cookien brukes til å identifisere individuelle brukere bak en delt IP-adresse, for eksempel hvis den besøkende er på kafe. Den lagrer ikke personlig identifiserbar informasjon.
+      - name: __hssc
+        purpose: Denne cookien kontrollerer sesjoner. Dette brukes til å avgjøre om vi skal øke sesjonsnummeret og tidsstemplene i __hstc-cookien. Den inneholder domenet, viewCount, og starttidspunkt for sesjonen.
+      - name: __hssrc
+        purpose: Når HubSpot endrer sesjonscookien, er denne cookien også satt. Vi setter den til 1 og bruker den til å avgjøre om den besøkende har startet nettleseren på nytt. Hvis denne cookien ikke eksisterer når vi håndterer cookies, antar vi at det er en ny økt.
+      - name: __hstc
+        purpose: Hovedcookien for å spore besøkende. Den inneholder domenet, utk (se nedenfor), første tidsstempel (første besøk), siste tidsstempel (siste besøk), nåværende tidsstempel (dette besøket) og sesjonsnummer (inkrementerer for hver påfølgende sesjon).
+      - name: hubspotutk
+        purpose: Denne cookien brukes til å holde oversikt over en besøkendes identitet. Denne cookien sendes til HubSpot på skjemainnsendelse og brukes når de fjerner duplikater.
   buttonText: Lagre innstillinger
 ---
