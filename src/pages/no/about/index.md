@@ -1,7 +1,7 @@
 ---
 templateKey: aboutPage
 hero:
-  backgroundImage: /img/standup.png
+  backgroundImage: /img/dvzgovia.jpeg
   text: >-
     Oslo Market Solutions er en ledende nordisk leverandør av webløsninger for
     de finansielle markedene. Med et nordisk perspektiv, fokuserer vi på høy
@@ -146,3 +146,4 @@ employees:
   section: TEAM
 buttonText: Join the Team
 ---
+
