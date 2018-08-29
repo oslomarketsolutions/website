@@ -31,7 +31,7 @@ cookieManager:
       - name: _gat
         purpose: Brukes til å begrense antall forespørsler.
       - name: setGoogleAnalyticsCookie
-        purpose: Brukes av oss til å vite om du har godtatt at vi bruker analytiske cookies.
+        purpose: Brukes av oss for å vite om du har godtatt at vi bruker Google Analytics.
   trackingCookies:
     id: tracking
     header: HubSpot
@@ -47,5 +47,7 @@ cookieManager:
         purpose: Hovedcookien for å spore besøkende. Den inneholder domenet, utk (se nedenfor), første tidsstempel (første besøk), siste tidsstempel (siste besøk), nåværende tidsstempel (dette besøket) og sesjonsnummer (inkrementerer for hver påfølgende sesjon).
       - name: hubspotutk
         purpose: Denne cookien brukes til å holde oversikt over en besøkendes identitet. Denne cookien sendes til HubSpot på skjemainnsendelse og brukes når de fjerner duplikater.
+      - name: setHubSpotCookie
+        purpose: Brukes av oss for å vite om du har godtatt at vi bruker HubSpot cookies.
   buttonText: Lagre innstillinger
 ---
