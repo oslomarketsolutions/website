@@ -228,6 +228,7 @@
     .customizationCards {
       padding: 0 0 192px 0;
       grid-column: $main;
+      margin: 0 -16px 0 -14px;
       grid-row: 9;
       display: flex;
       flex-flow: row nowrap;
@@ -657,6 +658,12 @@
 
       .third {
         grid-column: 2 / span 8;
+      }
+    }
+
+    .investorPortal {
+      .subHeader1 + p {
+        grid-column: $main;
       }
     }
   }

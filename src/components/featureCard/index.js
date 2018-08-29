@@ -14,7 +14,8 @@ const FeatureCard = ({
   buttonText,
   isDark,
 }) => (
-  <div
+  <Link
+    to={to}
     className={classNames(styles.featureCard, {
       [styles.dark]: isDark,
     })}
@@ -36,13 +37,10 @@ const FeatureCard = ({
           </li>
         ))}
     </ul>
-    <Link
-      className={classNames('textButton', styles.customizationLink)}
-      to={to}
-    >
+    <div className={classNames('textButton', styles.customizationLink)}>
       {buttonText} <FontAwesomeIcon icon={['fas', 'arrow-right']} />
-    </Link>
-  </div>
+    </div>
+  </Link>
 );
 
 FeatureCard.propTypes = {

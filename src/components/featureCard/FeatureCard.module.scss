@@ -2,11 +2,19 @@
 .featureCard {
   position: relative;
   background-color: $white;
-  width: 320px;
+  width: 358px;
   padding: $XL $L;
   border-radius: $S;
   box-shadow: $newBoxShadow;
-  margin: 0 16px;
+  text-decoration: none;
+  color: $textColor;
+  margin: $M;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+  }
 
   .header {
     border-bottom: 1px solid $antiFlashWhite;
@@ -52,7 +60,6 @@
     bottom: 0;
     left: 0;
     color: $vibrantBlue;
-    text-decoration: none;
     padding: $M $L;
     border-top: 1px solid $antiFlashWhite;
     border-bottom-left-radius: $S;
@@ -69,7 +76,7 @@
   }
 }
 
-div.dark {
+.dark {
   background-color: $darkBlue;
 
   .header {
@@ -104,16 +111,10 @@ div.dark {
 
 @media (max-width: 1024px) {
   .featureCard {
-    margin-bottom: $L;
-
     .header {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-    }
-
-    .iconWrapper {
-      width: 40%;
     }
 
     .icon {
@@ -121,18 +122,17 @@ div.dark {
     }
 
     h3 {
-      width: 60%;
       text-align: left;
-      padding-bottom: $M;
+      padding: 0 0 $M $M;
     }
 
     p {
-      margin: $S 0 $XS 0;
-      height: 96px;
+      margin: $S 0 $S 0;
+      height: auto;
     }
 
     ul {
-      margin-bottom: $L;
+      margin-bottom: $XL;
     }
 
     .customizationLink {
@@ -154,9 +154,5 @@ div.dark {
 @media (max-width: 374px) {
   .featureCard {
     width: 312px;
-
-    p {
-      height: 96px;
-    }
   }
 }
