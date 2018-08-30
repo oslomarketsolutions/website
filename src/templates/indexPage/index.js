@@ -63,13 +63,15 @@ export default class IndexPageTemplate extends Component {
           <h1 className="hero">{hero.title}</h1>
           <p className="heroSubtitle">{hero.subtitle}</p>
           <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
-          <div
-            id="animation"
-            ref={el => {
-              this.element = el;
-            }}
-            className={styles.animationContainer}
-          />
+          <div className={styles.animationContainer}>
+            <div
+              id="animation"
+              ref={el => {
+                this.element = el;
+              }}
+              className={styles.lottieDiv}
+            />
+          </div>
         </section>
 
         <section className={styles.transition}>
