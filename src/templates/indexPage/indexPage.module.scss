@@ -21,18 +21,18 @@
     background-color: $darkBlue;
     position: relative;
 
-    .animationContainer {
+    .videoContainer {
       grid-column: $main;
       grid-row: 2 / span 4;
-      overflow: hidden;
-      transform: translate3d(0, 0, 0);
       text-align: center;
-      opacity: 1;
-      margin: -102px auto 0;
+      position: relative;
+      height: calc(100vh - 48%);
 
-      .lottieDiv {
-        width: 155%;
-        margin-left: -30.5%;
+      video {
+        position: absolute;
+        left: -377px;
+        width: 158%;
+        top: -24px;
       }
     }
 
