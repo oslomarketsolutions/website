@@ -32,14 +32,12 @@
       video {
         position: absolute;
         opacity: 0;
-        visibility: hidden;
         left: -33.2%;
         width: 158%;
         bottom: 4%;
       }
       video.show {
         opacity: 1;
-        visibility: visible;
       }
     }
 
