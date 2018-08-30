@@ -83,17 +83,19 @@ export default class IndexPageTemplate extends Component {
                 this.introVideo = introVideo;
               }}
             />
-            <video
-              className={classNames({
-                [styles.show]: this.state.loop,
-              })}
-              src={animationPart2}
-              loop
-              muted
-              ref={loopVideo => {
-                this.loopVideo = loopVideo;
-              }}
-            />
+            {
+              <video
+                className={classNames({
+                  [styles.show]: this.state.loop,
+                })}
+                src={animationPart2}
+                loop
+                muted
+                ref={loopVideo => {
+                  this.loopVideo = loopVideo;
+                }}
+              />
+            }
           </div>
         </section>
 
