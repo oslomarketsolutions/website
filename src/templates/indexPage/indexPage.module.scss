@@ -21,18 +21,23 @@
     background-color: $darkBlue;
     position: relative;
 
-    .animationContainer {
+    .videoContainer {
       grid-column: $main;
-      grid-row: 2 / span 4;
-      overflow: hidden;
-      transform: translate3d(0, 0, 0);
+      grid-row: 1 / span 5;
       text-align: center;
-      opacity: 1;
-      margin: -102px auto 0;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
 
-      .lottieDiv {
-        width: 155%;
-        margin-left: -30.5%;
+      video {
+        position: absolute;
+        opacity: 0;
+        left: -33.2%;
+        width: 158%;
+        bottom: 4%;
+      }
+      video.show {
+        opacity: 1;
       }
     }
 
@@ -335,11 +340,11 @@
 @media (max-height: 1050px) {
   .homePage {
     .animation {
-      .animationContainer {
-        margin-top: -178px;
-        .lottieDiv {
-          margin-left: -19%;
-          width: 141%;
+      .videoContainer {
+        video {
+          bottom: 0%;
+          left: -26.5%;
+          width: 150%;
         }
       }
     }
@@ -474,11 +479,9 @@
 @media (max-width: 950px) {
   .homePage {
     .animation {
-      .animationContainer {
-        margin: 0 auto;
-
-        .lottieDiv {
-          margin-left: -25%;
+      .videoContainer {
+        video {
+          bottom: 14%;
         }
       }
     }
@@ -532,8 +535,10 @@
 @media (max-width: 767px) {
   .homePage {
     .animation {
-      .animationContainer {
-        margin: 13% auto 0;
+      .videoContainer {
+        video {
+          bottom: 17%;
+        }
       }
     }
     .investorPortal {
@@ -564,11 +569,9 @@
         padding: $XL 0;
       }
 
-      .animationContainer {
-        margin: 33% auto 0;
-        .lottieDiv {
-          width: 155%;
-          margin-left: -31%;
+      .videoContainer {
+        video {
+          bottom: 20%;
         }
       }
     }
@@ -673,8 +676,10 @@
     .animation {
       grid-template-rows: 14% max-content max-content max-content max-content;
 
-      .animationContainer {
-        margin: 41% auto 0;
+      .videoContainer {
+        video {
+          bottom: 21%;
+        }
       }
 
       p {

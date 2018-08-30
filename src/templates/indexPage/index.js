@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OutboundLink } from 'react-ga';
-import lottie from 'lottie-web';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
 import Slider from '../../components/slider/index';
@@ -12,7 +11,8 @@ import BigButton from '../../components/bigButton/index';
 import ServiceIntegrations from '../../components/serviceIntegrations';
 import getLanguage from '../../utils/language';
 import Images from '../../components/images';
-import animation from '../../../static/animation.json';
+import animationPart1 from '../../../static/AnimationOslo-part1.mp4';
+import animationPart2 from '../../../static/AnimationOslo-part2.mp4';
 
 export default class IndexPageTemplate extends Component {
   static propTypes = {
@@ -27,18 +27,26 @@ export default class IndexPageTemplate extends Component {
     location: PropTypes.shape({ pathname: PropTypes.string }),
   };
 
+  state = {
+    intro: true,
+    loop: false,
+  };
+
   componentDidMount() {
-    if (this.element) {
-      this.animation = lottie.loadAnimation({
-        container: this.element,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: animation,
-      });
-      this.animation.playSegments([[-25, 130], [131, 340]], true);
-    }
+    this.introVideo.addEventListener('ended', this.handleVideoChange);
   }
+
+  componentWillUnmount() {
+    this.introVideo.addEventListener('ended', this.handleVideoChange);
+  }
+
+  handleVideoChange = () => {
+    this.setState({
+      intro: false,
+      loop: true,
+    });
+    this.loopVideo.play();
+  };
 
   render() {
     const {
@@ -63,13 +71,28 @@ export default class IndexPageTemplate extends Component {
           <h1 className="hero">{hero.title}</h1>
           <p className="heroSubtitle">{hero.subtitle}</p>
           <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
-          <div className={styles.animationContainer}>
-            <div
-              id="animation"
-              ref={el => {
-                this.element = el;
+          <div className={styles.videoContainer}>
+            <video
+              className={classNames({
+                [styles.show]: this.state.intro,
+              })}
+              src={animationPart1}
+              autoPlay
+              muted
+              ref={introVideo => {
+                this.introVideo = introVideo;
               }}
-              className={styles.lottieDiv}
+            />
+            <video
+              className={classNames({
+                [styles.show]: this.state.loop,
+              })}
+              src={animationPart2}
+              loop
+              muted
+              ref={loopVideo => {
+                this.loopVideo = loopVideo;
+              }}
             />
           </div>
         </section>
