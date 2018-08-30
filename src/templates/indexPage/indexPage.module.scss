@@ -23,16 +23,23 @@
 
     .videoContainer {
       grid-column: $main;
-      grid-row: 2 / span 4;
+      grid-row: 1 / span 5;
       text-align: center;
       position: relative;
-      height: calc(100vh - 48%);
+      height: 100vh;
+      overflow: hidden;
 
       video {
         position: absolute;
-        left: -377px;
+        opacity: 0;
+        visibility: hidden;
+        left: -33.2%;
         width: 158%;
-        top: -24px;
+        bottom: 4%;
+      }
+      video.show {
+        opacity: 1;
+        visibility: visible;
       }
     }
 
@@ -335,11 +342,9 @@
 @media (max-height: 1050px) {
   .homePage {
     .animation {
-      .animationContainer {
-        margin-top: -178px;
-        .lottieDiv {
-          margin-left: -19%;
-          width: 141%;
+      .videoContainer {
+        video {
+          bottom: -2%;
         }
       }
     }
@@ -474,11 +479,9 @@
 @media (max-width: 950px) {
   .homePage {
     .animation {
-      .animationContainer {
-        margin: 0 auto;
-
-        .lottieDiv {
-          margin-left: -25%;
+      .videoContainer {
+        video {
+          bottom: 14%;
         }
       }
     }
@@ -532,8 +535,10 @@
 @media (max-width: 767px) {
   .homePage {
     .animation {
-      .animationContainer {
-        margin: 13% auto 0;
+      .videoContainer {
+        video {
+          bottom: 17%;
+        }
       }
     }
     .investorPortal {
@@ -564,11 +569,9 @@
         padding: $XL 0;
       }
 
-      .animationContainer {
-        margin: 33% auto 0;
-        .lottieDiv {
-          width: 155%;
-          margin-left: -31%;
+      .videoContainer {
+        video {
+          bottom: 20%;
         }
       }
     }
@@ -673,8 +676,10 @@
     .animation {
       grid-template-rows: 14% max-content max-content max-content max-content;
 
-      .animationContainer {
-        margin: 41% auto 0;
+      .videoContainer {
+        video {
+          bottom: 21%;
+        }
       }
 
       p {

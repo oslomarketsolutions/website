@@ -32,9 +32,21 @@ export default class IndexPageTemplate extends Component {
     loop: false,
   };
 
-  /* componentDidMount() {
-    setTimeout()
-  } */
+  componentDidMount() {
+    this.introVideo.addEventListener('ended', this.handleVideoChange);
+  }
+
+  componentWillUnmount() {
+    this.introVideo.addEventListener('ended', this.handleVideoChange);
+  }
+
+  handleVideoChange = () => {
+    this.setState({
+      intro: false,
+      loop: true,
+    });
+    this.loopVideo.play();
+  };
 
   render() {
     const {
@@ -60,8 +72,28 @@ export default class IndexPageTemplate extends Component {
           <p className="heroSubtitle">{hero.subtitle}</p>
           <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
           <div className={styles.videoContainer}>
-            <video src={animationPart1} autoPlay muted />
-            <video src={animationPart2} autoPlay muted />
+            <video
+              className={classNames({
+                [styles.show]: this.state.intro,
+              })}
+              src={animationPart1}
+              autoPlay
+              muted
+              ref={introVideo => {
+                this.introVideo = introVideo;
+              }}
+            />
+            <video
+              className={classNames({
+                [styles.show]: this.state.loop,
+              })}
+              src={animationPart2}
+              loop
+              muted
+              ref={loopVideo => {
+                this.loopVideo = loopVideo;
+              }}
+            />
           </div>
         </section>
 
