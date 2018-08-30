@@ -58,11 +58,11 @@
     background-color: $antiFlashWhite;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: max-content 100px;
+    grid-template-rows: max-content;
     grid-column-gap: 16px;
 
     .textContainer {
-      margin-top: $XXL;
+      padding: 96px 0;
       grid-column: 3 / span 6;
       grid-row: 1;
 
@@ -80,7 +80,7 @@
       }
 
       h2 + p {
-        padding: $L 0;
+        padding: $XL 0 0;
       }
     }
   }
@@ -90,13 +90,13 @@
     grid-row: 3;
     display: grid;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: 100px max-content max-content max-content 100px;
+    grid-template-rows: max-content max-content max-content max-content;
     grid-column-gap: 16px;
+    padding: 96px 0;
 
     .textContainer {
       grid-column: 2 / span 6;
       grid-row: 1;
-      margin-top: $XXL;
 
       // overline
       p:first-of-type {
@@ -144,7 +144,7 @@
   .joinTheTeam {
     grid-column: 2 / span 8;
     grid-row: 4;
-    padding-bottom: 100px;
+    padding-bottom: 96px;
 
     a {
       max-width: 273px;
@@ -182,14 +182,14 @@
       grid-template-rows: 564px max-content;
 
       .textContainer {
-        margin-top: $XXL;
+        padding: 96px 0;
         h1 {
           width: 100%;
           text-align: left;
         }
 
         h1 + p {
-          padding-top: $M;
+          padding: $XL 0 0 0;
         }
       }
 
