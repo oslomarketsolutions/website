@@ -57,11 +57,11 @@
     display: grid;
     grid-column-gap: $gridColumnGap;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows: max-content 100px;
+    grid-template-rows: max-content;
     background-color: $antiFlashWhite;
 
     .textContainer {
-      margin-top: $XXL;
+      padding: 96px 0;
       grid-column: 3 / span 6;
       grid-row: 1;
 
@@ -74,7 +74,7 @@
       }
 
       h2 + p {
-        padding: $L 0;
+        padding: $XL 0 0;
       }
     }
   }
@@ -85,14 +85,12 @@
     display: grid;
     grid-column-gap: 16px;
     grid-template-columns: $gridColumnTemplate;
-    grid-template-rows:
-      max-content max-content max-content
-      120px;
+    grid-template-rows: max-content max-content max-content;
+    padding: 96px 0;
 
     .textContainer {
       grid-column: 2 / span 6;
       grid-row: 1;
-      margin-top: $XXL;
 
       // overline
       p:first-of-type {
@@ -123,7 +121,8 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    padding: 54px 0 87px;
+    padding: 96px 0;
+    background-color: $antiFlashWhite;
 
     .textContainer {
       h2 {
@@ -133,15 +132,14 @@
 
       p {
         text-align: center;
-        margin-top: $M;
-        margin-bottom: $L;
+        padding: $XL 0;
         width: 496px;
       }
     }
 
     iframe {
-      height: 164px;
-      width: 496px;
+      width: 100%;
+      max-width: 496px;
       border: none;
       box-shadow: $newBoxShadow;
     }
@@ -210,14 +208,14 @@
       }
 
       .textContainer {
-        margin-top: $XXL;
+        padding: 96px 0;
         h1 {
           width: 100%;
           text-align: left;
         }
 
         h1 + p {
-          padding-top: $M;
+          padding: $XL 0 0 0;
         }
       }
     }
@@ -262,7 +260,12 @@
     }
 
     .positions {
-      display: none;
+      padding: 96px $M;
+      .textContainer {
+        p {
+          width: 100%;
+        }
+      }
     }
   }
 }
