@@ -2,7 +2,7 @@
 hero:
   buttonText: Contact us
   subtitle: Advanced features - simple set up
-  title: Investor tools and market data web
+  title: Investor tools and market data portals
 transitionalElement:
   customerLogos:
     - logo: /img/OsloBørs@2x.png
@@ -138,3 +138,4 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
+
