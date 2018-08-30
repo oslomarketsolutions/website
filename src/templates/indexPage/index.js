@@ -33,7 +33,6 @@ export default class IndexPageTemplate extends Component {
   };
 
   componentDidMount() {
-    this.introVideo.play();
     this.introVideo.addEventListener('ended', this.handleVideoChange);
   }
 
@@ -78,6 +77,7 @@ export default class IndexPageTemplate extends Component {
                 [styles.show]: this.state.intro,
               })}
               src={animationPart1}
+              autoPlay
               muted
               ref={introVideo => {
                 this.introVideo = introVideo;
