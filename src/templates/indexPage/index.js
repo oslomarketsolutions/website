@@ -12,12 +12,7 @@ import BigButton from '../../components/bigButton/index';
 import ServiceIntegrations from '../../components/serviceIntegrations';
 import getLanguage from '../../utils/language';
 import Images from '../../components/images';
-import animation from '../../../static/animation.json';
 import animationFull from '../../../static/data.json';
-import animation1 from '../../../static/data_0.json';
-import animation2 from '../../../static/data_1.json';
-import animation3 from '../../../static/data_2.json';
-import animation4 from '../../../static/data_3.json';
 
 export default class IndexPageTemplate extends Component {
   static propTypes = {
