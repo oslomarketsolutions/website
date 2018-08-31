@@ -93,6 +93,8 @@ investorPortal:
   serviceIntegrations:
     header: Service integrations
     integrationsLogos:
+      - logo: /img/Centevo@2x.png
+        name: Centevo
       - logo: /img/VPS@2x.png
         name: VPS
       - logo: /img/SSCAdvent@2x.png
@@ -101,8 +103,6 @@ investorPortal:
         name: ProInvest
       - logo: /img/ProBroker@2x.png
         name: ProBroker
-      - logo: /img/Centevo@2x.png
-        name: Centevo
     text: We play well with others
   trading:
     desktopImage: /img/webtrader-desktop-en@2x.png
