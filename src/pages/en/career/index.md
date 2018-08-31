@@ -66,9 +66,9 @@ perks:
     - icon: /img/Icon-Insurance.svg
       perkTitle: Insurance
       text: >-
-        With us, everyone is insured with travel insurance from Europeiske and
-        health insurance from Vertikal. The health insurance includes free use
-        of the KRY app.
+        With us, everyone has travel insurance from Europeiske and health
+        insurance from Vertikal. The health insurance includes free use of the
+        KRY app.
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil that can be rented for a small sum
