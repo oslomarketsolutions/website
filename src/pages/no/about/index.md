@@ -8,7 +8,7 @@ hero:
     kvalitet, feilfri oppetid, innovasjon, design, hastighet og fleksibilitet
     for kunden. Alle våre løsninger er driftet og hostet av Oslo Market
     Solutions.
-  title: Oslo Market solutions
+  title: Oslo Market Solutions
 history:
   header: Litt historie
   section: OM OSS
