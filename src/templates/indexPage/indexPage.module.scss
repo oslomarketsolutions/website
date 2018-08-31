@@ -378,7 +378,11 @@
 @media (max-width: 1172px) {
   .homePage {
     .transition {
-      width: 97%;
+      width: calc(100vw - 32px);
+
+      .socialMedia {
+        right: 4px;
+      }
     }
 
     .investorPortal {
@@ -509,7 +513,7 @@
   .homePage {
     .transition {
       grid-template-rows: max-content max-content auto;
-
+      height: 614px;
       .first {
         grid-column: 3 / span 3;
         grid-row: 1;
@@ -594,10 +598,11 @@
     }
 
     .transition {
-      height: 460px;
+      height: 490px;
 
       .socialMedia {
-        top: -36px;
+        top: -40px;
+        right: 4px;
       }
 
       .first {
@@ -667,6 +672,7 @@
 @media (max-width: 450px) {
   .homePage {
     .transition {
+      height: 500px;
       .first {
         grid-column: 2 / span 3;
       }
@@ -683,6 +689,11 @@
     .investorPortal {
       .subHeader1 + p {
         grid-column: $main;
+      }
+
+      .customizationCards {
+        margin-right: 0;
+        margin-left: 0;
       }
     }
   }

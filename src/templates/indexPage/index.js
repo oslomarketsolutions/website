@@ -188,7 +188,7 @@ export default class IndexPageTemplate extends Component {
           <h2 className={classNames(styles.subHeader1, styles.centered)}>
             {customization.header}
           </h2>
-          <p>{customization.text}</p>
+          <p className="customizationText">{customization.text}</p>
           <div className={styles.customizationCards}>
             {customization.cards &&
               customization.cards.map(customizationCard => (

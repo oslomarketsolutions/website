@@ -270,11 +270,11 @@
   }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 450px) {
   .careerPage {
     .perks {
       .perkCardContainer {
-        max-width: 320px;
+        max-width: 100%;
       }
     }
   }
