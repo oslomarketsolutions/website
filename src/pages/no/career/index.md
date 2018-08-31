@@ -58,9 +58,8 @@ perks:
     - icon: /img/Icon-Insurance.svg
       perkTitle: Forsikringer
       text: >
-        Hos oss er vi alle forsikret med reiseforsikring fra Europeiske og
-        helseforsikring fra Vertikal. Med helseforsikringen kan du bruke
-        KRY-appen helt gratis
+        Hos oss har alle reiseforsikring fra Europeiske og helseforsikring fra
+        Vertikal. Med helseforsikringen kan du bruke KRY-appen helt gratis
     - icon: /img/Icon-Pension.svg
       perkTitle: Pensjon
       text: >-
