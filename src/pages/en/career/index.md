@@ -6,8 +6,7 @@ hero:
   text: >-
     We are always looking for great people! We like people that are passionate
     about new technology and taking part in the creation of good, smart
-    solutions.
-    Do you think you got what it takes? Send us an e-mail!
+    solutions. Do you think you got what it takes? Send us an e-mail!
   title: Want to become one of us?
 about:
   header: Why OMS?
@@ -27,52 +26,65 @@ about:
 perks:
   header: What we offer
   perkCards:
-    - icon: /img/Icon-FlexHours.svg
-      perkTitle: Flexible work hours
-      text: Work when it suits you
-    - icon: /img/Icon-Insurance.svg
-      perkTitle: Insurance
-      text: With us everyone is insured
-    - icon: /img/Icon-Phone.svg
-      perkTitle: Broadband & Mobile
-      text: As an employee we pay your phone bill
-    - icon: /img/Icon-Lunch.svg
-      perkTitle: 'Breakfast, Lunch & Coffee'
-      text: Our cafeteria serves both breakfast and lunch
-    - icon: /img/Icon-Ski.svg
-      perkTitle: Company cabins
-      text: Cabins in Nesbyen and Trysil
-    - icon: /img/Icon-Beach.svg
-      perkTitle: Apartments
-      text: Located in Villefranche and Albir
-    - icon: /img/Icon-SocialEvents.svg
-      perkTitle: Social events
-      text: Annual social events with the entire group
-    - icon: /img/Icon-Spotify.svg
-      perkTitle: Spotify
-      text: Paid subscription to Spotify or your favourite streaming service
-    - icon: /img/Icon-Pension.svg
-      perkTitle: Pension
-      text: |-
-        5 % of salary from 1 kr to  7,1G.
-        8 % of salary from  7,1 to 12G
-    - icon: /img/Icon-Stock.svg
-      perkTitle: Stock saving program
-      text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
-    - icon: /img/Icon-Massage.svg
-      perkTitle: Massage
-      text: Every week there's a Naprapathy treatment offer if needed.
     - icon: /img/Icon-Innovate.svg
       perkTitle: Time to innovate
-      text: 'Dedicated time to learn, innovate and try new things every month.'
+      text: >-
+        Once a month you can do whatever you want and try out new tech. You can
+        fail epically or end up inventing our new backend-framework
     - icon: /img/Icon-Hardware.svg
       perkTitle: Hardware & software
       text: 'Choose your own workstation, Linux or Mac!'
+    - icon: /img/Icon-FlexHours.svg
+      perkTitle: Flexible work hours
+      text: >-
+        Work when it suits you. Office hours are 10-15, apart from that you
+        organize your week as you like.
     - icon: /img/Icon-Remote.svg
       perkTitle: Work remotely
       text: >-
         Most of us go to the office every day because we like it here, but if
         you need it, you can work from home. Or the beach. Or a mountaintop.
+    - icon: /img/Icon-Phone.svg
+      perkTitle: Broadband & Mobile
+      text: OMS covers phone and internet expenses for all employees.
+    - icon: /img/Icon-Spotify.svg
+      perkTitle: Spotify
+      text: Paid subscription to Spotify or your favourite streaming service
+    - icon: /img/Icon-Stock.svg
+      perkTitle: Stock saving program
+      text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
+    - icon: /img/Icon-SocialEvents.svg
+      perkTitle: Social events
+      text: >-
+        Annual social events with both OMS and the entire Oslo Børs VPS Group
+        like Summer Parties, Holmenkollstafetten and table tennis
+    - icon: /img/Icon-Pension.svg
+      perkTitle: Pension
+      text: |-
+        5 % of salary from 1 kr to  7,1G.
+        8 % of salary from  7,1 to 12G
+    - icon: /img/Icon-Insurance.svg
+      perkTitle: Insurance
+      text: >-
+        With us, everyone is insured with travel insurance from Europeiske and
+        health insurance from Vertikal. The health insurance includes free use
+        of the KRY app.
+    - icon: /img/Icon-Ski.svg
+      perkTitle: Company cabins
+      text: Cabins in Nesbyen and Trysil that can be rented for a small sum
+    - icon: /img/Icon-Beach.svg
+      perkTitle: Apartments
+      text: >-
+        When you need sun you can rent apartments in Villefranche (France) and
+        Nerja (Spain) for a small sum
+    - icon: /img/Icon-Massage.svg
+      perkTitle: Massage
+      text: Every week there's a Naprapathy treatment offer if needed.
+    - icon: /img/Icon-Lunch.svg
+      perkTitle: 'Breakfast, Lunch & Coffee'
+      text: >-
+        Our cafeteria serves both breakfast and lunch, and our offices include
+        one mean Rancilio Espresso Machine
   section: Perks
 positions:
   buttonText: Enable
@@ -80,3 +92,4 @@ positions:
   iframeAltText: You need to have analytics enabled to view the job vacancies
   text: 'Please apply here, or send us an open application!'
 ---
+
