@@ -109,7 +109,7 @@ investorPortal:
       nettbanken eller andre påloggede sider og tilpasser etter behov. Vi
       strekker oss for å nå ut til både nybegynnere og mer avanserte
       aksjehandlere. Traderen levert av oss følger selvsagt alle krav til UU,
-      GDPR og MiFID II med mulighet for å inludere hensiktsmessighetstester og
+      GDPR og MiFID II med mulighet for å inkludere hensiktsmessighetstester og
       egnethetstester. Vi gjør det enkelt å velge ASK, IPS eller vanlig konto
       ved hjelp av vår ProBroker integrasjon. I Admin-verkøtyet får ansatte med
       rettigheter enkel oversikt over kunder med bl.a. supportfunksjoner,
@@ -180,3 +180,4 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
+
