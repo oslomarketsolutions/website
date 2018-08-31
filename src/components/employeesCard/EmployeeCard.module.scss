@@ -13,15 +13,26 @@
   margin: 16px;
   transition: 0.3s;
   -webkit-transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
 
   &:hover {
     transform: scale(1.08);
     .imageAndIconContainer {
       .imageContainer {
         img {
-          filter: grayscale(0%);
+          // filter: grayscale(0%);
+          animation: fadeFromGray 0.5s forwards;
         }
       }
+    }
+  }
+
+  @keyframes fadeFromGray {
+    from {
+      filter: grayscale(100%);
+    }
+    to {
+      filter: grayscale(0%);
     }
   }
 
@@ -59,6 +70,7 @@
       img {
         border-radius: 50%;
         filter: grayscale(100%);
+        animation-play-state: paused;
       }
     }
   }

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OutboundLink } from 'react-ga';
 import lottie from 'lottie-web';
+import Observer from 'react-intersection-observer';
 import styles from './indexPage.module.scss';
 import FeatureCard from '../../components/featureCard';
 import Slider from '../../components/slider/index';
@@ -12,8 +13,12 @@ import BigButton from '../../components/bigButton/index';
 import ServiceIntegrations from '../../components/serviceIntegrations';
 import getLanguage from '../../utils/language';
 import Images from '../../components/images';
-import animation from '../../../static/animation.json';
+import animationFull from '../../../static/data.json';
 
+if (typeof window !== `undefined`) {
+  // eslint-disable-next-line
+  require('intersection-observer');
+}
 export default class IndexPageTemplate extends Component {
   static propTypes = {
     data: PropTypes.shape({
@@ -34,7 +39,7 @@ export default class IndexPageTemplate extends Component {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        animationData: animation,
+        animationData: animationFull,
       });
       this.animation.playSegments([[-25, 130], [131, 341]], true);
     }
@@ -59,21 +64,28 @@ export default class IndexPageTemplate extends Component {
 
     return (
       <main className={styles.homePage}>
-        <section className={styles.animation}>
-          <h1 className="hero">{hero.title}</h1>
-          <p className="heroSubtitle">{hero.subtitle}</p>
-          <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
-          <div className={styles.animationContainer}>
-            <div
-              id="animation"
-              ref={el => {
-                this.element = el;
-              }}
-              className={styles.lottieDiv}
-            />
-          </div>
-        </section>
-
+        <Observer
+          className={styles.observer}
+          tag="div"
+          onChange={inView =>
+            inView ? this.animation.play() : this.animation.pause()
+          }
+        >
+          <section className={styles.animation}>
+            <h1 className="hero">{hero.title}</h1>
+            <p className="heroSubtitle">{hero.subtitle}</p>
+            <BigButton to="mailto:info@oms.no" text={hero.buttonText} />
+            <div className={styles.animationContainer}>
+              <div
+                id="animation"
+                ref={el => {
+                  this.element = el;
+                }}
+                className={styles.lottieDiv}
+              />
+            </div>
+          </section>
+        </Observer>
         <section className={styles.transition}>
           <div className={styles.socialMedia}>
             <ul>

@@ -7,6 +7,13 @@
     text-align: center;
   }
 
+  .observer {
+    grid-column: $full;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: $gridColumnTemplate;
+  }
+
   .animation {
     grid-column: $full;
     grid-row: 1;
@@ -23,16 +30,26 @@
 
     .animationContainer {
       grid-column: $main;
-      grid-row: 2 / span 4;
+      grid-row: 1 / span 5;
       overflow: hidden;
       transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
       text-align: center;
       opacity: 1;
-      margin: -102px auto 0;
+      height: 100vh;
+      position: relative;
 
       .lottieDiv {
+        position: absolute;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
         width: 155%;
-        margin-left: -30.5%;
+        left: -30.5%;
+        bottom: 2%;
+        svg {
+          transform: translate3d(0, 0, 0);
+          -webkit-transform: translate3d(0, 0, 0);
+        }
       }
     }
 
@@ -332,14 +349,26 @@
   }
 }
 
-@media (max-height: 1050px) {
+@media (max-height: 990px) {
   .homePage {
     .animation {
       .animationContainer {
-        margin-top: -178px;
         .lottieDiv {
-          margin-left: -19%;
           width: 141%;
+          left: -18.8%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 880px) {
+  .homePage {
+    .animation {
+      .animationContainer {
+        .lottieDiv {
+          width: 129%;
+          left: -8.8%;
         }
       }
     }
@@ -434,6 +463,11 @@
 @media (max-width: 1024px) {
   .homePage {
     .animation {
+      .animationContainer {
+        .lottieDiv {
+          bottom: 15%;
+        }
+      }
       h1 {
         width: 100%;
       }
@@ -473,15 +507,6 @@
 
 @media (max-width: 950px) {
   .homePage {
-    .animation {
-      .animationContainer {
-        margin: 0 auto;
-
-        .lottieDiv {
-          margin-left: -25%;
-        }
-      }
-    }
     .transition {
       grid-template-rows: max-content max-content auto;
 
@@ -531,11 +556,6 @@
 
 @media (max-width: 767px) {
   .homePage {
-    .animation {
-      .animationContainer {
-        margin: 13% auto 0;
-      }
-    }
     .investorPortal {
       p + a {
         margin-top: 48px;
@@ -565,10 +585,10 @@
       }
 
       .animationContainer {
-        margin: 33% auto 0;
         .lottieDiv {
-          width: 155%;
-          margin-left: -31%;
+          width: 164%;
+          bottom: 20%;
+          left: -38.7%;
         }
       }
     }
@@ -672,10 +692,6 @@
   .homePage {
     .animation {
       grid-template-rows: 14% max-content max-content max-content max-content;
-
-      .animationContainer {
-        margin: 41% auto 0;
-      }
 
       p {
         padding: $M 0;
