@@ -124,7 +124,7 @@ standardProducts:
     tabletImage: /img/arena-desktop@2x.png
     text: >-
       Arena er en informasjonsportal som tilbyr data på Oslo Børs, Oslo Axess
-      and N-OTC. I dag kan du velge to moduler, Top Shalreholders som har
+      and N-OTC. I dag kan du velge to moduler, Top Shareholders som har
       aksjonærdata, og Corporta Actions Calendar for alle selskap på Oslo Børs.
   irModules:
     buttonText: Kontakt oss
