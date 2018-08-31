@@ -3,11 +3,10 @@ templateKey: careerPage
 hero:
   backgroundImage: /img/tp5_lwog.jpeg
   backgroundImageAlt: To ansatte som sammarbeider
-  text:
-    'Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
+  text: >-
+    Vi ser alltid etter gode folk! Vi liker deg som er lidenskapelig opptatt av
     ny teknologi og ønsker å være med på å lage gode, smarte løsninger for
-    finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for
-    deg!'
+    finansbransjen. Ta kontakt med oss hvis du synes dette kan være noe for deg!
   title: 'Vil du bli en av oss ? '
 about:
   header: Hvorfor OMS?
@@ -22,7 +21,7 @@ about:
     og sosialt godt miljø med en god dose humor.  Vi er opptatt av en god
     balanse mellom arbeid og privatliv og tilbyr ulike sosiale og faglige
     aktiviteter gjennom hele året. Vi er en herlig rar kombo av blåskjorter,
-    hettegensere, skatere, metalhoder, rap-fantaster, Birken-nerder. Evt
+    hettegensere, skatere, metalhoder, rap-fantaster og Birken-nerder. Evt
     kjennskap til ping pong/foosball er ikke et krav, men et stort pluss om du
     har har vært borti det før.
 perks:
@@ -97,3 +96,4 @@ positions:
     Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
     hoder.
 ---
+
