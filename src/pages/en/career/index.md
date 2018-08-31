@@ -42,7 +42,7 @@ perks:
     - icon: /img/Icon-Ski.svg
       perkTitle: Company cabins
       text: Cabins in Nesbyen and Trysil
-    - icon: /img/Icon-Remote.svg
+    - icon: /img/Icon-Beach.svg
       perkTitle: Apartments
       text: Located in Villefranche and Albir
     - icon: /img/Icon-SocialEvents.svg

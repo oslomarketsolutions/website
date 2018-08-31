@@ -91,22 +91,22 @@ customization:
         - ProFamily
         - Advent
       header: Driftede tjenester
-      icon: /img/Icon-Managed-Gray.svg
+      icon: /img/Icon-Server-Dark.svg
       id: investorportal
       isDark: true
   header: Velg ditt nivå av skreddersøm
   serviceIntegrations:
     header: Integrasjoner
     integrationsLogos:
-      - logo: /img/Integration-5@2x.png
+      - logo: /img/Centevo-Copy@2x.png
         name: Centevo
-      - logo: /img/Integration-1@2x.png
+      - logo: /img/VPS-Copy@2x.png
         name: VPS
-      - logo: /img/Integration-4@2x.png
+      - logo: /img/ProBroker-Copy@2x.png
         name: ProBroker
-      - logo: /img/Integration-3@2x.png
+      - logo: /img/ProInvest-Copy@2x.png
         name: ProInvest
-      - logo: /img/Integration-2@2x.png
+      - logo: /img/SSCAdvent-Copy@2x.png
         name: Advent
     text: Vi spiller gjerne sammen med andre
   text: >-
