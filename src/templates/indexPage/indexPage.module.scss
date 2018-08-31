@@ -43,9 +43,10 @@
         position: absolute;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
+        height: 100%;
         width: 155%;
         left: -30.5%;
-        bottom: 2%;
+        bottom: -8%;
         svg {
           transform: translate3d(0, 0, 0);
           -webkit-transform: translate3d(0, 0, 0);
@@ -58,6 +59,7 @@
       grid-column: $main;
       grid-row: 2;
       z-index: 1;
+      position: relative;
     }
 
     p {
@@ -65,6 +67,7 @@
       grid-column: $main;
       grid-row: 3;
       z-index: 1;
+      position: relative;
     }
 
     p + a {
@@ -72,6 +75,7 @@
       grid-row: 4;
       margin: 0;
       z-index: 1;
+      position: relative;
     }
   }
 
@@ -356,6 +360,7 @@
         .lottieDiv {
           width: 141%;
           left: -18.8%;
+          bottom: -2%;
         }
       }
     }
@@ -369,6 +374,7 @@
         .lottieDiv {
           width: 129%;
           left: -8.8%;
+          bottom: 4%;
         }
       }
     }
@@ -469,7 +475,7 @@
     .animation {
       .animationContainer {
         .lottieDiv {
-          bottom: 15%;
+          bottom: 0%;
         }
       }
       h1 {
@@ -591,7 +597,7 @@
       .animationContainer {
         .lottieDiv {
           width: 164%;
-          bottom: 20%;
+          bottom: -6%;
           left: -38.7%;
         }
       }
@@ -703,7 +709,13 @@
   .homePage {
     .animation {
       grid-template-rows: 14% max-content max-content max-content max-content;
-
+      .animationContainer {
+        .lottieDiv {
+          width: 150%;
+          left: -27.7%;
+          bottom: -6%;
+        }
+      }
       p {
         padding: $M 0;
       }
