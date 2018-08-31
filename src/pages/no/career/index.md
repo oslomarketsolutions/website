@@ -34,7 +34,7 @@ perks:
         til møter. Utenom det synes vi alle skal jobbe når det passer dem
     - icon: /img/Icon-Insurance.svg
       perkTitle: Forsikringer
-      text: Hos oss er alle forsikret
+      text: Hos oss er vi alle forsikret
     - icon: /img/Icon-Phone.svg
       perkTitle: Bredbånd & Mobil
       text: Som ansatt dekker vi din mobilregning
