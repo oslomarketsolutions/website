@@ -77,6 +77,6 @@ perks:
 positions:
   buttonText: Enable
   header: Job vacancies
-  iframeAltText: You need to have analytics enabled to view the positions
+  iframeAltText: You need to have analytics enabled to view the job vacancies
   text: 'Please apply here, or send us an open application!'
 ---
