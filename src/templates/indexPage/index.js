@@ -36,7 +36,7 @@ export default class IndexPageTemplate extends Component {
         autoplay: true,
         animationData: animationFull,
       });
-      this.animation.playSegments([[-25, 130], [131, 340]], true);
+      this.animation.playSegments([[-25, 130], [131, 341]], true);
     }
   }
 
