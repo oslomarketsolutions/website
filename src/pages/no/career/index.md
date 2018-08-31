@@ -37,7 +37,7 @@ perks:
       text: Hos oss er vi alle forsikret
     - icon: /img/Icon-Phone.svg
       perkTitle: Bredbånd & Mobil
-      text: Som ansatt dekker vi din mobilregning
+      text: Vi dekker mobilregningen til våre ansatte
     - icon: /img/Icon-Lunch.svg
       perkTitle: 'Frokost, lunsj og kaffe'
       text: >-
