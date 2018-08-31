@@ -27,11 +27,26 @@ about:
 perks:
   header: Hva vi tilbyr
   perkCards:
+    - icon: /img/Icon-Innovate.svg
+      perkTitle: Tid til innovasjon
+      text: >-
+        Minst én dag i måneden vies til å gjøre hva du vil og prøve nye ting.
+        Her kan du mislykkes totalt, eller finn opp vårt nye backend system.
+    - icon: /img/Icon-Hardware.svg
+      perkTitle: Hardware & software
+      text: >-
+        Hos oss for man velge hva man vil jobbe på. Vi har ca. halvparten på
+        Linux, og halvparten på Mac.
     - icon: /img/Icon-FlexHours.svg
       perkTitle: Fleksibel arbeidstid
       text: >-
         Vår kjernetid er fra 10-15, da vil vi gjerne vite at vi kan kalle inn
         til møter. Utenom det synes vi alle skal jobbe når det passer dem
+    - icon: /img/Icon-Remote.svg
+      perkTitle: Hjemmekontor
+      text: >-
+        Vi er stort sett mest på kontoret fordi vi trives her, men du kan også
+        jobbe fra båten, fjellet eller hjemme hvis du vil det
     - icon: /img/Icon-Insurance.svg
       perkTitle: Forsikringer
       text: Hos oss er vi alle forsikret
@@ -44,8 +59,8 @@ perks:
         I kantinen serveres det både frokost, lunsj og kaffe. I tillegg har vi
         en hipster kaffemaskin på kontoret
     - icon: /img/Icon-Ski.svg
-      perkTitle: Firma hytter
-      text: Firma hytter som kan leies i både Nesbyen og Trysil
+      perkTitle: Firmahytter
+      text: Firmahytter som kan leies i både Nesbyen og Trysil
     - icon: /img/Icon-Beach.svg
       perkTitle: Ferieleiligheter
       text: Konsernet har 2 ferie leilighter i Villefranche og Albir
@@ -74,19 +89,6 @@ perks:
       text: >-
         Én gang i uken kommer det naprapat som man kan få behandling av, om det
         skulle trengs
-    - icon: /img/Icon-Innovate.svg
-      perkTitle: Tid til innovasjon
-      text: >-
-        Minst én dag i måneden vies til å gjøre hva du vil og prøve nye ting.
-        Her kan du mislykkes totalt, eller finn opp vårt nye backend system.
-    - icon: /img/Icon-Hardware.svg
-      perkTitle: Hardware & software
-      text: >-
-        Hos oss for man velge hva man vil jobbe på. Vi har ca. halvparten på
-        Linux, og halvparten på Mac.
-    - icon: /img/Icon-Remote.svg
-      perkTitle: Work remotely
-      text: 'Jobb hjemmefra om du ønsker det. Eller Singapore. '
   section: Perks
 positions:
   buttonText: Enable
