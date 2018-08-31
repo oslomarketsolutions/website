@@ -1,7 +1,7 @@
 ---
 hero:
   buttonText: Contact us
-  subtitle: Advanced features - simple set up
+  subtitle: Advanced features - simple set-up
   title: Investor tools and market data portals
 transitionalElement:
   customerLogos:
