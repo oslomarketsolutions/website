@@ -69,7 +69,9 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Haakon Winther
-    - description: Stille og rolig gutt som liker lange turer ved stranden
+    - description: >-
+        Everybody should believe in something. I believe I’ll have another
+        coffee.
       image: /img/anders_ranvik_oms_oslo_bors_fhs_5564.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
