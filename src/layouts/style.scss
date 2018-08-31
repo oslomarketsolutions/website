@@ -91,7 +91,8 @@ html {
     line-height: 1.5rem;
   }
 
-  p {
+  p,
+  .customizationText {
     font-family: 'Work Sans', 'sans-serif';
     font-size: 1rem;
     font-weight: $thin;
@@ -232,14 +233,12 @@ html {
 
     p.bodyLarge {
       font-size: 1.25rem;
-      line-height: 1.5rem;
-      letter-spacing: -0.2px;
+      line-height: 2rem;
     }
 
     p.heroSubtitle {
       font-size: 1.25rem;
-      line-height: 1.5rem;
-      letter-spacing: 0.05px;
+      line-height: 2rem;
     }
 
     .buttonLarge {
@@ -276,6 +275,10 @@ html {
 
 @media (max-width: 580px) {
   html {
+    .customizationText {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
     .temp {
       font-size: 2rem;
     }

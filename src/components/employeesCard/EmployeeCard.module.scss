@@ -20,7 +20,6 @@
     .imageAndIconContainer {
       .imageContainer {
         img {
-          // filter: grayscale(0%);
           animation: fadeFromGray 0.5s forwards;
         }
       }
@@ -113,6 +112,12 @@
   .employeeCard {
     width: 358px;
     grid-template-columns: 100px 192px;
+  }
+}
+
+@media (max-width: 450px) {
+  .employeeCard {
+    width: 100%;
   }
 }
 

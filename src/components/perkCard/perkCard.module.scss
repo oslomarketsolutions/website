@@ -53,9 +53,14 @@
   }
 }
 
+@media (max-width: 450px) {
+  .perkCard {
+    width: 100%;
+  }
+}
+
 @media (max-width: 374px) {
   .perkCard {
-    width: 310px;
     height: 268px;
   }
 }

@@ -46,7 +46,7 @@ perks:
     - icon: /img/Icon-Ski.svg
       perkTitle: Firma hytter
       text: Firma hytter som kan leies i både Nesbyen og Trysil
-    - icon: /img/Icon-Remote.svg
+    - icon: /img/Icon-Beach.svg
       perkTitle: Ferieleiligheter
       text: Konsernet har 2 ferie leilighter i Villefranche og Albir
     - icon: /img/Icon-SocialEvents.svg

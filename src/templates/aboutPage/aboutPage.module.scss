@@ -256,7 +256,17 @@
   }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 450px) {
+  .aboutPage {
+    .aboutEmployees {
+      .employeeWrapper {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/* @media (max-width: 374px) {
   .aboutPage {
     .aboutEmployees {
       .employeeWrapper {
@@ -264,4 +274,4 @@
       }
     }
   }
-}
+} */

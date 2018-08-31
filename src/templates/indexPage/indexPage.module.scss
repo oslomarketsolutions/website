@@ -43,9 +43,10 @@
         position: absolute;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
+        height: 100%;
         width: 155%;
         left: -30.5%;
-        bottom: 2%;
+        bottom: -8%;
         svg {
           transform: translate3d(0, 0, 0);
           -webkit-transform: translate3d(0, 0, 0);
@@ -58,6 +59,7 @@
       grid-column: $main;
       grid-row: 2;
       z-index: 1;
+      position: relative;
     }
 
     p {
@@ -65,6 +67,7 @@
       grid-column: $main;
       grid-row: 3;
       z-index: 1;
+      position: relative;
     }
 
     p + a {
@@ -72,6 +75,7 @@
       grid-row: 4;
       margin: 0;
       z-index: 1;
+      position: relative;
     }
   }
 
@@ -356,6 +360,7 @@
         .lottieDiv {
           width: 141%;
           left: -18.8%;
+          bottom: -2%;
         }
       }
     }
@@ -369,6 +374,7 @@
         .lottieDiv {
           width: 129%;
           left: -8.8%;
+          bottom: 4%;
         }
       }
     }
@@ -378,7 +384,11 @@
 @media (max-width: 1172px) {
   .homePage {
     .transition {
-      width: 97%;
+      width: calc(100vw - 32px);
+
+      .socialMedia {
+        right: 4px;
+      }
     }
 
     .investorPortal {
@@ -465,7 +475,7 @@
     .animation {
       .animationContainer {
         .lottieDiv {
-          bottom: 15%;
+          bottom: 0%;
         }
       }
       h1 {
@@ -509,7 +519,7 @@
   .homePage {
     .transition {
       grid-template-rows: max-content max-content auto;
-
+      height: 614px;
       .first {
         grid-column: 3 / span 3;
         grid-row: 1;
@@ -587,17 +597,18 @@
       .animationContainer {
         .lottieDiv {
           width: 164%;
-          bottom: 20%;
+          bottom: -6%;
           left: -38.7%;
         }
       }
     }
 
     .transition {
-      height: 460px;
+      height: 490px;
 
       .socialMedia {
-        top: -36px;
+        top: -40px;
+        right: 4px;
       }
 
       .first {
@@ -667,6 +678,7 @@
 @media (max-width: 450px) {
   .homePage {
     .transition {
+      height: 500px;
       .first {
         grid-column: 2 / span 3;
       }
@@ -684,6 +696,11 @@
       .subHeader1 + p {
         grid-column: $main;
       }
+
+      .customizationCards {
+        margin-right: 0;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -692,7 +709,13 @@
   .homePage {
     .animation {
       grid-template-rows: 14% max-content max-content max-content max-content;
-
+      .animationContainer {
+        .lottieDiv {
+          width: 150%;
+          left: -27.7%;
+          bottom: -6%;
+        }
+      }
       p {
         padding: $M 0;
       }

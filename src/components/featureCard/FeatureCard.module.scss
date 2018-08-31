@@ -151,6 +151,12 @@
   }
 }
 
+@media (max-width: 450px) {
+  .featureCard {
+    width: 100%;
+  }
+}
+
 @media (max-width: 374px) {
   .featureCard {
     width: 312px;
