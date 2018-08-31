@@ -1,0 +1,8 @@
+# Redirect domain aliases to primary domain
+https://manamind.com/* https://oms.no/:splat 301!
+https://www.manamind.com/* https://oms.no/:splat 301!
+https://oslomarketsolutions.no/* https://oms.no/:splat 301!
+https://www.oslomarketsolutions.no/* https://oms.no/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://oms.netlify.com/* https://oms.no/:splat 301!
