@@ -33,6 +33,7 @@
       grid-row: 1 / span 5;
       overflow: hidden;
       transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
       text-align: center;
       opacity: 1;
       height: 100vh;
@@ -41,11 +42,13 @@
       .lottieDiv {
         position: absolute;
         transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
         width: 155%;
         left: -30.5%;
         bottom: 2%;
         svg {
           transform: translate3d(0, 0, 0);
+          -webkit-transform: translate3d(0, 0, 0);
         }
       }
     }
