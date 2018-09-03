@@ -64,7 +64,7 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Kristian Hagen
-    - description: "I didn't choose the thug life, the thug life chose me. \U0001F52B\U0001F525\U0001F693"
+    - description: 'I didn''t choose the thug life, the thug life chose me.'
       image: /img/haakon_winther_oms_oslo_bors_fhs_5659.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
