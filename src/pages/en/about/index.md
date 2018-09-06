@@ -54,7 +54,7 @@ employees:
         A decent amount of text that tells a little about who i am, but not too much,
         and which causes the reader to nose exhale is coming soon.
       image: /img/0.jpeg
-      jobTitle: Toe of IT Operations
+      jobTitle: Title
       jobType: operations
       title: Elias Thøgersen
     - description: >-
