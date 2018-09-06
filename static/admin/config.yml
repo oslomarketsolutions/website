@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: ansattKort
 
 media_folder: static/img
 public_folder: /img
@@ -85,6 +85,8 @@ collections:
           - {label: "Employees", name: "employees", widget: "object", fields: [
               {label: "Section name", name: "section", widget: "string"},
               {label: "Header", name: "header", widget: "string"},
+              {label: "Interns section name", name: "internsSection", widget: "string"},
+              {label: "Interns header", name: "internsHeader", widget: "string"},
               {label: "Quotes", name: "quotes", widget: "list", fields: [
                 {label: "Text", name: "text", widget: "text"},
                 {label: "Author", name: "author", widget: "string"},
@@ -369,6 +371,8 @@ collections:
           - {label: "Employees", name: "employees", widget: "object", fields: [
               {label: "Section name", name: "section", widget: "string"},
               {label: "Header", name: "header", widget: "string"},
+              {label: "Interns section name", name: "internsSection", widget: "string"},
+              {label: "Interns header", name: "internsHeader", widget: "string"},
               {label: "Quotes", name: "quotes", widget: "list", fields: [
                 {label: "Text", name: "text", widget: "text"},
                 {label: "Author", name: "author", widget: "string"},
