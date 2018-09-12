@@ -104,6 +104,7 @@ export default class Navbar extends Component {
   };
 
   closePopUpAndOpenManager = () => {
+    this.toggleOverflowHiddenBody();
     this.setState({
       cookieManagerOpen: true,
       useLocalState: true,
