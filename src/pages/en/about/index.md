@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: ' Ask me anything and I''ll get a colleague who can give you a good answer.'
+    - description: " Ask me anything and I'll get a colleague who can give you a good answer."
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
@@ -51,10 +51,16 @@ employees:
       jobType: operations
       title: Andreas Holen
     - description: >-
+        Information security student at NTNU and part-time employee.
+      image: /img/0.jpeg
+      jobTitle: Developer/Security researcher
+      jobType: operations
+      title: Elias Thøgersen
+    - description: >-
         Fullstack-developer interested in new technology, DX, a11y, Linux, cross
         country skiing and hiking in norwegian nature.
       image: /img/espen_henriksen_oms_oslo_bors_fhs_5603.jpg
-      jobTitle: Front End Team Lead
+      jobTitle: Teamleader frontend
       jobType: frontEnd
       title: Espen Henriksen
     - description: >-
@@ -64,7 +70,7 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Kristian Hagen
-    - description: 'I didn''t choose the thug life, the thug life chose me.'
+    - description: "I didn't choose the thug life, the thug life chose me."
       image: /img/haakon_winther_oms_oslo_bors_fhs_5659.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
@@ -116,17 +122,17 @@ employees:
       jobType: backEnd
       title: Øystein Barstad
     - description: >-
-        Got homework to do, coffee to serve and mediocre code to write. No time
-        for this.
+        Our main objective the summer of 2018 was to develop a new company website.
+        The source code can be found on GitHub.
       image: /img/0.jpeg
-      jobTitle: Summer intern
+      jobTitle: Summer intern 2018
       jobType: summerIntern
       title: Elias Thøgersen
     - description: >-
         Informatics student at NTNU Gløshaugen. At the moment very into
         bouldering.
       image: /img/asmund_staldvik.png
-      jobTitle: Summer intern
+      jobTitle: Summer intern 2018
       jobType: summerIntern
       title: Åsmund Staldvik
   header: Who we are
@@ -139,7 +145,8 @@ employees:
       text: >-
         I like being close to the clients and to work with advanced technology
         to solve their problems
-  section: TEAM
+  section: Team
+  internsHeader: Who they were
+  internsSection: Summer interns
 buttonText: Join the Team
 ---
-

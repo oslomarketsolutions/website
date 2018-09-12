@@ -94,7 +94,8 @@
     grid-column-gap: 16px;
     padding: 96px 0;
 
-    .textContainer {
+    .textContainer,
+    .summerInternsHeader {
       grid-column: 2 / span 6;
       grid-row: 1;
 
@@ -111,9 +112,10 @@
       }
     }
 
-    .employeeWrapper {
+    .employeeWrapper,
+    .internsWrapper {
       grid-column: $full;
-      grid-row: 4;
+      grid-row: 2;
       display: flex;
       flex-flow: row wrap;
       -ms-grid-column-align: center;
@@ -121,6 +123,7 @@
       margin: $XL -16px 0 -14px;
       max-width: 1170px;
       transition: max-width 0.3s ease;
+      padding-bottom: 96px;
 
       .quoteWrapper {
         margin: 16px;
@@ -139,6 +142,15 @@
         }
       }
     }
+
+    .summerInternsHeader {
+      grid-row: 3;
+    }
+    .internsWrapper {
+      grid-row: 4;
+      padding-bottom: 0;
+      width: 1170px;
+    }
   }
 
   .joinTheTeam {
@@ -155,11 +167,13 @@
 @media (max-width: 1172px) {
   .aboutPage {
     .aboutEmployees {
-      .textContainer {
+      .textContainer,
+      .summerInternsHeader {
         grid-column: 3 / span 6;
       }
 
-      .employeeWrapper {
+      .employeeWrapper,
+      .internsWrapper {
         max-width: 780px;
         margin: $XL 0 0;
 
@@ -170,6 +184,10 @@
             width: 100%;
           }
         }
+      }
+
+      .internsWrapper {
+        width: initial;
       }
     }
   }
@@ -202,7 +220,8 @@
       }
     }
     .aboutEmployees {
-      .employeeWrapper {
+      .employeeWrapper,
+      .internsWrapper {
         grid-column: 1 / span 10;
       }
     }
@@ -212,7 +231,8 @@
 @media (max-width: 814px) {
   .aboutPage {
     .aboutEmployees {
-      .employeeWrapper {
+      .employeeWrapper,
+      .internsWrapper {
         max-width: 684px;
 
         .quoteWrapper {
@@ -226,7 +246,8 @@
 @media (max-width: 690px) {
   .aboutPage {
     .aboutEmployees {
-      .employeeWrapper {
+      .employeeWrapper,
+      .internsWrapper {
         max-width: 375px;
 
         .quoteWrapper {
@@ -242,7 +263,8 @@
     .hero,
     .history,
     .aboutEmployees {
-      .textContainer {
+      .textContainer,
+      .summerInternsHeader {
         grid-column: 2 / span 8;
       }
     }
@@ -259,19 +281,10 @@
 @media (max-width: 450px) {
   .aboutPage {
     .aboutEmployees {
-      .employeeWrapper {
+      .employeeWrapper,
+      .internsWrapper {
         max-width: 100%;
       }
     }
   }
 }
-
-/* @media (max-width: 374px) {
-  .aboutPage {
-    .aboutEmployees {
-      .employeeWrapper {
-        max-width: 320px;
-      }
-    }
-  }
-} */

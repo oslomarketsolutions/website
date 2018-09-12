@@ -45,16 +45,22 @@ employees:
       jobTitle: Prosjektleder
       jobType: management
       title: Christian Blütecher
-    - description: 'DevOps-, automatiserings- og sikkerhetsentusiast'
-      image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
-      jobTitle: Driftssjef
-      jobType: operations
-      title: Andreas Holen
     - description: Problemløser med forkjærlighet for David Lynch
       image: /img/inga_wiik-onnesjo_oms_oslo_bors_fhs_5897.jpg
       jobTitle: Supportansvarlig
       jobType: support
       title: Inga Wiik-Önnesjö
+    - description: 'DevOps-, automatiserings- og sikkerhetsentusiast'
+      image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
+      jobTitle: Driftssjef
+      jobType: operations
+      title: Andreas Holen
+    - description: >-
+        Informasjonssikkerhet student ved NTNU og deltidsansatt.
+      image: /img/0.jpeg
+      jobTitle: Utvikler/ Sikkerhetsforsker
+      jobType: operations
+      title: Elias Thøgersen
     - description: >-
         Fullstack-utvikler som er interessert i ny teknologi, DX, a11y, Linux,
         langrenn og å tusle i norsk natur.
@@ -120,20 +126,19 @@ employees:
       jobType: backEnd
       title: Simen Flatby
     - description: >-
-        Har lekser som må gjøres, kaffe som må serveres og gjennomsnittlig kode
-        som må skrives. Har ikke tid til dette.
+        Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS. Kildekoden finnes på GitHub.
       image: /img/0.jpeg
-      jobTitle: Sommervikar
+      jobTitle: Sommervikar 2018
       jobType: summerIntern
       title: Elias Thøgersen
     - description: >-
         Informatikkstudent ved NTNU Gløshaugen. For øyeblikket veldig
         interessert i buldring.
       image: /img/asmund_staldvik.png
-      jobTitle: Sommervikar
+      jobTitle: Sommervikar 2018
       jobType: summerIntern
       title: Åsmund Staldvik
-  header: Hvem er vi
+  header: Hvem vi er
   quotes:
     - author: '- Medarbeiderundersøkelse 2018'
       text: >
@@ -143,7 +148,8 @@ employees:
       text: >
         Jeg liker nærheten til kundene og å få jobbe med avansert teknologi for
         å løse deres problemer
-  section: TEAM
+  section: Team
+  internsHeader: Hvem de var
+  internsSection: Sommervikarer
 buttonText: Join the Team
 ---
-

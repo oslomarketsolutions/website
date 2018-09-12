@@ -28,6 +28,13 @@ export const AboutPageTemplate = ({
     employees.employeeList.splice(1, 0, { title: 'quoteWrapper' });
   }
 
+  const summerInterns = employees.employeeList.filter(
+    employee => employee.jobType === 'summerIntern',
+  );
+  const employeesWithoutInterns = employees.employeeList.filter(
+    employee => employee.jobType !== 'summerIntern',
+  );
+
   return (
     <main className={styles.aboutPage}>
       <section className={styles.hero}>
@@ -57,8 +64,8 @@ export const AboutPageTemplate = ({
         <div className={styles.employeeWrapper}>
           {// The second element in sortedEmployeeList is a placeholder
           // for the quote.
-          employees.employeeList &&
-            employees.employeeList.map((employee, index) => {
+          employeesWithoutInterns &&
+            employeesWithoutInterns.map((employee, index) => {
               const {
                 title: employeeName,
                 description: employeeDescription,
@@ -96,6 +103,27 @@ export const AboutPageTemplate = ({
                 />
               );
             })}
+        </div>
+        <div className={styles.summerInternsHeader}>
+          <p className="overline">{employees.internsSection}</p>
+          <h2>{employees.internsHeader}</h2>
+        </div>
+        <div className={styles.internsWrapper}>
+          {summerInterns &&
+            summerInterns.map(summerIntern => (
+              <EmployeeCard
+                key={summerIntern.title}
+                name={summerIntern.title}
+                description={summerIntern.description}
+                jobTitle={summerIntern.jobTitle}
+                resolutions={findImageResolutions(
+                  summerIntern.image,
+                  employeeResolutions,
+                )}
+                jobType={summerIntern.jobType}
+                image={summerIntern.image}
+              />
+            ))}
         </div>
       </section>
       <section className={styles.joinTheTeam}>
@@ -172,6 +200,8 @@ export const aboutPageQuery = graphql`
           text
         }
         employees {
+          internsSection
+          internsHeader
           section
           header
           quotes {
