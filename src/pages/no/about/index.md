@@ -126,8 +126,7 @@ employees:
       jobType: backEnd
       title: Simen Flatby
     - description: >-
-        Har lekser som må gjøres, kaffe som må serveres og gjennomsnittlig kode
-        som må skrives. Har ikke tid til dette.
+        Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS. Kildekoden finnes på GitHub.
       image: /img/0.jpeg
       jobTitle: Sommervikar 2018
       jobType: summerIntern

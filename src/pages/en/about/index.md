@@ -122,8 +122,8 @@ employees:
       jobType: backEnd
       title: Øystein Barstad
     - description: >-
-        Got homework to do, coffee to serve and mediocre code to write. No time
-        for this.
+        Our main objective the summer of 2018 was to develop a new company website.
+        The source code can be found on GitHub.
       image: /img/0.jpeg
       jobTitle: Summer intern 2018
       jobType: summerIntern
