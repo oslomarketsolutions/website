@@ -51,10 +51,9 @@ employees:
       jobType: operations
       title: Andreas Holen
     - description: >-
-        A decent amount of text that tells a little about who i am, but not too much,
-        and which causes the reader to nose exhale is coming soon.
+        Information security student at NTNU and part-time employee.
       image: /img/0.jpeg
-      jobTitle: Title
+      jobTitle: Developer/Security researcher
       jobType: operations
       title: Elias Thøgersen
     - description: >-

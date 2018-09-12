@@ -56,10 +56,9 @@ employees:
       jobType: operations
       title: Andreas Holen
     - description: >-
-        Ålreit lang tekst som forteller litt om hvem jeg er, men ikke for mye,
-        og som får leseren til å trekke såvidt på smilebåndet kommer snart.
+        Informasjonssikkerhet student ved NTNU og deltidsansatt.
       image: /img/0.jpeg
-      jobTitle: Tittel
+      jobTitle: Utvikler/ Sikkerhetsforsker
       jobType: operations
       title: Elias Thøgersen
     - description: >-
