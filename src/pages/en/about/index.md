@@ -23,7 +23,7 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: " Ask me anything and I'll get a colleague who can give you a good answer."
+    - description: ' Ask me anything and I''ll get a colleague who can give you a good answer.'
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
@@ -50,8 +50,7 @@ employees:
       jobTitle: Head of IT Operations
       jobType: operations
       title: Andreas Holen
-    - description: >-
-        Information security student at NTNU and part-time employee.
+    - description: Information security student at NTNU and part-time employee.
       image: /img/0.jpeg
       jobTitle: Developer/Security researcher
       jobType: operations
@@ -70,7 +69,7 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Kristian Hagen
-    - description: "I didn't choose the thug life, the thug life chose me."
+    - description: 'I didn''t choose the thug life, the thug life chose me.'
       image: /img/haakon_winther_oms_oslo_bors_fhs_5659.jpg
       jobTitle: Frontend developer
       jobType: frontEnd
@@ -116,14 +115,9 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Simen Flatby
-    - description: B.Eng Computer Engineering from NTNU.
-      image: /img/øystein_barstad_oms_oslo_bors_fhs_6002.jpg
-      jobTitle: Backend developer
-      jobType: backEnd
-      title: Øystein Barstad
     - description: >-
-        Our main objective the summer of 2018 was to develop a new company website.
-        The source code can be found on GitHub.
+        Our main objective the summer of 2018 was to develop a new company
+        website. The source code can be found on GitHub.
       image: /img/0.jpeg
       jobTitle: Summer intern 2018
       jobType: summerIntern
@@ -136,6 +130,8 @@ employees:
       jobType: summerIntern
       title: Åsmund Staldvik
   header: Who we are
+  internsHeader: Who they were
+  internsSection: Summer interns
   quotes:
     - author: Comment from employee survey
       text: >-
@@ -146,7 +142,6 @@ employees:
         I like being close to the clients and to work with advanced technology
         to solve their problems
   section: Team
-  internsHeader: Who they were
-  internsSection: Summer interns
 buttonText: Join the Team
 ---
+
