@@ -55,8 +55,7 @@ employees:
       jobTitle: Driftssjef
       jobType: operations
       title: Andreas Holen
-    - description: >-
-        Informasjonssikkerhet student ved NTNU og deltidsansatt.
+    - description: Informasjonssikkerhet student ved NTNU og deltidsansatt.
       image: /img/0.jpeg
       jobTitle: Utvikler/ Sikkerhetsforsker
       jobType: operations
@@ -115,18 +114,14 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
-    - description: B.Eng dataingeniør ved NTNU.
-      image: /img/øystein_barstad_oms_oslo_bors_fhs_6002.jpg
-      jobTitle: Backendutvikler
-      jobType: backEnd
-      title: Øystein Barstad
     - description: "Skal bare gjøre ferdig... \U0001F468\U0001F3FB‍\U0001F4BB"
       image: /img/simen_flatby_oms_oslo_bors_fhs_5762.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
     - description: >-
-        Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS. Kildekoden finnes på GitHub.
+        Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS.
+        Kildekoden finnes på GitHub.
       image: /img/0.jpeg
       jobTitle: Sommervikar 2018
       jobType: summerIntern
@@ -139,6 +134,8 @@ employees:
       jobType: summerIntern
       title: Åsmund Staldvik
   header: Hvem vi er
+  internsHeader: Hvem de var
+  internsSection: Sommervikarer
   quotes:
     - author: '- Medarbeiderundersøkelse 2018'
       text: >
@@ -149,7 +146,6 @@ employees:
         Jeg liker nærheten til kundene og å få jobbe med avansert teknologi for
         å løse deres problemer
   section: Team
-  internsHeader: Hvem de var
-  internsSection: Sommervikarer
 buttonText: Join the Team
 ---
+
