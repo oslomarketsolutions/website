@@ -116,11 +116,10 @@ header.headerUnderline {
         transition: all 200ms ease;
       }
     }
-    a:hover {
-      color: $hoverColor;
-    }
-    a:active {
-      color: $darkBlue;
+    @media (min-width: 1025px) {
+      a:hover {
+        color: $hoverColor;
+      }
     }
   }
 
@@ -434,12 +433,6 @@ header.headerUnderline {
 
 header.navColorWhite .navbar {
   color: $white;
-
-  nav {
-    a:active {
-      color: $white;
-    }
-  }
 
   li.cookie {
     .cookieButton {
