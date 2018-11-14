@@ -226,9 +226,13 @@ export default class Navbar extends Component {
                   onClick={this.closeLanguageSelector}
                 >
                   {this.props.language === 'en' ? 'Careers' : 'Jobb'}
-                  <div className={styles.notification}>
-                    <p className="notification">{data.numberOfJobVacancies}</p>
-                  </div>
+                  {data.numberOfJobVacancies && (
+                    <div className={styles.notification}>
+                      <p className="notification">
+                        {data.numberOfJobVacancies}
+                      </p>
+                    </div>
+                  )}
                 </Link>
               </li>
               <li
