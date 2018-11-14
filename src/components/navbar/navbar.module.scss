@@ -119,6 +119,9 @@ header.headerUnderline {
     a:hover {
       color: $hoverColor;
     }
+    a:active {
+      color: $darkBlue;
+    }
   }
 
   li {
@@ -431,6 +434,12 @@ header.headerUnderline {
 
 header.navColorWhite .navbar {
   color: $white;
+
+  nav {
+    a:active {
+      color: $white;
+    }
+  }
 
   li.cookie {
     .cookieButton {
