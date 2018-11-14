@@ -116,8 +116,10 @@ header.headerUnderline {
         transition: all 200ms ease;
       }
     }
-    a:hover {
-      color: $hoverColor;
+    @media (min-width: 1025px) {
+      a:hover {
+        color: $hoverColor;
+      }
     }
   }
 
