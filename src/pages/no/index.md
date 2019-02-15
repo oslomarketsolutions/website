@@ -82,8 +82,8 @@ customization:
       isDark: false
     - buttonText: Lær mer
       description: >-
-        En full portal, skreddersydd til ditt behov enten det er aksjer, fond
-        eller annet.
+        En full portal, skreddersydd til ditt behov enten det er aksjehandel,
+        fondsportal eller annet.
       features:
         - Avansert handel
         - H-Testing
