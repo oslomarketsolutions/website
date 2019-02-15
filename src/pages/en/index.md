@@ -90,9 +90,9 @@ customization:
         - Real Time
         - Customized
         - User Friendly
-        - ProFamily
-        - Advent
-        - Centevo
+        - KYC
+        - Biometic auth
+        - Trading
       header: Hosted solutions
       icon: /img/Icon-Server-Dark.svg
       id: investorportal
