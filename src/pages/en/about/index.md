@@ -23,7 +23,10 @@ history:
     and great design.
 employees:
   employeeList:
-    - description: ' Ask me anything and I''ll get a colleague who can give you a good answer.'
+    - description: >-
+        A firm believer in the importance of happiness at work, working to
+        create an innovative culture and delivering state of the art solutions
+        with high quality.
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
       jobTitle: CEO
       jobType: management
@@ -81,7 +84,7 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Anders Ranvik
-    - description: Øl-entusiast
+    - description: Curing cyber sickness
       image: /img/rebecca_gjerstad_oms_oslo_bors_fhs_5382.jpg
       jobTitle: Frontend developer/UX Designer
       jobType: designer
