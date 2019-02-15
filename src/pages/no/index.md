@@ -67,14 +67,15 @@ customization:
       isDark: false
     - buttonText: Lær mer
       description: >-
-        Standardkomponenter  i React og moderne JavaScript, bygget for å være
-        enkle å integrere i eksisterende løsninger
+        Fleksible standardkomponenter  i React og moderne JavaScript, bygget for
+        å være enkle å integrere i eksisterende løsninger.
       features:
-        - Rangeringer
-        - Orderdybde
+        - Ordedybde
         - Heat maps
         - Avansert graf
         - Global data
+        - Rangeringer
+        - Kursliste
       header: OMS Components
       icon: /img/Icon-React-Gray.svg
       id: omsComponents
@@ -136,3 +137,4 @@ otherProducts:
       Løpende oppdatert aksjekurs og aksjonærlister some sømløst integreres i
       selskapets eksisterende nettsider
 ---
+
