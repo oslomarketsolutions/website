@@ -72,10 +72,11 @@ customization:
         Well documented React components for those who want more autonomy, but
         still high quality.
       features:
-        - Rankings
         - Advanced charts
         - Heat maps
         - Order depth
+        - Rankings
+        - Quotes lists
         - Worldwide data
       header: OMS Components
       icon: /img/Icon-React-Gray.svg
@@ -138,3 +139,4 @@ otherProducts:
       Showcase your share to existing and potential investors with flexible web
       modules from OMS. From simple quotes to advanced charting tools.
 ---
+
