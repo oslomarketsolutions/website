@@ -34,10 +34,15 @@ const FooterPreview = ({ entry }) => {
       },
       contactInfo: {
         title: entry.getIn(['data', 'contactInfo', 'title']),
-        visitingAddress: entry.getIn([
+        visitingAddressNorway: entry.getIn([
           'data',
           'contactInfo',
-          'visitingAddress',
+          'visitingAddressNorway',
+        ]),
+        visitingAddressSweden: entry.getIn([
+          'data',
+          'contactInfo',
+          'visitingAddressSweden',
         ]),
         phoneNumber: entry.getIn(['data', 'contactInfo', 'phoneNumber']),
         email: entry.getIn(['data', 'contactInfo', 'email']),
