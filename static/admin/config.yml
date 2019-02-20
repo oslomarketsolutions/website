@@ -11,7 +11,7 @@ collections:
     delete: false
     files:
 
-############### FOOTER ###############
+############### FOOTER ################
 
       - file: "src/pages/footer/index.md"
         name: "footer"
