@@ -31,7 +31,8 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
-    - jobTitle: Country Manager Sverige
+    - image: /img/placeholder.jpg
+      jobTitle: Country Manager Sverige
       jobType: management
       title: Michel Gafgo
     - description: >-
