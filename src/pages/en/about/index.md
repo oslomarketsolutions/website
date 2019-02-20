@@ -31,6 +31,9 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
+    - jobTitle: Country Manager Sweden
+      jobType: management
+      title: Michel Gafgo
     - description: >-
         Contact me for FinTech, data feed and financial web platforms.
         Interested in Sailing and Digitization.
@@ -53,6 +56,10 @@ employees:
       jobTitle: Head of IT Operations
       jobType: operations
       title: Andreas Holen
+    - image: /img/jorgen.jpg
+      jobTitle: System Administrator
+      jobType: operations
+      title: Jørgen Paulsen
     - description: Information security student at NTNU and part-time employee.
       image: /img/0.jpeg
       jobTitle: Developer/Security researcher
