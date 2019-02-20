@@ -65,7 +65,7 @@ employees:
       title: Jørgen Paulsen
     - description: Informasjonssikkerhet student ved NTNU og deltidsansatt.
       image: /img/0.jpeg
-      jobTitle: Utvikler/ Sikkerhetsforsker
+      jobTitle: Utvikler/Sikkerhetsforsker
       jobType: operations
       title: Elias Thøgersen
     - description: >-
