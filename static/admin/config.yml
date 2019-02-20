@@ -45,7 +45,8 @@ collections:
             ]}
           - {label: "Contact info", name: "contactInfo", widget: "object", fields: [
               {label: "Name", name: "title", widget: "string"},
-              {label: "Visiting address", name: "visitingAddress", widget: "string"},
+              {label: "Visiting address norway", name: "visitingAddressNorway", widget: "string"},
+              {label: "Visiting address sweden", name: "visitingAddressSweden", widget: "string"},
               {label: "Phone number", name: "phoneNumber", widget: "string"},
               {label: "Email", name: "email", widget: "string"},
               {label: "Mail address", name: "mailAddress", widget: "string"},

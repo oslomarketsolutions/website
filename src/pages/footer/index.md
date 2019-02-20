@@ -20,7 +20,8 @@ groupWebsites:
     url: 'https://newsweb.oslobors.no/'
 contactInfo:
   title: 'Oslo Market Solutions AS'
-  visitingAddress: 'Fred Olsens gate 1, 0152 Oslo'
+  visitingAddressNorway: 'Fred Olsens gate 1, 0152 Oslo'
+  visitingAddressSweden: 'Sibyllegatan 49, 114 42 Stockholm'
   phoneNumber: '+47 40 00 23 13'
   email: 'info@oms.no'
   mailAddress: 'Postboks 1174 Sentrum, 0107 Oslo'
