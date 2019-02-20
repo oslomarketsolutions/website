@@ -286,7 +286,8 @@ export const footerAndNavbarQuery = graphql`
         }
         contactInfo {
           title
-          visitingAddress
+          visitingAddressNorway
+          visitingAddressSweden
           phoneNumber
           email
           mailAddress

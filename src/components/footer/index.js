@@ -117,7 +117,8 @@ const Footer = ({ language, data }) => {
           <h3>{language === 'en' ? 'Contact' : 'Kontakt'}</h3>
           <ul>
             <li>{contactInfo.title}</li>
-            <li>{contactInfo.visitingAddress}</li>
+            <li>{contactInfo.visitingAddressNorway}</li>
+            <li>{contactInfo.visitingAddressSweden}</li>
             <li>{contactInfo.phoneNumber}</li>
             <li>{contactInfo.email}</li>
             <li>{contactInfo.mailAddress}</li>
