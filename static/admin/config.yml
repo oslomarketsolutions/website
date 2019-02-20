@@ -630,4 +630,4 @@ collections:
         name: "navbar"
         label: "Navbar"
         fields:
-          - {label: "Number of job vacancies", name: "numberOfJobVacancies", widget: "string", default: " "}
+          - {label: "Number of job vacancies", name: "numberOfJobVacancies", widget: "string", default: " ", required: false}
