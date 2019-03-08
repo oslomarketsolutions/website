@@ -31,7 +31,8 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
-    - image: /img/michel1.jpg
+    - description: Kommunikation är nyckeln för ett bra samarbete.
+      image: /img/michel1.jpg
       jobTitle: Country Manager Sverige
       jobType: management
       title: Michel Gafgo
