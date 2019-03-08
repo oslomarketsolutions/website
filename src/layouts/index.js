@@ -7,6 +7,7 @@ import {
   faFacebook,
   faMedium,
   faGithubSquare,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faMapPin,
@@ -48,6 +49,7 @@ export const faLibrary = library.add(
   faFacebook,
   faMedium,
   faGithubSquare,
+  faInstagram,
   faGlobe,
   faCopyright,
   faServer,
