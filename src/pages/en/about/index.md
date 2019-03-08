@@ -31,7 +31,8 @@ employees:
       jobTitle: CEO
       jobType: management
       title: Tine Charlotte Holm
-    - image: /img/michel1.jpg
+    - description: A good opportunity will take benefit from a good cooperation.
+      image: /img/michel1.jpg
       jobTitle: Country Manager Sweden
       jobType: management
       title: Michel Gafgo
