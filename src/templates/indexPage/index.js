@@ -118,6 +118,17 @@ export default class IndexPageTemplate extends Component {
               </li>
               <li>
                 <OutboundLink
+                  eventLabel="Instagram from homepage"
+                  to="https://www.instagram.com/oslomarketsolutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">Link to our Instagram</span>
+                  <FontAwesomeIcon icon={['fab', 'instagram']} />
+                </OutboundLink>
+              </li>
+              <li>
+                <OutboundLink
                   to="https://medium.com/shark-bytes"
                   eventLabel="Shark Bytes Blog from homepage"
                   target="_blank"
