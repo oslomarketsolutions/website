@@ -60,7 +60,8 @@ employees:
       jobTitle: Driftssjef
       jobType: operations
       title: Andreas Holen
-    - image: /img/jorgen.jpg
+    - description: 'TODO: Finne på noe lurt å skrive her.'
+      image: /img/jorgen.jpg
       jobTitle: Systemadministrator
       jobType: operations
       title: Jørgen Paulsen
