@@ -58,7 +58,8 @@ employees:
       jobTitle: Head of IT Operations
       jobType: operations
       title: Andreas Holen
-    - image: /img/jorgen.jpg
+    - description: 'TODO: Think of something clever to put here.'
+      image: /img/jorgen.jpg
       jobTitle: System Administrator
       jobType: operations
       title: Jørgen Paulsen
