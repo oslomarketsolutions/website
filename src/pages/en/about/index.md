@@ -63,11 +63,6 @@ employees:
       jobTitle: System Administrator
       jobType: operations
       title: Jørgen Paulsen
-    - description: Information security student at NTNU and part-time employee.
-      image: /img/0.jpeg
-      jobTitle: Developer/Security researcher
-      jobType: operations
-      title: Elias Thøgersen
     - description: >-
         Fullstack-developer interested in new technology, DX, a11y, Linux, cross
         country skiing and hiking in norwegian nature.
@@ -128,6 +123,11 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Simen Flatby
+    - description: Remind me to update this text.
+      image: /img/0.jpeg
+      jobTitle: Backend developer
+      jobType: backEnd
+      title: Elias Thøgersen
     - description: >-
         Our main objective the summer of 2018 was to develop a new company
         website. The source code can be found on GitHub.
