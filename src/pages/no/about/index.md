@@ -65,11 +65,6 @@ employees:
       jobTitle: Systemadministrator
       jobType: operations
       title: Jørgen Paulsen
-    - description: Informasjonssikkerhet student ved NTNU og deltidsansatt.
-      image: /img/0.jpeg
-      jobTitle: Utvikler/Sikkerhetsforsker
-      jobType: operations
-      title: Elias Thøgersen
     - description: >-
         Fullstack-utvikler som er interessert i ny teknologi, DX, a11y, Linux,
         langrenn og å tusle i norsk natur.
@@ -129,6 +124,11 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
+    - description: Minn meg på å endre denne teksten.
+      image: /img/0.jpeg
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Elias Thøgersen
     - description: >-
         Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS.
         Kildekoden finnes på GitHub.
