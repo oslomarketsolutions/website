@@ -139,7 +139,9 @@ employees:
       jobTitle: Sommervikar 2019
       jobType: summerIntern
       title: Anniken Syvertsen
-    - description: Arena 2.0 backend
+    - description: |-
+        Studerer ingeniørfag data på OsloMet.
+        Opptatt av terrengsykling og bbq.
       image: /img/placeholder.jpg
       jobTitle: Sommervikar 2019
       jobType: summerIntern
