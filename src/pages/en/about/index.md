@@ -128,6 +128,26 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Elias Thøgersen
+    - description: Arena 2.0 frontend
+      image: /img/placeholder.jpg
+      jobTitle: Summer intern 2019
+      jobType: summerIntern
+      title: Tore Stensaker Tefre
+    - description: Arena 2.0 frontend
+      image: /img/placeholder-female.jpg
+      jobTitle: Summer intern 2019
+      jobType: summerIntern
+      title: Anniken Syvertsen
+    - description: Arena 2.0 backend
+      image: /img/placeholder.jpg
+      jobTitle: Summer intern 2019
+      jobType: summerIntern
+      title: Fredrik Frostad
+    - description: Arena 2.0 backend
+      image: /img/placeholder-female.jpg
+      jobTitle: Summer intern 2019
+      jobType: summerIntern
+      title: Ane Sofie Smith Kristiansen
     - description: >-
         Our main objective the summer of 2018 was to develop a new company
         website. The source code can be found on GitHub.
