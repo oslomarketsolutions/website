@@ -138,7 +138,9 @@ employees:
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Anniken Syvertsen
-    - description: Arena 2.0 backend
+    - description: |-
+        Computer engineering student at OsloMet.
+        Likes mountainbikes and bbq.
       image: /img/placeholder.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
