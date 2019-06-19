@@ -143,6 +143,26 @@ employees:
       jobTitle: Sommervikar 2018
       jobType: summerIntern
       title: Åsmund Staldvik
+    - description: Arena 2.0 frontend
+      image: /img/placeholder.jpg
+      jobTitle: Sommervikar 2019
+      jobType: summerIntern
+      title: Tore Stensaker Tefre
+    - description: Arena 2.0 frontend
+      image: /img/placeholder-female.jpg
+      jobTitle: Sommervikar 2019
+      jobType: summerIntern
+      title: Anniken Syvertsen
+    - description: Arena 2.0 backend
+      image: /img/placeholder.jpg
+      jobTitle: Sommervikar 2019
+      jobType: summerIntern
+      title: Fredrik Frostad
+    - description: Arena 2.0 backend
+      image: /img/placeholder-female.jpg
+      jobTitle: Sommervikar 2019
+      jobType: summerIntern
+      title: Ane Sofie Smith Kristiansen
   header: Hvem vi er
   internsHeader: Hvem de var
   internsSection: Sommervikarer
