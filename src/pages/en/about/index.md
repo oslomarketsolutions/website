@@ -129,19 +129,19 @@ employees:
       jobType: backEnd
       title: Elias Thøgersen
     - description: Arena 2.0 frontend
-      image: /img/placeholder.jpg
+      image: /img/toretefre.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Tore Stensaker Tefre
     - description: Arena 2.0 frontend
-      image: /img/placeholder-female.jpg
+      image: /img/annikensyvertsen.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Anniken Syvertsen
     - description: |-
         Computer engineering student at OsloMet.
         Likes mountainbikes and bbq.
-      image: /img/placeholder.jpg
+      image: /img/fredrikfrostad.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Fredrik Frostad
