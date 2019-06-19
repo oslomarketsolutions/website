@@ -129,20 +129,6 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Elias Thøgersen
-    - description: >-
-        Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS.
-        Kildekoden finnes på GitHub.
-      image: /img/0.jpeg
-      jobTitle: Sommervikar 2018
-      jobType: summerIntern
-      title: Elias Thøgersen
-    - description: >-
-        Informatikkstudent ved NTNU Gløshaugen. For øyeblikket veldig
-        interessert i buldring.
-      image: /img/asmund_staldvik.png
-      jobTitle: Sommervikar 2018
-      jobType: summerIntern
-      title: Åsmund Staldvik
     - description: Arena 2.0 frontend
       image: /img/placeholder.jpg
       jobTitle: Sommervikar 2019
@@ -163,6 +149,20 @@ employees:
       jobTitle: Sommervikar 2019
       jobType: summerIntern
       title: Ane Sofie Smith Kristiansen
+    - description: >-
+        Vår hovedoppgave sommeren 2018 var å lage ny nettside til OMS.
+        Kildekoden finnes på GitHub.
+      image: /img/0.jpeg
+      jobTitle: Sommervikar 2018
+      jobType: summerIntern
+      title: Elias Thøgersen
+    - description: >-
+        Informatikkstudent ved NTNU Gløshaugen. For øyeblikket veldig
+        interessert i buldring.
+      image: /img/asmund_staldvik.png
+      jobTitle: Sommervikar 2018
+      jobType: summerIntern
+      title: Åsmund Staldvik
   header: Hvem vi er
   internsHeader: Hvem de var
   internsSection: Sommervikarer
