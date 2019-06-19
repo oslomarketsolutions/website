@@ -129,7 +129,7 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Elias Thøgersen
-    - description: Arena 2.0 frontend
+    - description: "Frontendutvikler og NTNU-student. Sjekker trolig ut et nytt album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Sommervikar 2019
       jobType: summerIntern
