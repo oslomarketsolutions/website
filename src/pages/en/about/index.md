@@ -146,7 +146,7 @@ employees:
       jobType: summerIntern
       title: Fredrik Frostad
     - description: Arena 2.0 backend
-      image: /img/placeholder-female.jpg
+      image: /img/anesofiesmithkristiansen.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Ane Sofie Smith Kristiansen
