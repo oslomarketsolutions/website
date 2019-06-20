@@ -133,7 +133,9 @@ employees:
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Tore Stensaker Tefre
-    - description: Arena 2.0 frontend
+    - description: >-
+        Front end developer who studies informatics at NTNU. Loves both
+        computers and mountain hiking.
       image: /img/annikensyvertsen.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
@@ -145,7 +147,9 @@ employees:
       jobTitle: Summer intern 2019
       jobType: summerIntern
       title: Fredrik Frostad
-    - description: Arena 2.0 backend
+    - description: >-
+        Engineering student at NTNU, with a plan b of becoming a confectioner.
+        The combination results in a lot of gingerbread houses.
       image: /img/anesofiesmithkristiansen.jpg
       jobTitle: Summer intern 2019
       jobType: summerIntern
