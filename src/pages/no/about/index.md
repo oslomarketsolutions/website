@@ -149,7 +149,7 @@ employees:
       jobType: summerIntern
       title: Fredrik Frostad
     - description: >-
-        Ingeniørstudent ved NTNU, med en plan b om å bli konditor. Kompinasjonen
+        Ingeniørstudent ved NTNU, med en plan b om å bli konditor. Kombinasjonen
         resulterer i mange pepperkakehus.
       image: /img/anesofiesmithkristiansen.jpg
       jobTitle: Sommervikar 2019
