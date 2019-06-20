@@ -134,7 +134,9 @@ employees:
       jobTitle: Sommervikar 2019
       jobType: summerIntern
       title: Tore Stensaker Tefre
-    - description: Arena 2.0 frontend
+    - description: >-
+        Frontend-utvikler som studerer informatikk ved NTNU. Trives godt foran
+        datamaskiner og i naturen.
       image: /img/annikensyvertsen.jpg
       jobTitle: Sommervikar 2019
       jobType: summerIntern
@@ -146,7 +148,9 @@ employees:
       jobTitle: Sommervikar 2019
       jobType: summerIntern
       title: Fredrik Frostad
-    - description: Arena 2.0 backend
+    - description: >-
+        Ingeniørstudent ved NTNU, med en plan b om å bli konditor. Kompinasjonen
+        resulterer i mange pepperkakehus.
       image: /img/anesofiesmithkristiansen.jpg
       jobTitle: Sommervikar 2019
       jobType: summerIntern
