@@ -92,11 +92,11 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Anders Ranvik
-    - description: 'Frontend, frontend.'
-      image: /img/rebecca_gjerstad_oms_oslo_bors_fhs_5382.jpg
-      jobTitle: Frontendutvikler/UX Designer
-      jobType: designer
-      title: Rebecca Gjerstad
+    - description: Hmm
+      image: /img/asmund_staldvik.png
+      jobTitle: Frontendutvikler
+      jobType: frontEnd
+      title: Åsmund Staldvik
     - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
