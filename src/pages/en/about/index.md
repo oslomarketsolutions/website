@@ -89,11 +89,11 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Anders Ranvik
-    - description: Curing cyber sickness
-      image: /img/rebecca_gjerstad_oms_oslo_bors_fhs_5382.jpg
-      jobTitle: Frontend developer/UX Designer
-      jobType: designer
-      title: Rebecca Gjerstad
+    - description: Hmm
+      image: /img/asmund_staldvik.png
+      jobTitle: Frontend developer
+      jobType: frontEnd
+      title: Åsmund Staldvik
     - description: >-
         Digital designer focused on creating usable and delightful user
         experiences. Likes to tinker with React and friends.
