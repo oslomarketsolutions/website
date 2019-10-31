@@ -61,8 +61,8 @@ perks:
     - icon: /img/Icon-Pension.svg
       perkTitle: Pension
       text: |-
-        5 % of salary from 1 kr to  7,1G.
-        8 % of salary from  7,1 to 12G
+        7% of salary from 1 kr to  7,1G.
+        12% of salary from  7,1 to 12G
     - icon: /img/Icon-Insurance.svg
       perkTitle: Insurance
       text: >-
