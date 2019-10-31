@@ -64,7 +64,7 @@ perks:
       perkTitle: Pensjon
       text: >-
         Gode pensjonsordninger skal sikre at våre ansatte har det bra også etter
-        endt arbeidsliv. 5 % fra 1 kr til 7,1G. 8 % fra 7,1 til 12G
+        endt arbeidsliv. 7% fra 0 til 7,1G. 12% fra 7,1 til 12G
     - icon: /img/Icon-Stock.svg
       perkTitle: Aksjesparing for ansatte
       text: >-
