@@ -129,6 +129,13 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Elias Thøgersen
+    - description: |-
+        Deltidsansatt. Studerer ingeniørfag data på OsloMet.
+        Opptatt av terrengsykling og bbq.
+      image: /img/fredrikfrostad.jpg
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Fredrik Frostad
     - description: "Frontendutvikler og NTNU-student. Sjekker trolig ut et nytt album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Sommervikar 2019
