@@ -50,9 +50,6 @@ perks:
     - icon: /img/Icon-Spotify.svg
       perkTitle: Spotify
       text: Paid subscription to Spotify or your favourite streaming service
-    - icon: /img/Icon-Stock.svg
-      perkTitle: Stock saving program
-      text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Social events
       text: >-
@@ -75,8 +72,8 @@ perks:
     - icon: /img/Icon-Beach.svg
       perkTitle: Apartments
       text: >-
-        When you need sun you can rent apartments in Villefranche (France) and
-        Nerja (Spain) for a small sum
+        When you need sun you can rent apartments in Barcelona (Spain) and Nerja
+        (Spain) for a small sum
     - icon: /img/Icon-Massage.svg
       perkTitle: Massage
       text: Every week there's a Naprapathy treatment offer if needed.
