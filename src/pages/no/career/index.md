@@ -65,11 +65,6 @@ perks:
       text: >-
         Gode pensjonsordninger skal sikre at våre ansatte har det bra også etter
         endt arbeidsliv. 7% fra 1 kr til 7,1G. 12% fra 7,1 til 12G
-    - icon: /img/Icon-Stock.svg
-      perkTitle: Aksjesparing for ansatte
-      text: >-
-        Ansatte i Oslo Børs VPS kan spare 1 000 kr i OSLO-aksjen hver måned, med
-        20% rabatt.
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Sosialt
       text: >-
@@ -77,7 +72,9 @@ perks:
         ganger pr år
     - icon: /img/Icon-Ski.svg
       perkTitle: Firmahytter
-      text: Firmahytter som kan leies i både Nesbyen og Trysil
+      text: >-
+        Firmahytter som kan leies i Nesbyen og Trysil. Firmaleiligheter i
+        Barcelona og Nerja. 
     - icon: /img/Icon-Beach.svg
       perkTitle: Ferieleiligheter
       text: Konsernet har 2 ferieleilighter i Villefranche og Albir
