@@ -72,12 +72,10 @@ perks:
         ganger pr år
     - icon: /img/Icon-Ski.svg
       perkTitle: Firmahytter
-      text: >-
-        Firmahytter som kan leies i Nesbyen og Trysil. Firmaleiligheter i
-        Barcelona og Nerja. 
+      text: 'Firmahytter som kan leies i både Nesbyen og Trysil. '
     - icon: /img/Icon-Beach.svg
       perkTitle: Ferieleiligheter
-      text: Konsernet har 2 ferieleilighter i Villefranche og Albir
+      text: Konsernet har 2 ferieleilighter i Barcelona og Nerja
     - icon: /img/Icon-Lunch.svg
       perkTitle: 'Frokost, lunsj og kaffe'
       text: >-
