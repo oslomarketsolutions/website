@@ -124,7 +124,7 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
-    - description: Minn meg på å endre denne teksten.
+    - description: Minn meg på å endre denne teksten!
       image: /img/0.jpeg
       jobTitle: Backendutvikler
       jobType: backEnd
