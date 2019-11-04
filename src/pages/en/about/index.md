@@ -123,7 +123,7 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Simen Flatby
-    - description: Remind me to update this text.
+    - description: Remind me to update this text!
       image: /img/0.jpeg
       jobTitle: Backend developer
       jobType: backEnd
