@@ -97,6 +97,10 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
+    - image: /img/elisabeth.jpg
+      jobTitle: Webutvikler
+      jobType: frontEnd
+      title: Elisabeth Irgens
     - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
