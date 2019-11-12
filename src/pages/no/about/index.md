@@ -97,7 +97,8 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
-    - image: /img/elisabeth.jpg
+    - description: "Jeg liker HTML, CSS og SVG. En vakker dag skal jeg bli glad i JavaScript også. \U0001F33B"
+      image: /img/elisabeth.jpg
       jobTitle: Webutvikler
       jobType: frontEnd
       title: Elisabeth Irgens
