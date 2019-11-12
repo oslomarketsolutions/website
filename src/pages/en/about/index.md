@@ -94,7 +94,7 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Åsmund Staldvik
-    - description: ''
+    - description: "I like HTML, CSS and SVG. One fine day, I'll learn to love JavaScript too. \U0001F33B\n"
       image: /img/elisabeth.jpg
       jobTitle: Frontend Developer
       jobType: frontEnd
