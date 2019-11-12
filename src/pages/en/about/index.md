@@ -94,6 +94,11 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Åsmund Staldvik
+    - description: ''
+      image: /img/elisabeth.jpg
+      jobTitle: Frontend Developer
+      jobType: frontEnd
+      title: Elisabeth Irgens
     - description: >-
         Digital designer focused on creating usable and delightful user
         experiences. Likes to tinker with React and friends.
