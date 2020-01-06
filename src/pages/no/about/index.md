@@ -97,6 +97,11 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
+    - description: "Jeg liker HTML, CSS og SVG. En vakker dag skal jeg bli glad i JavaScript også. \U0001F33B"
+      image: /img/elisabeth.jpg
+      jobTitle: Webutvikler
+      jobType: frontEnd
+      title: Elisabeth Irgens
     - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: UX Designer
@@ -124,11 +129,18 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Simen Flatby
-    - description: Minn meg på å endre denne teksten.
+    - description: Minn meg på å endre denne teksten!
       image: /img/0.jpeg
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Elias Thøgersen
+    - description: |-
+        Deltidsansatt. Studerer ingeniørfag data på OsloMet.
+        Opptatt av terrengsykling og bbq.
+      image: /img/fredrikfrostad.jpg
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Fredrik Frostad
     - description: "Frontendutvikler og NTNU-student. Sjekker trolig ut et nytt album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Sommervikar 2019

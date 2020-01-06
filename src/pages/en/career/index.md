@@ -50,9 +50,6 @@ perks:
     - icon: /img/Icon-Spotify.svg
       perkTitle: Spotify
       text: Paid subscription to Spotify or your favourite streaming service
-    - icon: /img/Icon-Stock.svg
-      perkTitle: Stock saving program
-      text: 'Buy stocks for up to 1,000 NOK/month with a 20% discount'
     - icon: /img/Icon-SocialEvents.svg
       perkTitle: Social events
       text: >-
@@ -61,8 +58,8 @@ perks:
     - icon: /img/Icon-Pension.svg
       perkTitle: Pension
       text: |-
-        5 % of salary from 1 kr to  7,1G.
-        8 % of salary from  7,1 to 12G
+        7% of salary from 1 kr to  7,1G.
+        12% of salary from  7,1 to 12G
     - icon: /img/Icon-Insurance.svg
       perkTitle: Insurance
       text: >-
@@ -75,8 +72,8 @@ perks:
     - icon: /img/Icon-Beach.svg
       perkTitle: Apartments
       text: >-
-        When you need sun you can rent apartments in Villefranche (France) and
-        Nerja (Spain) for a small sum
+        When you need sun you can rent apartments in Barcelona (Spain) and Nerja
+        (Spain) for a small sum
     - icon: /img/Icon-Massage.svg
       perkTitle: Massage
       text: Every week there's a Naprapathy treatment offer if needed.

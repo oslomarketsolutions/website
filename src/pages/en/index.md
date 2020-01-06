@@ -91,7 +91,7 @@ customization:
         - Customized
         - User Friendly
         - KYC
-        - Biometic auth
+        - Biometric auth
         - Trading
       header: Hosted solutions
       icon: /img/Icon-Server-Dark.svg

@@ -94,6 +94,11 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Åsmund Staldvik
+    - description: "I like HTML, CSS and SVG. One fine day, I'll learn to love JavaScript too. \U0001F33B\n"
+      image: /img/elisabeth.jpg
+      jobTitle: Frontend Developer
+      jobType: frontEnd
+      title: Elisabeth Irgens
     - description: >-
         Digital designer focused on creating usable and delightful user
         experiences. Likes to tinker with React and friends.
@@ -123,11 +128,18 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Simen Flatby
-    - description: Remind me to update this text.
+    - description: Remind me to update this text!
       image: /img/0.jpeg
       jobTitle: Backend developer
       jobType: backEnd
       title: Elias Thøgersen
+    - description: |-
+        Part-time employee. Computer engineering student at OsloMet.
+        Likes mountainbikes and bbq.
+      image: /img/fredrikfrostad.jpg
+      jobTitle: Backend developer
+      jobType: backEnd
+      title: Fredrik Frostad
     - description: "Front end developer and NTNU student. Probably checking out a new album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Summer intern 2019
