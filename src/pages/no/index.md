@@ -17,10 +17,10 @@ transitionalElement:
       name: Artic Fund Management
     - logo: /img/Sparebank 1@2x.png
       name: SpareBank 1
+    - logo: /img/Skandia@2x.png
+      name: Skandia
     - logo: /img/E24@2x.png
       name: E24
-    - logo: /img/Catella@2x.png
-      name: Catella
     - logo: /img/First Fondene@2x.png
       name: First Fondene
     - logo: /img/Norne@2x.png
@@ -29,8 +29,8 @@ transitionalElement:
       name: Fishpool
     - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
-    - logo: /img/Skandia@2x.png
-      name: Skandia
+    - logo: /img/Catella@2x.png
+      name: Catella
   numbersAndText:
     companiesNumber: '150'
     companiesText: Kunder
