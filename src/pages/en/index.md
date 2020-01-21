@@ -15,8 +15,8 @@ transitionalElement:
       name: Artic Fund Management
     - logo: /img/Sbanken@2x.png
       name: Sbanken
-    - logo: /img/Catella@2x.png
-      name: Catella
+    - logo: /img/Skandia@2x.png
+      name: Skandia
     - logo: /img/Sparebank 1@2x.png
       name: SpareBank 1
     - logo: /img/DN@2x.png
@@ -29,8 +29,8 @@ transitionalElement:
       name: Fishpool
     - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
-    - logo: /img/Skandia@2x.png
-      name: Skandia
+    - logo: /img/Catella@2x.png
+      name: Catella
   numbersAndText:
     companiesNumber: '150'
     companiesText: Companies
