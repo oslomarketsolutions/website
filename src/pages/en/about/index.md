@@ -103,7 +103,7 @@ employees:
         Digital designer focused on creating usable and delightful user
         experiences. Likes to tinker with React and friends.
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
-      jobTitle: User Experience Designer
+      jobTitle: Head of UX and Design
       jobType: designer
       title: Gerrit Witteveen
     - description: Backend-programmer focused on performance and stability.
