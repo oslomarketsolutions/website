@@ -229,7 +229,10 @@ export default class TemplateWrapper extends Component {
               src="//js.hs-scripts.com/2235598.js"
             />
           )}
-          <meta name="description" content="Investor tools and market data portals / Advanced features - simple set-up" />
+          <meta
+            name="description"
+            content="Investor tools and market data portals / Advanced features - simple set-up"
+          />
         </Helmet>
         <div className="grid">
           <Navbar
