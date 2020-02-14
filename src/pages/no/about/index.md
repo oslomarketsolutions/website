@@ -104,7 +104,7 @@ employees:
       title: Elisabeth Irgens
     - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
-      jobTitle: UX Designer
+      jobTitle: Head of UX and Design
       jobType: designer
       title: Gerrit Witteveen
     - description: |-
