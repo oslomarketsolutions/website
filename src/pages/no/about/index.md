@@ -26,9 +26,16 @@ history:
 
 employees:
   employeeList:
+    - description: >-
+        Markedsdataspesialist med interesse for forretningsutvikling, innovasjon
+        og teknologi
+      image: /img/øyvind.jpg
+      jobTitle: Acting CEO
+      jobType: management
+      title: Øyvind Skar
     - description: 'Sykler rundt i byn, noterer med Remarkable, men lever ellers digitalt.'
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
-      jobTitle: CEO
+      jobTitle: CEO (on leave)
       jobType: management
       title: Tine Charlotte Holm
     - description: Kommunikation är nyckeln för ett bra samarbete.
