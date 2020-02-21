@@ -23,12 +23,19 @@ history:
     and great design.
 employees:
   employeeList:
+    - description: >
+        Market data specialist with a particular interest in business
+        development, innovation and new technology
+      image: /img/øyvind.jpg
+      jobTitle: Acting CEO
+      jobType: management
+      title: Øyvind Skar
     - description: >-
         A firm believer in the importance of happiness at work, working to
         create an innovative culture and delivering state of the art solutions
         with high quality.
       image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
-      jobTitle: CEO
+      jobTitle: CEO (On leave)
       jobType: management
       title: Tine Charlotte Holm
     - description: A good opportunity will take benefit from a good cooperation.
