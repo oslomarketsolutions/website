@@ -87,8 +87,8 @@ employees:
       jobType: frontEnd
       title: Kristian Hagen
     - description: |+
-        3 positive sider ☝️             
-        Ydmyk, smart, intelligent, intellektuell. Negative sider : 
+        3 positive sider ☝️
+        Ydmyk, smart, intelligent, intellektuell. Negative sider :
 
       image: /img/haakon_winther_oms_oslo_bors_fhs_5659.jpg
       jobTitle: Frontendutvikler
@@ -104,11 +104,6 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
-    - description: "Jeg liker HTML, CSS og SVG. En vakker dag skal jeg bli glad i JavaScript også. \U0001F33B"
-      image: /img/elisabeth.jpg
-      jobTitle: Webutvikler
-      jobType: frontEnd
-      title: Elisabeth Irgens
     - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: Head of UX and Design

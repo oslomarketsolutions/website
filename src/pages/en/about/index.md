@@ -101,11 +101,6 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Åsmund Staldvik
-    - description: "I like HTML, CSS and SVG. One fine day, I'll learn to love JavaScript too. \U0001F33B\n"
-      image: /img/elisabeth.jpg
-      jobTitle: Frontend Developer
-      jobType: frontEnd
-      title: Elisabeth Irgens
     - description: >-
         Digital designer focused on creating usable and delightful user
         experiences. Likes to tinker with React and friends.
