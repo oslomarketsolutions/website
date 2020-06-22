@@ -85,7 +85,7 @@ customization:
     - buttonText: Learn more
       description: >-
         Fully managed and operated custom solutions with OMS unique domain
-        expertise
+        expertise.
       features:
         - Real Time
         - Customized
