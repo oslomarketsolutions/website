@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import CookieToggle from '../cookieToggle/index';
 import logo from '../../img/logo_oms_hoved.png';
-import logoWhite from '../../img/logo_oms_hvit.png';
+import logoWhite from '../../img/logo_oms_hvit.svg';
 import styles from './navbar.module.scss';
 
 export default class Navbar extends Component {
