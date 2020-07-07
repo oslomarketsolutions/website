@@ -6,7 +6,8 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import CookieToggle from '../cookieToggle/index';
 import logo from '../../img/logo_oms_hoved.png';
-import logoWhite from '../../img/logo_oms_hvit.svg';
+import logoWhite from '../../img/logo_oms_hvit.png';
+import logoPride from '../../img/logo_oms_pride.svg';
 import styles from './navbar.module.scss';
 
 export default class Navbar extends Component {
@@ -172,6 +173,12 @@ export default class Navbar extends Component {
     });
   };
 
+  getLogo = useWhiteLogo => {
+    if (!useWhiteLogo) return logo;
+    if (new Date().getMonth() === 5) return logoPride;
+    return logoWhite;
+  };
+
   render() {
     const data = this.props.data.frontmatter;
     const cookieInfo =
@@ -205,7 +212,7 @@ export default class Navbar extends Component {
               to={`/${this.props.language}`}
               onClick={this.closeLanguageSelector}
             >
-              <img src={navColorWhite ? logoWhite : logo} alt="Oms logo" />
+              <img src={this.getLogo(navColorWhite)} alt="Oms logo" />
             </Link>
           </div>
           <nav>
