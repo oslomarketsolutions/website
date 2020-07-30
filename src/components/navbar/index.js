@@ -53,6 +53,12 @@ export default class Navbar extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+  getLogo = useWhiteLogo => {
+    if (!useWhiteLogo) return logo;
+    if (new Date().getMonth() === 5) return logoPride;
+    return logoWhite;
+  };
+
   handleScroll() {
     if (document != null) {
       if (
@@ -171,12 +177,6 @@ export default class Navbar extends Component {
     this.setState({
       languageSelectorOpen: false,
     });
-  };
-
-  getLogo = useWhiteLogo => {
-    if (!useWhiteLogo) return logo;
-    if (new Date().getMonth() === 5) return logoPride;
-    return logoWhite;
   };
 
   render() {
