@@ -1,7 +1,5 @@
 # OMS' website [![Build Status](https://travis-ci.org/oslomarketsolutions/website.svg?branch=master)](https://travis-ci.org/oslomarketsolutions/website)
 
-A work in progress of OMS' new website.
-
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
 ## Access Locally
