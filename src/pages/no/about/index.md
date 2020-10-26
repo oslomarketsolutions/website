@@ -55,7 +55,8 @@ employees:
       jobTitle: Supportansvarlig
       jobType: support
       title: Inga Wiik-Önnesjö
-    - image: /img/stian-1.png
+    - description: Service Delivery Manager i OMS
+      image: /img/stian-1.png
       jobTitle: Delivery manager
       jobType: management
       title: Stian Breivik
