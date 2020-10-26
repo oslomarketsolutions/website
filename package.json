@@ -55,7 +55,7 @@
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^6.1.0",
     "scroll-into-view-if-needed": "^2.2.10",
-    "showdown": "^1.8.6",
+    "showdown": "^1.9.1",
     "uuid": "^3.2.1",
     "whatwg-fetch": "^2.0.4"
   },
