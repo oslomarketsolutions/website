@@ -55,6 +55,10 @@ employees:
       jobTitle: Supportansvarlig
       jobType: support
       title: Inga Wiik-Önnesjö
+    - image: /img/stian-1.png
+      jobTitle: Delivery manager
+      jobType: management
+      title: Stian Breivik
     - description: 'DevOps-, automatiserings- og sikkerhetsentusiast'
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
       jobTitle: Driftssjef
@@ -129,9 +133,7 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Elias Thøgersen
-    - description: |-
-        Deltidsansatt. Studerer ingeniørfag data på OsloMet.
-        Opptatt av terrengsykling og bbq.
+    - description: Opptatt av terrengsykling og bbq.
       image: /img/fredrikfrostad.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
@@ -176,10 +178,6 @@ employees:
       jobTitle: Sommervikar 2018
       jobType: summerIntern
       title: Åsmund Staldvik
-    - image: /img/stian-1.png
-      jobTitle: Delivery manager
-      jobType: operations
-      title: Stian Breivik
   header: Hvem vi er
   internsHeader: Hvem de var
   internsSection: Sommervikarer
