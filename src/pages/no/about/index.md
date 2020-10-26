@@ -176,6 +176,10 @@ employees:
       jobTitle: Sommervikar 2018
       jobType: summerIntern
       title: Åsmund Staldvik
+    - image: /img/stian-1.png
+      jobTitle: Delivery manager
+      jobType: operations
+      title: Stian Breivik
   header: Hvem vi er
   internsHeader: Hvem de var
   internsSection: Sommervikarer
