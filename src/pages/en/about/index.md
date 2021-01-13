@@ -101,23 +101,11 @@ employees:
       jobTitle: Teamleader backend
       jobType: backEnd
       title: Pål Steihaug
-    - description: >-
-        Data hairdresser with particular interest for market data and Depeche
-        Mode.
-      image: /img/john-erik_bye_johansen_oms_oslo_bors_fhs_5788.jpg
-      jobTitle: Senior System Developer
-      jobType: backEnd
-      title: John-Erik Bye Johansen
     - description: 'Concerned with code quality, clean code and playing the drums.'
       image: /img/eirik_caspari_oms_oslo_bors_fhs_5712.jpg
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
-    - description: "Just let me finish up this code... \U0001F468\U0001F3FB‍\U0001F4BB"
-      image: /img/simen_flatby_oms_oslo_bors_fhs_5762.jpg
-      jobTitle: Backend developer
-      jobType: backEnd
-      title: Simen Flatby
     - description: Remind me to update this text!
       image: /img/0.jpeg
       jobTitle: Backend developer
