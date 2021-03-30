@@ -29,8 +29,6 @@ transitionalElement:
       name: Fishpool
     - logo: /img/SpareBanken Møre@2x.png
       name: SpareBankMøre
-    - logo: /img/Catella@2x.png
-      name: Catella
   numbersAndText:
     companiesNumber: '150'
     companiesText: Companies
