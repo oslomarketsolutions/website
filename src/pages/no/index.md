@@ -99,7 +99,7 @@ customization:
     integrationsLogos:
       - logo: /img/Centevo-Copy@2x.png
         name: Centevo
-      - logo: /img/VPS-Copy@2x.png
+      - logo: /img/vpslogo.png
         name: VPS
       - logo: /img/ProBroker-Copy@2x.png
         name: ProBroker
