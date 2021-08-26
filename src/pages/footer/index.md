@@ -22,7 +22,7 @@ contactInfo:
   email: info@oms.no
   mailAddress: 'Postboks 1174 Sentrum, 0107 Oslo'
   phoneNumber: +47 40 00 23 13
-  title: Oslo Market Solutions AS | PART OF INFRONT
+  title: Oslo Market Solutions AS | Part of Infront
   visitingAddressNorway: 'Munkedamsveien 45, 0250 Oslo'
   visitingAddressSweden: 'Kungsgatan 33, 111 56 Stockholm'
 ---
