@@ -3,12 +3,18 @@ templateKey: aboutPage
 hero:
   backgroundImage: /img/dvzgovia.jpeg
   text: >-
+    I juni 2021 ble Oslo Market Solutions kjøpt opp av Infront. OMS-løsningene
+    vil bli utviklet i fellesskap med Infronts produkter, noe som vil sikre topp
+    moderne løsninger tilpasset lokale markedskrav. Som kunde hos OMS vil du
+    fortsette å motta den samme pålitelige servicen som alltid. 
+
+
     Oslo Market Solutions er en ledende nordisk leverandør av webløsninger for
     de finansielle markedene. Med et nordisk perspektiv, fokuserer vi på høy
     kvalitet, feilfri oppetid, innovasjon, design, hastighet og fleksibilitet
     for kunden. Alle våre løsninger er driftet og hostet av Oslo Market
     Solutions.
-  title: Oslo Market Solutions
+  title: Oslo Market Solutions | Part of Infront
 history:
   header: Litt historie
   section: OM OSS
