@@ -3,7 +3,7 @@ templateKey: aboutPage
 hero:
   backgroundImage: /img/dvzgovia.jpeg
   text: >-
-    In June of this year, Oslo Market Solutions was acquired by Infront. The OMS
+    In June of 2021, Oslo Market Solutions was acquired by Infront. The OMS
     solutions will be jointly developed with Infronts products, ensuring
     state-of-the-art solutions, fitted to local market requirements. As a
     customer of OMS, you will continue to receive the same reliable service as
