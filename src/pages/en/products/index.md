@@ -52,6 +52,16 @@ linkCardsSection:
       id: arena
       isDark: false
       linkText: Go to Arena
+    - description: >-
+        Flexible financial solutions supporting trading, portfolio management
+        and advisory, corporate IR and treasury, regulatory compliance, and data feeds.
+      header: Infront Solutions
+      icon:
+        desktop: /img/infront_circle_grey.svg
+        mobile: /img/infront_circle_white.svg
+      id: infront
+      isDark: false
+      linkText: Go to Infront
   title: What we offer
 investorPortal:
   id: investorportal
@@ -188,4 +198,3 @@ services:
       If you don't want a fully hosted service, we are happy to provide APIs or
       our powerful React components
 ---
-

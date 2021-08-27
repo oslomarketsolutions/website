@@ -187,7 +187,7 @@ const Footer = ({ language, data }) => {
           <div className={styles.copyright}>
             <FontAwesomeIcon icon={['far', 'copyright']} />
             <p className="bodySmall">
-              2020 Oslo Market Solutions. All Rights Reserved.
+              2021 Oslo Market Solutions | Part of Infront. All Rights Reserved.
             </p>
           </div>
           <div className={classNames('bodySmall', styles.licenses)}>

@@ -20,12 +20,16 @@ export class ProductPageTemplate extends Component {
 
   scrollToRef = (event, ref) => {
     event.preventDefault();
-    scrollIntoView(this[ref], {
-      behavior: 'smooth',
-      scrollMode: 'always',
-      block: 'start',
-      inline: 'start',
-    });
+    if (ref === 'infront') {
+      window.location.assign('https://www.infrontfinance.com/');
+    } else {
+      scrollIntoView(this[ref], {
+        behavior: 'smooth',
+        scrollMode: 'always',
+        block: 'start',
+        inline: 'start',
+      });
+    }
   };
 
   render() {

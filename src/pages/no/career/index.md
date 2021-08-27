@@ -88,11 +88,9 @@ perks:
         skulle trengs
   section: Perks
 positions:
-  buttonText: Enable
+  buttonText: Se ledige stillinger
   header: Ledige stillinger
-  iframeAltText: Du må godkjenne bruk av google analytics for å se iFrame med ledige jobber.
   text: >-
     Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
     hoder.
 ---
-

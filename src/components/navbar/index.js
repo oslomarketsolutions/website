@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import CookieToggle from '../cookieToggle/index';
-import logo from '../../img/logo_oms_hoved.png';
-import logoWhite from '../../img/logo_oms_hvit.png';
+import logo from '../../img/logo_oms_blue.png';
+import logoWhite from '../../img/logo_oms_white.png';
 import logoPride from '../../img/logo_oms_pride.svg';
 import styles from './navbar.module.scss';
 

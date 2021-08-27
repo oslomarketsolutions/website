@@ -14,6 +14,7 @@ import {
   faPhone,
   faEnvelope,
   faArrowRight,
+  faExternalLinkAlt,
   faCheck,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
@@ -63,6 +64,7 @@ export const faLibrary = library.add(
   faFireExtinguisher,
   faDraftingCompass,
   faArrowRight,
+  faExternalLinkAlt,
   faCheckCircle,
   faCheck,
   faCookieBite,

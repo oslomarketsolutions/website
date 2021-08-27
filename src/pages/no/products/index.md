@@ -51,6 +51,16 @@ linkCardsSection:
       id: arena
       isDark: false
       linkText: Gå til Arena
+    - description: >-
+        Fleksible finansløsninger med støtte for handel, porteføljeforvaltning og rådgivning,
+        Investor Relations produkter og treasury, risikostyring og etterlevelse, og datafeeder.
+      header: Infront løsninger
+      icon:
+        desktop: /img/infront_circle_grey.svg
+        mobile: /img/infront_circle_white.svg
+      id: infront
+      isDark: false
+      linkText: Gå til Infront
   title: 'API, React-komponenter & driftede løsninger'
 investorPortal:
   id: investorportal
@@ -180,4 +190,3 @@ services:
       markedsdata APIer eller lisens til OMS Components, våre kraftige React
       komponenter
 ---
-

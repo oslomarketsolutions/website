@@ -84,9 +84,7 @@ perks:
         one mean Rancilio Espresso Machine
   section: Perks
 positions:
-  buttonText: Enable
+  buttonText: See vacancies
   header: Job vacancies
-  iframeAltText: You need to have analytics enabled to view the job vacancies
   text: 'Please apply here, or send us an open application!'
 ---
-

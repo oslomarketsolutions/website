@@ -11,11 +11,11 @@ export const CareerPageTemplate = ({
   perks,
   positions,
   imageSizes,
-  handleCookieChanges,
-  googleAnalyticsIsActive,
 }) => {
-  const enableAnalytics = () => {
-    handleCookieChanges(true, 'analytics');
+  const redirect = () => {
+    window.location.assign(
+      'https://mycareer.infrontfinance.com/accueil.aspx?LCID=2057',
+    );
   };
 
   return (
@@ -61,22 +61,14 @@ export const CareerPageTemplate = ({
           <h2>{positions.header}</h2>
           <p className="subtitle">{positions.text}</p>
         </div>
-        {googleAnalyticsIsActive ? (
-          <iframe
-            title="Job Vacancies"
-            src="//delta.hr-manager.net/Vacancies/List.aspx?customer=osloborsvps&amp;uiculture=no&amp;culture=no"
-          />
-        ) : (
-          <div className={styles.iframeAlt}>
-            <p>{positions.iframeAltText}</p>
-            <button
-              className={`textButton ${styles.iframeButton}`}
-              onClick={enableAnalytics}
-            >
-              {positions.buttonText}
-            </button>
-          </div>
-        )}
+        <div className={styles.iframeAlt}>
+          <button
+            className={`textButton ${styles.iframeButton}`}
+            onClick={redirect}
+          >
+            {positions.buttonText}
+          </button>
+        </div>
       </section>
     </main>
   );
@@ -88,8 +80,6 @@ CareerPageTemplate.propTypes = {
   perks: PropTypes.shape({}),
   positions: PropTypes.shape({}),
   imageSizes: PropTypes.arrayOf(PropTypes.object),
-  handleCookieChanges: PropTypes.func,
-  googleAnalyticsIsActive: PropTypes.bool,
 };
 
 const CareerPage = ({ data, handleCookieChanges, googleAnalyticsIsActive }) => {
@@ -143,7 +133,6 @@ export const careerPageQuery = graphql`
         positions {
           header
           text
-          iframeAltText
           buttonText
         }
       }
