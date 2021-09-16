@@ -5,7 +5,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 ## Access Locally
 
 You need to set an environment variable to use fontawesome pro.
-Contact epshen to get the token.
+Contact OMS to get the token.
 
 ```
 export FONTAWESOME_TOKEN="00000000-0000-0000-0000-000000000000"
