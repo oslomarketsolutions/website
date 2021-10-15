@@ -82,7 +82,7 @@ employees:
       jobType: frontEnd
       title: Åsmund Staldvik
     - description: ''
-      image: /img/anand-2.jpeg
+      image: /img/anand-3.jpeg
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Kumar Anand
