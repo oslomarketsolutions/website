@@ -25,23 +25,18 @@ history:
 
 employees:
   employeeList:
-    - description: 'Sykler rundt i byn, noterer med Remarkable, men lever ellers digitalt.'
-      image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
-      jobTitle: 'CEO '
+    - description: >-
+        Kontakt meg for FinTech, datafeed og finansielle webplattformer.
+        Interessert i Seiling og digitalisering.
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
+      jobTitle: Acting CEO
       jobType: management
-      title: Tine Charlotte Holm
+      title: Mikael Leckborn
     - description: Kommunikation är nyckeln för ett bra samarbete.
       image: /img/michel1.jpg
       jobTitle: Country Manager Sverige
       jobType: management
       title: Michel Gafgo
-    - description: >-
-        Kontakt meg for FinTech, datafeed og finansielle webplattformer.
-        Interessert i Seiling og digitalisering.
-      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
-      jobTitle: Salgssjef
-      jobType: management
-      title: Mikael Leckborn
     - description: >-
         Forvent det beste, planlegg for det verste, og forberede deg på å bli
         forbløffet
@@ -70,17 +65,10 @@ employees:
       jobType: operations
       title: Jørgen Paulsen
     - description: >-
-        Fullstack-utvikler som er interessert i ny teknologi, DX, a11y, Linux,
-        langrenn og å tusle i norsk natur.
-      image: /img/espen_henriksen_oms_oslo_bors_fhs_5603.jpg
-      jobTitle: Teamleder frontend
-      jobType: frontEnd
-      title: Espen Henriksen
-    - description: >-
         Fullstack-utvikler med spesiell interesse for javascript og
         webløsninger. Pusler med dataprosessering.
       image: /img/kristian_hagen_oms_oslo_bors_fhs_0243.jpg
-      jobTitle: Frontendutvikler
+      jobTitle: Teamleder frontend
       jobType: frontEnd
       title: Kristian Hagen
     - description: Det er riktig at jeg ble født i 1991. Rommet ved siden av var 1990.
@@ -110,16 +98,21 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Eirik Caspari
-    - description: Minn meg på å endre denne teksten!
-      image: /img/0.jpeg
-      jobTitle: Backendutvikler
-      jobType: backEnd
-      title: Elias Thøgersen
     - description: Opptatt av terrengsykling og bbq.
       image: /img/fredrikfrostad.jpg
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Fredrik Frostad
+    - description: Hmm
+      image: /img/stian.jpg
+      jobTitle: Backendutvikler
+      jobType: backEnd
+      title: Stian Mathias Guttormsen
+    - description: ''
+      image: /img/anand.png
+      jobTitle: Frontendutvikler
+      jobType: frontEnd
+      title: Kumar Anand
     - description: "Frontendutvikler og NTNU-student. Sjekker trolig ut et nytt album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Sommervikar 2019
