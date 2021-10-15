@@ -78,7 +78,10 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Åsmund Staldvik
-    - image: /img/anand-3.jpeg
+    - description: >-
+        There is nothing impossible to they who will try. Experiences are all
+        that matters.
+      image: /img/anand-3.jpeg
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Kumar Anand
