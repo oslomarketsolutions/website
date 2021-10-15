@@ -81,7 +81,9 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
-    - description: ''
+    - description: >-
+        There is nothing impossible to they who will try. Experiences are all
+        that matters.
       image: /img/anand-3.jpeg
       jobTitle: Frontendutvikler
       jobType: frontEnd
