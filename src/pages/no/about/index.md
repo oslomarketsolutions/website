@@ -109,7 +109,7 @@ employees:
       jobType: backEnd
       title: Stian Mathias Guttormsen
     - description: ''
-      image: /img/anand.jpg
+      image: /img/anand.png
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Kumar Anand
