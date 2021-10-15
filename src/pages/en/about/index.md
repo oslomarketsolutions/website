@@ -24,25 +24,17 @@ history:
 employees:
   employeeList:
     - description: >-
-        A firm believer in the importance of happiness at work, working to
-        create an innovative culture and delivering state of the art solutions
-        with high quality.
-      image: /img/tine_charlotte_holm_oms_oslo_bors_fhs_5283.jpg
-      jobTitle: CEO
+        Contact me for FinTech, data feed and financial web platforms.
+        Interested in Sailing and Digitization.
+      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
+      jobTitle: Acting CEO
       jobType: management
-      title: Tine Charlotte Holm
+      title: Mikael Leckborn
     - description: A good opportunity will take benefit from a good cooperation.
       image: /img/michel1.jpg
       jobTitle: Country Manager Sweden
       jobType: management
       title: Michel Gafgo
-    - description: >-
-        Contact me for FinTech, data feed and financial web platforms.
-        Interested in Sailing and Digitization.
-      image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
-      jobTitle: Sales
-      jobType: management
-      title: Mikael Leckborn
     - description: 'Expect the best, plan for the worst, and prepare to be surprised'
       image: /img/christian_blutecher_oms_oslo_bors_fhs_6018.jpg
       jobTitle: Project Manager
@@ -53,6 +45,10 @@ employees:
       jobTitle: Support Manager
       jobType: support
       title: Inga Wiik-Önnesjö
+    - image: /img/stian-1.png
+      jobTitle: Delivery manager
+      jobType: management
+      title: Stian Breivik
     - description: 'DevOps, automation, and security enthusiast'
       image: /img/andreas_holen_oms_oslo_bors_fhs_5952.jpg
       jobTitle: Head of IT Operations
@@ -64,17 +60,10 @@ employees:
       jobType: operations
       title: Jørgen Paulsen
     - description: >-
-        Fullstack-developer interested in new technology, DX, a11y, Linux, cross
-        country skiing and hiking in norwegian nature.
-      image: /img/espen_henriksen_oms_oslo_bors_fhs_5603.jpg
-      jobTitle: Teamleader frontend
-      jobType: frontEnd
-      title: Espen Henriksen
-    - description: >-
         Fullstack developer with special interest in javascript and web
         solutions. Dabbles with data processing.
       image: /img/kristian_hagen_oms_oslo_bors_fhs_0243.jpg
-      jobTitle: Frontend developer
+      jobTitle: Frontend Team Lead
       jobType: frontEnd
       title: Kristian Hagen
     - description: >-
@@ -89,6 +78,10 @@ employees:
       jobTitle: Frontend developer
       jobType: frontEnd
       title: Åsmund Staldvik
+    - image: /img/anand-1.jpg
+      jobTitle: Frontend developer
+      jobType: frontEnd
+      title: Kumar Anand
     - description: >-
         Digital designer focused on creating usable and delightful user
         experiences. Likes to tinker with React and friends.
@@ -98,7 +91,7 @@ employees:
       title: Gerrit Witteveen
     - description: Backend-programmer focused on performance and stability.
       image: /img/pal_steihaug_oms_oslo_bors_fhs_5973.jpg
-      jobTitle: Teamleader backend
+      jobTitle: Backend Team Lead
       jobType: backEnd
       title: Pål Steihaug
     - description: 'Concerned with code quality, clean code and playing the drums.'
@@ -106,16 +99,15 @@ employees:
       jobTitle: Backend developer
       jobType: backEnd
       title: Eirik Caspari
-    - description: Remind me to update this text!
-      image: /img/0.jpeg
-      jobTitle: Backend developer
-      jobType: backEnd
-      title: Elias Thøgersen
     - description: Likes mountainbikes and bbq.
       image: /img/fredrikfrostad.jpg
       jobTitle: Backend developer
       jobType: backEnd
       title: Fredrik Frostad
+    - image: /img/stian.jpg
+      jobTitle: Backend developer
+      jobType: backEnd
+      title: Stian Mathias Guttormsen
     - description: "Front end developer and NTNU student. Probably checking out a new album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Summer intern 2019
@@ -156,10 +148,6 @@ employees:
       jobTitle: Summer intern 2018
       jobType: summerIntern
       title: Åsmund Staldvik
-    - image: /img/stian-1.png
-      jobTitle: Delivery manager
-      jobType: management
-      title: Stian Breivik
   header: Who we are
   internsHeader: Who they were
   internsSection: Summer interns
