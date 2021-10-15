@@ -81,6 +81,11 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
+    - description: ''
+      image: /img/anand.png
+      jobTitle: Frontendutvikler
+      jobType: frontEnd
+      title: Kumar Anand
     - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
       image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
       jobTitle: Head of UX and Design
@@ -108,11 +113,6 @@ employees:
       jobTitle: Backendutvikler
       jobType: backEnd
       title: Stian Mathias Guttormsen
-    - description: ''
-      image: /img/anand.png
-      jobTitle: Frontendutvikler
-      jobType: frontEnd
-      title: Kumar Anand
     - description: "Frontendutvikler og NTNU-student. Sjekker trolig ut et nytt album \U0001F3A7"
       image: /img/toretefre.jpg
       jobTitle: Sommervikar 2019
