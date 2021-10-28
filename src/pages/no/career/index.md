@@ -53,7 +53,7 @@ perks:
     - icon: /img/Icon-Spotify.svg
       perkTitle: Spotify
       text: >-
-        I OMS får du betalt abbonomentet ditt på Spotify, eller din foretrukne
+        I OMS får du betalt abonnementet ditt på Spotify, eller din foretrukne
         streamingtjeneste
     - icon: /img/Icon-Insurance.svg
       perkTitle: Forsikringer
@@ -94,3 +94,4 @@ positions:
     Vi har for tiden disse ledige stillingene, men er alltid på jakt etter kloke
     hoder.
 ---
+
