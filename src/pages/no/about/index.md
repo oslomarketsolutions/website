@@ -29,7 +29,7 @@ employees:
         Kontakt meg for FinTech, datafeed og finansielle webplattformer.
         Interessert i Seiling og digitalisering.
       image: /img/mikael_leckborn_oms_oslo_bors_fhs_0269.jpg
-      jobTitle: Acting CEO
+      jobTitle: ''
       jobType: management
       title: Mikael Leckborn
     - description: Kommunikation är nyckeln för ett bra samarbete.
@@ -81,18 +81,6 @@ employees:
       jobTitle: Frontendutvikler
       jobType: frontEnd
       title: Åsmund Staldvik
-    - description: >-
-        There is nothing impossible to they who will try. Experiences are all
-        that matters.
-      image: /img/anand-3.jpeg
-      jobTitle: Frontendutvikler
-      jobType: frontEnd
-      title: Kumar Anand
-    - description: UX designer fra Nederland som fulgte ❤️-heten til Norge
-      image: /img/gerrit_witteveen_oms_oslo_bors_fhs_0299.jpg
-      jobTitle: Head of UX and Design
-      jobType: designer
-      title: Gerrit Witteveen
     - description: |-
         Bakendeprogrammør, opptatt av ytelse og stabilitet.
         Spiller ellers hockey, bordtennis og poker.
