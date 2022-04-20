@@ -222,15 +222,6 @@ export default class TemplateWrapper extends Component {
             href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800|Work+Sans:300,400"
             rel="stylesheet"
           />
-          {this.state.setHubspotCookie && (
-            <script
-              type="text/javascript"
-              id="hs-script-loader"
-              async
-              defer
-              src="//js.hs-scripts.com/2235598.js"
-            />
-          )}
           <meta
             name="description"
             content="Investor tools and market data portals / Advanced features - simple set-up"
