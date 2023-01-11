@@ -42,7 +42,7 @@
     "gatsby-plugin-sharp": "^1.6.44",
     "gatsby-plugin-typography": "^1.7.19",
     "gatsby-source-filesystem": "^1.5.36",
-    "gatsby-transformer-remark": "^1.7.41",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^1.6.24",
     "intersection-observer": "^0.5.0",
     "js-cookie": "^2.2.0",
